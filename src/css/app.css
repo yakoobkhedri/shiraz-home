@@ -1,0 +1,271 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: payda-Regular;
+  font-weight: 400;
+  src: url('../src/fonts/payda/PeydaWeb-Regular.woff') format("woff");
+}
+@font-face {
+  font-family: payda-Medium;
+  font-weight: 500;
+  src: url('../src/fonts/payda/PeydaWeb-Medium.woff') format("woff");
+}
+@font-face {
+  font-family: payda-SemiBold;
+  font-weight: 600;
+  src: url('../src/fonts/payda/PeydaWeb-SemiBold.woff') format("woff");
+}
+@font-face {
+  font-family: payda-Bold;
+  font-weight: 700;
+  src: url('../src/fonts/payda/PeydaWeb-Bold.woff') format("woff");
+}
+@font-face {
+  font-family: payda-ExtraBold;
+  font-weight: 800;
+  src: url('../src/fonts/payda/PeydaWeb-ExtraBold.woff') format("woff");
+}
+@font-face {
+  font-family: payda-Black;
+  font-weight: 900;
+  src: url('../src/fonts/payda/PeydaWeb-Black.woff') format("woff");
+}
+@font-face {
+  font-family: Montserrat-Regular;
+
+  src: url('../src/fonts/Montserrat-Regular.ttf') format("trueType");
+}
+@font-face {
+  font-family: Montserrat-Bold;
+
+  src: url('../src/fonts/Montserrat-Bold.ttf') format("trueType");
+}
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: payda-Regular;
+  user-select: none;
+  overflow-x: hidden;
+}
+/* global styles */
+a {
+  cursor: pointer;
+  transition: all .4s
+}
+.flex-center {
+  @apply flex items-center justify-center;
+}
+
+.flex-between {
+  @apply flex items-center justify-between;
+}
+
+.transition {
+  @apply transition-all duration-300;
+}
+/* bg */
+.bg-blur {
+  background-color: rgba(255, 255, 255, 0.91);
+  -webkit-backdrop-filter: blur(4px);
+  backdrop-filter: blur(4px);
+}
+/* after */
+.gradient-after::after{
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 31.94%, #FF9704 100%);
+}
+/* hover */
+.btnHover {
+  transition: all .4s;
+  overflow: hidden;
+  position: relative;
+}
+.btnHover::before {
+  content: "";
+  position: absolute;
+  width: 100px;
+  height: 100%;
+  background-image: linear-gradient( 120deg, rgba(255, 255, 255, 0) 30%, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0) 70% );
+  top: 0;
+  left: -100px;
+  opacity: 0.6;
+}
+.btnHover:hover::before {
+  animation: shine 1.5s ease-out infinite;
+}
+
+.card {
+  transform-style: preserve-3d;
+}
+
+.card img.img {
+  transition: all .4s;
+  pointer-events: none;
+  z-index: 10!important;
+}
+.card:hover img.img {
+  transform: translate3d(-10%, -10%, 20px);
+}
+.card:hover .sneakers {
+  transform: translateZ(40px);
+  opacity: 0.85;
+}
+@keyframes shine {
+  0% {
+    left: -100px;
+  }
+
+  60% {
+    left: 100%;
+  }
+
+  to {
+    left: 100%;
+  }
+}
+/* dropdown */
+.dropdownContent {
+  padding: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: all .4s;
+}
+.dropdownContent.active {
+  max-height: fit-content;
+  overflow: visible;
+}
+.mobileMenu {
+  opacity: 0;
+  visibility: hidden;
+  transition: all .4s;
+  top: 55px;
+}
+.mobileMenu.active {
+  opacity: 100%;
+  visibility: visible;
+  top: 20px;
+}
+#dropdownBtn svg.active {
+  transform: rotate(0);
+}
+/* input number */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+.otpInput[disabled="true"]{
+  border: 1.4px solid #EEF1FA;
+}
+.otpInput:focus{
+  border: 1.4px solid #7E5EFF;
+  color: #7E5EFF;
+}
+.otpInput[disabled=""]{
+  border: 1.4px solid #7E5EFF;
+  color: #7E5EFF;
+}
+/* editor */
+.editor-section img{
+  border-radius: 18px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.editor-section table{
+  @apply overflow-hidden w-full ltr:text-left text-right;
+}
+.editor-section thead{
+   @apply text-black;
+}
+.editor-section th{
+  @apply py-3 px-4 text-sm sm:text-base border border-[#0000001A];
+}
+.editor-section tbody{
+  @apply [&>*:nth-child(even)]:bg-white [&>*:nth-child(odd)]:bg-[#F8F8F8];
+}
+.editor-section tbody tr {
+  @apply sm:text-sm text-xs;
+}
+.editor-section tbody td{
+  @apply py-3 px-4 border border-[#0000001A] opacity-60;
+}
+.editor-section a{
+  background-color: #7e7eff;
+  opacity: 100%;
+  border-radius: 8px;
+  padding: 3px;
+  color: white;
+  margin-right: 4px;
+  margin-left: 4px;
+}
+.editor-section ul{
+  @apply border-dashed ltr:border-l-2 ltr:border-r-0 ltr:pl-[18px] ltr:pr-0 border-r-2 pr-[18px] border-[#00000026] my-5 mr-4 ltr:ml-4 ltr:mr-0;
+}
+.editor-section ul li{
+  @apply relative -right-[28px] first:pt-0 last:!pb-0 ltr:-left-[29px] ltr:right-0 flex items-center gap-2 py-3;
+}
+.editor-section ul li::before{
+  content: url('../src/img/solar_check-circle-bold-duotone.png');
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+}
+.editor-section ul li::before{
+  @apply rtl:-right-7 ltr:-left-7
+}
+.editor-section ul li{
+  @apply text-sm text-[#7f7f7f] mx-7;
+}
+/* accordion */
+.acordionBtn img.active,.acordionBtn2 img.active{
+  transform: rotate(180deg);
+}
+.acordionBtn2.active{
+  background: #F3F5FF;
+}
+.acordionContent,.acordionContent2 {
+  max-height: 0;
+  overflow: hidden;
+}
+.acordionContent.active,.acordionContent2.active {
+  max-height: fit-content;
+  overflow: visible;
+}
+/* shadow */
+.shadow-1 {
+  box-shadow: 0px 11px 28px 0px #8B8B8B1F;
+}
+.shadow-next {
+  box-shadow: -2px 0px 24px 0px #0000001A;
+}
+/* swiper */
+.banner .swiper-pagination-bullet{
+  width: 9px!important;
+  height: 9px!important;
+  background-color: #B0B7BF!important;
+  border-radius: 70px!important;
+  transition: all .4s!important;
+  opacity: 100;
+  margin: 0 2px!important;
+}
+.banner .swiper-pagination-bullet-active{
+  width: 29px!important;
+  background-color: #FF9704!important;
+}
+.banner .swiper-pagination{
+  bottom: -6px!important;
+}
+.swiper-button-next::after,.swiper-button-prev::after {
+  content: none!important;;
+}
+@media only screen and (max-width: 576px) {
+ 
+}
