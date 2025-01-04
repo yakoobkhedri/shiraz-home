@@ -82,6 +82,12 @@ a {
 .bg-gradient2{
   background: linear-gradient(180deg, #FFFFFF 0%, #FF9704 100%);
 }
+.bg-gradient3{
+  background: linear-gradient(90deg, rgba(255, 235, 208, 0.6) 0%, rgba(255, 255, 255, 0.6) 100%);
+}
+.bg-gradient4{
+  background: linear-gradient(90deg, rgba(44, 44, 44, 0.21) 0%, rgba(255, 233, 202, 0) 79.56%);
+}
 /* after */
 .gradient-after::after{
   content: '';
@@ -90,6 +96,14 @@ a {
   height: 100%;
   inset: 0;
   background: linear-gradient(180deg, rgba(255, 255, 255, 0) 31.94%, #FF9704 100%);
+}
+.gradient-after2::after{
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 26.43%, #160C59 104.07%);
 }
 /* hover */
 .btnHover {

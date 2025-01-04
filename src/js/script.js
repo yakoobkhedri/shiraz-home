@@ -46,7 +46,22 @@ var category = new Swiper(".category", {
     }
   },
 });
-
+var homes = new Swiper(".homes", {
+  slidesPerView: 1,
+  spaceBetween: 24,
+  // autoplay: true,
+  breakpoints: {
+    576: {
+      slidesPerView: 2,
+    },
+    992: {
+      slidesPerView: 3,
+    },
+    1200: {
+      slidesPerView: 4,
+    }
+  },
+});
 
 // select size
 
