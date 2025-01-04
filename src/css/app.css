@@ -73,8 +73,14 @@ a {
   -webkit-backdrop-filter: blur(4px);
   backdrop-filter: blur(4px);
 }
+.bg-blur2{
+  backdrop-filter: blur(4px)
+}
 .bg-gradient{
   background: linear-gradient(0deg, rgba(255, 255, 255, 0) -15.73%, rgba(255, 151, 4, 0.21) 94.27%);
+}
+.bg-gradient2{
+  background: linear-gradient(180deg, #FFFFFF 0%, #FF9704 100%);
 }
 /* after */
 .gradient-after::after{
