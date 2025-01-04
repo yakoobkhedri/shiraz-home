@@ -57,7 +57,7 @@ var homes = new Swiper(".homes", {
     992: {
       slidesPerView: 3,
     },
-    1200: {
+    1300: {
       slidesPerView: 4,
     }
   },

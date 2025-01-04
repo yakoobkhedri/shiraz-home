@@ -67,6 +67,14 @@ a {
 .transition {
   @apply transition-all duration-300;
 }
+/* border */
+.border-gradient{
+  border: 1px solid #0000;
+  border-radius: 14px;
+  background: 
+    conic-gradient(#fff /* the background color */ 0 0) padding-box,
+    linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #E4E4E4 100%) border-box;
+}
 /* bg */
 .bg-blur {
   background-color: rgba(255, 255, 255, 0.91);
