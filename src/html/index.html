@@ -351,7 +351,12 @@
   <main class="relative">
 
     <!-- banner -->
-    <section class="bg-dark pt-11 pb-[90px]">
+    <section class="bg-dark pt-11 relative">
+      <!-- shape && logo -->
+      <img alt="shape" src="../img/svg/Vector 88.svg" class="absolute inset-x-0 mx-auto top-0">
+      <img alt="logo" src="../img/IMAGE 1403-10-08 22_36_07 1 1.png" class="absolute inset-x-0 mx-auto -top-3">
+      <img alt="shape" src="../img/svg/Vector 90.svg" class="absolute inset-x-0 w-full -bottom-1">
+      <!--  -->
       <div class="max-w-content mx-auto px-4">
         <div class="flex items-center justify-between gap-3">
           <div class="lg:hidden cursor-pointer" id="hamIcon">
@@ -471,7 +476,7 @@
         <div class="mt-7 grid grid-cols-12 gap-5">
           <div class="col-span-8">
             <div class="relative">
-              <div class="swiper banner">
+              <div class="swiper banner relative">
                 <div class="swiper-wrapper">
                   <div class="swiper-slide">
                     <div class="relative gradient-after overflow-hidden rounded-[20px]">
@@ -502,32 +507,35 @@
                     </div>
                   </div>
                 </div>
-                <div class="swiper-pagination"></div>
+                <div class="swiper-pagination z-20"></div>
+                <!-- shape -->
+                <img alt="shape" src="../img/svg/Vector 89.svg" class="absolute inset-x-0 mx-auto z-10 bottom-0">
               </div>
             </div>
           </div>
           <div class="col-span-4">
             <form class="bg-white rounded-[20px] px-5 py-6 shadow-1 z-2 relative">
               <div class="flex items-center gap-3">
-               <img alt="icon" src="../img/svg/filter.svg">
-               <img alt="icon" src="../img/svg/Group 24.svg">
-               <p class="font-semibold text-lg rtl:font-paydaSemiBold ltr:font-MontserratBold">فیلترها</p>
+                <img alt="icon" src="../img/svg/filter.svg">
+                <img alt="icon" src="../img/svg/Group 24.svg">
+                <p class="font-semibold text-lg rtl:font-paydaSemiBold ltr:font-MontserratBold">فیلترها</p>
               </div>
               <select class="mt-8 rounded-[10px] h-14 bg-gray font-paydaMedium p-4 w-full">
-               <option>نوع اقامتگاه</option>
-               <option>نوع اقامتگاه</option>
+                <option>نوع اقامتگاه</option>
+                <option>نوع اقامتگاه</option>
               </select>
               <select class="mt-5 rounded-[10px] h-14 bg-gray font-paydaMedium p-4 w-full">
                 <option>نوع اقامتگاه</option>
                 <option>نوع اقامتگاه</option>
-               </select>
-               <select class="mt-5 rounded-[10px] h-14 bg-gray font-paydaMedium p-4 w-full">
+              </select>
+              <select class="mt-5 rounded-[10px] h-14 bg-gray font-paydaMedium p-4 w-full">
                 <option>ظرفیت</option>
                 <option>ظرفیت</option>
-               </select>
-               <button class="bg-primary rounded-[10px] text-white btnHover h-14 w-full mt-6 flex-center font-bold rtl:font-paydaBold ltr:font-MontserratBold">
-                   جست و جو  
-               </button>
+              </select>
+              <button
+                class="bg-primary rounded-[10px] text-white btnHover h-14 w-full mt-6 flex-center font-bold rtl:font-paydaBold ltr:font-MontserratBold">
+                جست و جو
+              </button>
             </form>
             <div class="bg-white rounded-b-[9px] h-[10px] mx-5 shadow-1"></div>
           </div>
@@ -536,42 +544,54 @@
     </section>
 
     <!-- category -->
-     <section class="mt-[70px]">
+    <section class="mt-[70px]">
       <div class="max-w-content mx-auto px-4">
-        <div class="swiper category">
+        <div class="swiper category px-2 py-4">
           <div class="swiper-wrapper">
             <div class="swiper-slide">
-              <div class="flex items-center gap-8 border border-[#dcdbdb] rounded-[20px] pt-[34px] pb-[47px] rtl:pr-5 rtl:pl-2 ltr:pl-5 ltr:pr-2 relative font-semibold rtl:font-paydaSemiBold ltr:font-MontserratBold text-xl">
+              <a
+                class="flex items-center gap-8 border border-[#dcdbdb] rounded-[26px] pt-[34px] pb-[47px] rtl:pr-5 rtl:pl-2 ltr:pl-5 ltr:pr-2 relative font-semibold rtl:font-paydaSemiBold ltr:font-MontserratBold text-xl">
+                <img alt="img" src="../img/Group 12.png">
+                <p>اقتصادی</p>
+                <!-- shape -->
+                <img alt="shape" src="../img/svg/Vector 91.svg" class="absolute rtl:left-[18px] ltr:right-[18px] z-10 bottom-0">
+                <a class="inline-block absolute rtl:left-[48px] ltr:right-[48px] z-10 -bottom-[5px] ltr:[transform:rotateY(180deg)]">
+                  <img alt="icon" src="../img/svg/arrow-left.svg">
+                </a>
+                <div class="bg-white h-3 w-[38px] absolute -bottom-[10px] rtl:left-[37px] ltr:right-[37px]"></div>
+              </a>
+            </div>
+            <div class="swiper-slide">
+              <div
+                class="flex items-center gap-8 border border-[#dcdbdb] rounded-[20px] pt-[34px] pb-[47px] rtl:pr-5 rtl:pl-2 ltr:pl-5 ltr:pr-2 relative font-semibold rtl:font-paydaSemiBold ltr:font-MontserratBold text-xl">
                 <img alt="img" src="../img/Group 12.png">
                 <p>اقتصادی</p>
               </div>
             </div>
             <div class="swiper-slide">
-              <div class="flex items-center gap-8 border border-[#dcdbdb] rounded-[20px] pt-[34px] pb-[47px] rtl:pr-5 rtl:pl-2 ltr:pl-5 ltr:pr-2 relative font-semibold rtl:font-paydaSemiBold ltr:font-MontserratBold text-xl">
+              <div
+                class="flex items-center gap-8 border border-[#dcdbdb] rounded-[20px] pt-[34px] pb-[47px] rtl:pr-5 rtl:pl-2 ltr:pl-5 ltr:pr-2 relative font-semibold rtl:font-paydaSemiBold ltr:font-MontserratBold text-xl">
                 <img alt="img" src="../img/Group 12.png">
                 <p>اقتصادی</p>
               </div>
             </div>
             <div class="swiper-slide">
-              <div class="flex items-center gap-8 border border-[#dcdbdb] rounded-[20px] pt-[34px] pb-[47px] rtl:pr-5 rtl:pl-2 ltr:pl-5 ltr:pr-2 relative font-semibold rtl:font-paydaSemiBold ltr:font-MontserratBold text-xl">
+              <div
+                class="flex items-center gap-8 border border-[#dcdbdb] rounded-[20px] pt-[34px] pb-[47px] rtl:pr-5 rtl:pl-2 ltr:pl-5 ltr:pr-2 relative font-semibold rtl:font-paydaSemiBold ltr:font-MontserratBold text-xl">
                 <img alt="img" src="../img/Group 12.png">
                 <p>اقتصادی</p>
               </div>
             </div>
             <div class="swiper-slide">
-              <div class="flex items-center gap-8 border border-[#dcdbdb] rounded-[20px] pt-[34px] pb-[47px] rtl:pr-5 rtl:pl-2 ltr:pl-5 ltr:pr-2 relative font-semibold rtl:font-paydaSemiBold ltr:font-MontserratBold text-xl">
+              <div
+                class="flex items-center gap-8 border border-[#dcdbdb] rounded-[20px] pt-[34px] pb-[47px] rtl:pr-5 rtl:pl-2 ltr:pl-5 ltr:pr-2 relative font-semibold rtl:font-paydaSemiBold ltr:font-MontserratBold text-xl">
                 <img alt="img" src="../img/Group 12.png">
                 <p>اقتصادی</p>
               </div>
             </div>
             <div class="swiper-slide">
-              <div class="flex items-center gap-8 border border-[#dcdbdb] rounded-[20px] pt-[34px] pb-[47px] rtl:pr-5 rtl:pl-2 ltr:pl-5 ltr:pr-2 relative font-semibold rtl:font-paydaSemiBold ltr:font-MontserratBold text-xl">
-                <img alt="img" src="../img/Group 12.png">
-                <p>اقتصادی</p>
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <div class="flex items-center gap-8 border border-[#dcdbdb] rounded-[20px] pt-[34px] pb-[47px] rtl:pr-5 rtl:pl-2 ltr:pl-5 ltr:pr-2 relative font-semibold rtl:font-paydaSemiBold ltr:font-MontserratBold text-xl">
+              <div
+                class="flex items-center gap-8 border border-[#dcdbdb] rounded-[20px] pt-[34px] pb-[47px] rtl:pr-5 rtl:pl-2 ltr:pl-5 ltr:pr-2 relative font-semibold rtl:font-paydaSemiBold ltr:font-MontserratBold text-xl">
                 <img alt="img" src="../img/Group 12.png">
                 <p>اقتصادی</p>
               </div>
@@ -579,6 +599,12 @@
           </div>
         </div>
       </div>
+    </section>
+
+    <!-- eghtesadi homes -->
+     <section class="pt-8 pb-11 bg-gradient relative mt-16">
+        <!-- shape -->
+        <img alt="shape" src="../img/svg/Vector 92.svg" class="absolute inset-x-0 -top-0.5 mx-auto">
      </section>
 
   </main>

@@ -30,7 +30,7 @@ var banner = new Swiper(".banner", {
 var category = new Swiper(".category", {
   slidesPerView: 1.5,
   spaceBetween: 24,
-  autoplay: true,
+  // autoplay: true,
   breakpoints: {
     576: {
       slidesPerView: 2,
