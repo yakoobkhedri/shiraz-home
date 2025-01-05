@@ -113,6 +113,14 @@ a {
   inset: 0;
   background: linear-gradient(180deg, rgba(255, 255, 255, 0) 26.43%, #160C59 104.07%);
 }
+.gradient-after3::after{
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 49.64%, #FF9704 110.53%);
+}
 /* hover */
 .btnHover {
   transition: all .4s;

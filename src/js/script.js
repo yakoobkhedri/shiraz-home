@@ -49,7 +49,7 @@ var category = new Swiper(".category", {
 var homes = new Swiper(".homes", {
   slidesPerView: 1,
   spaceBetween: 24,
-  // autoplay: true,
+  autoplay: true,
   breakpoints: {
     576: {
       slidesPerView: 2,
@@ -60,6 +60,10 @@ var homes = new Swiper(".homes", {
     1300: {
       slidesPerView: 4,
     }
+  },
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
   },
 });
 
