@@ -96,6 +96,12 @@ a {
 .bg-gradient4{
   background: linear-gradient(90deg, rgba(44, 44, 44, 0.21) 0%, rgba(255, 233, 202, 0) 79.56%);
 }
+.bg-gradient5{
+  background: linear-gradient(90deg, rgba(44, 44, 44, 0) 0%, rgba(255, 255, 255, 0.072) 100%);
+}
+.bg-gradient6{
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.21) 0%, rgba(255, 233, 202, 0) 79.56%);
+}
 /* after */
 .gradient-after::after{
   content: '';
