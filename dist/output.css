@@ -767,6 +767,10 @@ video {
   z-index: 50;
 }
 
+.z-3 {
+  z-index: 3;
+}
+
 .col-span-2 {
   grid-column: span 2 / span 2;
 }
@@ -931,12 +935,8 @@ video {
   margin-top: 99px;
 }
 
-.mt-24 {
-  margin-top: 6rem;
-}
-
-.mt-20 {
-  margin-top: 5rem;
+.mb-3 {
+  margin-bottom: 0.75rem;
 }
 
 .line-clamp-2 {
@@ -1357,6 +1357,14 @@ video {
   gap: 63px;
 }
 
+.gap-\[99px\] {
+  gap: 99px;
+}
+
+.gap-\[54px\] {
+  gap: 54px;
+}
+
 .overflow-auto {
   overflow: auto;
 }
@@ -1484,6 +1492,10 @@ video {
 
 .bg-\[\#FFFFFF21\] {
   background-color: #FFFFFF21;
+}
+
+.bg-\[\#FFFFFF57\] {
+  background-color: #FFFFFF57;
 }
 
 .bg-\[\#FFFFFF7A\] {
@@ -1725,12 +1737,12 @@ video {
   padding-top: 52px;
 }
 
-.pt-\[71px\] {
-  padding-top: 71px;
-}
-
 .pt-\[53px\] {
   padding-top: 53px;
+}
+
+.pt-\[71px\] {
+  padding-top: 71px;
 }
 
 .text-center {
@@ -1807,6 +1819,14 @@ video {
   line-height: 1rem;
 }
 
+.text-\[40px\] {
+  font-size: 40px;
+}
+
+.text-\[31px\] {
+  font-size: 31px;
+}
+
 .font-black {
   font-weight: 900;
 }
@@ -1837,6 +1857,10 @@ video {
 
 .leading-\[53px\] {
   line-height: 53px;
+}
+
+.text-\[\#2C2C2C87\] {
+  color: #2C2C2C87;
 }
 
 .text-\[\#363636\] {
@@ -2182,6 +2206,17 @@ a {
   to {
     left: 100%;
   }
+}
+
+/* testimonials */
+
+.testimonials > div > div.active {
+  background-color: white;
+  box-shadow: -4px 11px 31px 5px #71717129;
+}
+
+.testimonials > div > div.active p{
+  color: black;
 }
 
 /* dropdown */
