@@ -277,18 +277,19 @@ input[type="number"] {
   @apply text-sm text-[#7f7f7f] mx-7;
 }
 /* accordion */
-.acordionBtn img.active,.acordionBtn2 img.active{
-  transform: rotate(180deg);
+.acordionBtn,.acordionBtn2{
+  cursor: pointer;
 }
-.acordionBtn2.active{
-  background: #F3F5FF;
+.acordionBtn img.active{
+  transform: rotate(180deg);
 }
 .acordionContent,.acordionContent2 {
   max-height: 0;
   overflow: hidden;
+  transition: all .4s;
 }
 .acordionContent.active,.acordionContent2.active {
-  max-height: fit-content;
+  max-height: 2000px;
   overflow: visible;
 }
 /* shadow */
