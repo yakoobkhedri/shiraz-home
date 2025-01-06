@@ -16,6 +16,9 @@ module.exports = {
         4: "4",
         5: "5",
       },
+      padding:{
+        'custom':'calc((100% - 1256px) / 2)'
+       },
       fontFamily: {
         paydaRegular: "payda-Regular",
         paydaMedium: "payda-Medium",
