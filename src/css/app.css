@@ -42,6 +42,30 @@
 
   src: url('../src/fonts/Montserrat-Bold.ttf') format("trueType");
 }
+.font-normal{
+  font-weight: 400;
+  @apply rtl:font-paydaRegular ltr:font-MontserratRegular;
+}
+.font-medium{
+  font-weight: 500;
+  @apply rtl:font-paydaMedium;
+}
+.font-semibold{
+  font-weight: 600;
+  @apply rtl:font-paydaSemiBold ltr:font-MontserratBold;
+}
+.font-bold{
+  font-weight: 700;
+  @apply rtl:font-paydaBold ltr:font-MontserratBold;
+}
+.font-extrabold{
+  font-weight: 800;
+  @apply rtl:font-paydaExtraBold ltr:font-MontserratBold;
+}
+.font-black{
+  font-weight: 900;
+  @apply rtl:font-paydaBlack ltr:font-MontserratBold;
+}
 html {
   scroll-behavior: smooth;
 }

@@ -86,6 +86,22 @@ var homes2 = new Swiper(".homes2", {
     prevEl: ".swiper-button-prev",
   },
 });
+var features = new Swiper(".features", {
+  slidesPerView: 1,
+  spaceBetween: 24,
+  autoplay: true,
+  breakpoints: {
+    576: {
+      slidesPerView: 2,
+    },
+    992: {
+      slidesPerView: 3,
+    },
+    1200: {
+      slidesPerView: 4,
+    }
+  },
+});
 // select size
 
 let size = Array.from(document.getElementsByClassName('size'));
