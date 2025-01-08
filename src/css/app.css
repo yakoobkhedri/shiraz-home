@@ -131,7 +131,9 @@ a {
 }
 .bg-gradient8{
   background: linear-gradient(90deg, rgba(2, 34, 195, 0) 0%, rgba(255, 255, 255, 0.234) 100%);
-
+}
+.bg-gradient9{
+  background: linear-gradient(89.85deg, #FFFFFF 0.13%, rgba(255, 245, 232, 0) 38.33%);
 }
 /* after */
 .gradient-after::after{
@@ -312,7 +314,10 @@ input[type="number"] {
 .acordionBtn,.acordionBtn2{
   cursor: pointer;
 }
-.acordionBtn img.active{
+.acordionBtn2 img.arrow{
+  transition: all .4s;
+}
+.acordionBtn img.active,.acordionBtn2 img.arrow.active{
   transform: rotate(180deg);
 }
 .acordionContent,.acordionContent2 {
@@ -323,6 +328,10 @@ input[type="number"] {
 .acordionContent.active,.acordionContent2.active {
   max-height: 2000px;
   overflow: visible;
+}
+/* jalalidatapicker */
+.daterangepicker td.active, .daterangepicker td.active:hover {
+  background-color: #ff9704;
 }
 /* shadow */
 .shadow-1 {

@@ -21,6 +21,7 @@ var banner = new Swiper(".banner", {
   loop: true,
   spaceBetween: 40,
   slidesPerView: 1,
+  effect: "fade",
   autoplay: true,
   pagination: {
     el: ".swiper-pagination",
@@ -84,22 +85,6 @@ var homes2 = new Swiper(".homes2", {
   navigation: {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
-  },
-});
-var features = new Swiper(".features", {
-  slidesPerView: 1,
-  spaceBetween: 24,
-  autoplay: true,
-  breakpoints: {
-    576: {
-      slidesPerView: 2,
-    },
-    992: {
-      slidesPerView: 3,
-    },
-    1200: {
-      slidesPerView: 4,
-    }
   },
 });
 // select size
@@ -186,5 +171,50 @@ acordionBtn2.forEach((item) => {
   item.addEventListener('click', function () {
     item.classList.toggle('active');
     item.nextElementSibling.classList.toggle('active');
+    item.querySelector('img.arrow').classList.toggle('active');
   })
 })
+
+// datapicker
+
+jQuery(function () {
+  $('.date').daterangepicker({
+      "locale": {
+          "format": "MM/DD/YYYY",
+          "separator": " - ",
+          "applyLabel": "اجرا",
+          "cancelLabel": "کنسل",
+          "fromLabel": "از",
+          "toLabel": "تا",
+          "customRangeLabel": "Custom",
+          "weekLabel": "W",
+          "daysOfWeek": [
+              "Su",
+              "Mo",
+              "Tu",
+              "We",
+              "Th",
+              "Fr",
+              "Sa"
+          ],
+          "monthNames": [
+              "January",
+              "February",
+              "March",
+              "April",
+              "May",
+              "June",
+              "July",
+              "August",
+              "September",
+              "October",
+              "November",
+              "December"
+          ],
+          "firstDay": 1
+      }, "startDate": "06/01/2023",
+      "endDate": "06/07/2023"
+  }, function (start, end, label) {
+      console.log('New date range selected: ' + start.format('YYYY-MM-DD') + ' to ' + end.format('YYYY-MM-DD') + ' (predefined range: ' + label + ')');
+  });
+});

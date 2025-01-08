@@ -5,6 +5,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0 maximum-scale=1" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
   <link href="../../dist/output.css" rel="stylesheet">
   <title>صفحه اصلی</title>
 </head>
@@ -51,8 +52,7 @@
               </svg>
             </span>
             <div>
-              <span
-                class="text-base sm:text-lg font-black">021-91016668</span>
+              <span class="text-base sm:text-lg font-black">021-91016668</span>
               <p class="text-sm opacity-50 mt-1">تماس در روز های کاری از 9 صبح تا 7 شب</p>
             </div>
           </li>
@@ -68,8 +68,7 @@
               </svg>
             </span>
             <div>
-              <span
-                class="text-base sm:text-lg font-black">info@moeidgroup.com</span>
+              <span class="text-base sm:text-lg font-black">info@moeidgroup.com</span>
               <p class="text-sm opacity-50 mt-1">ارتباط از طریق ایمیل</p>
             </div>
           </li>
@@ -160,16 +159,15 @@
           </clipPath>
         </defs>
       </svg>
-      <p
-        class="text-[#ff9704] font-black text-sm text-center mt-2 hidden sm:block">
+      <p class="text-[#ff9704] font-black text-sm text-center mt-2 hidden sm:block">
         درخواست مشاوره</p>
     </a>
   </div>
 
   <!-- header -->
-  <header class="relative ">
+  <header class="relative">
     <div class="max-w-content mx-auto px-4 ">
-      <div class="flex-between gap-3 py-8">
+      <div class="flex-between gap-3 py-3">
         <ul class="font-medium flex items-center gap-8">
           <li><a class="hover:text-primary">سوالات متداول</a></li>
           <li><a class="hover:text-primary">سوالات متداول</a></li>
@@ -180,7 +178,7 @@
               <h5 class="font-semibold ltr:font-MontserratBold">پشتیبانی</h5>
               <p class="mt-1"><span class="font-medium">021</span><span class="font-black">-1234567</span></p>
             </div>
-            <a class="w-14 h-14 rounded-full bg-gray hover:bg-primary transition flex-center group">
+            <a class="w-11 h-11 rounded-full bg-gray hover:bg-primary transition flex-center group">
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path class="transition group-hover:fill-[#F7F7F7]"
                   d="M21 8.55H16.2C15.79 8.55 15.45 8.21 15.45 7.8V3C15.45 2.59 15.79 2.25 16.2 2.25C16.61 2.25 16.95 2.59 16.95 3V7.05H21C21.41 7.05 21.75 7.39 21.75 7.8C21.75 8.21 21.41 8.55 21 8.55Z"
@@ -494,7 +492,7 @@
                   </div>
                   <div class="swiper-slide">
                     <div class="relative gradient-after overflow-hidden rounded-[20px]">
-                      <img alt="banner" src="../img/image(2).png" class="rounded-[20px] w-full h-[392px]">
+                      <img alt="banner" src="../img/image (7).png" class="rounded-[20px] w-full h-[392px]">
                       <div class="absolute flex gap-3 bottom-5 rtl:right-5 ltr:left-5 z-10">
                         <span class="block bg-white w-[78px] h-[1px] mt-5"></span>
                         <div class="text-[32px] text-white">
@@ -524,16 +522,15 @@
                 <option>نوع اقامتگاه</option>
                 <option>نوع اقامتگاه</option>
               </select>
-              <select class="mt-5 rounded-[10px] h-14 bg-gray font-medium p-4 w-full">
-                <option>نوع اقامتگاه</option>
-                <option>نوع اقامتگاه</option>
-              </select>
+              <div class="mt-5 rounded-[10px] h-14 bg-gray font-medium p-4 w-full">
+                <input type="text" class="date border-0 outline-none bg-transparent" name="daterange"
+                value="تاریخ ورود    |    تاریخ خروج" />
+              </div>
               <select class="mt-5 rounded-[10px] h-14 bg-gray font-medium p-4 w-full">
                 <option>ظرفیت</option>
                 <option>ظرفیت</option>
               </select>
-              <button
-                class="bg-primary rounded-[10px] text-white btnHover h-14 w-full mt-6 flex-center font-bold">
+              <button class="bg-primary rounded-[10px] text-white btnHover h-14 w-full mt-6 flex-center font-bold">
                 جست و جو
               </button>
             </form>
@@ -554,9 +551,12 @@
                 <img alt="img" src="../img/Group 12.png">
                 <p>اقتصادی</p>
                 <!-- shape -->
-                  <svg class="absolute rtl:left-[22px] ltr:right-[22px] z-10 -bottom-[1px]" width="70" height="18" viewBox="0 0 70 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path class="transition group-hover:fill-[#fff2e0]" d="M3.01307 16.7467L0 17.5H69.5001L60.4663 16.0546C58.1862 15.6898 56.0212 14.8035 54.1398 13.4648L40.5884 3.82246C34.8845 -0.236086 27.2044 -0.115346 21.631 4.1205L8.45127 14.137C6.83395 15.3662 4.98382 16.254 3.01307 16.7467Z" fill="#f5f5f5"/>
-                  </svg>
+                <svg class="absolute rtl:left-[22px] ltr:right-[22px] z-10 -bottom-[1px]" width="70" height="18"
+                  viewBox="0 0 70 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path class="transition group-hover:fill-[#fff2e0]"
+                    d="M3.01307 16.7467L0 17.5H69.5001L60.4663 16.0546C58.1862 15.6898 56.0212 14.8035 54.1398 13.4648L40.5884 3.82246C34.8845 -0.236086 27.2044 -0.115346 21.631 4.1205L8.45127 14.137C6.83395 15.3662 4.98382 16.254 3.01307 16.7467Z"
+                    fill="#f5f5f5" />
+                </svg>
                 <a
                   class="inline-block absolute rtl:left-[45px] ltr:right-[52px] z-10 -bottom-[6px] ltr:[transform:rotateY(180deg)]">
                   <img alt="icon" src="../img/svg/arrow-left.svg">
@@ -570,9 +570,12 @@
                 <img alt="img" src="../img/Group 13.png">
                 <p>استاندارد</p>
                 <!-- shape -->
-                  <svg class="absolute rtl:left-[22px] ltr:right-[22px] z-10 -bottom-[1px]" width="70" height="18" viewBox="0 0 70 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path class="transition group-hover:fill-[#fff2e0]" d="M3.01307 16.7467L0 17.5H69.5001L60.4663 16.0546C58.1862 15.6898 56.0212 14.8035 54.1398 13.4648L40.5884 3.82246C34.8845 -0.236086 27.2044 -0.115346 21.631 4.1205L8.45127 14.137C6.83395 15.3662 4.98382 16.254 3.01307 16.7467Z" fill="#f5f5f5"/>
-                  </svg>
+                <svg class="absolute rtl:left-[22px] ltr:right-[22px] z-10 -bottom-[1px]" width="70" height="18"
+                  viewBox="0 0 70 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path class="transition group-hover:fill-[#fff2e0]"
+                    d="M3.01307 16.7467L0 17.5H69.5001L60.4663 16.0546C58.1862 15.6898 56.0212 14.8035 54.1398 13.4648L40.5884 3.82246C34.8845 -0.236086 27.2044 -0.115346 21.631 4.1205L8.45127 14.137C6.83395 15.3662 4.98382 16.254 3.01307 16.7467Z"
+                    fill="#f5f5f5" />
+                </svg>
                 <a
                   class="inline-block absolute rtl:left-[45px] ltr:right-[52px] z-10 -bottom-[6px] ltr:[transform:rotateY(180deg)]">
                   <img alt="icon" src="../img/svg/arrow-left.svg">
@@ -586,9 +589,12 @@
                 <img alt="img" src="../img/Group 14.png">
                 <p>لوکس</p>
                 <!-- shape -->
-                  <svg class="absolute rtl:left-[22px] ltr:right-[22px] z-10 -bottom-[1px]" width="70" height="18" viewBox="0 0 70 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path class="transition group-hover:fill-[#fff2e0]" d="M3.01307 16.7467L0 17.5H69.5001L60.4663 16.0546C58.1862 15.6898 56.0212 14.8035 54.1398 13.4648L40.5884 3.82246C34.8845 -0.236086 27.2044 -0.115346 21.631 4.1205L8.45127 14.137C6.83395 15.3662 4.98382 16.254 3.01307 16.7467Z" fill="#f5f5f5"/>
-                  </svg>
+                <svg class="absolute rtl:left-[22px] ltr:right-[22px] z-10 -bottom-[1px]" width="70" height="18"
+                  viewBox="0 0 70 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path class="transition group-hover:fill-[#fff2e0]"
+                    d="M3.01307 16.7467L0 17.5H69.5001L60.4663 16.0546C58.1862 15.6898 56.0212 14.8035 54.1398 13.4648L40.5884 3.82246C34.8845 -0.236086 27.2044 -0.115346 21.631 4.1205L8.45127 14.137C6.83395 15.3662 4.98382 16.254 3.01307 16.7467Z"
+                    fill="#f5f5f5" />
+                </svg>
                 <a
                   class="inline-block absolute rtl:left-[45px] ltr:right-[52px] z-10 -bottom-[6px] ltr:[transform:rotateY(180deg)]">
                   <img alt="icon" src="../img/svg/arrow-left.svg">
@@ -602,9 +608,12 @@
                 <img alt="img" src="../img/Group 15.png">
                 <p>تاپ لوکیشن</p>
                 <!-- shape -->
-                  <svg class="absolute rtl:left-[22px] ltr:right-[22px] z-10 -bottom-[1px]" width="70" height="18" viewBox="0 0 70 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path class="transition group-hover:fill-[#fff2e0]" d="M3.01307 16.7467L0 17.5H69.5001L60.4663 16.0546C58.1862 15.6898 56.0212 14.8035 54.1398 13.4648L40.5884 3.82246C34.8845 -0.236086 27.2044 -0.115346 21.631 4.1205L8.45127 14.137C6.83395 15.3662 4.98382 16.254 3.01307 16.7467Z" fill="#f5f5f5"/>
-                  </svg>
+                <svg class="absolute rtl:left-[22px] ltr:right-[22px] z-10 -bottom-[1px]" width="70" height="18"
+                  viewBox="0 0 70 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path class="transition group-hover:fill-[#fff2e0]"
+                    d="M3.01307 16.7467L0 17.5H69.5001L60.4663 16.0546C58.1862 15.6898 56.0212 14.8035 54.1398 13.4648L40.5884 3.82246C34.8845 -0.236086 27.2044 -0.115346 21.631 4.1205L8.45127 14.137C6.83395 15.3662 4.98382 16.254 3.01307 16.7467Z"
+                    fill="#f5f5f5" />
+                </svg>
                 <a
                   class="inline-block absolute rtl:left-[45px] ltr:right-[52px] z-10 -bottom-[6px] ltr:[transform:rotateY(180deg)]">
                   <img alt="icon" src="../img/svg/arrow-left.svg">
@@ -618,9 +627,12 @@
                 <img alt="img" src="../img/Group 16.png">
                 <p>لحظه آخری</p>
                 <!-- shape -->
-                  <svg class="absolute rtl:left-[22px] ltr:right-[22px] z-10 -bottom-[1px]" width="70" height="18" viewBox="0 0 70 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path class="transition group-hover:fill-[#fff2e0]" d="M3.01307 16.7467L0 17.5H69.5001L60.4663 16.0546C58.1862 15.6898 56.0212 14.8035 54.1398 13.4648L40.5884 3.82246C34.8845 -0.236086 27.2044 -0.115346 21.631 4.1205L8.45127 14.137C6.83395 15.3662 4.98382 16.254 3.01307 16.7467Z" fill="#f5f5f5"/>
-                  </svg>
+                <svg class="absolute rtl:left-[22px] ltr:right-[22px] z-10 -bottom-[1px]" width="70" height="18"
+                  viewBox="0 0 70 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path class="transition group-hover:fill-[#fff2e0]"
+                    d="M3.01307 16.7467L0 17.5H69.5001L60.4663 16.0546C58.1862 15.6898 56.0212 14.8035 54.1398 13.4648L40.5884 3.82246C34.8845 -0.236086 27.2044 -0.115346 21.631 4.1205L8.45127 14.137C6.83395 15.3662 4.98382 16.254 3.01307 16.7467Z"
+                    fill="#f5f5f5" />
+                </svg>
                 <a
                   class="inline-block absolute rtl:left-[45px] ltr:right-[52px] z-10 -bottom-[6px] ltr:[transform:rotateY(180deg)]">
                   <img alt="icon" src="../img/svg/arrow-left.svg">
@@ -640,21 +652,25 @@
       <a class="animate-bounce absolute inset-x-0 z-2 -top-2 mx-auto flex-center w-[41px]">
         <svg width="41" height="60" viewBox="0 0 41 60" fill="none" xmlns="http://www.w3.org/2000/svg">
           <g filter="url(#filter0_f_112_515)">
-          <path d="M4 4H37V40C37 48.8366 29.8366 56 21 56H20C11.1634 56 4 48.8366 4 40V4Z" fill="url(#paint0_linear_112_515)"/>
+            <path d="M4 4H37V40C37 48.8366 29.8366 56 21 56H20C11.1634 56 4 48.8366 4 40V4Z"
+              fill="url(#paint0_linear_112_515)" />
           </g>
-          <path d="M25.9401 28.7125L21.0501 33.6025C20.4726 34.18 19.5276 34.18 18.9501 33.6025L14.0601 28.7125" stroke="white" stroke-width="2.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M25.9401 28.7125L21.0501 33.6025C20.4726 34.18 19.5276 34.18 18.9501 33.6025L14.0601 28.7125"
+            stroke="white" stroke-width="2.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
           <defs>
-          <filter id="filter0_f_112_515" x="0" y="0" width="41" height="60" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-          <feFlood flood-opacity="0" result="BackgroundImageFix"/>
-          <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
-          <feGaussianBlur stdDeviation="2" result="effect1_foregroundBlur_112_515"/>
-          </filter>
-          <linearGradient id="paint0_linear_112_515" x1="20.5" y1="4" x2="20.5" y2="56" gradientUnits="userSpaceOnUse">
-          <stop stop-color="white"/>
-          <stop offset="1" stop-color="#FF9704"/>
-          </linearGradient>
+            <filter id="filter0_f_112_515" x="0" y="0" width="41" height="60" filterUnits="userSpaceOnUse"
+              color-interpolation-filters="sRGB">
+              <feFlood flood-opacity="0" result="BackgroundImageFix" />
+              <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
+              <feGaussianBlur stdDeviation="2" result="effect1_foregroundBlur_112_515" />
+            </filter>
+            <linearGradient id="paint0_linear_112_515" x1="20.5" y1="4" x2="20.5" y2="56"
+              gradientUnits="userSpaceOnUse">
+              <stop stop-color="white" />
+              <stop offset="1" stop-color="#FF9704" />
+            </linearGradient>
           </defs>
-          </svg>
+        </svg>
       </a>
       <div class="max-w-content mx-auto px-4">
         <div class="flex items-center justify-between">
@@ -665,7 +681,7 @@
           <div class="flex items-center gap-8">
             <div class="flex items-center mt-5 relative ltr:mr-6 rtl:ml-6">
               <div
-                class="w-8 h-8 swiper-button-prev !absolute !-top-1 ltr:!-right-5 btnHover active:scale-95 flex-center bg-dark rounded-lg cursor-pointer">
+                class="w-8 h-8 swiper-button-prev !absolute !-top-1 ltr:!-right-5 btnHover active:scale-95 flex-center bg-primary rounded-lg cursor-pointer">
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                   class="text-[#ffeed7] bi bi-chevron-right !w-[60%]" viewBox="0 0 16 16">
                   <path fill-rule="evenodd"
@@ -673,7 +689,7 @@
                 </svg>
               </div>
               <div
-                class="w-8 h-8 swiper-button-next !absolute !-top-1 ltr:!-left-11 btnHover active:scale-95 flex-center bg-dark rounded-lg cursor-pointer">
+                class="w-8 h-8 swiper-button-next !absolute !-top-1 ltr:!-left-11 btnHover active:scale-95 flex-center bg-primary rounded-lg cursor-pointer">
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                   class="text-[#ffeed7] bi bi-chevron-left !w-[60%]" viewBox="0 0 16 16">
                   <path fill-rule="evenodd"
@@ -682,11 +698,12 @@
               </div>
             </div>
             <a
-              class="group rounded-[30px] h-10 bg-gradient4 flex items-center gap-1 rtl:pl-2 ltr:pr-2 rtl:hover:pl-0 ltr:hover:pr-0">
+              class="group rounded-[30px] h-10 bg-gradient9 flex items-center gap-1 rtl:pl-2 ltr:pr-2 rtl:hover:pl-0 ltr:hover:pr-0">
               <p
                 class="h-full font-medium px-3 rounded-[30px] group-hover:bg-primary group-hover:text-white bg-[#ffedd5] flex-center transition">
                 مشاهده همه</p>
-              <img alt="icon" src="../img/svg/arrow-left (2).svg" class="group-hover:max-w-0 transition ltr:[transform:rotateY(180deg)]">
+              <img alt="icon" src="../img/svg/arrow-left (2).svg"
+                class="group-hover:max-w-0 transition ltr:[transform:rotateY(180deg)]">
             </a>
           </div>
         </div>
@@ -730,8 +747,7 @@
                       <span class="text-sm">هر شب از</span>
                        <span class="font-bold">1,200,000 تومان</span>
                     </h6>
-                    <p
-                      class="text-center mt-[5px] text-sm text-secondary font-semibold">
+                    <p class="text-center mt-[5px] text-sm text-secondary font-semibold">
                       کد اقامتگاه: 234</p>
                   </div>
                 </a>
@@ -773,8 +789,7 @@
                       <span class="text-sm">هر شب از</span>
                        <span class="font-bold">1,200,000 تومان</span>
                     </h6>
-                    <p
-                      class="text-center mt-[5px] text-sm text-secondary font-semibold">
+                    <p class="text-center mt-[5px] text-sm text-secondary font-semibold">
                       کد اقامتگاه: 234</p>
                   </div>
                 </a>
@@ -816,8 +831,7 @@
                       <span class="text-sm">هر شب از</span>
                        <span class="font-bold">1,200,000 تومان</span>
                     </h6>
-                    <p
-                      class="text-center mt-[5px] text-sm text-secondary font-semibold">
+                    <p class="text-center mt-[5px] text-sm text-secondary font-semibold">
                       کد اقامتگاه: 234</p>
                   </div>
                 </a>
@@ -859,8 +873,7 @@
                       <span class="text-sm">هر شب از</span>
                        <span class="font-bold">1,200,000 تومان</span>
                     </h6>
-                    <p
-                      class="text-center mt-[5px] text-sm text-secondary font-semibold">
+                    <p class="text-center mt-[5px] text-sm text-secondary font-semibold">
                       کد اقامتگاه: 234</p>
                   </div>
                 </a>
@@ -902,8 +915,7 @@
                       <span class="text-sm">هر شب از</span>
                        <span class="font-bold">1,200,000 تومان</span>
                     </h6>
-                    <p
-                      class="text-center mt-[5px] text-sm text-secondary font-semibold">
+                    <p class="text-center mt-[5px] text-sm text-secondary font-semibold">
                       کد اقامتگاه: 234</p>
                   </div>
                 </a>
@@ -929,8 +941,9 @@
               <div
                 class="absolute px-2 pb-4 z-10 inset-x-0 bottom-0 flex items-center justify-between gap-0.5 text-white font-extrabold">
                 <p>مسجد نصیر الملک</p>
-                <svg class="rtl:group-hover:-rotate-[40deg] ltr:group-hover:rotate-[138deg] transition ltr:[transform:rotateY(180deg)]" width="34" height="34" viewBox="0 0 34 34"
-                  fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg
+                  class="rtl:group-hover:-rotate-[40deg] ltr:group-hover:rotate-[138deg] transition ltr:[transform:rotateY(180deg)]"
+                  width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M18.9508 10.6962L10.3988 11.4393L11.1419 19.9914" stroke="white" stroke-width="2.5"
                     stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
                   <path d="M23.4149 22.3743L10.5288 11.5486" stroke="white" stroke-width="2.5" stroke-miterlimit="10"
@@ -945,8 +958,9 @@
               <div
                 class="absolute px-2 pb-4 z-10 inset-x-0 bottom-0 flex items-center justify-between gap-0.5 text-white font-extrabold">
                 <p>مسجد نصیر الملک</p>
-                <svg class="rtl:group-hover:-rotate-[40deg] ltr:group-hover:rotate-[138deg] transition ltr:[transform:rotateY(180deg)]" width="34" height="34" viewBox="0 0 34 34"
-                  fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg
+                  class="rtl:group-hover:-rotate-[40deg] ltr:group-hover:rotate-[138deg] transition ltr:[transform:rotateY(180deg)]"
+                  width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M18.9508 10.6962L10.3988 11.4393L11.1419 19.9914" stroke="white" stroke-width="2.5"
                     stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
                   <path d="M23.4149 22.3743L10.5288 11.5486" stroke="white" stroke-width="2.5" stroke-miterlimit="10"
@@ -959,8 +973,9 @@
               <div
                 class="absolute px-2 pb-4 z-10 inset-x-0 bottom-0 flex items-center justify-between gap-0.5 text-white font-extrabold">
                 <p>مسجد نصیر الملک</p>
-                <svg class="rtl:group-hover:-rotate-[40deg] ltr:group-hover:rotate-[138deg] transition ltr:[transform:rotateY(180deg)]" width="34" height="34" viewBox="0 0 34 34"
-                  fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg
+                  class="rtl:group-hover:-rotate-[40deg] ltr:group-hover:rotate-[138deg] transition ltr:[transform:rotateY(180deg)]"
+                  width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M18.9508 10.6962L10.3988 11.4393L11.1419 19.9914" stroke="white" stroke-width="2.5"
                     stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
                   <path d="M23.4149 22.3743L10.5288 11.5486" stroke="white" stroke-width="2.5" stroke-miterlimit="10"
@@ -975,8 +990,9 @@
               <div
                 class="absolute px-2 text-2xl pb-4 z-10 inset-x-0 bottom-0 flex items-center justify-between gap-0.5 text-white font-extrabold">
                 <p>مسجد نصیر الملک</p>
-                <svg class="rtl:group-hover:-rotate-[40deg] ltr:group-hover:rotate-[138deg] transition ltr:[transform:rotateY(180deg)]" width="34" height="34" viewBox="0 0 34 34"
-                  fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg
+                  class="rtl:group-hover:-rotate-[40deg] ltr:group-hover:rotate-[138deg] transition ltr:[transform:rotateY(180deg)]"
+                  width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M18.9508 10.6962L10.3988 11.4393L11.1419 19.9914" stroke="white" stroke-width="2.5"
                     stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
                   <path d="M23.4149 22.3743L10.5288 11.5486" stroke="white" stroke-width="2.5" stroke-miterlimit="10"
@@ -989,8 +1005,9 @@
               <div
                 class="absolute px-2 text-2xl pb-4 z-10 inset-x-0 bottom-0 flex items-center justify-between gap-0.5 text-white font-extrabold">
                 <p>مسجد نصیر الملک</p>
-                <svg class="rtl:group-hover:-rotate-[40deg] ltr:group-hover:rotate-[138deg] transition ltr:[transform:rotateY(180deg)]" width="34" height="34" viewBox="0 0 34 34"
-                  fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg
+                  class="rtl:group-hover:-rotate-[40deg] ltr:group-hover:rotate-[138deg] transition ltr:[transform:rotateY(180deg)]"
+                  width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M18.9508 10.6962L10.3988 11.4393L11.1419 19.9914" stroke="white" stroke-width="2.5"
                     stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
                   <path d="M23.4149 22.3743L10.5288 11.5486" stroke="white" stroke-width="2.5" stroke-miterlimit="10"
@@ -1005,8 +1022,9 @@
               <div
                 class="absolute px-2 pb-4 z-10 inset-x-0 bottom-0 flex items-center justify-between gap-0.5 text-white font-extrabold">
                 <p>مسجد نصیر الملک</p>
-                <svg class="rtl:group-hover:-rotate-[40deg] ltr:group-hover:rotate-[138deg] transition ltr:[transform:rotateY(180deg)]" width="34" height="34" viewBox="0 0 34 34"
-                  fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg
+                  class="rtl:group-hover:-rotate-[40deg] ltr:group-hover:rotate-[138deg] transition ltr:[transform:rotateY(180deg)]"
+                  width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M18.9508 10.6962L10.3988 11.4393L11.1419 19.9914" stroke="white" stroke-width="2.5"
                     stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
                   <path d="M23.4149 22.3743L10.5288 11.5486" stroke="white" stroke-width="2.5" stroke-miterlimit="10"
@@ -1019,8 +1037,9 @@
               <div
                 class="absolute px-2 pb-4 z-10 inset-x-0 bottom-0 flex items-center justify-between gap-0.5 text-white font-extrabold">
                 <p>مسجد نصیر الملک</p>
-                <svg class="rtl:group-hover:-rotate-[40deg] ltr:group-hover:rotate-[138deg] transition ltr:[transform:rotateY(180deg)]" width="34" height="34" viewBox="0 0 34 34"
-                  fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg
+                  class="rtl:group-hover:-rotate-[40deg] ltr:group-hover:rotate-[138deg] transition ltr:[transform:rotateY(180deg)]"
+                  width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M18.9508 10.6962L10.3988 11.4393L11.1419 19.9914" stroke="white" stroke-width="2.5"
                     stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
                   <path d="M23.4149 22.3743L10.5288 11.5486" stroke="white" stroke-width="2.5" stroke-miterlimit="10"
@@ -1035,8 +1054,9 @@
               <div
                 class="absolute px-2 pb-4 z-10 inset-x-0 bottom-0 flex items-center justify-between gap-0.5 text-white font-extrabold">
                 <p>مسجد نصیر الملک</p>
-                <svg class="rtl:group-hover:-rotate-[40deg] ltr:group-hover:rotate-[138deg] transition ltr:[transform:rotateY(180deg)]" width="34" height="34" viewBox="0 0 34 34"
-                  fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg
+                  class="rtl:group-hover:-rotate-[40deg] ltr:group-hover:rotate-[138deg] transition ltr:[transform:rotateY(180deg)]"
+                  width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M18.9508 10.6962L10.3988 11.4393L11.1419 19.9914" stroke="white" stroke-width="2.5"
                     stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
                   <path d="M23.4149 22.3743L10.5288 11.5486" stroke="white" stroke-width="2.5" stroke-miterlimit="10"
@@ -1054,7 +1074,8 @@
       <!-- shape -->
       <img alt="shape" src="../img/Vector 103.png" class="absolute -top-5 w-full h-[64px] inset-x-0 block">
       <img alt="shape" src="../img/Vector 104.png" class="absolute bottom-0 w-full h-[64px] inset-x-0 block">
-      <img alt="shape" src="../img/Shapes.png" class="absolute rtl:right-0 ltr:left-0 inset-y-0 block my-auto ltr:[transform:rotateY(180deg)]">
+      <img alt="shape" src="../img/Shapes.png"
+        class="absolute rtl:right-0 ltr:left-0 inset-y-0 block my-auto ltr:[transform:rotateY(180deg)]">
       <div class="max-w-content mx-auto px-4 relative">
         <div class="flex items-center justify-between">
           <div class="flex items-center gap-2 px-3 py-2 rounded-[30px] bg-gradient5">
@@ -1085,7 +1106,8 @@
               <p
                 class="h-full font-medium px-3 rounded-[30px] text-white group-hover:text-white bg-primary flex-center transition">
                 مشاهده همه</p>
-              <img alt="icon" src="../img/svg/arrow-left (4).svg" class="group-hover:max-w-0 transition ltr:[transform:rotateY(180deg)]">
+              <img alt="icon" src="../img/svg/arrow-left (4).svg"
+                class="group-hover:max-w-0 transition ltr:[transform:rotateY(180deg)]">
             </a>
           </div>
         </div>
@@ -1129,8 +1151,7 @@
                       <span class="text-sm">هر شب از</span>
                        <span class="font-bold">1,200,000 تومان</span>
                     </h6>
-                    <p
-                      class="text-center mt-[5px] text-sm text-secondary font-semibold">
+                    <p class="text-center mt-[5px] text-sm text-secondary font-semibold">
                       کد اقامتگاه: 234</p>
                   </div>
                 </a>
@@ -1172,8 +1193,7 @@
                       <span class="text-sm">هر شب از</span>
                        <span class="font-bold">1,200,000 تومان</span>
                     </h6>
-                    <p
-                      class="text-center mt-[5px] text-sm text-secondary font-semibold">
+                    <p class="text-center mt-[5px] text-sm text-secondary font-semibold">
                       کد اقامتگاه: 234</p>
                   </div>
                 </a>
@@ -1215,8 +1235,7 @@
                       <span class="text-sm">هر شب از</span>
                        <span class="font-bold">1,200,000 تومان</span>
                     </h6>
-                    <p
-                      class="text-center mt-[5px] text-sm text-secondary font-semibold">
+                    <p class="text-center mt-[5px] text-sm text-secondary font-semibold">
                       کد اقامتگاه: 234</p>
                   </div>
                 </a>
@@ -1258,8 +1277,7 @@
                       <span class="text-sm">هر شب از</span>
                        <span class="font-bold">1,200,000 تومان</span>
                     </h6>
-                    <p
-                      class="text-center mt-[5px] text-sm text-secondary font-semibold">
+                    <p class="text-center mt-[5px] text-sm text-secondary font-semibold">
                       کد اقامتگاه: 234</p>
                   </div>
                 </a>
@@ -1301,8 +1319,7 @@
                       <span class="text-sm">هر شب از</span>
                        <span class="font-bold">1,200,000 تومان</span>
                     </h6>
-                    <p
-                      class="text-center mt-[5px] text-sm text-secondary font-semibold">
+                    <p class="text-center mt-[5px] text-sm text-secondary font-semibold">
                       کد اقامتگاه: 234</p>
                   </div>
                 </a>
@@ -1348,8 +1365,7 @@
                 با ما تماس بگیرید
               </a>
               <div class="mt-6 h-[67px] px-[18px] flex items-center justify-end gap-4 w-full">
-                <h5
-                  class="text-white text-lg font-bold rtl:ml-auto ltr:mr-auto">
+                <h5 class="text-white text-lg font-bold rtl:ml-auto ltr:mr-auto">
                   فقط تایم اداری</h5>
                 <h4 class="text-white text-2xl font-extrabold">
                   071-234567 </h4>
@@ -1367,28 +1383,33 @@
     <!-- lux homes -->
     <section class="pt-20 bg-primary relative mt-16">
       <!-- shape -->
-      <img alt="shape" src="../img/Vector 104.png" class="absolute bottom-0 w-full h-[64px] inset-x-0 block">
+      <img alt="shape" src="../img/Vector 105.png" class="absolute -bottom-1 w-full h-[243px] inset-x-0 block">
       <img alt="shape" src="../img/Vector 99.png" class="absolute w-full inset-x-0 top-0 block h-[98px]">
-      <img alt="shape" src="../img/Shapes (2).png" class="absolute rtl:left-0 ltr:right-0 top-9 block my-auto ltr:[transform:rotateY(180deg)]">
+      <img alt="shape" src="../img/Shapes (2).png"
+        class="absolute rtl:left-0 ltr:right-0 top-9 block my-auto ltr:[transform:rotateY(180deg)]">
       <img alt="shape" src="../img/svg/Vector 92.svg" class="absolute inset-x-0 -top-0.5 mx-auto">
       <a class="animate-bounce absolute inset-x-0 z-2 top-14 mx-auto flex-center w-[41px]">
         <svg width="41" height="60" viewBox="0 0 41 60" fill="none" xmlns="http://www.w3.org/2000/svg">
           <g filter="url(#filter0_f_112_515)">
-          <path d="M4 4H37V40C37 48.8366 29.8366 56 21 56H20C11.1634 56 4 48.8366 4 40V4Z" fill="url(#paint0_linear_112_515)"/>
+            <path d="M4 4H37V40C37 48.8366 29.8366 56 21 56H20C11.1634 56 4 48.8366 4 40V4Z"
+              fill="url(#paint0_linear_112_515)" />
           </g>
-          <path d="M25.9401 28.7125L21.0501 33.6025C20.4726 34.18 19.5276 34.18 18.9501 33.6025L14.0601 28.7125" stroke="white" stroke-width="2.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M25.9401 28.7125L21.0501 33.6025C20.4726 34.18 19.5276 34.18 18.9501 33.6025L14.0601 28.7125"
+            stroke="white" stroke-width="2.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
           <defs>
-          <filter id="filter0_f_112_515" x="0" y="0" width="41" height="60" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-          <feFlood flood-opacity="0" result="BackgroundImageFix"/>
-          <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
-          <feGaussianBlur stdDeviation="2" result="effect1_foregroundBlur_112_515"/>
-          </filter>
-          <linearGradient id="paint0_linear_112_515" x1="20.5" y1="4" x2="20.5" y2="56" gradientUnits="userSpaceOnUse">
-          <stop stop-color="white"/>
-          <stop offset="1" stop-color="#FF9704"/>
-          </linearGradient>
+            <filter id="filter0_f_112_515" x="0" y="0" width="41" height="60" filterUnits="userSpaceOnUse"
+              color-interpolation-filters="sRGB">
+              <feFlood flood-opacity="0" result="BackgroundImageFix" />
+              <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
+              <feGaussianBlur stdDeviation="2" result="effect1_foregroundBlur_112_515" />
+            </filter>
+            <linearGradient id="paint0_linear_112_515" x1="20.5" y1="4" x2="20.5" y2="56"
+              gradientUnits="userSpaceOnUse">
+              <stop stop-color="white" />
+              <stop offset="1" stop-color="#FF9704" />
+            </linearGradient>
           </defs>
-          </svg>
+        </svg>
       </a>
       <div class="max-w-content mx-auto px-4 relative">
         <div class="flex items-center justify-between">
@@ -1417,10 +1438,10 @@
             </div>
             <a
               class="group rounded-[30px] h-10 bg-gradient7 flex items-center gap-1 rtl:pl-2 ltr:pr-2 rtl:hover:pl-0 ltr:hover:pr-0">
-              <p
-                class="h-full font-medium px-3 rounded-[30px] bg-white flex-center transition">
+              <p class="h-full font-medium px-3 rounded-[30px] bg-white flex-center transition">
                 مشاهده همه</p>
-              <img alt="icon" src="../img/svg/arrow-left (4).svg" class="group-hover:max-w-0 transition ltr:[transform:rotateY(180deg)]">
+              <img alt="icon" src="../img/svg/arrow-left (4).svg"
+                class="group-hover:max-w-0 transition ltr:[transform:rotateY(180deg)]">
             </a>
           </div>
         </div>
@@ -1464,8 +1485,7 @@
                       <span class="text-sm">هر شب از</span>
                        <span class="font-bold">1,200,000 تومان</span>
                     </h6>
-                    <p
-                      class="text-center mt-[5px] text-sm text-secondary font-semibold">
+                    <p class="text-center mt-[5px] text-sm text-secondary font-semibold">
                       کد اقامتگاه: 234</p>
                   </div>
                 </a>
@@ -1507,8 +1527,7 @@
                       <span class="text-sm">هر شب از</span>
                        <span class="font-bold">1,200,000 تومان</span>
                     </h6>
-                    <p
-                      class="text-center mt-[5px] text-sm text-secondary font-semibold">
+                    <p class="text-center mt-[5px] text-sm text-secondary font-semibold">
                       کد اقامتگاه: 234</p>
                   </div>
                 </a>
@@ -1550,8 +1569,7 @@
                       <span class="text-sm">هر شب از</span>
                        <span class="font-bold">1,200,000 تومان</span>
                     </h6>
-                    <p
-                      class="text-center mt-[5px] text-sm text-secondary font-semibold">
+                    <p class="text-center mt-[5px] text-sm text-secondary font-semibold">
                       کد اقامتگاه: 234</p>
                   </div>
                 </a>
@@ -1593,8 +1611,7 @@
                       <span class="text-sm">هر شب از</span>
                        <span class="font-bold">1,200,000 تومان</span>
                     </h6>
-                    <p
-                      class="text-center mt-[5px] text-sm text-secondary font-semibold">
+                    <p class="text-center mt-[5px] text-sm text-secondary font-semibold">
                       کد اقامتگاه: 234</p>
                   </div>
                 </a>
@@ -1636,8 +1653,7 @@
                       <span class="text-sm">هر شب از</span>
                        <span class="font-bold">1,200,000 تومان</span>
                     </h6>
-                    <p
-                      class="text-center mt-[5px] text-sm text-secondary font-semibold">
+                    <p class="text-center mt-[5px] text-sm text-secondary font-semibold">
                       کد اقامتگاه: 234</p>
                   </div>
                 </a>
@@ -1649,815 +1665,866 @@
     </section>
 
     <!-- faqs -->
-     <section class="pt-20">
+    <section class="pt-20">
       <div class="max-w-content mx-auto px-4">
-       <div class="grid grid-cols-12 gap-[63px]">
-        <div class="col-span-5">
-          <div class="relative">
-            <div class="bg-[#160C59] rounded-[20px] h-[82%] w-[96%] absolute bottom-0"></div>
-            <div class="rounded-[20px] bg-primary pt-[52px] rtl:pl-20 ltr:pr-20 relative rtl:right-4 ltr:left-4 -top-4">
-              <img alt="shape" src="../img/Vector 98@3x.png" class="absolute top-0 rtl:left-0 ltr:right-0 ltr:[transform:rotateY(180deg)] w-[133px] h-[122px]">
-              <a class="flex-center w-[82px] h-[82px] bg-[#160C59] !absolute top-0 rtl:left-3 ltr:right-3 btnHover rounded-[20px] z-10">
-                <img alt="img" src="../img/svg/arrow-up.svg">
-              </a>
-              <div class="relative p-2 pb-0">
-                <img alt="img" src="../img/Group 38.png">
-                <img alt="img" src="../img/Ellipse 17.png" class="absolute inset-x-0 mx-auto bottom-0">
+        <div class="grid grid-cols-12 gap-[63px]">
+          <div class="col-span-5">
+            <div class="relative">
+              <div class="bg-[#160C59] rounded-[20px] h-[82%] w-[96%] absolute bottom-0"></div>
+              <div
+                class="rounded-[20px] bg-primary pt-[52px] rtl:pl-20 ltr:pr-20 relative rtl:right-4 ltr:left-4 -top-4">
+                <img alt="shape" src="../img/Vector 98@3x.png"
+                  class="absolute top-0 rtl:left-0 ltr:right-0 ltr:[transform:rotateY(180deg)] w-[133px] h-[122px]">
+                <a
+                  class="flex-center w-[82px] h-[82px] bg-[#160C59] !absolute top-0 rtl:left-3 ltr:right-3 btnHover rounded-[20px] z-10">
+                  <img alt="img" src="../img/svg/arrow-up.svg">
+                </a>
+                <div class="relative p-2 pb-0">
+                  <img alt="img" src="../img/Group 38.png">
+                  <img alt="img" src="../img/Ellipse 17.png" class="absolute inset-x-0 mx-auto bottom-0">
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-span-7">
+            <span class="rounded-[10px] inline-block bg-[#FF970433] text-primary p-[7px] px-[10px] font-semibold">
+              سوالات پر تکرار شما
+            </span>
+            <h4 class="mt-5 text-2xl font-extrabold">سوالات متداول شما</h4>
+            <div class="mt-3">
+              <div class="rounded-[10px] shadow-1 p-3 px-4 bg-white mb-5">
+                <div class="acordionBtn2 flex-between gap-3 text-lg font-extrabold">
+                  <p>1-لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ</p>
+                  <div class="w-[48px] h-[42px] flex-center flex-shrink-0 relative">
+                    <img alt="img" src="../img/Rectangle 24.png" class="w-full h-full absolute inset-0">
+                    <img alt="icon" src="../img/svg/arrow-down (3).svg" class="relative arrow">
+                  </div>
+                </div>
+                <div class="acordionContent2">
+                  <p class="py-5 text-dark leading-6 font-semibold text-justify">
+                    لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها
+                    و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است
+                  </p>
+                </div>
+              </div>
+              <div class="rounded-[10px] shadow-1 p-3 px-4 bg-white mb-5">
+                <div class="acordionBtn2 flex-between gap-3 text-lg font-extrabold">
+                  <p>1-لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ</p>
+                  <div class="w-[48px] h-[42px] flex-center flex-shrink-0 relative">
+                    <img alt="img" src="../img/Rectangle 24.png" class="w-full h-full absolute inset-0">
+                    <img alt="icon" src="../img/svg/arrow-down (3).svg" class="relative arrow">
+                  </div>
+                </div>
+                <div class="acordionContent2">
+                  <p class="py-5 text-dark leading-6 font-semibold text-justify">
+                    لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها
+                    و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است
+                  </p>
+                </div>
+              </div>
+              <div class="rounded-[10px] shadow-1 p-3 px-4 bg-white mb-5">
+                <div class="acordionBtn2 flex-between gap-3 text-lg font-extrabold">
+                  <p>1-لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ</p>
+                  <div class="w-[48px] h-[42px] flex-center flex-shrink-0 relative">
+                    <img alt="img" src="../img/Rectangle 24.png" class="w-full h-full absolute inset-0">
+                    <img alt="icon" src="../img/svg/arrow-down (3).svg" class="relative arrow">
+                  </div>
+                </div>
+                <div class="acordionContent2">
+                  <p class="py-5 text-dark leading-6 font-semibold text-justify">
+                    لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها
+                    و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است
+                  </p>
+                </div>
+              </div>
+              <div class="rounded-[10px] shadow-1 p-3 px-4 bg-white">
+                <div class="acordionBtn2 flex-between gap-3 text-lg font-extrabold">
+                  <p>1-لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ</p>
+                  <div class="w-[48px] h-[42px] flex-center flex-shrink-0 relative">
+                    <img alt="img" src="../img/Rectangle 24.png" class="w-full h-full absolute inset-0">
+                    <img alt="icon" src="../img/svg/arrow-down (3).svg" class="relative arrow">
+                  </div>
+                </div>
+                <div class="acordionContent2">
+                  <p class="py-5 text-dark leading-6 font-semibold text-justify">
+                    لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها
+                    و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است
+                  </p>
+                </div>
               </div>
             </div>
           </div>
         </div>
-        <div class="col-span-7">
-          <span class="rounded-[10px] inline-block bg-[#FF970433] text-primary p-[7px] px-[10px] font-semibold">
-            سوالات پر تکرار شما
-          </span>
-          <h4 class="mt-5 text-2xl font-extrabold">سوالات متداول شما</h4>
-          <div class="mt-3">
-            <div class="rounded-[10px] shadow-1 p-3 px-4 bg-white mb-5">
-              <div class="acordionBtn2 flex-between gap-3 text-lg font-extrabold">
-                <p>1-لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ</p>
-                <svg class="flex-shrink-0" width="48" height="41" viewBox="0 0 48 41" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M0 5C0 2.23858 2.23858 0 5 0H40.9064C44.3637 0 46.7776 3.42473 45.6154 6.68079L34.5506 37.6808C33.8401 39.6712 31.955 41 29.8416 41H5C2.23858 41 0 38.7614 0 36V5Z" fill="#FF9704"/>
-                  <path d="M25.9401 17.7125L21.0501 22.6025C20.4726 23.18 19.5276 23.18 18.9501 22.6025L14.0601 17.7125" stroke="white" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
-              </div>
-              <div class="acordionContent2">
-                <p class="py-5 text-dark leading-6 font-semibold text-justify">
-                  لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است
-                </p>
-              </div>
-            </div>
-            <div class="rounded-[10px] shadow-1 p-3 px-4 bg-white mb-5">
-              <div class="acordionBtn2 flex-between gap-3 text-lg font-extrabold">
-                <p>1-لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ</p>
-                <svg class="flex-shrink-0" width="48" height="41" viewBox="0 0 48 41" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M0 5C0 2.23858 2.23858 0 5 0H40.9064C44.3637 0 46.7776 3.42473 45.6154 6.68079L34.5506 37.6808C33.8401 39.6712 31.955 41 29.8416 41H5C2.23858 41 0 38.7614 0 36V5Z" fill="#FF9704"/>
-                  <path d="M25.9401 17.7125L21.0501 22.6025C20.4726 23.18 19.5276 23.18 18.9501 22.6025L14.0601 17.7125" stroke="white" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
-              </div>
-              <div class="acordionContent2">
-                <p class="py-5 text-dark leading-6 font-semibold text-justify">
-                  لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است
-                </p>
-              </div>
-            </div>
-            <div class="rounded-[10px] shadow-1 p-3 px-4 bg-white mb-5">
-              <div class="acordionBtn2 flex-between gap-3 text-lg font-extrabold">
-                <p>1-لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ</p>
-                <svg class="flex-shrink-0" width="48" height="41" viewBox="0 0 48 41" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M0 5C0 2.23858 2.23858 0 5 0H40.9064C44.3637 0 46.7776 3.42473 45.6154 6.68079L34.5506 37.6808C33.8401 39.6712 31.955 41 29.8416 41H5C2.23858 41 0 38.7614 0 36V5Z" fill="#FF9704"/>
-                  <path d="M25.9401 17.7125L21.0501 22.6025C20.4726 23.18 19.5276 23.18 18.9501 22.6025L14.0601 17.7125" stroke="white" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
-              </div>
-              <div class="acordionContent2">
-                <p class="py-5 text-dark leading-6 font-semibold text-justify">
-                  لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است
-                </p>
-              </div>
-            </div>
-            <div class="rounded-[10px] shadow-1 p-3 px-4 bg-white">
-              <div class="acordionBtn2 flex-between gap-3 text-lg font-extrabold">
-                <p>1-لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ</p>
-                <svg class="flex-shrink-0" width="48" height="41" viewBox="0 0 48 41" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M0 5C0 2.23858 2.23858 0 5 0H40.9064C44.3637 0 46.7776 3.42473 45.6154 6.68079L34.5506 37.6808C33.8401 39.6712 31.955 41 29.8416 41H5C2.23858 41 0 38.7614 0 36V5Z" fill="#FF9704"/>
-                  <path d="M25.9401 17.7125L21.0501 22.6025C20.4726 23.18 19.5276 23.18 18.9501 22.6025L14.0601 17.7125" stroke="white" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
-              </div>
-              <div class="acordionContent2">
-                <p class="py-5 text-dark leading-6 font-semibold text-justify">
-                  لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-       </div>
       </div>
-     </section>
+    </section>
 
-     <!-- top homes -->
-      <section class="mt-32 relative">
-        <!-- shape -->
-         <img alt="shape" src="../img/moon.png" class="absolute rtl:right-0 ltr:left-0 ltr:[transform:rotateY(180deg)] -top-20">
-        <div class="rtl:pr-custom ltr:pl-custom">
-          <div class="grid grid-cols-12 gap-6 rtl:pr-4 ltr:pl-4">
-            <div class="col-span-3">
-              <div class="rounded-[20px] bg-primary pt-[52px] overflow-hidden relative">
-                <!-- shape -->
-                 <img alt="img" src="../img/Vector 97.png" class="absolute top-0 bottom-0 rtl:left-0 ltr:right-0 h-full">
-                <div class="block w-[29px] h-6 absolute my-auto inset-y-0 rtl:left-0 ltr:right-0">
-                  <svg width="22" height="24" viewBox="0 0 22 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M8.05005 19.92L1.53005 13.4C0.760048 12.63 0.760048 11.37 1.53005 10.6L8.05005 4.08" stroke="#FF9704" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M16.0334 17.28L11.6868 12.9333C11.1734 12.42 11.1734 11.58 11.6868 11.0667L16.0334 6.72" stroke="#FF9704" stroke-opacity="0.56" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-                  </svg>
+    <!-- top homes -->
+    <section class="mt-32 relative">
+      <!-- shape -->
+      <img alt="shape" src="../img/moon.png"
+        class="absolute rtl:right-0 ltr:left-0 ltr:[transform:rotateY(180deg)] -top-20">
+      <div class="rtl:pr-custom ltr:pl-custom">
+        <div class="grid grid-cols-12 gap-6 rtl:pr-4 ltr:pl-4">
+          <div class="col-span-3 relative">
+            <div class="bg-white absolute w-[25px] h-10 z-10 rtl:left-0 ltr:right-0"></div>
+            <div class="rounded-[20px] bg-primary pt-[52px] overflow-hidden relative">
+              <!-- shape -->
+              <img alt="img" src="../img/Vector 97.png" class="absolute top-0 bottom-0 rtl:left-0 ltr:right-0 h-[101%]">
+              <div class="block w-[29px] h-6 absolute my-auto inset-y-0 rtl:left-0 ltr:right-0">
+                <svg width="22" height="24" viewBox="0 0 22 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M8.05005 19.92L1.53005 13.4C0.760048 12.63 0.760048 11.37 1.53005 10.6L8.05005 4.08"
+                    stroke="#FF9704" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                  <path d="M16.0334 17.28L11.6868 12.9333C11.1734 12.42 11.1734 11.58 11.6868 11.0667L16.0334 6.72"
+                    stroke="#FF9704" stroke-opacity="0.56" stroke-width="1.5" stroke-miterlimit="10"
+                    stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </div>
+              <div class="flex gap-2 px-[14px]">
+                <span class="bg-white w-8 h-1 block mt-4"></span>
+                <div class="text-white">
+                  <h4 class="text-[28px] font-bold">خانه های</h4>
+                  <h2 class="text-[35px] font-black">تاپ لوکیشن</h2>
+                  <a
+                    class="flex items-center gap-1 cursor-pointer relative z-2 group hover:text-secondary mt-5 font-medium text-white">
+                    <p>مشاهده همه</p>
+                    <svg class="ltr:[transform:rotateY(180deg)]" width="18" height="18" viewBox="0 0 18 18" fill="none"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <path d="M7.1775 4.44749L2.625 8.99999L7.1775 13.5525"
+                        class="transition group-hover:stroke-secondary" stroke="white" stroke-width="1.5"
+                        stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                      <path d="M15.3749 9H2.75244" class="transition group-hover:stroke-secondary" stroke="white"
+                        stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                  </a>
                 </div>
-                <div class="flex gap-2 px-[14px]">
-                  <span class="bg-white w-8 h-1 block mt-4"></span>
-                  <div class="text-white">
-                    <h4 class="text-[28px] font-bold">خانه های</h4>
-                    <h2 class="text-[35px] font-black">تاپ لوکیشن</h2>
-                    <a class="flex items-center gap-1 cursor-pointer relative z-2 group hover:text-secondary mt-5 font-medium text-white">
-                     <p>مشاهده همه</p>
-                     <svg class="ltr:[transform:rotateY(180deg)]" width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M7.1775 4.44749L2.625 8.99999L7.1775 13.5525" class="transition group-hover:stroke-secondary" stroke="white" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-                      <path d="M15.3749 9H2.75244" class="transition group-hover:stroke-secondary" stroke="white" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-                     </svg>
+              </div>
+              <div class="relative p-10 pb-3 rtl:pr-0 ltr:pl-0">
+                <img alt="img" src="../img/Ellipse 17.png"
+                  class="absolute rtl:-right-[63px] ltr:-left-[63px] -bottom-[17px]">
+                <img alt="img" src="../img/30e2d840-07a2-4aa0-a1c9-b7c304ef96bd 1.png" class="relative">
+              </div>
+            </div>
+          </div>
+          <div class="col-span-9">
+            <div class="relative">
+              <div class="swiper homes2 px-4">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <a class="group">
+                      <div class="rounded-[20px] overflow-hidden relative gradient-after2">
+                        <img alt="img" src="../img/image (2).png"
+                          class="rounded-[20px] w-full h-[258px] group-hover:scale-105 transition">
+                      </div>
+                      <div
+                        class="pt-3 p-1 bg-white relative border-gradient mx-[9px] -mt-10 group-hover:-mt-16 transition">
+                        <!-- shape -->
+                        <svg class="-top-2 inset-x-0 mx-auto absolute" xmlns="http://www.w3.org/2000/svg" width="33"
+                          height="9" viewBox="0 0 33 9" fill="white">
+                          <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M32.8066 8.5H0.193359C4.85352 8.18393 9.22656 6.06978 12.375 2.57672C14.5801 0.129671 18.4199 0.129671 20.625 2.57672C23.7734 6.06978 28.1465 8.18393 32.8066 8.5Z"
+                            fill="white"></path>
+                        </svg>
+                        <h5
+                          class="group-hover:text-primary transition text-center text-dark h-[58px] line-clamp-2 flex-center text-lg font-extrabold px-8">
+                          اجاره اقامتگاه بوم‌گردی خانه باغ ایرانی</h5>
+                        <div class="mt-3 flex items-center justify-center gap-1 flex-wrap">
+                          <div class="flex items-center gap-1">
+                            <img alt="icon" src="../img/svg/Vector.svg" class="flex-shrink-0">
+                            <p class="text-sm font-bold">2 اتاق خواب</p>
+                          </div>
+                          <img alt="icon" src="../img/svg/Group 24 (2).svg">
+                          <div class="flex items-center gap-1">
+                            <img alt="icon" src="../img/svg/profile-2user.svg" class="flex-shrink-0">
+                            <p class="text-sm font-bold">4 نفره</p>
+                          </div>
+                          <img alt="icon" src="../img/svg/Group 24 (2).svg">
+                          <div class="flex items-center gap-1">
+                            <img alt="icon" src="../img/svg/location.svg" class="flex-shrink-0">
+                            <p class="text-sm font-bold">فرهنگشهر</p>
+                          </div>
+                        </div>
+                        <h6 class="text-center text-primary font-medium mt-4">
+                          <span class="text-sm">هر شب از</span>
+                           <span class="font-bold">1,200,000 تومان</span>
+                        </h6>
+                        <p class="text-center mt-[5px] text-sm text-secondary font-semibold">
+                          کد اقامتگاه: 234</p>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="swiper-slide">
+                    <a class="group">
+                      <div class="rounded-[20px] overflow-hidden relative gradient-after2">
+                        <img alt="img" src="../img/image (2).png"
+                          class="rounded-[20px] w-full h-[258px] group-hover:scale-105 transition">
+                      </div>
+                      <div
+                        class="pt-3 p-1 bg-white relative border-gradient mx-[9px] -mt-10 group-hover:-mt-16 transition">
+                        <!-- shape -->
+                        <svg class="-top-2 inset-x-0 mx-auto absolute" xmlns="http://www.w3.org/2000/svg" width="33"
+                          height="9" viewBox="0 0 33 9" fill="white">
+                          <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M32.8066 8.5H0.193359C4.85352 8.18393 9.22656 6.06978 12.375 2.57672C14.5801 0.129671 18.4199 0.129671 20.625 2.57672C23.7734 6.06978 28.1465 8.18393 32.8066 8.5Z"
+                            fill="white"></path>
+                        </svg>
+                        <h5
+                          class="group-hover:text-primary transition text-center text-dark h-[58px] line-clamp-2 flex-center text-lg font-extrabold px-8">
+                          اجاره اقامتگاه بوم‌گردی خانه باغ ایرانی</h5>
+                        <div class="mt-3 flex items-center justify-center gap-1 flex-wrap">
+                          <div class="flex items-center gap-1">
+                            <img alt="icon" src="../img/svg/Vector.svg" class="flex-shrink-0">
+                            <p class="text-sm font-bold">2 اتاق خواب</p>
+                          </div>
+                          <img alt="icon" src="../img/svg/Group 24 (2).svg">
+                          <div class="flex items-center gap-1">
+                            <img alt="icon" src="../img/svg/profile-2user.svg" class="flex-shrink-0">
+                            <p class="text-sm font-bold">4 نفره</p>
+                          </div>
+                          <img alt="icon" src="../img/svg/Group 24 (2).svg">
+                          <div class="flex items-center gap-1">
+                            <img alt="icon" src="../img/svg/location.svg" class="flex-shrink-0">
+                            <p class="text-sm font-bold">فرهنگشهر</p>
+                          </div>
+                        </div>
+                        <h6 class="text-center text-primary font-medium mt-4">
+                          <span class="text-sm">هر شب از</span>
+                           <span class="font-bold">1,200,000 تومان</span>
+                        </h6>
+                        <p class="text-center mt-[5px] text-sm text-secondary font-semibold">
+                          کد اقامتگاه: 234</p>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="swiper-slide">
+                    <a class="group">
+                      <div class="rounded-[20px] overflow-hidden relative gradient-after2">
+                        <img alt="img" src="../img/image (2).png"
+                          class="rounded-[20px] w-full h-[258px] group-hover:scale-105 transition">
+                      </div>
+                      <div
+                        class="pt-3 p-1 bg-white relative border-gradient mx-[9px] -mt-10 group-hover:-mt-16 transition">
+                        <!-- shape -->
+                        <svg class="-top-2 inset-x-0 mx-auto absolute" xmlns="http://www.w3.org/2000/svg" width="33"
+                          height="9" viewBox="0 0 33 9" fill="white">
+                          <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M32.8066 8.5H0.193359C4.85352 8.18393 9.22656 6.06978 12.375 2.57672C14.5801 0.129671 18.4199 0.129671 20.625 2.57672C23.7734 6.06978 28.1465 8.18393 32.8066 8.5Z"
+                            fill="white"></path>
+                        </svg>
+                        <h5
+                          class="group-hover:text-primary transition text-center text-dark h-[58px] line-clamp-2 flex-center text-lg font-extrabold px-8">
+                          اجاره اقامتگاه بوم‌گردی خانه باغ ایرانی</h5>
+                        <div class="mt-3 flex items-center justify-center gap-1 flex-wrap">
+                          <div class="flex items-center gap-1">
+                            <img alt="icon" src="../img/svg/Vector.svg" class="flex-shrink-0">
+                            <p class="text-sm font-bold">2 اتاق خواب</p>
+                          </div>
+                          <img alt="icon" src="../img/svg/Group 24 (2).svg">
+                          <div class="flex items-center gap-1">
+                            <img alt="icon" src="../img/svg/profile-2user.svg" class="flex-shrink-0">
+                            <p class="text-sm font-bold">4 نفره</p>
+                          </div>
+                          <img alt="icon" src="../img/svg/Group 24 (2).svg">
+                          <div class="flex items-center gap-1">
+                            <img alt="icon" src="../img/svg/location.svg" class="flex-shrink-0">
+                            <p class="text-sm font-bold">فرهنگشهر</p>
+                          </div>
+                        </div>
+                        <h6 class="text-center text-primary font-medium mt-4">
+                          <span class="text-sm">هر شب از</span>
+                           <span class="font-bold">1,200,000 تومان</span>
+                        </h6>
+                        <p class="text-center mt-[5px] text-sm text-secondary font-semibold">
+                          کد اقامتگاه: 234</p>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="swiper-slide">
+                    <a class="group">
+                      <div class="rounded-[20px] overflow-hidden relative gradient-after2">
+                        <img alt="img" src="../img/image (2).png"
+                          class="rounded-[20px] w-full h-[258px] group-hover:scale-105 transition">
+                      </div>
+                      <div
+                        class="pt-3 p-1 bg-white relative border-gradient mx-[9px] -mt-10 group-hover:-mt-16 transition">
+                        <!-- shape -->
+                        <svg class="-top-2 inset-x-0 mx-auto absolute" xmlns="http://www.w3.org/2000/svg" width="33"
+                          height="9" viewBox="0 0 33 9" fill="white">
+                          <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M32.8066 8.5H0.193359C4.85352 8.18393 9.22656 6.06978 12.375 2.57672C14.5801 0.129671 18.4199 0.129671 20.625 2.57672C23.7734 6.06978 28.1465 8.18393 32.8066 8.5Z"
+                            fill="white"></path>
+                        </svg>
+                        <h5
+                          class="group-hover:text-primary transition text-center text-dark h-[58px] line-clamp-2 flex-center text-lg font-extrabold px-8">
+                          اجاره اقامتگاه بوم‌گردی خانه باغ ایرانی</h5>
+                        <div class="mt-3 flex items-center justify-center gap-1 flex-wrap">
+                          <div class="flex items-center gap-1">
+                            <img alt="icon" src="../img/svg/Vector.svg" class="flex-shrink-0">
+                            <p class="text-sm font-bold">2 اتاق خواب</p>
+                          </div>
+                          <img alt="icon" src="../img/svg/Group 24 (2).svg">
+                          <div class="flex items-center gap-1">
+                            <img alt="icon" src="../img/svg/profile-2user.svg" class="flex-shrink-0">
+                            <p class="text-sm font-bold">4 نفره</p>
+                          </div>
+                          <img alt="icon" src="../img/svg/Group 24 (2).svg">
+                          <div class="flex items-center gap-1">
+                            <img alt="icon" src="../img/svg/location.svg" class="flex-shrink-0">
+                            <p class="text-sm font-bold">فرهنگشهر</p>
+                          </div>
+                        </div>
+                        <h6 class="text-center text-primary font-medium mt-4">
+                          <span class="text-sm">هر شب از</span>
+                           <span class="font-bold">1,200,000 تومان</span>
+                        </h6>
+                        <p class="text-center mt-[5px] text-sm text-secondary font-semibold">
+                          کد اقامتگاه: 234</p>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="swiper-slide">
+                    <a class="group">
+                      <div class="rounded-[20px] overflow-hidden relative gradient-after2">
+                        <img alt="img" src="../img/image (2).png"
+                          class="rounded-[20px] w-full h-[258px] group-hover:scale-105 transition">
+                      </div>
+                      <div
+                        class="pt-3 p-1 bg-white relative border-gradient mx-[9px] -mt-10 group-hover:-mt-16 transition">
+                        <!-- shape -->
+                        <svg class="-top-2 inset-x-0 mx-auto absolute" xmlns="http://www.w3.org/2000/svg" width="33"
+                          height="9" viewBox="0 0 33 9" fill="white">
+                          <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M32.8066 8.5H0.193359C4.85352 8.18393 9.22656 6.06978 12.375 2.57672C14.5801 0.129671 18.4199 0.129671 20.625 2.57672C23.7734 6.06978 28.1465 8.18393 32.8066 8.5Z"
+                            fill="white"></path>
+                        </svg>
+                        <h5
+                          class="group-hover:text-primary transition text-center text-dark h-[58px] line-clamp-2 flex-center text-lg font-extrabold px-8">
+                          اجاره اقامتگاه بوم‌گردی خانه باغ ایرانی</h5>
+                        <div class="mt-3 flex items-center justify-center gap-1 flex-wrap">
+                          <div class="flex items-center gap-1">
+                            <img alt="icon" src="../img/svg/Vector.svg" class="flex-shrink-0">
+                            <p class="text-sm font-bold">2 اتاق خواب</p>
+                          </div>
+                          <img alt="icon" src="../img/svg/Group 24 (2).svg">
+                          <div class="flex items-center gap-1">
+                            <img alt="icon" src="../img/svg/profile-2user.svg" class="flex-shrink-0">
+                            <p class="text-sm font-bold">4 نفره</p>
+                          </div>
+                          <img alt="icon" src="../img/svg/Group 24 (2).svg">
+                          <div class="flex items-center gap-1">
+                            <img alt="icon" src="../img/svg/location.svg" class="flex-shrink-0">
+                            <p class="text-sm font-bold">فرهنگشهر</p>
+                          </div>
+                        </div>
+                        <h6 class="text-center text-primary font-medium mt-4">
+                          <span class="text-sm">هر شب از</span>
+                           <span class="font-bold">1,200,000 تومان</span>
+                        </h6>
+                        <p class="text-center mt-[5px] text-sm text-secondary font-semibold">
+                          کد اقامتگاه: 234</p>
+                      </div>
                     </a>
                   </div>
                 </div>
-                <div class="relative p-10 pb-3 rtl:pr-0 ltr:pl-0">
-                  <img alt="img" src="../img/Ellipse 17.png" class="absolute rtl:-right-[63px] ltr:-left-[63px] -bottom-[17px]">
-                  <img alt="img" src="../img/30e2d840-07a2-4aa0-a1c9-b7c304ef96bd 1.png" class="relative">
-                </div>
               </div>
-            </div>
-            <div class="col-span-9">
-              <div class="relative">
-                <div class="swiper homes2 px-4">
-                  <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                      <a class="group">
-                        <div class="rounded-[20px] overflow-hidden relative gradient-after2">
-                          <img alt="img" src="../img/image (2).png"
-                            class="rounded-[20px] w-full h-[258px] group-hover:scale-105 transition">
-                        </div>
-                        <div class="pt-3 p-1 bg-white relative border-gradient mx-[9px] -mt-10 group-hover:-mt-16 transition">
-                          <!-- shape -->
-                          <svg class="-top-2 inset-x-0 mx-auto absolute" xmlns="http://www.w3.org/2000/svg" width="33"
-                            height="9" viewBox="0 0 33 9" fill="white">
-                            <path fill-rule="evenodd" clip-rule="evenodd"
-                              d="M32.8066 8.5H0.193359C4.85352 8.18393 9.22656 6.06978 12.375 2.57672C14.5801 0.129671 18.4199 0.129671 20.625 2.57672C23.7734 6.06978 28.1465 8.18393 32.8066 8.5Z"
-                              fill="white"></path>
-                          </svg>
-                          <h5
-                            class="group-hover:text-primary transition text-center text-dark h-[58px] line-clamp-2 flex-center text-lg font-extrabold px-8">
-                            اجاره اقامتگاه بوم‌گردی خانه باغ ایرانی</h5>
-                          <div class="mt-3 flex items-center justify-center gap-1 flex-wrap">
-                            <div class="flex items-center gap-1">
-                              <img alt="icon" src="../img/svg/Vector.svg" class="flex-shrink-0">
-                              <p class="text-sm font-bold">2 اتاق خواب</p>
-                            </div>
-                            <img alt="icon" src="../img/svg/Group 24 (2).svg">
-                            <div class="flex items-center gap-1">
-                              <img alt="icon" src="../img/svg/profile-2user.svg" class="flex-shrink-0">
-                              <p class="text-sm font-bold">4 نفره</p>
-                            </div>
-                            <img alt="icon" src="../img/svg/Group 24 (2).svg">
-                            <div class="flex items-center gap-1">
-                              <img alt="icon" src="../img/svg/location.svg" class="flex-shrink-0">
-                              <p class="text-sm font-bold">فرهنگشهر</p>
-                            </div>
-                          </div>
-                          <h6 class="text-center text-primary font-medium mt-4">
-                            <span class="text-sm">هر شب از</span>
-                             <span class="font-bold">1,200,000 تومان</span>
-                          </h6>
-                          <p
-                            class="text-center mt-[5px] text-sm text-secondary font-semibold">
-                            کد اقامتگاه: 234</p>
-                        </div>
-                      </a>
-                    </div>
-                    <div class="swiper-slide">
-                      <a class="group">
-                        <div class="rounded-[20px] overflow-hidden relative gradient-after2">
-                          <img alt="img" src="../img/image (2).png"
-                            class="rounded-[20px] w-full h-[258px] group-hover:scale-105 transition">
-                        </div>
-                        <div class="pt-3 p-1 bg-white relative border-gradient mx-[9px] -mt-10 group-hover:-mt-16 transition">
-                          <!-- shape -->
-                          <svg class="-top-2 inset-x-0 mx-auto absolute" xmlns="http://www.w3.org/2000/svg" width="33"
-                            height="9" viewBox="0 0 33 9" fill="white">
-                            <path fill-rule="evenodd" clip-rule="evenodd"
-                              d="M32.8066 8.5H0.193359C4.85352 8.18393 9.22656 6.06978 12.375 2.57672C14.5801 0.129671 18.4199 0.129671 20.625 2.57672C23.7734 6.06978 28.1465 8.18393 32.8066 8.5Z"
-                              fill="white"></path>
-                          </svg>
-                          <h5
-                            class="group-hover:text-primary transition text-center text-dark h-[58px] line-clamp-2 flex-center text-lg font-extrabold px-8">
-                            اجاره اقامتگاه بوم‌گردی خانه باغ ایرانی</h5>
-                          <div class="mt-3 flex items-center justify-center gap-1 flex-wrap">
-                            <div class="flex items-center gap-1">
-                              <img alt="icon" src="../img/svg/Vector.svg" class="flex-shrink-0">
-                              <p class="text-sm font-bold">2 اتاق خواب</p>
-                            </div>
-                            <img alt="icon" src="../img/svg/Group 24 (2).svg">
-                            <div class="flex items-center gap-1">
-                              <img alt="icon" src="../img/svg/profile-2user.svg" class="flex-shrink-0">
-                              <p class="text-sm font-bold">4 نفره</p>
-                            </div>
-                            <img alt="icon" src="../img/svg/Group 24 (2).svg">
-                            <div class="flex items-center gap-1">
-                              <img alt="icon" src="../img/svg/location.svg" class="flex-shrink-0">
-                              <p class="text-sm font-bold">فرهنگشهر</p>
-                            </div>
-                          </div>
-                          <h6 class="text-center text-primary font-medium mt-4">
-                            <span class="text-sm">هر شب از</span>
-                             <span class="font-bold">1,200,000 تومان</span>
-                          </h6>
-                          <p
-                            class="text-center mt-[5px] text-sm text-secondary font-semibold">
-                            کد اقامتگاه: 234</p>
-                        </div>
-                      </a>
-                    </div>
-                    <div class="swiper-slide">
-                      <a class="group">
-                        <div class="rounded-[20px] overflow-hidden relative gradient-after2">
-                          <img alt="img" src="../img/image (2).png"
-                            class="rounded-[20px] w-full h-[258px] group-hover:scale-105 transition">
-                        </div>
-                        <div class="pt-3 p-1 bg-white relative border-gradient mx-[9px] -mt-10 group-hover:-mt-16 transition">
-                          <!-- shape -->
-                          <svg class="-top-2 inset-x-0 mx-auto absolute" xmlns="http://www.w3.org/2000/svg" width="33"
-                            height="9" viewBox="0 0 33 9" fill="white">
-                            <path fill-rule="evenodd" clip-rule="evenodd"
-                              d="M32.8066 8.5H0.193359C4.85352 8.18393 9.22656 6.06978 12.375 2.57672C14.5801 0.129671 18.4199 0.129671 20.625 2.57672C23.7734 6.06978 28.1465 8.18393 32.8066 8.5Z"
-                              fill="white"></path>
-                          </svg>
-                          <h5
-                            class="group-hover:text-primary transition text-center text-dark h-[58px] line-clamp-2 flex-center text-lg font-extrabold px-8">
-                            اجاره اقامتگاه بوم‌گردی خانه باغ ایرانی</h5>
-                          <div class="mt-3 flex items-center justify-center gap-1 flex-wrap">
-                            <div class="flex items-center gap-1">
-                              <img alt="icon" src="../img/svg/Vector.svg" class="flex-shrink-0">
-                              <p class="text-sm font-bold">2 اتاق خواب</p>
-                            </div>
-                            <img alt="icon" src="../img/svg/Group 24 (2).svg">
-                            <div class="flex items-center gap-1">
-                              <img alt="icon" src="../img/svg/profile-2user.svg" class="flex-shrink-0">
-                              <p class="text-sm font-bold">4 نفره</p>
-                            </div>
-                            <img alt="icon" src="../img/svg/Group 24 (2).svg">
-                            <div class="flex items-center gap-1">
-                              <img alt="icon" src="../img/svg/location.svg" class="flex-shrink-0">
-                              <p class="text-sm font-bold">فرهنگشهر</p>
-                            </div>
-                          </div>
-                          <h6 class="text-center text-primary font-medium mt-4">
-                            <span class="text-sm">هر شب از</span>
-                             <span class="font-bold">1,200,000 تومان</span>
-                          </h6>
-                          <p
-                            class="text-center mt-[5px] text-sm text-secondary font-semibold">
-                            کد اقامتگاه: 234</p>
-                        </div>
-                      </a>
-                    </div>
-                    <div class="swiper-slide">
-                      <a class="group">
-                        <div class="rounded-[20px] overflow-hidden relative gradient-after2">
-                          <img alt="img" src="../img/image (2).png"
-                            class="rounded-[20px] w-full h-[258px] group-hover:scale-105 transition">
-                        </div>
-                        <div class="pt-3 p-1 bg-white relative border-gradient mx-[9px] -mt-10 group-hover:-mt-16 transition">
-                          <!-- shape -->
-                          <svg class="-top-2 inset-x-0 mx-auto absolute" xmlns="http://www.w3.org/2000/svg" width="33"
-                            height="9" viewBox="0 0 33 9" fill="white">
-                            <path fill-rule="evenodd" clip-rule="evenodd"
-                              d="M32.8066 8.5H0.193359C4.85352 8.18393 9.22656 6.06978 12.375 2.57672C14.5801 0.129671 18.4199 0.129671 20.625 2.57672C23.7734 6.06978 28.1465 8.18393 32.8066 8.5Z"
-                              fill="white"></path>
-                          </svg>
-                          <h5
-                            class="group-hover:text-primary transition text-center text-dark h-[58px] line-clamp-2 flex-center text-lg font-extrabold px-8">
-                            اجاره اقامتگاه بوم‌گردی خانه باغ ایرانی</h5>
-                          <div class="mt-3 flex items-center justify-center gap-1 flex-wrap">
-                            <div class="flex items-center gap-1">
-                              <img alt="icon" src="../img/svg/Vector.svg" class="flex-shrink-0">
-                              <p class="text-sm font-bold">2 اتاق خواب</p>
-                            </div>
-                            <img alt="icon" src="../img/svg/Group 24 (2).svg">
-                            <div class="flex items-center gap-1">
-                              <img alt="icon" src="../img/svg/profile-2user.svg" class="flex-shrink-0">
-                              <p class="text-sm font-bold">4 نفره</p>
-                            </div>
-                            <img alt="icon" src="../img/svg/Group 24 (2).svg">
-                            <div class="flex items-center gap-1">
-                              <img alt="icon" src="../img/svg/location.svg" class="flex-shrink-0">
-                              <p class="text-sm font-bold">فرهنگشهر</p>
-                            </div>
-                          </div>
-                          <h6 class="text-center text-primary font-medium mt-4">
-                            <span class="text-sm">هر شب از</span>
-                             <span class="font-bold">1,200,000 تومان</span>
-                          </h6>
-                          <p
-                            class="text-center mt-[5px] text-sm text-secondary font-semibold">
-                            کد اقامتگاه: 234</p>
-                        </div>
-                      </a>
-                    </div>
-                    <div class="swiper-slide">
-                      <a class="group">
-                        <div class="rounded-[20px] overflow-hidden relative gradient-after2">
-                          <img alt="img" src="../img/image (2).png"
-                            class="rounded-[20px] w-full h-[258px] group-hover:scale-105 transition">
-                        </div>
-                        <div class="pt-3 p-1 bg-white relative border-gradient mx-[9px] -mt-10 group-hover:-mt-16 transition">
-                          <!-- shape -->
-                          <svg class="-top-2 inset-x-0 mx-auto absolute" xmlns="http://www.w3.org/2000/svg" width="33"
-                            height="9" viewBox="0 0 33 9" fill="white">
-                            <path fill-rule="evenodd" clip-rule="evenodd"
-                              d="M32.8066 8.5H0.193359C4.85352 8.18393 9.22656 6.06978 12.375 2.57672C14.5801 0.129671 18.4199 0.129671 20.625 2.57672C23.7734 6.06978 28.1465 8.18393 32.8066 8.5Z"
-                              fill="white"></path>
-                          </svg>
-                          <h5
-                            class="group-hover:text-primary transition text-center text-dark h-[58px] line-clamp-2 flex-center text-lg font-extrabold px-8">
-                            اجاره اقامتگاه بوم‌گردی خانه باغ ایرانی</h5>
-                          <div class="mt-3 flex items-center justify-center gap-1 flex-wrap">
-                            <div class="flex items-center gap-1">
-                              <img alt="icon" src="../img/svg/Vector.svg" class="flex-shrink-0">
-                              <p class="text-sm font-bold">2 اتاق خواب</p>
-                            </div>
-                            <img alt="icon" src="../img/svg/Group 24 (2).svg">
-                            <div class="flex items-center gap-1">
-                              <img alt="icon" src="../img/svg/profile-2user.svg" class="flex-shrink-0">
-                              <p class="text-sm font-bold">4 نفره</p>
-                            </div>
-                            <img alt="icon" src="../img/svg/Group 24 (2).svg">
-                            <div class="flex items-center gap-1">
-                              <img alt="icon" src="../img/svg/location.svg" class="flex-shrink-0">
-                              <p class="text-sm font-bold">فرهنگشهر</p>
-                            </div>
-                          </div>
-                          <h6 class="text-center text-primary font-medium mt-4">
-                            <span class="text-sm">هر شب از</span>
-                             <span class="font-bold">1,200,000 تومان</span>
-                          </h6>
-                          <p
-                            class="text-center mt-[5px] text-sm text-secondary font-semibold">
-                            کد اقامتگاه: 234</p>
-                        </div>
-                      </a>
-                    </div>
-                  </div>
-                </div>
-                <div class="btnHover active:scale-95 !absolute ltr:[transform:rotateY(180deg)] !-bottom-[67px] !top-auto rtl:!right-auto ltr:!left-auto rtl:!left-[155px] ltr:!right-[155px] swiper-button-next w-[34px] h-[34px] rounded-lg bg-primary">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="text-white bi bi-chevron-right !w-[60%]" viewBox="0 0 16 16">
-                    <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708"></path>
-                  </svg>
-                </div>
-                <div class="btnHover active:scale-95 !absolute ltr:[transform:rotateY(180deg)] !-bottom-[67px] !top-auto ltr:!left-auto rtl:!left-[107px] ltr:!right-[107px] swiper-button-prev w-[34px] h-[34px] rounded-lg bg-primary">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+              <div
+                class="btnHover active:scale-95 !absolute ltr:[transform:rotateY(180deg)] !-bottom-[67px] !top-auto rtl:!right-auto ltr:!left-auto rtl:!left-[155px] ltr:!right-[155px] swiper-button-next w-[34px] h-[34px] rounded-lg bg-primary">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                  class="text-white bi bi-chevron-right !w-[60%]" viewBox="0 0 16 16">
+                  <path fill-rule="evenodd"
+                    d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708">
+                  </path>
+                </svg>
+              </div>
+              <div
+                class="btnHover active:scale-95 !absolute ltr:[transform:rotateY(180deg)] !-bottom-[67px] !top-auto ltr:!left-auto rtl:!left-[107px] ltr:!right-[107px] swiper-button-prev w-[34px] h-[34px] rounded-lg bg-primary">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                   class="text-white bi bi-chevron-right !w-[60%]" viewBox="0 0 16 16">
                   <path fill-rule="evenodd"
                     d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0" />
                 </svg>
-                </div>
               </div>
             </div>
           </div>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <!-- sabt villa -->
-       <section class="mt-[130px]">
-        <div class="max-w-content mx-auto px-4">
-          <div class="rounded-[20px] bg-[#160C59] relative grid grid-cols-12 gap-4 items-center rtl:pr-[90px] ltr:pl-[90px] rtl:pl-14 ltr:pr-14">
-            <!-- shape -->
-             <img alt="img" src="../img/Group 5005.png" class="absolute -top-28 inset-0">
-             <img alt="img" src="../img/Vector 96.png" class="absolute -top-[1px] rtl:right-[-2px] ltr:left-[-1px] ltr:[transform:rotateY(180deg)]">
-            <!-- arrow -->
-             <img alt="icon" src="../img/svg/arrow-up (2).svg" class="absolute top-[5px] rtl:right-9 ltr:left-9 ltr:[transform:rotateY(180deg)]">
-            <div class="col-span-6">
-              <h2 class="text-white text-[38px] font-bold leading-[53px] mt-[99px]">
-                ثبت رایــــگان<br> ویلا ، اقامتگاه ، سوییت و آپارتمان
-              </h2>
-              <a class="rounded-[30px] bg-primary p-4 mt-[34px] mb-10 text-white inline-flex items-center justify-center gap-2 btnHover text-2xl font-bold">
-                <p>رایگان میزبان شوید</p>
-                <img alt="icon" src="../img/svg/arrow-down (2).svg" class="ltr:[transform:rotateY(180deg)]">
-              </a>
-            </div>
-            <div class="col-span-6 relative h-full">
-              <img alt="img" class="absolute bottom-0 rtl:left-0 ltr:right-0 ltr:[transform:rotateY(180deg)]" src="../img/real-estate-concept-mortgage-concept-cheerful-man-holding-money-paper-house-smiling-excited 1.png">
-            </div>
+    <!-- sabt villa -->
+    <section class="mt-[130px]">
+      <div class="max-w-content mx-auto px-4">
+        <div
+          class="rounded-[20px] bg-[#160C59] relative grid grid-cols-12 gap-4 items-center rtl:pr-[90px] ltr:pl-[90px] rtl:pl-14 ltr:pr-14">
+          <!-- shape -->
+          <img alt="img" src="../img/Group 5005.png" class="absolute -top-28 inset-0">
+          <img alt="img" src="../img/Vector 96.png"
+            class="absolute -top-[1px] rtl:right-[-2px] ltr:left-[-1px] ltr:[transform:rotateY(180deg)]">
+          <!-- arrow -->
+          <img alt="icon" src="../img/svg/arrow-up (2).svg"
+            class="absolute top-[5px] rtl:right-9 ltr:left-9 ltr:[transform:rotateY(180deg)]">
+          <div class="col-span-6">
+            <h2 class="text-white text-[38px] font-bold leading-[53px] mt-[99px]">
+              ثبت رایــــگان<br> ویلا ، اقامتگاه ، سوییت و آپارتمان
+            </h2>
+            <a
+              class="rounded-[30px] bg-primary p-4 mt-[34px] mb-10 text-white inline-flex items-center justify-center gap-2 btnHover text-2xl font-bold">
+              <p>رایگان میزبان شوید</p>
+              <img alt="icon" src="../img/svg/arrow-down (2).svg" class="ltr:[transform:rotateY(180deg)]">
+            </a>
+          </div>
+          <div class="col-span-6 relative h-full">
+            <img alt="img" class="absolute bottom-0 rtl:left-0 ltr:right-0 ltr:[transform:rotateY(180deg)]"
+              src="../img/real-estate-concept-mortgage-concept-cheerful-man-holding-money-paper-house-smiling-excited 1.png">
           </div>
         </div>
-       </section>
+      </div>
+    </section>
 
-         <!-- last homes -->
-      <section class="mt-16 relative">
-        <div class="rtl:pr-custom ltr:pl-custom">
-          <div class="grid grid-cols-12 gap-6 rtl:pr-4 ltr:pl-4">
-            <div class="col-span-3">
-              <div class="rounded-[20px] bg-primary pt-[52px] overflow-hidden relative">
-                <div class="block w-[29px] h-6 absolute my-auto inset-y-0 rtl:left-0 ltr:right-0">
-                  <svg width="22" height="24" viewBox="0 0 22 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M8.05005 19.92L1.53005 13.4C0.760048 12.63 0.760048 11.37 1.53005 10.6L8.05005 4.08" stroke="#FF9704" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M16.0334 17.28L11.6868 12.9333C11.1734 12.42 11.1734 11.58 11.6868 11.0667L16.0334 6.72" stroke="#FF9704" stroke-opacity="0.56" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-                  </svg>
+    <!-- last homes -->
+    <section class="mt-16 relative">
+      <div class="rtl:pr-custom ltr:pl-custom">
+        <div class="grid grid-cols-12 gap-6 rtl:pr-4 ltr:pl-4">
+          <div class="col-span-3">
+            <div class="rounded-[20px] bg-primary pt-[34px] px-4 overflow-hidden relative">
+              <div class="p-2 pb-5 rounded-[10px] bg-white relative">
+                <img alt="img" src="../img/Vector 95.png"
+                  class="absolute top-0 rtl:right-0 ltr:left-0 ltr:[transform:rotateY(180deg)]">
+                <div class="flex items-center justify-between gap-[13px]">
+                  <p class="font-bold text-white text-[28px] relative -top-3">لحظه آخری ها</p>
+                  <img alt="img" src="../img/lets-icons_clock-fill.png">
                 </div>
-                <div class="flex gap-2 px-[14px]">
-                  <span class="bg-white w-8 h-1 block mt-4"></span>
-                  <div class="text-white">
-                    <h4 class="text-[28px] font-bold">خانه های</h4>
-                    <h2 class="text-[35px] font-black">تاپ لوکیشن</h2>
-                    <a class="flex items-center gap-1 cursor-pointer relative z-2 group hover:text-secondary mt-5 font-medium text-white">
-                     <p>مشاهده همه</p>
-                     <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M7.1775 4.44749L2.625 8.99999L7.1775 13.5525" class="transition group-hover:stroke-secondary" stroke="white" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-                      <path d="M15.3749 9H2.75244" class="transition group-hover:stroke-secondary" stroke="white" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-                     </svg>
-                    </a>
-                  </div>
-                </div>
-                <div class="relative p-10 pb-3 rtl:pr-0 ltr:pl-0">
-                  <img alt="img" src="../img/Ellipse 17.png" class="absolute rtl:-right-[63px] ltr:-left-[63px] -bottom-[17px]">
-                  <img alt="img" src="../img/30e2d840-07a2-4aa0-a1c9-b7c304ef96bd 1.png" class="relative">
+                <div class="mt-[14px] flex items-center justify-center gap-1 text-dark font-bold">
+                  <div class="w-[38px] h-[42px] flex-center rounded-[10px] bg-[#FF970436]">25</div>
+                  <p>:</p>
+                  <div class="w-[38px] h-[42px] flex-center rounded-[10px] bg-[#FF970436]">2</div>
+                  <p>:</p>
+                  <div class="w-[38px] h-[42px] flex-center rounded-[10px] bg-[#FF970436]">02</div>
                 </div>
               </div>
+              <div class="relative pb-0 mt-10 rtl:-right-4 ltr:-left-4">
+                <img alt="img" src="../img/Group 5004.png" class="relative">
+              </div>
             </div>
-            <div class="col-span-9 relative">
-              <a class="animate-bounce absolute inset-x-0 z-2 -top-2 mx-auto flex-center w-[41px]">
-                <svg width="41" height="60" viewBox="0 0 41 60" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <g filter="url(#filter0_f_112_515)">
-                  <path d="M4 4H37V40C37 48.8366 29.8366 56 21 56H20C11.1634 56 4 48.8366 4 40V4Z" fill="url(#paint0_linear_112_515)"/>
-                  </g>
-                  <path d="M25.9401 28.7125L21.0501 33.6025C20.4726 34.18 19.5276 34.18 18.9501 33.6025L14.0601 28.7125" stroke="white" stroke-width="2.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-                  <defs>
-                  <filter id="filter0_f_112_515" x="0" y="0" width="41" height="60" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-                  <feFlood flood-opacity="0" result="BackgroundImageFix"/>
-                  <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
-                  <feGaussianBlur stdDeviation="2" result="effect1_foregroundBlur_112_515"/>
+          </div>
+          <div class="col-span-9 relative">
+            <a class="animate-bounce absolute inset-x-0 z-2 -top-2 mx-auto flex-center w-[41px]">
+              <svg width="41" height="60" viewBox="0 0 41 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g filter="url(#filter0_f_112_515)">
+                  <path d="M4 4H37V40C37 48.8366 29.8366 56 21 56H20C11.1634 56 4 48.8366 4 40V4Z"
+                    fill="url(#paint0_linear_112_515)" />
+                </g>
+                <path d="M25.9401 28.7125L21.0501 33.6025C20.4726 34.18 19.5276 34.18 18.9501 33.6025L14.0601 28.7125"
+                  stroke="white" stroke-width="2.5" stroke-miterlimit="10" stroke-linecap="round"
+                  stroke-linejoin="round" />
+                <defs>
+                  <filter id="filter0_f_112_515" x="0" y="0" width="41" height="60" filterUnits="userSpaceOnUse"
+                    color-interpolation-filters="sRGB">
+                    <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                    <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
+                    <feGaussianBlur stdDeviation="2" result="effect1_foregroundBlur_112_515" />
                   </filter>
-                  <linearGradient id="paint0_linear_112_515" x1="20.5" y1="4" x2="20.5" y2="56" gradientUnits="userSpaceOnUse">
-                  <stop stop-color="white"/>
-                  <stop offset="1" stop-color="#FF9704"/>
+                  <linearGradient id="paint0_linear_112_515" x1="20.5" y1="4" x2="20.5" y2="56"
+                    gradientUnits="userSpaceOnUse">
+                    <stop stop-color="white" />
+                    <stop offset="1" stop-color="#FF9704" />
                   </linearGradient>
-                  </defs>
-                  </svg>
-              </a>
-              <div class="relative">
-                <div class="swiper homes2 px-4 pt-[59px] pb-5 bg-gradient rtl:rounded-r-[20px] ltr:rounded-l-[20px] relative">
-                  <!-- shape -->
-                  <img alt="shape" src="../img/svg/Vector 92.svg" class="absolute inset-x-0 -top-0.5 mx-auto">
-                  <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                      <a class="group">
-                        <div class="rounded-[20px] overflow-hidden relative gradient-after2">
-                          <img alt="img" src="../img/image (2).png"
-                            class="rounded-[20px] w-full h-[258px] group-hover:scale-105 transition">
-                        </div>
-                        <div class="pt-3 p-1 bg-white relative border-gradient mx-[9px] -mt-10 group-hover:-mt-16 transition">
-                          <!-- shape -->
-                          <svg class="-top-2 inset-x-0 mx-auto absolute" xmlns="http://www.w3.org/2000/svg" width="33"
-                            height="9" viewBox="0 0 33 9" fill="white">
-                            <path fill-rule="evenodd" clip-rule="evenodd"
-                              d="M32.8066 8.5H0.193359C4.85352 8.18393 9.22656 6.06978 12.375 2.57672C14.5801 0.129671 18.4199 0.129671 20.625 2.57672C23.7734 6.06978 28.1465 8.18393 32.8066 8.5Z"
-                              fill="white"></path>
-                          </svg>
-                          <h5
-                            class="group-hover:text-primary transition text-center text-dark h-[58px] line-clamp-2 flex-center text-lg font-extrabold px-8">
-                            اجاره اقامتگاه بوم‌گردی خانه باغ ایرانی</h5>
-                          <div class="mt-3 flex items-center justify-center gap-1 flex-wrap">
-                            <div class="flex items-center gap-1">
-                              <img alt="icon" src="../img/svg/Vector.svg" class="flex-shrink-0">
-                              <p class="text-sm font-bold">2 اتاق خواب</p>
-                            </div>
-                            <img alt="icon" src="../img/svg/Group 24 (2).svg">
-                            <div class="flex items-center gap-1">
-                              <img alt="icon" src="../img/svg/profile-2user.svg" class="flex-shrink-0">
-                              <p class="text-sm font-bold">4 نفره</p>
-                            </div>
-                            <img alt="icon" src="../img/svg/Group 24 (2).svg">
-                            <div class="flex items-center gap-1">
-                              <img alt="icon" src="../img/svg/location.svg" class="flex-shrink-0">
-                              <p class="text-sm font-bold">فرهنگشهر</p>
-                            </div>
+                </defs>
+              </svg>
+            </a>
+            <div class="relative">
+              <div
+                class="swiper homes2 px-4 pt-[59px] pb-5 bg-gradient rtl:rounded-r-[20px] ltr:rounded-l-[20px] relative">
+                <!-- shape -->
+                <img alt="shape" src="../img/svg/Vector 92.svg" class="absolute inset-x-0 -top-0.5 mx-auto">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <a class="group">
+                      <div class="rounded-[20px] overflow-hidden relative gradient-after2">
+                        <img alt="img" src="../img/image (2).png"
+                          class="rounded-[20px] w-full h-[258px] group-hover:scale-105 transition">
+                      </div>
+                      <div
+                        class="pt-3 p-1 bg-white relative border-gradient mx-[9px] -mt-10 group-hover:-mt-16 transition">
+                        <!-- shape -->
+                        <svg class="-top-2 inset-x-0 mx-auto absolute" xmlns="http://www.w3.org/2000/svg" width="33"
+                          height="9" viewBox="0 0 33 9" fill="white">
+                          <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M32.8066 8.5H0.193359C4.85352 8.18393 9.22656 6.06978 12.375 2.57672C14.5801 0.129671 18.4199 0.129671 20.625 2.57672C23.7734 6.06978 28.1465 8.18393 32.8066 8.5Z"
+                            fill="white"></path>
+                        </svg>
+                        <h5
+                          class="group-hover:text-primary transition text-center text-dark h-[58px] line-clamp-2 flex-center text-lg font-extrabold px-8">
+                          اجاره اقامتگاه بوم‌گردی خانه باغ ایرانی</h5>
+                        <div class="mt-3 flex items-center justify-center gap-1 flex-wrap">
+                          <div class="flex items-center gap-1">
+                            <img alt="icon" src="../img/svg/Vector.svg" class="flex-shrink-0">
+                            <p class="text-sm font-bold">2 اتاق خواب</p>
                           </div>
-                          <h6 class="text-center text-primary font-medium mt-4">
-                            <span class="text-sm">هر شب از</span>
-                             <span class="font-bold">1,200,000 تومان</span>
-                          </h6>
-                          <p
-                            class="text-center mt-[5px] text-sm text-secondary font-semibold">
-                            کد اقامتگاه: 234</p>
-                        </div>
-                      </a>
-                    </div>
-                    <div class="swiper-slide">
-                      <a class="group">
-                        <div class="rounded-[20px] overflow-hidden relative gradient-after2">
-                          <img alt="img" src="../img/image (2).png"
-                            class="rounded-[20px] w-full h-[258px] group-hover:scale-105 transition">
-                        </div>
-                        <div class="pt-3 p-1 bg-white relative border-gradient mx-[9px] -mt-10 group-hover:-mt-16 transition">
-                          <!-- shape -->
-                          <svg class="-top-2 inset-x-0 mx-auto absolute" xmlns="http://www.w3.org/2000/svg" width="33"
-                            height="9" viewBox="0 0 33 9" fill="white">
-                            <path fill-rule="evenodd" clip-rule="evenodd"
-                              d="M32.8066 8.5H0.193359C4.85352 8.18393 9.22656 6.06978 12.375 2.57672C14.5801 0.129671 18.4199 0.129671 20.625 2.57672C23.7734 6.06978 28.1465 8.18393 32.8066 8.5Z"
-                              fill="white"></path>
-                          </svg>
-                          <h5
-                            class="group-hover:text-primary transition text-center text-dark h-[58px] line-clamp-2 flex-center text-lg font-extrabold px-8">
-                            اجاره اقامتگاه بوم‌گردی خانه باغ ایرانی</h5>
-                          <div class="mt-3 flex items-center justify-center gap-1 flex-wrap">
-                            <div class="flex items-center gap-1">
-                              <img alt="icon" src="../img/svg/Vector.svg" class="flex-shrink-0">
-                              <p class="text-sm font-bold">2 اتاق خواب</p>
-                            </div>
-                            <img alt="icon" src="../img/svg/Group 24 (2).svg">
-                            <div class="flex items-center gap-1">
-                              <img alt="icon" src="../img/svg/profile-2user.svg" class="flex-shrink-0">
-                              <p class="text-sm font-bold">4 نفره</p>
-                            </div>
-                            <img alt="icon" src="../img/svg/Group 24 (2).svg">
-                            <div class="flex items-center gap-1">
-                              <img alt="icon" src="../img/svg/location.svg" class="flex-shrink-0">
-                              <p class="text-sm font-bold">فرهنگشهر</p>
-                            </div>
+                          <img alt="icon" src="../img/svg/Group 24 (2).svg">
+                          <div class="flex items-center gap-1">
+                            <img alt="icon" src="../img/svg/profile-2user.svg" class="flex-shrink-0">
+                            <p class="text-sm font-bold">4 نفره</p>
                           </div>
-                          <h6 class="text-center text-primary font-medium mt-4">
-                            <span class="text-sm">هر شب از</span>
-                             <span class="font-bold">1,200,000 تومان</span>
-                          </h6>
-                          <p
-                            class="text-center mt-[5px] text-sm text-secondary font-semibold">
-                            کد اقامتگاه: 234</p>
-                        </div>
-                      </a>
-                    </div>
-                    <div class="swiper-slide">
-                      <a class="group">
-                        <div class="rounded-[20px] overflow-hidden relative gradient-after2">
-                          <img alt="img" src="../img/image (2).png"
-                            class="rounded-[20px] w-full h-[258px] group-hover:scale-105 transition">
-                        </div>
-                        <div class="pt-3 p-1 bg-white relative border-gradient mx-[9px] -mt-10 group-hover:-mt-16 transition">
-                          <!-- shape -->
-                          <svg class="-top-2 inset-x-0 mx-auto absolute" xmlns="http://www.w3.org/2000/svg" width="33"
-                            height="9" viewBox="0 0 33 9" fill="white">
-                            <path fill-rule="evenodd" clip-rule="evenodd"
-                              d="M32.8066 8.5H0.193359C4.85352 8.18393 9.22656 6.06978 12.375 2.57672C14.5801 0.129671 18.4199 0.129671 20.625 2.57672C23.7734 6.06978 28.1465 8.18393 32.8066 8.5Z"
-                              fill="white"></path>
-                          </svg>
-                          <h5
-                            class="group-hover:text-primary transition text-center text-dark h-[58px] line-clamp-2 flex-center text-lg font-extrabold px-8">
-                            اجاره اقامتگاه بوم‌گردی خانه باغ ایرانی</h5>
-                          <div class="mt-3 flex items-center justify-center gap-1 flex-wrap">
-                            <div class="flex items-center gap-1">
-                              <img alt="icon" src="../img/svg/Vector.svg" class="flex-shrink-0">
-                              <p class="text-sm font-bold">2 اتاق خواب</p>
-                            </div>
-                            <img alt="icon" src="../img/svg/Group 24 (2).svg">
-                            <div class="flex items-center gap-1">
-                              <img alt="icon" src="../img/svg/profile-2user.svg" class="flex-shrink-0">
-                              <p class="text-sm font-bold">4 نفره</p>
-                            </div>
-                            <img alt="icon" src="../img/svg/Group 24 (2).svg">
-                            <div class="flex items-center gap-1">
-                              <img alt="icon" src="../img/svg/location.svg" class="flex-shrink-0">
-                              <p class="text-sm font-bold">فرهنگشهر</p>
-                            </div>
+                          <img alt="icon" src="../img/svg/Group 24 (2).svg">
+                          <div class="flex items-center gap-1">
+                            <img alt="icon" src="../img/svg/location.svg" class="flex-shrink-0">
+                            <p class="text-sm font-bold">فرهنگشهر</p>
                           </div>
-                          <h6 class="text-center text-primary font-medium mt-4">
-                            <span class="text-sm">هر شب از</span>
-                             <span class="font-bold">1,200,000 تومان</span>
-                          </h6>
-                          <p
-                            class="text-center mt-[5px] text-sm text-secondary font-semibold">
-                            کد اقامتگاه: 234</p>
                         </div>
-                      </a>
-                    </div>
-                    <div class="swiper-slide">
-                      <a class="group">
-                        <div class="rounded-[20px] overflow-hidden relative gradient-after2">
-                          <img alt="img" src="../img/image (2).png"
-                            class="rounded-[20px] w-full h-[258px] group-hover:scale-105 transition">
-                        </div>
-                        <div class="pt-3 p-1 bg-white relative border-gradient mx-[9px] -mt-10 group-hover:-mt-16 transition">
-                          <!-- shape -->
-                          <svg class="-top-2 inset-x-0 mx-auto absolute" xmlns="http://www.w3.org/2000/svg" width="33"
-                            height="9" viewBox="0 0 33 9" fill="white">
-                            <path fill-rule="evenodd" clip-rule="evenodd"
-                              d="M32.8066 8.5H0.193359C4.85352 8.18393 9.22656 6.06978 12.375 2.57672C14.5801 0.129671 18.4199 0.129671 20.625 2.57672C23.7734 6.06978 28.1465 8.18393 32.8066 8.5Z"
-                              fill="white"></path>
-                          </svg>
-                          <h5
-                            class="group-hover:text-primary transition text-center text-dark h-[58px] line-clamp-2 flex-center text-lg font-extrabold px-8">
-                            اجاره اقامتگاه بوم‌گردی خانه باغ ایرانی</h5>
-                          <div class="mt-3 flex items-center justify-center gap-1 flex-wrap">
-                            <div class="flex items-center gap-1">
-                              <img alt="icon" src="../img/svg/Vector.svg" class="flex-shrink-0">
-                              <p class="text-sm font-bold">2 اتاق خواب</p>
-                            </div>
-                            <img alt="icon" src="../img/svg/Group 24 (2).svg">
-                            <div class="flex items-center gap-1">
-                              <img alt="icon" src="../img/svg/profile-2user.svg" class="flex-shrink-0">
-                              <p class="text-sm font-bold">4 نفره</p>
-                            </div>
-                            <img alt="icon" src="../img/svg/Group 24 (2).svg">
-                            <div class="flex items-center gap-1">
-                              <img alt="icon" src="../img/svg/location.svg" class="flex-shrink-0">
-                              <p class="text-sm font-bold">فرهنگشهر</p>
-                            </div>
+                        <h6 class="text-center text-primary font-medium mt-4">
+                          <span class="text-sm">هر شب از</span>
+                           <span class="font-bold">1,200,000 تومان</span>
+                        </h6>
+                        <p class="text-center mt-[5px] text-sm text-secondary font-semibold">
+                          کد اقامتگاه: 234</p>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="swiper-slide">
+                    <a class="group">
+                      <div class="rounded-[20px] overflow-hidden relative gradient-after2">
+                        <img alt="img" src="../img/image (2).png"
+                          class="rounded-[20px] w-full h-[258px] group-hover:scale-105 transition">
+                      </div>
+                      <div
+                        class="pt-3 p-1 bg-white relative border-gradient mx-[9px] -mt-10 group-hover:-mt-16 transition">
+                        <!-- shape -->
+                        <svg class="-top-2 inset-x-0 mx-auto absolute" xmlns="http://www.w3.org/2000/svg" width="33"
+                          height="9" viewBox="0 0 33 9" fill="white">
+                          <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M32.8066 8.5H0.193359C4.85352 8.18393 9.22656 6.06978 12.375 2.57672C14.5801 0.129671 18.4199 0.129671 20.625 2.57672C23.7734 6.06978 28.1465 8.18393 32.8066 8.5Z"
+                            fill="white"></path>
+                        </svg>
+                        <h5
+                          class="group-hover:text-primary transition text-center text-dark h-[58px] line-clamp-2 flex-center text-lg font-extrabold px-8">
+                          اجاره اقامتگاه بوم‌گردی خانه باغ ایرانی</h5>
+                        <div class="mt-3 flex items-center justify-center gap-1 flex-wrap">
+                          <div class="flex items-center gap-1">
+                            <img alt="icon" src="../img/svg/Vector.svg" class="flex-shrink-0">
+                            <p class="text-sm font-bold">2 اتاق خواب</p>
                           </div>
-                          <h6 class="text-center text-primary font-medium mt-4">
-                            <span class="text-sm">هر شب از</span>
-                             <span class="font-bold">1,200,000 تومان</span>
-                          </h6>
-                          <p
-                            class="text-center mt-[5px] text-sm text-secondary font-semibold">
-                            کد اقامتگاه: 234</p>
-                        </div>
-                      </a>
-                    </div>
-                    <div class="swiper-slide">
-                      <a class="group">
-                        <div class="rounded-[20px] overflow-hidden relative gradient-after2">
-                          <img alt="img" src="../img/image (2).png"
-                            class="rounded-[20px] w-full h-[258px] group-hover:scale-105 transition">
-                        </div>
-                        <div class="pt-3 p-1 bg-white relative border-gradient mx-[9px] -mt-10 group-hover:-mt-16 transition">
-                          <!-- shape -->
-                          <svg class="-top-2 inset-x-0 mx-auto absolute" xmlns="http://www.w3.org/2000/svg" width="33"
-                            height="9" viewBox="0 0 33 9" fill="white">
-                            <path fill-rule="evenodd" clip-rule="evenodd"
-                              d="M32.8066 8.5H0.193359C4.85352 8.18393 9.22656 6.06978 12.375 2.57672C14.5801 0.129671 18.4199 0.129671 20.625 2.57672C23.7734 6.06978 28.1465 8.18393 32.8066 8.5Z"
-                              fill="white"></path>
-                          </svg>
-                          <h5
-                            class="group-hover:text-primary transition text-center text-dark h-[58px] line-clamp-2 flex-center text-lg font-extrabold px-8">
-                            اجاره اقامتگاه بوم‌گردی خانه باغ ایرانی</h5>
-                          <div class="mt-3 flex items-center justify-center gap-1 flex-wrap">
-                            <div class="flex items-center gap-1">
-                              <img alt="icon" src="../img/svg/Vector.svg" class="flex-shrink-0">
-                              <p class="text-sm font-bold">2 اتاق خواب</p>
-                            </div>
-                            <img alt="icon" src="../img/svg/Group 24 (2).svg">
-                            <div class="flex items-center gap-1">
-                              <img alt="icon" src="../img/svg/profile-2user.svg" class="flex-shrink-0">
-                              <p class="text-sm font-bold">4 نفره</p>
-                            </div>
-                            <img alt="icon" src="../img/svg/Group 24 (2).svg">
-                            <div class="flex items-center gap-1">
-                              <img alt="icon" src="../img/svg/location.svg" class="flex-shrink-0">
-                              <p class="text-sm font-bold">فرهنگشهر</p>
-                            </div>
+                          <img alt="icon" src="../img/svg/Group 24 (2).svg">
+                          <div class="flex items-center gap-1">
+                            <img alt="icon" src="../img/svg/profile-2user.svg" class="flex-shrink-0">
+                            <p class="text-sm font-bold">4 نفره</p>
                           </div>
-                          <h6 class="text-center text-primary font-medium mt-4">
-                            <span class="text-sm">هر شب از</span>
-                             <span class="font-bold">1,200,000 تومان</span>
-                          </h6>
-                          <p
-                            class="text-center mt-[5px] text-sm text-secondary font-semibold">
-                            کد اقامتگاه: 234</p>
+                          <img alt="icon" src="../img/svg/Group 24 (2).svg">
+                          <div class="flex items-center gap-1">
+                            <img alt="icon" src="../img/svg/location.svg" class="flex-shrink-0">
+                            <p class="text-sm font-bold">فرهنگشهر</p>
+                          </div>
                         </div>
-                      </a>
-                    </div>
+                        <h6 class="text-center text-primary font-medium mt-4">
+                          <span class="text-sm">هر شب از</span>
+                           <span class="font-bold">1,200,000 تومان</span>
+                        </h6>
+                        <p class="text-center mt-[5px] text-sm text-secondary font-semibold">
+                          کد اقامتگاه: 234</p>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="swiper-slide">
+                    <a class="group">
+                      <div class="rounded-[20px] overflow-hidden relative gradient-after2">
+                        <img alt="img" src="../img/image (2).png"
+                          class="rounded-[20px] w-full h-[258px] group-hover:scale-105 transition">
+                      </div>
+                      <div
+                        class="pt-3 p-1 bg-white relative border-gradient mx-[9px] -mt-10 group-hover:-mt-16 transition">
+                        <!-- shape -->
+                        <svg class="-top-2 inset-x-0 mx-auto absolute" xmlns="http://www.w3.org/2000/svg" width="33"
+                          height="9" viewBox="0 0 33 9" fill="white">
+                          <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M32.8066 8.5H0.193359C4.85352 8.18393 9.22656 6.06978 12.375 2.57672C14.5801 0.129671 18.4199 0.129671 20.625 2.57672C23.7734 6.06978 28.1465 8.18393 32.8066 8.5Z"
+                            fill="white"></path>
+                        </svg>
+                        <h5
+                          class="group-hover:text-primary transition text-center text-dark h-[58px] line-clamp-2 flex-center text-lg font-extrabold px-8">
+                          اجاره اقامتگاه بوم‌گردی خانه باغ ایرانی</h5>
+                        <div class="mt-3 flex items-center justify-center gap-1 flex-wrap">
+                          <div class="flex items-center gap-1">
+                            <img alt="icon" src="../img/svg/Vector.svg" class="flex-shrink-0">
+                            <p class="text-sm font-bold">2 اتاق خواب</p>
+                          </div>
+                          <img alt="icon" src="../img/svg/Group 24 (2).svg">
+                          <div class="flex items-center gap-1">
+                            <img alt="icon" src="../img/svg/profile-2user.svg" class="flex-shrink-0">
+                            <p class="text-sm font-bold">4 نفره</p>
+                          </div>
+                          <img alt="icon" src="../img/svg/Group 24 (2).svg">
+                          <div class="flex items-center gap-1">
+                            <img alt="icon" src="../img/svg/location.svg" class="flex-shrink-0">
+                            <p class="text-sm font-bold">فرهنگشهر</p>
+                          </div>
+                        </div>
+                        <h6 class="text-center text-primary font-medium mt-4">
+                          <span class="text-sm">هر شب از</span>
+                           <span class="font-bold">1,200,000 تومان</span>
+                        </h6>
+                        <p class="text-center mt-[5px] text-sm text-secondary font-semibold">
+                          کد اقامتگاه: 234</p>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="swiper-slide">
+                    <a class="group">
+                      <div class="rounded-[20px] overflow-hidden relative gradient-after2">
+                        <img alt="img" src="../img/image (2).png"
+                          class="rounded-[20px] w-full h-[258px] group-hover:scale-105 transition">
+                      </div>
+                      <div
+                        class="pt-3 p-1 bg-white relative border-gradient mx-[9px] -mt-10 group-hover:-mt-16 transition">
+                        <!-- shape -->
+                        <svg class="-top-2 inset-x-0 mx-auto absolute" xmlns="http://www.w3.org/2000/svg" width="33"
+                          height="9" viewBox="0 0 33 9" fill="white">
+                          <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M32.8066 8.5H0.193359C4.85352 8.18393 9.22656 6.06978 12.375 2.57672C14.5801 0.129671 18.4199 0.129671 20.625 2.57672C23.7734 6.06978 28.1465 8.18393 32.8066 8.5Z"
+                            fill="white"></path>
+                        </svg>
+                        <h5
+                          class="group-hover:text-primary transition text-center text-dark h-[58px] line-clamp-2 flex-center text-lg font-extrabold px-8">
+                          اجاره اقامتگاه بوم‌گردی خانه باغ ایرانی</h5>
+                        <div class="mt-3 flex items-center justify-center gap-1 flex-wrap">
+                          <div class="flex items-center gap-1">
+                            <img alt="icon" src="../img/svg/Vector.svg" class="flex-shrink-0">
+                            <p class="text-sm font-bold">2 اتاق خواب</p>
+                          </div>
+                          <img alt="icon" src="../img/svg/Group 24 (2).svg">
+                          <div class="flex items-center gap-1">
+                            <img alt="icon" src="../img/svg/profile-2user.svg" class="flex-shrink-0">
+                            <p class="text-sm font-bold">4 نفره</p>
+                          </div>
+                          <img alt="icon" src="../img/svg/Group 24 (2).svg">
+                          <div class="flex items-center gap-1">
+                            <img alt="icon" src="../img/svg/location.svg" class="flex-shrink-0">
+                            <p class="text-sm font-bold">فرهنگشهر</p>
+                          </div>
+                        </div>
+                        <h6 class="text-center text-primary font-medium mt-4">
+                          <span class="text-sm">هر شب از</span>
+                           <span class="font-bold">1,200,000 تومان</span>
+                        </h6>
+                        <p class="text-center mt-[5px] text-sm text-secondary font-semibold">
+                          کد اقامتگاه: 234</p>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="swiper-slide">
+                    <a class="group">
+                      <div class="rounded-[20px] overflow-hidden relative gradient-after2">
+                        <img alt="img" src="../img/image (2).png"
+                          class="rounded-[20px] w-full h-[258px] group-hover:scale-105 transition">
+                      </div>
+                      <div
+                        class="pt-3 p-1 bg-white relative border-gradient mx-[9px] -mt-10 group-hover:-mt-16 transition">
+                        <!-- shape -->
+                        <svg class="-top-2 inset-x-0 mx-auto absolute" xmlns="http://www.w3.org/2000/svg" width="33"
+                          height="9" viewBox="0 0 33 9" fill="white">
+                          <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M32.8066 8.5H0.193359C4.85352 8.18393 9.22656 6.06978 12.375 2.57672C14.5801 0.129671 18.4199 0.129671 20.625 2.57672C23.7734 6.06978 28.1465 8.18393 32.8066 8.5Z"
+                            fill="white"></path>
+                        </svg>
+                        <h5
+                          class="group-hover:text-primary transition text-center text-dark h-[58px] line-clamp-2 flex-center text-lg font-extrabold px-8">
+                          اجاره اقامتگاه بوم‌گردی خانه باغ ایرانی</h5>
+                        <div class="mt-3 flex items-center justify-center gap-1 flex-wrap">
+                          <div class="flex items-center gap-1">
+                            <img alt="icon" src="../img/svg/Vector.svg" class="flex-shrink-0">
+                            <p class="text-sm font-bold">2 اتاق خواب</p>
+                          </div>
+                          <img alt="icon" src="../img/svg/Group 24 (2).svg">
+                          <div class="flex items-center gap-1">
+                            <img alt="icon" src="../img/svg/profile-2user.svg" class="flex-shrink-0">
+                            <p class="text-sm font-bold">4 نفره</p>
+                          </div>
+                          <img alt="icon" src="../img/svg/Group 24 (2).svg">
+                          <div class="flex items-center gap-1">
+                            <img alt="icon" src="../img/svg/location.svg" class="flex-shrink-0">
+                            <p class="text-sm font-bold">فرهنگشهر</p>
+                          </div>
+                        </div>
+                        <h6 class="text-center text-primary font-medium mt-4">
+                          <span class="text-sm">هر شب از</span>
+                           <span class="font-bold">1,200,000 تومان</span>
+                        </h6>
+                        <p class="text-center mt-[5px] text-sm text-secondary font-semibold">
+                          کد اقامتگاه: 234</p>
+                      </div>
+                    </a>
                   </div>
                 </div>
-                <div class="btnHover active:scale-95 !absolute ltr:[transform:rotateY(180deg)] !-bottom-[67px] !top-auto rtl:!right-auto ltr:!left-auto rtl:!left-[155px] ltr:!right-[155px] swiper-button-next w-[34px] h-[34px] rounded-lg bg-primary">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="text-white bi bi-chevron-right !w-[60%]" viewBox="0 0 16 16">
-                    <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708"></path>
-                  </svg>
-                </div>
-                <div class="btnHover active:scale-95 !absolute ltr:[transform:rotateY(180deg)] !-bottom-[67px] !top-auto ltr:!left-auto rtl:!left-[107px] ltr:!right-[107px] swiper-button-prev w-[34px] h-[34px] rounded-lg bg-primary">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+              </div>
+              <div
+                class="btnHover active:scale-95 !absolute ltr:[transform:rotateY(180deg)] !-bottom-[67px] !top-auto rtl:!right-auto ltr:!left-auto rtl:!left-[155px] ltr:!right-[155px] swiper-button-next w-[34px] h-[34px] rounded-lg bg-primary">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                  class="text-white bi bi-chevron-right !w-[60%]" viewBox="0 0 16 16">
+                  <path fill-rule="evenodd"
+                    d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708">
+                  </path>
+                </svg>
+              </div>
+              <div
+                class="btnHover active:scale-95 !absolute ltr:[transform:rotateY(180deg)] !-bottom-[67px] !top-auto ltr:!left-auto rtl:!left-[107px] ltr:!right-[107px] swiper-button-prev w-[34px] h-[34px] rounded-lg bg-primary">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                   class="text-white bi bi-chevron-right !w-[60%]" viewBox="0 0 16 16">
                   <path fill-rule="evenodd"
                     d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0" />
                 </svg>
-                </div>
               </div>
             </div>
           </div>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <!-- testimonials -->
-      <section class="mt-[130px] py-5 bg-[#FF970433] relative">
-        <!-- shape -->
-         <img alt="shape" src="../img/triangle.png" class="absolute my-auto inset-y-0 rtl:right-0 ltr:left-0">
-         <img alt="shape" src="../img/Group 87.png" class="absolute my-auto bottom-0 rtl:left-0 ltr:right-0 ltr:[transform:rotateY(180deg)]">
-        <div class="max-w-content mx-auto px-4 relative">
-          <div class="grid grid-cols-12 gap-[99px] items-center">
-           <div class="col-span-6">
-             <div>
-               <div class="flex flex-col gap-6 testimonials">
-                 <div class="cursor-pointer">
-                   <div class="bg-[#FFFFFF57] rounded-[30px] px-5 py-8 flex items-center gap-5">
+    <!-- testimonials -->
+    <section class="mt-[130px] py-5 bg-[#FF970433] relative">
+      <!-- shape -->
+      <img alt="shape" src="../img/triangle.png" class="absolute my-auto inset-y-0 rtl:right-0 ltr:left-0">
+      <img alt="shape" src="../img/Group 87.png"
+        class="absolute my-auto bottom-0 rtl:left-0 ltr:right-0 ltr:[transform:rotateY(180deg)]">
+      <div class="max-w-content mx-auto px-4 relative">
+        <div class="grid grid-cols-12 gap-[99px] items-center">
+          <div class="col-span-6">
+            <div>
+              <div class="flex flex-col gap-6 testimonials">
+                <div class="cursor-pointer">
+                  <div class="bg-[#FFFFFF57] rounded-[30px] px-5 py-8 flex items-center gap-5">
                     <img alt="img" src="../img/Frame 65.png" class="w-[82px] h-[82px] rounded-full">
                     <div>
                       <p class="text-xl font-bold">نگار امینی</p>
                       <p class="mt-3 text-[#2C2C2C87] text-justify text-sm font-medium leading-6">
-                        لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز
+                        لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است
+                        چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی
+                        مورد نیاز
                       </p>
                     </div>
-                   </div>
-                 </div>
-                 <div class="cursor-pointer">
-                   <div class="bg-[#FFFFFF57] rounded-[30px] px-5 py-8 flex items-center gap-5 active">
+                  </div>
+                </div>
+                <div class="cursor-pointer">
+                  <div class="bg-[#FFFFFF57] rounded-[30px] px-5 py-8 flex items-center gap-5 active">
                     <img alt="img" src="../img/Frame 65.png" class="w-[82px] h-[82px] rounded-full">
                     <div>
                       <p class="text-xl font-bold">نگار امینی</p>
                       <p class="mt-3 text-[#2C2C2C87] text-justify text-sm font-medium leading-6">
-                        لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز
+                        لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است
+                        چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی
+                        مورد نیاز
                       </p>
                     </div>
-                   </div>
-                 </div>
-                 <div class="cursor-pointer">
-                   <div class="bg-[#FFFFFF57] rounded-[30px] px-5 py-8 flex items-center gap-5">
+                  </div>
+                </div>
+                <div class="cursor-pointer">
+                  <div class="bg-[#FFFFFF57] rounded-[30px] px-5 py-8 flex items-center gap-5">
                     <img alt="img" src="../img/Frame 65.png" class="w-[82px] h-[82px] rounded-full">
                     <div>
                       <p class="text-xl font-bold">نگار امینی</p>
                       <p class="mt-3 text-[#2C2C2C87] text-justify text-sm font-medium leading-6">
-                        لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز
+                        لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است
+                        چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی
+                        مورد نیاز
                       </p>
                     </div>
-                   </div>
-                 </div>
-               </div>
-             </div>
-           </div>
-           <div class="col-span-6">
-             <div class="flex gap-[54px]">
-               <div class="mt-11">
-                 <h2 class="font-bold leading-6 text-[40px] text-center">نظرات</h2>
-                 <h2 class="font-medium leading-6 mt-4 text-[31px] text-center">مشتریان</h2>
-                 <img alt="img" src="../img/quote-up.png" class="mt-2 mx-auto">
-                 <img alt="img" src="../img/Group 97.png" class="mt-8 mx-auto">
-               </div>
-               <div class="text-dark text-justify text-lg font-medium leading-6">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-span-6">
+            <div class="flex gap-[54px]">
+              <div class="mt-11">
+                <h2 class="font-bold leading-6 text-[40px] text-center">نظرات</h2>
+                <h2 class="font-medium leading-6 mt-4 text-[31px] text-center">مشتریان</h2>
+                <img alt="img" src="../img/quote-up.png" class="mt-2 mx-auto">
+                <img alt="img" src="../img/Group 97.png" class="mt-8 mx-auto">
+              </div>
+              <div class="text-dark text-justify text-lg font-medium leading-6">
                 <p class="mb-3">
-                  لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد کتابهای زیادی در شصت و سه درصد گذشته حال و آینده شناخت فراوان جامعه و متخصصان را می طلبد تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی و فرهنگ پیشرو در زبان فارسی ایجاد کرد
+                  لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها و
+                  متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و
+                  کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد کتابهای زیادی در شصت و سه درصد گذشته حال و آینده
+                  شناخت فراوان جامعه و متخصصان را می طلبد تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی
+                  الخصوص طراحان خلاقی و فرهنگ پیشرو در زبان فارسی ایجاد کرد
                 </p>
                 <p>
-                  لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد
+                  لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها و
+                  متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و
+                  کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد
                 </p>
-               </div>
-             </div>
-           </div>
+              </div>
+            </div>
           </div>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <!-- features -->
-       <section>
-        <div class="max-w-content mx-auto px-4">
-           <div>
-             <div class="swiper features px-4 py-[70px]">
-               <div class="swiper-wrapper">
-                 <div class="swiper-slide">
-                   <div class="rounded-[20px] bg-white overflow-hidden p-4 pb-8 relative shadow-1">
-                    <!-- shape -->
-                    <svg class="absolute -bottom-[2px] w-full inset-x-0" width="288" height="22" viewBox="0 0 288 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M287.404 2.32385L288 0V21.5H0V0L2.44404 5.60691C6.0253 13.8227 14.635 18.653 23.5132 17.4273L126.468 3.21333C137.108 1.74443 147.897 1.71059 158.545 3.11272L265.42 17.1852C275.452 18.5062 284.891 12.1258 287.404 2.32385Z" fill="#f5f5f5"/>
-                    </svg>
-                    <div class="flex items-center gap-5">
-                      <img alt="icon" src="../img/svg/Group 68.svg">
-                      <p class="font-bold">ضمانت بازگشت هزینه</p>
-                    </div>
-                    <p class="mt-4 text-justify leading-6 font-medium">در صورت لغو رزرو، بازگشت هزینه با توجه به قوانین لغو تضمین می‌شود.</p>
-                   </div>
-                 </div>
-                 <div class="swiper-slide">
-                    <div class="rounded-[20px] bg-white overflow-hidden p-4 pb-8 relative shadow-1">
-                    <!-- shape -->
-                    <svg class="absolute -bottom-[2px] w-full inset-x-0" width="288" height="22" viewBox="0 0 288 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M287.404 2.32385L288 0V21.5H0V0L2.44404 5.60691C6.0253 13.8227 14.635 18.653 23.5132 17.4273L126.468 3.21333C137.108 1.74443 147.897 1.71059 158.545 3.11272L265.42 17.1852C275.452 18.5062 284.891 12.1258 287.404 2.32385Z" fill="#f5f5f5"/>
-                    </svg>
-                    <div class="flex items-center gap-5">
-                      <img alt="icon" src="../img/svg/Group 69.svg">
-                      <p class="font-bold">اعتبارسنجی میزبان و مهمان</p>
-                    </div>
-                    <p class="mt-4 text-justify leading-6 font-medium">در صورت لغو رزرو، بازگشت هزینه با توجه به قوانین لغو تضمین می‌شود.</p>
-                   </div>
-                 </div>
-                 <div class="swiper-slide">
-                    <div class="rounded-[20px] bg-white overflow-hidden p-4 pb-8 relative shadow-1">
-                    <!-- shape -->
-                    <svg class="absolute -bottom-[2px] w-full inset-x-0" width="288" height="22" viewBox="0 0 288 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M287.404 2.32385L288 0V21.5H0V0L2.44404 5.60691C6.0253 13.8227 14.635 18.653 23.5132 17.4273L126.468 3.21333C137.108 1.74443 147.897 1.71059 158.545 3.11272L265.42 17.1852C275.452 18.5062 284.891 12.1258 287.404 2.32385Z" fill="#f5f5f5"/>
-                    </svg>
-                    <div class="flex items-center gap-5">
-                      <img alt="icon" src="../img/svg/Group 70.svg">
-                      <p class="font-bold">صحت اطلاعات اقامتگاه</p>
-                    </div>
-                    <p class="mt-4 text-justify leading-6 font-medium">در صورت لغو رزرو، بازگشت هزینه با توجه به قوانین لغو تضمین می‌شود.</p>
-                   </div>
-                 </div>
-                 <div class="swiper-slide">
-                    <div class="rounded-[20px] bg-white overflow-hidden p-4 pb-8 relative shadow-1">
-                    <!-- shape -->
-                    <svg class="absolute -bottom-[2px] w-full inset-x-0" width="288" height="22" viewBox="0 0 288 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M287.404 2.32385L288 0V21.5H0V0L2.44404 5.60691C6.0253 13.8227 14.635 18.653 23.5132 17.4273L126.468 3.21333C137.108 1.74443 147.897 1.71059 158.545 3.11272L265.42 17.1852C275.452 18.5062 284.891 12.1258 287.404 2.32385Z" fill="#f5f5f5"/>
-                    </svg>
-                    <div class="flex items-center gap-5">
-                      <img alt="icon" src="../img/svg/Group 71.svg">
-                      <p class="font-bold">پشتیبانی ۲۴ ساعته</p>
-                    </div>
-                    <p class="mt-4 text-justify leading-6 font-medium">در صورت لغو رزرو، بازگشت هزینه با توجه به قوانین لغو تضمین می‌شود.</p>
-                   </div>
-                 </div>
-               </div>
-             </div>
-           </div>
-        </div>
-       </section>
+    <!-- features -->
+    <section>
+      <div class="max-w-content mx-auto px-4">
+          <div class="py-[70px] grid grid-cols-4 gap-6">
+            <div class="rounded-[20px] bg-white overflow-hidden p-4 pb-8 relative shadow-1">
+              <!-- shape -->
+              <svg class="absolute -bottom-[2px] w-full inset-x-0" width="288" height="22" viewBox="0 0 288 22"
+                fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M287.404 2.32385L288 0V21.5H0V0L2.44404 5.60691C6.0253 13.8227 14.635 18.653 23.5132 17.4273L126.468 3.21333C137.108 1.74443 147.897 1.71059 158.545 3.11272L265.42 17.1852C275.452 18.5062 284.891 12.1258 287.404 2.32385Z"
+                  fill="#f5f5f5" />
+              </svg>
+              <div class="flex items-center gap-5">
+                <img alt="icon" src="../img/svg/Group 68.svg">
+                <p class="font-bold">ضمانت بازگشت هزینه</p>
+              </div>
+              <p class="mt-4 text-justify leading-6 font-medium">در صورت لغو رزرو، بازگشت هزینه با توجه به قوانین لغو
+                تضمین می‌شود.</p>
+            </div>
+            <div class="rounded-[20px] bg-white overflow-hidden p-4 pb-8 relative shadow-1">
+              <!-- shape -->
+              <svg class="absolute -bottom-[2px] w-full inset-x-0" width="288" height="22" viewBox="0 0 288 22"
+                fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M287.404 2.32385L288 0V21.5H0V0L2.44404 5.60691C6.0253 13.8227 14.635 18.653 23.5132 17.4273L126.468 3.21333C137.108 1.74443 147.897 1.71059 158.545 3.11272L265.42 17.1852C275.452 18.5062 284.891 12.1258 287.404 2.32385Z"
+                  fill="#f5f5f5" />
+              </svg>
+              <div class="flex items-center gap-5">
+                <img alt="icon" src="../img/svg/Group 69.svg">
+                <p class="font-bold">اعتبارسنجی میزبان و مهمان</p>
+              </div>
+              <p class="mt-4 text-justify leading-6 font-medium">در صورت لغو رزرو، بازگشت هزینه با توجه به قوانین لغو
+                تضمین می‌شود.</p>
+            </div>
+            <div class="rounded-[20px] bg-white overflow-hidden p-4 pb-8 relative shadow-1">
+              <!-- shape -->
+              <svg class="absolute -bottom-[2px] w-full inset-x-0" width="288" height="22" viewBox="0 0 288 22"
+                fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M287.404 2.32385L288 0V21.5H0V0L2.44404 5.60691C6.0253 13.8227 14.635 18.653 23.5132 17.4273L126.468 3.21333C137.108 1.74443 147.897 1.71059 158.545 3.11272L265.42 17.1852C275.452 18.5062 284.891 12.1258 287.404 2.32385Z"
+                  fill="#f5f5f5" />
+              </svg>
+              <div class="flex items-center gap-5">
+                <img alt="icon" src="../img/svg/Group 70.svg">
+                <p class="font-bold">صحت اطلاعات اقامتگاه</p>
+              </div>
+              <p class="mt-4 text-justify leading-6 font-medium">در صورت لغو رزرو، بازگشت هزینه با توجه به قوانین لغو
+                تضمین می‌شود.</p>
+            </div>
+            <div class="rounded-[20px] bg-white overflow-hidden p-4 pb-8 relative shadow-1">
+              <!-- shape -->
+              <svg class="absolute -bottom-[2px] w-full inset-x-0" width="288" height="22" viewBox="0 0 288 22"
+                fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M287.404 2.32385L288 0V21.5H0V0L2.44404 5.60691C6.0253 13.8227 14.635 18.653 23.5132 17.4273L126.468 3.21333C137.108 1.74443 147.897 1.71059 158.545 3.11272L265.42 17.1852C275.452 18.5062 284.891 12.1258 287.404 2.32385Z"
+                  fill="#f5f5f5" />
+              </svg>
+              <div class="flex items-center gap-5">
+                <img alt="icon" src="../img/svg/Group 71.svg">
+                <p class="font-bold">پشتیبانی ۲۴ ساعته</p>
+              </div>
+              <p class="mt-4 text-justify leading-6 font-medium">در صورت لغو رزرو، بازگشت هزینه با توجه به قوانین لغو
+                تضمین می‌شود.</p>
+            </div>
+          </div>
+      </div>
+    </section>
 
   </main>
 
@@ -2471,23 +2538,33 @@
         <div class="flex items-center justify-center gap-[55px]">
           <a class="group">
             <svg width="29" height="29" viewBox="0 0 29 29" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path class="transition group-hover:fill-primary" d="M24.1093 9.57021C24.124 9.78326 24.124 9.99631 24.124 10.2113C24.124 16.7628 19.1366 24.3186 10.0168 24.3186V24.3147C7.32273 24.3186 4.68467 23.5469 2.41675 22.0919C2.80848 22.139 3.20218 22.1626 3.59686 22.1636C5.82944 22.1655 7.9982 21.4164 9.75462 20.037C7.63298 19.9968 5.77249 18.6134 5.12255 16.5939C5.86576 16.7373 6.63156 16.7078 7.36102 16.5085C5.04794 16.0412 3.38381 14.0089 3.38381 11.6487C3.38381 11.6271 3.38381 11.6064 3.38381 11.5858C4.07302 11.9697 4.84471 12.1827 5.63406 12.2063C3.45548 10.7503 2.78394 7.85209 4.09953 5.58612C6.61683 8.68366 10.3309 10.5667 14.318 10.766C13.9184 9.04397 14.4642 7.23945 15.7523 6.02891C17.7493 4.15173 20.89 4.24795 22.7672 6.24392C23.8776 6.02498 24.9419 5.61754 25.9158 5.04025C25.5457 6.18796 24.771 7.16287 23.7362 7.78238C24.719 7.66653 25.6792 7.40341 26.5834 7.00186C25.9178 7.99935 25.0793 8.86823 24.1093 9.57021Z" fill="white"/>
+              <path class="transition group-hover:fill-primary"
+                d="M24.1093 9.57021C24.124 9.78326 24.124 9.99631 24.124 10.2113C24.124 16.7628 19.1366 24.3186 10.0168 24.3186V24.3147C7.32273 24.3186 4.68467 23.5469 2.41675 22.0919C2.80848 22.139 3.20218 22.1626 3.59686 22.1636C5.82944 22.1655 7.9982 21.4164 9.75462 20.037C7.63298 19.9968 5.77249 18.6134 5.12255 16.5939C5.86576 16.7373 6.63156 16.7078 7.36102 16.5085C5.04794 16.0412 3.38381 14.0089 3.38381 11.6487C3.38381 11.6271 3.38381 11.6064 3.38381 11.5858C4.07302 11.9697 4.84471 12.1827 5.63406 12.2063C3.45548 10.7503 2.78394 7.85209 4.09953 5.58612C6.61683 8.68366 10.3309 10.5667 14.318 10.766C13.9184 9.04397 14.4642 7.23945 15.7523 6.02891C17.7493 4.15173 20.89 4.24795 22.7672 6.24392C23.8776 6.02498 24.9419 5.61754 25.9158 5.04025C25.5457 6.18796 24.771 7.16287 23.7362 7.78238C24.719 7.66653 25.6792 7.40341 26.5834 7.00186C25.9178 7.99935 25.0793 8.86823 24.1093 9.57021Z"
+                fill="white" />
             </svg>
           </a>
           <a class="group">
             <svg width="29" height="29" viewBox="0 0 29 29" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path class="transition group-hover:fill-primary" fill-rule="evenodd" clip-rule="evenodd" d="M26.5834 14.5001C26.5834 21.1735 21.1735 26.5834 14.5001 26.5834C7.82664 26.5834 2.41675 21.1735 2.41675 14.5001C2.41675 7.82664 7.82664 2.41675 14.5001 2.41675C21.1735 2.41675 26.5834 7.82664 26.5834 14.5001ZM14.9331 11.3372C13.7578 11.8261 11.4089 12.8378 7.88634 14.3725C7.31433 14.6 7.01469 14.8225 6.98742 15.0401C6.94132 15.4079 7.40182 15.5527 8.0289 15.7498C8.1142 15.7767 8.20258 15.8045 8.29319 15.8339C8.91014 16.0345 9.74006 16.2691 10.1715 16.2784C10.5628 16.2869 10.9996 16.1255 11.4819 15.7944C14.7731 13.5727 16.472 12.4498 16.5787 12.4256C16.654 12.4085 16.7582 12.387 16.8289 12.4498C16.8995 12.5126 16.8926 12.6315 16.8851 12.6634C16.8395 12.8579 15.0319 14.5385 14.0964 15.4081C13.8048 15.6793 13.5979 15.8716 13.5556 15.9155C13.4609 16.0139 13.3644 16.107 13.2716 16.1964C12.6984 16.7489 12.2686 17.1633 13.2954 17.8399C13.7888 18.1651 14.1836 18.434 14.5775 18.7022C15.0077 18.9952 15.4368 19.2874 15.992 19.6513C16.1334 19.744 16.2685 19.8403 16.4 19.9341C16.9007 20.291 17.3505 20.6117 17.9061 20.5605C18.229 20.5308 18.5625 20.2272 18.7319 19.3217C19.1322 17.1817 19.9191 12.5451 20.1009 10.6344C20.1168 10.467 20.0968 10.2528 20.0807 10.1587C20.0646 10.0647 20.031 9.93069 19.9087 9.83149C19.764 9.71402 19.5405 9.68925 19.4405 9.69101C18.986 9.69902 18.2887 9.94147 14.9331 11.3372Z" fill="white"/>
+              <path class="transition group-hover:fill-primary" fill-rule="evenodd" clip-rule="evenodd"
+                d="M26.5834 14.5001C26.5834 21.1735 21.1735 26.5834 14.5001 26.5834C7.82664 26.5834 2.41675 21.1735 2.41675 14.5001C2.41675 7.82664 7.82664 2.41675 14.5001 2.41675C21.1735 2.41675 26.5834 7.82664 26.5834 14.5001ZM14.9331 11.3372C13.7578 11.8261 11.4089 12.8378 7.88634 14.3725C7.31433 14.6 7.01469 14.8225 6.98742 15.0401C6.94132 15.4079 7.40182 15.5527 8.0289 15.7498C8.1142 15.7767 8.20258 15.8045 8.29319 15.8339C8.91014 16.0345 9.74006 16.2691 10.1715 16.2784C10.5628 16.2869 10.9996 16.1255 11.4819 15.7944C14.7731 13.5727 16.472 12.4498 16.5787 12.4256C16.654 12.4085 16.7582 12.387 16.8289 12.4498C16.8995 12.5126 16.8926 12.6315 16.8851 12.6634C16.8395 12.8579 15.0319 14.5385 14.0964 15.4081C13.8048 15.6793 13.5979 15.8716 13.5556 15.9155C13.4609 16.0139 13.3644 16.107 13.2716 16.1964C12.6984 16.7489 12.2686 17.1633 13.2954 17.8399C13.7888 18.1651 14.1836 18.434 14.5775 18.7022C15.0077 18.9952 15.4368 19.2874 15.992 19.6513C16.1334 19.744 16.2685 19.8403 16.4 19.9341C16.9007 20.291 17.3505 20.6117 17.9061 20.5605C18.229 20.5308 18.5625 20.2272 18.7319 19.3217C19.1322 17.1817 19.9191 12.5451 20.1009 10.6344C20.1168 10.467 20.0968 10.2528 20.0807 10.1587C20.0646 10.0647 20.031 9.93069 19.9087 9.83149C19.764 9.71402 19.5405 9.68925 19.4405 9.69101C18.986 9.69902 18.2887 9.94147 14.9331 11.3372Z"
+                fill="white" />
             </svg>
           </a>
           <a class="group">
             <svg width="28" height="29" viewBox="0 0 28 29" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path class="transition group-hover:fill-primary" d="M25.6667 14.5734C25.6667 7.85908 20.4439 2.41675 14 2.41675C7.55615 2.41675 2.33337 7.85908 2.33337 14.5734C2.33337 20.6424 6.59871 25.6715 12.1769 26.5834V18.088H9.21515V14.5726H12.1769V11.8949C12.1769 8.8483 13.9184 7.16469 16.5838 7.16469C17.8594 7.16469 19.1956 7.40233 19.1956 7.40233V10.3942H17.7233C16.2743 10.3942 15.8232 11.3318 15.8232 12.2937V14.5734H19.0587L18.5415 18.0872H15.8232V26.5834C21.4014 25.6715 25.6667 20.6424 25.6667 14.5734Z" fill="white"/>
+              <path class="transition group-hover:fill-primary"
+                d="M25.6667 14.5734C25.6667 7.85908 20.4439 2.41675 14 2.41675C7.55615 2.41675 2.33337 7.85908 2.33337 14.5734C2.33337 20.6424 6.59871 25.6715 12.1769 26.5834V18.088H9.21515V14.5726H12.1769V11.8949C12.1769 8.8483 13.9184 7.16469 16.5838 7.16469C17.8594 7.16469 19.1956 7.40233 19.1956 7.40233V10.3942H17.7233C16.2743 10.3942 15.8232 11.3318 15.8232 12.2937V14.5734H19.0587L18.5415 18.0872H15.8232V26.5834C21.4014 25.6715 25.6667 20.6424 25.6667 14.5734Z"
+                fill="white" />
             </svg>
           </a>
           <a class="group">
             <svg width="29" height="29" viewBox="0 0 29 29" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path class="transition group-hover:fill-primary" d="M14.5 10.573C13.4584 10.573 12.4596 10.9867 11.7231 11.7232C10.9866 12.4597 10.5729 13.4586 10.5729 14.5001C10.5729 15.5416 10.9866 16.5405 11.7231 17.2769C12.4596 18.0134 13.4584 18.4272 14.5 18.4272C15.5415 18.4272 16.5404 18.0134 17.2768 17.2769C18.0133 16.5405 18.427 15.5416 18.427 14.5001C18.427 13.4586 18.0133 12.4597 17.2768 11.7232C16.5404 10.9867 15.5415 10.573 14.5 10.573Z" fill="white"/>
-              <path class="transition group-hover:fill-primary" fill-rule="evenodd" clip-rule="evenodd" d="M8.18038 3.72397C12.3806 3.25868 16.6193 3.25868 20.8195 3.72397C23.1142 3.98014 24.9641 5.7866 25.2336 8.08968C25.7313 12.3487 25.7313 16.6511 25.2336 20.9101C24.9641 23.2132 23.1142 25.0196 20.8208 25.277C16.6201 25.7424 12.381 25.7424 8.18038 25.277C5.88575 25.0196 4.03579 23.2132 3.76634 20.9113C3.26848 16.6519 3.26848 12.3491 3.76634 8.08968C4.03579 5.7866 5.88575 3.98014 8.18038 3.72397ZM20.5416 7.24989C20.2212 7.24989 19.9138 7.37719 19.6872 7.6038C19.4606 7.83041 19.3333 8.13775 19.3333 8.45822C19.3333 8.77869 19.4606 9.08603 19.6872 9.31264C19.9138 9.53925 20.2212 9.66655 20.5416 9.66655C20.8621 9.66655 21.1694 9.53925 21.396 9.31264C21.6227 9.08603 21.75 8.77869 21.75 8.45822C21.75 8.13775 21.6227 7.83041 21.396 7.6038C21.1694 7.37719 20.8621 7.24989 20.5416 7.24989ZM8.76038 14.4999C8.76038 12.9777 9.36508 11.5178 10.4415 10.4414C11.5178 9.36501 12.9777 8.7603 14.5 8.7603C16.0222 8.7603 17.4821 9.36501 18.5585 10.4414C19.6348 11.5178 20.2395 12.9777 20.2395 14.4999C20.2395 16.0221 19.6348 17.482 18.5585 18.5584C17.4821 19.6348 16.0222 20.2395 14.5 20.2395C12.9777 20.2395 11.5178 19.6348 10.4415 18.5584C9.36508 17.482 8.76038 16.0221 8.76038 14.4999Z" fill="white"/>
+              <path class="transition group-hover:fill-primary"
+                d="M14.5 10.573C13.4584 10.573 12.4596 10.9867 11.7231 11.7232C10.9866 12.4597 10.5729 13.4586 10.5729 14.5001C10.5729 15.5416 10.9866 16.5405 11.7231 17.2769C12.4596 18.0134 13.4584 18.4272 14.5 18.4272C15.5415 18.4272 16.5404 18.0134 17.2768 17.2769C18.0133 16.5405 18.427 15.5416 18.427 14.5001C18.427 13.4586 18.0133 12.4597 17.2768 11.7232C16.5404 10.9867 15.5415 10.573 14.5 10.573Z"
+                fill="white" />
+              <path class="transition group-hover:fill-primary" fill-rule="evenodd" clip-rule="evenodd"
+                d="M8.18038 3.72397C12.3806 3.25868 16.6193 3.25868 20.8195 3.72397C23.1142 3.98014 24.9641 5.7866 25.2336 8.08968C25.7313 12.3487 25.7313 16.6511 25.2336 20.9101C24.9641 23.2132 23.1142 25.0196 20.8208 25.277C16.6201 25.7424 12.381 25.7424 8.18038 25.277C5.88575 25.0196 4.03579 23.2132 3.76634 20.9113C3.26848 16.6519 3.26848 12.3491 3.76634 8.08968C4.03579 5.7866 5.88575 3.98014 8.18038 3.72397ZM20.5416 7.24989C20.2212 7.24989 19.9138 7.37719 19.6872 7.6038C19.4606 7.83041 19.3333 8.13775 19.3333 8.45822C19.3333 8.77869 19.4606 9.08603 19.6872 9.31264C19.9138 9.53925 20.2212 9.66655 20.5416 9.66655C20.8621 9.66655 21.1694 9.53925 21.396 9.31264C21.6227 9.08603 21.75 8.77869 21.75 8.45822C21.75 8.13775 21.6227 7.83041 21.396 7.6038C21.1694 7.37719 20.8621 7.24989 20.5416 7.24989ZM8.76038 14.4999C8.76038 12.9777 9.36508 11.5178 10.4415 10.4414C11.5178 9.36501 12.9777 8.7603 14.5 8.7603C16.0222 8.7603 17.4821 9.36501 18.5585 10.4414C19.6348 11.5178 20.2395 12.9777 20.2395 14.4999C20.2395 16.0221 19.6348 17.482 18.5585 18.5584C17.4821 19.6348 16.0222 20.2395 14.5 20.2395C12.9777 20.2395 11.5178 19.6348 10.4415 18.5584C9.36508 17.482 8.76038 16.0221 8.76038 14.4999Z"
+                fill="white" />
             </svg>
           </a>
         </div>
@@ -2501,33 +2578,46 @@
           <a class="hover:text-primary">میزبان شوید</a>
         </div>
         <div class="mt-11 max-w-[700px] mx-auto flex items-end justify-between gap-3">
-            <div>
-              <a class="flex items-center gap-[18px] text-white text-lg font-semibold">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M17.62 10.7501C17.19 10.7501 16.85 10.4001 16.85 9.9801C16.85 9.6101 16.48 8.8401 15.86 8.1701C15.25 7.5201 14.58 7.1401 14.02 7.1401C13.59 7.1401 13.25 6.7901 13.25 6.3701C13.25 5.9501 13.6 5.6001 14.02 5.6001C15.02 5.6001 16.07 6.1401 16.99 7.1101C17.85 8.0201 18.4 9.1501 18.4 9.9701C18.4 10.4001 18.05 10.7501 17.62 10.7501Z" fill="white"/>
-                  <path d="M21.23 10.75C20.8 10.75 20.46 10.4 20.46 9.98C20.46 6.43 17.57 3.55 14.03 3.55C13.6 3.55 13.26 3.2 13.26 2.78C13.26 2.36 13.6 2 14.02 2C18.42 2 22 5.58 22 9.98C22 10.4 21.65 10.75 21.23 10.75Z" fill="white"/>
-                  <path d="M11.05 14.95L9.2 16.8C8.81 17.19 8.19 17.19 7.79 16.81C7.68 16.7 7.57 16.6 7.46 16.49C6.43 15.45 5.5 14.36 4.67 13.22C3.85 12.08 3.19 10.94 2.71 9.81C2.24 8.67 2 7.58 2 6.54C2 5.86 2.12 5.21 2.36 4.61C2.6 4 2.98 3.44 3.51 2.94C4.15 2.31 4.85 2 5.59 2C5.87 2 6.15 2.06 6.4 2.18C6.66 2.3 6.89 2.48 7.07 2.74L9.39 6.01C9.57 6.26 9.7 6.49 9.79 6.71C9.88 6.92 9.93 7.13 9.93 7.32C9.93 7.56 9.86 7.8 9.72 8.03C9.59 8.26 9.4 8.5 9.16 8.74L8.4 9.53C8.29 9.64 8.24 9.77 8.24 9.93C8.24 10.01 8.25 10.08 8.27 10.16C8.3 10.24 8.33 10.3 8.35 10.36C8.53 10.69 8.84 11.12 9.28 11.64C9.73 12.16 10.21 12.69 10.73 13.22C10.83 13.32 10.94 13.42 11.04 13.52C11.44 13.91 11.45 14.55 11.05 14.95Z" fill="white"/>
-                  <path d="M21.9701 18.33C21.9701 18.61 21.9201 18.9 21.8201 19.18C21.7901 19.26 21.7601 19.34 21.7201 19.42C21.5501 19.78 21.3301 20.12 21.0401 20.44C20.5501 20.98 20.0101 21.37 19.4001 21.62C19.3901 21.62 19.3801 21.63 19.3701 21.63C18.7801 21.87 18.1401 22 17.4501 22C16.4301 22 15.3401 21.76 14.1901 21.27C13.0401 20.78 11.8901 20.12 10.7501 19.29C10.3601 19 9.9701 18.71 9.6001 18.4L12.8701 15.13C13.1501 15.34 13.4001 15.5 13.6101 15.61C13.6601 15.63 13.7201 15.66 13.7901 15.69C13.8701 15.72 13.9501 15.73 14.0401 15.73C14.2101 15.73 14.3401 15.67 14.4501 15.56L15.2101 14.81C15.4601 14.56 15.7001 14.37 15.9301 14.25C16.1601 14.11 16.3901 14.04 16.6401 14.04C16.8301 14.04 17.0301 14.08 17.2501 14.17C17.4701 14.26 17.7001 14.39 17.9501 14.56L21.2601 16.91C21.5201 17.09 21.7001 17.3 21.8101 17.55C21.9101 17.8 21.9701 18.05 21.9701 18.33Z" fill="white"/>
-                </svg>
-                <p>میزبان شوید</p>
-              </a>
-              <a class="flex items-center gap-[18px] text-white text-lg font-semibold mt-5">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M17 3.5H7C4 3.5 2 5 2 8.5V15.5C2 19 4 20.5 7 20.5H17C20 20.5 22 19 22 15.5V8.5C22 5 20 3.5 17 3.5ZM17.47 9.59L14.34 12.09C13.68 12.62 12.84 12.88 12 12.88C11.16 12.88 10.31 12.62 9.66 12.09L6.53 9.59C6.21 9.33 6.16 8.85 6.41 8.53C6.67 8.21 7.14 8.15 7.46 8.41L10.59 10.91C11.35 11.52 12.64 11.52 13.4 10.91L16.53 8.41C16.85 8.15 17.33 8.2 17.58 8.53C17.84 8.85 17.79 9.33 17.47 9.59Z" fill="white"/>
-                </svg>
-                <p>info@gmail.com</p>
-              </a>
-            </div>
-            <div class="flex gap-[26px]">
-              <a><img alt="img" src="../img/Frame 68.png" class="w-[83px] h-[105px] rounded-[10px]"></a>
-              <a><img alt="img" src="../img/Frame 67.png" class="w-[83px] h-[105px] rounded-[10px]"></a>
-            </div>
+          <div>
+            <a class="flex items-center gap-[18px] text-white text-lg font-semibold">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M17.62 10.7501C17.19 10.7501 16.85 10.4001 16.85 9.9801C16.85 9.6101 16.48 8.8401 15.86 8.1701C15.25 7.5201 14.58 7.1401 14.02 7.1401C13.59 7.1401 13.25 6.7901 13.25 6.3701C13.25 5.9501 13.6 5.6001 14.02 5.6001C15.02 5.6001 16.07 6.1401 16.99 7.1101C17.85 8.0201 18.4 9.1501 18.4 9.9701C18.4 10.4001 18.05 10.7501 17.62 10.7501Z"
+                  fill="white" />
+                <path
+                  d="M21.23 10.75C20.8 10.75 20.46 10.4 20.46 9.98C20.46 6.43 17.57 3.55 14.03 3.55C13.6 3.55 13.26 3.2 13.26 2.78C13.26 2.36 13.6 2 14.02 2C18.42 2 22 5.58 22 9.98C22 10.4 21.65 10.75 21.23 10.75Z"
+                  fill="white" />
+                <path
+                  d="M11.05 14.95L9.2 16.8C8.81 17.19 8.19 17.19 7.79 16.81C7.68 16.7 7.57 16.6 7.46 16.49C6.43 15.45 5.5 14.36 4.67 13.22C3.85 12.08 3.19 10.94 2.71 9.81C2.24 8.67 2 7.58 2 6.54C2 5.86 2.12 5.21 2.36 4.61C2.6 4 2.98 3.44 3.51 2.94C4.15 2.31 4.85 2 5.59 2C5.87 2 6.15 2.06 6.4 2.18C6.66 2.3 6.89 2.48 7.07 2.74L9.39 6.01C9.57 6.26 9.7 6.49 9.79 6.71C9.88 6.92 9.93 7.13 9.93 7.32C9.93 7.56 9.86 7.8 9.72 8.03C9.59 8.26 9.4 8.5 9.16 8.74L8.4 9.53C8.29 9.64 8.24 9.77 8.24 9.93C8.24 10.01 8.25 10.08 8.27 10.16C8.3 10.24 8.33 10.3 8.35 10.36C8.53 10.69 8.84 11.12 9.28 11.64C9.73 12.16 10.21 12.69 10.73 13.22C10.83 13.32 10.94 13.42 11.04 13.52C11.44 13.91 11.45 14.55 11.05 14.95Z"
+                  fill="white" />
+                <path
+                  d="M21.9701 18.33C21.9701 18.61 21.9201 18.9 21.8201 19.18C21.7901 19.26 21.7601 19.34 21.7201 19.42C21.5501 19.78 21.3301 20.12 21.0401 20.44C20.5501 20.98 20.0101 21.37 19.4001 21.62C19.3901 21.62 19.3801 21.63 19.3701 21.63C18.7801 21.87 18.1401 22 17.4501 22C16.4301 22 15.3401 21.76 14.1901 21.27C13.0401 20.78 11.8901 20.12 10.7501 19.29C10.3601 19 9.9701 18.71 9.6001 18.4L12.8701 15.13C13.1501 15.34 13.4001 15.5 13.6101 15.61C13.6601 15.63 13.7201 15.66 13.7901 15.69C13.8701 15.72 13.9501 15.73 14.0401 15.73C14.2101 15.73 14.3401 15.67 14.4501 15.56L15.2101 14.81C15.4601 14.56 15.7001 14.37 15.9301 14.25C16.1601 14.11 16.3901 14.04 16.6401 14.04C16.8301 14.04 17.0301 14.08 17.2501 14.17C17.4701 14.26 17.7001 14.39 17.9501 14.56L21.2601 16.91C21.5201 17.09 21.7001 17.3 21.8101 17.55C21.9101 17.8 21.9701 18.05 21.9701 18.33Z"
+                  fill="white" />
+              </svg>
+              <p>میزبان شوید</p>
+            </a>
+            <a class="flex items-center gap-[18px] text-white text-lg font-semibold mt-5">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M17 3.5H7C4 3.5 2 5 2 8.5V15.5C2 19 4 20.5 7 20.5H17C20 20.5 22 19 22 15.5V8.5C22 5 20 3.5 17 3.5ZM17.47 9.59L14.34 12.09C13.68 12.62 12.84 12.88 12 12.88C11.16 12.88 10.31 12.62 9.66 12.09L6.53 9.59C6.21 9.33 6.16 8.85 6.41 8.53C6.67 8.21 7.14 8.15 7.46 8.41L10.59 10.91C11.35 11.52 12.64 11.52 13.4 10.91L16.53 8.41C16.85 8.15 17.33 8.2 17.58 8.53C17.84 8.85 17.79 9.33 17.47 9.59Z"
+                  fill="white" />
+              </svg>
+              <p>info@gmail.com</p>
+            </a>
+          </div>
+          <div class="flex gap-[26px]">
+            <a><img alt="img" src="../img/Frame 68.png" class="w-[83px] h-[105px] rounded-[10px]"></a>
+            <a><img alt="img" src="../img/Frame 67.png" class="w-[83px] h-[105px] rounded-[10px]"></a>
+          </div>
         </div>
       </div>
       <a href="#" class="absolute rtl:left-[108px] ltr:right-[108px] bottom-0 group">
         <svg width="119" height="96" viewBox="0 0 119 96" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path class="group-hover:fill-secondary transition" d="M22.9296 33.6743L20.6732 71.0594C19.9404 83.2001 11.671 93.5765 0 97H119C106.06 93.6039 96.8193 82.206 96.172 68.8438L94.4888 34.0992C93.5638 15.0056 77.8137 0 58.6977 0C39.746 0 24.0714 14.7571 22.9296 33.6743Z" fill="#FF9704"/>
-          <path d="M66.92 40.0499L60.4 33.5299C59.63 32.7599 58.37 32.7599 57.6 33.5299L51.08 40.0499" stroke="white" stroke-width="2.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+          <path class="group-hover:fill-secondary transition"
+            d="M22.9296 33.6743L20.6732 71.0594C19.9404 83.2001 11.671 93.5765 0 97H119C106.06 93.6039 96.8193 82.206 96.172 68.8438L94.4888 34.0992C93.5638 15.0056 77.8137 0 58.6977 0C39.746 0 24.0714 14.7571 22.9296 33.6743Z"
+            fill="#FF9704" />
+          <path d="M66.92 40.0499L60.4 33.5299C59.63 32.7599 58.37 32.7599 57.6 33.5299L51.08 40.0499" stroke="white"
+            stroke-width="2.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
         </svg>
       </a>
     </div>
@@ -2638,6 +2728,9 @@
 
   <!-- Swiper JS -->
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
   <script src="../js/modal.js"></script>
   <script src="../js/script.js"></script>
   <script src="../js/vanilla-tilt.js"></script>
