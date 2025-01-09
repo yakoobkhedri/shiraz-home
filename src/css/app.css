@@ -333,6 +333,9 @@ input[type="number"] {
 .daterangepicker td.active, .daterangepicker td.active:hover {
   background-color: #ff9704;
 }
+.daterangepicker{
+  font-family: payda-Regular;
+}
 /* shadow */
 .shadow-1 {
   box-shadow: 0px 11px 28px 0px #8B8B8B1F;

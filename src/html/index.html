@@ -167,8 +167,8 @@
   <!-- header -->
   <header class="relative">
     <div class="max-w-content mx-auto px-4 ">
-      <div class="flex-between gap-3 py-3">
-        <ul class="font-medium flex items-center gap-8">
+      <div class="flex-between gap-3 py-3 text-xs sm:text-base">
+        <ul class="font-medium flex items-center sm:gap-8 gap-4">
           <li><a class="hover:text-primary">سوالات متداول</a></li>
           <li><a class="hover:text-primary">سوالات متداول</a></li>
         </ul>
@@ -351,14 +351,19 @@
     <!-- banner -->
     <section class="bg-dark pt-11 relative">
       <!-- shape && logo -->
-      <img alt="shape" src="../img/svg/Vector 88.svg" class="absolute inset-x-0 mx-auto top-0">
-      <img alt="logo" src="../img/IMAGE 1403-10-08 22_36_07 1 1.png" class="absolute inset-x-0 mx-auto -top-3">
+      <img alt="shape" src="../img/svg/Vector 88.svg" class="absolute inset-x-0 w-44 sm:w-auto mx-auto top-0">
+      <img alt="logo" src="../img/IMAGE 1403-10-08 22_36_07 1 1.png" class="absolute inset-x-0 w-24 sm:w-auto mx-auto top-0 sm:-top-3">
       <img alt="shape" src="../img/svg/Vector 90.svg" class="absolute inset-x-0 w-full -bottom-1">
       <!--  -->
       <div class="max-w-content mx-auto px-4">
         <div class="flex items-center justify-between gap-3">
-          <div class="lg:hidden cursor-pointer" id="hamIcon">
-            |||
+          <div class="lg:hidden cursor-pointer group" id="hamIcon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path class="transition group-hover:stroke-primary" d="M12 4.5H21" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              <path class="transition group-hover:stroke-primary" d="M12 9.5H21" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              <path class="transition group-hover:stroke-primary" d="M3 14.5H21" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              <path class="transition group-hover:stroke-primary" d="M3 19.5H21" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
           </div>
           <ul class="text-sm hidden font-bold lg:flex items-center gap-12">
             <li><a class="text-white transition hover:text-primary">صفحه اصلی</a></li>
@@ -466,19 +471,19 @@
             <li><a class="text-white transition hover:text-primary">میزبان شوید</a></li>
           </ul>
           <a
-            class="rounded-[10px] bg-primary hover:bg-[#160C59] flex-center text-white font-medium gap-2 py-[10px] px-[18px]">
+            class="rounded-[10px] bg-primary hover:bg-[#160C59] text-xs sm:text-base flex-center text-white font-medium gap-2 py-[10px] px-[18px]">
             <img src="../img/svg/frame.svg">
             <p>ثبت نام/ورود</p>
           </a>
         </div>
         <div class="mt-7 grid grid-cols-12 gap-5">
-          <div class="col-span-8">
+          <div class="md:col-span-8 col-span-12">
             <div class="relative">
               <div class="swiper banner relative">
                 <div class="swiper-wrapper">
                   <div class="swiper-slide">
                     <div class="relative gradient-after overflow-hidden rounded-[20px]">
-                      <img alt="banner" src="../img/image(2).png" class="rounded-[20px] w-full h-[392px]">
+                      <img alt="banner" src="../img/image(2).png" class="rounded-[20px] w-full h-[204px] min-[450px]:h-[392px]">
                       <div class="absolute flex gap-3 bottom-5 rtl:right-5 ltr:left-5 z-10">
                         <span class="block bg-white w-[78px] h-[1px] mt-5"></span>
                         <div class="text-[32px] text-white">
@@ -492,7 +497,7 @@
                   </div>
                   <div class="swiper-slide">
                     <div class="relative gradient-after overflow-hidden rounded-[20px]">
-                      <img alt="banner" src="../img/image (7).png" class="rounded-[20px] w-full h-[392px]">
+                      <img alt="banner" src="../img/image (7).png" class="rounded-[20px] w-full h-[204px] min-[450px]:h-[392px]">
                       <div class="absolute flex gap-3 bottom-5 rtl:right-5 ltr:left-5 z-10">
                         <span class="block bg-white w-[78px] h-[1px] mt-5"></span>
                         <div class="text-[32px] text-white">
@@ -507,30 +512,32 @@
                 </div>
                 <div class="swiper-pagination z-20"></div>
                 <!-- shape -->
-                <img alt="shape" src="../img/svg/Vector 89.svg" class="absolute inset-x-0 mx-auto z-10 bottom-0">
+                <svg class="absolute inset-x-0 mx-auto z-10 bottom-0" width="174" height="27" viewBox="0 0 174 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path class="md:fill-white fill-dark" d="M12.6245 26.3688L0 27H173.369C168.312 27 163.442 25.084 159.741 21.6379L142.547 5.63023C138.661 2.01175 133.548 0 128.237 0H55.8556C50.4897 0 45.3274 2.05402 41.4284 5.74042L25.366 20.9267C21.9029 24.2009 17.3844 26.1308 12.6245 26.3688Z" fill="white"/>
+                </svg>
               </div>
             </div>
           </div>
-          <div class="col-span-4">
+          <div class="md:col-span-4 col-span-12">
             <form class="bg-white rounded-[20px] px-5 py-6 shadow-1 z-2 relative">
               <div class="flex items-center gap-3">
                 <img alt="icon" src="../img/svg/filter.svg">
                 <img alt="icon" src="../img/svg/Group 24.svg">
-                <p class="font-semibold text-lg">فیلترها</p>
+                <p class="font-semibold sm:text-lg">فیلترها</p>
               </div>
-              <select class="mt-8 rounded-[10px] h-14 bg-gray font-medium p-4 w-full">
+              <select class="mt-8 text-sm sm:text-base rounded-[10px] h-14 bg-gray font-medium p-4 w-full">
                 <option>نوع اقامتگاه</option>
                 <option>نوع اقامتگاه</option>
               </select>
-              <div class="mt-5 rounded-[10px] h-14 bg-gray font-medium p-4 w-full">
-                <input type="text" class="date border-0 outline-none bg-transparent" name="daterange"
+              <div class="mt-5 rounded-[10px] h-14 bg-gray font-medium p-4 w-full text-sm sm:text-base">
+                <input id="dateInput" type="text" class="date border-0 outline-none bg-transparent"
                 value="تاریخ ورود    |    تاریخ خروج" />
               </div>
-              <select class="mt-5 rounded-[10px] h-14 bg-gray font-medium p-4 w-full">
+              <select class="mt-5 text-sm sm:text-base rounded-[10px] h-14 bg-gray font-medium p-4 w-full">
                 <option>ظرفیت</option>
                 <option>ظرفیت</option>
               </select>
-              <button class="bg-primary rounded-[10px] text-white btnHover h-14 w-full mt-6 flex-center font-bold">
+              <button class="bg-primary rounded-[10px] text-white btnHover h-14 w-full text-sm sm:text-base mt-6 flex-center font-bold">
                 جست و جو
               </button>
             </form>
@@ -541,14 +548,14 @@
     </section>
 
     <!-- category -->
-    <section class="mt-[62px]">
-      <div class="max-w-content mx-auto px-4">
+    <section class="sm:mt-[62px]">
+      <div class="max-w-content mx-auto sm:px-4">
         <div class="swiper category px-4 py-6">
           <div class="swiper-wrapper">
             <div class="swiper-slide">
               <a
-                class="flex items-center gap-8 overflow-hidden group shadow-1 shadow-hover rounded-[26px] pt-[34px] pb-[47px] rtl:pr-5 rtl:pl-2 ltr:pl-5 ltr:pr-2 relative font-semibold text-xl">
-                <img alt="img" src="../img/Group 12.png">
+                class="flex sm:items-center items-end sm:gap-8 gap-4 overflow-hidden group shadow-1 shadow-hover rounded-[26px] pt-[34px] pb-[47px] rtl:pr-4 rtl:sm:pr-5 rtl:pl-2 ltr:sm:pl-5 ltr:pl-4 ltr:pr-2 relative font-semibold text-sm sm:text-xl">
+                <img alt="img" src="../img/Group 12.png" class="w-9 sm:w-auto">
                 <p>اقتصادی</p>
                 <!-- shape -->
                 <svg class="absolute rtl:left-[22px] ltr:right-[22px] z-10 -bottom-[1px]" width="70" height="18"
@@ -566,8 +573,8 @@
             </div>
             <div class="swiper-slide">
               <a
-                class="flex items-center gap-8 overflow-hidden group shadow-1 shadow-hover rounded-[26px] pt-[34px] pb-[47px] rtl:pr-5 rtl:pl-2 ltr:pl-5 ltr:pr-2 relative font-semibold text-xl">
-                <img alt="img" src="../img/Group 13.png">
+                class="flex sm:items-center items-end sm:gap-8 gap-4 overflow-hidden group shadow-1 shadow-hover rounded-[26px] pt-[34px] pb-[47px] rtl:pr-4 rtl:sm:pr-5 rtl:pl-2 ltr:sm:pl-5 ltr:pl-4 ltr:pr-2 relative font-semibold text-sm sm:text-xl">
+                <img alt="img" src="../img/Group 13.png" class="w-9 sm:w-auto">
                 <p>استاندارد</p>
                 <!-- shape -->
                 <svg class="absolute rtl:left-[22px] ltr:right-[22px] z-10 -bottom-[1px]" width="70" height="18"
@@ -585,8 +592,8 @@
             </div>
             <div class="swiper-slide">
               <a
-                class="flex items-center gap-8 overflow-hidden group shadow-1 shadow-hover rounded-[26px] pt-[34px] pb-[47px] rtl:pr-5 rtl:pl-2 ltr:pl-5 ltr:pr-2 relative font-semibold text-xl">
-                <img alt="img" src="../img/Group 14.png">
+                class="flex sm:items-center items-end sm:gap-8 gap-4 overflow-hidden group shadow-1 shadow-hover rounded-[26px] pt-[34px] pb-[47px] rtl:pr-4 rtl:sm:pr-5 rtl:pl-2 ltr:sm:pl-5 ltr:pl-4 ltr:pr-2 relative font-semibold text-sm sm:text-xl">
+                <img alt="img" src="../img/Group 14.png" class="w-9 sm:w-auto">
                 <p>لوکس</p>
                 <!-- shape -->
                 <svg class="absolute rtl:left-[22px] ltr:right-[22px] z-10 -bottom-[1px]" width="70" height="18"
@@ -604,8 +611,8 @@
             </div>
             <div class="swiper-slide">
               <a
-                class="flex items-center gap-8 overflow-hidden group shadow-1 shadow-hover rounded-[26px] pt-[34px] pb-[47px] rtl:pr-5 rtl:pl-2 ltr:pl-5 ltr:pr-2 relative font-semibold text-xl">
-                <img alt="img" src="../img/Group 15.png">
+                class="flex sm:items-center items-end sm:gap-8 gap-4 overflow-hidden group shadow-1 shadow-hover rounded-[26px] pt-[34px] pb-[47px] rtl:pr-4 rtl:sm:pr-5 rtl:pl-2 ltr:sm:pl-5 ltr:pl-4 ltr:pr-2 relative font-semibold text-sm sm:text-xl">
+                <img alt="img" src="../img/Group 15.png" class="w-9 sm:w-auto">
                 <p>تاپ لوکیشن</p>
                 <!-- shape -->
                 <svg class="absolute rtl:left-[22px] ltr:right-[22px] z-10 -bottom-[1px]" width="70" height="18"
@@ -623,8 +630,8 @@
             </div>
             <div class="swiper-slide">
               <a
-                class="flex items-center gap-8 overflow-hidden group shadow-1 shadow-hover rounded-[26px] pt-[34px] pb-[47px] rtl:pr-5 rtl:pl-2 ltr:pl-5 ltr:pr-2 relative font-semibold text-xl">
-                <img alt="img" src="../img/Group 16.png">
+                class="flex sm:items-center items-end sm:gap-8 gap-4 overflow-hidden group shadow-1 shadow-hover rounded-[26px] pt-[34px] pb-[47px] rtl:pr-4 rtl:sm:pr-5 rtl:pl-2 ltr:sm:pl-5 ltr:pl-4 ltr:pr-2 relative font-semibold text-sm sm:text-xl">
+                <img alt="img" src="../img/Group 16.png" class="w-9 sm:w-auto">
                 <p>لحظه آخری</p>
                 <!-- shape -->
                 <svg class="absolute rtl:left-[22px] ltr:right-[22px] z-10 -bottom-[1px]" width="70" height="18"
@@ -1674,7 +1681,7 @@
               <div
                 class="rounded-[20px] bg-primary pt-[52px] rtl:pl-20 ltr:pr-20 relative rtl:right-4 ltr:left-4 -top-4">
                 <img alt="shape" src="../img/Vector 98@3x.png"
-                  class="absolute top-0 rtl:left-0 ltr:right-0 ltr:[transform:rotateY(180deg)] w-[133px] h-[122px]">
+                  class="absolute top-0 rtl:left-0 ltr:-right-0.5 ltr:[transform:rotateY(180deg)] w-[133px] h-[122px]">
                 <a
                   class="flex-center w-[82px] h-[82px] bg-[#160C59] !absolute top-0 rtl:left-3 ltr:right-3 btnHover rounded-[20px] z-10">
                   <img alt="img" src="../img/svg/arrow-up.svg">
@@ -1766,10 +1773,9 @@
       <div class="rtl:pr-custom ltr:pl-custom">
         <div class="grid grid-cols-12 gap-6 rtl:pr-4 ltr:pl-4">
           <div class="col-span-3 relative">
-            <div class="bg-white absolute w-[25px] h-10 z-10 rtl:left-0 ltr:right-0"></div>
             <div class="rounded-[20px] bg-primary pt-[52px] overflow-hidden relative">
               <!-- shape -->
-              <img alt="img" src="../img/Vector 97.png" class="absolute top-0 bottom-0 rtl:left-0 ltr:right-0 h-[101%]">
+              <img alt="img" src="../img/Vector 97.png" class="absolute top-0 bottom-0 rtl:left-0 ltr:right-0 h-[101%] ltr:[transform:rotateY(180deg)]">
               <div class="block w-[29px] h-6 absolute my-auto inset-y-0 rtl:left-0 ltr:right-0">
                 <svg width="22" height="24" viewBox="0 0 22 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M8.05005 19.92L1.53005 13.4C0.760048 12.63 0.760048 11.37 1.53005 10.6L8.05005 4.08"

@@ -29,12 +29,13 @@ var banner = new Swiper(".banner", {
   }
 });
 var category = new Swiper(".category", {
-  slidesPerView: 1.5,
-  spaceBetween: 24,
+  slidesPerView: 2.2,
+  spaceBetween: 12,
   // autoplay: true,
   breakpoints: {
     576: {
-      slidesPerView: 2,
+      slidesPerView: 2.6,
+      spaceBetween: 24,
     },
     768: {
       slidesPerView: 3,
@@ -177,44 +178,43 @@ acordionBtn2.forEach((item) => {
 
 // datapicker
 
-jQuery(function () {
-  $('.date').daterangepicker({
-      "locale": {
-          "format": "MM/DD/YYYY",
-          "separator": " - ",
-          "applyLabel": "اجرا",
-          "cancelLabel": "کنسل",
-          "fromLabel": "از",
-          "toLabel": "تا",
-          "customRangeLabel": "Custom",
-          "weekLabel": "W",
-          "daysOfWeek": [
-              "Su",
-              "Mo",
-              "Tu",
-              "We",
-              "Th",
-              "Fr",
-              "Sa"
-          ],
-          "monthNames": [
-              "January",
-              "February",
-              "March",
-              "April",
-              "May",
-              "June",
-              "July",
-              "August",
-              "September",
-              "October",
-              "November",
-              "December"
-          ],
-          "firstDay": 1
-      }, "startDate": "06/01/2023",
-      "endDate": "06/07/2023"
-  }, function (start, end, label) {
-      console.log('New date range selected: ' + start.format('YYYY-MM-DD') + ' to ' + end.format('YYYY-MM-DD') + ' (predefined range: ' + label + ')');
-  });
-});
+const Jmoment = moment().locale('fa');
+    $('#dateInput').daterangepicker({
+        autoApply: true,
+        alwaysShowCalendars: true,
+        minDate: new Date(),
+        persian: {
+            enable: true,
+            persianDigits: true,
+        },
+        locale: {
+            direction: 'rtl',
+            firstDay: 0,
+            format: 'YYYY-MM-DD',
+            applyLabel: 'اعمال',
+            cancelLabel: 'لغو',
+            monthNames: [
+                "فروردین",
+                "اردیبهشت",
+                "خرداد",
+                "تیر",
+                "مرداد",
+                "شهریور",
+                "مهر",
+                "آبان",
+                "آذر",
+                "دی",
+                "بهمن",
+                "اسفند"
+            ],
+            daysOfWeek: [
+                'ش',
+                'ی',
+                'د',
+                'س',
+                'چ',
+                'پ',
+                'ج',
+            ],
+        }
+    });
