@@ -49,12 +49,13 @@ var category = new Swiper(".category", {
   },
 });
 var homes = new Swiper(".homes", {
-  slidesPerView: 1,
-  spaceBetween: 24,
+  slidesPerView: 1.3,
+  spaceBetween: 16,
   autoplay: true,
   breakpoints: {
     576: {
-      slidesPerView: 2,
+      slidesPerView: 1.7,
+      spaceBetween: 24,
     },
     992: {
       slidesPerView: 3,
