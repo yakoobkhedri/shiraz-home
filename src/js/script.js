@@ -89,6 +89,29 @@ var homes2 = new Swiper(".homes2", {
     prevEl: ".swiper-button-prev",
   },
 });
+var homes3 = new Swiper(".homes3", {
+  slidesPerView: 1.3,
+  spaceBetween: 24,
+  autoplay: true,
+  breakpoints: {
+    576: {
+      slidesPerView: 2,
+    },
+    992: {
+      slidesPerView: 2,
+    },
+    1300: {
+      slidesPerView: 3,
+    },
+    1400: {
+      slidesPerView: 3.3,
+    }
+  },
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+});
 // select size
 
 let size = Array.from(document.getElementsByClassName('size'));
