@@ -3388,6 +3388,10 @@ input[type="number"] {
     height: 82px;
   }
 
+  .sm\:h-\[66px\] {
+    height: 66px;
+  }
+
   .sm\:w-7 {
     width: 1.75rem;
   }
@@ -3412,6 +3416,10 @@ input[type="number"] {
     width: 82px;
   }
 
+  .sm\:w-\[66px\] {
+    width: 66px;
+  }
+
   .sm\:flex-col {
     flex-direction: column;
   }
@@ -3434,6 +3442,10 @@ input[type="number"] {
 
   .sm\:gap-0 {
     gap: 0px;
+  }
+
+  .sm\:gap-5 {
+    gap: 1.25rem;
   }
 
   .sm\:gap-y-6 {
@@ -3638,6 +3650,10 @@ input[type="number"] {
     width: auto;
   }
 
+  .md\:grid-cols-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
   .md\:flex-row {
     flex-direction: row;
   }
@@ -3763,6 +3779,10 @@ input[type="number"] {
   .lg\:rotate-0 {
     --tw-rotate: 0deg;
     transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  }
+
+  .lg\:grid-cols-4 {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
   }
 
   .lg\:flex-row {
