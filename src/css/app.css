@@ -369,6 +369,19 @@ input[type="number"] {
 .swiper-button-next::after,.swiper-button-prev::after {
   content: none!important;;
 }
-@media only screen and (max-width: 576px) {
- 
+/* swiper effect */
+.data_imagesContBottomTop {
+  transform: translate(0, 450px);
+}
+.banner .swiper-slide-active div.data_imagesContBottomTop {
+  transform: translate(0, 0);
+}
+@media only screen and (max-width: 768px) {
+  .banner .swiper-pagination-bullet{
+    width: 4px!important;
+    height: 4px!important;
+  }
+  .banner .swiper-pagination-bullet-active{
+    width: 14px!important;
+  }
 }
