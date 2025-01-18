@@ -3407,6 +3407,10 @@ input[type="number"] {
     margin-top: 130px;
   }
 
+  .sm\:mt-5 {
+    margin-top: 1.25rem;
+  }
+
   .sm\:block {
     display: block;
   }
@@ -3581,6 +3585,10 @@ input[type="number"] {
 
   .sm\:pt-\[52px\] {
     padding-top: 52px;
+  }
+
+  .sm\:pb-0 {
+    padding-bottom: 0px;
   }
 
   .sm\:text-2xl {
