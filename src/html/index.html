@@ -1783,17 +1783,19 @@
     </section>
 
     <!-- top homes -->
-    <section class="mt-32 relative">
+    <section class="sm:mt-32 mt-8 relative">
       <!-- shape -->
       <img alt="shape" src="../img/moon.png"
-        class="absolute rtl:right-0 ltr:left-0 ltr:[transform:rotateY(180deg)] -top-20">
+        class="absolute rtl:right-0 ltr:left-0 ltr:[transform:rotateY(180deg)] top-72 sm:-top-20 w-[103px] sm:w-auto">
       <div class="rtl:pr-custom ltr:pl-custom">
-        <div class="grid grid-cols-12 gap-6 rtl:pr-4 ltr:pl-4">
-          <div class="lg:col-span-3 col-span-12 relative">
-            <div class="rounded-[20px] bg-primary pt-[52px] overflow-hidden relative">
+        <div class="grid grid-cols-12 sm:gap-6 gap-2">
+          <div class="lg:col-span-3 col-span-12 relative px-4 rtl:lg:pl-0 ltr:lg:pr-0">
+            <div class="rounded-[20px] bg-primary pt-4 sm:pt-[52px] overflow-hidden relative">
               <!-- shape -->
               <img alt="img" src="../img/Vector 97.png"
-                class="absolute -rotate-90 lg:rotate-0 w-full lg:w-auto top-0 bottom-0 rtl:left-0 ltr:right-0 h-[101%] ltr:[transform:rotateY(180deg)]">
+                class="absolute hidden lg:block w-[54px] top-0 bottom-0 rtl:left-0 ltr:right-0 h-[101%] ltr:[transform:rotateY(180deg)]">
+                <img alt="img" src="../img/Vector 112.png"
+                class="absolute lg:hidden w-full top-auto bottom-0 inset-x-0 h-[38px]">
               <div class="block w-[29px] h-6 absolute my-auto inset-y-0 rtl:left-0 ltr:right-0">
                 <svg width="22" height="24" viewBox="0 0 22 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M8.05005 19.92L1.53005 13.4C0.760048 12.63 0.760048 11.37 1.53005 10.6L8.05005 4.08"
@@ -1807,10 +1809,10 @@
               <div class="flex gap-2 px-[14px] lg:rtl:pl-11 lg:ltr:pr-11">
                 <span class="bg-white w-8 h-1 block mt-4"></span>
                 <div class="text-white">
-                  <h4 class="text-[28px] font-bold">خانه های</h4>
-                  <h2 class="text-[35px] font-black">تاپ لوکیشن</h2>
+                  <h4 class="sm:text-[28px] text-xl font-bold">خانه های</h4>
+                  <h2 class="sm:text-[35px] text-[28px] font-black">تاپ لوکیشن</h2>
                   <a
-                    class="flex items-center gap-1 cursor-pointer relative z-2 group hover:text-secondary mt-5 font-medium text-white">
+                    class="flex items-center gap-1 text-xs sm:text-base cursor-pointer relative z-2 group hover:text-secondary mt-5 font-medium text-white">
                     <p>مشاهده همه</p>
                     <svg class="ltr:[transform:rotateY(180deg)]" width="18" height="18" viewBox="0 0 18 18" fill="none"
                       xmlns="http://www.w3.org/2000/svg">
@@ -1823,7 +1825,7 @@
                   </a>
                 </div>
               </div>
-              <div class="relative p-10 pb-3 rtl:pr-0 ltr:pl-0">
+              <div class="relative pt-4 sm:pt-10 p-10 pb-3 rtl:pr-0 ltr:pl-0">
                 <img alt="img" src="../img/Ellipse 17.png"
                   class="absolute rtl:-right-[63px] ltr:-left-[63px] -bottom-[17px]">
                 <img alt="img" src="../img/30e2d840-07a2-4aa0-a1c9-b7c304ef96bd 1.png" class="relative">
@@ -2408,10 +2410,12 @@
     </section>
 
     <!-- testimonials -->
-    <section class="mt-[130px] py-5 bg-[#FF970433] relative">
+    <section class="mt-[130px] py-12 bg-[#FF970433] relative">
       <!-- shape -->
       <img alt="shape" src="../img/Group 87.png"
         class="absolute my-auto bottom-0 rtl:left-0 ltr:right-0 ltr:[transform:rotateY(180deg)]">
+       <img alt="shape" src="../img/Vector 107.png" class="absolute -top-0.5 inset-x-0 w-full">
+       <img alt="shape" src="../img/Vector 106.png" class="absolute -bottom-6 inset-x-0 w-full">
       <div class="max-w-content mx-auto px-4 relative">
         <div class="grid grid-cols-12 xl:gap-[99px] lg:gap-14 gap-y-[18px] items-center">
           <div class="lg:col-span-6 col-span-12 order-last lg:order-first">
@@ -2460,7 +2464,7 @@
             </div>
           </div>
           <div class="lg:col-span-6 col-span-12">
-            <div class="lg:flex gap-[54px]">
+            <div class="lg:flex items-center gap-[54px]">
               <div class="mt-11">
                 <h2 class="font-bold leading-6 text-[28px] sm:text-[40px] text-center">نظرات</h2>
                 <div class="relative mt-2 sm:mt-4 w-[120px] mx-auto">
@@ -2471,17 +2475,8 @@
                 <img alt="img" src="../img/Group 97.png" class="mt-8 mx-auto hidden lg:block">
               </div>
               <div class="text-dark mt-5 lg:mt-0 text-justify text-xs sm:text-lg font-medium leading-[16px] sm:leading-6">
-                <p class="mb-3">
-                  لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها و
-                  متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و
-                  کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد کتابهای زیادی در شصت و سه درصد گذشته حال و آینده
-                  شناخت فراوان جامعه و متخصصان را می طلبد تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی
-                  الخصوص طراحان خلاقی و فرهنگ پیشرو در زبان فارسی ایجاد کرد
-                </p>
                 <p>
-                  لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها و
-                  متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و
-                  کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد
+                  لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد
                 </p>
               </div>
             </div>
