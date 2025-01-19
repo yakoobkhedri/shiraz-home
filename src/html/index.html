@@ -5,7 +5,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0 maximum-scale=1" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+  <link rel="stylesheet" type="text/css" href="../persian-daterangepicker-main/dateragepicker.css" />
   <link href="../../dist/output.css" rel="stylesheet">
   <title>صفحه اصلی</title>
 </head>
@@ -197,10 +197,13 @@
     </div>
     <!-- mobile menu -->
     <div
-      class="rounded-3xl shadow-lg p-[22px] pt-8 mobileMenu absolute lg:hidden bg-white -mt-2 z-40 text-[#ff9704] text-sm font-bold inset-x-4">
-      <div class="flex items-center justify-between pb-5 border-b border-[#F4F4F4] mb-6">
+      class="sm:rounded-3xl rounded-xl shadow-lg p-[22px] pt-8 mobileMenu absolute lg:hidden bg-white -mt-2 z-40 text-[#ff9704] text-sm font-bold inset-x-4">
+      <!-- shape -->
+      <div class="w-9 h-9 rounded-[10px] bg-white absolute rotate-45 rtl:right-8 ltr:left-8 -top-2"></div>
+      <!--  -->
+      <div class="flex items-center justify-between pb-5 border-b border-[#F4F4F4] mb-2">
         <!-- logo -->
-        <a href="index.html"><img alt="logo" src="../img/Logo 1.png" class="w-[83px] min-[400px]:w-[129px] block"></a>
+        <a href="index.html"><img alt="logo" src="../img/IMAGE 1403-10-08 22_36_07 1 1.png" class="w-[83px] min-[400px]:w-[129px] block"></a>
         <!-- close menu -->
         <svg class="cursor-pointer" id="closemenu" width="24" height="24" viewBox="0 0 24 24" fill="none"
           xmlns="http://www.w3.org/2000/svg">
@@ -212,16 +215,14 @@
       <!-- menu -->
       <ul class="font-semibold">
         <li>
-          <a class="py-3 flex items-center gap-2 text-[#4A4A4A] hover:text-[#7E5EFF] transition">
-            <img alt="icon" src="../img/svg/home-2.svg" class="flex-shrink-0">
+          <a class="py-3 flex items-center gap-2 text-[#4A4A4A] hover:text-primary transition">
             <p>صفحه اصلی</p>
           </a>
         </li>
         <li>
           <div class="py-3 cursor-pointer group flex items-center justify-between" id="dropdownBtn">
-            <div class="flex items-center gap-2 text-[#4A4A4A] group-hover:text-[#7E5EFF] transition">
-              <img alt="icon" src="../img/svg/element-4.svg" class="flex-shrink-0">
-              <p>دسته بندی محصولات</p>
+            <div class="flex items-center gap-2 text-[#4A4A4A] group-hover:text-primary transition">
+              <p>اقامتگاه ها</p>
             </div>
             <svg class="rotate-180 transition-all" xmlns="http://www.w3.org/2000/svg" width="12" height="7"
               viewBox="0 0 12 7" fill="none">
@@ -229,116 +230,42 @@
             </svg>
           </div>
           <div class="font-semibold text-[#363636] dropdownContent">
-            <ul class="mt-3">
+            <ul>
               <li>
-                <a
-                  class="rounded-[20px] hover:text-[#7E5EFF] transition bg-[#F7F5FF] mb-[14px] py-2 px-[14px] flex items-center justify-between gap-2 relative">
-                  <div class="flex items-center gap-4">
-                    <div class="w-14 h-12 flex-center flex-shrink-0">
-                      <img alt="img" src="../img/63913151a17c1 1.png" class="w-14">
-                    </div>
-                    <p>تلویزیون</p>
+                <a class="hover:text-primary transition last:mb-0 mb-[18px] py-2 flex items-center justify-between relative">
+                  <div class="flex items-center gap-3">
+                      <img alt="img" src="../img/svg/Ellipse 10.svg" class="flex-shrink-0">
+                    <p class="font-semibold">اقامتگاه 1</p>
                   </div>
-                  <img alt="icon" src="../img/svg/arrow-down.svg" class="flex-shrink-0 ltr:[transform:rotateY(180deg)]">
                 </a>
               </li>
               <li>
-                <a
-                  class="rounded-[20px] hover:text-[#7E5EFF] transition bg-[#F7F5FF] mb-[14px] py-2 px-[14px] flex items-center justify-between gap-2 relative">
-                  <div class="flex items-center gap-4">
-                    <div class="w-14 h-12 flex-center flex-shrink-0">
-                      <img alt="img" src="../img/63c8776ef1793 1.png" class="w-5">
-                    </div>
-                    <p>تلویزیون</p>
+                <a class="hover:text-primary transition last:mb-0 mb-[18px] py-2 flex items-center justify-between relative">
+                  <div class="flex items-center gap-3">
+                      <img alt="img" src="../img/svg/Ellipse 10.svg" class="flex-shrink-0">
+                    <p class="font-semibold">اقامتگاه 2</p>
                   </div>
-                  <img alt="icon" src="../img/svg/arrow-down.svg" class="flex-shrink-0 ltr:[transform:rotateY(180deg)]">
                 </a>
               </li>
               <li>
-                <a
-                  class="rounded-[20px] hover:text-[#7E5EFF] transition bg-[#F7F5FF] mb-[14px] py-2 px-[14px] flex items-center justify-between gap-2 relative">
-                  <div class="flex items-center gap-4">
-                    <div class="w-14 h-12 flex-center flex-shrink-0">
-                      <img alt="img" src="../img/5d0e8b5edcb0d 1.png" class="w-14">
-                    </div>
-                    <p>تلویزیون</p>
+                <a class="hover:text-primary transition last:mb-0 mb-[18px] py-2 flex items-center justify-between relative">
+                  <div class="flex items-center gap-3">
+                      <img alt="img" src="../img/svg/Ellipse 10.svg" class="flex-shrink-0">
+                    <p class="font-semibold">اقامتگاه 3</p>
                   </div>
-                  <img alt="icon" src="../img/svg/arrow-down.svg" class="flex-shrink-0 ltr:[transform:rotateY(180deg)]">
-                </a>
-              </li>
-              <li>
-                <a
-                  class="rounded-[20px] hover:text-[#7E5EFF] transition bg-[#F7F5FF] mb-[14px] py-2 px-[14px] flex items-center justify-between gap-2 relative">
-                  <div class="flex items-center gap-4">
-                    <div class="w-14 h-12 flex-center flex-shrink-0">
-                      <img alt="img" src="../img/5e6d71dfb93ab 1.png" class="w-14">
-                    </div>
-                    <p>تلویزیون</p>
-                  </div>
-                  <img alt="icon" src="../img/svg/arrow-down.svg" class="flex-shrink-0 ltr:[transform:rotateY(180deg)]">
-                </a>
-              </li>
-              <li>
-                <a
-                  class="rounded-[20px] hover:text-[#7E5EFF] transition bg-[#F7F5FF] mb-[14px] py-2 px-[14px] flex items-center justify-between gap-2 relative">
-                  <div class="flex items-center gap-4">
-                    <div class="w-14 h-12 flex-center flex-shrink-0">
-                      <img alt="img" src="../img/5dba1bfd8d566 1.png" class="w-14">
-                    </div>
-                    <p>تلویزیون</p>
-                  </div>
-                  <img alt="icon" src="../img/svg/arrow-down.svg" class="flex-shrink-0 ltr:[transform:rotateY(180deg)]">
-                </a>
-              </li>
-              <li>
-                <a
-                  class="rounded-[20px] hover:text-[#7E5EFF] transition bg-[#F7F5FF] mb-[14px] py-2 px-[14px] flex items-center justify-between gap-2 relative">
-                  <div class="flex items-center gap-4">
-                    <div class="w-14 h-12 flex-center flex-shrink-0">
-                      <img alt="img" src="../img/5e6d401ba0632 1.png" class="w-14">
-                    </div>
-                    <p>تلویزیون</p>
-                  </div>
-                  <img alt="icon" src="../img/svg/arrow-down.svg" class="flex-shrink-0 ltr:[transform:rotateY(180deg)]">
-                </a>
-              </li>
-              <li>
-                <a
-                  class="rounded-[20px] hover:text-[#7E5EFF] transition bg-[#F7F5FF] mb-[14px] py-2 px-[14px] flex items-center justify-between gap-2 relative">
-                  <div class="flex items-center gap-4">
-                    <div class="w-14 h-12 flex-center flex-shrink-0">
-                      <img alt="img" src="../img/64d126c81f626 1.png" class="w-14">
-                    </div>
-                    <p>تلویزیون</p>
-                  </div>
-                  <img alt="icon" src="../img/svg/arrow-down.svg" class="flex-shrink-0 ltr:[transform:rotateY(180deg)]">
                 </a>
               </li>
             </ul>
           </div>
         </li>
         <li>
-          <a class="py-3 flex items-center gap-2 text-[#4A4A4A] hover:text-[#7E5EFF] transition">
-            <img alt="icon" src="../img/svg/medal.svg" class="flex-shrink-0">
-            <p>گارانتی</p>
+          <a class="py-3 flex items-center gap-2 text-[#4A4A4A] hover:text-primary transition">
+            <p>پیشنهاد های ویژه</p>
           </a>
         </li>
         <li>
-          <a class="py-3 flex items-center gap-2 text-[#4A4A4A] hover:text-[#7E5EFF] transition">
-            <img alt="icon" src="../img/svg/document-text.svg" class="flex-shrink-0">
-            <p>وبلاگ </p>
-          </a>
-        </li>
-        <li>
-          <a class="py-3 flex items-center gap-2 text-[#4A4A4A] hover:text-[#7E5EFF] transition">
-            <img alt="icon" src="../img/svg/profile-2user.svg" class="flex-shrink-0">
-            <p>درباره ما</p>
-          </a>
-        </li>
-        <li>
-          <a class="py-3 flex items-center gap-2 text-[#4A4A4A] hover:text-[#7E5EFF] transition">
-            <img alt="icon" src="../img/svg/call.svg" class="flex-shrink-0">
-            <p>تماس با ما</p>
+          <a class="py-3 flex items-center gap-2 text-[#4A4A4A] hover:text-primary transition">
+            <p>میزبان شوید!</p>
           </a>
         </li>
       </ul>
@@ -384,89 +311,31 @@
                 </div>
                 <!-- dropdown -->
                 <div
-                  class="absolute z-20 group-hover:top-5 top-16 transition opacity-0 group-hover:opacity-100 invisible group-hover:visible">
-                  <div class="mt-14 bg-white min-w-[460px] rounded-[20px] p-6 shadow-lg relative">
+                  class="absolute z-20 group-hover:-top-3 top-16 transition opacity-0 group-hover:opacity-100 invisible group-hover:visible">
+                  <div class="mt-14 bg-white min-w-[460px] rounded-[20px] py-5 shadow-lg relative">
                     <!-- shape -->
                     <div class="w-9 h-9 rounded-[10px] bg-white absolute rotate-45 rtl:right-8 ltr:left-8 -top-2"></div>
-                    <img alt="shape" src="../img/svg/Pattern.svg"
-                      class="absolute top-0 rtl:left-0 ltr:right-0 ltr:[transform:rotateY(180deg)]">
                     <!--  -->
                     <a
-                      class="rounded-[20px] hover:text-[#7E5EFF] transition h-[82px] bg-[#F7F5FF] mb-[18px] py-2 px-4 flex items-center justify-between gap-2 relative">
+                      class="hover:text-primary transition last:mb-0 mb-[18px] py-2 px-4 flex items-center justify-between gap-1 relative">
                       <div class="flex items-center gap-4">
-                        <div class="w-20 flex-center flex-shrink-0">
-                          <img alt="img" src="../img/63913151a17c1 1.png" class="w-20">
-                        </div>
-                        <p class="font-semibold text-lg">تلویزیون</p>
+                          <img alt="img" src="../img/svg/Ellipse 10.svg" class="flex-shrink-0">
+                        <p class="font-semibold text-lg">اقامتگاه 1</p>
                       </div>
-                      <img alt="icon" src="../img/svg/arrow-down.svg"
-                        class="flex-shrink-0 ltr:[transform:rotateY(180deg)]">
                     </a>
                     <a
-                      class="rounded-[20px] hover:text-[#7E5EFF] transition h-[82px] bg-[#F7F5FF] mb-[18px] py-2 px-4 flex items-center justify-between gap-2 relative">
+                      class="hover:text-primary transition last:mb-0 mb-[18px] py-2 px-4 flex items-center justify-between gap-1 relative">
                       <div class="flex items-center gap-4">
-                        <div class="w-20 flex-center flex-shrink-0">
-                          <img alt="img" src="../img/63c8776ef1793 1.png" class="w-7">
-                        </div>
-                        <p class="font-semibold text-lg">تلویزیون</p>
+                          <img alt="img" src="../img/svg/Ellipse 10.svg" class="flex-shrink-0">
+                        <p class="font-semibold text-lg">اقامتگاه 1</p>
                       </div>
-                      <img alt="icon" src="../img/svg/arrow-down.svg"
-                        class="flex-shrink-0 ltr:[transform:rotateY(180deg)]">
                     </a>
                     <a
-                      class="rounded-[20px] hover:text-[#7E5EFF] transition h-[82px] bg-[#F7F5FF] mb-[18px] py-2 px-4 flex items-center justify-between gap-2 relative">
+                      class="hover:text-primary transition last:mb-0 mb-[18px] py-2 px-4 flex items-center justify-between gap-1 relative">
                       <div class="flex items-center gap-4">
-                        <div class="w-20 flex-center flex-shrink-0">
-                          <img alt="img" src="../img/5e6d401ba0632 1.png" class="w-20">
-                        </div>
-                        <p class="font-semibold text-lg">تلویزیون</p>
+                          <img alt="img" src="../img/svg/Ellipse 10.svg" class="flex-shrink-0">
+                        <p class="font-semibold text-lg">اقامتگاه 1</p>
                       </div>
-                      <img alt="icon" src="../img/svg/arrow-down.svg"
-                        class="flex-shrink-0 ltr:[transform:rotateY(180deg)]">
-                    </a>
-                    <a
-                      class="rounded-[20px] hover:text-[#7E5EFF] transition h-[82px] bg-[#F7F5FF] mb-[18px] py-2 px-4 flex items-center justify-between gap-2 relative">
-                      <div class="flex items-center gap-4">
-                        <div class="w-20 flex-center flex-shrink-0">
-                          <img alt="img" src="../img/64d126c81f626 1.png" class="w-20">
-                        </div>
-                        <p class="font-semibold text-lg">تلویزیون</p>
-                      </div>
-                      <img alt="icon" src="../img/svg/arrow-down.svg"
-                        class="flex-shrink-0 ltr:[transform:rotateY(180deg)]">
-                    </a>
-                    <a
-                      class="rounded-[20px] hover:text-[#7E5EFF] transition h-[82px] bg-[#F7F5FF] mb-[18px] py-2 px-4 flex items-center justify-between gap-2 relative">
-                      <div class="flex items-center gap-4">
-                        <div class="w-20 flex-center flex-shrink-0">
-                          <img alt="img" src="../img/5dba1bfd8d566 1.png" class="w-[75px]">
-                        </div>
-                        <p class="font-semibold text-lg">تلویزیون</p>
-                      </div>
-                      <img alt="icon" src="../img/svg/arrow-down.svg"
-                        class="flex-shrink-0 ltr:[transform:rotateY(180deg)]">
-                    </a>
-                    <a
-                      class="rounded-[20px] hover:text-[#7E5EFF] transition h-[82px] bg-[#F7F5FF] mb-[18px] py-2 px-4 flex items-center justify-between gap-2 relative">
-                      <div class="flex items-center gap-4">
-                        <div class="w-20 flex-center flex-shrink-0">
-                          <img alt="img" src="../img/5e6d71dfb93ab 1.png" class="w-[75px]">
-                        </div>
-                        <p class="font-semibold text-lg">تلویزیون</p>
-                      </div>
-                      <img alt="icon" src="../img/svg/arrow-down.svg"
-                        class="flex-shrink-0 ltr:[transform:rotateY(180deg)]">
-                    </a>
-                    <a
-                      class="rounded-[20px] hover:text-[#7E5EFF] transition h-[82px] bg-[#F7F5FF] py-2 px-4 flex items-center justify-between gap-2 relative">
-                      <div class="flex items-center gap-4">
-                        <div class="w-20 flex-center flex-shrink-0">
-                          <img alt="img" src="../img/5d0e8b5edcb0d 1.png" class="w-[68px]">
-                        </div>
-                        <p class="font-semibold text-lg">تلویزیون</p>
-                      </div>
-                      <img alt="icon" src="../img/svg/arrow-down.svg"
-                        class="flex-shrink-0 ltr:[transform:rotateY(180deg)]">
                     </a>
                   </div>
                 </div>
@@ -490,7 +359,8 @@
                     <div class="relative gradient-after overflow-hidden rounded-[20px]">
                       <img alt="banner" src="../img/image(2).png"
                         class="rounded-[20px] w-full h-[204px] min-[450px]:h-[392px]">
-                      <div class="data_imagesContBottomTop transition-all duration-500 absolute flex gap-3 bottom-7 rtl:right-1 rtl:sm:right-5 ltr:sm:left-5 ltr:left-1 z-10">
+                      <div
+                        class="data_imagesContBottomTop transition-all duration-500 absolute flex gap-3 bottom-7 rtl:right-1 rtl:sm:right-5 ltr:sm:left-5 ltr:left-1 z-10">
                         <span class="block bg-white w-5 sm:w-[78px] h-[1px] mt-5 flex-shrink-0"></span>
                         <div class="min-[450px]:text-[32px] text-2xl text-white">
                           <p class="font-black">خانه‌ای به گرمای شیراز، </p>
@@ -505,7 +375,8 @@
                     <div class="relative gradient-after overflow-hidden rounded-[20px]">
                       <img alt="banner" src="../img/image (7).png"
                         class="rounded-[20px] w-full h-[204px] min-[450px]:h-[392px]">
-                      <div class="data_imagesContBottomTop transition-all duration-500 absolute flex gap-3 bottom-7 rtl:right-1 rtl:sm:right-5 ltr:sm:left-5 ltr:left-1 z-10">
+                      <div
+                        class="data_imagesContBottomTop transition-all duration-500 absolute flex gap-3 bottom-7 rtl:right-1 rtl:sm:right-5 ltr:sm:left-5 ltr:left-1 z-10">
                         <span class="block bg-white w-5 sm:w-[78px] h-[1px] mt-5 flex-shrink-0"></span>
                         <div class="min-[450px]:text-[32px] text-2xl text-white">
                           <p class="font-black">خانه‌ای به گرمای شیراز، </p>
@@ -520,7 +391,8 @@
                     <div class="relative gradient-after overflow-hidden rounded-[20px]">
                       <img alt="banner" src="../img/image(2).png"
                         class="rounded-[20px] w-full h-[204px] min-[450px]:h-[392px]">
-                      <div class="data_imagesContBottomTop transition-all duration-500 absolute flex gap-3 bottom-7 rtl:right-1 rtl:sm:right-5 ltr:sm:left-5 ltr:left-1 z-10">
+                      <div
+                        class="data_imagesContBottomTop transition-all duration-500 absolute flex gap-3 bottom-7 rtl:right-1 rtl:sm:right-5 ltr:sm:left-5 ltr:left-1 z-10">
                         <span class="block bg-white w-5 sm:w-[78px] h-[1px] mt-5 flex-shrink-0"></span>
                         <div class="min-[450px]:text-[32px] text-2xl text-white">
                           <p class="font-black">خانه‌ای به گرمای شیراز، </p>
@@ -535,7 +407,8 @@
                     <div class="relative gradient-after overflow-hidden rounded-[20px]">
                       <img alt="banner" src="../img/image (7).png"
                         class="rounded-[20px] w-full h-[204px] min-[450px]:h-[392px]">
-                      <div class="data_imagesContBottomTop transition-all duration-500 absolute flex gap-3 bottom-7 rtl:right-1 rtl:sm:right-5 ltr:sm:left-5 ltr:left-1 z-10">
+                      <div
+                        class="data_imagesContBottomTop transition-all duration-500 absolute flex gap-3 bottom-7 rtl:right-1 rtl:sm:right-5 ltr:sm:left-5 ltr:left-1 z-10">
                         <span class="block bg-white w-5 sm:w-[78px] h-[1px] mt-5 flex-shrink-0"></span>
                         <div class="min-[450px]:text-[32px] text-2xl text-white">
                           <p class="font-black">خانه‌ای به گرمای شیراز، </p>
@@ -549,8 +422,8 @@
                 </div>
                 <div class="swiper-pagination z-20"></div>
                 <!-- shape -->
-                <svg class="absolute inset-x-0 mx-auto z-10 w-[106px] sm:w-auto -bottom-[5px] sm:-bottom-[1px]" width="174" height="27" viewBox="0 0 174 27"
-                  fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg class="absolute inset-x-0 mx-auto z-10 w-[106px] sm:w-auto -bottom-[6px] sm:-bottom-[1px]"
+                  width="174" height="27" viewBox="0 0 174 27" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path class="md:fill-white fill-dark"
                     d="M12.6245 26.3688L0 27H173.369C168.312 27 163.442 25.084 159.741 21.6379L142.547 5.63023C138.661 2.01175 133.548 0 128.237 0H55.8556C50.4897 0 45.3274 2.05402 41.4284 5.74042L25.366 20.9267C21.9029 24.2009 17.3844 26.1308 12.6245 26.3688Z"
                     fill="white" />
@@ -570,7 +443,7 @@
                 <option>نوع اقامتگاه</option>
               </select>
               <div class="mt-5 rounded-[10px] h-14 bg-gray font-medium p-4 w-full text-sm sm:text-base">
-                <input id="dateInput" type="text" class="date border-0 outline-none bg-transparent"
+                <input id="daterangepicker" type="text" class="border-0 outline-none bg-transparent"
                   value="تاریخ ورود    |    تاریخ خروج" />
               </div>
               <select class="mt-5 text-sm sm:text-base rounded-[10px] h-14 bg-gray font-medium p-4 w-full">
@@ -697,8 +570,8 @@
     <section class="sm:pt-8 pt-9 pb-5 sm:pb-0 bg-gradient relative mt-1 sm:mt-12">
       <!-- shape -->
       <img alt="shape" src="../img/svg/Vector 92.svg" class="w-[120px] sm:w-auto absolute inset-x-0 -top-0.5 mx-auto">
-      <a class="animate-bounce absolute inset-x-0 z-2 -top-2 mx-auto flex-center w-5 sm:w-[41px]">
-        <svg class="w-5 sm:w-[41px]" width="41" height="60" viewBox="0 0 41 60" fill="none"
+      <a class="animate-bounce absolute inset-x-0 z-2 -top-2 mx-auto flex-center w-[41px]">
+        <svg class="w-[41px]" width="41" height="60" viewBox="0 0 41 60" fill="none"
           xmlns="http://www.w3.org/2000/svg">
           <g filter="url(#filter0_f_112_515)">
             <path d="M4 4H37V40C37 48.8366 29.8366 56 21 56H20C11.1634 56 4 48.8366 4 40V4Z"
@@ -728,7 +601,8 @@
             <h4 class="sm:text-2xl text-base text-dark font-bold">خانه های اقتصادی</h4>
           </div>
           <div class="flex items-center gap-8">
-            <div class="flex items-center mt-5 relative top-[427px] sm:top-0 ltr:-mr-[103px] ltr:sm:mr-6 rtl:-ml-[103px] rtl:sm:ml-6">
+            <div
+              class="flex items-center mt-5 relative top-[427px] sm:top-0 ltr:-mr-[103px] ltr:sm:mr-6 rtl:-ml-[103px] rtl:sm:ml-6">
               <div
                 class="w-8 h-8 swiper-button-prev !absolute !-top-1 ltr:!-right-5 btnHover active:scale-95 flex-center bg-primary rounded-lg cursor-pointer">
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
@@ -747,12 +621,12 @@
               </div>
             </div>
             <a
-              class="group rounded-[30px] text-xs sm:text-base h-8 sm:h-10 bg-gradient9 flex items-center gap-1 rtl:pl-2 ltr:pr-2 rtl:hover:pl-0 ltr:hover:pr-0">
+              class="group rounded-[30px] text-xs sm:text-base h-8 sm:h-10 bg-gradient9 flex items-center gap-1 rtl:pl-2 ltr:pr-2 rtl:sm:hover:pl-0 ltr:sm:hover:pr-0">
               <p
                 class="h-full font-medium px-3 rounded-[30px] group-hover:bg-primary group-hover:text-white bg-[#ffedd5] flex-center transition">
                 مشاهده همه</p>
               <img alt="icon" src="../img/svg/arrow-left (2).svg"
-                class="group-hover:max-w-0 transition ltr:[transform:rotateY(180deg)] w-4 sm:w-auto">
+                class="sm:group-hover:max-w-0 transition ltr:[transform:rotateY(180deg)] w-4 sm:w-auto">
             </a>
           </div>
         </div>
@@ -1142,7 +1016,8 @@
             <h4 class="sm:text-2xl text-base text-white font-bold">خانه های استاندارد</h4>
           </div>
           <div class="flex items-center gap-8">
-            <div class="flex items-center mt-5 relative top-[447px] sm:top-0 ltr:-mr-[103px] ltr:sm:mr-6 rtl:-ml-[103px] rtl:sm:ml-6">
+            <div
+              class="flex items-center mt-5 relative top-[447px] sm:top-0 ltr:-mr-[103px] ltr:sm:mr-6 rtl:-ml-[103px] rtl:sm:ml-6">
               <div
                 class="w-8 h-8 swiper-button-prev !absolute !-top-1 ltr:!-right-5 btnHover active:scale-95 flex-center bg-primary rounded-lg cursor-pointer">
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
@@ -1161,12 +1036,12 @@
               </div>
             </div>
             <a
-              class="group rounded-[30px] text-xs sm:text-base h-8 sm:h-10 bg-gradient6 flex items-center gap-1 rtl:pl-2 ltr:pr-2 rtl:hover:pl-0 ltr:hover:pr-0">
+              class="group rounded-[30px] text-xs sm:text-base h-8 sm:h-10 bg-gradient6 flex items-center gap-1 rtl:pl-2 ltr:pr-2 rtl:sm:hover:pl-0 ltr:sm:hover:pr-0">
               <p
                 class="h-full font-medium px-3 rounded-[30px] text-white group-hover:text-white bg-primary flex-center transition">
                 مشاهده همه</p>
               <img alt="icon" src="../img/svg/arrow-left (4).svg"
-                class="group-hover:max-w-0 transition ltr:[transform:rotateY(180deg)] w-4 sm:w-auto">
+                class="sm:group-hover:max-w-0 transition ltr:[transform:rotateY(180deg)] w-4 sm:w-auto">
             </a>
           </div>
         </div>
@@ -1394,10 +1269,12 @@
       <div class="max-w-content mx-auto px-4">
         <div
           class="bg-[#160C59] rounded-[20px] relative px-5 pt-[49px] rtl:lg:pr-[60px] ltr:lg:pl-[60px] pb-[54px] rtl:lg:pl-11 ltr:lg:pr-11 flex-col lg:flex-row flex items-center justify-between gap-4">
-          <img alt="shape" src="../img/Vector 101.png" class="absolute rotate-180 hidden sm:block top-0 mx-auto inset-x-0">
+          <img alt="shape" src="../img/Vector 101.png"
+            class="absolute rotate-180 hidden sm:block top-0 mx-auto inset-x-0">
           <img alt="shape" src="../img/Vector 111.png" class="absolute sm:hidden -top-1 mx-auto inset-x-0">
           <img alt="shape" src="../img/Vector 101.png" class="absolute bottom-0 mx-auto inset-x-0 hidden sm:block">
-          <img alt="shape" src="../img/Vector 111.png" class="absolute rotate-180 sm:hidden -bottom-1 mx-auto inset-x-0">
+          <img alt="shape" src="../img/Vector 111.png"
+            class="absolute rotate-180 sm:hidden -bottom-1 mx-auto inset-x-0">
           <div class="max-w-[400px] w-full relative">
             <h2 class="sm:text-[44px] text-[32px] text-white font-extrabold">
               نیاز به
@@ -1449,19 +1326,25 @@
       <img alt="shape" src="../img/Vector 105.png" class="absolute -bottom-1 w-full h-[243px] inset-x-0 block">
       <img alt="shape" src="../img/Vector 99.png" class="absolute w-full inset-x-0 top-0 sm:block h-[98px] z-5 hidden">
       <img alt="shape" src="../img/svg/Vector 92.svg" class="absolute inset-x-0 -top-0.5 mx-auto w-[109px]">
-      <a class="animate-bounce absolute inset-x-0 z-5 -top-2 sm:top-[51px] mx-auto flex-center w-5 sm:w-[41px]">
-        <svg class="w-5 sm:w-[41px]" width="41" height="60" viewBox="0 0 41 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <a class="animate-bounce absolute inset-x-0 z-5 -top-2 sm:top-[51px] mx-auto flex-center w-[41px]">
+        <svg class="w-[41px]" width="41" height="60" viewBox="0 0 41 60" fill="none"
+          xmlns="http://www.w3.org/2000/svg">
           <g filter="url(#filter0_f_112_515)">
-            <path d="M4 4H37V40C37 48.8366 29.8366 56 21 56H20C11.1634 56 4 48.8366 4 40V4Z" fill="url(#paint0_linear_112_515)"></path>
+            <path d="M4 4H37V40C37 48.8366 29.8366 56 21 56H20C11.1634 56 4 48.8366 4 40V4Z"
+              fill="url(#paint0_linear_112_515)"></path>
           </g>
-          <path d="M25.9401 28.7125L21.0501 33.6025C20.4726 34.18 19.5276 34.18 18.9501 33.6025L14.0601 28.7125" stroke="white" stroke-width="2.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
+          <path d="M25.9401 28.7125L21.0501 33.6025C20.4726 34.18 19.5276 34.18 18.9501 33.6025L14.0601 28.7125"
+            stroke="white" stroke-width="2.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round">
+          </path>
           <defs>
-            <filter id="filter0_f_112_515" x="0" y="0" width="41" height="60" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+            <filter id="filter0_f_112_515" x="0" y="0" width="41" height="60" filterUnits="userSpaceOnUse"
+              color-interpolation-filters="sRGB">
               <feFlood flood-opacity="0" result="BackgroundImageFix"></feFlood>
               <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"></feBlend>
               <feGaussianBlur stdDeviation="2" result="effect1_foregroundBlur_112_515"></feGaussianBlur>
             </filter>
-            <linearGradient id="paint0_linear_112_515" x1="20.5" y1="4" x2="20.5" y2="56" gradientUnits="userSpaceOnUse">
+            <linearGradient id="paint0_linear_112_515" x1="20.5" y1="4" x2="20.5" y2="56"
+              gradientUnits="userSpaceOnUse">
               <stop stop-color="white"></stop>
               <stop offset="1" stop-color="#FF9704"></stop>
             </linearGradient>
@@ -1475,7 +1358,8 @@
             <h4 class="sm:text-2xl text-base text-white font-bold">خانه های لوکس</h4>
           </div>
           <div class="flex items-center gap-8">
-            <div class="flex items-center mt-5 relative top-[447px] sm:top-0 ltr:-mr-[103px] ltr:sm:mr-6 rtl:-ml-[103px] rtl:sm:ml-6">
+            <div
+              class="flex items-center mt-5 relative top-[447px] sm:top-0 ltr:-mr-[103px] ltr:sm:mr-6 rtl:-ml-[103px] rtl:sm:ml-6">
               <div
                 class="w-8 h-8 swiper-button-prev !absolute !-top-1 ltr:!-right-5 btnHover active:scale-95 flex-center sm:bg-white bg-primary rounded-lg cursor-pointer">
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
@@ -1494,11 +1378,11 @@
               </div>
             </div>
             <a
-              class="group rounded-[30px] text-xs sm:text-base h-8 sm:h-10 bg-gradient7 flex items-center gap-1 rtl:pl-2 ltr:pr-2 rtl:hover:pl-0 ltr:hover:pr-0">
+              class="group rounded-[30px] text-xs sm:text-base h-8 sm:h-10 bg-gradient7 flex items-center gap-1 rtl:pl-2 ltr:pr-2 rtl:sm:hover:pl-0 ltr:sm:hover:pr-0">
               <p class="h-full font-medium px-3 rounded-[30px] bg-white flex-center transition">
                 مشاهده همه</p>
               <img alt="icon" src="../img/svg/arrow-left (4).svg"
-                class="group-hover:max-w-0 transition ltr:[transform:rotateY(180deg)] w-4 sm:w-auto">
+                class="sm:group-hover:max-w-0 transition ltr:[transform:rotateY(180deg)] w-4 sm:w-auto">
             </a>
           </div>
         </div>
@@ -1725,7 +1609,8 @@
     <section class="pt-20">
       <div class="max-w-content mx-auto px-4">
         <div class="grid grid-cols-12 md:gap-[63px]">
-          <div class="lg:col-span-5 col-span-12 order-last lg:order-first mt-10 md:mt-0 rtl:pl-4 rtl:lg:pl-0 ltr:pr-4 ltr:lg:pr-0">
+          <div
+            class="lg:col-span-5 col-span-12 order-last lg:order-first mt-10 md:mt-0 rtl:pl-4 rtl:lg:pl-0 ltr:pr-4 ltr:lg:pr-0">
             <div class="relative">
               <div class="bg-[#160C59] rounded-[20px] h-[82%] w-[96%] absolute bottom-0"></div>
               <div
@@ -1744,7 +1629,8 @@
             </div>
           </div>
           <div class="lg:col-span-7 col-span-12">
-            <span class="rounded-[10px] text-sm sm:text-base inline-block bg-[#FF970433] text-primary p-[7px] px-[10px] font-semibold">
+            <span
+              class="rounded-[10px] text-sm sm:text-base inline-block bg-[#FF970433] text-primary p-[7px] px-[10px] font-semibold">
               سوالات پر تکرار شما
             </span>
             <h4 class="mt-5 sm:text-2xl text-lg font-extrabold">سوالات متداول شما</h4>
@@ -1827,9 +1713,10 @@
               <!-- shape -->
               <img alt="img" src="../img/Vector 97.png"
                 class="absolute hidden lg:block w-[54px] top-0 bottom-0 rtl:left-0 ltr:-right-[2px] h-[101%] ltr:[transform:rotateY(180deg)]">
-                <img alt="img" src="../img/Vector 112.png"
+              <img alt="img" src="../img/Vector 112.png"
                 class="absolute lg:hidden w-full top-auto bottom-0 inset-x-0 h-[38px]">
-              <div class="block w-[29px] h-6 absolute mx-auto bottom-0 -rotate-90 lg:rotate-0 ltr:[transform:rotateY(180deg)] lg:top-0 lg:my-auto inset-x-0 lg:inset-y-0 rtl:lg:left-0 rtl:lg:right-auto ltr:lg:left-auto ltr:lg:-right-0">
+              <div
+                class="block w-[29px] h-6 absolute mx-auto bottom-0 -rotate-90 lg:rotate-0 ltr:[transform:rotateY(180deg)] lg:top-0 lg:my-auto inset-x-0 lg:inset-y-0 rtl:lg:left-0 rtl:lg:right-auto ltr:lg:left-auto ltr:lg:-right-0">
                 <svg width="22" height="24" viewBox="0 0 22 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M8.05005 19.92L1.53005 13.4C0.760048 12.63 0.760048 11.37 1.53005 10.6L8.05005 4.08"
                     stroke="#FF9704" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"
@@ -1878,8 +1765,8 @@
                       <div
                         class="pt-3 p-1 bg-white relative border-gradient mx-[9px] -mt-10 group-hover:-mt-16 transition">
                         <!-- shape -->
-                        <svg class="-top-[6.9px] inset-x-0 mx-auto absolute" xmlns="http://www.w3.org/2000/svg" width="33"
-                          height="9" viewBox="0 0 33 9" fill="white">
+                        <svg class="-top-[6.9px] inset-x-0 mx-auto absolute" xmlns="http://www.w3.org/2000/svg"
+                          width="33" height="9" viewBox="0 0 33 9" fill="white">
                           <path fill-rule="evenodd" clip-rule="evenodd"
                             d="M32.8066 8.5H0.193359C4.85352 8.18393 9.22656 6.06978 12.375 2.57672C14.5801 0.129671 18.4199 0.129671 20.625 2.57672C23.7734 6.06978 28.1465 8.18393 32.8066 8.5Z"
                             fill="white"></path>
@@ -1921,8 +1808,8 @@
                       <div
                         class="pt-3 p-1 bg-white relative border-gradient mx-[9px] -mt-10 group-hover:-mt-16 transition">
                         <!-- shape -->
-                        <svg class="-top-[6.9px] inset-x-0 mx-auto absolute" xmlns="http://www.w3.org/2000/svg" width="33"
-                          height="9" viewBox="0 0 33 9" fill="white">
+                        <svg class="-top-[6.9px] inset-x-0 mx-auto absolute" xmlns="http://www.w3.org/2000/svg"
+                          width="33" height="9" viewBox="0 0 33 9" fill="white">
                           <path fill-rule="evenodd" clip-rule="evenodd"
                             d="M32.8066 8.5H0.193359C4.85352 8.18393 9.22656 6.06978 12.375 2.57672C14.5801 0.129671 18.4199 0.129671 20.625 2.57672C23.7734 6.06978 28.1465 8.18393 32.8066 8.5Z"
                             fill="white"></path>
@@ -1964,8 +1851,8 @@
                       <div
                         class="pt-3 p-1 bg-white relative border-gradient mx-[9px] -mt-10 group-hover:-mt-16 transition">
                         <!-- shape -->
-                        <svg class="-top-[6.9px] inset-x-0 mx-auto absolute" xmlns="http://www.w3.org/2000/svg" width="33"
-                          height="9" viewBox="0 0 33 9" fill="white">
+                        <svg class="-top-[6.9px] inset-x-0 mx-auto absolute" xmlns="http://www.w3.org/2000/svg"
+                          width="33" height="9" viewBox="0 0 33 9" fill="white">
                           <path fill-rule="evenodd" clip-rule="evenodd"
                             d="M32.8066 8.5H0.193359C4.85352 8.18393 9.22656 6.06978 12.375 2.57672C14.5801 0.129671 18.4199 0.129671 20.625 2.57672C23.7734 6.06978 28.1465 8.18393 32.8066 8.5Z"
                             fill="white"></path>
@@ -2007,8 +1894,8 @@
                       <div
                         class="pt-3 p-1 bg-white relative border-gradient mx-[9px] -mt-10 group-hover:-mt-16 transition">
                         <!-- shape -->
-                        <svg class="-top-[6.9px] inset-x-0 mx-auto absolute" xmlns="http://www.w3.org/2000/svg" width="33"
-                          height="9" viewBox="0 0 33 9" fill="white">
+                        <svg class="-top-[6.9px] inset-x-0 mx-auto absolute" xmlns="http://www.w3.org/2000/svg"
+                          width="33" height="9" viewBox="0 0 33 9" fill="white">
                           <path fill-rule="evenodd" clip-rule="evenodd"
                             d="M32.8066 8.5H0.193359C4.85352 8.18393 9.22656 6.06978 12.375 2.57672C14.5801 0.129671 18.4199 0.129671 20.625 2.57672C23.7734 6.06978 28.1465 8.18393 32.8066 8.5Z"
                             fill="white"></path>
@@ -2050,8 +1937,8 @@
                       <div
                         class="pt-3 p-1 bg-white relative border-gradient mx-[9px] -mt-10 group-hover:-mt-16 transition">
                         <!-- shape -->
-                        <svg class="-top-[6.9px] inset-x-0 mx-auto absolute" xmlns="http://www.w3.org/2000/svg" width="33"
-                          height="9" viewBox="0 0 33 9" fill="white">
+                        <svg class="-top-[6.9px] inset-x-0 mx-auto absolute" xmlns="http://www.w3.org/2000/svg"
+                          width="33" height="9" viewBox="0 0 33 9" fill="white">
                           <path fill-rule="evenodd" clip-rule="evenodd"
                             d="M32.8066 8.5H0.193359C4.85352 8.18393 9.22656 6.06978 12.375 2.57672C14.5801 0.129671 18.4199 0.129671 20.625 2.57672C23.7734 6.06978 28.1465 8.18393 32.8066 8.5Z"
                             fill="white"></path>
@@ -2145,26 +2032,29 @@
       <div class="rtl:pr-custom ltr:pl-custom">
         <div class="grid grid-cols-12 gap-6">
           <div class="lg:col-span-3 col-span-12 rtl:pl-4 rtl:lg:pl-0 rtl:pr-4 ltr:pl-4">
-            <div class="rounded-[20px] bg-primary pt-6 sm:pt-[34px] flex flex-row sm:flex-col items-start sm:items-stretch gap-7 sm:gap-0 px-4 overflow-hidden relative">
-              <img alt="img" src="../img/Ellipse 17 (2).png" class="absolute ltr:[transform:rotateY(180deg)] sm:hidden rtl:left-0 ltr:right-0 bottom-0">
-               <div class="flex-grow">
-                 <div class="p-2 pb-5 rounded-[10px] bg-white relative flex-grow">
-                   <img alt="img" src="../img/Vector 95.png"
-                     class="absolute top-0 rtl:right-0 ltr:left-0 w-[161px] sm:w-auto ltr:[transform:rotateY(180deg)]">
-                   <div class="flex items-center justify-between gap-[13px]">
-                     <p class="font-bold text-white text-2xl sm:text-[28px] relative -top-3 flex-shrink-0">لحظه آخری ها</p>
-                     <img alt="img" src="../img/lets-icons_clock-fill.png">
-                   </div>
-                   <div class="mt-[14px] flex items-center justify-center gap-1 text-dark font-bold">
-                     <div class="w-[38px] h-[42px] flex-center rounded-[10px] bg-[#FF970436]">25</div>
-                     <p>:</p>
-                     <div class="w-[38px] h-[42px] flex-center rounded-[10px] bg-[#FF970436]">12</div>
-                     <p>:</p>
-                     <div class="w-[38px] h-[42px] flex-center rounded-[10px] bg-[#FF970436]">02</div>
-                   </div>
-                 </div>
-                 <img alt="img" src="../img/Group 78.png" class="sm:hidden mx-auto mt-4 mb-3">
-               </div>
+            <div
+              class="rounded-[20px] bg-primary pt-6 sm:pt-[34px] flex flex-row sm:flex-col items-start sm:items-stretch gap-7 sm:gap-0 px-4 overflow-hidden relative">
+              <img alt="img" src="../img/Ellipse 17 (2).png"
+                class="absolute ltr:[transform:rotateY(180deg)] sm:hidden rtl:left-0 ltr:right-0 bottom-0">
+              <div class="flex-grow">
+                <div class="p-2 pb-5 rounded-[10px] bg-white relative flex-grow">
+                  <img alt="img" src="../img/Vector 95.png"
+                    class="absolute top-0 rtl:right-0 ltr:left-0 w-[161px] sm:w-auto ltr:[transform:rotateY(180deg)]">
+                  <div class="flex items-center justify-between gap-[13px]">
+                    <p class="font-bold text-white text-2xl sm:text-[28px] relative -top-3 flex-shrink-0">لحظه آخری ها
+                    </p>
+                    <img alt="img" src="../img/lets-icons_clock-fill.png">
+                  </div>
+                  <div class="mt-[14px] flex items-center justify-center gap-1 text-dark font-bold">
+                    <div class="w-[38px] h-[42px] flex-center rounded-[10px] bg-[#FF970436]">25</div>
+                    <p>:</p>
+                    <div class="w-[38px] h-[42px] flex-center rounded-[10px] bg-[#FF970436]">12</div>
+                    <p>:</p>
+                    <div class="w-[38px] h-[42px] flex-center rounded-[10px] bg-[#FF970436]">02</div>
+                  </div>
+                </div>
+                <img alt="img" src="../img/Group 78.png" class="sm:hidden mx-auto mt-4 mb-3">
+              </div>
               <div class="relative pb-0 sm:mt-10 rtl:-right-4 ltr:-left-4">
                 <img alt="img" src="../img/Group 5004.png" class="relative hidden sm:block">
                 <img alt="img" src="../img/hand-holding-division-symbol 1.png" class="relative top-[50px] sm:hidden">
@@ -2211,8 +2101,8 @@
                       <div
                         class="pt-3 p-1 bg-white relative border-gradient mx-[9px] -mt-10 group-hover:-mt-16 transition">
                         <!-- shape -->
-                        <svg class="-top-[6.9px] inset-x-0 mx-auto absolute" xmlns="http://www.w3.org/2000/svg" width="33"
-                          height="9" viewBox="0 0 33 9" fill="white">
+                        <svg class="-top-[6.9px] inset-x-0 mx-auto absolute" xmlns="http://www.w3.org/2000/svg"
+                          width="33" height="9" viewBox="0 0 33 9" fill="white">
                           <path fill-rule="evenodd" clip-rule="evenodd"
                             d="M32.8066 8.5H0.193359C4.85352 8.18393 9.22656 6.06978 12.375 2.57672C14.5801 0.129671 18.4199 0.129671 20.625 2.57672C23.7734 6.06978 28.1465 8.18393 32.8066 8.5Z"
                             fill="white"></path>
@@ -2254,8 +2144,8 @@
                       <div
                         class="pt-3 p-1 bg-white relative border-gradient mx-[9px] -mt-10 group-hover:-mt-16 transition">
                         <!-- shape -->
-                        <svg class="-top-[6.9px] inset-x-0 mx-auto absolute" xmlns="http://www.w3.org/2000/svg" width="33"
-                          height="9" viewBox="0 0 33 9" fill="white">
+                        <svg class="-top-[6.9px] inset-x-0 mx-auto absolute" xmlns="http://www.w3.org/2000/svg"
+                          width="33" height="9" viewBox="0 0 33 9" fill="white">
                           <path fill-rule="evenodd" clip-rule="evenodd"
                             d="M32.8066 8.5H0.193359C4.85352 8.18393 9.22656 6.06978 12.375 2.57672C14.5801 0.129671 18.4199 0.129671 20.625 2.57672C23.7734 6.06978 28.1465 8.18393 32.8066 8.5Z"
                             fill="white"></path>
@@ -2297,8 +2187,8 @@
                       <div
                         class="pt-3 p-1 bg-white relative border-gradient mx-[9px] -mt-10 group-hover:-mt-16 transition">
                         <!-- shape -->
-                        <svg class="-top-[6.9px] inset-x-0 mx-auto absolute" xmlns="http://www.w3.org/2000/svg" width="33"
-                          height="9" viewBox="0 0 33 9" fill="white">
+                        <svg class="-top-[6.9px] inset-x-0 mx-auto absolute" xmlns="http://www.w3.org/2000/svg"
+                          width="33" height="9" viewBox="0 0 33 9" fill="white">
                           <path fill-rule="evenodd" clip-rule="evenodd"
                             d="M32.8066 8.5H0.193359C4.85352 8.18393 9.22656 6.06978 12.375 2.57672C14.5801 0.129671 18.4199 0.129671 20.625 2.57672C23.7734 6.06978 28.1465 8.18393 32.8066 8.5Z"
                             fill="white"></path>
@@ -2340,8 +2230,8 @@
                       <div
                         class="pt-3 p-1 bg-white relative border-gradient mx-[9px] -mt-10 group-hover:-mt-16 transition">
                         <!-- shape -->
-                        <svg class="-top-[6.9px] inset-x-0 mx-auto absolute" xmlns="http://www.w3.org/2000/svg" width="33"
-                          height="9" viewBox="0 0 33 9" fill="white">
+                        <svg class="-top-[6.9px] inset-x-0 mx-auto absolute" xmlns="http://www.w3.org/2000/svg"
+                          width="33" height="9" viewBox="0 0 33 9" fill="white">
                           <path fill-rule="evenodd" clip-rule="evenodd"
                             d="M32.8066 8.5H0.193359C4.85352 8.18393 9.22656 6.06978 12.375 2.57672C14.5801 0.129671 18.4199 0.129671 20.625 2.57672C23.7734 6.06978 28.1465 8.18393 32.8066 8.5Z"
                             fill="white"></path>
@@ -2383,8 +2273,8 @@
                       <div
                         class="pt-3 p-1 bg-white relative border-gradient mx-[9px] -mt-10 group-hover:-mt-16 transition">
                         <!-- shape -->
-                        <svg class="-top-[6.9px] inset-x-0 mx-auto absolute" xmlns="http://www.w3.org/2000/svg" width="33"
-                          height="9" viewBox="0 0 33 9" fill="white">
+                        <svg class="-top-[6.9px] inset-x-0 mx-auto absolute" xmlns="http://www.w3.org/2000/svg"
+                          width="33" height="9" viewBox="0 0 33 9" fill="white">
                           <path fill-rule="evenodd" clip-rule="evenodd"
                             d="M32.8066 8.5H0.193359C4.85352 8.18393 9.22656 6.06978 12.375 2.57672C14.5801 0.129671 18.4199 0.129671 20.625 2.57672C23.7734 6.06978 28.1465 8.18393 32.8066 8.5Z"
                             fill="white"></path>
@@ -2420,22 +2310,22 @@
                 </div>
               </div>
               <div
-              class="btnHover active:scale-95 !absolute ltr:[transform:rotateY(180deg)] !-bottom-[67px] !top-auto rtl:!right-auto ltr:!left-auto rtl:sm:!left-[155px] rtl:left-[86px] ltr:sm:!right-[155px] ltr:right-[86px] swiper-button-next w-[34px] h-[34px] rounded-lg bg-primary">
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                class="text-white bi bi-chevron-right !w-[60%]" viewBox="0 0 16 16">
-                <path fill-rule="evenodd"
-                  d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708">
-                </path>
-              </svg>
-            </div>
-            <div
-              class="btnHover active:scale-95 !absolute ltr:[transform:rotateY(180deg)] !-bottom-[67px] !top-auto ltr:!left-auto rtl:sm:!left-[107px] rtl:left-[40px] ltr:sm:!right-[107px] ltr:right-[40px] swiper-button-prev w-[34px] h-[34px] rounded-lg bg-primary">
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                class="text-white bi bi-chevron-right !w-[60%]" viewBox="0 0 16 16">
-                <path fill-rule="evenodd"
-                  d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0" />
-              </svg>
-            </div>
+                class="btnHover active:scale-95 !absolute ltr:[transform:rotateY(180deg)] !-bottom-[67px] !top-auto rtl:!right-auto ltr:!left-auto rtl:sm:!left-[155px] rtl:left-[86px] ltr:sm:!right-[155px] ltr:right-[86px] swiper-button-next w-[34px] h-[34px] rounded-lg bg-primary">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                  class="text-white bi bi-chevron-right !w-[60%]" viewBox="0 0 16 16">
+                  <path fill-rule="evenodd"
+                    d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708">
+                  </path>
+                </svg>
+              </div>
+              <div
+                class="btnHover active:scale-95 !absolute ltr:[transform:rotateY(180deg)] !-bottom-[67px] !top-auto ltr:!left-auto rtl:sm:!left-[107px] rtl:left-[40px] ltr:sm:!right-[107px] ltr:right-[40px] swiper-button-prev w-[34px] h-[34px] rounded-lg bg-primary">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                  class="text-white bi bi-chevron-right !w-[60%]" viewBox="0 0 16 16">
+                  <path fill-rule="evenodd"
+                    d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0" />
+                </svg>
+              </div>
             </div>
           </div>
         </div>
@@ -2447,10 +2337,11 @@
       <!-- shape -->
       <img alt="shape" src="../img/Group 87.png"
         class="absolute my-auto bottom-0 rtl:left-0 ltr:right-0 ltr:[transform:rotateY(180deg)]">
-       <img alt="shape" src="../img/Vector 107.png" class="absolute -top-0.5 inset-x-0 w-full h-[120px] hidden sm:block">
-       <img alt="shape" src="../img/Vector 113.png" class="absolute top-0 inset-x-0 w-full h-[160px] sm:hidden">
-       <img alt="shape" src="../img/Vector 106.png" class="absolute -bottom-8 inset-x-0 w-full h-[120px] hidden sm:block">
-       <img alt="shape" src="../img/Vector 114.png" class="absolute -bottom-8 inset-x-0 w-full h-[108px] sm:hidden">
+      <img alt="shape" src="../img/Vector 107.png" class="absolute -top-0.5 inset-x-0 w-full h-[120px] hidden sm:block">
+      <img alt="shape" src="../img/Vector 113.png" class="absolute top-0 inset-x-0 w-full h-[160px] sm:hidden">
+      <img alt="shape" src="../img/Vector 106.png"
+        class="absolute -bottom-8 inset-x-0 w-full h-[120px] hidden sm:block">
+      <img alt="shape" src="../img/Vector 114.png" class="absolute -bottom-8 inset-x-0 w-full h-[108px] sm:hidden">
       <div class="max-w-content mx-auto px-4 relative">
         <div class="grid grid-cols-12 xl:gap-[99px] lg:gap-14 gap-y-[18px] items-center">
           <div class="lg:col-span-6 col-span-12 order-last lg:order-first">
@@ -2458,10 +2349,12 @@
               <div class="flex flex-col sm:gap-y-6 gap-y-[13px] testimonials">
                 <div class="cursor-pointer">
                   <div class="bg-[#FFFFFF57] sm:rounded-[30px] rounded-[20px] px-5 py-8 flex items-center gap-5">
-                    <img alt="img" src="../img/Frame 65.png" class="sm:w-[82px] w-[50px] h-[50px] sm:h-[82px] rounded-full">
+                    <img alt="img" src="../img/Frame 65.png"
+                      class="sm:w-[82px] w-[50px] h-[50px] sm:h-[82px] rounded-full">
                     <div>
                       <p class="text-sm sm:text-xl font-bold">نگار امینی</p>
-                      <p class="sm:mt-3 mt-1 text-[#2C2C2C87] text-justify text-xs sm:text-sm font-medium sm:leading-6 leading-[16px]">
+                      <p
+                        class="sm:mt-3 mt-1 text-[#2C2C2C87] text-justify text-xs sm:text-sm font-medium sm:leading-6 leading-[16px]">
                         لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است
                         چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی
                         مورد نیاز
@@ -2471,10 +2364,12 @@
                 </div>
                 <div class="cursor-pointer">
                   <div class="bg-[#FFFFFF57] sm:rounded-[30px] rounded-[20px] px-5 py-8 flex items-center gap-5 active">
-                    <img alt="img" src="../img/Frame 65.png" class="sm:w-[82px] w-[50px] h-[50px] sm:h-[82px] rounded-full">
+                    <img alt="img" src="../img/Frame 65.png"
+                      class="sm:w-[82px] w-[50px] h-[50px] sm:h-[82px] rounded-full">
                     <div>
                       <p class="text-sm sm:text-xl font-bold">نگار امینی</p>
-                      <p class="sm:mt-3 mt-1 text-[#2C2C2C87] text-justify text-xs sm:text-sm font-medium sm:leading-6 leading-[16px]">
+                      <p
+                        class="sm:mt-3 mt-1 text-[#2C2C2C87] text-justify text-xs sm:text-sm font-medium sm:leading-6 leading-[16px]">
                         لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است
                         چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی
                         مورد نیاز
@@ -2484,10 +2379,12 @@
                 </div>
                 <div class="cursor-pointer">
                   <div class="bg-[#FFFFFF57] sm:rounded-[30px] rounded-[20px] px-5 py-8 flex items-center gap-5">
-                    <img alt="img" src="../img/Frame 65.png" class="sm:w-[82px] w-[50px] h-[50px] sm:h-[82px] rounded-full">
+                    <img alt="img" src="../img/Frame 65.png"
+                      class="sm:w-[82px] w-[50px] h-[50px] sm:h-[82px] rounded-full">
                     <div>
                       <p class="text-sm sm:text-xl font-bold">نگار امینی</p>
-                      <p class="sm:mt-3 mt-1 text-[#2C2C2C87] text-justify text-xs sm:text-sm font-medium sm:leading-6 leading-[16px]">
+                      <p
+                        class="sm:mt-3 mt-1 text-[#2C2C2C87] text-justify text-xs sm:text-sm font-medium sm:leading-6 leading-[16px]">
                         لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است
                         چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی
                         مورد نیاز
@@ -2504,14 +2401,19 @@
                 <h2 class="font-bold leading-6 text-[28px] sm:text-[40px] text-center">نظرات</h2>
                 <div class="relative mt-2 sm:mt-4 w-[120px] mx-auto">
                   <h2 class="font-medium leading-6 text-[28px] sm:text-[31px] text-center">مشتریان</h2>
-                  <img alt="img" src="../img/quote-up.png" class="lg:hidden mx-auto absolute -top-9 rtl:-left-12 ltr:-right-12 ltr:[transform:rotateY(180deg)]">
+                  <img alt="img" src="../img/quote-up.png"
+                    class="lg:hidden mx-auto absolute -top-9 rtl:-left-12 ltr:-right-12 ltr:[transform:rotateY(180deg)]">
                 </div>
-                <img alt="img" src="../img/quote-up.png" class="mt-2 mx-auto ltr:[transform:rotateY(180deg)] hidden lg:block">
+                <img alt="img" src="../img/quote-up.png"
+                  class="mt-2 mx-auto ltr:[transform:rotateY(180deg)] hidden lg:block">
                 <img alt="img" src="../img/Group 97.png" class="mt-8 mx-auto hidden lg:block">
               </div>
-              <div class="text-dark mt-5 lg:mt-0 text-justify text-xs sm:text-lg font-medium leading-[16px] sm:leading-6">
+              <div
+                class="text-dark mt-5 lg:mt-0 text-justify text-xs sm:text-lg font-medium leading-[16px] sm:leading-6">
                 <p>
-                  لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد
+                  لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها و
+                  متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و
+                  کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد
                 </p>
               </div>
             </div>
@@ -2526,42 +2428,50 @@
         <div class="py-[70px] grid lg:grid-cols-4 md:grid-cols-2 gap-6">
           <div class="rounded-[20px] bg-white overflow-hidden p-4 pb-8 relative shadow-1">
             <!-- shape -->
-            <img alt="shape" src="../img/Vector 94.png" class="absolute -bottom-[2px] border-b-[#f5f5f5] w-full inset-x-0 h-5">
+            <img alt="shape" src="../img/Vector 94.png"
+              class="absolute -bottom-[2px] border-b-[#f5f5f5] w-full inset-x-0 h-5">
             <div class="flex items-center gap-3 sm:gap-5">
               <img alt="icon" class="w-11 sm:w-[66px] h-11 sm:h-[66px]" src="../img/svg/Group 68.svg">
               <p class="font-bold text-sm sm:text-base">ضمانت بازگشت هزینه</p>
             </div>
-            <p class="mt-4 text-justify leading-6 font-medium text-xs sm:text-base">در صورت لغو رزرو، بازگشت هزینه با توجه به قوانین لغو
+            <p class="mt-4 text-justify leading-6 font-medium text-xs sm:text-base">در صورت لغو رزرو، بازگشت هزینه با
+              توجه به قوانین لغو
               تضمین می‌شود.</p>
           </div>
           <div class="rounded-[20px] bg-white overflow-hidden p-4 pb-8 relative shadow-1">
             <!-- shape -->
-              <img alt="shape" src="../img/Vector 94.png" class="absolute -bottom-[2px] border-b-[#f5f5f5] w-full inset-x-0 h-5">
+            <img alt="shape" src="../img/Vector 94.png"
+              class="absolute -bottom-[2px] border-b-[#f5f5f5] w-full inset-x-0 h-5">
             <div class="flex items-center gap-3 sm:gap-5">
               <img alt="icon" class="w-11 sm:w-[66px] h-11 sm:h-[66px]" src="../img/svg/Group 69.svg">
               <p class="font-bold text-sm sm:text-base">اعتبارسنجی میزبان و مهمان</p>
             </div>
-            <p class="mt-4 text-justify leading-6 font-medium text-xs sm:text-base">در صورت لغو رزرو، بازگشت هزینه با توجه به قوانین لغو
+            <p class="mt-4 text-justify leading-6 font-medium text-xs sm:text-base">در صورت لغو رزرو، بازگشت هزینه با
+              توجه به قوانین لغو
               تضمین می‌شود.</p>
           </div>
           <div class="rounded-[20px] bg-white overflow-hidden p-4 pb-8 relative shadow-1">
             <!-- shape -->
-              <img alt="shape" src="../img/Vector 94.png" class="absolute -bottom-[2px] border-b-[#f5f5f5] w-full inset-x-0 h-5">
+            <img alt="shape" src="../img/Vector 94.png"
+              class="absolute -bottom-[2px] border-b-[#f5f5f5] w-full inset-x-0 h-5">
             <div class="flex items-center gap-3 sm:gap-5">
               <img alt="icon" class="w-11 sm:w-[66px] h-11 sm:h-[66px]" src="../img/svg/Group 70.svg">
               <p class="font-bold text-sm sm:text-base">صحت اطلاعات اقامتگاه</p>
             </div>
-            <p class="mt-4 text-justify leading-6 font-medium text-xs sm:text-base">در صورت لغو رزرو، بازگشت هزینه با توجه به قوانین لغو
+            <p class="mt-4 text-justify leading-6 font-medium text-xs sm:text-base">در صورت لغو رزرو، بازگشت هزینه با
+              توجه به قوانین لغو
               تضمین می‌شود.</p>
           </div>
           <div class="rounded-[20px] bg-white overflow-hidden p-4 pb-8 relative shadow-1">
             <!-- shape -->
-              <img alt="shape" src="../img/Vector 94.png" class="absolute -bottom-[2px] border-b-[#f5f5f5] w-full inset-x-0 h-5">
+            <img alt="shape" src="../img/Vector 94.png"
+              class="absolute -bottom-[2px] border-b-[#f5f5f5] w-full inset-x-0 h-5">
             <div class="flex items-center gap-3 sm:gap-5">
               <img alt="icon" class="w-11 sm:w-[66px] h-11 sm:h-[66px]" src="../img/svg/Group 71.svg">
               <p class="font-bold text-sm sm:text-base">پشتیبانی ۲۴ ساعته</p>
             </div>
-            <p class="mt-4 text-justify leading-6 font-medium text-xs sm:text-base">در صورت لغو رزرو، بازگشت هزینه با توجه به قوانین لغو
+            <p class="mt-4 text-justify leading-6 font-medium text-xs sm:text-base">در صورت لغو رزرو، بازگشت هزینه با
+              توجه به قوانین لغو
               تضمین می‌شود.</p>
           </div>
         </div>
@@ -2575,7 +2485,8 @@
     <div class="bg-dark pt-[118px] pb-4 sm:pb-[38px] relative">
       <img alt="shape" src="../img/Vector 93.png" class="absolute h-[63px] w-full inset-x-0 top-0 hidden md:block">
       <img alt="shape" src="../img/Vector 115.png" class="absolute h-[54px] w-full inset-x-0 top-0 md:hidden">
-      <img alt="logo" src="../img/IMAGE 1403-10-08 22_36_07 1 1.png" class="absolute inset-x-0 w-[129px] sm:w-auto mx-auto top-5 sm:top-2">
+      <img alt="logo" src="../img/IMAGE 1403-10-08 22_36_07 1 1.png"
+        class="absolute inset-x-0 w-[129px] sm:w-auto mx-auto top-5 sm:top-2">
       <img alt="bg" src="../img/Group 98.png" class="absolute h-full w-full inset-0">
       <div class="max-w-content mx-auto px-4 relative">
         <div class="flex items-center justify-center gap-[22px] md:gap-[55px]">
@@ -2611,7 +2522,8 @@
             </svg>
           </a>
         </div>
-        <div class="md:mt-[57px] mt-10 flex flex-col md:flex-row items-center justify-center gap-3 md:gap-10 font-semibold text-white">
+        <div
+          class="md:mt-[57px] mt-10 flex flex-col md:flex-row items-center justify-center gap-3 md:gap-10 font-semibold text-white">
           <a class="hover:text-primary">صفحه اصلی</a>
           <span class="bg-white h-5 w-[1px] hidden md:block"></span>
           <a class="hover:text-primary">اقامتگاه ها</a>
@@ -2620,7 +2532,8 @@
           <span class="bg-white h-5 w-[1px] hidden md:block"></span>
           <a class="hover:text-primary">میزبان شوید</a>
         </div>
-        <div class="mt-11 max-w-[700px] mx-auto flex flex-col lg:flex-row items-start lg:items-end justify-between gap-10 lg:gap-3">
+        <div
+          class="mt-11 max-w-[700px] mx-auto flex flex-col lg:flex-row items-start lg:items-end justify-between gap-10 lg:gap-3">
           <div class="flex flex-row lg:flex-col justify-between w-full">
             <a class="flex items-center gap-[10px] sm:gap-[18px] text-white sm:text-lg font-semibold">
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -2654,8 +2567,10 @@
           </div>
         </div>
       </div>
-      <a href="#" class="absolute rtl:left-4 rtl:md:left-[108px] ltr:right-4 ltr:md:right-[108px] -bottom-[15.5px] md:bottom-0 group">
-        <svg class="w-20 md:w-auto" width="119" height="96" viewBox="0 0 119 96" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <a href="#"
+        class="absolute rtl:left-4 rtl:md:left-[108px] ltr:right-4 ltr:md:right-[108px] -bottom-[15.5px] md:bottom-0 group">
+        <svg class="w-20 md:w-auto" width="119" height="96" viewBox="0 0 119 96" fill="none"
+          xmlns="http://www.w3.org/2000/svg">
           <path class="group-hover:fill-secondary transition"
             d="M22.9296 33.6743L20.6732 71.0594C19.9404 83.2001 11.671 93.5765 0 97H119C106.06 93.6039 96.8193 82.206 96.172 68.8438L94.4888 34.0992C93.5638 15.0056 77.8137 0 58.6977 0C39.746 0 24.0714 14.7571 22.9296 33.6743Z"
             fill="#FF9704" />
@@ -2688,19 +2603,31 @@
         <div class="flex justify-between items-center text-[10px] w-full relative text-[#1E2D48]">
           <a href="#"
             class="flex justify-center items-center gap-2.5 flex-col p-2 text-center cursor-pointer relative z-10">
-            <svg class="block mx-auto" width="29" height="29" viewBox="0 0 29 29" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path opacity="0.5" d="M18.7969 17.5789L18.2471 18.1589C18.2471 18.1589 16.9385 19.5352 13.3679 15.7761C9.79724 12.0169 11.1059 10.6406 11.1059 10.6406L11.4527 10.2745C12.3057 9.37552 12.3867 7.93277 11.6412 6.8791L10.1187 4.72464C9.19549 3.41964 7.4132 3.24806 6.3559 4.36093L4.46003 6.35589C3.93682 6.9081 3.5864 7.62223 3.6287 8.4161C3.73745 10.4461 4.60503 14.8118 9.4432 19.9074C14.575 25.3086 19.3902 25.5237 21.3586 25.3291C21.9821 25.2687 22.5234 24.9316 22.9596 24.4724L24.6754 22.6648C25.8354 21.4444 25.5092 19.3539 24.0254 18.5009L21.7174 17.1717C20.7435 16.6122 19.5582 16.7766 18.7969 17.5777" fill="#160C59"/>
-              <path d="M16.0225 2.27155C16.0614 2.03435 16.1928 1.82226 16.3878 1.6818C16.5828 1.54135 16.8257 1.48402 17.0629 1.52238C17.0931 1.52842 17.1922 1.54655 17.2442 1.55863C17.3469 1.58038 17.4907 1.61663 17.6695 1.66738C18.0284 1.77251 18.5298 1.9453 19.1316 2.2208C20.3351 2.77301 21.9361 3.73846 23.5988 5.39992C25.2615 7.06259 26.2269 8.66484 26.7791 9.86834C27.0546 10.4701 27.2262 10.9703 27.3313 11.3304C27.3843 11.5113 27.4299 11.6944 27.4679 11.879L27.4739 11.9165C27.5137 12.1558 27.4578 12.4011 27.3184 12.5996C27.1789 12.798 26.967 12.9337 26.7284 12.9774C26.4918 13.0158 26.2496 12.9589 26.0548 12.8192C25.8601 12.6795 25.7286 12.4683 25.6892 12.2318C25.6645 12.0983 25.6318 11.9664 25.5913 11.8367C25.4679 11.4217 25.3144 11.0163 25.1322 10.6235C24.6609 9.59646 23.8127 8.17788 22.3168 6.68196C20.822 5.18605 19.4035 4.33901 18.3752 3.86776C17.9828 3.68556 17.5778 3.5321 17.1632 3.40859C17.0361 3.37272 16.9079 3.34048 16.779 3.31192C16.5416 3.27241 16.3293 3.14119 16.1878 2.94657C16.0463 2.75195 15.9869 2.50952 16.0225 2.27155Z" fill="#897DA1"/>
-              <path fill-rule="evenodd" clip-rule="evenodd" d="M16.2956 6.44045C16.3282 6.32595 16.383 6.21899 16.457 6.12568C16.5309 6.03237 16.6225 5.95454 16.7265 5.89663C16.8305 5.83873 16.9449 5.80189 17.0632 5.78822C17.1815 5.77455 17.3013 5.78431 17.4157 5.81696L17.4194 5.81816L17.423 5.81937L17.4327 5.82179L17.4568 5.82904L17.5245 5.8532C17.8456 5.97692 18.1557 6.1277 18.4513 6.30391C19.0422 6.65433 19.8493 7.23433 20.7979 8.18408C21.7464 9.13262 22.3276 9.93979 22.678 10.5307C22.8532 10.8267 22.9692 11.0672 23.0442 11.2436C23.0843 11.3359 23.1206 11.4298 23.1529 11.5251L23.159 11.5493L23.1626 11.559V11.5626L23.1638 11.5638C23.1638 11.5638 23.1638 11.5662 22.2938 11.8151L23.1638 11.5662C23.2252 11.7948 23.1946 12.0384 23.0787 12.2448C22.9628 12.4513 22.7707 12.6041 22.5435 12.6707C22.3164 12.7374 22.0721 12.7125 21.8631 12.6013C21.6541 12.4902 21.4968 12.3017 21.425 12.0761L21.4214 12.064C21.3364 11.8536 21.2354 11.65 21.1193 11.455C20.8486 10.9995 20.3617 10.3107 19.5158 9.46491C18.67 8.61908 17.9825 8.13333 17.5269 7.86387C17.332 7.74771 17.1284 7.64672 16.9179 7.56179L16.9058 7.55696C16.6776 7.48833 16.4855 7.33254 16.3713 7.12334C16.2571 6.91414 16.2299 6.66957 16.2956 6.44045Z" fill="#897DA1"/>
-              </svg>
+            <svg class="block mx-auto" width="29" height="29" viewBox="0 0 29 29" fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <path opacity="0.5"
+                d="M18.7969 17.5789L18.2471 18.1589C18.2471 18.1589 16.9385 19.5352 13.3679 15.7761C9.79724 12.0169 11.1059 10.6406 11.1059 10.6406L11.4527 10.2745C12.3057 9.37552 12.3867 7.93277 11.6412 6.8791L10.1187 4.72464C9.19549 3.41964 7.4132 3.24806 6.3559 4.36093L4.46003 6.35589C3.93682 6.9081 3.5864 7.62223 3.6287 8.4161C3.73745 10.4461 4.60503 14.8118 9.4432 19.9074C14.575 25.3086 19.3902 25.5237 21.3586 25.3291C21.9821 25.2687 22.5234 24.9316 22.9596 24.4724L24.6754 22.6648C25.8354 21.4444 25.5092 19.3539 24.0254 18.5009L21.7174 17.1717C20.7435 16.6122 19.5582 16.7766 18.7969 17.5777"
+                fill="#160C59" />
+              <path
+                d="M16.0225 2.27155C16.0614 2.03435 16.1928 1.82226 16.3878 1.6818C16.5828 1.54135 16.8257 1.48402 17.0629 1.52238C17.0931 1.52842 17.1922 1.54655 17.2442 1.55863C17.3469 1.58038 17.4907 1.61663 17.6695 1.66738C18.0284 1.77251 18.5298 1.9453 19.1316 2.2208C20.3351 2.77301 21.9361 3.73846 23.5988 5.39992C25.2615 7.06259 26.2269 8.66484 26.7791 9.86834C27.0546 10.4701 27.2262 10.9703 27.3313 11.3304C27.3843 11.5113 27.4299 11.6944 27.4679 11.879L27.4739 11.9165C27.5137 12.1558 27.4578 12.4011 27.3184 12.5996C27.1789 12.798 26.967 12.9337 26.7284 12.9774C26.4918 13.0158 26.2496 12.9589 26.0548 12.8192C25.8601 12.6795 25.7286 12.4683 25.6892 12.2318C25.6645 12.0983 25.6318 11.9664 25.5913 11.8367C25.4679 11.4217 25.3144 11.0163 25.1322 10.6235C24.6609 9.59646 23.8127 8.17788 22.3168 6.68196C20.822 5.18605 19.4035 4.33901 18.3752 3.86776C17.9828 3.68556 17.5778 3.5321 17.1632 3.40859C17.0361 3.37272 16.9079 3.34048 16.779 3.31192C16.5416 3.27241 16.3293 3.14119 16.1878 2.94657C16.0463 2.75195 15.9869 2.50952 16.0225 2.27155Z"
+                fill="#897DA1" />
+              <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M16.2956 6.44045C16.3282 6.32595 16.383 6.21899 16.457 6.12568C16.5309 6.03237 16.6225 5.95454 16.7265 5.89663C16.8305 5.83873 16.9449 5.80189 17.0632 5.78822C17.1815 5.77455 17.3013 5.78431 17.4157 5.81696L17.4194 5.81816L17.423 5.81937L17.4327 5.82179L17.4568 5.82904L17.5245 5.8532C17.8456 5.97692 18.1557 6.1277 18.4513 6.30391C19.0422 6.65433 19.8493 7.23433 20.7979 8.18408C21.7464 9.13262 22.3276 9.93979 22.678 10.5307C22.8532 10.8267 22.9692 11.0672 23.0442 11.2436C23.0843 11.3359 23.1206 11.4298 23.1529 11.5251L23.159 11.5493L23.1626 11.559V11.5626L23.1638 11.5638C23.1638 11.5638 23.1638 11.5662 22.2938 11.8151L23.1638 11.5662C23.2252 11.7948 23.1946 12.0384 23.0787 12.2448C22.9628 12.4513 22.7707 12.6041 22.5435 12.6707C22.3164 12.7374 22.0721 12.7125 21.8631 12.6013C21.6541 12.4902 21.4968 12.3017 21.425 12.0761L21.4214 12.064C21.3364 11.8536 21.2354 11.65 21.1193 11.455C20.8486 10.9995 20.3617 10.3107 19.5158 9.46491C18.67 8.61908 17.9825 8.13333 17.5269 7.86387C17.332 7.74771 17.1284 7.64672 16.9179 7.56179L16.9058 7.55696C16.6776 7.48833 16.4855 7.33254 16.3713 7.12334C16.2571 6.91414 16.2299 6.66957 16.2956 6.44045Z"
+                fill="#897DA1" />
+            </svg>
             <span>تماس با ما</span>
           </a>
           <a href="#"
             class="flex justify-center items-center gap-2.5 flex-col p-2 text-center cursor-pointer relative z-10">
-            <svg class="block mx-auto" width="29" height="29" viewBox="0 0 29 29" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M14.5001 2.41675C11.3342 2.41675 8.7605 4.9905 8.7605 8.15633C8.7605 11.2617 11.1892 13.7751 14.3551 13.8838C14.4517 13.8717 14.5484 13.8717 14.6209 13.8838C14.6451 13.8838 14.6572 13.8838 14.6813 13.8838C14.6934 13.8838 14.6934 13.8838 14.7055 13.8838C17.7988 13.7751 20.2276 11.2617 20.2397 8.15633C20.2397 4.9905 17.6659 2.41675 14.5001 2.41675Z" fill="#897DA1"/>
-              <path d="M20.6384 17.098C17.2672 14.8505 11.7692 14.8505 8.37382 17.098C6.83924 18.1251 5.99341 19.5146 5.99341 21.0009C5.99341 22.4871 6.83924 23.8646 8.36174 24.8796C10.0534 26.0155 12.2767 26.5834 14.5001 26.5834C16.7234 26.5834 18.9467 26.0155 20.6384 24.8796C22.1609 23.8526 23.0067 22.4751 23.0067 20.9767C22.9947 19.4905 22.1609 18.113 20.6384 17.098Z" fill="#897DA1"/>
-              </svg>
+            <svg class="block mx-auto" width="29" height="29" viewBox="0 0 29 29" fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M14.5001 2.41675C11.3342 2.41675 8.7605 4.9905 8.7605 8.15633C8.7605 11.2617 11.1892 13.7751 14.3551 13.8838C14.4517 13.8717 14.5484 13.8717 14.6209 13.8838C14.6451 13.8838 14.6572 13.8838 14.6813 13.8838C14.6934 13.8838 14.6934 13.8838 14.7055 13.8838C17.7988 13.7751 20.2276 11.2617 20.2397 8.15633C20.2397 4.9905 17.6659 2.41675 14.5001 2.41675Z"
+                fill="#897DA1" />
+              <path
+                d="M20.6384 17.098C17.2672 14.8505 11.7692 14.8505 8.37382 17.098C6.83924 18.1251 5.99341 19.5146 5.99341 21.0009C5.99341 22.4871 6.83924 23.8646 8.36174 24.8796C10.0534 26.0155 12.2767 26.5834 14.5001 26.5834C16.7234 26.5834 18.9467 26.0155 20.6384 24.8796C22.1609 23.8526 23.0067 22.4751 23.0067 20.9767C22.9947 19.4905 22.1609 18.113 20.6384 17.098Z"
+                fill="#897DA1" />
+            </svg>
             <span>حساب کاربری</span>
           </a>
         </div>
@@ -2708,40 +2635,56 @@
         <div class="flex justify-between items-center text-[10px] w-full relative text-[#1E2D48]">
           <a href="#"
             class="flex justify-center items-center gap-2.5 flex-col p-2 text-center cursor-pointer relative z-10">
-            <svg class="block mx-auto" width="29" height="29" viewBox="0 0 29 29" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path opacity="0.5" d="M18.7969 17.5789L18.2471 18.1589C18.2471 18.1589 16.9385 19.5352 13.3679 15.7761C9.79724 12.0169 11.1059 10.6406 11.1059 10.6406L11.4527 10.2745C12.3057 9.37552 12.3867 7.93277 11.6412 6.8791L10.1187 4.72464C9.19549 3.41964 7.4132 3.24806 6.3559 4.36093L4.46003 6.35589C3.93682 6.9081 3.5864 7.62223 3.6287 8.4161C3.73745 10.4461 4.60503 14.8118 9.4432 19.9074C14.575 25.3086 19.3902 25.5237 21.3586 25.3291C21.9821 25.2687 22.5234 24.9316 22.9596 24.4724L24.6754 22.6648C25.8354 21.4444 25.5092 19.3539 24.0254 18.5009L21.7174 17.1717C20.7435 16.6122 19.5582 16.7766 18.7969 17.5777" fill="#160C59"/>
-              <path d="M16.0225 2.27155C16.0614 2.03435 16.1928 1.82226 16.3878 1.6818C16.5828 1.54135 16.8257 1.48402 17.0629 1.52238C17.0931 1.52842 17.1922 1.54655 17.2442 1.55863C17.3469 1.58038 17.4907 1.61663 17.6695 1.66738C18.0284 1.77251 18.5298 1.9453 19.1316 2.2208C20.3351 2.77301 21.9361 3.73846 23.5988 5.39992C25.2615 7.06259 26.2269 8.66484 26.7791 9.86834C27.0546 10.4701 27.2262 10.9703 27.3313 11.3304C27.3843 11.5113 27.4299 11.6944 27.4679 11.879L27.4739 11.9165C27.5137 12.1558 27.4578 12.4011 27.3184 12.5996C27.1789 12.798 26.967 12.9337 26.7284 12.9774C26.4918 13.0158 26.2496 12.9589 26.0548 12.8192C25.8601 12.6795 25.7286 12.4683 25.6892 12.2318C25.6645 12.0983 25.6318 11.9664 25.5913 11.8367C25.4679 11.4217 25.3144 11.0163 25.1322 10.6235C24.6609 9.59646 23.8127 8.17788 22.3168 6.68196C20.822 5.18605 19.4035 4.33901 18.3752 3.86776C17.9828 3.68556 17.5778 3.5321 17.1632 3.40859C17.0361 3.37272 16.9079 3.34048 16.779 3.31192C16.5416 3.27241 16.3293 3.14119 16.1878 2.94657C16.0463 2.75195 15.9869 2.50952 16.0225 2.27155Z" fill="#897DA1"/>
-              <path fill-rule="evenodd" clip-rule="evenodd" d="M16.2956 6.44045C16.3282 6.32595 16.383 6.21899 16.457 6.12568C16.5309 6.03237 16.6225 5.95454 16.7265 5.89663C16.8305 5.83873 16.9449 5.80189 17.0632 5.78822C17.1815 5.77455 17.3013 5.78431 17.4157 5.81696L17.4194 5.81816L17.423 5.81937L17.4327 5.82179L17.4568 5.82904L17.5245 5.8532C17.8456 5.97692 18.1557 6.1277 18.4513 6.30391C19.0422 6.65433 19.8493 7.23433 20.7979 8.18408C21.7464 9.13262 22.3276 9.93979 22.678 10.5307C22.8532 10.8267 22.9692 11.0672 23.0442 11.2436C23.0843 11.3359 23.1206 11.4298 23.1529 11.5251L23.159 11.5493L23.1626 11.559V11.5626L23.1638 11.5638C23.1638 11.5638 23.1638 11.5662 22.2938 11.8151L23.1638 11.5662C23.2252 11.7948 23.1946 12.0384 23.0787 12.2448C22.9628 12.4513 22.7707 12.6041 22.5435 12.6707C22.3164 12.7374 22.0721 12.7125 21.8631 12.6013C21.6541 12.4902 21.4968 12.3017 21.425 12.0761L21.4214 12.064C21.3364 11.8536 21.2354 11.65 21.1193 11.455C20.8486 10.9995 20.3617 10.3107 19.5158 9.46491C18.67 8.61908 17.9825 8.13333 17.5269 7.86387C17.332 7.74771 17.1284 7.64672 16.9179 7.56179L16.9058 7.55696C16.6776 7.48833 16.4855 7.33254 16.3713 7.12334C16.2571 6.91414 16.2299 6.66957 16.2956 6.44045Z" fill="#897DA1"/>
-              </svg>
+            <svg class="block mx-auto" width="29" height="29" viewBox="0 0 29 29" fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <path opacity="0.5"
+                d="M18.7969 17.5789L18.2471 18.1589C18.2471 18.1589 16.9385 19.5352 13.3679 15.7761C9.79724 12.0169 11.1059 10.6406 11.1059 10.6406L11.4527 10.2745C12.3057 9.37552 12.3867 7.93277 11.6412 6.8791L10.1187 4.72464C9.19549 3.41964 7.4132 3.24806 6.3559 4.36093L4.46003 6.35589C3.93682 6.9081 3.5864 7.62223 3.6287 8.4161C3.73745 10.4461 4.60503 14.8118 9.4432 19.9074C14.575 25.3086 19.3902 25.5237 21.3586 25.3291C21.9821 25.2687 22.5234 24.9316 22.9596 24.4724L24.6754 22.6648C25.8354 21.4444 25.5092 19.3539 24.0254 18.5009L21.7174 17.1717C20.7435 16.6122 19.5582 16.7766 18.7969 17.5777"
+                fill="#160C59" />
+              <path
+                d="M16.0225 2.27155C16.0614 2.03435 16.1928 1.82226 16.3878 1.6818C16.5828 1.54135 16.8257 1.48402 17.0629 1.52238C17.0931 1.52842 17.1922 1.54655 17.2442 1.55863C17.3469 1.58038 17.4907 1.61663 17.6695 1.66738C18.0284 1.77251 18.5298 1.9453 19.1316 2.2208C20.3351 2.77301 21.9361 3.73846 23.5988 5.39992C25.2615 7.06259 26.2269 8.66484 26.7791 9.86834C27.0546 10.4701 27.2262 10.9703 27.3313 11.3304C27.3843 11.5113 27.4299 11.6944 27.4679 11.879L27.4739 11.9165C27.5137 12.1558 27.4578 12.4011 27.3184 12.5996C27.1789 12.798 26.967 12.9337 26.7284 12.9774C26.4918 13.0158 26.2496 12.9589 26.0548 12.8192C25.8601 12.6795 25.7286 12.4683 25.6892 12.2318C25.6645 12.0983 25.6318 11.9664 25.5913 11.8367C25.4679 11.4217 25.3144 11.0163 25.1322 10.6235C24.6609 9.59646 23.8127 8.17788 22.3168 6.68196C20.822 5.18605 19.4035 4.33901 18.3752 3.86776C17.9828 3.68556 17.5778 3.5321 17.1632 3.40859C17.0361 3.37272 16.9079 3.34048 16.779 3.31192C16.5416 3.27241 16.3293 3.14119 16.1878 2.94657C16.0463 2.75195 15.9869 2.50952 16.0225 2.27155Z"
+                fill="#897DA1" />
+              <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M16.2956 6.44045C16.3282 6.32595 16.383 6.21899 16.457 6.12568C16.5309 6.03237 16.6225 5.95454 16.7265 5.89663C16.8305 5.83873 16.9449 5.80189 17.0632 5.78822C17.1815 5.77455 17.3013 5.78431 17.4157 5.81696L17.4194 5.81816L17.423 5.81937L17.4327 5.82179L17.4568 5.82904L17.5245 5.8532C17.8456 5.97692 18.1557 6.1277 18.4513 6.30391C19.0422 6.65433 19.8493 7.23433 20.7979 8.18408C21.7464 9.13262 22.3276 9.93979 22.678 10.5307C22.8532 10.8267 22.9692 11.0672 23.0442 11.2436C23.0843 11.3359 23.1206 11.4298 23.1529 11.5251L23.159 11.5493L23.1626 11.559V11.5626L23.1638 11.5638C23.1638 11.5638 23.1638 11.5662 22.2938 11.8151L23.1638 11.5662C23.2252 11.7948 23.1946 12.0384 23.0787 12.2448C22.9628 12.4513 22.7707 12.6041 22.5435 12.6707C22.3164 12.7374 22.0721 12.7125 21.8631 12.6013C21.6541 12.4902 21.4968 12.3017 21.425 12.0761L21.4214 12.064C21.3364 11.8536 21.2354 11.65 21.1193 11.455C20.8486 10.9995 20.3617 10.3107 19.5158 9.46491C18.67 8.61908 17.9825 8.13333 17.5269 7.86387C17.332 7.74771 17.1284 7.64672 16.9179 7.56179L16.9058 7.55696C16.6776 7.48833 16.4855 7.33254 16.3713 7.12334C16.2571 6.91414 16.2299 6.66957 16.2956 6.44045Z"
+                fill="#897DA1" />
+            </svg>
             <span>تماس با ما</span>
           </a>
           <a href="#"
             class="flex justify-center items-center gap-2.5 flex-col p-2 text-center cursor-pointer relative z-10">
-            <svg class="block mx-auto" width="29" height="29" viewBox="0 0 29 29" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M14.5001 2.41675C11.3342 2.41675 8.7605 4.9905 8.7605 8.15633C8.7605 11.2617 11.1892 13.7751 14.3551 13.8838C14.4517 13.8717 14.5484 13.8717 14.6209 13.8838C14.6451 13.8838 14.6572 13.8838 14.6813 13.8838C14.6934 13.8838 14.6934 13.8838 14.7055 13.8838C17.7988 13.7751 20.2276 11.2617 20.2397 8.15633C20.2397 4.9905 17.6659 2.41675 14.5001 2.41675Z" fill="#897DA1"/>
-              <path d="M20.6384 17.098C17.2672 14.8505 11.7692 14.8505 8.37382 17.098C6.83924 18.1251 5.99341 19.5146 5.99341 21.0009C5.99341 22.4871 6.83924 23.8646 8.36174 24.8796C10.0534 26.0155 12.2767 26.5834 14.5001 26.5834C16.7234 26.5834 18.9467 26.0155 20.6384 24.8796C22.1609 23.8526 23.0067 22.4751 23.0067 20.9767C22.9947 19.4905 22.1609 18.113 20.6384 17.098Z" fill="#897DA1"/>
-              </svg>
+            <svg class="block mx-auto" width="29" height="29" viewBox="0 0 29 29" fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M14.5001 2.41675C11.3342 2.41675 8.7605 4.9905 8.7605 8.15633C8.7605 11.2617 11.1892 13.7751 14.3551 13.8838C14.4517 13.8717 14.5484 13.8717 14.6209 13.8838C14.6451 13.8838 14.6572 13.8838 14.6813 13.8838C14.6934 13.8838 14.6934 13.8838 14.7055 13.8838C17.7988 13.7751 20.2276 11.2617 20.2397 8.15633C20.2397 4.9905 17.6659 2.41675 14.5001 2.41675Z"
+                fill="#897DA1" />
+              <path
+                d="M20.6384 17.098C17.2672 14.8505 11.7692 14.8505 8.37382 17.098C6.83924 18.1251 5.99341 19.5146 5.99341 21.0009C5.99341 22.4871 6.83924 23.8646 8.36174 24.8796C10.0534 26.0155 12.2767 26.5834 14.5001 26.5834C16.7234 26.5834 18.9467 26.0155 20.6384 24.8796C22.1609 23.8526 23.0067 22.4751 23.0067 20.9767C22.9947 19.4905 22.1609 18.113 20.6384 17.098Z"
+                fill="#897DA1" />
+            </svg>
             <span>حساب کاربری</span>
           </a>
         </div>
       </div>
       <div class="absolute -top-[3px]  min-[400px]:-top-1 min-[450px]:-top-1 inset-x-0">
         <a class="flex justify-center items-center flex-col w-[90px] mx-auto gap-5" href="#">
-          <span class="w-16 h-16 relative -top-[10px] rounded-full bg-[#F76B16] shadow-2 flex justify-center items-center">
+          <span
+            class="w-16 h-16 relative -top-[10px] rounded-full bg-[#F76B16] shadow-2 flex justify-center items-center">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M20.04 6.81994L14.28 2.78994C12.71 1.68994 10.3 1.74994 8.78999 2.91994L3.77999 6.82994C2.77999 7.60994 1.98999 9.20994 1.98999 10.4699V17.3699C1.98999 19.9199 4.05999 21.9999 6.60999 21.9999H17.39C19.94 21.9999 22.01 19.9299 22.01 17.3799V10.5999C22.01 9.24994 21.14 7.58994 20.04 6.81994ZM12.75 17.9999C12.75 18.4099 12.41 18.7499 12 18.7499C11.59 18.7499 11.25 18.4099 11.25 17.9999V14.9999C11.25 14.5899 11.59 14.2499 12 14.2499C12.41 14.2499 12.75 14.5899 12.75 14.9999V17.9999Z" fill="white"/>
-              </svg>
+              <path
+                d="M20.04 6.81994L14.28 2.78994C12.71 1.68994 10.3 1.74994 8.78999 2.91994L3.77999 6.82994C2.77999 7.60994 1.98999 9.20994 1.98999 10.4699V17.3699C1.98999 19.9199 4.05999 21.9999 6.60999 21.9999H17.39C19.94 21.9999 22.01 19.9299 22.01 17.3799V10.5999C22.01 9.24994 21.14 7.58994 20.04 6.81994ZM12.75 17.9999C12.75 18.4099 12.41 18.7499 12 18.7499C11.59 18.7499 11.25 18.4099 11.25 17.9999V14.9999C11.25 14.5899 11.59 14.2499 12 14.2499C12.41 14.2499 12.75 14.5899 12.75 14.9999V17.9999Z"
+                fill="white" />
+            </svg>
           </span>
         </a>
       </div>
     </div>
   </footer>
 
-  <!-- Swiper JS -->
+
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+  <script src="../persian-daterangepicker-main/jalali-moment.browser.js"></script>
+  <script src="../persian-daterangepicker-main/dateragepicker.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-  <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
-  <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
-  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+  <script src="../js/calender.js"></script>
   <script src="../js/modal.js"></script>
   <script src="../js/script.js"></script>
   <script src="../js/vanilla-tilt.js"></script>

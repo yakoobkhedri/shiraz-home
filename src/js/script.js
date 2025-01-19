@@ -5,7 +5,7 @@ let mobileMenu = document.querySelector('.mobileMenu');
 let dropdownBtn = document.getElementById('dropdownBtn');
 
 hamIcon.addEventListener('click', function () {
-  mobileMenu.classList.add('active');
+  mobileMenu.classList.toggle('active');
 })
 dropdownBtn.addEventListener('click', function () {
   this.querySelector('svg').classList.toggle('active');
@@ -26,12 +26,12 @@ var banner = new Swiper(".banner", {
   pagination: {
     el: ".swiper-pagination",
     clickable: true,
-  }
+  },
 });
 var category = new Swiper(".category", {
   slidesPerView: 2.2,
   spaceBetween: 12,
-  // autoplay: true,
+  autoplay: true,
   breakpoints: {
     576: {
       slidesPerView: 2.6,
@@ -199,46 +199,3 @@ acordionBtn2.forEach((item) => {
     item.querySelector('img.arrow').classList.toggle('active');
   })
 })
-
-// datapicker
-
-const Jmoment = moment().locale('fa');
-    $('#dateInput').daterangepicker({
-        autoApply: true,
-        alwaysShowCalendars: true,
-        minDate: new Date(),
-        persian: {
-            enable: true,
-            persianDigits: true,
-        },
-        locale: {
-            direction: 'rtl',
-            firstDay: 0,
-            format: 'YYYY-MM-DD',
-            applyLabel: 'اعمال',
-            cancelLabel: 'لغو',
-            monthNames: [
-                "فروردین",
-                "اردیبهشت",
-                "خرداد",
-                "تیر",
-                "مرداد",
-                "شهریور",
-                "مهر",
-                "آبان",
-                "آذر",
-                "دی",
-                "بهمن",
-                "اسفند"
-            ],
-            daysOfWeek: [
-                'ش',
-                'ی',
-                'د',
-                'س',
-                'چ',
-                'پ',
-                'ج',
-            ],
-        }
-    });
