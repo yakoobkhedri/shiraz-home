@@ -3043,6 +3043,14 @@ input[type="number"] {
   right: 86px;
 }
 
+:is([dir="ltr"] .ltr\:order-first) {
+  order: -9999;
+}
+
+:is([dir="ltr"] .ltr\:order-last) {
+  order: 9999;
+}
+
 :is([dir="ltr"] .ltr\:-mr-\[103px\]) {
   margin-right: -103px;
 }
