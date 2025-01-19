@@ -5,32 +5,32 @@
 @font-face {
   font-family: payda-Regular;
   font-weight: 400;
-  src: url('../src/fonts/payda/PeydaWeb-Regular.woff') format("woff");
+  src: url('../src/fonts/payda/woff/PeydaWeb-Regular.woff') format("woff");
 }
 @font-face {
   font-family: payda-Medium;
   font-weight: 500;
-  src: url('../src/fonts/payda/PeydaWeb-Medium.woff') format("woff");
+  src: url('../src/fonts/payda/woff/PeydaWeb-Medium.woff') format("woff");
 }
 @font-face {
   font-family: payda-SemiBold;
   font-weight: 600;
-  src: url('../src/fonts/payda/PeydaWeb-SemiBold.woff') format("woff");
+  src: url('../src/fonts/payda/woff/PeydaWeb-SemiBold.woff') format("woff");
 }
 @font-face {
   font-family: payda-Bold;
   font-weight: 700;
-  src: url('../src/fonts/payda/PeydaWeb-Bold.woff') format("woff");
+  src: url('../src/fonts/payda/woff/PeydaWeb-Bold.woff') format("woff");
 }
 @font-face {
   font-family: payda-ExtraBold;
   font-weight: 800;
-  src: url('../src/fonts/payda/PeydaWeb-ExtraBold.woff') format("woff");
+  src: url('../src/fonts/payda/woff/PeydaWeb-ExtraBold.woff') format("woff");
 }
 @font-face {
   font-family: payda-Black;
   font-weight: 900;
-  src: url('../src/fonts/payda/PeydaWeb-Black.woff') format("woff");
+  src: url('../src/fonts/payda/woff/PeydaWeb-Black.woff') format("woff");
 }
 @font-face {
   font-family: Montserrat-Regular;
@@ -135,6 +135,9 @@ a {
 .bg-gradient9{
   background: linear-gradient(89.85deg, #FFFFFF 0.13%, rgba(255, 245, 232, 0) 38.33%);
 }
+.bg-gradient10{
+  background: linear-gradient(180deg, #FF9704 -16.07%, rgba(219, 219, 219, 0.55) 100%);
+}
 /* after */
 .gradient-after::after{
   content: '';
@@ -210,11 +213,14 @@ a {
   }
 }
 /* testimonials */
-.testimonials > div > div.active {
+.testimonials > div > div.active,.testimonials > div > div:hover {
   background-color: white;
   box-shadow: -4px 11px 31px 5px #71717129;
 }
-.testimonials > div > div.active p{
+.testimonials > div > div p{
+  transition: all .4s;
+}
+.testimonials > div > div.active p,.testimonials > div > div:hover p{
   color: black;
 }
 /* dropdown */
