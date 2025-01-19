@@ -919,10 +919,6 @@ video {
   margin-top: 2.75rem;
 }
 
-.mt-14 {
-  margin-top: 3.5rem;
-}
-
 .mt-2 {
   margin-top: 0.5rem;
 }
@@ -2044,6 +2040,10 @@ video {
   font-weight: 600;
 }
 
+.\!font-normal {
+  font-weight: 400 !important;
+}
+
 .ordinal {
   --tw-ordinal: ordinal;
   font-variant-numeric: var(--tw-ordinal) var(--tw-slashed-zero) var(--tw-numeric-figure) var(--tw-numeric-spacing) var(--tw-numeric-fraction);
@@ -2728,11 +2728,11 @@ input[type="number"] {
 /* jalalidatapicker */
 
 .daterangepicker td.active, .daterangepicker td.active:hover {
-  background-color: #ff9704;
+  background-color: #ff9704 !important;
 }
 
 .daterangepicker{
-  font-family: payda-Regular;
+  font-family: payda-Regular !important;
 }
 
 /* shadow */
@@ -2838,8 +2838,8 @@ input[type="number"] {
   visibility: visible;
 }
 
-.group:hover .group-hover\:-top-3 {
-  top: -0.75rem;
+.group:hover .group-hover\:top-4 {
+  top: 1rem;
 }
 
 .group:hover .group-hover\:-mt-16 {
@@ -3023,6 +3023,10 @@ input[type="number"] {
   margin-right: auto;
 }
 
+:is([dir="ltr"] .ltr\:ml-auto) {
+  margin-left: auto;
+}
+
 :is([dir="ltr"] .ltr\:rotate-\[-10deg\]) {
   --tw-rotate: -10deg;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
@@ -3179,6 +3183,10 @@ input[type="number"] {
 
 :is([dir="rtl"] .rtl\:ml-auto) {
   margin-left: auto;
+}
+
+:is([dir="rtl"] .rtl\:mr-auto) {
+  margin-right: auto;
 }
 
 :is([dir="rtl"] .rtl\:\!rounded-bl-2xl) {

@@ -331,10 +331,10 @@ input[type="number"] {
 }
 /* jalalidatapicker */
 .daterangepicker td.active, .daterangepicker td.active:hover {
-  background-color: #ff9704;
+  background-color: #ff9704 !important;
 }
 .daterangepicker{
-  font-family: payda-Regular;
+  font-family: payda-Regular !important;
 }
 /* shadow */
 .shadow-1 {

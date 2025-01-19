@@ -14,7 +14,6 @@
   left: 20px;
   z-index: 3001;
   display: none;
-  font-family: arial;
   font-size: 15px;
   line-height: 1em;
 }
@@ -231,7 +230,7 @@
 
 .daterangepicker td.active,
 .daterangepicker td.active:hover {
-  background-color: #357ebd;
+  background-color: #ff9704;
   border-color: transparent;
   color: #fff;
 }
@@ -357,7 +356,7 @@
 }
 
 .daterangepicker .ranges li.active {
-  background-color: #08c;
+  background-color: #ff9704;
   color: #fff;
 }
 
@@ -439,13 +438,6 @@
 }
 
 
-@font-face {
-  font-family: 'Vazir';
-  src: url('./fonts/vazir/Vazir.woff2') format('woff2'), /* Modern Browsers */
-       url('./fonts/vazir/Vazir.woff') format('woff'); /* Legacy Browsers */
-  /* You can include additional font properties like font-weight and font-style here */
-}
-
 /* light theme */
 
 .daterangepicker {
@@ -454,12 +446,10 @@
 }
 
 .table-condensed td {
-  font-family: Vazir !important;
   font-size: 14px !important;
   padding: 2px;
 }
 .table-condensed th {
-  font-family: Vazir !important;
   font-size: 16px !important;
 }
 .today{
