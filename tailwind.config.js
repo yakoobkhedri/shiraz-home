@@ -28,6 +28,8 @@ module.exports = {
         paydaBlack: "payda-Black",
         MontserratRegular: "Montserrat-Regular",
         MontserratBold: "Montserrat-Bold",
+        faNumRegular: "fanumber-Regular",
+        faNumBold: "fanumber-Bold",
       },
       maxWidth:{
         'content':'1256px',

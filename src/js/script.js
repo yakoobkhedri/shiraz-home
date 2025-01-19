@@ -118,11 +118,33 @@ var testimonials = new Swiper(".testimonials", {
   spaceBetween: 24,
   direction: "vertical",
   autoplay: true,
+  loop: true,
   navigation: {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
   },
+  on: {
+    slideChange: function () {
+      // Remove 'active' class from all slides
+      Array.from(document.querySelectorAll('.testimonials .swiper-slide > div')).forEach(slide => {
+        slide.classList.remove('active');
+      });
+
+      // Add 'active' class to the second slide (index 1 in the visible view)
+      const slides = this.slides;
+      const secondSlideIndex = this.activeIndex + 1;
+
+      // Check bounds in case of looping
+      if (secondSlideIndex < slides.length) {
+        slides[secondSlideIndex].classList.add('active');
+      } else {
+        // Handle edge case for the end of the loop
+        slides[secondSlideIndex % slides.length].classList.add('active');
+      }
+    }
+  }
 });
+
 // select size
 
 let size = Array.from(document.getElementsByClassName('size'));
