@@ -1727,6 +1727,10 @@ video {
   fill: #2C2C2C;
 }
 
+.stroke-secondary {
+  stroke: #0222C3;
+}
+
 .p-1 {
   padding: 0.25rem;
 }
