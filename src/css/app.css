@@ -71,7 +71,7 @@ html {
 }
 
 body {
-  font-family: payda-Regular;
+  font-family: payda-Regular !important;
   user-select: none;
   overflow-x: hidden;
 }
@@ -213,7 +213,7 @@ a {
   }
 }
 /* testimonials */
-.testimonials > div > div.active,.testimonials > div > div:hover {
+.testimonials > div > div > div.active,.testimonials > div > div > div:hover {
   background-color: white;
   box-shadow: -4px 11px 31px 5px #71717129;
 }

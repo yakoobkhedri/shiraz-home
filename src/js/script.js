@@ -112,6 +112,17 @@ var homes3 = new Swiper(".homes3", {
     prevEl: ".swiper-button-prev",
   },
 });
+
+var testimonials = new Swiper(".testimonials", {
+  slidesPerView: 3,
+  spaceBetween: 24,
+  direction: "vertical",
+  autoplay: true,
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+});
 // select size
 
 let size = Array.from(document.getElementsByClassName('size'));

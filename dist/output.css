@@ -827,6 +827,14 @@ video {
   top: auto;
 }
 
+.top-\[202px\] {
+  top: 202px;
+}
+
+.top-\[382px\] {
+  top: 382px;
+}
+
 .z-0 {
   z-index: 0;
 }
@@ -975,11 +983,22 @@ video {
   margin-top: 5px;
 }
 
+.mb-6 {
+  margin-bottom: 1.5rem;
+}
+
 .line-clamp-2 {
   overflow: hidden;
   display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 2;
+}
+
+.line-clamp-3 {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
 }
 
 .block {
@@ -1016,6 +1035,10 @@ video {
 
 .hidden {
   display: none;
+}
+
+.\!h-\[580px\] {
+  height: 580px !important;
 }
 
 .h-0 {
@@ -1162,10 +1185,6 @@ video {
   height: 56px;
 }
 
-.h-\[576px\] {
-  height: 576px;
-}
-
 .h-\[58px\] {
   height: 58px;
 }
@@ -1200,6 +1219,10 @@ video {
 
 .h-full {
   height: 100%;
+}
+
+.\!h-\[590px\] {
+  height: 590px !important;
 }
 
 .\!w-\[60\%\] {
@@ -1344,6 +1367,14 @@ video {
 
 .w-full {
   width: 100%;
+}
+
+.w-\[50\%\] {
+  width: 50%;
+}
+
+.\!w-\[50\%\] {
+  width: 50% !important;
 }
 
 .min-w-\[460px\] {
@@ -1560,10 +1591,6 @@ video {
 
 .gap-\[54px\] {
   gap: 54px;
-}
-
-.gap-y-\[13px\] {
-  row-gap: 13px;
 }
 
 .gap-y-\[18px\] {
@@ -1876,6 +1903,11 @@ video {
 .py-\[70px\] {
   padding-top: 70px;
   padding-bottom: 70px;
+}
+
+.py-4 {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
 }
 
 .pb-0 {
@@ -2193,10 +2225,6 @@ video {
   transition-duration: 500ms;
 }
 
-.ease-in-out {
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
-
 @font-face {
   font-family: payda-Regular;
 
@@ -2330,7 +2358,7 @@ html {
 }
 
 body {
-  font-family: payda-Regular;
+  font-family: payda-Regular !important;
   -webkit-user-select: none;
      -moz-user-select: none;
           user-select: none;
@@ -2512,7 +2540,7 @@ a {
 
 /* testimonials */
 
-.testimonials > div > div.active,.testimonials > div > div:hover {
+.testimonials > div > div > div.active,.testimonials > div > div > div:hover {
   background-color: white;
   box-shadow: -4px 11px 31px 5px #71717129;
 }
@@ -3517,10 +3545,6 @@ input[type="number"] {
 
   .sm\:gap-\[18px\] {
     gap: 18px;
-  }
-
-  .sm\:gap-y-6 {
-    row-gap: 1.5rem;
   }
 
   .sm\:\!rounded-2xl {
