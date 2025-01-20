@@ -370,6 +370,9 @@ input[type="number"] {
 .shadow-2{
   box-shadow: -14px 11px 80px 0px #F76B16B2;
 }
+.shadow-3{
+  box-shadow: 0px -4px 96px -15px #0000001A;
+}
 .shadow-next {
   box-shadow: -2px 0px 24px 0px #0000001A;
 }

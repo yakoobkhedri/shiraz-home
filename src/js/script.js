@@ -144,7 +144,24 @@ var testimonials = new Swiper(".testimonials", {
     }
   }
 });
-
+var blog = new Swiper(".blog", {
+  slidesPerView: 1.3,
+  spaceBetween: 16,
+  autoplay: true,
+  breakpoints: {
+    768: {
+      spaceBetween: 48,
+      slidesPerView: 2,
+    },
+    1300: {
+      slidesPerView: 3,
+    }
+  },
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+});
 // select size
 
 let size = Array.from(document.getElementsByClassName('size'));
