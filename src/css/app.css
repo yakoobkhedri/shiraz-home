@@ -373,6 +373,9 @@ input[type="number"] {
 .shadow-3{
   box-shadow: 0px -4px 96px -15px #0000001A;
 }
+.shadow-4{
+  box-shadow: 0px 11px 28px 0px #FF970459;
+}
 .shadow-next {
   box-shadow: -2px 0px 24px 0px #0000001A;
 }
@@ -398,6 +401,19 @@ input[type="number"] {
 }
 .swiper-button-next::after,.swiper-button-prev::after {
   content: none!important;;
+}
+.rooms .swiper-pagination-bullet{
+  width: 3px!important;
+  height: 11px!important;
+  background-color: #BEBEBE!important;
+  border-radius: 10px!important;
+  transition: all .4s!important;
+  opacity: 100;
+  margin: 0 2px!important;
+}
+.rooms .swiper-pagination-bullet-active{
+  height: 18px!important;
+  background-color: #FF9704!important;
 }
 /* swiper effect */
 html[dir="ltr"] .data_imagesContLeftRight {

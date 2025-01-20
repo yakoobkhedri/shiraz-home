@@ -162,6 +162,42 @@ var blog = new Swiper(".blog", {
     prevEl: ".swiper-button-prev",
   },
 });
+var filters = new Swiper(".filters", {
+  slidesPerView: 3,
+  spaceBetween: 12,
+  autoplay: true,
+  breakpoints: {
+    576: {
+      slidesPerView: 4,
+    },
+    768: {
+      slidesPerView: 5,
+    },
+    992: {
+      slidesPerView: 6,
+    },
+    1200: {
+      slidesPerView: 8,
+    }
+  },
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+});
+
+var rooms = new Swiper(".rooms", {
+  loop: true,
+  spaceBetween: 20,
+  slidesPerView: 1,
+  effect: "fade",
+  autoplay: true,
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+});
+
 // select size
 
 let size = Array.from(document.getElementsByClassName('size'));
