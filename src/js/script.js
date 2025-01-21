@@ -163,15 +163,15 @@ var blog = new Swiper(".blog", {
   },
 });
 var filters = new Swiper(".filters", {
-  slidesPerView: 3,
+  slidesPerView: 2,
   spaceBetween: 12,
   autoplay: true,
   breakpoints: {
     576: {
-      slidesPerView: 4,
+      slidesPerView: 3,
     },
     768: {
-      slidesPerView: 5,
+      slidesPerView: 4,
     },
     992: {
       slidesPerView: 6,
