@@ -376,6 +376,12 @@ input[type="number"] {
 .shadow-4{
   box-shadow: 0px 11px 28px 0px #FF970459;
 }
+.shadow-5{
+  box-shadow: 0px 0px 82.42px 0px #0000001C;
+}
+.shadow-6{
+  box-shadow: -11.2px 8.8px 64px 0px #D1AF89B2;
+}
 .shadow-next {
   box-shadow: -2px 0px 24px 0px #0000001A;
 }
