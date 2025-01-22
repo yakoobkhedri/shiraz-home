@@ -795,6 +795,10 @@ video {
   top: 2.75rem;
 }
 
+.top-12 {
+  top: 3rem;
+}
+
 .top-16 {
   top: 4rem;
 }
@@ -889,6 +893,10 @@ video {
 
 .z-3 {
   z-index: 3;
+}
+
+.z-4 {
+  z-index: 4;
 }
 
 .z-40 {
@@ -1847,6 +1855,10 @@ video {
 
 .rounded-\[10px\] {
   border-radius: 10px;
+}
+
+.rounded-\[16px\] {
+  border-radius: 16px;
 }
 
 .rounded-\[18px\] {
@@ -3361,6 +3373,14 @@ html[dir="rtl"] .data_imagesContLeftRight {
   display: none !important;
 }
 
+/* select */
+
+.options.active {
+  visibility: visible;
+  top: 4rem;
+  opacity: 1;
+}
+
 @media only screen and (max-width: 768px) {
   .banner .swiper-pagination-bullet{
     width: 4px!important;
@@ -3384,6 +3404,11 @@ html[dir="rtl"] .data_imagesContLeftRight {
 .hover\:bg-\[\#160C59\]:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(22 12 89 / var(--tw-bg-opacity));
+}
+
+.hover\:bg-\[\#F9F9F9\]:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(249 249 249 / var(--tw-bg-opacity));
 }
 
 .hover\:bg-dark:hover {

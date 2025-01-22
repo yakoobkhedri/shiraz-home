@@ -472,6 +472,10 @@ html[dir="rtl"] .data_imagesContLeftRight {
 .rs-container .rs-pointer::after, .rs-container .rs-pointer::before {
   display: none !important;
 }
+/* select */
+.options.active{
+  @apply top-16 visible opacity-100;
+}
 @media only screen and (max-width: 768px) {
   .banner .swiper-pagination-bullet{
     width: 4px!important;

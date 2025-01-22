@@ -104,6 +104,49 @@
     </div>
     </div>
   </div>
+  <div style="visibility: hidden; opacity: 0;" data-button="city-modal"
+    class="modal-container overflow-auto bg-black/60 backdrop-blur-sm fixed inset-0 z-50 transition-all flex justify-center items-center px-4 sm:px-7">
+    <form
+    class="modal-content bg-white max-w-[326px] w-full rounded-[27px] shadow-8">
+    <div class="p-[20px] relative">
+      <!-- shape -->
+      <div class="w-9 h-9 rounded-[10px] bg-white absolute rotate-45 rtl:right-8 ltr:left-8 -top-2"></div>
+      <!--  -->
+      <div class="flex items-center justify-between mb-5 relative">
+        <div class="font-medium px-4 flex items-center gap-2">
+          <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M15.465 6.3375C14.6775 2.8725 11.6549 1.3125 8.99995 1.3125C8.99995 1.3125 8.99995 1.3125 8.99245 1.3125C6.34495 1.3125 3.31495 2.865 2.52745 6.33C1.64995 10.2 4.01995 13.4775 6.16495 15.54C6.95995 16.305 7.97995 16.6875 8.99995 16.6875C10.0199 16.6875 11.0399 16.305 11.8274 15.54C13.9724 13.4775 16.3425 10.2075 15.465 6.3375ZM8.99995 10.095C7.69495 10.095 6.63745 9.0375 6.63745 7.7325C6.63745 6.4275 7.69495 5.37 8.99995 5.37C10.3049 5.37 11.3624 6.4275 11.3624 7.7325C11.3624 9.0375 10.3049 10.095 8.99995 10.095Z" fill="#292D32"/>
+            </svg>
+          <p>انتخاب شهر</p>
+         </div>
+        <!-- close modal -->
+        <svg class="cursor-pointer close-button" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M13.41 11.9999L17.71 7.70994C17.8983 7.52164 18.0041 7.26624 18.0041 6.99994C18.0041 6.73364 17.8983 6.47825 17.71 6.28994C17.5217 6.10164 17.2663 5.99585 17 5.99585C16.7337 5.99585 16.4783 6.10164 16.29 6.28994L12 10.5899L7.71 6.28994C7.5217 6.10164 7.2663 5.99585 7 5.99585C6.7337 5.99585 6.4783 6.10164 6.29 6.28994C6.1017 6.47825 5.99591 6.73364 5.99591 6.99994C5.99591 7.26624 6.1017 7.52164 6.29 7.70994L10.59 11.9999L6.29 16.2899C6.19627 16.3829 6.12188 16.4935 6.07111 16.6154C6.02034 16.7372 5.9942 16.8679 5.9942 16.9999C5.9942 17.132 6.02034 17.2627 6.07111 17.3845C6.12188 17.5064 6.19627 17.617 6.29 17.7099C6.38296 17.8037 6.49356 17.8781 6.61542 17.9288C6.73728 17.9796 6.86799 18.0057 7 18.0057C7.13201 18.0057 7.26272 17.9796 7.38458 17.9288C7.50644 17.8781 7.61704 17.8037 7.71 17.7099L12 13.4099L16.29 17.7099C16.383 17.8037 16.4936 17.8781 16.6154 17.9288C16.7373 17.9796 16.868 18.0057 17 18.0057C17.132 18.0057 17.2627 17.9796 17.3846 17.9288C17.5064 17.8781 17.617 17.8037 17.71 17.7099C17.8037 17.617 17.8781 17.5064 17.9289 17.3845C17.9797 17.2627 18.0058 17.132 18.0058 16.9999C18.0058 16.8679 17.9797 16.7372 17.9289 16.6154C17.8781 16.4935 17.8037 16.3829 17.71 16.2899L13.41 11.9999Z" fill="#1E2D48"></path>
+        </svg>
+      </div>
+      <div class="rounded-2xl bg-[#F9F9F9] p-4 mt-4 relative">
+        <div class="flex items-center gap-[10px] cursor-pointer openSelect">
+          <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M8.625 15.75C12.56 15.75 15.75 12.56 15.75 8.625C15.75 4.68997 12.56 1.5 8.625 1.5C4.68997 1.5 1.5 4.68997 1.5 8.625C1.5 12.56 4.68997 15.75 8.625 15.75Z" stroke="#B4B4B4" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M16.5 16.5L15 15" stroke="#B4B4B4" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <p class="text-dark text-sm font-medium">انتخاب شهر</p>
+          <svg class="rtl:mr-auto ltr:ml-auto" width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12.9401 1.7124L8.05006 6.6024C7.47256 7.1799 6.52756 7.1799 5.95006 6.6024L1.06006 1.7124" stroke="#292D32" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <ul class="bg-white rounded-[16px] overflow-hidden absolute inset-x-0 w-full top-12 invisible opacity-0 transition shadow-3 z-1 options">
+          <li class="py-2 px-3 transition hover:bg-[#F9F9F9] cursor-pointer">ارومیه</li>
+          <li class="py-2 px-3 transition hover:bg-[#F9F9F9] cursor-pointer">سنندج</li>
+          <li class="py-2 px-3 transition hover:bg-[#F9F9F9] cursor-pointer">تهران</li>
+          <li class="py-2 px-3 transition hover:bg-[#F9F9F9] cursor-pointer">اهواز</li>
+          <li class="py-2 px-3 transition hover:bg-[#F9F9F9] cursor-pointer">تبریز</li>
+        </ul>
+      </div>
+      <button class="bg-primary mt-4 rtl:mr-auto ltr:ml-auto text-white rounded-[20px] py-1 w-[73px] flex-center font-medium btnHover">ثبت</button>
+    </div>
+  </form>
+  </div>
   <div style="visibility: hidden; opacity: 0;" data-button="price-modal"
     class="modal-container overflow-auto bg-black/60 backdrop-blur-sm fixed inset-0 z-50 transition-all flex justify-center items-center px-4 sm:px-7">
     <form
@@ -377,7 +420,7 @@
               </div>
             </div>
             <div class="swiper-slide">
-              <div class="border group hover:text-primary transition hover:border-primary border-[#B4B4B4] font-medium px-4 cursor-pointer rounded-full flex-center gap-2 h-11">
+              <div id="city-modal" class="border group hover:text-primary transition hover:border-primary border-[#B4B4B4] font-medium px-4 cursor-pointer rounded-full flex-center gap-2 h-11">
                <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path class="transition group-hover:fill-primary" d="M15.465 6.3375C14.6775 2.8725 11.655 1.3125 9 1.3125C9 1.3125 9 1.3125 8.9925 1.3125C6.345 1.3125 3.315 2.865 2.5275 6.33C1.65 10.2 4.02 13.4775 6.165 15.54C6.96 16.305 7.98 16.6875 9 16.6875C10.02 16.6875 11.04 16.305 11.8275 15.54C13.9725 13.4775 16.3425 10.2075 15.465 6.3375ZM9 10.095C7.695 10.095 6.6375 9.0375 6.6375 7.7325C6.6375 6.4275 7.695 5.37 9 5.37C10.305 5.37 11.3625 6.4275 11.3625 7.7325C11.3625 9.0375 10.305 10.095 9 10.095Z" fill="#292D32"/>
                 </svg>
@@ -1443,6 +1486,7 @@
   <script src="../js/modal.js"></script>
   <script src="../js/rSlider.min.js"></script>
   <script src="../js/rangeInput.js"></script>
+  <script src="../js/selectbox.js"></script>
 </body>
 
 </html>
