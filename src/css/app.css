@@ -382,6 +382,9 @@ input[type="number"] {
 .shadow-6{
   box-shadow: -11.2px 8.8px 64px 0px #D1AF89B2;
 }
+.shadow-7{
+  box-shadow: 0px 16px 42px 0px #FF970482;
+}
 .shadow-next {
   box-shadow: -2px 0px 24px 0px #0000001A;
 }
