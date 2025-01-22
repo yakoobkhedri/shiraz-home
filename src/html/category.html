@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
   <link href="../../dist/output.css" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="../persian-daterangepicker-main/dateragepicker.css" />
+  <link rel="stylesheet" type="text/css" href="../css/rSlider.min.css" />
   <title>دسته بندی ها</title>
 </head>
 
@@ -102,6 +103,36 @@
       </form>
     </div>
     </div>
+  </div>
+  <div style="visibility: hidden; opacity: 0;" data-button="price-modal"
+    class="modal-container overflow-auto bg-black/60 backdrop-blur-sm fixed inset-0 z-50 transition-all flex justify-center items-center px-4 sm:px-7">
+    <form
+    class="modal-content bg-white max-w-[326px] w-full rounded-[27px] shadow-8">
+    <div class="p-[20px] relative">
+      <!-- shape -->
+      <div class="w-9 h-9 rounded-[10px] bg-white absolute rotate-45 rtl:right-8 ltr:left-8 -top-2"></div>
+      <!--  -->
+      <div class="flex items-center justify-between mb-5 relative">
+        <div class="font-medium px-4 flex items-center gap-2">
+          <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12.75 2.625H5.25C3 2.625 1.5 3.75 1.5 6.375V11.625C1.5 14.25 3 15.375 5.25 15.375H12.75C15 15.375 16.5 14.25 16.5 11.625V6.375C16.5 3.75 15 2.625 12.75 2.625ZM6 13.3125H3.75C3.4425 13.3125 3.1875 13.0575 3.1875 12.75C3.1875 12.4425 3.4425 12.1875 3.75 12.1875H6C6.3075 12.1875 6.5625 12.4425 6.5625 12.75C6.5625 13.0575 6.3075 13.3125 6 13.3125ZM9 11.25C7.755 11.25 6.75 10.245 6.75 9C6.75 7.755 7.755 6.75 9 6.75C10.245 6.75 11.25 7.755 11.25 9C11.25 10.245 10.245 11.25 9 11.25ZM14.25 5.8125H12C11.6925 5.8125 11.4375 5.5575 11.4375 5.25C11.4375 4.9425 11.6925 4.6875 12 4.6875H14.25C14.5575 4.6875 14.8125 4.9425 14.8125 5.25C14.8125 5.5575 14.5575 5.8125 14.25 5.8125Z" fill="#292D32"/>
+            </svg>
+          <p>قیمت برای هر شب</p>
+         </div>
+        <!-- close modal -->
+        <svg class="cursor-pointer close-button" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M13.41 11.9999L17.71 7.70994C17.8983 7.52164 18.0041 7.26624 18.0041 6.99994C18.0041 6.73364 17.8983 6.47825 17.71 6.28994C17.5217 6.10164 17.2663 5.99585 17 5.99585C16.7337 5.99585 16.4783 6.10164 16.29 6.28994L12 10.5899L7.71 6.28994C7.5217 6.10164 7.2663 5.99585 7 5.99585C6.7337 5.99585 6.4783 6.10164 6.29 6.28994C6.1017 6.47825 5.99591 6.73364 5.99591 6.99994C5.99591 7.26624 6.1017 7.52164 6.29 7.70994L10.59 11.9999L6.29 16.2899C6.19627 16.3829 6.12188 16.4935 6.07111 16.6154C6.02034 16.7372 5.9942 16.8679 5.9942 16.9999C5.9942 17.132 6.02034 17.2627 6.07111 17.3845C6.12188 17.5064 6.19627 17.617 6.29 17.7099C6.38296 17.8037 6.49356 17.8781 6.61542 17.9288C6.73728 17.9796 6.86799 18.0057 7 18.0057C7.13201 18.0057 7.26272 17.9796 7.38458 17.9288C7.50644 17.8781 7.61704 17.8037 7.71 17.7099L12 13.4099L16.29 17.7099C16.383 17.8037 16.4936 17.8781 16.6154 17.9288C16.7373 17.9796 16.868 18.0057 17 18.0057C17.132 18.0057 17.2627 17.9796 17.3846 17.9288C17.5064 17.8781 17.617 17.8037 17.71 17.7099C17.8037 17.617 17.8781 17.5064 17.9289 17.3845C17.9797 17.2627 18.0058 17.132 18.0058 16.9999C18.0058 16.8679 17.9797 16.7372 17.9289 16.6154C17.8781 16.4935 17.8037 16.3829 17.71 16.2899L13.41 11.9999Z" fill="#1E2D48"></path>
+        </svg>
+      </div>
+      <div class="rounded-2xl bg-[#F9F9F9] p-4 mt-4 relative">
+        <input type="text" id="slider" class="slider">
+        <p class="flex-center gap-2 text-sm font-medium text-dark w-full mt-3">
+          از <span class="font-faNumBold">100,000</span> تا <span class="font-faNumBold">90,000,000</span>
+        </p>
+      </div>
+      <button class="bg-primary mt-4 rtl:mr-auto ltr:ml-auto text-white rounded-[20px] py-1 w-[73px] flex-center font-medium btnHover">ثبت</button>
+    </div>
+  </form>
   </div>
   </div>
 
@@ -354,7 +385,7 @@
               </div>
             </div>
             <div class="swiper-slide">
-              <div class="border group hover:text-primary transition hover:border-primary border-[#B4B4B4] font-medium px-4 cursor-pointer rounded-full flex-center gap-2 h-11">
+              <div id="price-modal" class="border group hover:text-primary transition hover:border-primary border-[#B4B4B4] font-medium px-4 cursor-pointer rounded-full flex-center gap-2 h-11">
                 <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path class="transition group-hover:fill-primary" d="M6.75 1.5C4.785 1.5 3.1875 3.0975 3.1875 5.0625C3.1875 6.99 4.695 8.55 6.66 8.6175C6.72 8.61 6.78 8.61 6.825 8.6175C6.84 8.6175 6.8475 8.6175 6.8625 8.6175C6.87 8.6175 6.87 8.6175 6.8775 8.6175C8.7975 8.55 10.305 6.99 10.3125 5.0625C10.3125 3.0975 8.715 1.5 6.75 1.5Z" fill="#2C2C2C"/>
                   <path class="transition group-hover:fill-primary" d="M10.56 10.6124C8.4675 9.21741 5.055 9.21741 2.9475 10.6124C1.995 11.2499 1.47 12.1124 1.47 13.0349C1.47 13.9574 1.995 14.8124 2.94 15.4424C3.99 16.1474 5.37 16.4999 6.75 16.4999C8.13 16.4999 9.51 16.1474 10.56 15.4424C11.505 14.8049 12.03 13.9499 12.03 13.0199C12.0225 12.0974 11.505 11.2424 10.56 10.6124Z" fill="#2C2C2C"/>
@@ -1410,6 +1441,8 @@
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script src="../js/script.js"></script>
   <script src="../js/modal.js"></script>
+  <script src="../js/rSlider.min.js"></script>
+  <script src="../js/rangeInput.js"></script>
 </body>
 
 </html>
