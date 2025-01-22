@@ -12,6 +12,98 @@
 
 <body class="max-w-[1536px] w-full mx-auto relative">
 
+   <!-- filter modals -->
+   <div class="modal">
+    <div style="visibility: hidden; opacity: 0;" data-button="persons-modal"
+      class="modal-container overflow-auto bg-black/60 backdrop-blur-sm fixed inset-0 z-50 transition-all flex justify-center items-center px-4 sm:px-7">
+      <div
+      class="modal-content bg-white max-w-[326px] w-full rounded-[27px] shadow-8">
+      <div class="p-[20px] relative">
+        <!-- shape -->
+        <div class="w-9 h-9 rounded-[10px] bg-white absolute rotate-45 rtl:right-8 ltr:left-8 -top-2"></div>
+        <!--  -->
+        <div class="flex items-center justify-between mb-5 relative">
+          <div class="font-medium px-4 flex items-center gap-2">
+            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+             <path d="M6.75 1.5C4.785 1.5 3.1875 3.0975 3.1875 5.0625C3.1875 6.99 4.695 8.55 6.66 8.6175C6.72 8.61 6.78 8.61 6.825 8.6175C6.84 8.6175 6.8475 8.6175 6.8625 8.6175C6.87 8.6175 6.87 8.6175 6.8775 8.6175C8.7975 8.55 10.305 6.99 10.3125 5.0625C10.3125 3.0975 8.715 1.5 6.75 1.5Z" fill="#2C2C2C"></path>
+             <path d="M10.56 10.6124C8.4675 9.21741 5.055 9.21741 2.9475 10.6124C1.995 11.2499 1.47 12.1124 1.47 13.0349C1.47 13.9574 1.995 14.8124 2.94 15.4424C3.99 16.1474 5.37 16.4999 6.75 16.4999C8.13 16.4999 9.51 16.1474 10.56 15.4424C11.505 14.8049 12.03 13.9499 12.03 13.0199C12.0225 12.0974 11.505 11.2424 10.56 10.6124Z" fill="#2C2C2C"></path>
+             <path d="M14.9925 5.50507C15.1125 6.96008 14.0775 8.23507 12.645 8.40758C12.6375 8.40758 12.6375 8.40758 12.63 8.40758H12.6075C12.5625 8.40758 12.5175 8.40757 12.48 8.42257C11.7525 8.46007 11.085 8.22757 10.5825 7.80008C11.355 7.11007 11.7975 6.07507 11.7075 4.95007C11.655 4.34257 11.445 3.78757 11.13 3.31507C11.415 3.17257 11.745 3.08257 12.0825 3.05257C13.5525 2.92507 14.865 4.02007 14.9925 5.50507Z" fill="#2C2C2C"></path>
+             <path d="M16.4925 12.4426C16.4325 13.1701 15.9675 13.8001 15.1875 14.2276C14.4375 14.6401 13.4925 14.8351 12.555 14.8126C13.095 14.3251 13.41 13.7176 13.47 13.0726C13.545 12.1426 13.1025 11.2501 12.2175 10.5376C11.715 10.1401 11.13 9.82505 10.4925 9.59255C12.15 9.11255 14.235 9.43505 15.5175 10.4701C16.2075 11.0251 16.56 11.7226 16.4925 12.4426Z" fill="#2C2C2C"></path>
+             </svg>
+            <p>تعداد نفرات</p>
+           </div>
+          <!-- close modal -->
+          <svg class="cursor-pointer close-button" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M13.41 11.9999L17.71 7.70994C17.8983 7.52164 18.0041 7.26624 18.0041 6.99994C18.0041 6.73364 17.8983 6.47825 17.71 6.28994C17.5217 6.10164 17.2663 5.99585 17 5.99585C16.7337 5.99585 16.4783 6.10164 16.29 6.28994L12 10.5899L7.71 6.28994C7.5217 6.10164 7.2663 5.99585 7 5.99585C6.7337 5.99585 6.4783 6.10164 6.29 6.28994C6.1017 6.47825 5.99591 6.73364 5.99591 6.99994C5.99591 7.26624 6.1017 7.52164 6.29 7.70994L10.59 11.9999L6.29 16.2899C6.19627 16.3829 6.12188 16.4935 6.07111 16.6154C6.02034 16.7372 5.9942 16.8679 5.9942 16.9999C5.9942 17.132 6.02034 17.2627 6.07111 17.3845C6.12188 17.5064 6.19627 17.617 6.29 17.7099C6.38296 17.8037 6.49356 17.8781 6.61542 17.9288C6.73728 17.9796 6.86799 18.0057 7 18.0057C7.13201 18.0057 7.26272 17.9796 7.38458 17.9288C7.50644 17.8781 7.61704 17.8037 7.71 17.7099L12 13.4099L16.29 17.7099C16.383 17.8037 16.4936 17.8781 16.6154 17.9288C16.7373 17.9796 16.868 18.0057 17 18.0057C17.132 18.0057 17.2627 17.9796 17.3846 17.9288C17.5064 17.8781 17.617 17.8037 17.71 17.7099C17.8037 17.617 17.8781 17.5064 17.9289 17.3845C17.9797 17.2627 18.0058 17.132 18.0058 16.9999C18.0058 16.8679 17.9797 16.7372 17.9289 16.6154C17.8781 16.4935 17.8037 16.3829 17.71 16.2899L13.41 11.9999Z" fill="#1E2D48"></path>
+          </svg>
+        </div>
+        <!-- form -->
+        <form class="rounded-2xl bg-[#F9F9F9] p-4 mt-4 relative flex items-center justify-between gap-2">
+          <div class="flex items-center gap-4">
+           <button class="w-5 h-5 pt-0.5 flex-center rounded-md bg-[F9F9F9] hover:text-white text-dark hover:bg-dark transition border-2 border-dark font-black">-</button>
+           <input min="1" type="number" class="w-7 h-5 bg-transparent font-faNumBold text-center outline-none text-dark" value="1">
+           <button class="w-5 h-5 pt-0.5 flex-center rounded-md bg-[F9F9F9] hover:text-white text-dark hover:bg-dark transition border-2 border-dark font-black">+</button>
+          </div>
+          <div class="flex items-center gap-3">
+            <button class="bg-primary text-white rounded-[20px] py-1 px-6 font-medium btnHover">ثبت</button>
+            <button>
+              <svg class="group" width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path class="transition group-hover:stroke-red-600" d="M15.75 4.48511C13.2525 4.23761 10.74 4.11011 8.235 4.11011C6.75 4.11011 5.265 4.18511 3.78 4.33511L2.25 4.48511" stroke="#292D32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <path class="transition group-hover:stroke-red-600" d="M6.375 3.7275L6.54 2.745C6.66 2.0325 6.75 1.5 8.0175 1.5H9.9825C11.25 1.5 11.3475 2.0625 11.46 2.7525L11.625 3.7275" stroke="#292D32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <path class="transition group-hover:stroke-red-600" d="M14.1375 6.85498L13.65 14.4075C13.5675 15.585 13.5 16.5 11.4075 16.5H6.59255C4.50005 16.5 4.43255 15.585 4.35005 14.4075L3.86255 6.85498" stroke="#292D32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <path class="transition group-hover:stroke-red-600" d="M7.74756 12.375H10.2451" stroke="#292D32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <path class="transition group-hover:stroke-red-600" d="M7.125 9.375H10.875" stroke="#292D32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </button>
+          </div>
+        </form>
+      </div>
+      </div>
+    </div>
+    <div style="visibility: hidden; opacity: 0;" data-button="rooms-modal"
+    class="modal-container overflow-auto bg-black/60 backdrop-blur-sm fixed inset-0 z-50 transition-all flex justify-center items-center px-4 sm:px-7">
+    <div
+    class="modal-content bg-white max-w-[326px] w-full rounded-[27px] shadow-8">
+    <div class="p-[20px] relative">
+      <!-- shape -->
+      <div class="w-9 h-9 rounded-[10px] bg-white absolute rotate-45 rtl:right-8 ltr:left-8 -top-2"></div>
+      <!--  -->
+      <div class="flex items-center justify-between mb-5 relative">
+        <div class="font-medium px-4 flex items-center gap-2">
+          <svg width="14" height="17" viewBox="0 0 14 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M6.2515 0.0134357L13.5015 1.51344C13.7915 1.57344 14 1.82944 14 2.12544V14.1254C14 14.2692 13.9504 14.4086 13.8596 14.5201C13.7688 14.6316 13.6423 14.7083 13.5015 14.7374L6.2515 16.2374C6.1607 16.2562 6.06686 16.2545 5.97679 16.2325C5.88672 16.2106 5.80266 16.1688 5.73072 16.1103C5.65878 16.0518 5.60075 15.9781 5.56085 15.8944C5.52094 15.8107 5.50016 15.7192 5.5 15.6264V0.625436C5.49994 0.532591 5.52056 0.440898 5.56037 0.35702C5.60017 0.273143 5.65817 0.199188 5.73014 0.140531C5.80211 0.0818737 5.88624 0.0399873 5.97643 0.0179163C6.06661 -0.00415475 6.16058 -0.00535615 6.2515 0.0134357ZM4 1.12544L4.064 15.1224L4 15.1259H0.625C0.470279 15.1259 0.321083 15.0684 0.206277 14.9647C0.0914721 14.861 0.0192196 14.7184 0.00349998 14.5644L0 14.5009V1.75094C0 1.42694 0.246 1.16094 0.561 1.12894L0.625 1.12544H4ZM8.25 7.37544C8.05109 7.37544 7.86032 7.45445 7.71967 7.59511C7.57902 7.73576 7.5 7.92652 7.5 8.12544C7.5 8.32435 7.57902 8.51511 7.71967 8.65577C7.86032 8.79642 8.05109 8.87544 8.25 8.87544C8.44891 8.87544 8.63968 8.79642 8.78033 8.65577C8.92098 8.51511 9 8.32435 9 8.12544C9 7.92652 8.92098 7.73576 8.78033 7.59511C8.63968 7.45445 8.44891 7.37544 8.25 7.37544Z" fill="#2C2C2C"/>
+            </svg>
+          <p>تعداد اتاق</p>
+         </div>
+        <!-- close modal -->
+        <svg class="cursor-pointer close-button" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M13.41 11.9999L17.71 7.70994C17.8983 7.52164 18.0041 7.26624 18.0041 6.99994C18.0041 6.73364 17.8983 6.47825 17.71 6.28994C17.5217 6.10164 17.2663 5.99585 17 5.99585C16.7337 5.99585 16.4783 6.10164 16.29 6.28994L12 10.5899L7.71 6.28994C7.5217 6.10164 7.2663 5.99585 7 5.99585C6.7337 5.99585 6.4783 6.10164 6.29 6.28994C6.1017 6.47825 5.99591 6.73364 5.99591 6.99994C5.99591 7.26624 6.1017 7.52164 6.29 7.70994L10.59 11.9999L6.29 16.2899C6.19627 16.3829 6.12188 16.4935 6.07111 16.6154C6.02034 16.7372 5.9942 16.8679 5.9942 16.9999C5.9942 17.132 6.02034 17.2627 6.07111 17.3845C6.12188 17.5064 6.19627 17.617 6.29 17.7099C6.38296 17.8037 6.49356 17.8781 6.61542 17.9288C6.73728 17.9796 6.86799 18.0057 7 18.0057C7.13201 18.0057 7.26272 17.9796 7.38458 17.9288C7.50644 17.8781 7.61704 17.8037 7.71 17.7099L12 13.4099L16.29 17.7099C16.383 17.8037 16.4936 17.8781 16.6154 17.9288C16.7373 17.9796 16.868 18.0057 17 18.0057C17.132 18.0057 17.2627 17.9796 17.3846 17.9288C17.5064 17.8781 17.617 17.8037 17.71 17.7099C17.8037 17.617 17.8781 17.5064 17.9289 17.3845C17.9797 17.2627 18.0058 17.132 18.0058 16.9999C18.0058 16.8679 17.9797 16.7372 17.9289 16.6154C17.8781 16.4935 17.8037 16.3829 17.71 16.2899L13.41 11.9999Z" fill="#1E2D48"></path>
+        </svg>
+      </div>
+      <!-- form -->
+      <form class="rounded-2xl bg-[#F9F9F9] p-4 mt-4 relative flex items-center justify-between gap-2">
+        <div class="flex items-center gap-4">
+         <button class="w-5 h-5 pt-0.5 flex-center rounded-md bg-[F9F9F9] hover:text-white text-dark hover:bg-dark transition border-2 border-dark font-black">-</button>
+         <input min="1" type="number" class="w-7 h-5 bg-transparent font-faNumBold text-center outline-none text-dark" value="1">
+         <button class="w-5 h-5 pt-0.5 flex-center rounded-md bg-[F9F9F9] hover:text-white text-dark hover:bg-dark transition border-2 border-dark font-black">+</button>
+        </div>
+        <div class="flex items-center gap-3">
+          <button class="bg-primary text-white rounded-[20px] py-1 px-6 font-medium btnHover">ثبت</button>
+          <button>
+            <svg class="group" width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path class="transition group-hover:stroke-red-600" d="M15.75 4.48511C13.2525 4.23761 10.74 4.11011 8.235 4.11011C6.75 4.11011 5.265 4.18511 3.78 4.33511L2.25 4.48511" stroke="#292D32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              <path class="transition group-hover:stroke-red-600" d="M6.375 3.7275L6.54 2.745C6.66 2.0325 6.75 1.5 8.0175 1.5H9.9825C11.25 1.5 11.3475 2.0625 11.46 2.7525L11.625 3.7275" stroke="#292D32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              <path class="transition group-hover:stroke-red-600" d="M14.1375 6.85498L13.65 14.4075C13.5675 15.585 13.5 16.5 11.4075 16.5H6.59255C4.50005 16.5 4.43255 15.585 4.35005 14.4075L3.86255 6.85498" stroke="#292D32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              <path class="transition group-hover:stroke-red-600" d="M7.74756 12.375H10.2451" stroke="#292D32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              <path class="transition group-hover:stroke-red-600" d="M7.125 9.375H10.875" stroke="#292D32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </button>
+        </div>
+      </form>
+    </div>
+    </div>
+  </div>
+  </div>
 
   <!-- header -->
   <header class="relative">
@@ -235,7 +327,7 @@
               </div>
             </div>
             <div class="swiper-slide">
-              <div class="border group hover:text-primary transition hover:border-primary border-[#B4B4B4] font-medium px-4 cursor-pointer rounded-full flex-center gap-2 h-11">
+              <div id="persons-modal" class="border group hover:text-primary transition hover:border-primary border-[#B4B4B4] font-medium px-4 cursor-pointer rounded-full flex-center gap-2 h-11">
                <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path class="transition group-hover:fill-primary" d="M6.75 1.5C4.785 1.5 3.1875 3.0975 3.1875 5.0625C3.1875 6.99 4.695 8.55 6.66 8.6175C6.72 8.61 6.78 8.61 6.825 8.6175C6.84 8.6175 6.8475 8.6175 6.8625 8.6175C6.87 8.6175 6.87 8.6175 6.8775 8.6175C8.7975 8.55 10.305 6.99 10.3125 5.0625C10.3125 3.0975 8.715 1.5 6.75 1.5Z" fill="#2C2C2C"/>
                 <path class="transition group-hover:fill-primary" d="M10.56 10.6124C8.4675 9.21741 5.055 9.21741 2.9475 10.6124C1.995 11.2499 1.47 12.1124 1.47 13.0349C1.47 13.9574 1.995 14.8124 2.94 15.4424C3.99 16.1474 5.37 16.4999 6.75 16.4999C8.13 16.4999 9.51 16.1474 10.56 15.4424C11.505 14.8049 12.03 13.9499 12.03 13.0199C12.0225 12.0974 11.505 11.2424 10.56 10.6124Z" fill="#2C2C2C"/>
@@ -246,7 +338,7 @@
               </div>
             </div>
             <div class="swiper-slide">
-              <div class="border group hover:text-primary transition hover:border-primary border-[#B4B4B4] font-medium px-4 cursor-pointer rounded-full flex-center gap-2 h-11">
+              <div id="rooms-modal" class="border group hover:text-primary transition hover:border-primary border-[#B4B4B4] font-medium px-4 cursor-pointer rounded-full flex-center gap-2 h-11">
                <svg width="14" height="18" viewBox="0 0 14 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path class="transition group-hover:fill-primary" d="M6.2515 0.888192L13.5015 2.38819C13.7915 2.44819 14 2.70419 14 3.00019V15.0002C14 15.144 13.9504 15.2834 13.8596 15.3948C13.7688 15.5063 13.6423 15.5831 13.5015 15.6122L6.2515 17.1122C6.1607 17.131 6.06686 17.1293 5.97679 17.1073C5.88672 17.0853 5.80266 17.0436 5.73072 16.9851C5.65878 16.9266 5.60075 16.8528 5.56085 16.7691C5.52094 16.6854 5.50016 16.5939 5.5 16.5012V1.50019C5.49994 1.40735 5.52056 1.31565 5.56037 1.23178C5.60017 1.1479 5.65817 1.07394 5.73014 1.01529C5.80211 0.95663 5.88624 0.914743 5.97643 0.892672C6.06661 0.870601 6.16058 0.8694 6.2515 0.888192ZM4 2.00019L4.064 15.9972L4 16.0007H0.625C0.470279 16.0006 0.321083 15.9432 0.206277 15.8395C0.0914721 15.7357 0.0192196 15.5931 0.00349998 15.4392L0 15.3757V2.62569C0 2.30169 0.246 2.03569 0.561 2.00369L0.625 2.00019H4ZM8.25 8.25019C8.05109 8.25019 7.86032 8.32921 7.71967 8.46986C7.57902 8.61051 7.5 8.80128 7.5 9.00019C7.5 9.1991 7.57902 9.38987 7.71967 9.53052C7.86032 9.67117 8.05109 9.75019 8.25 9.75019C8.44891 9.75019 8.63968 9.67117 8.78033 9.53052C8.92098 9.38987 9 9.1991 9 9.00019C9 8.80128 8.92098 8.61051 8.78033 8.46986C8.63968 8.32921 8.44891 8.25019 8.25 8.25019Z" fill="#2C2C2C"/>
                 </svg>
@@ -1317,6 +1409,7 @@
 
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script src="../js/script.js"></script>
+  <script src="../js/modal.js"></script>
 </body>
 
 </html>

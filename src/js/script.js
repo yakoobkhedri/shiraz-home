@@ -165,7 +165,6 @@ var blog = new Swiper(".blog", {
 var filters = new Swiper(".filters", {
   slidesPerView: 2,
   spaceBetween: 12,
-  autoplay: true,
   breakpoints: {
     576: {
       slidesPerView: 3,
