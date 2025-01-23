@@ -175,7 +175,7 @@ var filters = new Swiper(".filters", {
     992: {
       slidesPerView: 6,
     },
-    1200: {
+    1280: {
       slidesPerView: 8,
     }
   },

@@ -15,6 +15,37 @@
 
    <!-- filter modals -->
    <div class="modal">
+    <div style="visibility: hidden; opacity: 0;" data-button="date-modal"
+      class="modal-container overflow-auto bg-black/60 backdrop-blur-sm fixed inset-0 z-50 transition-all flex justify-center items-center px-4 sm:px-7">
+      <form
+      class="modal-content bg-white max-w-[326px] w-full rounded-[27px] shadow-8">
+      <div class="p-[20px] relative">
+        <!-- shape -->
+        <div class="w-9 h-9 rounded-[10px] bg-white absolute rotate-45 rtl:right-8 ltr:left-8 -top-2"></div>
+        <!--  -->
+        <div class="flex items-center justify-between mb-5 relative">
+          <div class="font-medium px-4 flex items-center gap-2">
+            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12.5625 2.67V1.5C12.5625 1.1925 12.3075 0.9375 12 0.9375C11.6925 0.9375 11.4375 1.1925 11.4375 1.5V2.625H6.56249V1.5C6.56249 1.1925 6.30749 0.9375 5.99999 0.9375C5.69249 0.9375 5.43749 1.1925 5.43749 1.5V2.67C3.41249 2.8575 2.42999 4.065 2.27999 5.8575C2.26499 6.075 2.44499 6.255 2.65499 6.255H15.345C15.5625 6.255 15.7425 6.0675 15.72 5.8575C15.57 4.065 14.5875 2.8575 12.5625 2.67Z" fill="#2C2C2C"></path>
+              <path d="M15 7.37988H3C2.5875 7.37988 2.25 7.71738 2.25 8.12988V12.7499C2.25 14.9999 3.375 16.4999 6 16.4999H12C14.625 16.4999 15.75 14.9999 15.75 12.7499V8.12988C15.75 7.71738 15.4125 7.37988 15 7.37988ZM6.9075 13.6574C6.87 13.6874 6.8325 13.7249 6.795 13.7474C6.75 13.7774 6.705 13.7999 6.66 13.8149C6.615 13.8374 6.57 13.8524 6.525 13.8599C6.4725 13.8674 6.4275 13.8749 6.375 13.8749C6.2775 13.8749 6.18 13.8524 6.09 13.8149C5.9925 13.7774 5.9175 13.7249 5.8425 13.6574C5.7075 13.5149 5.625 13.3199 5.625 13.1249C5.625 12.9299 5.7075 12.7349 5.8425 12.5924C5.9175 12.5249 5.9925 12.4724 6.09 12.4349C6.225 12.3749 6.375 12.3599 6.525 12.3899C6.57 12.3974 6.615 12.4124 6.66 12.4349C6.705 12.4499 6.75 12.4724 6.795 12.5024C6.8325 12.5324 6.87 12.5624 6.9075 12.5924C7.0425 12.7349 7.125 12.9299 7.125 13.1249C7.125 13.3199 7.0425 13.5149 6.9075 13.6574ZM6.9075 11.0324C6.765 11.1674 6.57 11.2499 6.375 11.2499C6.18 11.2499 5.985 11.1674 5.8425 11.0324C5.7075 10.8899 5.625 10.6949 5.625 10.4999C5.625 10.3049 5.7075 10.1099 5.8425 9.96738C6.0525 9.75738 6.3825 9.68988 6.66 9.80988C6.7575 9.84738 6.84 9.89988 6.9075 9.96738C7.0425 10.1099 7.125 10.3049 7.125 10.4999C7.125 10.6949 7.0425 10.8899 6.9075 11.0324ZM9.5325 13.6574C9.39 13.7924 9.195 13.8749 9 13.8749C8.805 13.8749 8.61 13.7924 8.4675 13.6574C8.3325 13.5149 8.25 13.3199 8.25 13.1249C8.25 12.9299 8.3325 12.7349 8.4675 12.5924C8.745 12.3149 9.255 12.3149 9.5325 12.5924C9.6675 12.7349 9.75 12.9299 9.75 13.1249C9.75 13.3199 9.6675 13.5149 9.5325 13.6574ZM9.5325 11.0324C9.495 11.0624 9.4575 11.0924 9.42 11.1224C9.375 11.1524 9.33 11.1749 9.285 11.1899C9.24 11.2124 9.195 11.2274 9.15 11.2349C9.0975 11.2424 9.0525 11.2499 9 11.2499C8.805 11.2499 8.61 11.1674 8.4675 11.0324C8.3325 10.8899 8.25 10.6949 8.25 10.4999C8.25 10.3049 8.3325 10.1099 8.4675 9.96738C8.535 9.89988 8.6175 9.84738 8.715 9.80988C8.9925 9.68988 9.3225 9.75738 9.5325 9.96738C9.6675 10.1099 9.75 10.3049 9.75 10.4999C9.75 10.6949 9.6675 10.8899 9.5325 11.0324ZM12.1575 13.6574C12.015 13.7924 11.82 13.8749 11.625 13.8749C11.43 13.8749 11.235 13.7924 11.0925 13.6574C10.9575 13.5149 10.875 13.3199 10.875 13.1249C10.875 12.9299 10.9575 12.7349 11.0925 12.5924C11.37 12.3149 11.88 12.3149 12.1575 12.5924C12.2925 12.7349 12.375 12.9299 12.375 13.1249C12.375 13.3199 12.2925 13.5149 12.1575 13.6574ZM12.1575 11.0324C12.12 11.0624 12.0825 11.0924 12.045 11.1224C12 11.1524 11.955 11.1749 11.91 11.1899C11.865 11.2124 11.82 11.2274 11.775 11.2349C11.7225 11.2424 11.67 11.2499 11.625 11.2499C11.43 11.2499 11.235 11.1674 11.0925 11.0324C10.9575 10.8899 10.875 10.6949 10.875 10.4999C10.875 10.3049 10.9575 10.1099 11.0925 9.96738C11.1675 9.89988 11.2425 9.84738 11.34 9.80988C11.475 9.74988 11.625 9.73488 11.775 9.76488C11.82 9.77238 11.865 9.78738 11.91 9.80988C11.955 9.82488 12 9.84738 12.045 9.87738C12.0825 9.90738 12.12 9.93738 12.1575 9.96738C12.2925 10.1099 12.375 10.3049 12.375 10.4999C12.375 10.6949 12.2925 10.8899 12.1575 11.0324Z" fill="#2C2C2C"></path>
+            </svg>
+            <p>انتخاب تاریخ</p>
+           </div>
+          <!-- close modal -->
+          <svg class="cursor-pointer close-button" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M13.41 11.9999L17.71 7.70994C17.8983 7.52164 18.0041 7.26624 18.0041 6.99994C18.0041 6.73364 17.8983 6.47825 17.71 6.28994C17.5217 6.10164 17.2663 5.99585 17 5.99585C16.7337 5.99585 16.4783 6.10164 16.29 6.28994L12 10.5899L7.71 6.28994C7.5217 6.10164 7.2663 5.99585 7 5.99585C6.7337 5.99585 6.4783 6.10164 6.29 6.28994C6.1017 6.47825 5.99591 6.73364 5.99591 6.99994C5.99591 7.26624 6.1017 7.52164 6.29 7.70994L10.59 11.9999L6.29 16.2899C6.19627 16.3829 6.12188 16.4935 6.07111 16.6154C6.02034 16.7372 5.9942 16.8679 5.9942 16.9999C5.9942 17.132 6.02034 17.2627 6.07111 17.3845C6.12188 17.5064 6.19627 17.617 6.29 17.7099C6.38296 17.8037 6.49356 17.8781 6.61542 17.9288C6.73728 17.9796 6.86799 18.0057 7 18.0057C7.13201 18.0057 7.26272 17.9796 7.38458 17.9288C7.50644 17.8781 7.61704 17.8037 7.71 17.7099L12 13.4099L16.29 17.7099C16.383 17.8037 16.4936 17.8781 16.6154 17.9288C16.7373 17.9796 16.868 18.0057 17 18.0057C17.132 18.0057 17.2627 17.9796 17.3846 17.9288C17.5064 17.8781 17.617 17.8037 17.71 17.7099C17.8037 17.617 17.8781 17.5064 17.9289 17.3845C17.9797 17.2627 18.0058 17.132 18.0058 16.9999C18.0058 16.8679 17.9797 16.7372 17.9289 16.6154C17.8781 16.4935 17.8037 16.3829 17.71 16.2899L13.41 11.9999Z" fill="#1E2D48"></path>
+          </svg>
+        </div>
+        <!-- form -->
+        <div class="rounded-2xl bg-[#F9F9F9] p-4 mt-4 relative">
+          <input id="daterangepicker" type="text"
+          class="border-0 h-full font-faNumRegular outline-none bg-transparent w-full"
+          value="تاریخ ورود    |    تاریخ خروج" />
+        </div>
+        <button class="bg-primary mt-4 rtl:mr-auto ltr:ml-auto text-white rounded-[20px] py-1 w-[73px] flex-center font-medium btnHover">ثبت</button>
+      </div>
+    </form>
+    </div>
     <div style="visibility: hidden; opacity: 0;" data-button="persons-modal"
       class="modal-container overflow-auto bg-black/60 backdrop-blur-sm fixed inset-0 z-50 transition-all flex justify-center items-center px-4 sm:px-7">
       <div
@@ -125,17 +156,17 @@
         </svg>
       </div>
       <div class="rounded-2xl bg-[#F9F9F9] p-4 mt-4 relative">
-        <div class="flex items-center gap-[10px] cursor-pointer openSelect">
+        <div class="selectArea flex items-center gap-[10px] cursor-pointer openSelect">
           <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M8.625 15.75C12.56 15.75 15.75 12.56 15.75 8.625C15.75 4.68997 12.56 1.5 8.625 1.5C4.68997 1.5 1.5 4.68997 1.5 8.625C1.5 12.56 4.68997 15.75 8.625 15.75Z" stroke="#B4B4B4" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
             <path d="M16.5 16.5L15 15" stroke="#B4B4B4" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
           </svg>
-          <p class="text-dark text-sm font-medium">انتخاب شهر</p>
+          <p class="text-dark text-sm font-medium optionSelected">انتخاب شهر</p>
           <svg class="rtl:mr-auto ltr:ml-auto" width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M12.9401 1.7124L8.05006 6.6024C7.47256 7.1799 6.52756 7.1799 5.95006 6.6024L1.06006 1.7124" stroke="#292D32" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
           </svg>
         </div>
-        <ul class="bg-white rounded-[16px] overflow-hidden absolute inset-x-0 w-full top-12 invisible opacity-0 transition shadow-3 z-1 options">
+        <ul class="bg-white selectArea rounded-[16px] max-h-[200px] overflow-auto absolute inset-x-0 w-full top-12 invisible opacity-0 transition shadow-3 z-1 options">
           <li class="py-2 px-3 transition hover:bg-[#F9F9F9] cursor-pointer">ارومیه</li>
           <li class="py-2 px-3 transition hover:bg-[#F9F9F9] cursor-pointer">سنندج</li>
           <li class="py-2 px-3 transition hover:bg-[#F9F9F9] cursor-pointer">تهران</li>
@@ -177,6 +208,129 @@
     </div>
   </form>
   </div>
+  <div style="visibility: hidden; opacity: 0;" data-button="home-modal"
+    class="modal-container overflow-auto bg-black/60 backdrop-blur-sm fixed inset-0 z-50 transition-all flex justify-center items-center px-4 sm:px-7">
+    <form
+    class="modal-content bg-white max-w-[326px] w-full rounded-[27px] shadow-8">
+    <div class="p-[20px] relative">
+      <!-- shape -->
+      <div class="w-9 h-9 rounded-[10px] bg-white absolute rotate-45 rtl:right-8 ltr:left-8 -top-2"></div>
+      <!--  -->
+      <div class="flex items-center justify-between mb-5 relative">
+        <div class="font-medium px-4 flex items-center gap-2">
+          <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M14.5275 3.66759L10.1325 1.71009C9.48749 1.42509 8.51249 1.42509 7.86749 1.71009L3.47249 3.66759C2.36249 4.16259 2.19749 4.83759 2.19749 5.19759C2.19749 5.55759 2.36249 6.23259 3.47249 6.72759L7.86749 8.68509C8.18999 8.82759 8.59499 8.90259 8.99999 8.90259C9.40499 8.90259 9.80999 8.82759 10.1325 8.68509L14.5275 6.72759C15.6375 6.23259 15.8025 5.55759 15.8025 5.19759C15.8025 4.83759 15.645 4.16259 14.5275 3.66759Z" fill="#292D32"></path>
+            <path d="M9.00001 12.78C8.71501 12.78 8.43001 12.72 8.16751 12.6075L3.11251 10.3575C2.34001 10.0125 1.74001 9.09 1.74001 8.2425C1.74001 7.935 1.98751 7.6875 2.29501 7.6875C2.60251 7.6875 2.85001 7.935 2.85001 8.2425C2.85001 8.6475 3.18751 9.1725 3.56251 9.3375L8.61751 11.5875C8.85751 11.6925 9.13501 11.6925 9.37501 11.5875L14.43 9.3375C14.805 9.1725 15.1425 8.655 15.1425 8.2425C15.1425 7.935 15.39 7.6875 15.6975 7.6875C16.005 7.6875 16.2525 7.935 16.2525 8.2425C16.2525 9.0825 15.6525 10.0125 14.88 10.3575L9.82501 12.6075C9.57001 12.72 9.28501 12.78 9.00001 12.78Z" fill="#292D32"></path>
+            <path d="M9.00001 16.5C8.71501 16.5 8.43001 16.44 8.16751 16.3275L3.11251 14.0775C2.28001 13.71 1.74001 12.8775 1.74001 11.9625C1.74001 11.655 1.98751 11.4075 2.29501 11.4075C2.60251 11.4075 2.85001 11.655 2.85001 11.9625C2.85001 12.435 3.12751 12.8625 3.56251 13.0575L8.61751 15.3075C8.85751 15.4125 9.13501 15.4125 9.37501 15.3075L14.43 13.0575C14.8575 12.87 15.1425 12.435 15.1425 11.9625C15.1425 11.655 15.39 11.4075 15.6975 11.4075C16.005 11.4075 16.2525 11.655 16.2525 11.9625C16.2525 12.8775 15.7125 13.7025 14.88 14.0775L9.82501 16.3275C9.57001 16.44 9.28501 16.5 9.00001 16.5Z" fill="#292D32"></path>
+            </svg>
+          <p>نوع اقامتگاه</p>
+         </div>
+        <!-- close modal -->
+        <svg class="cursor-pointer close-button" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M13.41 11.9999L17.71 7.70994C17.8983 7.52164 18.0041 7.26624 18.0041 6.99994C18.0041 6.73364 17.8983 6.47825 17.71 6.28994C17.5217 6.10164 17.2663 5.99585 17 5.99585C16.7337 5.99585 16.4783 6.10164 16.29 6.28994L12 10.5899L7.71 6.28994C7.5217 6.10164 7.2663 5.99585 7 5.99585C6.7337 5.99585 6.4783 6.10164 6.29 6.28994C6.1017 6.47825 5.99591 6.73364 5.99591 6.99994C5.99591 7.26624 6.1017 7.52164 6.29 7.70994L10.59 11.9999L6.29 16.2899C6.19627 16.3829 6.12188 16.4935 6.07111 16.6154C6.02034 16.7372 5.9942 16.8679 5.9942 16.9999C5.9942 17.132 6.02034 17.2627 6.07111 17.3845C6.12188 17.5064 6.19627 17.617 6.29 17.7099C6.38296 17.8037 6.49356 17.8781 6.61542 17.9288C6.73728 17.9796 6.86799 18.0057 7 18.0057C7.13201 18.0057 7.26272 17.9796 7.38458 17.9288C7.50644 17.8781 7.61704 17.8037 7.71 17.7099L12 13.4099L16.29 17.7099C16.383 17.8037 16.4936 17.8781 16.6154 17.9288C16.7373 17.9796 16.868 18.0057 17 18.0057C17.132 18.0057 17.2627 17.9796 17.3846 17.9288C17.5064 17.8781 17.617 17.8037 17.71 17.7099C17.8037 17.617 17.8781 17.5064 17.9289 17.3845C17.9797 17.2627 18.0058 17.132 18.0058 16.9999C18.0058 16.8679 17.9797 16.7372 17.9289 16.6154C17.8781 16.4935 17.8037 16.3829 17.71 16.2899L13.41 11.9999Z" fill="#1E2D48"></path>
+        </svg>
+      </div>
+      <div class="rounded-2xl bg-[#F9F9F9] p-4 mt-4 relative">
+        <div class="selectArea flex items-center gap-[10px] cursor-pointer openSelect">
+          <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M8.625 15.75C12.56 15.75 15.75 12.56 15.75 8.625C15.75 4.68997 12.56 1.5 8.625 1.5C4.68997 1.5 1.5 4.68997 1.5 8.625C1.5 12.56 4.68997 15.75 8.625 15.75Z" stroke="#B4B4B4" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M16.5 16.5L15 15" stroke="#B4B4B4" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <p class="text-dark text-sm font-medium optionSelected">انتخاب اقامتگاه</p>
+          <svg class="rtl:mr-auto ltr:ml-auto" width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12.9401 1.7124L8.05006 6.6024C7.47256 7.1799 6.52756 7.1799 5.95006 6.6024L1.06006 1.7124" stroke="#292D32" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <ul class="bg-white selectArea rounded-[16px] max-h-[200px] overflow-auto absolute inset-x-0 w-full top-12 invisible opacity-0 transition shadow-3 z-1 options">
+          <li class="py-2 px-3 transition hover:bg-[#F9F9F9] cursor-pointer">اقامتگاه اول</li>
+          <li class="py-2 px-3 transition hover:bg-[#F9F9F9] cursor-pointer">اقامتگاه دوم</li>
+          <li class="py-2 px-3 transition hover:bg-[#F9F9F9] cursor-pointer">اقامتگاه سوم</li>
+        </ul>
+      </div>
+      <button class="bg-primary mt-4 rtl:mr-auto ltr:ml-auto text-white rounded-[20px] py-1 w-[73px] flex-center font-medium btnHover">ثبت</button>
+    </div>
+  </form>
+  </div>
+  <div style="visibility: hidden; opacity: 0;" data-button="parking-modal"
+  class="modal-container overflow-auto bg-black/60 backdrop-blur-sm fixed inset-0 z-50 transition-all flex justify-center items-center px-4 sm:px-7">
+  <form
+  class="modal-content bg-white max-w-[326px] w-full rounded-[27px] shadow-8">
+  <div class="p-[20px] relative">
+    <!-- shape -->
+    <div class="w-9 h-9 rounded-[10px] bg-white absolute rotate-45 rtl:right-8 ltr:left-8 -top-2"></div>
+    <!--  -->
+    <div class="flex items-center justify-between mb-5 relative">
+      <div class="font-medium px-4 flex items-center gap-2">
+        <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M4.5 11.25V14.25C4.5 14.6625 4.35325 15.0157 4.05975 15.3097C3.76625 15.6038 3.413 15.7505 3 15.75C2.587 15.7495 2.234 15.6027 1.941 15.3097C1.648 15.0168 1.501 14.6635 1.5 14.25V3.75C1.5 3.3375 1.647 2.9845 1.941 2.691C2.235 2.3975 2.588 2.2505 3 2.25H6.75C8 2.25 9.0625 2.6875 9.9375 3.5625C10.8125 4.4375 11.25 5.5 11.25 6.75C11.25 8 10.8125 9.0625 9.9375 9.9375C9.0625 10.8125 8 11.25 6.75 11.25H4.5ZM4.5 8.25H6.9C7.3125 8.25 7.66575 8.10325 7.95975 7.80975C8.25375 7.51625 8.4005 7.163 8.4 6.75C8.3995 6.337 8.25275 5.984 7.95975 5.691C7.66675 5.398 7.3135 5.251 6.9 5.25H4.5V8.25Z" fill="black"></path>
+          </svg>
+        <p>پارکینگ</p>
+       </div>
+      <!-- close modal -->
+      <svg class="cursor-pointer close-button" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M13.41 11.9999L17.71 7.70994C17.8983 7.52164 18.0041 7.26624 18.0041 6.99994C18.0041 6.73364 17.8983 6.47825 17.71 6.28994C17.5217 6.10164 17.2663 5.99585 17 5.99585C16.7337 5.99585 16.4783 6.10164 16.29 6.28994L12 10.5899L7.71 6.28994C7.5217 6.10164 7.2663 5.99585 7 5.99585C6.7337 5.99585 6.4783 6.10164 6.29 6.28994C6.1017 6.47825 5.99591 6.73364 5.99591 6.99994C5.99591 7.26624 6.1017 7.52164 6.29 7.70994L10.59 11.9999L6.29 16.2899C6.19627 16.3829 6.12188 16.4935 6.07111 16.6154C6.02034 16.7372 5.9942 16.8679 5.9942 16.9999C5.9942 17.132 6.02034 17.2627 6.07111 17.3845C6.12188 17.5064 6.19627 17.617 6.29 17.7099C6.38296 17.8037 6.49356 17.8781 6.61542 17.9288C6.73728 17.9796 6.86799 18.0057 7 18.0057C7.13201 18.0057 7.26272 17.9796 7.38458 17.9288C7.50644 17.8781 7.61704 17.8037 7.71 17.7099L12 13.4099L16.29 17.7099C16.383 17.8037 16.4936 17.8781 16.6154 17.9288C16.7373 17.9796 16.868 18.0057 17 18.0057C17.132 18.0057 17.2627 17.9796 17.3846 17.9288C17.5064 17.8781 17.617 17.8037 17.71 17.7099C17.8037 17.617 17.8781 17.5064 17.9289 17.3845C17.9797 17.2627 18.0058 17.132 18.0058 16.9999C18.0058 16.8679 17.9797 16.7372 17.9289 16.6154C17.8781 16.4935 17.8037 16.3829 17.71 16.2899L13.41 11.9999Z" fill="#1E2D48"></path>
+      </svg>
+    </div>
+    <div class="rounded-2xl bg-[#F9F9F9] p-4 mt-4 relative">
+      <div class="selectArea flex items-center gap-[10px] cursor-pointer openSelect">
+        <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M8.625 15.75C12.56 15.75 15.75 12.56 15.75 8.625C15.75 4.68997 12.56 1.5 8.625 1.5C4.68997 1.5 1.5 4.68997 1.5 8.625C1.5 12.56 4.68997 15.75 8.625 15.75Z" stroke="#B4B4B4" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M16.5 16.5L15 15" stroke="#B4B4B4" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <p class="text-dark text-sm font-medium optionSelected">انتخاب پارکینگ</p>
+        <svg class="rtl:mr-auto ltr:ml-auto" width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12.9401 1.7124L8.05006 6.6024C7.47256 7.1799 6.52756 7.1799 5.95006 6.6024L1.06006 1.7124" stroke="#292D32" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </div>
+      <ul class="bg-white selectArea rounded-[16px] max-h-[200px] overflow-auto absolute inset-x-0 w-full top-12 invisible opacity-0 transition shadow-3 z-1 options">
+        <li class="py-2 px-3 transition hover:bg-[#F9F9F9] cursor-pointer">دارد</li>
+        <li class="py-2 px-3 transition hover:bg-[#F9F9F9] cursor-pointer">ندارد</li>
+      </ul>
+    </div>
+    <button class="bg-primary mt-4 rtl:mr-auto ltr:ml-auto text-white rounded-[20px] py-1 w-[73px] flex-center font-medium btnHover">ثبت</button>
+  </div>
+</form>
+</div>
+<div style="visibility: hidden; opacity: 0;" data-button="off-modal"
+class="modal-container overflow-auto bg-black/60 backdrop-blur-sm fixed inset-0 z-50 transition-all flex justify-center items-center px-4 sm:px-7">
+<form
+class="modal-content bg-white max-w-[326px] w-full rounded-[27px] shadow-8">
+<div class="p-[20px] relative">
+  <!-- shape -->
+  <div class="w-9 h-9 rounded-[10px] bg-white absolute rotate-45 rtl:right-8 ltr:left-8 -top-2"></div>
+  <!--  -->
+  <div class="flex items-center justify-between mb-5 relative">
+    <div class="font-medium px-4 flex items-center gap-2">
+      <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M17.469 8.622L9.369 0.522C9.045 0.198 8.595 0 8.1 0H1.8C0.81 0 0 0.81 0 1.8V8.1C0 8.595 0.198 9.045 0.531 9.378L8.631 17.478C8.955 17.802 9.405 18 9.9 18C10.395 18 10.845 17.802 11.169 17.469L17.469 11.169C17.802 10.845 18 10.395 18 9.9C18 9.405 17.793 8.946 17.469 8.622ZM3.15 4.5C2.403 4.5 1.8 3.897 1.8 3.15C1.8 2.403 2.403 1.8 3.15 1.8C3.897 1.8 4.5 2.403 4.5 3.15C4.5 3.897 3.897 4.5 3.15 4.5Z" fill="#2C2C2C"></path>
+        </svg>
+      <p>تخفیف</p>
+     </div>
+    <!-- close modal -->
+    <svg class="cursor-pointer close-button" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M13.41 11.9999L17.71 7.70994C17.8983 7.52164 18.0041 7.26624 18.0041 6.99994C18.0041 6.73364 17.8983 6.47825 17.71 6.28994C17.5217 6.10164 17.2663 5.99585 17 5.99585C16.7337 5.99585 16.4783 6.10164 16.29 6.28994L12 10.5899L7.71 6.28994C7.5217 6.10164 7.2663 5.99585 7 5.99585C6.7337 5.99585 6.4783 6.10164 6.29 6.28994C6.1017 6.47825 5.99591 6.73364 5.99591 6.99994C5.99591 7.26624 6.1017 7.52164 6.29 7.70994L10.59 11.9999L6.29 16.2899C6.19627 16.3829 6.12188 16.4935 6.07111 16.6154C6.02034 16.7372 5.9942 16.8679 5.9942 16.9999C5.9942 17.132 6.02034 17.2627 6.07111 17.3845C6.12188 17.5064 6.19627 17.617 6.29 17.7099C6.38296 17.8037 6.49356 17.8781 6.61542 17.9288C6.73728 17.9796 6.86799 18.0057 7 18.0057C7.13201 18.0057 7.26272 17.9796 7.38458 17.9288C7.50644 17.8781 7.61704 17.8037 7.71 17.7099L12 13.4099L16.29 17.7099C16.383 17.8037 16.4936 17.8781 16.6154 17.9288C16.7373 17.9796 16.868 18.0057 17 18.0057C17.132 18.0057 17.2627 17.9796 17.3846 17.9288C17.5064 17.8781 17.617 17.8037 17.71 17.7099C17.8037 17.617 17.8781 17.5064 17.9289 17.3845C17.9797 17.2627 18.0058 17.132 18.0058 16.9999C18.0058 16.8679 17.9797 16.7372 17.9289 16.6154C17.8781 16.4935 17.8037 16.3829 17.71 16.2899L13.41 11.9999Z" fill="#1E2D48"></path>
+    </svg>
+  </div>
+  <div class="rounded-2xl bg-[#F9F9F9] p-4 mt-4 relative">
+    <div class="selectArea flex items-center gap-[10px] cursor-pointer openSelect">
+      <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M8.625 15.75C12.56 15.75 15.75 12.56 15.75 8.625C15.75 4.68997 12.56 1.5 8.625 1.5C4.68997 1.5 1.5 4.68997 1.5 8.625C1.5 12.56 4.68997 15.75 8.625 15.75Z" stroke="#B4B4B4" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M16.5 16.5L15 15" stroke="#B4B4B4" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      <p class="text-dark text-sm font-medium optionSelected">تخفیف</p>
+      <svg class="rtl:mr-auto ltr:ml-auto" width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M12.9401 1.7124L8.05006 6.6024C7.47256 7.1799 6.52756 7.1799 5.95006 6.6024L1.06006 1.7124" stroke="#292D32" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </div>
+    <ul class="bg-white selectArea rounded-[16px] max-h-[200px] overflow-auto absolute inset-x-0 w-full top-12 invisible opacity-0 transition shadow-3 z-1 options">
+      <li class="py-2 px-3 transition hover:bg-[#F9F9F9] cursor-pointer">دارد</li>
+      <li class="py-2 px-3 transition hover:bg-[#F9F9F9] cursor-pointer">ندارد</li>
+    </ul>
+  </div>
+  <button class="bg-primary mt-4 rtl:mr-auto ltr:ml-auto text-white rounded-[20px] py-1 w-[73px] flex-center font-medium btnHover">ثبت</button>
+</div>
+</form>
+</div>
   </div>
 
   <!-- header -->
@@ -392,7 +546,7 @@
         <div class="swiper filters">
           <div class="swiper-wrapper">
             <div class="swiper-slide">
-              <div class="border group hover:text-primary transition hover:border-primary border-[#B4B4B4] font-medium px-4 cursor-pointer rounded-full flex-center gap-2 h-11">
+              <div id="date-modal" class="border group hover:text-primary transition hover:border-primary border-[#B4B4B4] font-medium px-4 cursor-pointer rounded-full flex-center gap-2 h-11">
                <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                  <path class="transition group-hover:fill-primary" d="M12.5625 2.67V1.5C12.5625 1.1925 12.3075 0.9375 12 0.9375C11.6925 0.9375 11.4375 1.1925 11.4375 1.5V2.625H6.56249V1.5C6.56249 1.1925 6.30749 0.9375 5.99999 0.9375C5.69249 0.9375 5.43749 1.1925 5.43749 1.5V2.67C3.41249 2.8575 2.42999 4.065 2.27999 5.8575C2.26499 6.075 2.44499 6.255 2.65499 6.255H15.345C15.5625 6.255 15.7425 6.0675 15.72 5.8575C15.57 4.065 14.5875 2.8575 12.5625 2.67Z" fill="#2C2C2C"/>
                  <path class="transition group-hover:fill-primary" d="M15 7.37988H3C2.5875 7.37988 2.25 7.71738 2.25 8.12988V12.7499C2.25 14.9999 3.375 16.4999 6 16.4999H12C14.625 16.4999 15.75 14.9999 15.75 12.7499V8.12988C15.75 7.71738 15.4125 7.37988 15 7.37988ZM6.9075 13.6574C6.87 13.6874 6.8325 13.7249 6.795 13.7474C6.75 13.7774 6.705 13.7999 6.66 13.8149C6.615 13.8374 6.57 13.8524 6.525 13.8599C6.4725 13.8674 6.4275 13.8749 6.375 13.8749C6.2775 13.8749 6.18 13.8524 6.09 13.8149C5.9925 13.7774 5.9175 13.7249 5.8425 13.6574C5.7075 13.5149 5.625 13.3199 5.625 13.1249C5.625 12.9299 5.7075 12.7349 5.8425 12.5924C5.9175 12.5249 5.9925 12.4724 6.09 12.4349C6.225 12.3749 6.375 12.3599 6.525 12.3899C6.57 12.3974 6.615 12.4124 6.66 12.4349C6.705 12.4499 6.75 12.4724 6.795 12.5024C6.8325 12.5324 6.87 12.5624 6.9075 12.5924C7.0425 12.7349 7.125 12.9299 7.125 13.1249C7.125 13.3199 7.0425 13.5149 6.9075 13.6574ZM6.9075 11.0324C6.765 11.1674 6.57 11.2499 6.375 11.2499C6.18 11.2499 5.985 11.1674 5.8425 11.0324C5.7075 10.8899 5.625 10.6949 5.625 10.4999C5.625 10.3049 5.7075 10.1099 5.8425 9.96738C6.0525 9.75738 6.3825 9.68988 6.66 9.80988C6.7575 9.84738 6.84 9.89988 6.9075 9.96738C7.0425 10.1099 7.125 10.3049 7.125 10.4999C7.125 10.6949 7.0425 10.8899 6.9075 11.0324ZM9.5325 13.6574C9.39 13.7924 9.195 13.8749 9 13.8749C8.805 13.8749 8.61 13.7924 8.4675 13.6574C8.3325 13.5149 8.25 13.3199 8.25 13.1249C8.25 12.9299 8.3325 12.7349 8.4675 12.5924C8.745 12.3149 9.255 12.3149 9.5325 12.5924C9.6675 12.7349 9.75 12.9299 9.75 13.1249C9.75 13.3199 9.6675 13.5149 9.5325 13.6574ZM9.5325 11.0324C9.495 11.0624 9.4575 11.0924 9.42 11.1224C9.375 11.1524 9.33 11.1749 9.285 11.1899C9.24 11.2124 9.195 11.2274 9.15 11.2349C9.0975 11.2424 9.0525 11.2499 9 11.2499C8.805 11.2499 8.61 11.1674 8.4675 11.0324C8.3325 10.8899 8.25 10.6949 8.25 10.4999C8.25 10.3049 8.3325 10.1099 8.4675 9.96738C8.535 9.89988 8.6175 9.84738 8.715 9.80988C8.9925 9.68988 9.3225 9.75738 9.5325 9.96738C9.6675 10.1099 9.75 10.3049 9.75 10.4999C9.75 10.6949 9.6675 10.8899 9.5325 11.0324ZM12.1575 13.6574C12.015 13.7924 11.82 13.8749 11.625 13.8749C11.43 13.8749 11.235 13.7924 11.0925 13.6574C10.9575 13.5149 10.875 13.3199 10.875 13.1249C10.875 12.9299 10.9575 12.7349 11.0925 12.5924C11.37 12.3149 11.88 12.3149 12.1575 12.5924C12.2925 12.7349 12.375 12.9299 12.375 13.1249C12.375 13.3199 12.2925 13.5149 12.1575 13.6574ZM12.1575 11.0324C12.12 11.0624 12.0825 11.0924 12.045 11.1224C12 11.1524 11.955 11.1749 11.91 11.1899C11.865 11.2124 11.82 11.2274 11.775 11.2349C11.7225 11.2424 11.67 11.2499 11.625 11.2499C11.43 11.2499 11.235 11.1674 11.0925 11.0324C10.9575 10.8899 10.875 10.6949 10.875 10.4999C10.875 10.3049 10.9575 10.1099 11.0925 9.96738C11.1675 9.89988 11.2425 9.84738 11.34 9.80988C11.475 9.74988 11.625 9.73488 11.775 9.76488C11.82 9.77238 11.865 9.78738 11.91 9.80988C11.955 9.82488 12 9.84738 12.045 9.87738C12.0825 9.90738 12.12 9.93738 12.1575 9.96738C12.2925 10.1099 12.375 10.3049 12.375 10.4999C12.375 10.6949 12.2925 10.8899 12.1575 11.0324Z" fill="#2C2C2C"/>
@@ -430,16 +584,13 @@
             <div class="swiper-slide">
               <div id="price-modal" class="border group hover:text-primary transition hover:border-primary border-[#B4B4B4] font-medium px-4 cursor-pointer rounded-full flex-center gap-2 h-11">
                 <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path class="transition group-hover:fill-primary" d="M6.75 1.5C4.785 1.5 3.1875 3.0975 3.1875 5.0625C3.1875 6.99 4.695 8.55 6.66 8.6175C6.72 8.61 6.78 8.61 6.825 8.6175C6.84 8.6175 6.8475 8.6175 6.8625 8.6175C6.87 8.6175 6.87 8.6175 6.8775 8.6175C8.7975 8.55 10.305 6.99 10.3125 5.0625C10.3125 3.0975 8.715 1.5 6.75 1.5Z" fill="#2C2C2C"/>
-                  <path class="transition group-hover:fill-primary" d="M10.56 10.6124C8.4675 9.21741 5.055 9.21741 2.9475 10.6124C1.995 11.2499 1.47 12.1124 1.47 13.0349C1.47 13.9574 1.995 14.8124 2.94 15.4424C3.99 16.1474 5.37 16.4999 6.75 16.4999C8.13 16.4999 9.51 16.1474 10.56 15.4424C11.505 14.8049 12.03 13.9499 12.03 13.0199C12.0225 12.0974 11.505 11.2424 10.56 10.6124Z" fill="#2C2C2C"/>
-                  <path class="transition group-hover:fill-primary" d="M14.9925 5.50507C15.1125 6.96008 14.0775 8.23507 12.645 8.40758C12.6375 8.40758 12.6375 8.40758 12.63 8.40758H12.6075C12.5625 8.40758 12.5175 8.40757 12.48 8.42257C11.7525 8.46007 11.085 8.22757 10.5825 7.80008C11.355 7.11007 11.7975 6.07507 11.7075 4.95007C11.655 4.34257 11.445 3.78757 11.13 3.31507C11.415 3.17257 11.745 3.08257 12.0825 3.05257C13.5525 2.92507 14.865 4.02007 14.9925 5.50507Z" fill="#2C2C2C"/>
-                  <path class="transition group-hover:fill-primary" d="M16.4925 12.4426C16.4325 13.1701 15.9675 13.8001 15.1875 14.2276C14.4375 14.6401 13.4925 14.8351 12.555 14.8126C13.095 14.3251 13.41 13.7176 13.47 13.0726C13.545 12.1426 13.1025 11.2501 12.2175 10.5376C11.715 10.1401 11.13 9.82505 10.4925 9.59255C12.15 9.11255 14.235 9.43505 15.5175 10.4701C16.2075 11.0251 16.56 11.7226 16.4925 12.4426Z" fill="#2C2C2C"/>
-                </svg>
+                  <path class="transition group-hover:fill-primary" d="M12.75 2.625H5.25C3 2.625 1.5 3.75 1.5 6.375V11.625C1.5 14.25 3 15.375 5.25 15.375H12.75C15 15.375 16.5 14.25 16.5 11.625V6.375C16.5 3.75 15 2.625 12.75 2.625ZM6 13.3125H3.75C3.4425 13.3125 3.1875 13.0575 3.1875 12.75C3.1875 12.4425 3.4425 12.1875 3.75 12.1875H6C6.3075 12.1875 6.5625 12.4425 6.5625 12.75C6.5625 13.0575 6.3075 13.3125 6 13.3125ZM9 11.25C7.755 11.25 6.75 10.245 6.75 9C6.75 7.755 7.755 6.75 9 6.75C10.245 6.75 11.25 7.755 11.25 9C11.25 10.245 10.245 11.25 9 11.25ZM14.25 5.8125H12C11.6925 5.8125 11.4375 5.5575 11.4375 5.25C11.4375 4.9425 11.6925 4.6875 12 4.6875H14.25C14.5575 4.6875 14.8125 4.9425 14.8125 5.25C14.8125 5.5575 14.5575 5.8125 14.25 5.8125Z" fill="#292D32"></path>
+                  </svg>
                <p>انتخاب قیمت</p>
               </div>
             </div>
             <div class="swiper-slide">
-              <div class="border group hover:text-primary transition hover:border-primary border-[#B4B4B4] font-medium px-4 cursor-pointer rounded-full flex-center gap-2 h-11">
+              <div id="home-modal" class="border group hover:text-primary transition hover:border-primary border-[#B4B4B4] font-medium px-4 cursor-pointer rounded-full flex-center gap-2 h-11">
                <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path class="transition group-hover:fill-primary" d="M14.5275 3.66759L10.1325 1.71009C9.48749 1.42509 8.51249 1.42509 7.86749 1.71009L3.47249 3.66759C2.36249 4.16259 2.19749 4.83759 2.19749 5.19759C2.19749 5.55759 2.36249 6.23259 3.47249 6.72759L7.86749 8.68509C8.18999 8.82759 8.59499 8.90259 8.99999 8.90259C9.40499 8.90259 9.80999 8.82759 10.1325 8.68509L14.5275 6.72759C15.6375 6.23259 15.8025 5.55759 15.8025 5.19759C15.8025 4.83759 15.645 4.16259 14.5275 3.66759Z" fill="#292D32"/>
                 <path class="transition group-hover:fill-primary" d="M9.00001 12.78C8.71501 12.78 8.43001 12.72 8.16751 12.6075L3.11251 10.3575C2.34001 10.0125 1.74001 9.09 1.74001 8.2425C1.74001 7.935 1.98751 7.6875 2.29501 7.6875C2.60251 7.6875 2.85001 7.935 2.85001 8.2425C2.85001 8.6475 3.18751 9.1725 3.56251 9.3375L8.61751 11.5875C8.85751 11.6925 9.13501 11.6925 9.37501 11.5875L14.43 9.3375C14.805 9.1725 15.1425 8.655 15.1425 8.2425C15.1425 7.935 15.39 7.6875 15.6975 7.6875C16.005 7.6875 16.2525 7.935 16.2525 8.2425C16.2525 9.0825 15.6525 10.0125 14.88 10.3575L9.82501 12.6075C9.57001 12.72 9.28501 12.78 9.00001 12.78Z" fill="#292D32"/>
@@ -449,7 +600,7 @@
               </div>
             </div>
             <div class="swiper-slide">
-              <div class="border group hover:text-primary transition hover:border-primary border-[#B4B4B4] font-medium px-4 cursor-pointer rounded-full flex-center gap-2 h-11">
+              <div id="parking-modal" class="border group hover:text-primary transition hover:border-primary border-[#B4B4B4] font-medium px-4 cursor-pointer rounded-full flex-center gap-2 h-11">
                <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path class="transition group-hover:fill-primary" d="M4.5 11.25V14.25C4.5 14.6625 4.35325 15.0157 4.05975 15.3097C3.76625 15.6038 3.413 15.7505 3 15.75C2.587 15.7495 2.234 15.6027 1.941 15.3097C1.648 15.0168 1.501 14.6635 1.5 14.25V3.75C1.5 3.3375 1.647 2.9845 1.941 2.691C2.235 2.3975 2.588 2.2505 3 2.25H6.75C8 2.25 9.0625 2.6875 9.9375 3.5625C10.8125 4.4375 11.25 5.5 11.25 6.75C11.25 8 10.8125 9.0625 9.9375 9.9375C9.0625 10.8125 8 11.25 6.75 11.25H4.5ZM4.5 8.25H6.9C7.3125 8.25 7.66575 8.10325 7.95975 7.80975C8.25375 7.51625 8.4005 7.163 8.4 6.75C8.3995 6.337 8.25275 5.984 7.95975 5.691C7.66675 5.398 7.3135 5.251 6.9 5.25H4.5V8.25Z" fill="black"/>
                 </svg>
@@ -457,7 +608,7 @@
               </div>
             </div>
             <div class="swiper-slide">
-              <div class="border group hover:text-primary transition hover:border-primary border-[#B4B4B4] font-medium px-4 cursor-pointer rounded-full flex-center gap-2 h-11">
+              <div id="off-modal" class="border group hover:text-primary transition hover:border-primary border-[#B4B4B4] font-medium px-4 cursor-pointer rounded-full flex-center gap-2 h-11">
                <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path class="transition group-hover:fill-primary" d="M17.469 8.622L9.369 0.522C9.045 0.198 8.595 0 8.1 0H1.8C0.81 0 0 0.81 0 1.8V8.1C0 8.595 0.198 9.045 0.531 9.378L8.631 17.478C8.955 17.802 9.405 18 9.9 18C10.395 18 10.845 17.802 11.169 17.469L17.469 11.169C17.802 10.845 18 10.395 18 9.9C18 9.405 17.793 8.946 17.469 8.622ZM3.15 4.5C2.403 4.5 1.8 3.897 1.8 3.15C1.8 2.403 2.403 1.8 3.15 1.8C3.897 1.8 4.5 2.403 4.5 3.15C4.5 3.897 3.897 4.5 3.15 4.5Z" fill="#2C2C2C"/>
                 </svg>
@@ -1482,6 +1633,11 @@
 
 
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+  integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+<script src="../persian-daterangepicker-main/jalali-moment.browser.js"></script>
+<script src="../persian-daterangepicker-main/dateragepicker.js"></script>
+<script src="../js/calender.js"></script>
   <script src="../js/script.js"></script>
   <script src="../js/modal.js"></script>
   <script src="../js/rSlider.min.js"></script>

@@ -476,6 +476,10 @@ html[dir="rtl"] .data_imagesContLeftRight {
 .options.active{
   @apply top-16 visible opacity-100;
 }
+.options li.active{
+  background-color: #ff9704;
+  color: white;
+}
 @media only screen and (max-width: 768px) {
   .banner .swiper-pagination-bullet{
     width: 4px!important;

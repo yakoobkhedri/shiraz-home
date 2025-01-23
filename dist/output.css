@@ -895,10 +895,6 @@ video {
   z-index: 3;
 }
 
-.z-4 {
-  z-index: 4;
-}
-
 .z-40 {
   z-index: 40;
 }
@@ -1276,6 +1272,10 @@ video {
   height: 1px;
 }
 
+.h-\[200px\] {
+  height: 200px;
+}
+
 .h-\[204px\] {
   height: 204px;
 }
@@ -1394,6 +1394,10 @@ video {
 
 .h-full {
   height: 100%;
+}
+
+.max-h-\[200px\] {
+  max-height: 200px;
 }
 
 .\!w-\[50\%\] {
@@ -3379,6 +3383,11 @@ html[dir="rtl"] .data_imagesContLeftRight {
   visibility: visible;
   top: 4rem;
   opacity: 1;
+}
+
+.options li.active{
+  background-color: #ff9704;
+  color: white;
 }
 
 @media only screen and (max-width: 768px) {
