@@ -480,6 +480,16 @@ html[dir="rtl"] .data_imagesContLeftRight {
   background-color: #ff9704;
   color: white;
 }
+/* filter options */
+.filters .swiper-slide > form.filtered {
+  border: 1px solid #FF9704;
+}
+.filters .swiper-slide > form.filtered > p {
+  display: none;
+}
+.filters .swiper-slide > form.filtered > div {
+  display: flex;
+}
 @media only screen and (max-width: 768px) {
   .banner .swiper-pagination-bullet{
     width: 4px!important;
