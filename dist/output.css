@@ -972,6 +972,11 @@ video {
   margin-bottom: auto;
 }
 
+.my-14 {
+  margin-top: 3.5rem;
+  margin-bottom: 3.5rem;
+}
+
 .-mb-10 {
   margin-bottom: -2.5rem;
 }
@@ -1110,6 +1115,10 @@ video {
 
 .mt-\[5px\] {
   margin-top: 5px;
+}
+
+.mb-16 {
+  margin-bottom: 4rem;
 }
 
 .line-clamp-2 {
@@ -4243,6 +4252,10 @@ html[dir="rtl"] .data_imagesContLeftRight {
     margin-top: 99px;
   }
 
+  .sm\:mt-11 {
+    margin-top: 2.75rem;
+  }
+
   .sm\:block {
     display: block;
   }
@@ -4485,6 +4498,10 @@ html[dir="rtl"] .data_imagesContLeftRight {
 
   .sm\:pt-\[52px\] {
     padding-top: 52px;
+  }
+
+  .sm\:pt-16 {
+    padding-top: 4rem;
   }
 
   .sm\:text-2xl {
