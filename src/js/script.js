@@ -270,6 +270,7 @@ decrement.forEach((item) => {
 
 let acordionBtn = Array.from(document.getElementsByClassName('acordionBtn'));
 let acordionBtn2 = Array.from(document.getElementsByClassName('acordionBtn2'));
+let acordionBtn3 = Array.from(document.getElementsByClassName('acordionBtn3'));
 
 acordionBtn.forEach((item) => {
   item.addEventListener('click', function () {
@@ -282,5 +283,12 @@ acordionBtn2.forEach((item) => {
     item.classList.toggle('active');
     item.nextElementSibling.classList.toggle('active');
     item.querySelector('img.arrow').classList.toggle('active');
+  })
+})
+acordionBtn3.forEach((item) => {
+  item.addEventListener('click', function () {
+    item.classList.toggle('active');
+    item.nextElementSibling.classList.toggle('active');
+    item.querySelector('svg').classList.toggle('active');
   })
 })

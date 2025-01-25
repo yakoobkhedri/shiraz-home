@@ -356,18 +356,27 @@ input[type="number"] {
 .acordionBtn,.acordionBtn2{
   cursor: pointer;
 }
-.acordionBtn2 img.arrow{
+.acordionBtn2 img.arrow,.acordionBtn3 svg{
   transition: all .4s;
 }
-.acordionBtn img.active,.acordionBtn2 img.arrow.active{
+.acordionBtn img.active,.acordionBtn2 img.arrow.active,.acordionBtn3 svg.active{
   transform: rotate(180deg);
 }
-.acordionContent,.acordionContent2 {
+.acordionBtn3.active p{
+  color: white;
+}
+.acordionBtn3.active > img{
+  opacity: 100%;
+}
+.acordionBtn3.active svg path{
+  stroke: white;
+}
+.acordionContent,.acordionContent2,.acordionContent3 {
   max-height: 0;
   overflow: hidden;
   transition: all .4s;
 }
-.acordionContent.active,.acordionContent2.active {
+.acordionContent.active,.acordionContent2.active,.acordionContent3.active {
   max-height: 2000px;
   overflow: visible;
 }
