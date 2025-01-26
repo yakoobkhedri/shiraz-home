@@ -408,10 +408,16 @@ input[type="number"] {
   box-shadow: -11.2px 8.8px 64px 0px #D1AF89B2;
 }
 .shadow-7{
-  box-shadow: 0px 16px 42px 0px #FF970482;
+  box-shadow: 0px 16px 42px 0px #FF970482;;
 }
 .shadow-8{
   box-shadow: 0px -26px 28px 0px #8B8B8B1F;
+}
+.shadow-9{
+  box-shadow: 0px 0px 29px 0px #5858581A;
+}
+.shadow-10{
+  box-shadow: 0px 0px 19px 0px #0000000D;
 }
 .shadow-next {
   box-shadow: -2px 0px 24px 0px #0000001A;
