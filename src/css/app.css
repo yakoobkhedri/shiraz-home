@@ -334,23 +334,24 @@ input[type="number"] {
   margin-left: 4px;
 }
 .editor-section ul{
-  @apply border-dashed ltr:border-l-2 ltr:border-r-0 ltr:pl-[18px] ltr:pr-0 border-r-2 pr-[18px] border-[#00000026] my-5 mr-4 ltr:ml-4 ltr:mr-0;
+  @apply font-bold text-dark;
 }
 .editor-section ul li{
-  @apply relative -right-[28px] first:pt-0 last:!pb-0 ltr:-left-[29px] ltr:right-0 flex items-center gap-2 py-3;
+  @apply relative flex items-center gap-2 p-3 rounded-[20px] rtl:pr-10 ltr:pl-10 mb-[22px] last:mb-0;
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(255, 151, 4, 0.1) 100%);
 }
 .editor-section ul li::before{
-  content: url('../src/img/solar_check-circle-bold-duotone.png');
+  content: url('../src/img/tick-circle.png');
   position: absolute;
   width: 20px;
   height: 20px;
   border-radius: 50%;
 }
 .editor-section ul li::before{
-  @apply rtl:-right-7 ltr:-left-7
+  @apply rtl:right-2 ltr:left-2
 }
 .editor-section ul li{
-  @apply text-sm text-[#7f7f7f] mx-7;
+  @apply text-base text-[#2C2C2C];
 }
 /* accordion */
 .acordionBtn,.acordionBtn2{
