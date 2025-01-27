@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html dir="rtl">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0 maximum-scale=1" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <link href="../../dist/output.css" rel="stylesheet">
+  <title>جزئیات اقامتگاه</title>
+</head>
+
+<body class="max-w-[1536px] w-full mx-auto relative">
+
+
+  <!-- header -->
+  <header class="relative">
+    <div class="max-w-content mx-auto px-4 ">
+      <div class="flex-between gap-3 py-3 text-xs sm:text-base">
+        <ul class="font-medium flex items-center sm:gap-8 gap-4">
+          <li><a class="hover:text-primary">سوالات متداول</a></li>
+          <li><a class="hover:text-primary">سوالات متداول</a></li>
+        </ul>
+        <div class="flex items-center gap-[14px] md:gap-7">
+          <div class="flex items-center gap-2">
+            <div class="text-dark">
+              <h5 class="font-semibold ltr:font-MontserratBold">پشتیبانی</h5>
+              <p class="mt-1"><span class="font-faNumRegular">021</span><span class="font-faNumBold">-1234567</span></p>
+            </div>
+            <a class="w-11 h-11 rounded-full bg-gray hover:bg-primary transition flex-center group">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path class="transition group-hover:fill-[#F7F7F7]"
+                  d="M21 8.55H16.2C15.79 8.55 15.45 8.21 15.45 7.8V3C15.45 2.59 15.79 2.25 16.2 2.25C16.61 2.25 16.95 2.59 16.95 3V7.05H21C21.41 7.05 21.75 7.39 21.75 7.8C21.75 8.21 21.41 8.55 21 8.55Z"
+                  fill="#FF9704" />
+                <path class="transition group-hover:fill-[#F7F7F7]"
+                  d="M11.05 14.95L9.2 16.8C8.81 17.19 8.19 17.19 7.79 16.81C7.68 16.7 7.57 16.6 7.46 16.49C6.43 15.45 5.5 14.36 4.67 13.22C3.85 12.08 3.19 10.94 2.71 9.81C2.24 8.67 2 7.58 2 6.54C2 5.86 2.12 5.21 2.36 4.61C2.6 4 2.98 3.44 3.51 2.94C4.15 2.31 4.85 2 5.59 2C5.87 2 6.15 2.06 6.4 2.18C6.66 2.3 6.89 2.48 7.07 2.74L9.39 6.01C9.57 6.26 9.7 6.49 9.79 6.71C9.88 6.92 9.93 7.13 9.93 7.32C9.93 7.56 9.86 7.8 9.72 8.03C9.59 8.26 9.4 8.5 9.16 8.74L8.4 9.53C8.29 9.64 8.24 9.77 8.24 9.93C8.24 10.01 8.25 10.08 8.27 10.16C8.3 10.24 8.33 10.3 8.35 10.36C8.53 10.69 8.84 11.12 9.28 11.64C9.73 12.16 10.21 12.69 10.73 13.22C10.83 13.32 10.94 13.42 11.04 13.52C11.44 13.91 11.45 14.55 11.05 14.95Z"
+                  fill="#FF9704" />
+                <path class="transition group-hover:fill-[#F7F7F7]"
+                  d="M21.97 18.33C21.97 18.61 21.92 18.9 21.82 19.18C21.79 19.26 21.76 19.34 21.72 19.42C21.55 19.78 21.33 20.12 21.04 20.44C20.55 20.98 20.01 21.37 19.4 21.62C19.39 21.62 19.38 21.63 19.37 21.63C18.78 21.87 18.14 22 17.45 22C16.43 22 15.34 21.76 14.19 21.27C13.04 20.78 11.89 20.12 10.75 19.29C10.36 19 9.96998 18.71 9.59998 18.4L12.87 15.13C13.15 15.34 13.4 15.5 13.61 15.61C13.66 15.63 13.72 15.66 13.79 15.69C13.87 15.72 13.95 15.73 14.04 15.73C14.21 15.73 14.34 15.67 14.45 15.56L15.21 14.81C15.46 14.56 15.7 14.37 15.93 14.25C16.16 14.11 16.39 14.04 16.64 14.04C16.83 14.04 17.03 14.08 17.25 14.17C17.47 14.26 17.7 14.39 17.95 14.56L21.26 16.91C21.52 17.09 21.7 17.3 21.81 17.55C21.91 17.8 21.97 18.05 21.97 18.33Z"
+                  fill="#FF9704" />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- mobile menu -->
+    <div
+      class="sm:rounded-3xl rounded-xl shadow-lg p-[22px] pt-8 mobileMenu absolute lg:hidden bg-white -mt-[30px] sm:-mt-2 z-40 text-[#ff9704] text-sm font-bold inset-x-4">
+      <!-- shape -->
+      <div class="w-9 h-9 rounded-[10px] bg-white absolute rotate-45 rtl:right-8 ltr:left-8 -top-2"></div>
+      <!--  -->
+      <div class="flex items-center justify-between pb-5 border-b border-[#F4F4F4] mb-2">
+        <!-- logo -->
+        <a href="index.html"><img alt="logo" src="../img/IMAGE 1403-10-08 22_36_07 1 1.png"
+            class="w-[83px] min-[400px]:w-[129px] block"></a>
+        <!-- close menu -->
+        <svg class="cursor-pointer" id="closemenu" width="24" height="24" viewBox="0 0 24 24" fill="none"
+          xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M13.41 11.9999L17.71 7.70994C17.8983 7.52164 18.0041 7.26624 18.0041 6.99994C18.0041 6.73364 17.8983 6.47825 17.71 6.28994C17.5217 6.10164 17.2663 5.99585 17 5.99585C16.7337 5.99585 16.4783 6.10164 16.29 6.28994L12 10.5899L7.71 6.28994C7.5217 6.10164 7.2663 5.99585 7 5.99585C6.7337 5.99585 6.4783 6.10164 6.29 6.28994C6.1017 6.47825 5.99591 6.73364 5.99591 6.99994C5.99591 7.26624 6.1017 7.52164 6.29 7.70994L10.59 11.9999L6.29 16.2899C6.19627 16.3829 6.12188 16.4935 6.07111 16.6154C6.02034 16.7372 5.9942 16.8679 5.9942 16.9999C5.9942 17.132 6.02034 17.2627 6.07111 17.3845C6.12188 17.5064 6.19627 17.617 6.29 17.7099C6.38296 17.8037 6.49356 17.8781 6.61542 17.9288C6.73728 17.9796 6.86799 18.0057 7 18.0057C7.13201 18.0057 7.26272 17.9796 7.38458 17.9288C7.50644 17.8781 7.61704 17.8037 7.71 17.7099L12 13.4099L16.29 17.7099C16.383 17.8037 16.4936 17.8781 16.6154 17.9288C16.7373 17.9796 16.868 18.0057 17 18.0057C17.132 18.0057 17.2627 17.9796 17.3846 17.9288C17.5064 17.8781 17.617 17.8037 17.71 17.7099C17.8037 17.617 17.8781 17.5064 17.9289 17.3845C17.9797 17.2627 18.0058 17.132 18.0058 16.9999C18.0058 16.8679 17.9797 16.7372 17.9289 16.6154C17.8781 16.4935 17.8037 16.3829 17.71 16.2899L13.41 11.9999Z"
+            fill="#1E2D48"></path>
+        </svg>
+      </div>
+      <!-- menu -->
+      <ul class="font-semibold">
+        <li>
+          <a class="py-3 flex items-center gap-2 text-[#4A4A4A] hover:text-primary transition">
+            <p>صفحه اصلی</p>
+          </a>
+        </li>
+        <li>
+          <div class="py-3 cursor-pointer group flex items-center justify-between" id="dropdownBtn">
+            <div class="flex items-center gap-2 text-[#4A4A4A] group-hover:text-primary transition">
+              <p>اقامتگاه ها</p>
+            </div>
+            <svg class="rotate-180 transition-all" xmlns="http://www.w3.org/2000/svg" width="12" height="7"
+              viewBox="0 0 12 7" fill="none">
+              <path d="M10.6001 5.68237L5.8001 0.882374L1.0001 5.68237" stroke="black" stroke-linecap="square"></path>
+            </svg>
+          </div>
+          <div class="font-semibold text-[#363636] dropdownContent">
+            <ul>
+              <li>
+                <a
+                  class="hover:text-primary transition last:mb-0 mb-[18px] py-2 flex items-center justify-between relative">
+                  <div class="flex items-center gap-3">
+                    <img alt="img" src="../img/svg/Ellipse 10.svg" class="flex-shrink-0">
+                    <p class="font-semibold">اقامتگاه <span class="font-faNumBold">1</span></p>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a
+                  class="hover:text-primary transition last:mb-0 mb-[18px] py-2 flex items-center justify-between relative">
+                  <div class="flex items-center gap-3">
+                    <img alt="img" src="../img/svg/Ellipse 10.svg" class="flex-shrink-0">
+                    <p class="font-semibold">اقامتگاه <span class="font-faNumBold">2</span></p>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a
+                  class="hover:text-primary transition last:mb-0 mb-[18px] py-2 flex items-center justify-between relative">
+                  <div class="flex items-center gap-3">
+                    <img alt="img" src="../img/svg/Ellipse 10.svg" class="flex-shrink-0">
+                    <p class="font-semibold">اقامتگاه <span class="font-faNumBold">3</span></p>
+                  </div>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </li>
+        <li>
+          <a class="py-3 flex items-center gap-2 text-[#4A4A4A] hover:text-primary transition">
+            <p>پیشنهاد های ویژه</p>
+          </a>
+        </li>
+        <li>
+          <a class="py-3 flex items-center gap-2 text-[#4A4A4A] hover:text-primary transition">
+            <p>میزبان شوید!</p>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- main -->
+  <main class="relative">
+
+    <!-- title && menu -->
+    <section class="sm:pt-11 pt-8 relative mt-2 sm:mt-0">
+      <!-- shape && logo -->
+      <img alt="shape" src="../img/svg/Vector 88.svg" class="absolute inset-x-0 sm:h-10 w-44 sm:w-auto mx-auto top-0 xl:hidden z-2">
+      <img alt="shape" src="../img/Rectangle 19.png" class="absolute inset-x-0 w-full top-0 h-[109px] sm:h-[253px]">
+      <img alt="logo" src="../img/IMAGE 1403-10-08 22_36_07 1 1.png" class="absolute inset-x-0 w-24 sm:w-auto mx-auto top-0 sm:-top-3 z-2">
+      <!--  -->
+      <div class="max-w-content mx-auto px-4 relative">
+        <div class="flex items-center justify-between gap-3">
+          <div class="lg:hidden cursor-pointer group" id="hamIcon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path class="transition group-hover:stroke-primary" d="M12 4.5H21" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+              <path class="transition group-hover:stroke-primary" d="M12 9.5H21" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+              <path class="transition group-hover:stroke-primary" d="M3 14.5H21" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+              <path class="transition group-hover:stroke-primary" d="M3 19.5H21" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+            </svg>
+          </div>
+          <ul class="text-sm hidden font-bold lg:flex items-center gap-12">
+            <li><a class="text-white transition hover:text-primary">صفحه اصلی</a></li>
+            <li>
+              <div class="relative group">
+                <div class="cursor-pointer group flex items-center gap-2.5 text-white transition group-hover:text-primary">
+                  <p>اقامتگاه ها</p>
+                  <svg width="9" height="6" viewBox="0 0 9 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path class="group-hover:stroke-primary transition" d="M1.5 1.5L4.5 4.5L7.5 1.5" stroke="white" stroke-linecap="square"></path>
+                  </svg>
+                </div>
+                <!-- dropdown -->
+                <div class="absolute z-20 group-hover:top-4 top-16 transition opacity-0 group-hover:opacity-100 invisible group-hover:visible">
+                  <div class="mt-8 bg-white min-w-[460px] rounded-[20px] py-5 shadow-lg relative">
+                    <!-- shape -->
+                    <div class="w-9 h-9 rounded-[10px] bg-white absolute rotate-45 rtl:right-8 ltr:left-8 -top-2"></div>
+                    <!--  -->
+                    <a class="hover:text-primary transition last:mb-0 mb-[18px] py-2 px-4 flex items-center justify-between gap-1 relative">
+                      <div class="flex items-center gap-4">
+                        <img alt="img" src="../img/svg/Ellipse 10.svg" class="flex-shrink-0">
+                        <p class="font-semibold text-lg">اقامتگاه <span class="font-faNumBold">1</span></p>
+                      </div>
+                    </a>
+                    <a class="hover:text-primary transition last:mb-0 mb-[18px] py-2 px-4 flex items-center justify-between gap-1 relative">
+                      <div class="flex items-center gap-4">
+                        <img alt="img" src="../img/svg/Ellipse 10.svg" class="flex-shrink-0">
+                        <p class="font-semibold text-lg">اقامتگاه <span class="font-faNumBold">2</span></p>
+                      </div>
+                    </a>
+                    <a class="hover:text-primary transition last:mb-0 mb-[18px] py-2 px-4 flex items-center justify-between gap-1 relative">
+                      <div class="flex items-center gap-4">
+                        <img alt="img" src="../img/svg/Ellipse 10.svg" class="flex-shrink-0">
+                        <p class="font-semibold text-lg">اقامتگاه <span class="font-faNumBold">3</span></p>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li><a class="text-white transition hover:text-primary">پیشنهادهای ویژه</a></li>
+            <li><a class="text-white transition hover:text-primary">میزبان شوید</a></li>
+          </ul>
+          <a class="rounded-[10px] bg-primary hover:bg-[#160C59] text-xs sm:text-base flex-center text-white font-medium gap-2 py-[10px] px-[18px]">
+            <img src="../img/svg/frame.svg">
+            <p>ثبت نام/ورود</p>
+          </a>
+        </div>
+        <div class="mt-2 ltr:sm:pl-[85px] px-4 rtl:sm:pr-[85px] py-4 relative">
+          <div class="bg-white absolute h-9 top-[49px] w-[182px] rtl:right-[35px] ltr:left-[35px] z-1"></div>
+          <svg class="absolute rotate-180 rtl:right-[18px] rtl:sm:right-[54px] ltr:left-[18px] ltr:sm:left-[54px] z-1 w-[106px] h-[18px] sm:h-8 top-[45px]" width="70" height="18" viewBox="0 0 70 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path class="transition group-hover:fill-[#fff2e0] fill-[#ffebcf] sm:fill-[#2c2c2c]" d="M3.01307 16.7467L0 17.5H69.5001L60.4663 16.0546C58.1862 15.6898 56.0212 14.8035 54.1398 13.4648L40.5884 3.82246C34.8845 -0.236086 27.2044 -0.115346 21.631 4.1205L8.45127 14.137C6.83395 15.3662 4.98382 16.254 3.01307 16.7467Z" fill="#2c2c2c"></path>
+          </svg>
+          <img alt="img" src="../img/Group 9035.png" class="absolute inset-0 w-full h-[112px] sm:h-[180px] top-11 ltr:[transform:rotateY(180deg)]">
+          <div class="sm:w-[70px] w-[46px] sm:h-[70px] h-[46px] rounded-full bg-primary z-3 absolute flex-center rtl:right-[46px] rtl:sm:right-[68px] ltr:left-[51px] ltr:sm:left-[77px] top-3 sm:-top-[3px] shadow-7">
+            <img alt="img" src="../img/svg/home-2.svg">
+          </div>
+          <div class="relative sm:mt-[70px] mt-14 z-1">
+            <h4 class="sm:text-[28px] text-dark font-bold mt-5">اقامتگاه ها</h4>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- room details -->
+     <section class="my-24 mt-14 sm:mt-24">
+      <div class="max-w-content mx-auto px-4">
+        <!-- tabs -->
+         <div class="flex items-center gap-8 py-5 px-8 overflow-hidden rounded-[20px] bg-white shadow-12 border border-[#BE1D1D2E] font-medium text-[#2F2F2F]">
+           <a>مشخصات</a>
+           <span class="bg-[#E9E9E9] h-6 w-[1px]"></span>
+           <a>موقعیت</a>
+           <span class="bg-[#E9E9E9] h-6 w-[1px]"></span>
+           <a>تقویم</a>
+           <span class="bg-[#E9E9E9] h-6 w-[1px]"></span>
+           <a>قوانین</a>
+           <span class="bg-[#E9E9E9] h-6 w-[1px]"></span>
+           <a>نظرات</a>
+         </div>
+      </div>
+     </section>
+
+
+  </main>
+
+  <!-- footer -->
+  <footer class="relative pb-[103px] min-[450px]:pb-0">
+    <div class="bg-dark pt-[118px] pb-4 sm:pb-[38px] relative">
+      <img alt="shape" src="../img/Vector 93.png" class="absolute h-[63px] w-full inset-x-0 top-0 hidden md:block">
+      <img alt="shape" src="../img/Vector 115.png" class="absolute h-[54px] w-full inset-x-0 top-0 md:hidden">
+      <img alt="logo" src="../img/IMAGE 1403-10-08 22_36_07 1 1.png"
+        class="absolute inset-x-0 w-[129px] sm:w-auto mx-auto top-5 sm:top-2">
+      <img alt="bg" src="../img/Group 98.png" class="absolute h-full w-full inset-0">
+      <div class="max-w-content mx-auto px-4 relative">
+        <div class="flex items-center justify-center gap-[22px] md:gap-[55px]">
+          <a class="group">
+            <svg width="29" height="29" viewBox="0 0 29 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path class="transition group-hover:fill-primary"
+                d="M24.1093 9.57021C24.124 9.78326 24.124 9.99631 24.124 10.2113C24.124 16.7628 19.1366 24.3186 10.0168 24.3186V24.3147C7.32273 24.3186 4.68467 23.5469 2.41675 22.0919C2.80848 22.139 3.20218 22.1626 3.59686 22.1636C5.82944 22.1655 7.9982 21.4164 9.75462 20.037C7.63298 19.9968 5.77249 18.6134 5.12255 16.5939C5.86576 16.7373 6.63156 16.7078 7.36102 16.5085C5.04794 16.0412 3.38381 14.0089 3.38381 11.6487C3.38381 11.6271 3.38381 11.6064 3.38381 11.5858C4.07302 11.9697 4.84471 12.1827 5.63406 12.2063C3.45548 10.7503 2.78394 7.85209 4.09953 5.58612C6.61683 8.68366 10.3309 10.5667 14.318 10.766C13.9184 9.04397 14.4642 7.23945 15.7523 6.02891C17.7493 4.15173 20.89 4.24795 22.7672 6.24392C23.8776 6.02498 24.9419 5.61754 25.9158 5.04025C25.5457 6.18796 24.771 7.16287 23.7362 7.78238C24.719 7.66653 25.6792 7.40341 26.5834 7.00186C25.9178 7.99935 25.0793 8.86823 24.1093 9.57021Z"
+                fill="white" />
+            </svg>
+          </a>
+          <a class="group">
+            <svg width="29" height="29" viewBox="0 0 29 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path class="transition group-hover:fill-primary" fill-rule="evenodd" clip-rule="evenodd"
+                d="M26.5834 14.5001C26.5834 21.1735 21.1735 26.5834 14.5001 26.5834C7.82664 26.5834 2.41675 21.1735 2.41675 14.5001C2.41675 7.82664 7.82664 2.41675 14.5001 2.41675C21.1735 2.41675 26.5834 7.82664 26.5834 14.5001ZM14.9331 11.3372C13.7578 11.8261 11.4089 12.8378 7.88634 14.3725C7.31433 14.6 7.01469 14.8225 6.98742 15.0401C6.94132 15.4079 7.40182 15.5527 8.0289 15.7498C8.1142 15.7767 8.20258 15.8045 8.29319 15.8339C8.91014 16.0345 9.74006 16.2691 10.1715 16.2784C10.5628 16.2869 10.9996 16.1255 11.4819 15.7944C14.7731 13.5727 16.472 12.4498 16.5787 12.4256C16.654 12.4085 16.7582 12.387 16.8289 12.4498C16.8995 12.5126 16.8926 12.6315 16.8851 12.6634C16.8395 12.8579 15.0319 14.5385 14.0964 15.4081C13.8048 15.6793 13.5979 15.8716 13.5556 15.9155C13.4609 16.0139 13.3644 16.107 13.2716 16.1964C12.6984 16.7489 12.2686 17.1633 13.2954 17.8399C13.7888 18.1651 14.1836 18.434 14.5775 18.7022C15.0077 18.9952 15.4368 19.2874 15.992 19.6513C16.1334 19.744 16.2685 19.8403 16.4 19.9341C16.9007 20.291 17.3505 20.6117 17.9061 20.5605C18.229 20.5308 18.5625 20.2272 18.7319 19.3217C19.1322 17.1817 19.9191 12.5451 20.1009 10.6344C20.1168 10.467 20.0968 10.2528 20.0807 10.1587C20.0646 10.0647 20.031 9.93069 19.9087 9.83149C19.764 9.71402 19.5405 9.68925 19.4405 9.69101C18.986 9.69902 18.2887 9.94147 14.9331 11.3372Z"
+                fill="white" />
+            </svg>
+          </a>
+          <a class="group">
+            <svg width="28" height="29" viewBox="0 0 28 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path class="transition group-hover:fill-primary"
+                d="M25.6667 14.5734C25.6667 7.85908 20.4439 2.41675 14 2.41675C7.55615 2.41675 2.33337 7.85908 2.33337 14.5734C2.33337 20.6424 6.59871 25.6715 12.1769 26.5834V18.088H9.21515V14.5726H12.1769V11.8949C12.1769 8.8483 13.9184 7.16469 16.5838 7.16469C17.8594 7.16469 19.1956 7.40233 19.1956 7.40233V10.3942H17.7233C16.2743 10.3942 15.8232 11.3318 15.8232 12.2937V14.5734H19.0587L18.5415 18.0872H15.8232V26.5834C21.4014 25.6715 25.6667 20.6424 25.6667 14.5734Z"
+                fill="white" />
+            </svg>
+          </a>
+          <a class="group">
+            <svg width="29" height="29" viewBox="0 0 29 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path class="transition group-hover:fill-primary"
+                d="M14.5 10.573C13.4584 10.573 12.4596 10.9867 11.7231 11.7232C10.9866 12.4597 10.5729 13.4586 10.5729 14.5001C10.5729 15.5416 10.9866 16.5405 11.7231 17.2769C12.4596 18.0134 13.4584 18.4272 14.5 18.4272C15.5415 18.4272 16.5404 18.0134 17.2768 17.2769C18.0133 16.5405 18.427 15.5416 18.427 14.5001C18.427 13.4586 18.0133 12.4597 17.2768 11.7232C16.5404 10.9867 15.5415 10.573 14.5 10.573Z"
+                fill="white" />
+              <path class="transition group-hover:fill-primary" fill-rule="evenodd" clip-rule="evenodd"
+                d="M8.18038 3.72397C12.3806 3.25868 16.6193 3.25868 20.8195 3.72397C23.1142 3.98014 24.9641 5.7866 25.2336 8.08968C25.7313 12.3487 25.7313 16.6511 25.2336 20.9101C24.9641 23.2132 23.1142 25.0196 20.8208 25.277C16.6201 25.7424 12.381 25.7424 8.18038 25.277C5.88575 25.0196 4.03579 23.2132 3.76634 20.9113C3.26848 16.6519 3.26848 12.3491 3.76634 8.08968C4.03579 5.7866 5.88575 3.98014 8.18038 3.72397ZM20.5416 7.24989C20.2212 7.24989 19.9138 7.37719 19.6872 7.6038C19.4606 7.83041 19.3333 8.13775 19.3333 8.45822C19.3333 8.77869 19.4606 9.08603 19.6872 9.31264C19.9138 9.53925 20.2212 9.66655 20.5416 9.66655C20.8621 9.66655 21.1694 9.53925 21.396 9.31264C21.6227 9.08603 21.75 8.77869 21.75 8.45822C21.75 8.13775 21.6227 7.83041 21.396 7.6038C21.1694 7.37719 20.8621 7.24989 20.5416 7.24989ZM8.76038 14.4999C8.76038 12.9777 9.36508 11.5178 10.4415 10.4414C11.5178 9.36501 12.9777 8.7603 14.5 8.7603C16.0222 8.7603 17.4821 9.36501 18.5585 10.4414C19.6348 11.5178 20.2395 12.9777 20.2395 14.4999C20.2395 16.0221 19.6348 17.482 18.5585 18.5584C17.4821 19.6348 16.0222 20.2395 14.5 20.2395C12.9777 20.2395 11.5178 19.6348 10.4415 18.5584C9.36508 17.482 8.76038 16.0221 8.76038 14.4999Z"
+                fill="white" />
+            </svg>
+          </a>
+        </div>
+        <div
+          class="md:mt-[57px] mt-10 flex flex-col md:flex-row items-center justify-center gap-3 md:gap-10 font-semibold text-white">
+          <a class="hover:text-primary">صفحه اصلی</a>
+          <span class="bg-white h-5 w-[1px] hidden md:block"></span>
+          <a class="hover:text-primary">اقامتگاه ها</a>
+          <span class="bg-white h-5 w-[1px] hidden md:block"></span>
+          <a class="hover:text-primary">پیشنهادهای ویژه</a>
+          <span class="bg-white h-5 w-[1px] hidden md:block"></span>
+          <a class="hover:text-primary">میزبان شوید</a>
+        </div>
+        <div
+          class="mt-11 max-w-[700px] mx-auto flex flex-col lg:flex-row items-start lg:items-end justify-between gap-10 lg:gap-3">
+          <div class="flex flex-row lg:flex-col justify-between w-full">
+            <a class="flex items-center gap-[10px] sm:gap-[18px] text-white sm:text-lg font-faNumBold">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M17.62 10.7501C17.19 10.7501 16.85 10.4001 16.85 9.9801C16.85 9.6101 16.48 8.8401 15.86 8.1701C15.25 7.5201 14.58 7.1401 14.02 7.1401C13.59 7.1401 13.25 6.7901 13.25 6.3701C13.25 5.9501 13.6 5.6001 14.02 5.6001C15.02 5.6001 16.07 6.1401 16.99 7.1101C17.85 8.0201 18.4 9.1501 18.4 9.9701C18.4 10.4001 18.05 10.7501 17.62 10.7501Z"
+                  fill="white" />
+                <path
+                  d="M21.23 10.75C20.8 10.75 20.46 10.4 20.46 9.98C20.46 6.43 17.57 3.55 14.03 3.55C13.6 3.55 13.26 3.2 13.26 2.78C13.26 2.36 13.6 2 14.02 2C18.42 2 22 5.58 22 9.98C22 10.4 21.65 10.75 21.23 10.75Z"
+                  fill="white" />
+                <path
+                  d="M11.05 14.95L9.2 16.8C8.81 17.19 8.19 17.19 7.79 16.81C7.68 16.7 7.57 16.6 7.46 16.49C6.43 15.45 5.5 14.36 4.67 13.22C3.85 12.08 3.19 10.94 2.71 9.81C2.24 8.67 2 7.58 2 6.54C2 5.86 2.12 5.21 2.36 4.61C2.6 4 2.98 3.44 3.51 2.94C4.15 2.31 4.85 2 5.59 2C5.87 2 6.15 2.06 6.4 2.18C6.66 2.3 6.89 2.48 7.07 2.74L9.39 6.01C9.57 6.26 9.7 6.49 9.79 6.71C9.88 6.92 9.93 7.13 9.93 7.32C9.93 7.56 9.86 7.8 9.72 8.03C9.59 8.26 9.4 8.5 9.16 8.74L8.4 9.53C8.29 9.64 8.24 9.77 8.24 9.93C8.24 10.01 8.25 10.08 8.27 10.16C8.3 10.24 8.33 10.3 8.35 10.36C8.53 10.69 8.84 11.12 9.28 11.64C9.73 12.16 10.21 12.69 10.73 13.22C10.83 13.32 10.94 13.42 11.04 13.52C11.44 13.91 11.45 14.55 11.05 14.95Z"
+                  fill="white" />
+                <path
+                  d="M21.9701 18.33C21.9701 18.61 21.9201 18.9 21.8201 19.18C21.7901 19.26 21.7601 19.34 21.7201 19.42C21.5501 19.78 21.3301 20.12 21.0401 20.44C20.5501 20.98 20.0101 21.37 19.4001 21.62C19.3901 21.62 19.3801 21.63 19.3701 21.63C18.7801 21.87 18.1401 22 17.4501 22C16.4301 22 15.3401 21.76 14.1901 21.27C13.0401 20.78 11.8901 20.12 10.7501 19.29C10.3601 19 9.9701 18.71 9.6001 18.4L12.8701 15.13C13.1501 15.34 13.4001 15.5 13.6101 15.61C13.6601 15.63 13.7201 15.66 13.7901 15.69C13.8701 15.72 13.9501 15.73 14.0401 15.73C14.2101 15.73 14.3401 15.67 14.4501 15.56L15.2101 14.81C15.4601 14.56 15.7001 14.37 15.9301 14.25C16.1601 14.11 16.3901 14.04 16.6401 14.04C16.8301 14.04 17.0301 14.08 17.2501 14.17C17.4701 14.26 17.7001 14.39 17.9501 14.56L21.2601 16.91C21.5201 17.09 21.7001 17.3 21.8101 17.55C21.9101 17.8 21.9701 18.05 21.9701 18.33Z"
+                  fill="white" />
+              </svg>
+              <p>071-234567</p>
+            </a>
+            <a class="flex items-center gap-[10px] sm:gap-[18px] text-white sm:text-lg font-semibold md:mt-5">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M17 3.5H7C4 3.5 2 5 2 8.5V15.5C2 19 4 20.5 7 20.5H17C20 20.5 22 19 22 15.5V8.5C22 5 20 3.5 17 3.5ZM17.47 9.59L14.34 12.09C13.68 12.62 12.84 12.88 12 12.88C11.16 12.88 10.31 12.62 9.66 12.09L6.53 9.59C6.21 9.33 6.16 8.85 6.41 8.53C6.67 8.21 7.14 8.15 7.46 8.41L10.59 10.91C11.35 11.52 12.64 11.52 13.4 10.91L16.53 8.41C16.85 8.15 17.33 8.2 17.58 8.53C17.84 8.85 17.79 9.33 17.47 9.59Z"
+                  fill="white" />
+              </svg>
+              <p>info@gmail.com</p>
+            </a>
+          </div>
+          <div class="flex gap-[26px] flex-shrink-0">
+            <a><img alt="img" src="../img/Frame 68.png" class="w-[83px] h-[105px] rounded-[10px]"></a>
+            <a><img alt="img" src="../img/Frame 67.png" class="w-[83px] h-[105px] rounded-[10px]"></a>
+          </div>
+        </div>
+      </div>
+      <a href="#"
+        class="absolute rtl:left-4 rtl:md:left-[108px] ltr:right-4 ltr:md:right-[108px] -bottom-[15.5px] md:bottom-0 group">
+        <svg class="w-20 md:w-auto" width="119" height="96" viewBox="0 0 119 96" fill="none"
+          xmlns="http://www.w3.org/2000/svg">
+          <path class="group-hover:fill-secondary transition"
+            d="M22.9296 33.6743L20.6732 71.0594C19.9404 83.2001 11.671 93.5765 0 97H119C106.06 93.6039 96.8193 82.206 96.172 68.8438L94.4888 34.0992C93.5638 15.0056 77.8137 0 58.6977 0C39.746 0 24.0714 14.7571 22.9296 33.6743Z"
+            fill="#FF9704" />
+          <path d="M66.92 40.0499L60.4 33.5299C59.63 32.7599 58.37 32.7599 57.6 33.5299L51.08 40.0499" stroke="white"
+            stroke-width="2.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+      </a>
+    </div>
+    <div class="bg-white py-2 text-center text-dark font-semibold">
+      <div class="max-w-content mx-auto px-4 text-xs sm:text-base">
+        <p>کلیه حقوق معنوی و انتشار محتوای این وب‌سایت متعلق به <a class="hover:text-primary">شیراز هوم</a> است </p>
+      </div>
+    </div>
+    <!-- mobile menu footer -->
+    <div class="fixed bottom-0 left-0 right-0 z-10 text-xs block min-[450px]:hidden">
+      <!-- wave -->
+      <svg class="absolute -top-[31px] mx-auto inset-x-0" xmlns="http://www.w3.org/2000/svg" width="151" height="22"
+        viewBox="0 0 151 33" fill="none">
+        <filter id="shadow" filterUnits="userSpaceOnUse">
+          <feDropShadow dx="0" dy="0" stdDeviation="5" flood-color="#D1AF8988"></feDropShadow>
+        </filter>
+        <path fill-rule="evenodd" clip-rule="evenodd"
+          d="M150.563 32.9999C144.332 32.9999 138.247 31.1227 133.099 27.613L108.622 10.924C88.3811 -2.87661 61.7177 -2.73337 41.6263 11.2839L18.4924 27.4239C13.2896 31.0537 7.09854 32.9999 0.75473 32.9999H150.563Z"
+          fill="white" opacity="0.9"></path>
+      </svg>
+      <!--  -->
+      <div class="w-full h-20 overflow-visible absolute inset-x-0 bottom-0 mx-auto block bg-blur rounded-t-[20px]">
+      </div>
+      <div class="top-6 flex justify-between items-center px-1">
+        <div class="flex justify-between items-center text-[10px] w-full relative text-[#1E2D48]">
+          <a href="#"
+            class="flex justify-center items-center gap-2.5 flex-col p-2 text-center cursor-pointer relative z-10">
+            <svg class="block mx-auto" width="29" height="29" viewBox="0 0 29 29" fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <path opacity="0.5"
+                d="M18.7969 17.5789L18.2471 18.1589C18.2471 18.1589 16.9385 19.5352 13.3679 15.7761C9.79724 12.0169 11.1059 10.6406 11.1059 10.6406L11.4527 10.2745C12.3057 9.37552 12.3867 7.93277 11.6412 6.8791L10.1187 4.72464C9.19549 3.41964 7.4132 3.24806 6.3559 4.36093L4.46003 6.35589C3.93682 6.9081 3.5864 7.62223 3.6287 8.4161C3.73745 10.4461 4.60503 14.8118 9.4432 19.9074C14.575 25.3086 19.3902 25.5237 21.3586 25.3291C21.9821 25.2687 22.5234 24.9316 22.9596 24.4724L24.6754 22.6648C25.8354 21.4444 25.5092 19.3539 24.0254 18.5009L21.7174 17.1717C20.7435 16.6122 19.5582 16.7766 18.7969 17.5777"
+                fill="#160C59" />
+              <path
+                d="M16.0225 2.27155C16.0614 2.03435 16.1928 1.82226 16.3878 1.6818C16.5828 1.54135 16.8257 1.48402 17.0629 1.52238C17.0931 1.52842 17.1922 1.54655 17.2442 1.55863C17.3469 1.58038 17.4907 1.61663 17.6695 1.66738C18.0284 1.77251 18.5298 1.9453 19.1316 2.2208C20.3351 2.77301 21.9361 3.73846 23.5988 5.39992C25.2615 7.06259 26.2269 8.66484 26.7791 9.86834C27.0546 10.4701 27.2262 10.9703 27.3313 11.3304C27.3843 11.5113 27.4299 11.6944 27.4679 11.879L27.4739 11.9165C27.5137 12.1558 27.4578 12.4011 27.3184 12.5996C27.1789 12.798 26.967 12.9337 26.7284 12.9774C26.4918 13.0158 26.2496 12.9589 26.0548 12.8192C25.8601 12.6795 25.7286 12.4683 25.6892 12.2318C25.6645 12.0983 25.6318 11.9664 25.5913 11.8367C25.4679 11.4217 25.3144 11.0163 25.1322 10.6235C24.6609 9.59646 23.8127 8.17788 22.3168 6.68196C20.822 5.18605 19.4035 4.33901 18.3752 3.86776C17.9828 3.68556 17.5778 3.5321 17.1632 3.40859C17.0361 3.37272 16.9079 3.34048 16.779 3.31192C16.5416 3.27241 16.3293 3.14119 16.1878 2.94657C16.0463 2.75195 15.9869 2.50952 16.0225 2.27155Z"
+                fill="#897DA1" />
+              <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M16.2956 6.44045C16.3282 6.32595 16.383 6.21899 16.457 6.12568C16.5309 6.03237 16.6225 5.95454 16.7265 5.89663C16.8305 5.83873 16.9449 5.80189 17.0632 5.78822C17.1815 5.77455 17.3013 5.78431 17.4157 5.81696L17.4194 5.81816L17.423 5.81937L17.4327 5.82179L17.4568 5.82904L17.5245 5.8532C17.8456 5.97692 18.1557 6.1277 18.4513 6.30391C19.0422 6.65433 19.8493 7.23433 20.7979 8.18408C21.7464 9.13262 22.3276 9.93979 22.678 10.5307C22.8532 10.8267 22.9692 11.0672 23.0442 11.2436C23.0843 11.3359 23.1206 11.4298 23.1529 11.5251L23.159 11.5493L23.1626 11.559V11.5626L23.1638 11.5638C23.1638 11.5638 23.1638 11.5662 22.2938 11.8151L23.1638 11.5662C23.2252 11.7948 23.1946 12.0384 23.0787 12.2448C22.9628 12.4513 22.7707 12.6041 22.5435 12.6707C22.3164 12.7374 22.0721 12.7125 21.8631 12.6013C21.6541 12.4902 21.4968 12.3017 21.425 12.0761L21.4214 12.064C21.3364 11.8536 21.2354 11.65 21.1193 11.455C20.8486 10.9995 20.3617 10.3107 19.5158 9.46491C18.67 8.61908 17.9825 8.13333 17.5269 7.86387C17.332 7.74771 17.1284 7.64672 16.9179 7.56179L16.9058 7.55696C16.6776 7.48833 16.4855 7.33254 16.3713 7.12334C16.2571 6.91414 16.2299 6.66957 16.2956 6.44045Z"
+                fill="#897DA1" />
+            </svg>
+            <span>تماس با ما</span>
+          </a>
+          <a href="#"
+            class="flex justify-center items-center gap-2.5 flex-col p-2 text-center cursor-pointer relative z-10">
+            <svg class="block mx-auto" width="29" height="29" viewBox="0 0 29 29" fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M14.5001 2.41675C11.3342 2.41675 8.7605 4.9905 8.7605 8.15633C8.7605 11.2617 11.1892 13.7751 14.3551 13.8838C14.4517 13.8717 14.5484 13.8717 14.6209 13.8838C14.6451 13.8838 14.6572 13.8838 14.6813 13.8838C14.6934 13.8838 14.6934 13.8838 14.7055 13.8838C17.7988 13.7751 20.2276 11.2617 20.2397 8.15633C20.2397 4.9905 17.6659 2.41675 14.5001 2.41675Z"
+                fill="#897DA1" />
+              <path
+                d="M20.6384 17.098C17.2672 14.8505 11.7692 14.8505 8.37382 17.098C6.83924 18.1251 5.99341 19.5146 5.99341 21.0009C5.99341 22.4871 6.83924 23.8646 8.36174 24.8796C10.0534 26.0155 12.2767 26.5834 14.5001 26.5834C16.7234 26.5834 18.9467 26.0155 20.6384 24.8796C22.1609 23.8526 23.0067 22.4751 23.0067 20.9767C22.9947 19.4905 22.1609 18.113 20.6384 17.098Z"
+                fill="#897DA1" />
+            </svg>
+            <span>حساب کاربری</span>
+          </a>
+        </div>
+        <div class="w-1/2 min-[450px]:w-full"></div>
+        <div class="flex justify-between items-center text-[10px] w-full relative text-[#1E2D48]">
+          <a href="#"
+            class="flex justify-center items-center gap-2.5 flex-col p-2 text-center cursor-pointer relative z-10">
+            <svg class="block mx-auto" width="29" height="29" viewBox="0 0 29 29" fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <path opacity="0.5"
+                d="M18.7969 17.5789L18.2471 18.1589C18.2471 18.1589 16.9385 19.5352 13.3679 15.7761C9.79724 12.0169 11.1059 10.6406 11.1059 10.6406L11.4527 10.2745C12.3057 9.37552 12.3867 7.93277 11.6412 6.8791L10.1187 4.72464C9.19549 3.41964 7.4132 3.24806 6.3559 4.36093L4.46003 6.35589C3.93682 6.9081 3.5864 7.62223 3.6287 8.4161C3.73745 10.4461 4.60503 14.8118 9.4432 19.9074C14.575 25.3086 19.3902 25.5237 21.3586 25.3291C21.9821 25.2687 22.5234 24.9316 22.9596 24.4724L24.6754 22.6648C25.8354 21.4444 25.5092 19.3539 24.0254 18.5009L21.7174 17.1717C20.7435 16.6122 19.5582 16.7766 18.7969 17.5777"
+                fill="#160C59" />
+              <path
+                d="M16.0225 2.27155C16.0614 2.03435 16.1928 1.82226 16.3878 1.6818C16.5828 1.54135 16.8257 1.48402 17.0629 1.52238C17.0931 1.52842 17.1922 1.54655 17.2442 1.55863C17.3469 1.58038 17.4907 1.61663 17.6695 1.66738C18.0284 1.77251 18.5298 1.9453 19.1316 2.2208C20.3351 2.77301 21.9361 3.73846 23.5988 5.39992C25.2615 7.06259 26.2269 8.66484 26.7791 9.86834C27.0546 10.4701 27.2262 10.9703 27.3313 11.3304C27.3843 11.5113 27.4299 11.6944 27.4679 11.879L27.4739 11.9165C27.5137 12.1558 27.4578 12.4011 27.3184 12.5996C27.1789 12.798 26.967 12.9337 26.7284 12.9774C26.4918 13.0158 26.2496 12.9589 26.0548 12.8192C25.8601 12.6795 25.7286 12.4683 25.6892 12.2318C25.6645 12.0983 25.6318 11.9664 25.5913 11.8367C25.4679 11.4217 25.3144 11.0163 25.1322 10.6235C24.6609 9.59646 23.8127 8.17788 22.3168 6.68196C20.822 5.18605 19.4035 4.33901 18.3752 3.86776C17.9828 3.68556 17.5778 3.5321 17.1632 3.40859C17.0361 3.37272 16.9079 3.34048 16.779 3.31192C16.5416 3.27241 16.3293 3.14119 16.1878 2.94657C16.0463 2.75195 15.9869 2.50952 16.0225 2.27155Z"
+                fill="#897DA1" />
+              <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M16.2956 6.44045C16.3282 6.32595 16.383 6.21899 16.457 6.12568C16.5309 6.03237 16.6225 5.95454 16.7265 5.89663C16.8305 5.83873 16.9449 5.80189 17.0632 5.78822C17.1815 5.77455 17.3013 5.78431 17.4157 5.81696L17.4194 5.81816L17.423 5.81937L17.4327 5.82179L17.4568 5.82904L17.5245 5.8532C17.8456 5.97692 18.1557 6.1277 18.4513 6.30391C19.0422 6.65433 19.8493 7.23433 20.7979 8.18408C21.7464 9.13262 22.3276 9.93979 22.678 10.5307C22.8532 10.8267 22.9692 11.0672 23.0442 11.2436C23.0843 11.3359 23.1206 11.4298 23.1529 11.5251L23.159 11.5493L23.1626 11.559V11.5626L23.1638 11.5638C23.1638 11.5638 23.1638 11.5662 22.2938 11.8151L23.1638 11.5662C23.2252 11.7948 23.1946 12.0384 23.0787 12.2448C22.9628 12.4513 22.7707 12.6041 22.5435 12.6707C22.3164 12.7374 22.0721 12.7125 21.8631 12.6013C21.6541 12.4902 21.4968 12.3017 21.425 12.0761L21.4214 12.064C21.3364 11.8536 21.2354 11.65 21.1193 11.455C20.8486 10.9995 20.3617 10.3107 19.5158 9.46491C18.67 8.61908 17.9825 8.13333 17.5269 7.86387C17.332 7.74771 17.1284 7.64672 16.9179 7.56179L16.9058 7.55696C16.6776 7.48833 16.4855 7.33254 16.3713 7.12334C16.2571 6.91414 16.2299 6.66957 16.2956 6.44045Z"
+                fill="#897DA1" />
+            </svg>
+            <span>تماس با ما</span>
+          </a>
+          <a href="#"
+            class="flex justify-center items-center gap-2.5 flex-col p-2 text-center cursor-pointer relative z-10">
+            <svg class="block mx-auto" width="29" height="29" viewBox="0 0 29 29" fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M14.5001 2.41675C11.3342 2.41675 8.7605 4.9905 8.7605 8.15633C8.7605 11.2617 11.1892 13.7751 14.3551 13.8838C14.4517 13.8717 14.5484 13.8717 14.6209 13.8838C14.6451 13.8838 14.6572 13.8838 14.6813 13.8838C14.6934 13.8838 14.6934 13.8838 14.7055 13.8838C17.7988 13.7751 20.2276 11.2617 20.2397 8.15633C20.2397 4.9905 17.6659 2.41675 14.5001 2.41675Z"
+                fill="#897DA1" />
+              <path
+                d="M20.6384 17.098C17.2672 14.8505 11.7692 14.8505 8.37382 17.098C6.83924 18.1251 5.99341 19.5146 5.99341 21.0009C5.99341 22.4871 6.83924 23.8646 8.36174 24.8796C10.0534 26.0155 12.2767 26.5834 14.5001 26.5834C16.7234 26.5834 18.9467 26.0155 20.6384 24.8796C22.1609 23.8526 23.0067 22.4751 23.0067 20.9767C22.9947 19.4905 22.1609 18.113 20.6384 17.098Z"
+                fill="#897DA1" />
+            </svg>
+            <span>حساب کاربری</span>
+          </a>
+        </div>
+      </div>
+      <div class="absolute -top-[3px]  min-[400px]:-top-1 min-[450px]:-top-1 inset-x-0">
+        <a class="flex justify-center items-center flex-col w-[90px] mx-auto gap-5" href="#">
+          <span
+            class="w-16 h-16 relative -top-[10px] rounded-full bg-[#F76B16] shadow-2 flex justify-center items-center">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M20.04 6.81994L14.28 2.78994C12.71 1.68994 10.3 1.74994 8.78999 2.91994L3.77999 6.82994C2.77999 7.60994 1.98999 9.20994 1.98999 10.4699V17.3699C1.98999 19.9199 4.05999 21.9999 6.60999 21.9999H17.39C19.94 21.9999 22.01 19.9299 22.01 17.3799V10.5999C22.01 9.24994 21.14 7.58994 20.04 6.81994ZM12.75 17.9999C12.75 18.4099 12.41 18.7499 12 18.7499C11.59 18.7499 11.25 18.4099 11.25 17.9999V14.9999C11.25 14.5899 11.59 14.2499 12 14.2499C12.41 14.2499 12.75 14.5899 12.75 14.9999V17.9999Z"
+                fill="white" />
+            </svg>
+          </span>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="../js/script.js"></script>
+</body>
+
+</html>
+
+<!-- npx tailwindcss -i ./src/css/app.css -o ./dist/output.css --watch -->
