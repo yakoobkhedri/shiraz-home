@@ -351,7 +351,7 @@ input[type="number"] {
   @apply rtl:right-2 ltr:left-2
 }
 .editor-section ul li{
-  @apply text-base text-[#2C2C2C];
+  @apply text-sm sm:text-base text-[#2C2C2C];
 }
 /* accordion */
 .acordionBtn,.acordionBtn2{
@@ -418,6 +418,9 @@ input[type="number"] {
 }
 .shadow-10{
   box-shadow: 0px 0px 19px 0px #0000000D;
+}
+.shadow-11{
+  box-shadow: -11.2px 8.8px 64px 0px #7E5EFF5E;
 }
 .shadow-next {
   box-shadow: -2px 0px 24px 0px #0000001A;
