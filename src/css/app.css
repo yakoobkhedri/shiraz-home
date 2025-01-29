@@ -209,6 +209,18 @@ a {
   inset: 0;
   background: linear-gradient(180deg, rgba(255, 255, 255, 0) 39.72%, rgba(20, 20, 20, 0.28) 100%);
 }
+.dotBefore::before{
+  content: '';
+  width: 1px;
+  height: 71%;
+  border: 1px dotted #B4B4B4;
+  top: -12px;
+  bottom: 0;
+  position: absolute;
+  margin-top: auto;
+  margin-bottom: auto;
+  @apply rtl:right-[4.9px] ltr:left-[4.9px];
+}
 /* hover */
 .btnHover {
   transition: all .4s;
