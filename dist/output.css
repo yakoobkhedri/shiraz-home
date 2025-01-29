@@ -939,6 +939,10 @@ video {
   grid-column: span 12 / span 12;
 }
 
+.col-span-4 {
+  grid-column: span 4 / span 4;
+}
+
 .col-span-5 {
   grid-column: span 5 / span 5;
 }
@@ -949,6 +953,10 @@ video {
 
 .col-span-7 {
   grid-column: span 7 / span 7;
+}
+
+.col-span-8 {
+  grid-column: span 8 / span 8;
 }
 
 .m-auto {
@@ -1852,6 +1860,10 @@ video {
   grid-template-columns: repeat(12, minmax(0, 1fr));
 }
 
+.grid-cols-2 {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
 .grid-cols-3 {
   grid-template-columns: repeat(3, minmax(0, 1fr));
 }
@@ -2319,6 +2331,16 @@ video {
 .bg-white {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+}
+
+.bg-\[\#02C33F\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(2 195 63 / var(--tw-bg-opacity));
+}
+
+.bg-\[\#E7FFEF\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(231 255 239 / var(--tw-bg-opacity));
 }
 
 .fill-\[\#ffebcf\] {
@@ -2837,6 +2859,11 @@ video {
   color: rgb(180 180 180 / var(--tw-text-opacity));
 }
 
+.text-\[\#F01212\] {
+  --tw-text-opacity: 1;
+  color: rgb(240 18 18 / var(--tw-text-opacity));
+}
+
 .text-\[\#ff9704\] {
   --tw-text-opacity: 1;
   color: rgb(255 151 4 / var(--tw-text-opacity));
@@ -2870,11 +2897,6 @@ video {
 .text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
-}
-
-.text-\[\#F01212\] {
-  --tw-text-opacity: 1;
-  color: rgb(240 18 18 / var(--tw-text-opacity));
 }
 
 .underline {
@@ -4167,8 +4189,16 @@ html[dir="rtl"] .data_imagesContLeftRight {
   border-top-left-radius: 0px;
 }
 
+:is([dir="ltr"] .ltr\:border-l) {
+  border-left-width: 1px;
+}
+
 :is([dir="ltr"] .ltr\:pl-0) {
   padding-left: 0px;
+}
+
+:is([dir="ltr"] .ltr\:pl-10) {
+  padding-left: 2.5rem;
 }
 
 :is([dir="ltr"] .ltr\:pl-4) {
@@ -4415,6 +4445,10 @@ html[dir="rtl"] .data_imagesContLeftRight {
   border-top-right-radius: 0px;
 }
 
+:is([dir="rtl"] .rtl\:border-r) {
+  border-right-width: 1px;
+}
+
 :is([dir="rtl"] .rtl\:pl-0) {
   padding-left: 0px;
 }
@@ -4445,6 +4479,10 @@ html[dir="rtl"] .data_imagesContLeftRight {
 
 :is([dir="rtl"] .rtl\:pr-0) {
   padding-right: 0px;
+}
+
+:is([dir="rtl"] .rtl\:pr-10) {
+  padding-right: 2.5rem;
 }
 
 :is([dir="rtl"] .rtl\:pr-4) {
