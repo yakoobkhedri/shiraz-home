@@ -457,6 +457,11 @@ input[type="number"] {
 .shadow-hover:hover{
   box-shadow: 0px 11px 28px 0px #FF97042E;
 }
+/* checkbox */
+.checkbox.active {
+  opacity: 1;
+  background-color: #FF9704;
+}
 /* swiper */
 .banner .swiper-pagination-bullet{
   width: 9px!important;
@@ -470,6 +475,7 @@ input[type="number"] {
 .banner .swiper-pagination-bullet-active{
   width: 29px!important;
   background-color: #FF9704!important;
+  border-color: #FF9704;
 }
 .banner .swiper-pagination{
   bottom: -6px!important;
