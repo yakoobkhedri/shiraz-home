@@ -157,6 +157,9 @@ a {
 .bg-gradient10{
   background: linear-gradient(180deg, #FF9704 -16.07%, rgba(219, 219, 219, 0.55) 100%);
 }
+.bg-gradient11{
+  background: linear-gradient(90deg, rgba(255, 151, 4, 0.21) 0%, rgba(255, 233, 202, 0) 79.56%);
+}
 /* after */
 .gradient-after::after{
   content: '';
