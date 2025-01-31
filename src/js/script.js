@@ -65,7 +65,7 @@ var homes = new Swiper(".homes", {
     }
   },
   navigation: {
-    nextEl: ".swiper-button-next",
+    nextEl: ".swiper2",
     prevEl: ".swiper-button-prev",
   },
 });
@@ -85,7 +85,7 @@ var homes2 = new Swiper(".homes2", {
     }
   },
   navigation: {
-    nextEl: ".swiper-button-next",
+    nextEl: ".swiper2",
     prevEl: ".swiper-button-prev",
   },
 });
@@ -108,7 +108,7 @@ var homes3 = new Swiper(".homes3", {
     }
   },
   navigation: {
-    nextEl: ".swiper-button-next",
+    nextEl: ".swiper2",
     prevEl: ".swiper-button-prev",
   },
 });
@@ -120,7 +120,7 @@ var testimonials = new Swiper(".testimonials", {
   autoplay: true,
   loop: true,
   navigation: {
-    nextEl: ".swiper-button-next",
+    nextEl: ".swiper2",
     prevEl: ".swiper-button-prev",
   },
   on: {
@@ -158,7 +158,7 @@ var blog = new Swiper(".blog", {
     }
   },
   navigation: {
-    nextEl: ".swiper-button-next",
+    nextEl: ".swiper2",
     prevEl: ".swiper-button-prev",
   },
 });
@@ -180,7 +180,7 @@ var filters = new Swiper(".filters", {
     }
   },
   navigation: {
-    nextEl: ".swiper-button-next",
+    nextEl: ".swiper2",
     prevEl: ".swiper-button-prev",
   },
 });
@@ -196,7 +196,14 @@ var rooms = new Swiper(".rooms", {
     clickable: true,
   },
 });
-
+var gallery = new Swiper(".gallery", {
+  slidesPerView: 1,
+  spaceBetween: 16,
+  navigation: {
+    nextEl: ".swiper-button-next2",
+    prevEl: ".swiper-button-prev2",
+  },
+});
 // select size
 
 let size = Array.from(document.getElementsByClassName('size'));
