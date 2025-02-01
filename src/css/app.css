@@ -300,6 +300,7 @@ a {
   visibility: hidden;
   transition: all .4s;
   top: 220px;
+  z-index: 60;
 }
 .mobileMenu.active {
   opacity: 100%;
@@ -325,8 +326,11 @@ input[type="number"] {
   color: #7E5EFF;
 }
 /* tab */
-.tabBox a.active img{
- @apply -bottom-5
+.tabBox a img{
+  @apply opacity-0;
+ }
+.tabBox a.active img,.tabBox a:hover img{
+ @apply -bottom-5 opacity-100;
 }
 /* editor */
 .editor-section img{

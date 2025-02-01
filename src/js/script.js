@@ -49,8 +49,8 @@ var category = new Swiper(".category", {
   },
 });
 var homes = new Swiper(".homes", {
-  slidesPerView: 1.3,
-  spaceBetween: 16,
+  slidesPerView: 1.2,
+  spaceBetween: 8,
   autoplay: true,
   breakpoints: {
     576: {
@@ -218,40 +218,12 @@ size.forEach((item)=>{
 // tabs
 
 
-let orderTabs = Array.from(document.querySelectorAll('.tabs p'));
-let tabContent = Array.from(document.querySelectorAll('.tabContent > div'));
-let tabs = Array.from(document.querySelectorAll('.tabs2 > div'));
-let tabContent2 = Array.from(document.querySelectorAll('.tabContent2 > div > div'));
-
-orderTabs.forEach((item) => {
-  item.addEventListener('click', function () {
-    orderTabs.forEach((items) => { items.classList.remove('active') });
-    item.classList.add('active');
-    let tabId = item.dataset.id;
-    tabContent.forEach((content) => {
-      let contentId = content.dataset.id;
-      if (tabId === contentId) {
-        content.classList.add('active');
-      } else {
-        content.classList.remove('active');
-      }
-    })
-  })
-})
+let tabs = Array.from(document.querySelectorAll('.tabBox a'));
 
 tabs.forEach((item) => {
   item.addEventListener('click', function () {
     tabs.forEach((items) => { items.classList.remove('active') });
     item.classList.add('active');
-    let tabId = item.dataset.id;
-    tabContent2.forEach((content) => {
-      let contentId = content.dataset.id;
-      if (tabId === contentId) {
-        content.classList.add('active');
-      } else {
-        content.classList.remove('active');
-      }
-    })
   })
 })
 
