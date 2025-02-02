@@ -297,6 +297,7 @@ a {
 .dayContainer{
   max-width: 100% !important;
   width: 100% !important;
+  box-shadow: none !important;
 }
 .flatpickr-day.selected, .flatpickr-day.startRange,.flatpickr-day.endRange:hover,.flatpickr-day.endRange,.flatpickr-day.selected:hover, .flatpickr-day.startRange:hover{
   background-color: #f01212 !important;
@@ -310,6 +311,10 @@ a {
   background-color: #ffc0cb6b !important;
   border-radius: 4px !important;
   border-color: transparent !important;
+}
+.flatpickr-weekdays {
+  margin-top: 13px;
+  margin-bottom: 13px;
 }
 /* dropdown */
 .dropdownContent {

@@ -647,7 +647,7 @@
                     <img alt="icon" src="../img/svg/calendar.svg">
                     <p>تقویم و نرخ رزرو</p>
                   </div>
-                  <div class="mt-4">
+                  <div class="mt-6">
                     <!-- ورودی که تاریخ شروع و پایان را می‌گیرد -->
                     <input id="dateRangePicker" class="hidden" type="text" placeholder="انتخاب تاریخ‌ها">
                   </div>
@@ -1016,12 +1016,12 @@
                 <div
                   class="rounded-[20px] overflow-hidden mt-[18px] border border-[#E4E4E4] grid grid-cols-12 font-faNumBold text-dark">
                   <div class="col-span-6 px-4 rtl:border-l ltr:border-r border-[#E4E4E4]">
-                    <input id="inputdate"
+                    <input readonly id="inputdate"
                       class="bg-transparent w-full h-[70px] outline-none border-0 text-center placeholder:text-dark"
                       placeholder="تاریخ ورود ">
                   </div>
                   <div class="col-span-6 px-4">
-                    <input id="outputdate"
+                    <input readonly id="outputdate"
                       class="bg-transparent w-full h-[70px] outline-none border-0 text-center placeholder:text-dark"
                       placeholder="تاریخ خروج">
                   </div>
@@ -1701,6 +1701,7 @@
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script src="../js/modal.js"></script>
   <script src="../js/script.js"></script>
+  <!-- افزودن JS Flatpickr -->
   <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
 
   <script>
@@ -1710,6 +1711,7 @@
       defaultDate: ["2025-02-01", "2025-02-10"], // تاریخ‌های پیش‌فرض
       inline: true, // نمایش تقویم به صورت پیش‌فرض
       static: true, // برای ثابت بودن تقویم
+      showMonths: 2,  // تنظیم برای نمایش دو ماه
       monthSelectorType: "static", // این گزینه باعث می‌شود که ماه‌ها به صورت ثابت نمایش داده شوند
       onChange: function (selectedDates, dateStr, instance) {
         document.getElementById('inputdate').value = selectedDates[0].toLocaleDateString('en-US', {
