@@ -3501,6 +3501,11 @@ a {
   color: #B4B4B4 !important;
 }
 
+.flatpickr-months .flatpickr-next-month svg,.flatpickr-months .flatpickr-prev-month svg {
+  width: 20px !important;
+  height: 20px !important;
+}
+
 .flatpickr-current-month {
   font-size: 18px !important;
   font-weight: bold !important;
