@@ -3560,7 +3560,7 @@ a {
 /* استایل برای نمایش قیمت‌ها زیر هر روز */
 
 .flatpickr-day .original-price {
-  font-size: 8px;
+  font-size: 7px;
   color: #B4B4B4;
   position: absolute;
   bottom: -3px;
@@ -3569,7 +3569,7 @@ a {
 }
 
 .flatpickr-day .discount-price {
-  font-size: 8px;
+  font-size: 7px;
   color: #F01212;
   font-weight: bold;
   position: absolute;
