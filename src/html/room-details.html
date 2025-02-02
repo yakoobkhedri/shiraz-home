@@ -1705,6 +1705,16 @@
   <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
 
   <script>
+    // داده‌های قیمت اصلی و تخفیف برای هر روز
+    const priceData = {
+            "2025-02-01": { originalPrice: "1,200,000", discountPrice: "980,000" },
+            "2025-02-02": { originalPrice: "1,300,000", discountPrice: "980,000" },
+            "2025-02-03": { originalPrice: "1,500,000", discountPrice: "980,000" },
+            "2025-02-04": { originalPrice: "1,400,000", discountPrice: "980,000" },
+            "2025-02-05": { originalPrice: "1,200,000", discountPrice: "980,000" },
+            "2025-02-06": { originalPrice: "1,600,000", discountPrice: "980,000" },
+            // می‌توانید داده‌های بیشتر اضافه کنید
+        };
     flatpickr("#dateRangePicker", {
       mode: "range", // انتخاب بازه تاریخ
       dateFormat: "Y/m/d", // فرمت تاریخ شمسی
@@ -1724,7 +1734,31 @@
           month: 'short',
           day: 'numeric'
         });
-      }
+      },
+      // اضافه کردن قیمت‌ها به هر روز
+      onDayCreate: function(dObj, dStr, fp, dayElem) {
+                const day = dayElem.dateObj;
+                const dateString = day.toISOString().split('T')[0];  // تبدیل تاریخ به فرمت 'YYYY-MM-DD'
+
+                // بررسی اینکه آیا برای این روز داده‌ای برای قیمت‌ها وجود دارد
+                if (priceData[dateString]) {
+                    const { originalPrice, discountPrice } = priceData[dateString];
+
+                    // ایجاد المان قیمت اصلی
+                    const originalPriceElem = document.createElement("span");
+                    originalPriceElem.className = "original-price";
+                    originalPriceElem.textContent = `${originalPrice}`;
+
+                    // ایجاد المان قیمت تخفیف‌خورده
+                    const discountPriceElem = document.createElement("span");
+                    discountPriceElem.className = "discount-price";
+                    discountPriceElem.textContent = `${discountPrice}`;
+
+                    // افزودن المان‌ها به روز
+                    dayElem.appendChild(originalPriceElem);
+                    dayElem.appendChild(discountPriceElem);
+                }
+            }
     });
   </script>
 </body>

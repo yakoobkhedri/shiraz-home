@@ -285,6 +285,21 @@ a {
   color: black;
 }
 /* calander */
+.flatpickr-weekdays {
+   font-size: 10px !important;
+   font-weight: bold !important;
+   color: #B4B4B4 !important;
+}
+.flatpickr-current-month {
+  font-size: 18px !important;
+  font-weight: bold !important;
+  color: #2F2F2F !important;
+}
+.flatpickr-day.today:hover, .flatpickr-day.today:focus {
+  border-color: #e6e6e6 !important;
+  background: #e6e6e6 !important;
+  color: #fff;
+}
 .dateRangePicker{
   display: none !important;
 }
@@ -316,6 +331,35 @@ a {
   margin-top: 13px;
   margin-bottom: 13px;
 }
+/* استایل برای نمایش قیمت‌ها زیر هر روز */
+.flatpickr-day .original-price {
+  font-size: 8px;
+  color: #B4B4B4;
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  right: 0;
+}
+.flatpickr-day .discount-price {
+  font-size: 8px;
+  color: #F01212;
+  font-weight: bold;
+  position: absolute;
+  bottom: -14px;
+  left: 0;
+  right: 0;
+}
+.flatpickr-day {
+  position: relative;
+  height: 51px !important;
+  color: #000000 !important;
+  font-size: 12px !important;
+  font-weight: bold !important;
+}
+.flatpickr-day.today {
+  border-color: transparent !important;
+}
+
 /* dropdown */
 .dropdownContent {
   padding: 0;
