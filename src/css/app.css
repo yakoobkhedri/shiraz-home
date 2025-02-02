@@ -359,12 +359,13 @@ a {
   color: #000000 !important;
   font-size: 12px !important;
   font-weight: bold !important;
-  border-radius: 4px !important;
 }
 .flatpickr-day.today {
   border-color: transparent !important;
 }
-
+.flatpickr-day:hover{
+  border-radius: 4px;
+}
 /* dropdown */
 .dropdownContent {
   padding: 0;
