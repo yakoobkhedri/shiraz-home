@@ -284,6 +284,33 @@ a {
 .testimonials .swiper-slide > div.active p,.testimonials .swiper-slide > div:hover p{
   color: black;
 }
+/* calander */
+.dateRangePicker{
+  display: none !important;
+}
+.flatpickr-calendar.inline{
+  box-shadow: none;
+}
+.flatpickr-wrapper,.flatpickr-calendar.inline,.flatpickr-rContainer,.flatpickr-days {
+  width: 100%!important;
+}
+.dayContainer{
+  max-width: 100% !important;
+  width: 100% !important;
+}
+.flatpickr-day.selected, .flatpickr-day.startRange,.flatpickr-day.endRange:hover,.flatpickr-day.endRange,.flatpickr-day.selected:hover, .flatpickr-day.startRange:hover{
+  background-color: #f01212 !important;
+  border-color: #f01212 !important;
+}
+.flatpickr-day.startRange.startRange + .endRange:not(:nth-child(7n+1)){
+  box-shadow: -10px 0 0 #f01212 !important;
+}
+.flatpickr-day.inRange {
+  box-shadow: none !important;
+  background-color: #ffc0cb6b !important;
+  border-radius: 4px !important;
+  border-color: transparent !important;
+}
 /* dropdown */
 .dropdownContent {
   padding: 0;

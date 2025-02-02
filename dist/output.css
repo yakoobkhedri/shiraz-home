@@ -807,6 +807,10 @@ video {
   top: 0px;
 }
 
+.top-0\.5 {
+  top: 0.125rem;
+}
+
 .top-1 {
   top: 0.25rem;
 }
@@ -833,6 +837,10 @@ video {
 
 .top-16 {
   top: 4rem;
+}
+
+.top-20 {
+  top: 5rem;
 }
 
 .top-3 {
@@ -1005,6 +1013,26 @@ video {
 .my-auto {
   margin-top: auto;
   margin-bottom: auto;
+}
+
+.mx-\[58px\] {
+  margin-left: 58px;
+  margin-right: 58px;
+}
+
+.mx-\[54px\] {
+  margin-left: 54px;
+  margin-right: 54px;
+}
+
+.mx-\[52px\] {
+  margin-left: 52px;
+  margin-right: 52px;
+}
+
+.mx-\[50px\] {
+  margin-left: 50px;
+  margin-right: 50px;
 }
 
 .-mb-10 {
@@ -2401,6 +2429,16 @@ video {
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
+.bg-\[\#FFDBAC\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 219 172 / var(--tw-bg-opacity));
+}
+
+.bg-\[\#FFF0DB\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 240 219 / var(--tw-bg-opacity));
+}
+
 .fill-\[\#ffebcf\] {
   fill: #ffebcf;
 }
@@ -3470,6 +3508,41 @@ a {
   color: black;
 }
 
+/* calander */
+
+.dateRangePicker{
+  display: none !important;
+}
+
+.flatpickr-calendar.inline{
+  box-shadow: none;
+}
+
+.flatpickr-wrapper,.flatpickr-calendar.inline,.flatpickr-rContainer,.flatpickr-days {
+  width: 100%!important;
+}
+
+.dayContainer{
+  max-width: 100% !important;
+  width: 100% !important;
+}
+
+.flatpickr-day.selected, .flatpickr-day.startRange,.flatpickr-day.endRange:hover,.flatpickr-day.endRange,.flatpickr-day.selected:hover, .flatpickr-day.startRange:hover{
+  background-color: #f01212 !important;
+  border-color: #f01212 !important;
+}
+
+.flatpickr-day.startRange.startRange + .endRange:not(:nth-child(7n+1)){
+  box-shadow: -10px 0 0 #f01212 !important;
+}
+
+.flatpickr-day.inRange {
+  box-shadow: none !important;
+  background-color: #ffc0cb6b !important;
+  border-radius: 4px !important;
+  border-color: transparent !important;
+}
+
 /* dropdown */
 
 .dropdownContent {
@@ -4253,6 +4326,10 @@ html[dir="rtl"] .data_imagesContLeftRight {
   right: 86px;
 }
 
+:is([dir="ltr"] .ltr\:right-\[-18px\]) {
+  right: -18px;
+}
+
 :is([dir="ltr"] .ltr\:order-first) {
   order: -9999;
 }
@@ -4532,6 +4609,10 @@ html[dir="rtl"] .data_imagesContLeftRight {
 
 :is([dir="rtl"] .rtl\:right-auto) {
   right: auto;
+}
+
+:is([dir="rtl"] .rtl\:left-\[-18px\]) {
+  left: -18px;
 }
 
 :is([dir="rtl"] .rtl\:-ml-\[103px\]) {
