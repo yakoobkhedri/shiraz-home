@@ -602,6 +602,13 @@ html[dir="rtl"] .data_imagesContLeftRight {
 .banner .swiper-slide-active div.data_imagesContLeftRight {
   transform: translate(0, 0);
 }
+/* step */
+.step.active > span,.step.active > div > div{
+  background-color: #FF9704;
+}
+.step.active svg path{
+  stroke: white;
+}
 /* range input */
 .rs-container{
   height: 20px !important;
