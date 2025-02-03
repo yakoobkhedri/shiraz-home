@@ -31,35 +31,34 @@
     </div>
     <div style="visibility: hidden; opacity: 0;" data-button="gallery-modal"
       class="modal-container overflow-auto bg-black/60 backdrop-blur-sm fixed inset-0 z-50 transition-all flex justify-center items-center px-4 sm:px-7">
-      <div class="modal-content max-w-content mx-auto">
-        <div class="p-20 relative">
+      <div class="modal-content max-w-content mx-auto w-full">
+        <div class="relative">
           <div class="swiper gallery">
             <div class="swiper-wrapper">
               <div class="swiper-slide">
-                <img alt="img" src="../img/image (9).png" class="w-5/6 rounded-xl mx-auto">
+                <img alt="img" src="../img/image (9).png" class="w-full sm:w-5/6 rounded-xl mx-auto">
               </div>
               <div class="swiper-slide">
-                <img alt="img" src="../img/image (9).png" class="w-5/6 rounded-xl mx-auto">
+                <img alt="img" src="../img/image (9).png" class="w-full sm:w-5/6 rounded-xl mx-auto">
               </div>
             </div>
           </div>
-          <div class="swiper-button-next2 !absolute flex-center my-auto top-1/2 right-9">
+          <div class="swiper-button-next2 !absolute flex-center z-10 my-auto top-1/2 right-0">
             <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor"
               class="text-white bi bi-chevron-right" viewBox="0 0 16 16">
               <path fill-rule="evenodd"
                 d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708" />
             </svg>
           </div>
-          <div class="swiper-button-prev2 !absolute flex-center my-auto top-1/2 left-9">
+          <div class="swiper-button-prev2 !absolute flex-center z-10 my-auto top-1/2 left-0">
             <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor"
               class="text-white bi bi-chevron-left" viewBox="0 0 16 16">
               <path fill-rule="evenodd"
                 d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0" />
             </svg>
           </div>
-          <div class="swiper-button-prev2 !absolute flex-center"></div>
-          <button class="absolute top-6 left-4 ltr:right-4 ltr:left-auto close-button p-2 group">
-            <svg class="w-8" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <button class="absolute z-10 -top-14 sm:top-8 left-4 ltr:right-4 ltr:left-auto close-button p-2 group">
+            <svg class="w-6 sm:w-8" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path class="group-hover:stroke-red-600 transition" d="M16 2L2 16M2 2L16 16" stroke="white"
                 stroke-width="2.15385" stroke-linecap="round" stroke-linejoin="round"></path>
             </svg>

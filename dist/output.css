@@ -919,6 +919,14 @@ video {
   top: auto;
 }
 
+.top-8 {
+  top: 2rem;
+}
+
+.-top-14 {
+  top: -3.5rem;
+}
+
 .-z-1 {
   z-index: -1;
 }
@@ -3584,6 +3592,7 @@ a {
   color: #000000 !important;
   font-size: 12px !important;
   font-weight: bold !important;
+  flex-direction: row !important;
 }
 
 .flatpickr-day.today {
@@ -5151,6 +5160,14 @@ html[dir="rtl"] .data_imagesContLeftRight {
     width: auto;
   }
 
+  .sm\:w-5\/6 {
+    width: 83.333333%;
+  }
+
+  .sm\:w-8 {
+    width: 2rem;
+  }
+
   .sm\:grid-cols-2 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -5278,6 +5295,10 @@ html[dir="rtl"] .data_imagesContLeftRight {
 
   .sm\:p-\[18px\] {
     padding: 18px;
+  }
+
+  .sm\:p-10 {
+    padding: 2.5rem;
   }
 
   .sm\:px-10 {
@@ -5780,6 +5801,10 @@ html[dir="rtl"] .data_imagesContLeftRight {
 
   .md\:p-5 {
     padding: 1.25rem;
+  }
+
+  .md\:p-20 {
+    padding: 5rem;
   }
 
   .md\:pb-20 {

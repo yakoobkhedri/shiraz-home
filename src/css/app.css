@@ -359,6 +359,7 @@ a {
   color: #000000 !important;
   font-size: 12px !important;
   font-weight: bold !important;
+  flex-direction: row !important;
 }
 .flatpickr-day.today {
   border-color: transparent !important;
