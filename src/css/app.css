@@ -216,7 +216,7 @@ a {
   content: '';
   width: 1px;
   height: 71%;
-  border: 1px dotted #B4B4B4;
+  border: 1px dashed #B4B4B4;
   top: -12px;
   bottom: 0;
   position: absolute;

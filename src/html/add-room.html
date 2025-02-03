@@ -238,7 +238,7 @@
         </a>
         <div class="mt-[34px] grid grid-cols-12 gap-6">
           <div class="lg:col-span-4 col-span-12">
-            <div class="rounded-[10px] shadow-1 p-5">
+            <div class="rounded-[10px] bg-white shadow-1 p-5">
               <div class="dotBefore before:-bottom-[5px] before:h-[93%] relative">
                 <div class="flex items-center gap-4 mb-7 step active">
                   <span class="bg-[#E7E7E7] w-3 h-3 rounded-full z-10 flex-shrink-0"></span>
@@ -402,7 +402,59 @@
             </div>
           </div>
           <div class="lg:col-span-8 col-span-12">
-            
+            <form class="shadow-1 bg-white py-11 px-7">
+              <div class="grid grid-cols-12 gap-x-5 gap-y-7">
+                <div class="col-span-6">
+                 <div class="relative">
+                  <label class="text-dark font-medium text-lg absolute bg-white rtl:right-5 ltr:left-5 -top-5 py-1 px-5">استان</label>
+                   <select class="border border-[#EDEDED] rounded-[10px] w-full h-14 bg-white px-3">
+                    <option>تهران</option>
+                    <option>قم</option>
+                   </select>
+                 </div>
+                </div>
+                <div class="col-span-6">
+                  <div class="relative">
+                   <label class="text-dark font-medium text-lg absolute bg-white rtl:right-5 ltr:left-5 -top-5 py-1 px-5">نام میزبان</label>
+                    <input class="border border-[#EDEDED] rounded-[10px] w-full h-14 bg-white px-3 outline-none">
+                  </div>
+                 </div>
+                 <div class="col-span-12">
+                  <div class="relative">
+                    <div class="flex items-center gap-2 absolute top-3 rtl:right-3 ltr:left-3">
+                      <img alt="icon" src="../img/svg/location (3).svg" class="flex-shrink-0">
+                      <label class="text-dark font-medium text-lg">آدرس دقیق</label>
+                    </div>
+                    <textarea class="min-h-[101px] h-full pt-12 border border-[#EDEDED] rounded-[10px] w-full bg-white px-3 outline-none"></textarea>
+                  </div>
+                 </div>
+              </div>
+              <div class="mt-[73px]">
+                <h5 class="text-lg font-bold text-dark">موقعیت روی نقشه</h5>
+                <div class="bg-[#FFE5E5] rounded-[10px] mt-3 py-3 px-2 flex items-start gap-2">
+                  <img alt="img" src="../img/svg/warning-2 (2).svg" class="flex-shrink-0">
+                  <p class="text-dark font-medium text-sm">در صورت اختلاف موقعیت مکانی اقامتگاه‌تان در نقشه و محل واقعی اقامتگاه، مهمان می‌تواند بدون پرداخت جریمه رزرو خود را لغو کند.</p>
+                </div>
+                <iframe class="rounded-[10px] overflow-hidden mt-5 w-full h-[180px]" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d207344.0754342176!2d51.51246591933516!3d35.707740217686975!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3f8e00491ff3dcd9%3A0xf0b3697c567024bc!2z2KrZh9ix2KfZhtiMINin2LPYqtin2YYg2KrZh9ix2KfZhtiMINin24zYsdin2YY!5e0!3m2!1sfa!2s!4v1708858730182!5m2!1sfa!2s" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+              </div>
+              <div class="mt-6">
+                <h5 class="text-lg text-dark font-bold">تصاویر اقامتگاه</h5>
+                <div class="mt-3 text-sm text-dark font-medium">
+                 <div class="flex items-start gap-2 mb-3">
+                   <img alt="icon" src="../img/svg/tick-circle (3).svg" class="flex-shrink-0">
+                   <p>از آپلود تصاویر اسکرین شات خودداری کنید.</p>
+                 </div>
+                 <div class="flex items-start gap-2 mb-3">
+                  <img alt="icon" src="../img/svg/tick-circle (3).svg" class="flex-shrink-0">
+                  <p>از آپلود تصاویر اسکرین شات خودداری کنید.</p>
+                </div>
+                <div class="flex items-start gap-2 mb-3">
+                  <img alt="icon" src="../img/svg/tick-circle (3).svg" class="flex-shrink-0">
+                  <p>در صورت اختلاف موقعیت مکانی اقامتگاه‌تان در نقشه و محل واقعی اقامتگاه، مهمان می‌تواند بدون پرداخت جریمه رزرو خود را لغو کند.</p>
+                </div>
+                </div>
+              </div>
+            </form>
           </div>
         </div>
     </section>
