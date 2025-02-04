@@ -469,6 +469,36 @@ input[type="number"] {
 .editor-section ul li{
   @apply text-sm sm:text-base text-[#2C2C2C];
 }
+/* upload */
+#image-preview img{
+  width: 100%;
+  border-radius: 10px;
+}
+.image-container{
+  position: relative;
+}
+.image-number{
+  width: 24px;
+  height: 24px;
+  border-radius: 100%;
+  background-color: #FF9704;
+  color: white;
+  font-weight: 700;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  @apply font-faNumBold rtl:right-[18px] ltr:left-[18px] top-[18px];
+}
+.main-label{
+  background-color: white;
+  border-radius: 15px;
+  color: #2C2C2C;
+  font-size: 13px;
+  position: absolute;
+  @apply py-1 px-3 rtl:right-[39px] ltr:left-[39px] top-4 font-medium z-1;
+}
 /* accordion */
 .acordionBtn,.acordionBtn2{
   cursor: pointer;

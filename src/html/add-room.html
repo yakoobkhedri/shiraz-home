@@ -454,6 +454,36 @@
                 </div>
                 </div>
               </div>
+              <div class="mt-[18px]">
+                <div class="border border-[#EDEDED] p-5 rounded-[10px] flex-center">
+                  <div>
+                    <img alt="img" src="../img/Group 45777.png" class="mx-auto w-12 h-12 rounded-full">
+                    <div class="mt-4 relative">
+                      <div class="rounded-[10px] bg-primary text-white py-2 px-4 text-sm font-bold btnHover cursor-pointer">افرودن عکس</div>
+                      <input class="opacity-0 absolute inset-0 w-full h-full cursor-pointer" type="file" id="upload-button" accept="image/*" multiple>
+                    </div>
+                  </div>
+                </div>
+                <div class="mt-[22px]">
+                  <div id="image-preview" class="grid grid-cols-2 gap-4"></div>
+                </div>
+              </div>
+              <div class="mt-[60px]">
+                <div class="flex items-center justify-between">
+                  <h5 class="font-bold text-lg text-dark">تعداد هال و پذیرایی</h5>
+                  <div class="bg-[#FFF6EA] rounded-[10px] p-3 flex items-center justify-between gap-5">
+                    <button class="flex-center transition hover:bg-primary group rounded-md border-[1.5px] border-primary w-6 h-6">
+                      <svg width="10" height="2" viewBox="0 0 10 2" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path class="transition group-hover:stroke-white" d="M1 1H9" stroke="#FF9704" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                      </svg>
+                    </button>
+                    <input type="number" value="1" class="text-dark w-10 font-faNumBold text-center flex-grow bg-transparent border-0 outline-none">
+                    <button class="flex-center hover:text-white text-primary transition hover:bg-primary group rounded-md border-[1.5px] border-primary w-6 h-6">
+                      +
+                    </button>
+                  </div>
+                </div>
+              </div>
             </form>
           </div>
         </div>
@@ -663,6 +693,7 @@
 
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script src="../js/script.js"></script>
+  <script src="../js/upload.js"></script>
 </body>
 
 </html>
