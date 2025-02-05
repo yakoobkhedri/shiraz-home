@@ -16,7 +16,7 @@
     <div class="modal">
       <div style="visibility: hidden; opacity: 0;" data-button="hall-modal"
         class="modal-container overflow-auto bg-black/60 backdrop-blur-sm fixed inset-0 z-50 transition-all flex justify-center items-center px-4 sm:px-7">
-        <form class="modal-content bg-white max-w-[526px] overflow-hidden relative w-full rounded-[27px] shadow-8">
+        <form id="hall-form" class="modal-content bg-white max-w-[526px] overflow-hidden relative w-full rounded-[27px] shadow-8">
           <img alt="shape" src="../img/Rectangle 165.png" class="absolute top-0 inset-x-0 h-[109px] w-full">
           <div class="p-4 relative">
             <div class="flex items-center justify-between mb-5 relative mt-4">
@@ -36,28 +36,55 @@
               <div class="relative">
                 <label class="text-dark font-medium text-sm absolute bg-white rtl:right-5 ltr:left-5 -top-4 py-1 px-5">تخت یک نفره</label>
                 <div class="border border-[#EDEDED] rounded-[10px] px-3 py-4 flex items-center gap-4">
-                  <input min="1" type="number" class="flex-grow w-full bg-transparent border-0 outline-none font-faNumRegular">
-                  <span class="bg-[#F4F4F4] flex-shrink-0 rounded-xl text-sm font-medium text-dark py-2 px-3">عدد</span>
+                  <div class="bg-[#FFF6EA] rounded-[10px] p-3 flex items-center justify-between gap-5">
+                    <button class="decrease-btn flex-center transition hover:bg-primary group rounded-md flex-shrink-0 border-[1.5px] border-primary w-6 h-6">
+                      <svg width="10" height="2" viewBox="0 0 10 2" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path class="transition group-hover:stroke-white" d="M1 1H9" stroke="#FF9704" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                      </svg>
+                    </button>
+                    <input id="number1" min="1" type="number" value="0" class="text-dark w-full font-faNumRegular text-center flex-grow bg-transparent border-0 outline-none">
+                    <button class="increase-btn flex-center hover:text-white text-primary transition hover:bg-primary group rounded-md flex-shrink-0 border-[1.5px] border-primary w-6 h-6">
+                      +
+                    </button>
+                  </div>
                 </div>
                </div>
                <div class="relative">
                 <label class="text-dark font-medium text-sm absolute bg-white rtl:right-5 ltr:left-5 -top-4 py-1 px-5">تخت دو نفره</label>
                 <div class="border border-[#EDEDED] rounded-[10px] px-3 py-4 flex items-center gap-4">
-                  <input min="1" type="number" class="flex-grow w-full bg-transparent border-0 outline-none font-faNumRegular">
-                  <span class="bg-[#F4F4F4] flex-shrink-0 rounded-xl text-sm font-medium text-dark py-2 px-3">عدد</span>
+                  <div class="bg-[#FFF6EA] rounded-[10px] p-3 flex items-center justify-between gap-5">
+                    <button class="decrease-btn flex-center transition hover:bg-primary group rounded-md flex-shrink-0 border-[1.5px] border-primary w-6 h-6">
+                      <svg width="10" height="2" viewBox="0 0 10 2" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path class="transition group-hover:stroke-white" d="M1 1H9" stroke="#FF9704" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                      </svg>
+                    </button>
+                    <input id="number2" min="1" type="number" value="0" class="text-dark w-full font-faNumRegular text-center flex-grow bg-transparent border-0 outline-none">
+                    <button class="increase-btn flex-center hover:text-white text-primary transition hover:bg-primary group rounded-md flex-shrink-0 border-[1.5px] border-primary w-6 h-6">
+                      +
+                    </button>
+                  </div>
                 </div>
                </div>
                <div class="relative">
                 <label class="text-dark font-medium text-sm absolute bg-white rtl:right-5 ltr:left-5 -top-4 py-1 px-5">تخت دو طبقه</label>
                 <div class="border border-[#EDEDED] rounded-[10px] px-3 py-4 flex items-center gap-4">
-                  <input min="1" type="number" class="flex-grow w-full bg-transparent border-0 outline-none font-faNumRegular">
-                  <span class="bg-[#F4F4F4] flex-shrink-0 rounded-xl text-sm font-medium text-dark py-2 px-3">عدد</span>
+                  <div class="bg-[#FFF6EA] rounded-[10px] p-3 flex items-center justify-between gap-5">
+                    <button class="decrease-btn flex-center transition hover:bg-primary group rounded-md flex-shrink-0 border-[1.5px] border-primary w-6 h-6">
+                      <svg width="10" height="2" viewBox="0 0 10 2" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path class="transition group-hover:stroke-white" d="M1 1H9" stroke="#FF9704" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                      </svg>
+                    </button>
+                    <input id="number3" min="1" type="number" value="0" class="text-dark w-full font-faNumRegular text-center flex-grow bg-transparent border-0 outline-none">
+                    <button class="increase-btn flex-center hover:text-white text-primary transition hover:bg-primary group rounded-md flex-shrink-0 border-[1.5px] border-primary w-6 h-6">
+                      +
+                    </button>
+                  </div>
                 </div>
                </div>
                <div class="relative">
                 <label class="text-dark font-medium text-sm absolute bg-white rtl:right-5 ltr:left-5 -top-4 py-1 px-5">سیستم گرمایشی</label>
                 <div class="border border-[#EDEDED] rounded-[10px] px-3 py-4 flex items-center gap-4">
-                  <select class="text-sm font-medium text-dark flex-grow w-full bg-transparent h-9">
+                  <select required id="select1" class="text-sm font-medium text-dark flex-grow w-full bg-transparent h-9">
                     <option>داشته باشد</option>
                     <option>نداشته باشد</option>
                   </select>
@@ -66,14 +93,14 @@
                <div class="relative">
                 <label class="text-dark font-medium text-sm absolute bg-white rtl:right-5 ltr:left-5 -top-4 py-1 px-5">سیستم سرمایشی</label>
                 <div class="border border-[#EDEDED] rounded-[10px] px-3 py-4 flex items-center gap-4">
-                  <select class="text-sm font-medium text-dark flex-grow w-full bg-transparent h-9">
+                  <select required id="select2" class="text-sm font-medium text-dark flex-grow w-full bg-transparent h-9">
                     <option>داشته باشد</option>
                     <option>نداشته باشد</option>
                   </select>
                 </div>
                </div>
             </div>
-            <button
+            <button type="submit" onclick="saveData()"
               class="bg-primary mt-4 rtl:mr-auto ltr:ml-auto text-white rounded-[20px] py-1 w-[73px] flex-center font-medium btnHover">ثبت</button>
           </div>
         </form>
@@ -539,13 +566,13 @@
                 <div class="flex items-center justify-between">
                   <h5 class="font-bold text-lg text-dark">تعداد هال و پذیرایی</h5>
                   <div class="bg-[#FFF6EA] rounded-[10px] p-3 flex items-center justify-between gap-5">
-                    <button class="flex-center transition hover:bg-primary group rounded-md border-[1.5px] border-primary w-6 h-6">
+                    <button class="decrease-btn flex-center transition hover:bg-primary group rounded-md flex-shrink-0 border-[1.5px] border-primary w-6 h-6">
                       <svg width="10" height="2" viewBox="0 0 10 2" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path class="transition group-hover:stroke-white" d="M1 1H9" stroke="#FF9704" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                       </svg>
                     </button>
-                    <input type="number" value="1" class="text-dark w-10 font-faNumBold text-center flex-grow bg-transparent border-0 outline-none">
-                    <button class="flex-center hover:text-white text-primary transition hover:bg-primary group rounded-md border-[1.5px] border-primary w-6 h-6">
+                    <input type="number" min="1" value="1" class="text-dark w-10 font-faNumRegular text-center flex-grow bg-transparent border-0 outline-none">
+                    <button class="increase-btn flex-center hover:text-white text-primary transition hover:bg-primary group rounded-md flex-shrink-0 border-[1.5px] border-primary w-6 h-6">
                       +
                     </button>
                   </div>
@@ -557,21 +584,8 @@
                   </svg>
                   <p>افزودن امکانات خواب و گرمایش/سرمایش هال و پذیرایی</p>
                 </div>
-                <div class="mt-5 rounded-[10px] border-dashed-2-primary p-3 bg-[#FFF6EA] flex items-start gap-4">
-                 <div class="text-dark font-bold flex-grow">
-                  <p>هال و پذیرایی 1</p>
-                  <div class="flex items-center gap-3 flex-wrap text-sm font-medium mt-3">
-                    <p>هال بزرگ</p>
-                    <p>هال کوچک</p>
-                  </div>
-                 </div>
-                 <div class="flex items-center gap-4 flex-shrink-0">
-                  <svg class="group cursor-pointer transition hover:scale-95" width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <circle class="transition group-hover:fill-red-700" cx="15" cy="15" r="15" fill="#F01212"/>
-                     <path d="M22.5584 9.35842C21.2167 9.22508 19.875 9.12508 18.525 9.05008V9.04175L18.3417 7.95841C18.2167 7.19175 18.0334 6.04175 16.0834 6.04175H13.9C11.9584 6.04175 11.775 7.14175 11.6417 7.95008L11.4667 9.01675C10.6917 9.06675 9.91672 9.11675 9.14172 9.19175L7.44172 9.35842C7.09172 9.39175 6.84172 9.70008 6.87505 10.0417C6.90838 10.3834 7.20838 10.6334 7.55838 10.6001L9.25838 10.4334C13.625 10.0001 18.0251 10.1667 22.4417 10.6084C22.4667 10.6084 22.4834 10.6084 22.5084 10.6084C22.8251 10.6084 23.1 10.3667 23.1334 10.0417C23.1584 9.70008 22.9084 9.39175 22.5584 9.35842Z" fill="white"/>
-                     <path d="M21.0254 11.7833C20.8254 11.5749 20.5504 11.4583 20.2671 11.4583H9.73378C9.45044 11.4583 9.16711 11.5749 8.97544 11.7833C8.78378 11.9916 8.67544 12.2749 8.69211 12.5666L9.20878 21.1166C9.30044 22.3833 9.41711 23.9666 12.3254 23.9666H17.6754C20.5838 23.9666 20.7004 22.3916 20.7921 21.1166L21.3088 12.5749C21.3254 12.2749 21.2171 11.9916 21.0254 11.7833ZM16.3838 19.7916H13.6088C13.2671 19.7916 12.9838 19.5083 12.9838 19.1666C12.9838 18.8249 13.2671 18.5416 13.6088 18.5416H16.3838C16.7254 18.5416 17.0088 18.8249 17.0088 19.1666C17.0088 19.5083 16.7254 19.7916 16.3838 19.7916ZM17.0838 16.4583H12.9171C12.5754 16.4583 12.2921 16.1749 12.2921 15.8333C12.2921 15.4916 12.5754 15.2083 12.9171 15.2083H17.0838C17.4254 15.2083 17.7088 15.4916 17.7088 15.8333C17.7088 16.1749 17.4254 16.4583 17.0838 16.4583Z" fill="white"/>
-                  </svg>
-                 </div>
+                <div id="cards-container">
+                
                 </div>
               </div>
               <div class="mt-[47px]">
@@ -989,6 +1003,7 @@
   <script src="../js/script.js"></script>
   <script src="../js/modal.js"></script>
   <script src="../js/upload.js"></script>
+  <script src="../js/room-options.js"></script>
 </body>
 
 </html>
