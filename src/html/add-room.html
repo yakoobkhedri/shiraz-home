@@ -12,102 +12,123 @@
 
 <body class="max-w-[1536px] w-full mx-auto relative">
 
-    <!-- room details modals -->
-    <div class="modal">
-      <div style="visibility: hidden; opacity: 0;" data-button="hall-modal"
-        class="modal-container overflow-auto bg-black/60 backdrop-blur-sm fixed inset-0 z-50 transition-all flex justify-center items-center px-4 sm:px-7">
-        <form id="hall-form" class="modal-content bg-white max-w-[526px] overflow-hidden relative w-full rounded-[27px] shadow-8">
-          <img alt="shape" src="../img/Rectangle 165.png" class="absolute top-0 inset-x-0 h-[109px] w-full">
-          <div class="p-4 relative">
-            <div class="flex items-center justify-between mb-5 relative mt-4">
-              <div class="font-bold px-4 flex items-center gap-2 text-white">
-                <p>افزودن امکانات هال و پذیرایی</p>
-              </div>
-              <!-- close modal -->
-              <svg class="cursor-pointer close-button" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                xmlns="http://www.w3.org/2000/svg">
-                <path
-                  d="M13.41 11.9999L17.71 7.70994C17.8983 7.52164 18.0041 7.26624 18.0041 6.99994C18.0041 6.73364 17.8983 6.47825 17.71 6.28994C17.5217 6.10164 17.2663 5.99585 17 5.99585C16.7337 5.99585 16.4783 6.10164 16.29 6.28994L12 10.5899L7.71 6.28994C7.5217 6.10164 7.2663 5.99585 7 5.99585C6.7337 5.99585 6.4783 6.10164 6.29 6.28994C6.1017 6.47825 5.99591 6.73364 5.99591 6.99994C5.99591 7.26624 6.1017 7.52164 6.29 7.70994L10.59 11.9999L6.29 16.2899C6.19627 16.3829 6.12188 16.4935 6.07111 16.6154C6.02034 16.7372 5.9942 16.8679 5.9942 16.9999C5.9942 17.132 6.02034 17.2627 6.07111 17.3845C6.12188 17.5064 6.19627 17.617 6.29 17.7099C6.38296 17.8037 6.49356 17.8781 6.61542 17.9288C6.73728 17.9796 6.86799 18.0057 7 18.0057C7.13201 18.0057 7.26272 17.9796 7.38458 17.9288C7.50644 17.8781 7.61704 17.8037 7.71 17.7099L12 13.4099L16.29 17.7099C16.383 17.8037 16.4936 17.8781 16.6154 17.9288C16.7373 17.9796 16.868 18.0057 17 18.0057C17.132 18.0057 17.2627 17.9796 17.3846 17.9288C17.5064 17.8781 17.617 17.8037 17.71 17.7099C17.8037 17.617 17.8781 17.5064 17.9289 17.3845C17.9797 17.2627 18.0058 17.132 18.0058 16.9999C18.0058 16.8679 17.9797 16.7372 17.9289 16.6154C17.8781 16.4935 17.8037 16.3829 17.71 16.2899L13.41 11.9999Z"
-                  fill="white"></path>
-              </svg>
-            </div>
-            <!-- form -->
-            <div class="p-4 mt-[4.5rem] relative grid grid-cols-2 gap-x-5 gap-y-8">
-              <div class="relative">
-                <label class="text-dark font-medium text-sm absolute bg-white rtl:right-5 ltr:left-5 -top-4 py-1 px-5">تخت یک نفره</label>
-                <div class="border border-[#EDEDED] rounded-[10px] px-3 py-4 flex items-center gap-4">
-                  <div class="bg-[#FFF6EA] rounded-[10px] p-3 flex items-center justify-between gap-5">
-                    <button class="decrease-btn flex-center transition hover:bg-primary group rounded-md flex-shrink-0 border-[1.5px] border-primary w-6 h-6">
-                      <svg width="10" height="2" viewBox="0 0 10 2" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path class="transition group-hover:stroke-white" d="M1 1H9" stroke="#FF9704" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-                      </svg>
-                    </button>
-                    <input id="number1" min="0" type="number" value="0" class="text-dark w-full font-faNumRegular text-center flex-grow bg-transparent border-0 outline-none">
-                    <button class="increase-btn flex-center hover:text-white text-primary transition hover:bg-primary group rounded-md flex-shrink-0 border-[1.5px] border-primary w-6 h-6">
-                      +
-                    </button>
-                  </div>
-                </div>
-               </div>
-               <div class="relative">
-                <label class="text-dark font-medium text-sm absolute bg-white rtl:right-5 ltr:left-5 -top-4 py-1 px-5">تخت دو نفره</label>
-                <div class="border border-[#EDEDED] rounded-[10px] px-3 py-4 flex items-center gap-4">
-                  <div class="bg-[#FFF6EA] rounded-[10px] p-3 flex items-center justify-between gap-5">
-                    <button class="decrease-btn flex-center transition hover:bg-primary group rounded-md flex-shrink-0 border-[1.5px] border-primary w-6 h-6">
-                      <svg width="10" height="2" viewBox="0 0 10 2" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path class="transition group-hover:stroke-white" d="M1 1H9" stroke="#FF9704" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-                      </svg>
-                    </button>
-                    <input id="number2" min="0" type="number" value="0" class="text-dark w-full font-faNumRegular text-center flex-grow bg-transparent border-0 outline-none">
-                    <button class="increase-btn flex-center hover:text-white text-primary transition hover:bg-primary group rounded-md flex-shrink-0 border-[1.5px] border-primary w-6 h-6">
-                      +
-                    </button>
-                  </div>
-                </div>
-               </div>
-               <div class="relative">
-                <label class="text-dark font-medium text-sm absolute bg-white rtl:right-5 ltr:left-5 -top-4 py-1 px-5">تخت دو طبقه</label>
-                <div class="border border-[#EDEDED] rounded-[10px] px-3 py-4 flex items-center gap-4">
-                  <div class="bg-[#FFF6EA] rounded-[10px] p-3 flex items-center justify-between gap-5">
-                    <button class="decrease-btn flex-center transition hover:bg-primary group rounded-md flex-shrink-0 border-[1.5px] border-primary w-6 h-6">
-                      <svg width="10" height="2" viewBox="0 0 10 2" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path class="transition group-hover:stroke-white" d="M1 1H9" stroke="#FF9704" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-                      </svg>
-                    </button>
-                    <input id="number3" min="0" type="number" value="0" class="text-dark w-full font-faNumRegular text-center flex-grow bg-transparent border-0 outline-none">
-                    <button class="increase-btn flex-center hover:text-white text-primary transition hover:bg-primary group rounded-md flex-shrink-0 border-[1.5px] border-primary w-6 h-6">
-                      +
-                    </button>
-                  </div>
-                </div>
-               </div>
-               <div class="relative">
-                <label class="text-dark font-medium text-sm absolute bg-white rtl:right-5 ltr:left-5 -top-4 py-1 px-5">سیستم گرمایشی</label>
-                <div class="border border-[#EDEDED] rounded-[10px] px-3 py-4 flex items-center gap-4">
-                  <select required id="select1" class="text-sm font-medium text-dark flex-grow w-full bg-transparent h-9">
-                    <option>داشته باشد</option>
-                    <option>نداشته باشد</option>
-                  </select>
-                </div>
-               </div>
-               <div class="relative">
-                <label class="text-dark font-medium text-sm absolute bg-white rtl:right-5 ltr:left-5 -top-4 py-1 px-5">سیستم سرمایشی</label>
-                <div class="border border-[#EDEDED] rounded-[10px] px-3 py-4 flex items-center gap-4">
-                  <select required id="select2" class="text-sm font-medium text-dark flex-grow w-full bg-transparent h-9">
-                    <option>داشته باشد</option>
-                    <option>نداشته باشد</option>
-                  </select>
-                </div>
-               </div>
-            </div>
-            <button type="submit" onclick="saveData(this)"
-              class="bg-primary mt-4 rtl:mr-auto ltr:ml-auto text-white rounded-[20px] py-1 w-[73px] flex-center font-medium btnHover">ثبت</button>
-          </div>
-        </form>
-      </div>
-      <div style="visibility: hidden; opacity: 0;" data-button="pool-modal"
+  <!-- room details modals -->
+  <div class="modal">
+    <div style="visibility: hidden; opacity: 0;" data-button="hall-modal"
       class="modal-container overflow-auto bg-black/60 backdrop-blur-sm fixed inset-0 z-50 transition-all flex justify-center items-center px-4 sm:px-7">
-      <form id="pool-form" class="modal-content bg-white max-w-[526px] overflow-hidden relative w-full rounded-[27px] shadow-8">
+      <form id="hall-form"
+        class="modal-content bg-white max-w-[526px] overflow-hidden relative w-full rounded-[27px] shadow-8">
+        <img alt="shape" src="../img/Rectangle 165.png" class="absolute top-0 inset-x-0 h-[109px] w-full">
+        <div class="p-4 relative">
+          <div class="flex items-center justify-between mb-5 relative mt-4">
+            <div class="font-bold px-4 flex items-center gap-2 text-white">
+              <p>افزودن امکانات هال و پذیرایی</p>
+            </div>
+            <!-- close modal -->
+            <svg class="cursor-pointer close-button" width="24" height="24" viewBox="0 0 24 24" fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M13.41 11.9999L17.71 7.70994C17.8983 7.52164 18.0041 7.26624 18.0041 6.99994C18.0041 6.73364 17.8983 6.47825 17.71 6.28994C17.5217 6.10164 17.2663 5.99585 17 5.99585C16.7337 5.99585 16.4783 6.10164 16.29 6.28994L12 10.5899L7.71 6.28994C7.5217 6.10164 7.2663 5.99585 7 5.99585C6.7337 5.99585 6.4783 6.10164 6.29 6.28994C6.1017 6.47825 5.99591 6.73364 5.99591 6.99994C5.99591 7.26624 6.1017 7.52164 6.29 7.70994L10.59 11.9999L6.29 16.2899C6.19627 16.3829 6.12188 16.4935 6.07111 16.6154C6.02034 16.7372 5.9942 16.8679 5.9942 16.9999C5.9942 17.132 6.02034 17.2627 6.07111 17.3845C6.12188 17.5064 6.19627 17.617 6.29 17.7099C6.38296 17.8037 6.49356 17.8781 6.61542 17.9288C6.73728 17.9796 6.86799 18.0057 7 18.0057C7.13201 18.0057 7.26272 17.9796 7.38458 17.9288C7.50644 17.8781 7.61704 17.8037 7.71 17.7099L12 13.4099L16.29 17.7099C16.383 17.8037 16.4936 17.8781 16.6154 17.9288C16.7373 17.9796 16.868 18.0057 17 18.0057C17.132 18.0057 17.2627 17.9796 17.3846 17.9288C17.5064 17.8781 17.617 17.8037 17.71 17.7099C17.8037 17.617 17.8781 17.5064 17.9289 17.3845C17.9797 17.2627 18.0058 17.132 18.0058 16.9999C18.0058 16.8679 17.9797 16.7372 17.9289 16.6154C17.8781 16.4935 17.8037 16.3829 17.71 16.2899L13.41 11.9999Z"
+                fill="white"></path>
+            </svg>
+          </div>
+          <!-- form -->
+          <div class="p-4 mt-[4.5rem] relative grid grid-cols-2 gap-x-5 gap-y-8">
+            <div class="relative">
+              <label class="text-dark font-medium text-sm absolute bg-white rtl:right-5 ltr:left-5 -top-4 py-1 px-5">تخت
+                یک نفره</label>
+              <div class="border border-[#EDEDED] rounded-[10px] px-3 py-4 flex items-center gap-4">
+                <div class="bg-[#FFF6EA] rounded-[10px] p-3 flex items-center justify-between gap-5">
+                  <button
+                    class="decrease-btn flex-center transition hover:bg-primary group rounded-md flex-shrink-0 border-[1.5px] border-primary w-6 h-6">
+                    <svg width="10" height="2" viewBox="0 0 10 2" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path class="transition group-hover:stroke-white" d="M1 1H9" stroke="#FF9704" stroke-width="1.5"
+                        stroke-linecap="round" stroke-linejoin="round"></path>
+                    </svg>
+                  </button>
+                  <input id="number1" min="0" type="number" value="0"
+                    class="text-dark w-full font-faNumRegular text-center flex-grow bg-transparent border-0 outline-none">
+                  <button
+                    class="increase-btn flex-center hover:text-white text-primary transition hover:bg-primary group rounded-md flex-shrink-0 border-[1.5px] border-primary w-6 h-6">
+                    +
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="relative">
+              <label class="text-dark font-medium text-sm absolute bg-white rtl:right-5 ltr:left-5 -top-4 py-1 px-5">تخت
+                دو نفره</label>
+              <div class="border border-[#EDEDED] rounded-[10px] px-3 py-4 flex items-center gap-4">
+                <div class="bg-[#FFF6EA] rounded-[10px] p-3 flex items-center justify-between gap-5">
+                  <button
+                    class="decrease-btn flex-center transition hover:bg-primary group rounded-md flex-shrink-0 border-[1.5px] border-primary w-6 h-6">
+                    <svg width="10" height="2" viewBox="0 0 10 2" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path class="transition group-hover:stroke-white" d="M1 1H9" stroke="#FF9704" stroke-width="1.5"
+                        stroke-linecap="round" stroke-linejoin="round"></path>
+                    </svg>
+                  </button>
+                  <input id="number2" min="0" type="number" value="0"
+                    class="text-dark w-full font-faNumRegular text-center flex-grow bg-transparent border-0 outline-none">
+                  <button
+                    class="increase-btn flex-center hover:text-white text-primary transition hover:bg-primary group rounded-md flex-shrink-0 border-[1.5px] border-primary w-6 h-6">
+                    +
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="relative">
+              <label class="text-dark font-medium text-sm absolute bg-white rtl:right-5 ltr:left-5 -top-4 py-1 px-5">تخت
+                دو طبقه</label>
+              <div class="border border-[#EDEDED] rounded-[10px] px-3 py-4 flex items-center gap-4">
+                <div class="bg-[#FFF6EA] rounded-[10px] p-3 flex items-center justify-between gap-5">
+                  <button
+                    class="decrease-btn flex-center transition hover:bg-primary group rounded-md flex-shrink-0 border-[1.5px] border-primary w-6 h-6">
+                    <svg width="10" height="2" viewBox="0 0 10 2" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path class="transition group-hover:stroke-white" d="M1 1H9" stroke="#FF9704" stroke-width="1.5"
+                        stroke-linecap="round" stroke-linejoin="round"></path>
+                    </svg>
+                  </button>
+                  <input id="number3" min="0" type="number" value="0"
+                    class="text-dark w-full font-faNumRegular text-center flex-grow bg-transparent border-0 outline-none">
+                  <button
+                    class="increase-btn flex-center hover:text-white text-primary transition hover:bg-primary group rounded-md flex-shrink-0 border-[1.5px] border-primary w-6 h-6">
+                    +
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="relative">
+              <label
+                class="text-dark font-medium text-sm absolute bg-white rtl:right-5 ltr:left-5 -top-4 py-1 px-5">سیستم
+                گرمایشی</label>
+              <div class="border border-[#EDEDED] rounded-[10px] px-3 py-4 flex items-center gap-4">
+                <select required id="select1" class="text-sm font-medium text-dark flex-grow w-full bg-transparent h-9">
+                  <option>داشته باشد</option>
+                  <option>نداشته باشد</option>
+                </select>
+              </div>
+            </div>
+            <div class="relative">
+              <label
+                class="text-dark font-medium text-sm absolute bg-white rtl:right-5 ltr:left-5 -top-4 py-1 px-5">سیستم
+                سرمایشی</label>
+              <div class="border border-[#EDEDED] rounded-[10px] px-3 py-4 flex items-center gap-4">
+                <select required id="select2" class="text-sm font-medium text-dark flex-grow w-full bg-transparent h-9">
+                  <option>داشته باشد</option>
+                  <option>نداشته باشد</option>
+                </select>
+              </div>
+            </div>
+          </div>
+          <button type="submit" onclick="saveData(this)"
+            class="bg-primary mt-4 rtl:mr-auto ltr:ml-auto text-white rounded-[20px] py-1 w-[73px] flex-center font-medium btnHover">ثبت</button>
+        </div>
+      </form>
+    </div>
+    <div style="visibility: hidden; opacity: 0;" data-button="pool-modal"
+      class="modal-container overflow-auto bg-black/60 backdrop-blur-sm fixed inset-0 z-50 transition-all flex justify-center items-center px-4 sm:px-7">
+      <form id="pool-form"
+        class="modal-content bg-white max-w-[526px] overflow-hidden relative w-full rounded-[27px] shadow-8">
         <img alt="shape" src="../img/Rectangle 165.png" class="absolute top-0 inset-x-0 h-[109px] w-full">
         <div class="p-4 relative">
           <div class="flex items-center justify-between mb-5 relative mt-4">
@@ -125,178 +146,223 @@
           <!-- form -->
           <div class="p-4 mt-[4.5rem] relative grid grid-cols-2 gap-x-5 gap-y-8">
             <div class="relative">
-              <label class="text-dark font-medium text-sm absolute bg-white rtl:right-5 ltr:left-5 -top-4 py-1 px-5">نوع استخر</label>
+              <label class="text-dark font-medium text-sm absolute bg-white rtl:right-5 ltr:left-5 -top-4 py-1 px-5">نوع
+                استخر</label>
               <div class="border border-[#EDEDED] rounded-[10px] px-3 py-4 flex items-center gap-4">
-                <select required id="pooltype" class="text-sm font-medium text-dark flex-grow w-full bg-transparent h-9">
+                <select required id="pooltype"
+                  class="text-sm font-medium text-dark flex-grow w-full bg-transparent h-9">
                   <option>خوب</option>
                   <option>بد</option>
                 </select>
               </div>
-             </div>
+            </div>
             <div class="relative">
-              <label class="text-dark font-medium text-sm absolute bg-white rtl:right-5 ltr:left-5 -top-4 py-1 px-5">بیشترین عمق (متر)</label>
+              <label
+                class="text-dark font-medium text-sm absolute bg-white rtl:right-5 ltr:left-5 -top-4 py-1 px-5">بیشترین
+                عمق (متر)</label>
               <div class="border border-[#EDEDED] rounded-[10px] px-3 py-4 flex items-center gap-4">
                 <div class="bg-[#FFF6EA] rounded-[10px] p-3 flex items-center justify-between gap-5">
-                  <button class="decrease-btn flex-center transition hover:bg-primary group rounded-md flex-shrink-0 border-[1.5px] border-primary w-6 h-6">
+                  <button
+                    class="decrease-btn flex-center transition hover:bg-primary group rounded-md flex-shrink-0 border-[1.5px] border-primary w-6 h-6">
                     <svg width="10" height="2" viewBox="0 0 10 2" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path class="transition group-hover:stroke-white" d="M1 1H9" stroke="#FF9704" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                      <path class="transition group-hover:stroke-white" d="M1 1H9" stroke="#FF9704" stroke-width="1.5"
+                        stroke-linecap="round" stroke-linejoin="round"></path>
                     </svg>
                   </button>
-                  <input id="maxpooldeep" min="0" type="number" value="0" class="text-dark w-full font-faNumRegular text-center flex-grow bg-transparent border-0 outline-none">
-                  <button class="increase-btn flex-center hover:text-white text-primary transition hover:bg-primary group rounded-md flex-shrink-0 border-[1.5px] border-primary w-6 h-6">
+                  <input id="maxpooldeep" min="0" type="number" value="0"
+                    class="text-dark w-full font-faNumRegular text-center flex-grow bg-transparent border-0 outline-none">
+                  <button
+                    class="increase-btn flex-center hover:text-white text-primary transition hover:bg-primary group rounded-md flex-shrink-0 border-[1.5px] border-primary w-6 h-6">
                     +
                   </button>
                 </div>
               </div>
-             </div>
-             <div class="relative">
-              <label class="text-dark font-medium text-sm absolute bg-white rtl:right-5 ltr:left-5 -top-4 py-1 px-5">کمترین عمق (متر)</label>
+            </div>
+            <div class="relative">
+              <label
+                class="text-dark font-medium text-sm absolute bg-white rtl:right-5 ltr:left-5 -top-4 py-1 px-5">کمترین
+                عمق (متر)</label>
               <div class="border border-[#EDEDED] rounded-[10px] px-3 py-4 flex items-center gap-4">
                 <div class="bg-[#FFF6EA] rounded-[10px] p-3 flex items-center justify-between gap-5">
-                  <button class="decrease-btn flex-center transition hover:bg-primary group rounded-md flex-shrink-0 border-[1.5px] border-primary w-6 h-6">
+                  <button
+                    class="decrease-btn flex-center transition hover:bg-primary group rounded-md flex-shrink-0 border-[1.5px] border-primary w-6 h-6">
                     <svg width="10" height="2" viewBox="0 0 10 2" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path class="transition group-hover:stroke-white" d="M1 1H9" stroke="#FF9704" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                      <path class="transition group-hover:stroke-white" d="M1 1H9" stroke="#FF9704" stroke-width="1.5"
+                        stroke-linecap="round" stroke-linejoin="round"></path>
                     </svg>
                   </button>
-                  <input id="minpooldeep" min="0" type="number" value="0" class="text-dark w-full font-faNumRegular text-center flex-grow bg-transparent border-0 outline-none">
-                  <button class="increase-btn flex-center hover:text-white text-primary transition hover:bg-primary group rounded-md flex-shrink-0 border-[1.5px] border-primary w-6 h-6">
+                  <input id="minpooldeep" min="0" type="number" value="0"
+                    class="text-dark w-full font-faNumRegular text-center flex-grow bg-transparent border-0 outline-none">
+                  <button
+                    class="increase-btn flex-center hover:text-white text-primary transition hover:bg-primary group rounded-md flex-shrink-0 border-[1.5px] border-primary w-6 h-6">
                     +
                   </button>
                 </div>
               </div>
-             </div>
-             <div class="relative">
-              <label class="text-dark font-medium text-sm absolute bg-white rtl:right-5 ltr:left-5 -top-4 py-1 px-5">طول (متر)</label>
+            </div>
+            <div class="relative">
+              <label class="text-dark font-medium text-sm absolute bg-white rtl:right-5 ltr:left-5 -top-4 py-1 px-5">طول
+                (متر)</label>
               <div class="border border-[#EDEDED] rounded-[10px] px-3 py-4 flex items-center gap-4">
                 <div class="bg-[#FFF6EA] rounded-[10px] p-3 flex items-center justify-between gap-5">
-                  <button class="decrease-btn flex-center transition hover:bg-primary group rounded-md flex-shrink-0 border-[1.5px] border-primary w-6 h-6">
+                  <button
+                    class="decrease-btn flex-center transition hover:bg-primary group rounded-md flex-shrink-0 border-[1.5px] border-primary w-6 h-6">
                     <svg width="10" height="2" viewBox="0 0 10 2" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path class="transition group-hover:stroke-white" d="M1 1H9" stroke="#FF9704" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                      <path class="transition group-hover:stroke-white" d="M1 1H9" stroke="#FF9704" stroke-width="1.5"
+                        stroke-linecap="round" stroke-linejoin="round"></path>
                     </svg>
                   </button>
-                  <input id="poolheight" min="0" type="number" value="0" class="text-dark w-full font-faNumRegular text-center flex-grow bg-transparent border-0 outline-none">
-                  <button class="increase-btn flex-center hover:text-white text-primary transition hover:bg-primary group rounded-md flex-shrink-0 border-[1.5px] border-primary w-6 h-6">
+                  <input id="poolheight" min="0" type="number" value="0"
+                    class="text-dark w-full font-faNumRegular text-center flex-grow bg-transparent border-0 outline-none">
+                  <button
+                    class="increase-btn flex-center hover:text-white text-primary transition hover:bg-primary group rounded-md flex-shrink-0 border-[1.5px] border-primary w-6 h-6">
                     +
                   </button>
                 </div>
               </div>
-             </div>
-             <div class="relative">
-              <label class="text-dark font-medium text-sm absolute bg-white rtl:right-5 ltr:left-5 -top-4 py-1 px-5">عرض (متر)</label>
+            </div>
+            <div class="relative">
+              <label class="text-dark font-medium text-sm absolute bg-white rtl:right-5 ltr:left-5 -top-4 py-1 px-5">عرض
+                (متر)</label>
               <div class="border border-[#EDEDED] rounded-[10px] px-3 py-4 flex items-center gap-4">
                 <div class="bg-[#FFF6EA] rounded-[10px] p-3 flex items-center justify-between gap-5">
-                  <button class="decrease-btn flex-center transition hover:bg-primary group rounded-md flex-shrink-0 border-[1.5px] border-primary w-6 h-6">
+                  <button
+                    class="decrease-btn flex-center transition hover:bg-primary group rounded-md flex-shrink-0 border-[1.5px] border-primary w-6 h-6">
                     <svg width="10" height="2" viewBox="0 0 10 2" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path class="transition group-hover:stroke-white" d="M1 1H9" stroke="#FF9704" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                      <path class="transition group-hover:stroke-white" d="M1 1H9" stroke="#FF9704" stroke-width="1.5"
+                        stroke-linecap="round" stroke-linejoin="round"></path>
                     </svg>
                   </button>
-                  <input id="poolwidth" min="0" type="number" value="0" class="text-dark w-full font-faNumRegular text-center flex-grow bg-transparent border-0 outline-none">
-                  <button class="increase-btn flex-center hover:text-white text-primary transition hover:bg-primary group rounded-md flex-shrink-0 border-[1.5px] border-primary w-6 h-6">
+                  <input id="poolwidth" min="0" type="number" value="0"
+                    class="text-dark w-full font-faNumRegular text-center flex-grow bg-transparent border-0 outline-none">
+                  <button
+                    class="increase-btn flex-center hover:text-white text-primary transition hover:bg-primary group rounded-md flex-shrink-0 border-[1.5px] border-primary w-6 h-6">
                     +
                   </button>
                 </div>
               </div>
-             </div>
+            </div>
           </div>
           <button type="submit" onclick="saveData2(this)"
             class="bg-primary mt-4 rtl:mr-auto ltr:ml-auto text-white rounded-[20px] py-1 w-[73px] flex-center font-medium btnHover">ثبت</button>
         </div>
       </form>
-      </div>
-      <div style="visibility: hidden; opacity: 0;" data-button="room-modal"
-        class="modal-container overflow-auto bg-black/60 backdrop-blur-sm fixed inset-0 z-50 transition-all flex justify-center items-center px-4 sm:px-7">
-        <form id="room-form" class="modal-content bg-white max-w-[526px] overflow-hidden relative w-full rounded-[27px] shadow-8">
-          <img alt="shape" src="../img/Rectangle 165.png" class="absolute top-0 inset-x-0 h-[109px] w-full">
-          <div class="p-4 relative">
-            <div class="flex items-center justify-between mb-5 relative mt-4">
-              <div class="font-bold px-4 flex items-center gap-2 text-white">
-                <p>افزودن اتاق</p>
-              </div>
-              <!-- close modal -->
-              <svg class="cursor-pointer close-button" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                xmlns="http://www.w3.org/2000/svg">
-                <path
-                  d="M13.41 11.9999L17.71 7.70994C17.8983 7.52164 18.0041 7.26624 18.0041 6.99994C18.0041 6.73364 17.8983 6.47825 17.71 6.28994C17.5217 6.10164 17.2663 5.99585 17 5.99585C16.7337 5.99585 16.4783 6.10164 16.29 6.28994L12 10.5899L7.71 6.28994C7.5217 6.10164 7.2663 5.99585 7 5.99585C6.7337 5.99585 6.4783 6.10164 6.29 6.28994C6.1017 6.47825 5.99591 6.73364 5.99591 6.99994C5.99591 7.26624 6.1017 7.52164 6.29 7.70994L10.59 11.9999L6.29 16.2899C6.19627 16.3829 6.12188 16.4935 6.07111 16.6154C6.02034 16.7372 5.9942 16.8679 5.9942 16.9999C5.9942 17.132 6.02034 17.2627 6.07111 17.3845C6.12188 17.5064 6.19627 17.617 6.29 17.7099C6.38296 17.8037 6.49356 17.8781 6.61542 17.9288C6.73728 17.9796 6.86799 18.0057 7 18.0057C7.13201 18.0057 7.26272 17.9796 7.38458 17.9288C7.50644 17.8781 7.61704 17.8037 7.71 17.7099L12 13.4099L16.29 17.7099C16.383 17.8037 16.4936 17.8781 16.6154 17.9288C16.7373 17.9796 16.868 18.0057 17 18.0057C17.132 18.0057 17.2627 17.9796 17.3846 17.9288C17.5064 17.8781 17.617 17.8037 17.71 17.7099C17.8037 17.617 17.8781 17.5064 17.9289 17.3845C17.9797 17.2627 18.0058 17.132 18.0058 16.9999C18.0058 16.8679 17.9797 16.7372 17.9289 16.6154C17.8781 16.4935 17.8037 16.3829 17.71 16.2899L13.41 11.9999Z"
-                  fill="white"></path>
-              </svg>
-            </div>
-            <!-- form -->
-            <div class="p-4 mt-[4.5rem] relative grid grid-cols-2 gap-x-5 gap-y-8">
-              <div class="relative">
-                <label class="text-dark font-medium text-sm absolute bg-white rtl:right-5 ltr:left-5 -top-4 py-1 px-5">تخت یک نفره</label>
-                <div class="border border-[#EDEDED] rounded-[10px] px-3 py-4 flex items-center gap-4">
-                  <div class="bg-[#FFF6EA] rounded-[10px] p-3 flex items-center justify-between gap-5">
-                    <button class="decrease-btn flex-center transition hover:bg-primary group rounded-md flex-shrink-0 border-[1.5px] border-primary w-6 h-6">
-                      <svg width="10" height="2" viewBox="0 0 10 2" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path class="transition group-hover:stroke-white" d="M1 1H9" stroke="#FF9704" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-                      </svg>
-                    </button>
-                    <input id="number4" min="0" type="number" value="0" class="text-dark w-full font-faNumRegular text-center flex-grow bg-transparent border-0 outline-none">
-                    <button class="increase-btn flex-center hover:text-white text-primary transition hover:bg-primary group rounded-md flex-shrink-0 border-[1.5px] border-primary w-6 h-6">
-                      +
-                    </button>
-                  </div>
-                </div>
-               </div>
-               <div class="relative">
-                <label class="text-dark font-medium text-sm absolute bg-white rtl:right-5 ltr:left-5 -top-4 py-1 px-5">تخت دو نفره</label>
-                <div class="border border-[#EDEDED] rounded-[10px] px-3 py-4 flex items-center gap-4">
-                  <div class="bg-[#FFF6EA] rounded-[10px] p-3 flex items-center justify-between gap-5">
-                    <button class="decrease-btn flex-center transition hover:bg-primary group rounded-md flex-shrink-0 border-[1.5px] border-primary w-6 h-6">
-                      <svg width="10" height="2" viewBox="0 0 10 2" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path class="transition group-hover:stroke-white" d="M1 1H9" stroke="#FF9704" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-                      </svg>
-                    </button>
-                    <input id="number5" min="0" type="number" value="0" class="text-dark w-full font-faNumRegular text-center flex-grow bg-transparent border-0 outline-none">
-                    <button class="increase-btn flex-center hover:text-white text-primary transition hover:bg-primary group rounded-md flex-shrink-0 border-[1.5px] border-primary w-6 h-6">
-                      +
-                    </button>
-                  </div>
-                </div>
-               </div>
-               <div class="relative">
-                <label class="text-dark font-medium text-sm absolute bg-white rtl:right-5 ltr:left-5 -top-4 py-1 px-5">تخت دو طبقه</label>
-                <div class="border border-[#EDEDED] rounded-[10px] px-3 py-4 flex items-center gap-4">
-                  <div class="bg-[#FFF6EA] rounded-[10px] p-3 flex items-center justify-between gap-5">
-                    <button class="decrease-btn flex-center transition hover:bg-primary group rounded-md flex-shrink-0 border-[1.5px] border-primary w-6 h-6">
-                      <svg width="10" height="2" viewBox="0 0 10 2" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path class="transition group-hover:stroke-white" d="M1 1H9" stroke="#FF9704" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-                      </svg>
-                    </button>
-                    <input id="number6" min="0" type="number" value="0" class="text-dark w-full font-faNumRegular text-center flex-grow bg-transparent border-0 outline-none">
-                    <button class="increase-btn flex-center hover:text-white text-primary transition hover:bg-primary group rounded-md flex-shrink-0 border-[1.5px] border-primary w-6 h-6">
-                      +
-                    </button>
-                  </div>
-                </div>
-               </div>
-               <div class="relative">
-                <label class="text-dark font-medium text-sm absolute bg-white rtl:right-5 ltr:left-5 -top-4 py-1 px-5">سیستم گرمایشی</label>
-                <div class="border border-[#EDEDED] rounded-[10px] px-3 py-4 flex items-center gap-4">
-                  <select required id="select3" class="text-sm font-medium text-dark flex-grow w-full bg-transparent h-9">
-                    <option>داشته باشد</option>
-                    <option>نداشته باشد</option>
-                  </select>
-                </div>
-               </div>
-               <div class="relative">
-                <label class="text-dark font-medium text-sm absolute bg-white rtl:right-5 ltr:left-5 -top-4 py-1 px-5">سیستم سرمایشی</label>
-                <div class="border border-[#EDEDED] rounded-[10px] px-3 py-4 flex items-center gap-4">
-                  <select required id="select4" class="text-sm font-medium text-dark flex-grow w-full bg-transparent h-9">
-                    <option>داشته باشد</option>
-                    <option>نداشته باشد</option>
-                  </select>
-                </div>
-               </div>
-            </div>
-            <button type="submit" onclick="saveData3(this)"
-              class="bg-primary mt-4 rtl:mr-auto ltr:ml-auto text-white rounded-[20px] py-1 w-[73px] flex-center font-medium btnHover">ثبت</button>
-          </div>
-        </form>
-      </div>
-      <div style="visibility: hidden; opacity: 0;" data-button="parking-modal"
+    </div>
+    <div style="visibility: hidden; opacity: 0;" data-button="room-modal"
       class="modal-container overflow-auto bg-black/60 backdrop-blur-sm fixed inset-0 z-50 transition-all flex justify-center items-center px-4 sm:px-7">
-      <form id="parking-form" class="modal-content bg-white max-w-[526px] overflow-hidden relative w-full rounded-[27px] shadow-8">
+      <form id="room-form"
+        class="modal-content bg-white max-w-[526px] overflow-hidden relative w-full rounded-[27px] shadow-8">
+        <img alt="shape" src="../img/Rectangle 165.png" class="absolute top-0 inset-x-0 h-[109px] w-full">
+        <div class="p-4 relative">
+          <div class="flex items-center justify-between mb-5 relative mt-4">
+            <div class="font-bold px-4 flex items-center gap-2 text-white">
+              <p>افزودن اتاق</p>
+            </div>
+            <!-- close modal -->
+            <svg class="cursor-pointer close-button" width="24" height="24" viewBox="0 0 24 24" fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M13.41 11.9999L17.71 7.70994C17.8983 7.52164 18.0041 7.26624 18.0041 6.99994C18.0041 6.73364 17.8983 6.47825 17.71 6.28994C17.5217 6.10164 17.2663 5.99585 17 5.99585C16.7337 5.99585 16.4783 6.10164 16.29 6.28994L12 10.5899L7.71 6.28994C7.5217 6.10164 7.2663 5.99585 7 5.99585C6.7337 5.99585 6.4783 6.10164 6.29 6.28994C6.1017 6.47825 5.99591 6.73364 5.99591 6.99994C5.99591 7.26624 6.1017 7.52164 6.29 7.70994L10.59 11.9999L6.29 16.2899C6.19627 16.3829 6.12188 16.4935 6.07111 16.6154C6.02034 16.7372 5.9942 16.8679 5.9942 16.9999C5.9942 17.132 6.02034 17.2627 6.07111 17.3845C6.12188 17.5064 6.19627 17.617 6.29 17.7099C6.38296 17.8037 6.49356 17.8781 6.61542 17.9288C6.73728 17.9796 6.86799 18.0057 7 18.0057C7.13201 18.0057 7.26272 17.9796 7.38458 17.9288C7.50644 17.8781 7.61704 17.8037 7.71 17.7099L12 13.4099L16.29 17.7099C16.383 17.8037 16.4936 17.8781 16.6154 17.9288C16.7373 17.9796 16.868 18.0057 17 18.0057C17.132 18.0057 17.2627 17.9796 17.3846 17.9288C17.5064 17.8781 17.617 17.8037 17.71 17.7099C17.8037 17.617 17.8781 17.5064 17.9289 17.3845C17.9797 17.2627 18.0058 17.132 18.0058 16.9999C18.0058 16.8679 17.9797 16.7372 17.9289 16.6154C17.8781 16.4935 17.8037 16.3829 17.71 16.2899L13.41 11.9999Z"
+                fill="white"></path>
+            </svg>
+          </div>
+          <!-- form -->
+          <div class="p-4 mt-[4.5rem] relative grid grid-cols-2 gap-x-5 gap-y-8">
+            <div class="relative">
+              <label class="text-dark font-medium text-sm absolute bg-white rtl:right-5 ltr:left-5 -top-4 py-1 px-5">تخت
+                یک نفره</label>
+              <div class="border border-[#EDEDED] rounded-[10px] px-3 py-4 flex items-center gap-4">
+                <div class="bg-[#FFF6EA] rounded-[10px] p-3 flex items-center justify-between gap-5">
+                  <button
+                    class="decrease-btn flex-center transition hover:bg-primary group rounded-md flex-shrink-0 border-[1.5px] border-primary w-6 h-6">
+                    <svg width="10" height="2" viewBox="0 0 10 2" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path class="transition group-hover:stroke-white" d="M1 1H9" stroke="#FF9704" stroke-width="1.5"
+                        stroke-linecap="round" stroke-linejoin="round"></path>
+                    </svg>
+                  </button>
+                  <input id="number4" min="0" type="number" value="0"
+                    class="text-dark w-full font-faNumRegular text-center flex-grow bg-transparent border-0 outline-none">
+                  <button
+                    class="increase-btn flex-center hover:text-white text-primary transition hover:bg-primary group rounded-md flex-shrink-0 border-[1.5px] border-primary w-6 h-6">
+                    +
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="relative">
+              <label class="text-dark font-medium text-sm absolute bg-white rtl:right-5 ltr:left-5 -top-4 py-1 px-5">تخت
+                دو نفره</label>
+              <div class="border border-[#EDEDED] rounded-[10px] px-3 py-4 flex items-center gap-4">
+                <div class="bg-[#FFF6EA] rounded-[10px] p-3 flex items-center justify-between gap-5">
+                  <button
+                    class="decrease-btn flex-center transition hover:bg-primary group rounded-md flex-shrink-0 border-[1.5px] border-primary w-6 h-6">
+                    <svg width="10" height="2" viewBox="0 0 10 2" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path class="transition group-hover:stroke-white" d="M1 1H9" stroke="#FF9704" stroke-width="1.5"
+                        stroke-linecap="round" stroke-linejoin="round"></path>
+                    </svg>
+                  </button>
+                  <input id="number5" min="0" type="number" value="0"
+                    class="text-dark w-full font-faNumRegular text-center flex-grow bg-transparent border-0 outline-none">
+                  <button
+                    class="increase-btn flex-center hover:text-white text-primary transition hover:bg-primary group rounded-md flex-shrink-0 border-[1.5px] border-primary w-6 h-6">
+                    +
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="relative">
+              <label class="text-dark font-medium text-sm absolute bg-white rtl:right-5 ltr:left-5 -top-4 py-1 px-5">تخت
+                دو طبقه</label>
+              <div class="border border-[#EDEDED] rounded-[10px] px-3 py-4 flex items-center gap-4">
+                <div class="bg-[#FFF6EA] rounded-[10px] p-3 flex items-center justify-between gap-5">
+                  <button
+                    class="decrease-btn flex-center transition hover:bg-primary group rounded-md flex-shrink-0 border-[1.5px] border-primary w-6 h-6">
+                    <svg width="10" height="2" viewBox="0 0 10 2" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path class="transition group-hover:stroke-white" d="M1 1H9" stroke="#FF9704" stroke-width="1.5"
+                        stroke-linecap="round" stroke-linejoin="round"></path>
+                    </svg>
+                  </button>
+                  <input id="number6" min="0" type="number" value="0"
+                    class="text-dark w-full font-faNumRegular text-center flex-grow bg-transparent border-0 outline-none">
+                  <button
+                    class="increase-btn flex-center hover:text-white text-primary transition hover:bg-primary group rounded-md flex-shrink-0 border-[1.5px] border-primary w-6 h-6">
+                    +
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="relative">
+              <label
+                class="text-dark font-medium text-sm absolute bg-white rtl:right-5 ltr:left-5 -top-4 py-1 px-5">سیستم
+                گرمایشی</label>
+              <div class="border border-[#EDEDED] rounded-[10px] px-3 py-4 flex items-center gap-4">
+                <select required id="select3" class="text-sm font-medium text-dark flex-grow w-full bg-transparent h-9">
+                  <option>داشته باشد</option>
+                  <option>نداشته باشد</option>
+                </select>
+              </div>
+            </div>
+            <div class="relative">
+              <label
+                class="text-dark font-medium text-sm absolute bg-white rtl:right-5 ltr:left-5 -top-4 py-1 px-5">سیستم
+                سرمایشی</label>
+              <div class="border border-[#EDEDED] rounded-[10px] px-3 py-4 flex items-center gap-4">
+                <select required id="select4" class="text-sm font-medium text-dark flex-grow w-full bg-transparent h-9">
+                  <option>داشته باشد</option>
+                  <option>نداشته باشد</option>
+                </select>
+              </div>
+            </div>
+          </div>
+          <button type="submit" onclick="saveData3(this)"
+            class="bg-primary mt-4 rtl:mr-auto ltr:ml-auto text-white rounded-[20px] py-1 w-[73px] flex-center font-medium btnHover">ثبت</button>
+        </div>
+      </form>
+    </div>
+    <div style="visibility: hidden; opacity: 0;" data-button="parking-modal"
+      class="modal-container overflow-auto bg-black/60 backdrop-blur-sm fixed inset-0 z-50 transition-all flex justify-center items-center px-4 sm:px-7">
+      <form id="parking-form"
+        class="modal-content bg-white max-w-[526px] overflow-hidden relative w-full rounded-[27px] shadow-8">
         <img alt="shape" src="../img/Rectangle 165.png" class="absolute top-0 inset-x-0 h-[109px] w-full">
         <div class="p-4 relative">
           <div class="flex items-center justify-between mb-5 relative mt-4">
@@ -313,31 +379,35 @@
           </div>
           <!-- form -->
           <div class="p-4 mt-[4.5rem] relative grid grid-cols-2 gap-x-5 gap-y-8">
-             <div class="relative">
-              <label class="text-dark font-medium text-sm absolute bg-white rtl:right-5 ltr:left-5 -top-4 py-1 px-5">سیستم گرمایشی</label>
+            <div class="relative">
+              <label
+                class="text-dark font-medium text-sm absolute bg-white rtl:right-5 ltr:left-5 -top-4 py-1 px-5">سیستم
+                گرمایشی</label>
               <div class="border border-[#EDEDED] rounded-[10px] px-3 py-4 flex items-center gap-4">
                 <select required id="select5" class="text-sm font-medium text-dark flex-grow w-full bg-transparent h-9">
                   <option>داشته باشد</option>
                   <option>نداشته باشد</option>
                 </select>
               </div>
-             </div>
-             <div class="relative">
-              <label class="text-dark font-medium text-sm absolute bg-white rtl:right-5 ltr:left-5 -top-4 py-1 px-5">سیستم سرمایشی</label>
+            </div>
+            <div class="relative">
+              <label
+                class="text-dark font-medium text-sm absolute bg-white rtl:right-5 ltr:left-5 -top-4 py-1 px-5">سیستم
+                سرمایشی</label>
               <div class="border border-[#EDEDED] rounded-[10px] px-3 py-4 flex items-center gap-4">
                 <select required id="select6" class="text-sm font-medium text-dark flex-grow w-full bg-transparent h-9">
                   <option>داشته باشد</option>
                   <option>نداشته باشد</option>
                 </select>
               </div>
-             </div>
+            </div>
           </div>
           <button type="submit" onclick="saveData4(this)"
             class="bg-primary mt-4 rtl:mr-auto ltr:ml-auto text-white rounded-[20px] py-1 w-[73px] flex-center font-medium btnHover">ثبت</button>
         </div>
       </form>
     </div>
-    </div>
+  </div>
 
   <!-- header -->
   <header class="relative">
@@ -556,9 +626,13 @@
     <section class="mb-10 mt-14 sm:mt-24">
       <div class="max-w-content mx-auto px-4">
         <a class="flex items-center gap-2 text-2xl font-semibold text-dark hover:text-secondary group">
-          <svg class="ltr:[transform:rotateY(180deg)]" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path class="group-hover:stroke-secondary transition" d="M14.43 18.0701L20.5 12.0001L14.43 5.93007" stroke="#2C2C2C" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-            <path class="group-hover:stroke-secondary transition" d="M3.50008 12L20.3301 12" stroke="#2C2C2C" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+          <svg class="ltr:[transform:rotateY(180deg)]" width="24" height="24" viewBox="0 0 24 24" fill="none"
+            xmlns="http://www.w3.org/2000/svg">
+            <path class="group-hover:stroke-secondary transition" d="M14.43 18.0701L20.5 12.0001L14.43 5.93007"
+              stroke="#2C2C2C" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"
+              stroke-linejoin="round" />
+            <path class="group-hover:stroke-secondary transition" d="M3.50008 12L20.3301 12" stroke="#2C2C2C"
+              stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
           </svg>
           <p>بازگشت</p>
         </a>
@@ -571,9 +645,14 @@
                   <div class="flex items-center gap-4 text-[22px] text-dark flex-grow font-bold">
                     <div class="flex-center w-[67px] h-[67px] bg-[#FFF6EA] rounded-[10px]">
                       <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M17.6801 4.79988L6.73346 16.3865C6.32013 16.8265 5.92013 17.6932 5.84013 18.2932L5.34679 22.6132C5.17346 24.1732 6.29346 25.2399 7.84013 24.9732L12.1335 24.2399C12.7335 24.1332 13.5735 23.6932 13.9868 23.2399L24.9335 11.6532C26.8268 9.65321 27.6801 7.37322 24.7335 4.58655C21.8001 1.82655 19.5735 2.79988 17.6801 4.79988Z" stroke="#000000" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-                        <path d="M15.8535 6.7334C16.4268 10.4134 19.4135 13.2267 23.1202 13.6001" stroke="#000000" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-                        <path d="M4 29.3333H28" stroke="#000000" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path
+                          d="M17.6801 4.79988L6.73346 16.3865C6.32013 16.8265 5.92013 17.6932 5.84013 18.2932L5.34679 22.6132C5.17346 24.1732 6.29346 25.2399 7.84013 24.9732L12.1335 24.2399C12.7335 24.1332 13.5735 23.6932 13.9868 23.2399L24.9335 11.6532C26.8268 9.65321 27.6801 7.37322 24.7335 4.58655C21.8001 1.82655 19.5735 2.79988 17.6801 4.79988Z"
+                          stroke="#000000" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round"
+                          stroke-linejoin="round" />
+                        <path d="M15.8535 6.7334C16.4268 10.4134 19.4135 13.2267 23.1202 13.6001" stroke="#000000"
+                          stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                        <path d="M4 29.3333H28" stroke="#000000" stroke-width="2" stroke-miterlimit="10"
+                          stroke-linecap="round" stroke-linejoin="round" />
                       </svg>
                     </div>
                     <p>اطلاعات پایه</p>
@@ -584,12 +663,22 @@
                   <div class="flex items-center gap-4 text-[22px] text-dark flex-grow font-bold">
                     <div class="flex-center w-[67px] h-[67px] bg-[#FFF6EA] rounded-[10px]">
                       <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M2.66699 29.3333H29.3337" stroke="black" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-                        <path d="M3.93359 29.3333L4.00026 13.2932C4.00026 12.4799 4.38693 11.7066 5.02693 11.2L14.3603 3.93329C15.3203 3.18662 16.6669 3.18662 17.6403 3.93329L26.9736 11.1866C27.6269 11.6933 28.0003 12.4666 28.0003 13.2932V29.3333" stroke="black" stroke-width="1.5" stroke-miterlimit="10" stroke-linejoin="round"/>
-                        <path d="M17.3337 22.6667H14.667C13.5603 22.6667 12.667 23.5601 12.667 24.6667V29.3334H19.3337V24.6667C19.3337 23.5601 18.4403 22.6667 17.3337 22.6667Z" stroke="black" stroke-width="1.5" stroke-miterlimit="10" stroke-linejoin="round"/>
-                        <path d="M12.667 18.3334H10.0003C9.26699 18.3334 8.66699 17.7334 8.66699 17.0001V15.0001C8.66699 14.2667 9.26699 13.6667 10.0003 13.6667H12.667C13.4003 13.6667 14.0003 14.2667 14.0003 15.0001V17.0001C14.0003 17.7334 13.4003 18.3334 12.667 18.3334Z" stroke="black" stroke-width="1.5" stroke-miterlimit="10" stroke-linejoin="round"/>
-                        <path d="M22 18.3334H19.3333C18.6 18.3334 18 17.7334 18 17.0001V15.0001C18 14.2667 18.6 13.6667 19.3333 13.6667H22C22.7333 13.6667 23.3333 14.2667 23.3333 15.0001V17.0001C23.3333 17.7334 22.7333 18.3334 22 18.3334Z" stroke="black" stroke-width="1.5" stroke-miterlimit="10" stroke-linejoin="round"/>
-                        <path d="M25.3334 9.33325L25.2934 5.33325H19.4268" stroke="black" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M2.66699 29.3333H29.3337" stroke="black" stroke-width="1.5" stroke-miterlimit="10"
+                          stroke-linecap="round" stroke-linejoin="round" />
+                        <path
+                          d="M3.93359 29.3333L4.00026 13.2932C4.00026 12.4799 4.38693 11.7066 5.02693 11.2L14.3603 3.93329C15.3203 3.18662 16.6669 3.18662 17.6403 3.93329L26.9736 11.1866C27.6269 11.6933 28.0003 12.4666 28.0003 13.2932V29.3333"
+                          stroke="black" stroke-width="1.5" stroke-miterlimit="10" stroke-linejoin="round" />
+                        <path
+                          d="M17.3337 22.6667H14.667C13.5603 22.6667 12.667 23.5601 12.667 24.6667V29.3334H19.3337V24.6667C19.3337 23.5601 18.4403 22.6667 17.3337 22.6667Z"
+                          stroke="black" stroke-width="1.5" stroke-miterlimit="10" stroke-linejoin="round" />
+                        <path
+                          d="M12.667 18.3334H10.0003C9.26699 18.3334 8.66699 17.7334 8.66699 17.0001V15.0001C8.66699 14.2667 9.26699 13.6667 10.0003 13.6667H12.667C13.4003 13.6667 14.0003 14.2667 14.0003 15.0001V17.0001C14.0003 17.7334 13.4003 18.3334 12.667 18.3334Z"
+                          stroke="black" stroke-width="1.5" stroke-miterlimit="10" stroke-linejoin="round" />
+                        <path
+                          d="M22 18.3334H19.3333C18.6 18.3334 18 17.7334 18 17.0001V15.0001C18 14.2667 18.6 13.6667 19.3333 13.6667H22C22.7333 13.6667 23.3333 14.2667 23.3333 15.0001V17.0001C23.3333 17.7334 22.7333 18.3334 22 18.3334Z"
+                          stroke="black" stroke-width="1.5" stroke-miterlimit="10" stroke-linejoin="round" />
+                        <path d="M25.3334 9.33325L25.2934 5.33325H19.4268" stroke="black" stroke-width="1.5"
+                          stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
                       </svg>
                     </div>
                     <p>اطلاعات بنا</p>
@@ -599,13 +688,15 @@
                   <span class="bg-[#E7E7E7] w-3 h-3 rounded-full z-10 flex-shrink-0"></span>
                   <div class="flex items-center gap-4 text-[22px] text-dark flex-grow font-bold">
                     <div class="flex-center w-[67px] h-[67px] bg-[#FFF6EA] rounded-[10px]">
-                      <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                        <rect width="40" height="40" fill="url(#pattern0_941_5509)"/>
+                      <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <rect width="40" height="40" fill="url(#pattern0_941_5509)" />
                         <defs>
-                        <pattern id="pattern0_941_5509" patternContentUnits="objectBoundingBox" width="1" height="1">
-                        <use xlink:href="#image0_941_5509" transform="scale(0.0078125)"/>
-                        </pattern>
-                        <image id="image0_941_5509" width="128" height="128" xlink:href="data:image/png;base64,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"/>
+                          <pattern id="pattern0_941_5509" patternContentUnits="objectBoundingBox" width="1" height="1">
+                            <use xlink:href="#image0_941_5509" transform="scale(0.0078125)" />
+                          </pattern>
+                          <image id="image0_941_5509" width="128" height="128"
+                            xlink:href="data:image/png;base64,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" />
                         </defs>
                       </svg>
                     </div>
@@ -616,13 +707,15 @@
                   <span class="bg-[#E7E7E7] w-3 h-3 rounded-full z-10 flex-shrink-0"></span>
                   <div class="flex items-center gap-4 text-[22px] text-dark flex-grow font-bold">
                     <div class="flex-center w-[67px] h-[67px] bg-[#FFF6EA] rounded-[10px]">
-                      <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                        <rect width="40" height="40" fill="url(#pattern0_939_6908)"/>
+                      <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <rect width="40" height="40" fill="url(#pattern0_939_6908)" />
                         <defs>
-                        <pattern id="pattern0_939_6908" patternContentUnits="objectBoundingBox" width="1" height="1">
-                        <use xlink:href="#image0_939_6908" transform="scale(0.0078125)"/>
-                        </pattern>
-                        <image id="image0_939_6908" width="128" height="128" xlink:href="data:image/png;base64,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"/>
+                          <pattern id="pattern0_939_6908" patternContentUnits="objectBoundingBox" width="1" height="1">
+                            <use xlink:href="#image0_939_6908" transform="scale(0.0078125)" />
+                          </pattern>
+                          <image id="image0_939_6908" width="128" height="128"
+                            xlink:href="data:image/png;base64,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" />
                         </defs>
                       </svg>
                     </div>
@@ -633,13 +726,15 @@
                   <span class="bg-[#E7E7E7] w-3 h-3 rounded-full z-10 flex-shrink-0"></span>
                   <div class="flex items-center gap-4 text-[22px] text-dark flex-grow font-bold">
                     <div class="flex-center w-[67px] h-[67px] bg-[#FFF6EA] rounded-[10px]">
-                      <svg width="41" height="40" viewBox="0 0 41 40" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                        <rect width="41" height="40" fill="url(#pattern0_939_6899)"/>
+                      <svg width="41" height="40" viewBox="0 0 41 40" fill="none" xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <rect width="41" height="40" fill="url(#pattern0_939_6899)" />
                         <defs>
-                        <pattern id="pattern0_939_6899" patternContentUnits="objectBoundingBox" width="1" height="1">
-                        <use xlink:href="#image0_939_6899" transform="matrix(0.0078125 0 0 0.00800781 0 -0.0125)"/>
-                        </pattern>
-                        <image id="image0_939_6899" width="128" height="128" xlink:href="data:image/png;base64,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"/>
+                          <pattern id="pattern0_939_6899" patternContentUnits="objectBoundingBox" width="1" height="1">
+                            <use xlink:href="#image0_939_6899" transform="matrix(0.0078125 0 0 0.00800781 0 -0.0125)" />
+                          </pattern>
+                          <image id="image0_939_6899" width="128" height="128"
+                            xlink:href="data:image/png;base64,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" />
                         </defs>
                       </svg>
                     </div>
@@ -650,13 +745,15 @@
                   <span class="bg-[#E7E7E7] w-3 h-3 rounded-full z-10 flex-shrink-0"></span>
                   <div class="flex items-center gap-4 text-[22px] text-dark flex-grow font-bold">
                     <div class="flex-center w-[67px] h-[67px] bg-[#FFF6EA] rounded-[10px]">
-                      <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                        <rect width="40" height="40" fill="url(#pattern0_949_5531)"/>
+                      <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <rect width="40" height="40" fill="url(#pattern0_949_5531)" />
                         <defs>
-                        <pattern id="pattern0_949_5531" patternContentUnits="objectBoundingBox" width="1" height="1">
-                        <use xlink:href="#image0_949_5531" transform="scale(0.0078125)"/>
-                        </pattern>
-                        <image id="image0_949_5531" width="128" height="128" xlink:href="data:image/png;base64,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"/>
+                          <pattern id="pattern0_949_5531" patternContentUnits="objectBoundingBox" width="1" height="1">
+                            <use xlink:href="#image0_949_5531" transform="scale(0.0078125)" />
+                          </pattern>
+                          <image id="image0_949_5531" width="128" height="128"
+                            xlink:href="data:image/png;base64,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" />
                         </defs>
                       </svg>
                     </div>
@@ -667,13 +764,16 @@
                   <span class="bg-[#E7E7E7] w-3 h-3 rounded-full z-10 flex-shrink-0"></span>
                   <div class="flex items-center gap-4 text-[22px] text-dark flex-grow font-bold">
                     <div class="flex-center w-[67px] h-[67px] bg-[#FFF6EA] rounded-[10px]">
-                      <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                        <rect width="40" height="39.3846" fill="url(#pattern0_939_6920)"/>
+                      <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <rect width="40" height="39.3846" fill="url(#pattern0_939_6920)" />
                         <defs>
-                        <pattern id="pattern0_939_6920" patternContentUnits="objectBoundingBox" width="1" height="1">
-                        <use xlink:href="#image0_939_6920" transform="matrix(0.0078125 0 0 0.00793457 0 -0.00781248)"/>
-                        </pattern>
-                        <image id="image0_939_6920" width="128" height="128" xlink:href="data:image/png;base64,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"/>
+                          <pattern id="pattern0_939_6920" patternContentUnits="objectBoundingBox" width="1" height="1">
+                            <use xlink:href="#image0_939_6920"
+                              transform="matrix(0.0078125 0 0 0.00793457 0 -0.00781248)" />
+                          </pattern>
+                          <image id="image0_939_6920" width="128" height="128"
+                            xlink:href="data:image/png;base64,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" />
                         </defs>
                       </svg>
                     </div>
@@ -684,13 +784,15 @@
                   <span class="bg-[#E7E7E7] w-3 h-3 rounded-full z-10 flex-shrink-0"></span>
                   <div class="flex items-center gap-4 text-[22px] text-dark flex-grow font-bold">
                     <div class="flex-center w-[67px] h-[67px] bg-[#FFF6EA] rounded-[10px]">
-                      <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                        <rect width="40" height="40" fill="url(#pattern0_949_5534)"/>
+                      <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <rect width="40" height="40" fill="url(#pattern0_949_5534)" />
                         <defs>
-                        <pattern id="pattern0_949_5534" patternContentUnits="objectBoundingBox" width="1" height="1">
-                        <use xlink:href="#image0_949_5534" transform="scale(0.0078125)"/>
-                        </pattern>
-                        <image id="image0_949_5534" width="128" height="128" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIAAAACACAYAAADDPmHLAAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAgKADAAQAAAABAAAAgAAAAABIjgR3AAALiElEQVR4Ae2deexdRRXH0QqUUqEuiEqLNiqCigFUBFHigqK0BRRBkDb9KQmbVYwYjfIHjRotKi7Qplab2iBFjYKJQrWmZWuj1AUxuECBVout2EAQCgiUop8v3GMmL+/33t3vvHvPSb6/2WfOnHPuzNyZue+3yy5OLgGXgEvAJeAS6IQE3kQvvw7+AO4B28Ht4EdgDpgInFoogQPo0yrw3yHYTPppwKlFEngXfbkfDFN+mH4p+Z/ZIhl0tiuH0/NHgCn3MfyLwFvAFLA70OhwHvgbsHxyvwqcRlgCk+D978CUugH/QQP6o/l/aZBf5WYMyO9JkUvgAvgz5W/FPzUlv5cF5W7DPyFlOc8WkQSeAS+bgBnAyRl4m0zefwZl35ahrGeNRAKHBgq8G78MIgt9gcxmPN/MUnDU8rZ1pfvKQBFrEmUGUUO9q4McBwb+1nmfVXGP9qL+meD1YM+K2wqrf00Q0HCelbYEBV6Hf0kQrsP7JI2Ih5Xg5joarKKNM6j0XmBDaVPuwhydk8E2xW9vuz+Hl/1y9KHRIvNpvbcjTYV/nUMSZ0XEv+Sm0eAlOfoxtEjWxdHQCslwLJDVWt134L8C6JVqJ6iD9Or2XaB3ew2nrwZqPy39ioxHJpkvwV2XtmBJ+Z5DPdqs+iCwddp6/OJJBhE1iVExKVwNtCHTBMnojI9V+E2Qw3iZE5R7GL92DJsivYI+Dqwfs5piJG27mqv0xIlhbcG+ADRF2vULhbeY8LBNnWPII6WbwD+Pv2n6EgwYP8uaZmZY+0cHzOaZe4fVnzX9swE/EuJaYEN7WNc+BL4CdgATto6Mmxq9aPr/dAQ+40n8R03HwZ0xe1UEnGodsiTgyXjbSNxPwQ/BTeAJYGlytW7ZH8RAr4IJ401GGTXFZgAmrPPxhKeCJtB+7jXk3dcKRuBWagBpF0YRyKEQCxdTWm8Ci8B9fWrSCKDdPy2yZoB/gU5Q1TuBMQlxE8zMAx8DMoZpQE/XX8EN4CHQOerKCBAq9kkCd4G5QAu/y4HeuTtJXTSAqWhaT/wpicb1nq95f34S7pTTNQM4Cu3+DmivPyS9LVwIvg8mhQlt93fJAM5EmdcCW+E/iv9soMWf0al4rgfa0HLKIYEYXwO10F0Awlc+Ha4cnvRPu4O96duIOzpJb9rRQtV4932AjNp4HvnXBAKUILVD+SLQS6cTEe4VaIT4cG+mBsJuADmFfjDlNgJ7euSuAHuA8UjbxFtBWEY7ibuOV6CGeDeAHEKeSZkHgClSGz2fTlnPi8m3PiirOvTWoPOCJsgNIIPUtZqXoncCU752/t4JstBEMi8HVofcO4E2kOomN4CUEp9Mvh+DUGm3Ez4wZfl+2fTFkEYPq/NB/Cf2y1hhnBtACuFOJ88fgSlK7mago9QipJHgIhDWq9HlM0CjTR3kBjBEylrUbQKhksyvbd/jh5QflLxynHpV/7xBBUtMq9QA2rARNAlhTxtH4HpK3zxOWproQWUPSlNB7HnacBqoRd5soLnZDPoV+A8BoiJDdVj2SurSiCK6F8RwXewpZor8aYMBqP8/SGCy0JFv2Z90nUadO6yBtrj2xLSlP96PjBJoywiQpdszyazpYq+gkBZ1G4BGDQ3vnaGuGYD2+y8foN2TSDsM6BygE9S1KWBsiFa1si+6dzCkibiSuzYCPDcQv24K352EtWi0Vz6dIHaGumYAoWJ/SeBPSUTd27shH436uzYFNCrsGBt3A4hRKzXy5AZQo7BjbMoNIEat1MiTG0CNwo6xqS68Beh274JE+OF1748TZ7t+dnCkbDpYeoM80G5PO+3921YD0O1eI13/FnrpjN6IJNzvlVA7g7oI0jpq6xSgixw6Ji6LVlCRHQWXVWcU9bR1BNDV7teC48HeBSV9G+V/VrCOaIu31QAkcBnBt6KVfCSMtXUKiES88bPhBhC/jirl0A2gUvHGX7kbQPw6qpTDGAxA7+jLwawBPdUN3P+AhQPyeFIEEjgOHuyjjKtS8vOXpMwTuHP7lDk3SVe9upUbg9H2YbOyqNZ/GHJHIroJuMvAWBKW824QXu9eTriVGzL0qxWUZwTQRo1+tMFGDin4HCDLvz+IX4t/d9A1qnQEiGEj6AE0qif9F+AIoK9xNNdrK3cKEN0F3gseUyAjqY/Pzlim7uya/rbX3WgV7eUZAYyPPfFcD2wkMFcGkve7/BMo+1CfOq3umNx18DkR9FKlI0BMC6qH6bn27nsPcbQu+HOvVFKG9TmXDGsU6CiYrP2D0ximgFA5nyTQey37POI2gkvDjCn9i8mn10ybSlIWqz2bRqI14NbaWy65wSJTgC5iaAFow/I9gV/x80AXqRNTgIa/pcA+x74Gvz7xvhaIFH8J0GjgFLEE8owAGvK3AXvyf4/f5m25MgJL00gwB3SJWj8CHIA290k0ugVXC0EtCEVy9TWv5keRRoKTn/L5n1IkEMNbwHp68jWgT7W0HyAjCOkRArPAFUC3c8KdQYJORSQQw1uAhvXzh3RCB0GnD8njyTkkEMMIkINtL1KWBNwAypLkiNbjBjCiiiuLbTeAsiQ5ovW4AYyo4spi2w2gLEmOaD2jZgDPR85ngpeNqLyjYzuGfYC0QplGxuuAlK+DoqlgJ3AqIIFRGQFC5au7uwI7OCrQfS86CgbQq3ztCp4KdI3KqaAEYjeAfsrXYdHqgv324okEYjYAV34NZtqkARxJ/zSU91uIuvJrUL6a6Cf8OprW5ccbk/bfgzs3aLRM5dtNo32D+mP0aj2zCoyBnWBkKe2NoEPpod3ykWtXvaT8O4M03QU4BuQl/TPosJ3Y/ZJLL1V6I6i3saLhtAagdnTHzxSyA/9sUKbyqW6Xk4DeGqydmN3fwOceoJcqNYCmpgB18hPgYPBWID6+B4yktDJW+1dSz9VgklUcqSvD/HcTvDVpAJr33g9+C6YHnS9L+ValPicTnPpIoMm3ALFzH3gf0FwvKlv5T9fqf8eVQNMGIMZuAbr5+23wdrAaONUkgSangLCL1xEQnGqWQAwjQM1d9uZCCbgBhNLooN8NoINKD7vsBhBKo4N+N4AOKj3sshtAKI0O+mMxAPscfDwV6NfBPgTeOF4Gj88ngaYNQHf71oEHwXzQjyYQqT39ZeBG8FLgVJIEmjaA/eiHzuzFx4VgAeglfTo+I4nUxlXTPPfy5+FAAlmOg62YvvvXaZjhIkvAPTeIV/oFQVpXvJUeB5ctxDwGoCFeR8FmAHIvBscC3ROweF3u6OJV8EoNIIazAF2B0gJPvOiOoEh3BT4KjD/N/WNAxpCVXk6BvbMWaiD/Btrc3kC7pTaZZwQwBjQSXAbsiTd3I3H2G0KWN637kT71Wb2xuf+A136GWukIENOCSiPBOUB3BEK6gYD9g8cwPo1fN49HhbQg3r9uZm2Irbvdfu1pfl8C9LNxIY0ReBycDfTUZqHPkVl7DJOzFGoo71ravbWhtktrtsgUIGWFw/JNPeFFhH0RWJqqqqkorwF8AHb0a2FmAF/GL2UvDuKU9h0Q07QFO5VTpWuAsrnPYwCHwMSjwJT/E/ymZLlLgzTl0Stil6hSAzBBNynQd9C49vpFN4PZQKOBSK5+EEJPvpHCTiVJIIZF4Ar6os/DpOwxoJ+HDUnxZwG9I8tdCJwilUCeKSDSrkTDVuungGgk3UVGYlgDdFHu0fTZDSAaVTTDiBtAM3KPptWyDUDHt0bDrnlZPncHS0C3poxC+VpcIbdsA9gacKMNHp3wORWTwGFB8S2BP0qvDEpGYLt6n4qSy9Fhagqsbg7kOW8UWJfSzQB0xPsNMB108SCHbuci/VKI9lR0ScRkuQ1/v/sCRMdFu8HOOmCMu1tcFnqQToxLzYO50dC1Erjyi8tAW+CnDBZ3vKknwJpO93TdSStYN4h0MtA/zL4FfBG8EDi5BFwCLgGXgEugbAn8Dwe51hWm7ab/AAAAAElFTkSuQmCC"/>
+                          <pattern id="pattern0_949_5534" patternContentUnits="objectBoundingBox" width="1" height="1">
+                            <use xlink:href="#image0_949_5534" transform="scale(0.0078125)" />
+                          </pattern>
+                          <image id="image0_949_5534" width="128" height="128"
+                            xlink:href="data:image/png;base64,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" />
                         </defs>
                       </svg>
                     </div>
@@ -702,10 +804,18 @@
                   <div class="flex items-center gap-4 text-[22px] text-dark flex-grow font-bold">
                     <div class="flex-center w-[67px] h-[67px] bg-[#FFF6EA] rounded-[10px]">
                       <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M22.667 27.3334H9.33366C5.33366 27.3334 2.66699 25.3334 2.66699 20.6667V11.3334C2.66699 6.66675 5.33366 4.66675 9.33366 4.66675H22.667C26.667 4.66675 29.3337 6.66675 29.3337 11.3334V20.6667C29.3337 25.3334 26.667 27.3334 22.667 27.3334Z" stroke="#292D32" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-                        <path d="M16 20C18.2091 20 20 18.2091 20 16C20 13.7909 18.2091 12 16 12C13.7909 12 12 13.7909 12 16C12 18.2091 13.7909 20 16 20Z" stroke="#292D32" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-                        <path d="M7.33301 12.6667V19.3334" stroke="#292D32" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-                        <path d="M24.667 12.6667V19.3334" stroke="#292D32" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path
+                          d="M22.667 27.3334H9.33366C5.33366 27.3334 2.66699 25.3334 2.66699 20.6667V11.3334C2.66699 6.66675 5.33366 4.66675 9.33366 4.66675H22.667C26.667 4.66675 29.3337 6.66675 29.3337 11.3334V20.6667C29.3337 25.3334 26.667 27.3334 22.667 27.3334Z"
+                          stroke="#292D32" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"
+                          stroke-linejoin="round" />
+                        <path
+                          d="M16 20C18.2091 20 20 18.2091 20 16C20 13.7909 18.2091 12 16 12C13.7909 12 12 13.7909 12 16C12 18.2091 13.7909 20 16 20Z"
+                          stroke="#292D32" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"
+                          stroke-linejoin="round" />
+                        <path d="M7.33301 12.6667V19.3334" stroke="#292D32" stroke-width="1.5" stroke-miterlimit="10"
+                          stroke-linecap="round" stroke-linejoin="round" />
+                        <path d="M24.667 12.6667V19.3334" stroke="#292D32" stroke-width="1.5" stroke-miterlimit="10"
+                          stroke-linecap="round" stroke-linejoin="round" />
                       </svg>
                     </div>
                     <p>مبلغ رزرو</p>
@@ -716,9 +826,15 @@
                   <div class="flex items-center gap-4 text-[22px] text-dark flex-grow font-bold">
                     <div class="flex-center w-[67px] h-[67px] bg-[#FFF6EA] rounded-[10px]">
                       <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M12.0003 29.3334H20.0003C26.667 29.3334 29.3337 26.6667 29.3337 20.0001V12.0001C29.3337 5.33341 26.667 2.66675 20.0003 2.66675H12.0003C5.33366 2.66675 2.66699 5.33341 2.66699 12.0001V20.0001C2.66699 26.6667 5.33366 29.3334 12.0003 29.3334Z" stroke="#292D32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                        <path d="M11.9997 13.3333C13.4724 13.3333 14.6663 12.1394 14.6663 10.6667C14.6663 9.19391 13.4724 8 11.9997 8C10.5269 8 9.33301 9.19391 9.33301 10.6667C9.33301 12.1394 10.5269 13.3333 11.9997 13.3333Z" stroke="#292D32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                        <path d="M3.55957 25.2666L10.1329 20.8532C11.1862 20.1466 12.7062 20.2266 13.6529 21.0399L14.0929 21.4266C15.1329 22.3199 16.8129 22.3199 17.8529 21.4266L23.3996 16.6666C24.4396 15.7732 26.1196 15.7732 27.1596 16.6666L29.3329 18.5332" stroke="#292D32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path
+                          d="M12.0003 29.3334H20.0003C26.667 29.3334 29.3337 26.6667 29.3337 20.0001V12.0001C29.3337 5.33341 26.667 2.66675 20.0003 2.66675H12.0003C5.33366 2.66675 2.66699 5.33341 2.66699 12.0001V20.0001C2.66699 26.6667 5.33366 29.3334 12.0003 29.3334Z"
+                          stroke="#292D32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                        <path
+                          d="M11.9997 13.3333C13.4724 13.3333 14.6663 12.1394 14.6663 10.6667C14.6663 9.19391 13.4724 8 11.9997 8C10.5269 8 9.33301 9.19391 9.33301 10.6667C9.33301 12.1394 10.5269 13.3333 11.9997 13.3333Z"
+                          stroke="#292D32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                        <path
+                          d="M3.55957 25.2666L10.1329 20.8532C11.1862 20.1466 12.7062 20.2266 13.6529 21.0399L14.0929 21.4266C15.1329 22.3199 16.8129 22.3199 17.8529 21.4266L23.3996 16.6666C24.4396 15.7732 26.1196 15.7732 27.1596 16.6666L29.3329 18.5332"
+                          stroke="#292D32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
                       </svg>
                     </div>
                     <p>تصاویر اقامتگاه</p>
@@ -732,92 +848,109 @@
               <div>
                 <div class="grid grid-cols-12 gap-x-5 gap-y-7">
                   <div class="col-span-6">
-                   <div class="relative">
-                    <label class="text-dark font-medium text-lg absolute bg-white rtl:right-5 ltr:left-5 -top-5 py-1 px-5">استان</label>
-                     <select class="border border-[#EDEDED] rounded-[10px] w-full h-14 bg-white px-3">
-                      <option>تهران</option>
-                      <option>قم</option>
-                     </select>
-                   </div>
+                    <div class="relative">
+                      <label
+                        class="text-dark font-medium text-lg absolute bg-white rtl:right-5 ltr:left-5 -top-5 py-1 px-5">استان</label>
+                      <select class="border border-[#EDEDED] rounded-[10px] w-full h-14 bg-white px-3">
+                        <option>تهران</option>
+                        <option>قم</option>
+                      </select>
+                    </div>
                   </div>
                   <div class="col-span-6">
                     <div class="relative">
-                     <label class="text-dark font-medium text-lg absolute bg-white rtl:right-5 ltr:left-5 -top-5 py-1 px-5">نام میزبان</label>
+                      <label
+                        class="text-dark font-medium text-lg absolute bg-white rtl:right-5 ltr:left-5 -top-5 py-1 px-5">نام
+                        میزبان</label>
                       <input class="border border-[#EDEDED] rounded-[10px] w-full h-14 bg-white px-3 outline-none">
                     </div>
-                   </div>
-                   <div class="col-span-12">
+                  </div>
+                  <div class="col-span-12">
                     <div class="relative">
                       <div class="flex items-center gap-2 absolute top-3 rtl:right-3 ltr:left-3">
                         <img alt="icon" src="../img/svg/location (3).svg" class="flex-shrink-0">
                         <label class="text-dark font-medium text-lg">آدرس دقیق</label>
                       </div>
-                      <textarea class="min-h-[101px] h-full pt-12 border border-[#EDEDED] rounded-[10px] w-full bg-white px-3 outline-none"></textarea>
+                      <textarea
+                        class="min-h-[101px] h-full pt-12 border border-[#EDEDED] rounded-[10px] w-full bg-white px-3 outline-none"></textarea>
                     </div>
-                   </div>
+                  </div>
                 </div>
                 <div class="mt-[73px]">
                   <h5 class="text-lg font-bold text-dark">موقعیت روی نقشه</h5>
                   <div class="bg-[#FFE5E5] rounded-[10px] mt-3 py-3 px-2 flex items-start gap-2">
                     <img alt="img" src="../img/svg/warning-2 (2).svg" class="flex-shrink-0">
-                    <p class="text-dark font-medium text-sm">در صورت اختلاف موقعیت مکانی اقامتگاه‌تان در نقشه و محل واقعی اقامتگاه، مهمان می‌تواند بدون پرداخت جریمه رزرو خود را لغو کند.</p>
+                    <p class="text-dark font-medium text-sm">در صورت اختلاف موقعیت مکانی اقامتگاه‌تان در نقشه و محل
+                      واقعی اقامتگاه، مهمان می‌تواند بدون پرداخت جریمه رزرو خود را لغو کند.</p>
                   </div>
-                  <iframe class="rounded-[10px] overflow-hidden mt-5 w-full h-[180px]" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d207344.0754342176!2d51.51246591933516!3d35.707740217686975!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3f8e00491ff3dcd9%3A0xf0b3697c567024bc!2z2KrZh9ix2KfZhtiMINin2LPYqtin2YYg2KrZh9ix2KfZhtiMINin24zYsdin2YY!5e0!3m2!1sfa!2s!4v1708858730182!5m2!1sfa!2s" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                  <iframe class="rounded-[10px] overflow-hidden mt-5 w-full h-[180px]"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d207344.0754342176!2d51.51246591933516!3d35.707740217686975!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3f8e00491ff3dcd9%3A0xf0b3697c567024bc!2z2KrZh9ix2KfZhtiMINin2LPYqtin2YYg2KrZh9ix2KfZhtiMINin24zYsdin2YY!5e0!3m2!1sfa!2s!4v1708858730182!5m2!1sfa!2s"
+                    style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
                 <div class="mt-[54px]">
                   <label class="flex items-center gap-2.5 cursor-pointer text-dark mb-[13px]">
                     <div class="inline-flex items-center">
-                        <label class="relative flex items-center p-1 rounded-full cursor-pointer" htmlfor="black">
-                          <input name="color" type="radio" class="before:content[''] bg-[#F4F4F4] p-3 peer relative h-[18px] w-[18px] cursor-pointer appearance-none rounded-full border border-gray-900 text-[#ECECEC] transition-all before:absolute before:top-2/4 before:left-2/4 before:block before:h-12 before:w-12 before:-translate-y-2/4 before:-translate-x-2/4 before:rounded-full before:bg-[#ECECEC] before:opacity-0 before:transition-opacity checked:before:bg-primary hover:before:opacity-10" id="black">
-                          <span class="absolute text-primary transition-opacity opacity-0 pointer-events-none top-2/4 left-2/4 -translate-y-2/4 -translate-x-2/4 peer-checked:opacity-100">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5" viewBox="0 0 16 16" fill="currentColor">
-                              <circle data-name="ellipse" cx="8" cy="8" r="8"></circle>
-                            </svg>
-                          </span>
-                        </label>
-                      </div>
-                    <p class="text-sm font-medium">سرویس بهداشتی خارج از فضای اقامتگاه که به صورت اشتراکی استفاده می‌شود.</p>
+                      <label class="relative flex items-center p-1 rounded-full cursor-pointer" htmlfor="black">
+                        <input name="color" type="radio"
+                          class="before:content[''] bg-[#F4F4F4] p-3 peer relative h-[18px] w-[18px] cursor-pointer appearance-none rounded-full border border-gray-900 text-[#ECECEC] transition-all before:absolute before:top-2/4 before:left-2/4 before:block before:h-12 before:w-12 before:-translate-y-2/4 before:-translate-x-2/4 before:rounded-full before:bg-[#ECECEC] before:opacity-0 before:transition-opacity checked:before:bg-primary hover:before:opacity-10"
+                          id="black">
+                        <span
+                          class="absolute text-primary transition-opacity opacity-0 pointer-events-none top-2/4 left-2/4 -translate-y-2/4 -translate-x-2/4 peer-checked:opacity-100">
+                          <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5" viewBox="0 0 16 16"
+                            fill="currentColor">
+                            <circle data-name="ellipse" cx="8" cy="8" r="8"></circle>
+                          </svg>
+                        </span>
+                      </label>
+                    </div>
+                    <p class="text-sm font-medium">سرویس بهداشتی خارج از فضای اقامتگاه که به صورت اشتراکی استفاده
+                      می‌شود.</p>
                   </label>
                   <label class="flex items-center gap-2.5 cursor-pointer text-dark mb-[13px]">
                     <div class="inline-flex items-center">
-                        <label class="relative flex items-center p-1 rounded-full cursor-pointer" htmlfor="black">
-                          <input name="color" type="radio" class="before:content[''] bg-[#F4F4F4] p-3 peer relative h-[18px] w-[18px] cursor-pointer appearance-none rounded-full border border-gray-900 text-[#ECECEC] transition-all before:absolute before:top-2/4 before:left-2/4 before:block before:h-12 before:w-12 before:-translate-y-2/4 before:-translate-x-2/4 before:rounded-full before:bg-[#ECECEC] before:opacity-0 before:transition-opacity checked:before:bg-primary hover:before:opacity-10" id="black">
-                          <span class="absolute text-primary transition-opacity opacity-0 pointer-events-none top-2/4 left-2/4 -translate-y-2/4 -translate-x-2/4 peer-checked:opacity-100">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5" viewBox="0 0 16 16" fill="currentColor">
-                              <circle data-name="ellipse" cx="8" cy="8" r="8"></circle>
-                            </svg>
-                          </span>
-                        </label>
-                      </div>
-                    <p class="text-sm font-medium">سرویس بهداشتی خارج از فضای اقامتگاه که به صورت اشتراکی استفاده می‌شود.</p>
+                      <label class="relative flex items-center p-1 rounded-full cursor-pointer" htmlfor="black">
+                        <input name="color" type="radio"
+                          class="before:content[''] bg-[#F4F4F4] p-3 peer relative h-[18px] w-[18px] cursor-pointer appearance-none rounded-full border border-gray-900 text-[#ECECEC] transition-all before:absolute before:top-2/4 before:left-2/4 before:block before:h-12 before:w-12 before:-translate-y-2/4 before:-translate-x-2/4 before:rounded-full before:bg-[#ECECEC] before:opacity-0 before:transition-opacity checked:before:bg-primary hover:before:opacity-10"
+                          id="black">
+                        <span
+                          class="absolute text-primary transition-opacity opacity-0 pointer-events-none top-2/4 left-2/4 -translate-y-2/4 -translate-x-2/4 peer-checked:opacity-100">
+                          <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5" viewBox="0 0 16 16"
+                            fill="currentColor">
+                            <circle data-name="ellipse" cx="8" cy="8" r="8"></circle>
+                          </svg>
+                        </span>
+                      </label>
+                    </div>
+                    <p class="text-sm font-medium">سرویس بهداشتی خارج از فضای اقامتگاه که به صورت اشتراکی استفاده
+                      می‌شود.</p>
                   </label>
                   <label class="flex items-center gap-2.5 cursor-pointer text-dark mb-[13px]">
                     <div class="inline-flex items-center">
-                        <label class="relative flex items-center p-1 rounded-full cursor-pointer" htmlfor="black">
-                          <input name="color" type="radio" class="before:content[''] bg-[#F4F4F4] p-3 peer relative h-[18px] w-[18px] cursor-pointer appearance-none rounded-full border border-gray-900 text-[#ECECEC] transition-all before:absolute before:top-2/4 before:left-2/4 before:block before:h-12 before:w-12 before:-translate-y-2/4 before:-translate-x-2/4 before:rounded-full before:bg-[#ECECEC] before:opacity-0 before:transition-opacity checked:before:bg-primary hover:before:opacity-10" id="black">
-                          <span class="absolute text-primary transition-opacity opacity-0 pointer-events-none top-2/4 left-2/4 -translate-y-2/4 -translate-x-2/4 peer-checked:opacity-100">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5" viewBox="0 0 16 16" fill="currentColor">
-                              <circle data-name="ellipse" cx="8" cy="8" r="8"></circle>
-                            </svg>
-                          </span>
-                        </label>
-                      </div>
-                    <p class="text-sm font-medium">سرویس بهداشتی خارج از فضای اقامتگاه که به صورت اشتراکی استفاده می‌شود.</p>
+                      <label class="relative flex items-center p-1 rounded-full cursor-pointer" htmlfor="black">
+                        <input name="color" type="radio"
+                          class="before:content[''] bg-[#F4F4F4] p-3 peer relative h-[18px] w-[18px] cursor-pointer appearance-none rounded-full border border-gray-900 text-[#ECECEC] transition-all before:absolute before:top-2/4 before:left-2/4 before:block before:h-12 before:w-12 before:-translate-y-2/4 before:-translate-x-2/4 before:rounded-full before:bg-[#ECECEC] before:opacity-0 before:transition-opacity checked:before:bg-primary hover:before:opacity-10"
+                          id="black">
+                        <span
+                          class="absolute text-primary transition-opacity opacity-0 pointer-events-none top-2/4 left-2/4 -translate-y-2/4 -translate-x-2/4 peer-checked:opacity-100">
+                          <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5" viewBox="0 0 16 16"
+                            fill="currentColor">
+                            <circle data-name="ellipse" cx="8" cy="8" r="8"></circle>
+                          </svg>
+                        </span>
+                      </label>
+                    </div>
+                    <p class="text-sm font-medium">سرویس بهداشتی خارج از فضای اقامتگاه که به صورت اشتراکی استفاده
+                      می‌شود.</p>
                   </label>
                   <div class="mt-[73px]">
-                    <div class="relative">
-                      <label class="text-dark font-medium text-lg absolute bg-white rtl:right-5 ltr:left-5 -top-5 py-1 px-5">قیمت وسط هفته</label>
+                    <div class="relative mt-[67px]">
+                      <label
+                        class="text-dark font-medium text-lg absolute bg-white rtl:right-5 ltr:left-5 -top-5 py-1 px-5">زمان
+                        ورود</label>
                       <div class="border border-[#EDEDED] rounded-[10px] px-3 py-4 flex items-center gap-4">
-                        <span class="bg-[#F4F4F4] flex-shrink-0 rounded-xl text-sm font-medium text-dark py-2 px-3">جمعه،شنبه،یکشنبه،دوشنبه،سه شنبه</span>
-                        <span class="h-6 w-[1px] flex-shrink-0 bg-[#EDEDED]"></span>
-                        <input min="1" type="number" class="flex-grow w-full bg-transparent border-0 outline-none font-faNumRegular">
-                        <span class="bg-[#F4F4F4] flex-shrink-0 rounded-xl text-sm font-medium text-dark py-2 px-3">تومان</span>
-                      </div>
-                     </div>
-                     <div class="relative mt-[67px]">
-                      <label class="text-dark font-medium text-lg absolute bg-white rtl:right-5 ltr:left-5 -top-5 py-1 px-5">زمان ورود</label>
-                      <div class="border border-[#EDEDED] rounded-[10px] px-3 py-4 flex items-center gap-4">
-                        <span class="bg-[#F4F4F4] flex-shrink-0 rounded-xl text-sm font-medium text-dark py-2 px-3">از</span>
+                        <span
+                          class="bg-[#F4F4F4] flex-shrink-0 rounded-xl text-sm font-medium text-dark py-2 px-3">از</span>
                         <span class="h-6 w-[1px] flex-shrink-0 bg-[#EDEDED]"></span>
                         <select class="text-sm font-faNumBold text-dark flex-grow w-full bg-transparent">
                           <option>مثال: ساعت 14:00</option>
@@ -825,11 +958,14 @@
                           <option>ساعت 18:00</option>
                         </select>
                       </div>
-                     </div>
-                     <div class="relative mt-10">
-                      <label class="text-dark font-medium text-lg absolute bg-white rtl:right-5 ltr:left-5 -top-5 py-1 px-5">زمان خروج</label>
+                    </div>
+                    <div class="relative mt-10">
+                      <label
+                        class="text-dark font-medium text-lg absolute bg-white rtl:right-5 ltr:left-5 -top-5 py-1 px-5">زمان
+                        خروج</label>
                       <div class="border border-[#EDEDED] rounded-[10px] px-3 py-4 flex items-center gap-4">
-                        <span class="bg-[#F4F4F4] flex-shrink-0 rounded-xl text-sm font-medium text-dark py-2 px-3">تا</span>
+                        <span
+                          class="bg-[#F4F4F4] flex-shrink-0 rounded-xl text-sm font-medium text-dark py-2 px-3">تا</span>
                         <span class="h-6 w-[1px] flex-shrink-0 bg-[#EDEDED]"></span>
                         <select class="text-sm font-faNumBold text-dark flex-grow w-full bg-transparent">
                           <option>مثال: ساعت 14:00</option>
@@ -837,95 +973,102 @@
                           <option>ساعت 18:00</option>
                         </select>
                       </div>
-                     </div>
-                     <div class="relative mt-[55px]">
-                      <label class="text-dark font-medium text-lg absolute bg-white rtl:right-5 ltr:left-5 -top-5 py-1 px-5">حداقل شب اقامت</label>
-                      <div class="border border-[#EDEDED] rounded-[10px] px-3 py-4 flex items-center gap-4">
-                        <span class="bg-[#F4F4F4] flex-shrink-0 rounded-xl text-sm font-medium text-dark py-2 px-3">کمترین شب قابل رزرو مهمان</span>
-                        <span class="h-6 w-[1px] flex-shrink-0 bg-[#EDEDED]"></span>
-                        <div class="bg-[#FFF6EA] rounded-[10px] flex-grow p-3 flex items-center justify-between gap-5">
-                          <button class="decrease-btn flex-center transition hover:bg-primary group rounded-md flex-shrink-0 border-[1.5px] border-primary w-6 h-6">
-                            <svg width="10" height="2" viewBox="0 0 10 2" fill="none" xmlns="http://www.w3.org/2000/svg">
-                              <path class="transition group-hover:stroke-white" d="M1 1H9" stroke="#FF9704" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-                            </svg>
-                          </button>
-                          <input type="number" min="1" value="1" class="text-dark w-10 font-faNumRegular text-center flex-grow bg-transparent border-0 outline-none">
-                          <button class="increase-btn flex-center hover:text-white text-primary transition hover:bg-primary group rounded-md flex-shrink-0 border-[1.5px] border-primary w-6 h-6">
-                            +
-                          </button>
-                        </div>
-                      </div>
-                     </div>
+                    </div>
                   </div>
                 </div>
                 <div class="grid grid-cols-2 gap-[14px] mt-[47px]">
-                  <a class="bg-[#F4F4F4] rounded-[10px] p-4 hover:text-white group text-dark font-semibold text-sm flex items-center justify-center gap-1 hover:bg-[#160C59]">
-                    <svg class="ltr:[transform:rotateY(180deg)]" width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path class="group-hover:stroke-white transition" d="M10.8225 13.5525L15.375 8.99999L10.8225 4.44749" stroke="#2C2C2C" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-                      <path class="group-hover:stroke-white transition" d="M2.62457 9L15.2471 9" stroke="#2C2C2C" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                  <a
+                    class="bg-[#F4F4F4] rounded-[10px] p-4 hover:text-white group text-dark font-semibold text-sm flex items-center justify-center gap-1 hover:bg-[#160C59]">
+                    <svg class="ltr:[transform:rotateY(180deg)]" width="18" height="18" viewBox="0 0 18 18" fill="none"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <path class="group-hover:stroke-white transition"
+                        d="M10.8225 13.5525L15.375 8.99999L10.8225 4.44749" stroke="#2C2C2C" stroke-width="1.5"
+                        stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                      <path class="group-hover:stroke-white transition" d="M2.62457 9L15.2471 9" stroke="#2C2C2C"
+                        stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
                     </svg>
                     <p class="transition">مرحله قبل</p>
                   </a>
-                  <a class="bg-[#F4F4F4] rounded-[10px] p-4 hover:text-white group text-dark font-semibold text-sm flex items-center justify-center gap-1 hover:bg-[#160C59]">
+                  <a
+                    class="bg-[#F4F4F4] rounded-[10px] p-4 hover:text-white group text-dark font-semibold text-sm flex items-center justify-center gap-1 hover:bg-[#160C59]">
                     <p class="transition">ثبت و مرحله بعد</p>
                     <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path class="group-hover:stroke-white transition" d="M7.1775 4.44751L2.625 9.00001L7.1775 13.5525" stroke="#2C2C2C" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-                      <path class="group-hover:stroke-white transition" d="M15.3754 9H2.75293" stroke="#2C2C2C" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                      <path class="group-hover:stroke-white transition" d="M7.1775 4.44751L2.625 9.00001L7.1775 13.5525"
+                        stroke="#2C2C2C" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                      <path class="group-hover:stroke-white transition" d="M15.3754 9H2.75293" stroke="#2C2C2C"
+                        stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
                     </svg>
                   </a>
-                </div> 
+                </div>
               </div>
               <div>
                 <div class="mt-[60px]">
                   <div class="flex items-center justify-between">
                     <h5 class="font-bold text-lg text-dark">تعداد هال و پذیرایی</h5>
-                    <div class="bg-[#FFF6EA] rounded-[10px] p-3 flex items-center justify-between gap-5">
-                      <button class="decrease-btn flex-center transition hover:bg-primary group rounded-md flex-shrink-0 border-[1.5px] border-primary w-6 h-6">
+                    <div class="bg-[#FFF6EA] rounded-[10px] p-3 flex items-center justify-between gap-1">
+                      <button
+                        class="decrease-btn flex-center transition hover:bg-primary group rounded-md flex-shrink-0 border-[1.5px] border-primary w-6 h-6">
                         <svg width="10" height="2" viewBox="0 0 10 2" fill="none" xmlns="http://www.w3.org/2000/svg">
-                          <path class="transition group-hover:stroke-white" d="M1 1H9" stroke="#FF9704" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                          <path class="transition group-hover:stroke-white" d="M1 1H9" stroke="#FF9704"
+                            stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
                         </svg>
                       </button>
-                      <input type="number" min="1" value="1" class="text-dark w-10 font-faNumRegular text-center flex-grow bg-transparent border-0 outline-none">
-                      <button class="increase-btn flex-center hover:text-white text-primary transition hover:bg-primary group rounded-md flex-shrink-0 border-[1.5px] border-primary w-6 h-6">
+                      <input type="number" min="1" value="1"
+                        class="text-dark w-20 font-faNumRegular text-center flex-grow bg-transparent border-0 outline-none">
+                      <button
+                        class="increase-btn flex-center hover:text-white text-primary transition hover:bg-primary group rounded-md flex-shrink-0 border-[1.5px] border-primary w-6 h-6">
                         +
                       </button>
                     </div>
                   </div>
-                  <div id="hall-modal" class="rounded-[10px] p-4 bg-[#FFF6EA] transition hover:bg-primary hover:text-white group cursor-pointer flex-center gap-1 text-dark text-sm font-semibold mt-5">
-                    <svg class="flex-shrink-0" width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path class="transition group-hover:stroke-white" d="M4.5 9H13.5" stroke="#2C2C2C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-                      <path class="transition group-hover:stroke-white" d="M9 13.5V4.5" stroke="#2C2C2C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                  <div id="hall-modal"
+                    class="rounded-[10px] p-4 bg-[#FFF6EA] transition hover:bg-primary hover:text-white group cursor-pointer flex-center gap-1 text-dark text-sm font-semibold mt-5">
+                    <svg class="flex-shrink-0" width="18" height="18" viewBox="0 0 18 18" fill="none"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <path class="transition group-hover:stroke-white" d="M4.5 9H13.5" stroke="#2C2C2C"
+                        stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                      <path class="transition group-hover:stroke-white" d="M9 13.5V4.5" stroke="#2C2C2C"
+                        stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
                     </svg>
                     <p>افزودن امکانات خواب و گرمایش/سرمایش هال و پذیرایی</p>
                   </div>
                   <div id="cards-container">
-                  
+
                   </div>
                 </div>
                 <div class="mt-[60px]">
                   <div class="flex items-center justify-between">
                     <h5 class="font-bold text-lg text-dark">تعداد اتاق</h5>
-                    <div class="bg-[#FFF6EA] rounded-[10px] p-3 flex items-center justify-between gap-5">
-                      <button class="decrease-btn flex-center transition hover:bg-primary group rounded-md flex-shrink-0 border-[1.5px] border-primary w-6 h-6">
+                    <div class="bg-[#FFF6EA] rounded-[10px] p-3 flex items-center justify-between gap-1">
+                      <button
+                        class="decrease-btn flex-center transition hover:bg-primary group rounded-md flex-shrink-0 border-[1.5px] border-primary w-6 h-6">
                         <svg width="10" height="2" viewBox="0 0 10 2" fill="none" xmlns="http://www.w3.org/2000/svg">
-                          <path class="transition group-hover:stroke-white" d="M1 1H9" stroke="#FF9704" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                          <path class="transition group-hover:stroke-white" d="M1 1H9" stroke="#FF9704"
+                            stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
                         </svg>
                       </button>
-                      <input type="number" min="1" value="1" class="text-dark w-10 font-faNumRegular text-center flex-grow bg-transparent border-0 outline-none">
-                      <button class="increase-btn flex-center hover:text-white text-primary transition hover:bg-primary group rounded-md flex-shrink-0 border-[1.5px] border-primary w-6 h-6">
+                      <input type="number" min="1" value="1"
+                        class="text-dark w-20 font-faNumRegular text-center flex-grow bg-transparent border-0 outline-none">
+                      <button
+                        class="increase-btn flex-center hover:text-white text-primary transition hover:bg-primary group rounded-md flex-shrink-0 border-[1.5px] border-primary w-6 h-6">
                         +
                       </button>
                     </div>
                   </div>
-                  <div id="room-modal" class="rounded-[10px] p-4 bg-[#FFF6EA] transition hover:bg-primary hover:text-white group cursor-pointer flex-center gap-1 text-dark text-sm font-semibold mt-5">
-                    <svg class="flex-shrink-0" width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path class="transition group-hover:stroke-white" d="M4.5 9H13.5" stroke="#2C2C2C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-                      <path class="transition group-hover:stroke-white" d="M9 13.5V4.5" stroke="#2C2C2C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                  <div id="room-modal"
+                    class="rounded-[10px] p-4 bg-[#FFF6EA] transition hover:bg-primary hover:text-white group cursor-pointer flex-center gap-1 text-dark text-sm font-semibold mt-5">
+                    <svg class="flex-shrink-0" width="18" height="18" viewBox="0 0 18 18" fill="none"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <path class="transition group-hover:stroke-white" d="M4.5 9H13.5" stroke="#2C2C2C"
+                        stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                      <path class="transition group-hover:stroke-white" d="M9 13.5V4.5" stroke="#2C2C2C"
+                        stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
                     </svg>
                     <p>افزودن اتاق</p>
                   </div>
                   <div id="cards-container3">
-                  
+
                   </div>
                 </div>
               </div>
@@ -933,53 +1076,155 @@
                 <div class="mt-[60px]">
                   <div class="flex items-center justify-between">
                     <h5 class="font-bold text-lg text-dark">تعداد استخر</h5>
-                    <div class="bg-[#FFF6EA] rounded-[10px] p-3 flex items-center justify-between gap-5">
-                      <button class="decrease-btn flex-center transition hover:bg-primary group rounded-md flex-shrink-0 border-[1.5px] border-primary w-6 h-6">
+                    <div class="bg-[#FFF6EA] rounded-[10px] p-3 flex items-center justify-between gap-1">
+                      <button
+                        class="decrease-btn flex-center transition hover:bg-primary group rounded-md flex-shrink-0 border-[1.5px] border-primary w-6 h-6">
                         <svg width="10" height="2" viewBox="0 0 10 2" fill="none" xmlns="http://www.w3.org/2000/svg">
-                          <path class="transition group-hover:stroke-white" d="M1 1H9" stroke="#FF9704" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                          <path class="transition group-hover:stroke-white" d="M1 1H9" stroke="#FF9704"
+                            stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
                         </svg>
                       </button>
-                      <input type="number" min="1" value="1" class="text-dark w-10 font-faNumRegular text-center flex-grow bg-transparent border-0 outline-none">
-                      <button class="increase-btn flex-center hover:text-white text-primary transition hover:bg-primary group rounded-md flex-shrink-0 border-[1.5px] border-primary w-6 h-6">
+                      <input type="number" min="1" value="1"
+                        class="text-dark w-20 font-faNumRegular text-center flex-grow bg-transparent border-0 outline-none">
+                      <button
+                        class="increase-btn flex-center hover:text-white text-primary transition hover:bg-primary group rounded-md flex-shrink-0 border-[1.5px] border-primary w-6 h-6">
                         +
                       </button>
                     </div>
                   </div>
-                  <div id="pool-modal" class="rounded-[10px] p-4 bg-[#FFF6EA] transition hover:bg-primary hover:text-white group cursor-pointer flex-center gap-1 text-dark text-sm font-semibold mt-5">
-                    <svg class="flex-shrink-0" width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path class="transition group-hover:stroke-white" d="M4.5 9H13.5" stroke="#2C2C2C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-                      <path class="transition group-hover:stroke-white" d="M9 13.5V4.5" stroke="#2C2C2C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                  <div id="pool-modal"
+                    class="rounded-[10px] p-4 bg-[#FFF6EA] transition hover:bg-primary hover:text-white group cursor-pointer flex-center gap-1 text-dark text-sm font-semibold mt-5">
+                    <svg class="flex-shrink-0" width="18" height="18" viewBox="0 0 18 18" fill="none"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <path class="transition group-hover:stroke-white" d="M4.5 9H13.5" stroke="#2C2C2C"
+                        stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                      <path class="transition group-hover:stroke-white" d="M9 13.5V4.5" stroke="#2C2C2C"
+                        stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
                     </svg>
                     <p>افزودن استخر</p>
                   </div>
                   <div id="cards-container2">
-                  
+
                   </div>
                 </div>
                 <div class="mt-[60px]">
                   <div class="flex items-center justify-between">
                     <h5 class="font-bold text-lg text-dark">تعداد پارکینگ</h5>
-                    <div class="bg-[#FFF6EA] rounded-[10px] p-3 flex items-center justify-between gap-5">
-                      <button class="decrease-btn flex-center transition hover:bg-primary group rounded-md flex-shrink-0 border-[1.5px] border-primary w-6 h-6">
+                    <div class="bg-[#FFF6EA] rounded-[10px] p-3 flex items-center justify-between gap-1">
+                      <button
+                        class="decrease-btn flex-center transition hover:bg-primary group rounded-md flex-shrink-0 border-[1.5px] border-primary w-6 h-6">
                         <svg width="10" height="2" viewBox="0 0 10 2" fill="none" xmlns="http://www.w3.org/2000/svg">
-                          <path class="transition group-hover:stroke-white" d="M1 1H9" stroke="#FF9704" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                          <path class="transition group-hover:stroke-white" d="M1 1H9" stroke="#FF9704"
+                            stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
                         </svg>
                       </button>
-                      <input type="number" min="1" value="1" class="text-dark w-10 font-faNumRegular text-center flex-grow bg-transparent border-0 outline-none">
-                      <button class="increase-btn flex-center hover:text-white text-primary transition hover:bg-primary group rounded-md flex-shrink-0 border-[1.5px] border-primary w-6 h-6">
+                      <input type="number" min="1" value="1"
+                        class="text-dark w-20 font-faNumRegular text-center flex-grow bg-transparent border-0 outline-none">
+                      <button
+                        class="increase-btn flex-center hover:text-white text-primary transition hover:bg-primary group rounded-md flex-shrink-0 border-[1.5px] border-primary w-6 h-6">
                         +
                       </button>
                     </div>
                   </div>
-                  <div id="parking-modal" class="rounded-[10px] p-4 bg-[#FFF6EA] transition hover:bg-primary hover:text-white group cursor-pointer flex-center gap-1 text-dark text-sm font-semibold mt-5">
-                    <svg class="flex-shrink-0" width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path class="transition group-hover:stroke-white" d="M4.5 9H13.5" stroke="#2C2C2C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-                      <path class="transition group-hover:stroke-white" d="M9 13.5V4.5" stroke="#2C2C2C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                  <div id="parking-modal"
+                    class="rounded-[10px] p-4 bg-[#FFF6EA] transition hover:bg-primary hover:text-white group cursor-pointer flex-center gap-1 text-dark text-sm font-semibold mt-5">
+                    <svg class="flex-shrink-0" width="18" height="18" viewBox="0 0 18 18" fill="none"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <path class="transition group-hover:stroke-white" d="M4.5 9H13.5" stroke="#2C2C2C"
+                        stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                      <path class="transition group-hover:stroke-white" d="M9 13.5V4.5" stroke="#2C2C2C"
+                        stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
                     </svg>
                     <p>افزودن پارکینگ</p>
                   </div>
                   <div id="cards-container4">
-                  
+
+                  </div>
+                </div>
+              </div>
+              <div class="mt-[55px]">
+                <div>
+                  <div class="relative">
+                    <label
+                      class="text-dark font-medium text-lg absolute bg-white rtl:right-5 ltr:left-5 -top-5 py-1 px-5">قیمت وسط هفته (جمعه،شنبه،یکشنبه،دوشنبه،سه
+                      شنبه)</label>
+                    <div class="border border-[#EDEDED] rounded-[10px] px-3 py-4 flex items-center gap-2">
+                      <span
+                        class="bg-[#F4F4F4] flex-shrink-0 rounded-xl text-sm font-medium text-dark py-2 px-3">قیمت اقامتگاه</span>
+                      <span class="h-6 w-[1px] flex-shrink-0 bg-[#EDEDED]"></span>
+                      <div class="flex-grow">
+                        <input type="number" min="1" value="1"
+                          class="text-dark w-full font-faNumRegular text-center flex-grow bg-transparent border-0 outline-none">
+                      </div>
+                      <span
+                        class="bg-[#F4F4F4] flex-shrink-0 rounded-xl text-sm font-medium text-dark py-2 px-3">سهم سیستم</span>
+                      <span class="h-6 w-[1px] flex-shrink-0 bg-[#EDEDED]"></span>
+                      <div class="flex-grow">
+                        <input type="number" min="1" value="1"
+                          class="text-dark w-full font-faNumRegular text-center flex-grow bg-transparent border-0 outline-none">
+                      </div>
+                      <span
+                        class="bg-[#F4F4F4] flex-shrink-0 rounded-xl text-sm font-medium text-dark py-2 px-3">قیمت هر نفر اضافی</span>
+                      <span class="h-6 w-[1px] flex-shrink-0 bg-[#EDEDED]"></span>
+                      <div class="flex-grow">
+                        <input type="number" min="1" value="1"
+                          class="text-dark w-full font-faNumRegular text-center flex-grow bg-transparent border-0 outline-none">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="relative mt-12">
+                    <label
+                      class="text-dark font-medium text-lg absolute bg-white rtl:right-5 ltr:left-5 -top-5 py-1 px-5">قیمت آخر هفته (چهارشنبه،پنجشنبه)</label>
+                    <div class="border border-[#EDEDED] rounded-[10px] px-3 py-4 flex items-center gap-2">
+                      <span
+                        class="bg-[#F4F4F4] flex-shrink-0 rounded-xl text-sm font-medium text-dark py-2 px-3">قیمت اقامتگاه</span>
+                      <span class="h-6 w-[1px] flex-shrink-0 bg-[#EDEDED]"></span>
+                      <div class="flex-grow">
+                        <input type="number" min="1" value="1"
+                          class="text-dark w-full font-faNumRegular text-center flex-grow bg-transparent border-0 outline-none">
+                      </div>
+                      <span
+                        class="bg-[#F4F4F4] flex-shrink-0 rounded-xl text-sm font-medium text-dark py-2 px-3">سهم سیستم</span>
+                      <span class="h-6 w-[1px] flex-shrink-0 bg-[#EDEDED]"></span>
+                      <div class="flex-grow">
+                        <input type="number" min="1" value="1"
+                          class="text-dark w-full font-faNumRegular text-center flex-grow bg-transparent border-0 outline-none">
+                      </div>
+                      <span
+                        class="bg-[#F4F4F4] flex-shrink-0 rounded-xl text-sm font-medium text-dark py-2 px-3">قیمت هر نفر اضافی</span>
+                      <span class="h-6 w-[1px] flex-shrink-0 bg-[#EDEDED]"></span>
+                      <div class="flex-grow">
+                        <input type="number" min="1" value="1"
+                          class="text-dark w-full font-faNumRegular text-center flex-grow bg-transparent border-0 outline-none">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="relative mt-12">
+                    <label
+                      class="text-dark font-medium text-lg absolute bg-white rtl:right-5 ltr:left-5 -top-5 py-1 px-5">قیمت ایام نوروز (از <span class="font-faNumRegular">29</span> اسفند تا <span class="font-faNumRegular">13</span> فروردین)</label>
+                    <div class="border border-[#EDEDED] rounded-[10px] px-3 py-4 flex items-center gap-2">
+                      <span
+                        class="bg-[#F4F4F4] flex-shrink-0 rounded-xl text-sm font-medium text-dark py-2 px-3">قیمت اقامتگاه</span>
+                      <span class="h-6 w-[1px] flex-shrink-0 bg-[#EDEDED]"></span>
+                      <div class="flex-grow">
+                        <input type="number" min="1" value="1"
+                          class="text-dark w-full font-faNumRegular text-center flex-grow bg-transparent border-0 outline-none">
+                      </div>
+                      <span
+                        class="bg-[#F4F4F4] flex-shrink-0 rounded-xl text-sm font-medium text-dark py-2 px-3">سهم سیستم</span>
+                      <span class="h-6 w-[1px] flex-shrink-0 bg-[#EDEDED]"></span>
+                      <div class="flex-grow">
+                        <input type="number" min="1" value="1"
+                          class="text-dark w-full font-faNumRegular text-center flex-grow bg-transparent border-0 outline-none">
+                      </div>
+                      <span
+                        class="bg-[#F4F4F4] flex-shrink-0 rounded-xl text-sm font-medium text-dark py-2 px-3">قیمت هر نفر اضافی</span>
+                      <span class="h-6 w-[1px] flex-shrink-0 bg-[#EDEDED]"></span>
+                      <div class="flex-grow">
+                        <input type="number" min="1" value="1"
+                          class="text-dark w-full font-faNumRegular text-center flex-grow bg-transparent border-0 outline-none">
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -987,18 +1232,19 @@
                 <div class="mt-6">
                   <h5 class="text-lg text-dark font-bold">تصاویر اقامتگاه</h5>
                   <div class="mt-3 text-sm text-dark font-medium">
-                   <div class="flex items-start gap-2 mb-3">
-                     <img alt="icon" src="../img/svg/tick-circle (3).svg" class="flex-shrink-0">
-                     <p>از آپلود تصاویر اسکرین شات خودداری کنید.</p>
-                   </div>
-                   <div class="flex items-start gap-2 mb-3">
-                    <img alt="icon" src="../img/svg/tick-circle (3).svg" class="flex-shrink-0">
-                    <p>از آپلود تصاویر اسکرین شات خودداری کنید.</p>
-                  </div>
-                  <div class="flex items-start gap-2 mb-3">
-                    <img alt="icon" src="../img/svg/tick-circle (3).svg" class="flex-shrink-0">
-                    <p>در صورت اختلاف موقعیت مکانی اقامتگاه‌تان در نقشه و محل واقعی اقامتگاه، مهمان می‌تواند بدون پرداخت جریمه رزرو خود را لغو کند.</p>
-                  </div>
+                    <div class="flex items-start gap-2 mb-3">
+                      <img alt="icon" src="../img/svg/tick-circle (3).svg" class="flex-shrink-0">
+                      <p>از آپلود تصاویر اسکرین شات خودداری کنید.</p>
+                    </div>
+                    <div class="flex items-start gap-2 mb-3">
+                      <img alt="icon" src="../img/svg/tick-circle (3).svg" class="flex-shrink-0">
+                      <p>از آپلود تصاویر اسکرین شات خودداری کنید.</p>
+                    </div>
+                    <div class="flex items-start gap-2 mb-3">
+                      <img alt="icon" src="../img/svg/tick-circle (3).svg" class="flex-shrink-0">
+                      <p>در صورت اختلاف موقعیت مکانی اقامتگاه‌تان در نقشه و محل واقعی اقامتگاه، مهمان می‌تواند بدون
+                        پرداخت جریمه رزرو خود را لغو کند.</p>
+                    </div>
                   </div>
                 </div>
                 <div class="mt-[18px]">
@@ -1006,8 +1252,11 @@
                     <div>
                       <img alt="img" src="../img/Group 45777.png" class="mx-auto w-12 h-12 rounded-full">
                       <div class="mt-4 relative">
-                        <div class="rounded-[10px] bg-primary text-white py-2 px-4 text-sm font-bold btnHover cursor-pointer">افرودن عکس</div>
-                        <input class="opacity-0 absolute inset-0 w-full h-full cursor-pointer" type="file" id="upload-button" accept="image/*" multiple>
+                        <div
+                          class="rounded-[10px] bg-primary text-white py-2 px-4 text-sm font-bold btnHover cursor-pointer">
+                          افرودن عکس</div>
+                        <input class="opacity-0 absolute inset-0 w-full h-full cursor-pointer" type="file"
+                          id="upload-button" accept="image/*" multiple>
                       </div>
                     </div>
                   </div>
