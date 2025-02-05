@@ -277,8 +277,12 @@ acordionBtn3.forEach((item) => {
 let checkbox = Array.from(document.getElementsByClassName('checkbox'));
 let checkboxRow = Array.from(document.getElementsByClassName('checkboxRow'));
 
+document.querySelectorAll('input[type="checkbox"]').forEach(checkbox => {
+  checkbox.checked = false; // غیرفعال کردن حالت checked
+});
+
 checkboxRow.forEach((item) => {
-    item.addEventListener('click', function () {
+    item.querySelector('input').addEventListener('click', function () {
         item.querySelector('.checkbox').classList.toggle('active');
     })
 })

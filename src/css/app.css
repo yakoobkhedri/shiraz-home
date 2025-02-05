@@ -288,6 +288,9 @@ a {
   color: black;
 }
 /* calander */
+.flatpickr-calendar{
+  @apply font-faNumRegular;
+}
 .flatpickr-weekdays {
    font-size: 10px !important;
    font-weight: bold !important;
