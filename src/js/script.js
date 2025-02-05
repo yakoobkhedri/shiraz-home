@@ -286,3 +286,11 @@ checkboxRow.forEach((item) => {
         item.querySelector('.checkbox').classList.toggle('active');
     })
 })
+
+   // تنظیم مقدار ۰ برای تمام فیلدهای عددی
+   document.addEventListener('DOMContentLoaded', function() {
+    const numberInputs = document.querySelectorAll('input[type="number"]');
+    numberInputs.forEach(input => {
+        input.value = '0';
+    });
+});
