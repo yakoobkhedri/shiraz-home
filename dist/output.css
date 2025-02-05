@@ -1264,10 +1264,6 @@ video {
   margin-top: 60px;
 }
 
-.mt-\[66px\] {
-  margin-top: 66px;
-}
-
 .mt-\[67px\] {
   margin-top: 67px;
 }
@@ -2265,10 +2261,6 @@ video {
   border-radius: 30px;
 }
 
-.rounded-\[5px\] {
-  border-radius: 5px;
-}
-
 .rounded-\[63px\] {
   border-radius: 63px;
 }
@@ -3190,6 +3182,10 @@ video {
 .outline-none {
   outline: 2px solid transparent;
   outline-offset: 2px;
+}
+
+.outline {
+  outline-style: solid;
 }
 
 .blur {
@@ -4239,6 +4235,14 @@ html[dir="rtl"] .data_imagesContLeftRight {
 
 .step.active svg path{
   stroke: white;
+}
+
+.steps {
+  display: none;
+}
+
+.steps.active {
+  display: block;
 }
 
 /* range input */

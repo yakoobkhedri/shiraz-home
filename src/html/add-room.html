@@ -843,15 +843,15 @@
               </div>
             </div>
           </div>
-          <div class="lg:col-span-8 col-span-12">
+          <div class="lg:col-span-8 col-span-12" id="steps-container">
             <form class="shadow-1 bg-white py-11 px-7">
-              <div>
+              <div class="steps active" data-step="1">
                 <div class="grid grid-cols-12 gap-x-5 gap-y-7">
                   <div class="col-span-6">
                     <div class="relative">
                       <label
                         class="text-dark font-medium text-lg absolute bg-white rtl:right-5 ltr:left-5 -top-5 py-1 px-5">استان</label>
-                      <select class="border border-[#EDEDED] rounded-[10px] w-full h-14 bg-white px-3">
+                      <select required class="border border-[#EDEDED] rounded-[10px] w-full h-14 bg-white px-3">
                         <option>تهران</option>
                         <option>قم</option>
                       </select>
@@ -862,7 +862,7 @@
                       <label
                         class="text-dark font-medium text-lg absolute bg-white rtl:right-5 ltr:left-5 -top-5 py-1 px-5">نام
                         میزبان</label>
-                      <input class="border border-[#EDEDED] rounded-[10px] w-full h-14 bg-white px-3 outline-none">
+                      <input required class="border border-[#EDEDED] rounded-[10px] w-full h-14 bg-white px-3 outline-none">
                     </div>
                   </div>
                   <div class="col-span-12">
@@ -871,7 +871,7 @@
                         <img alt="icon" src="../img/svg/location (3).svg" class="flex-shrink-0">
                         <label class="text-dark font-medium text-lg">آدرس دقیق</label>
                       </div>
-                      <textarea
+                      <textarea required
                         class="min-h-[101px] h-full pt-12 border border-[#EDEDED] rounded-[10px] w-full bg-white px-3 outline-none"></textarea>
                     </div>
                   </div>
@@ -910,7 +910,7 @@
                   <label class="flex items-center gap-2.5 cursor-pointer text-dark mb-[13px]">
                     <div class="inline-flex items-center">
                       <label class="relative flex items-center p-1 rounded-full cursor-pointer" htmlfor="black">
-                        <input name="color" type="radio"
+                        <input required name="color" type="radio"
                           class="before:content[''] bg-[#F4F4F4] p-3 peer relative h-[18px] w-[18px] cursor-pointer appearance-none rounded-full border border-gray-900 text-[#ECECEC] transition-all before:absolute before:top-2/4 before:left-2/4 before:block before:h-12 before:w-12 before:-translate-y-2/4 before:-translate-x-2/4 before:rounded-full before:bg-[#ECECEC] before:opacity-0 before:transition-opacity checked:before:bg-primary hover:before:opacity-10"
                           id="black">
                         <span
@@ -928,7 +928,7 @@
                   <label class="flex items-center gap-2.5 cursor-pointer text-dark mb-[13px]">
                     <div class="inline-flex items-center">
                       <label class="relative flex items-center p-1 rounded-full cursor-pointer" htmlfor="black">
-                        <input name="color" type="radio"
+                        <input required name="color" type="radio"
                           class="before:content[''] bg-[#F4F4F4] p-3 peer relative h-[18px] w-[18px] cursor-pointer appearance-none rounded-full border border-gray-900 text-[#ECECEC] transition-all before:absolute before:top-2/4 before:left-2/4 before:block before:h-12 before:w-12 before:-translate-y-2/4 before:-translate-x-2/4 before:rounded-full before:bg-[#ECECEC] before:opacity-0 before:transition-opacity checked:before:bg-primary hover:before:opacity-10"
                           id="black">
                         <span
@@ -952,7 +952,7 @@
                         <span
                           class="bg-[#F4F4F4] flex-shrink-0 rounded-xl text-sm font-medium text-dark py-2 px-3">از</span>
                         <span class="h-6 w-[1px] flex-shrink-0 bg-[#EDEDED]"></span>
-                        <select class="text-sm font-faNumBold text-dark flex-grow w-full bg-transparent">
+                        <select required class="text-sm font-faNumBold text-dark flex-grow w-full bg-transparent">
                           <option>مثال: ساعت 14:00</option>
                           <option>ساعت 16:00</option>
                           <option>ساعت 18:00</option>
@@ -967,7 +967,7 @@
                         <span
                           class="bg-[#F4F4F4] flex-shrink-0 rounded-xl text-sm font-medium text-dark py-2 px-3">تا</span>
                         <span class="h-6 w-[1px] flex-shrink-0 bg-[#EDEDED]"></span>
-                        <select class="text-sm font-faNumBold text-dark flex-grow w-full bg-transparent">
+                        <select required class="text-sm font-faNumBold text-dark flex-grow w-full bg-transparent">
                           <option>مثال: ساعت 14:00</option>
                           <option>ساعت 16:00</option>
                           <option>ساعت 18:00</option>
@@ -978,7 +978,7 @@
                 </div>
                 <div class="grid grid-cols-2 gap-[14px] mt-[47px]">
                   <a
-                    class="bg-[#F4F4F4] rounded-[10px] p-4 hover:text-white group text-dark font-semibold text-sm flex items-center justify-center gap-1 hover:bg-[#160C59]">
+                    class="bg-[#F4F4F4] prev-btn rounded-[10px] p-4 hover:text-white group text-dark font-semibold text-sm flex items-center justify-center gap-1 hover:bg-[#160C59]">
                     <svg class="ltr:[transform:rotateY(180deg)]" width="18" height="18" viewBox="0 0 18 18" fill="none"
                       xmlns="http://www.w3.org/2000/svg">
                       <path class="group-hover:stroke-white transition"
@@ -990,7 +990,7 @@
                     <p class="transition">مرحله قبل</p>
                   </a>
                   <a
-                    class="bg-[#F4F4F4] rounded-[10px] p-4 hover:text-white group text-dark font-semibold text-sm flex items-center justify-center gap-1 hover:bg-[#160C59]">
+                    class="bg-[#F4F4F4] next-btn rounded-[10px] p-4 hover:text-white group text-dark font-semibold text-sm flex items-center justify-center gap-1 hover:bg-[#160C59]">
                     <p class="transition">ثبت و مرحله بعد</p>
                     <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path class="group-hover:stroke-white transition" d="M7.1775 4.44751L2.625 9.00001L7.1775 13.5525"
@@ -1002,7 +1002,7 @@
                   </a>
                 </div>
               </div>
-              <div>
+              <div class="steps" data-step="2">
                 <div class="mt-[60px]">
                   <div class="flex items-center justify-between">
                     <h5 class="font-bold text-lg text-dark">تعداد هال و پذیرایی</h5>
@@ -1071,8 +1071,33 @@
 
                   </div>
                 </div>
+                <div class="grid grid-cols-2 gap-[14px] mt-[47px]">
+                  <a
+                    class="bg-[#F4F4F4] prev-btn rounded-[10px] p-4 hover:text-white group text-dark font-semibold text-sm flex items-center justify-center gap-1 hover:bg-[#160C59]">
+                    <svg class="ltr:[transform:rotateY(180deg)]" width="18" height="18" viewBox="0 0 18 18" fill="none"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <path class="group-hover:stroke-white transition"
+                        d="M10.8225 13.5525L15.375 8.99999L10.8225 4.44749" stroke="#2C2C2C" stroke-width="1.5"
+                        stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                      <path class="group-hover:stroke-white transition" d="M2.62457 9L15.2471 9" stroke="#2C2C2C"
+                        stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                    <p class="transition">مرحله قبل</p>
+                  </a>
+                  <a
+                    class="bg-[#F4F4F4] next-btn rounded-[10px] p-4 hover:text-white group text-dark font-semibold text-sm flex items-center justify-center gap-1 hover:bg-[#160C59]">
+                    <p class="transition">ثبت و مرحله بعد</p>
+                    <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path class="group-hover:stroke-white transition" d="M7.1775 4.44751L2.625 9.00001L7.1775 13.5525"
+                        stroke="#2C2C2C" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                      <path class="group-hover:stroke-white transition" d="M15.3754 9H2.75293" stroke="#2C2C2C"
+                        stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                  </a>
+                </div>
               </div>
-              <div>
+              <div class="steps" data-step="3">
                 <div class="mt-[60px]">
                   <div class="flex items-center justify-between">
                     <h5 class="font-bold text-lg text-dark">تعداد استخر</h5>
@@ -1141,8 +1166,33 @@
 
                   </div>
                 </div>
+                <div class="grid grid-cols-2 gap-[14px] mt-[47px]">
+                  <a
+                    class="bg-[#F4F4F4] prev-btn rounded-[10px] p-4 hover:text-white group text-dark font-semibold text-sm flex items-center justify-center gap-1 hover:bg-[#160C59]">
+                    <svg class="ltr:[transform:rotateY(180deg)]" width="18" height="18" viewBox="0 0 18 18" fill="none"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <path class="group-hover:stroke-white transition"
+                        d="M10.8225 13.5525L15.375 8.99999L10.8225 4.44749" stroke="#2C2C2C" stroke-width="1.5"
+                        stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                      <path class="group-hover:stroke-white transition" d="M2.62457 9L15.2471 9" stroke="#2C2C2C"
+                        stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                    <p class="transition">مرحله قبل</p>
+                  </a>
+                  <a
+                    class="bg-[#F4F4F4] next-btn rounded-[10px] p-4 hover:text-white group text-dark font-semibold text-sm flex items-center justify-center gap-1 hover:bg-[#160C59]">
+                    <p class="transition">ثبت و مرحله بعد</p>
+                    <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path class="group-hover:stroke-white transition" d="M7.1775 4.44751L2.625 9.00001L7.1775 13.5525"
+                        stroke="#2C2C2C" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                      <path class="group-hover:stroke-white transition" d="M15.3754 9H2.75293" stroke="#2C2C2C"
+                        stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                  </a>
+                </div>
               </div>
-              <div class="mt-[55px]">
+              <div data-step="4" class="steps mt-[55px]">
                 <div>
                   <div class="relative">
                     <label
@@ -1153,21 +1203,21 @@
                         class="bg-[#F4F4F4] flex-shrink-0 rounded-xl text-sm font-medium text-dark py-2 px-3">قیمت اقامتگاه</span>
                       <span class="h-6 w-[1px] flex-shrink-0 bg-[#EDEDED]"></span>
                       <div class="flex-grow">
-                        <input type="number" min="1" value="1"
+                        <input required type="number" min="1" value="1"
                           class="text-dark w-full font-faNumRegular text-center flex-grow bg-transparent border-0 outline-none">
                       </div>
                       <span
                         class="bg-[#F4F4F4] flex-shrink-0 rounded-xl text-sm font-medium text-dark py-2 px-3">سهم سیستم</span>
                       <span class="h-6 w-[1px] flex-shrink-0 bg-[#EDEDED]"></span>
                       <div class="flex-grow">
-                        <input type="number" min="1" value="1"
+                        <input required type="number" min="1" value="1"
                           class="text-dark w-full font-faNumRegular text-center flex-grow bg-transparent border-0 outline-none">
                       </div>
                       <span
                         class="bg-[#F4F4F4] flex-shrink-0 rounded-xl text-sm font-medium text-dark py-2 px-3">قیمت هر نفر اضافی</span>
                       <span class="h-6 w-[1px] flex-shrink-0 bg-[#EDEDED]"></span>
                       <div class="flex-grow">
-                        <input type="number" min="1" value="1"
+                        <input required type="number" min="1" value="1"
                           class="text-dark w-full font-faNumRegular text-center flex-grow bg-transparent border-0 outline-none">
                       </div>
                     </div>
@@ -1180,21 +1230,21 @@
                         class="bg-[#F4F4F4] flex-shrink-0 rounded-xl text-sm font-medium text-dark py-2 px-3">قیمت اقامتگاه</span>
                       <span class="h-6 w-[1px] flex-shrink-0 bg-[#EDEDED]"></span>
                       <div class="flex-grow">
-                        <input type="number" min="1" value="1"
+                        <input required type="number" min="1" value="1"
                           class="text-dark w-full font-faNumRegular text-center flex-grow bg-transparent border-0 outline-none">
                       </div>
                       <span
                         class="bg-[#F4F4F4] flex-shrink-0 rounded-xl text-sm font-medium text-dark py-2 px-3">سهم سیستم</span>
                       <span class="h-6 w-[1px] flex-shrink-0 bg-[#EDEDED]"></span>
                       <div class="flex-grow">
-                        <input type="number" min="1" value="1"
+                        <input required type="number" min="1" value="1"
                           class="text-dark w-full font-faNumRegular text-center flex-grow bg-transparent border-0 outline-none">
                       </div>
                       <span
                         class="bg-[#F4F4F4] flex-shrink-0 rounded-xl text-sm font-medium text-dark py-2 px-3">قیمت هر نفر اضافی</span>
                       <span class="h-6 w-[1px] flex-shrink-0 bg-[#EDEDED]"></span>
                       <div class="flex-grow">
-                        <input type="number" min="1" value="1"
+                        <input required type="number" min="1" value="1"
                           class="text-dark w-full font-faNumRegular text-center flex-grow bg-transparent border-0 outline-none">
                       </div>
                     </div>
@@ -1207,28 +1257,53 @@
                         class="bg-[#F4F4F4] flex-shrink-0 rounded-xl text-sm font-medium text-dark py-2 px-3">قیمت اقامتگاه</span>
                       <span class="h-6 w-[1px] flex-shrink-0 bg-[#EDEDED]"></span>
                       <div class="flex-grow">
-                        <input type="number" min="1" value="1"
+                        <input required type="number" min="1" value="1"
                           class="text-dark w-full font-faNumRegular text-center flex-grow bg-transparent border-0 outline-none">
                       </div>
                       <span
                         class="bg-[#F4F4F4] flex-shrink-0 rounded-xl text-sm font-medium text-dark py-2 px-3">سهم سیستم</span>
                       <span class="h-6 w-[1px] flex-shrink-0 bg-[#EDEDED]"></span>
                       <div class="flex-grow">
-                        <input type="number" min="1" value="1"
+                        <input required type="number" min="1" value="1"
                           class="text-dark w-full font-faNumRegular text-center flex-grow bg-transparent border-0 outline-none">
                       </div>
                       <span
                         class="bg-[#F4F4F4] flex-shrink-0 rounded-xl text-sm font-medium text-dark py-2 px-3">قیمت هر نفر اضافی</span>
                       <span class="h-6 w-[1px] flex-shrink-0 bg-[#EDEDED]"></span>
                       <div class="flex-grow">
-                        <input type="number" min="1" value="1"
+                        <input required type="number" min="1" value="1"
                           class="text-dark w-full font-faNumRegular text-center flex-grow bg-transparent border-0 outline-none">
                       </div>
                     </div>
                   </div>
                 </div>
+                <div class="grid grid-cols-2 gap-[14px] mt-[47px]">
+                  <a
+                    class="bg-[#F4F4F4] prev-btn rounded-[10px] p-4 hover:text-white group text-dark font-semibold text-sm flex items-center justify-center gap-1 hover:bg-[#160C59]">
+                    <svg class="ltr:[transform:rotateY(180deg)]" width="18" height="18" viewBox="0 0 18 18" fill="none"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <path class="group-hover:stroke-white transition"
+                        d="M10.8225 13.5525L15.375 8.99999L10.8225 4.44749" stroke="#2C2C2C" stroke-width="1.5"
+                        stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                      <path class="group-hover:stroke-white transition" d="M2.62457 9L15.2471 9" stroke="#2C2C2C"
+                        stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                    <p class="transition">مرحله قبل</p>
+                  </a>
+                  <a
+                    class="bg-[#F4F4F4] next-btn rounded-[10px] p-4 hover:text-white group text-dark font-semibold text-sm flex items-center justify-center gap-1 hover:bg-[#160C59]">
+                    <p class="transition">ثبت و مرحله بعد</p>
+                    <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path class="group-hover:stroke-white transition" d="M7.1775 4.44751L2.625 9.00001L7.1775 13.5525"
+                        stroke="#2C2C2C" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                      <path class="group-hover:stroke-white transition" d="M15.3754 9H2.75293" stroke="#2C2C2C"
+                        stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                  </a>
+                </div>
               </div>
-              <div>
+              <div class="steps" data-step="5">
                 <div class="mt-6">
                   <h5 class="text-lg text-dark font-bold">تصاویر اقامتگاه</h5>
                   <div class="mt-3 text-sm text-dark font-medium">
@@ -1255,7 +1330,7 @@
                         <div
                           class="rounded-[10px] bg-primary text-white py-2 px-4 text-sm font-bold btnHover cursor-pointer">
                           افرودن عکس</div>
-                        <input class="opacity-0 absolute inset-0 w-full h-full cursor-pointer" type="file"
+                        <input required class="opacity-0 absolute inset-0 w-full h-full cursor-pointer" type="file"
                           id="upload-button" accept="image/*" multiple>
                       </div>
                     </div>
@@ -1264,8 +1339,35 @@
                     <div id="image-preview" class="grid grid-cols-2 gap-4"></div>
                   </div>
                 </div>
+                <div class="grid grid-cols-2 gap-[14px] mt-[47px]">
+                  <a
+                    class="bg-[#F4F4F4] prev-btn rounded-[10px] p-4 hover:text-white group text-dark font-semibold text-sm flex items-center justify-center gap-1 hover:bg-[#160C59]">
+                    <svg class="ltr:[transform:rotateY(180deg)]" width="18" height="18" viewBox="0 0 18 18" fill="none"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <path class="group-hover:stroke-white transition"
+                        d="M10.8225 13.5525L15.375 8.99999L10.8225 4.44749" stroke="#2C2C2C" stroke-width="1.5"
+                        stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                      <path class="group-hover:stroke-white transition" d="M2.62457 9L15.2471 9" stroke="#2C2C2C"
+                        stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                    <p class="transition">مرحله قبل</p>
+                  </a>
+                  <a
+                    class="bg-[#F4F4F4] submit-btn rounded-[10px] p-4 hover:text-white group text-dark font-semibold text-sm flex items-center justify-center gap-1 hover:bg-[#160C59]">
+                    <p class="transition">ثبت </p>
+                    <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path class="group-hover:stroke-white transition" d="M7.1775 4.44751L2.625 9.00001L7.1775 13.5525"
+                        stroke="#2C2C2C" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                      <path class="group-hover:stroke-white transition" d="M15.3754 9H2.75293" stroke="#2C2C2C"
+                        stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                  </a>
+                </div>
               </div>
             </form>
+
+            <pre id="output"></pre>
           </div>
         </div>
     </section>
@@ -1477,6 +1579,7 @@
   <script src="../js/modal.js"></script>
   <script src="../js/upload.js"></script>
   <script src="../js/room-options.js"></script>
+  <script src="../js/steps.js"></script>
 </body>
 
 </html>

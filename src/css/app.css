@@ -645,6 +645,13 @@ html[dir="rtl"] .data_imagesContLeftRight {
 .step.active svg path{
   stroke: white;
 }
+.steps {
+  display: none;
+}
+
+.steps.active {
+  display: block;
+}
 /* range input */
 .rs-container{
   height: 20px !important;
