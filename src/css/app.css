@@ -643,6 +643,9 @@ html[dir="rtl"] .data_imagesContLeftRight {
 .progress-step.active > span,.progress-step.active > div > div,.progress-step.completed > span{
   background-color: #FF9704;
 }
+.progress-step.active p{
+  color: #FF9704;
+}
 .progress-step.active svg path{
   stroke: white;
 }

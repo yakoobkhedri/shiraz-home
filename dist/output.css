@@ -1252,10 +1252,6 @@ video {
   margin-top: 54px;
 }
 
-.mt-\[55px\] {
-  margin-top: 55px;
-}
-
 .mt-\[5px\] {
   margin-top: 5px;
 }
@@ -1815,10 +1811,6 @@ video {
 
 .w-\[60\%\] {
   width: 60%;
-}
-
-.w-\[67px\] {
-  width: 67px;
 }
 
 .w-\[73px\] {
@@ -2664,11 +2656,6 @@ video {
 .px-6 {
   padding-left: 1.5rem;
   padding-right: 1.5rem;
-}
-
-.px-7 {
-  padding-left: 1.75rem;
-  padding-right: 1.75rem;
 }
 
 .px-8 {
@@ -4238,6 +4225,10 @@ html[dir="rtl"] .data_imagesContLeftRight {
   background-color: #FF9704;
 }
 
+.progress-step.active p{
+  color: #FF9704;
+}
+
 .progress-step.active svg path{
   stroke: white;
 }
@@ -5292,12 +5283,12 @@ html[dir="rtl"] .data_imagesContLeftRight {
     grid-column: span 4 / span 4;
   }
 
-  .sm\:col-span-8 {
-    grid-column: span 8 / span 8;
-  }
-
   .sm\:col-span-6 {
     grid-column: span 6 / span 6;
+  }
+
+  .sm\:col-span-8 {
+    grid-column: span 8 / span 8;
   }
 
   .sm\:my-0 {
@@ -5498,6 +5489,10 @@ html[dir="rtl"] .data_imagesContLeftRight {
     height: 66px;
   }
 
+  .sm\:h-\[67px\] {
+    height: 67px;
+  }
+
   .sm\:h-\[70px\] {
     height: 70px;
   }
@@ -5510,8 +5505,8 @@ html[dir="rtl"] .data_imagesContLeftRight {
     height: auto;
   }
 
-  .sm\:h-\[67px\] {
-    height: 67px;
+  .sm\:w-10 {
+    width: 2.5rem;
   }
 
   .sm\:w-5\/6 {
@@ -5538,6 +5533,10 @@ html[dir="rtl"] .data_imagesContLeftRight {
     width: 66px;
   }
 
+  .sm\:w-\[67px\] {
+    width: 67px;
+  }
+
   .sm\:w-\[70\%\] {
     width: 70%;
   }
@@ -5556,14 +5555,6 @@ html[dir="rtl"] .data_imagesContLeftRight {
 
   .sm\:w-auto {
     width: auto;
-  }
-
-  .sm\:w-\[67px\] {
-    width: 67px;
-  }
-
-  .sm\:w-10 {
-    width: 2.5rem;
   }
 
   .sm\:grid-cols-2 {
@@ -5793,6 +5784,10 @@ html[dir="rtl"] .data_imagesContLeftRight {
     line-height: 2rem;
   }
 
+  .sm\:text-\[22px\] {
+    font-size: 22px;
+  }
+
   .sm\:text-\[28px\] {
     font-size: 28px;
   }
@@ -5835,10 +5830,6 @@ html[dir="rtl"] .data_imagesContLeftRight {
   .sm\:text-xl {
     font-size: 1.25rem;
     line-height: 1.75rem;
-  }
-
-  .sm\:text-\[22px\] {
-    font-size: 22px;
   }
 
   .sm\:leading-6 {
@@ -6111,10 +6102,6 @@ html[dir="rtl"] .data_imagesContLeftRight {
 
   .md\:block {
     display: block;
-  }
-
-  .md\:inline-block {
-    display: inline-block;
   }
 
   .md\:hidden {
