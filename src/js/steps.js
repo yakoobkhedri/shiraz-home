@@ -40,7 +40,7 @@ function validateStep(stepElement) {
     if (currentStep === 3) {
         const cardsContainer = document.getElementById('cards-container');
         if (cardsContainer.children.length === 0) {
-            alert('لطفا حداقل یک کارت اضافه کنید');
+            alert('لطفا حداقل یک کارت هال و پذیرایی اضافه کنید');
             return false;
         }
     }
