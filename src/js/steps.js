@@ -17,11 +17,22 @@ function updateProgress() {
 
 // تغییر مراحل
 function navigateToStep(newStep) {
+    // حذف کلاس اکتیو از همه مراحل
     document.querySelectorAll('.step').forEach(step => {
         step.classList.remove('active');
     });
-    document.querySelector(`[data-step="${newStep}"]`).classList.add('active');
-    updateProgress();
+    
+    // انتخاب دقیق المنت مرحله جدید
+    const nextStepElement = document.querySelector(`.step[data-step="${newStep}"]`);
+    
+    // بررسی وجود المنت
+    if(nextStepElement) {
+        nextStepElement.classList.add('active');
+        currentStep = newStep; // به روزرسانی شماره مرحله فعلی
+        updateProgress();
+    } else {
+        console.error('مرحله مورد نظر وجود ندارد:', newStep);
+    }
 }
 
 // اعتبارسنجی مراحل
