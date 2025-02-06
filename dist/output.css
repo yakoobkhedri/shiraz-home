@@ -2157,6 +2157,10 @@ video {
        column-gap: 1.5rem;
 }
 
+.gap-y-11 {
+  row-gap: 2.75rem;
+}
+
 .gap-y-12 {
   row-gap: 3rem;
 }
@@ -3993,6 +3997,7 @@ input[type="number"] {
 
 #image-preview img{
   width: 100%;
+  height: 255px;
   border-radius: 10px;
 }
 
@@ -4229,11 +4234,11 @@ html[dir="rtl"] .data_imagesContLeftRight {
 
 /* step */
 
-.step.active > span,.step.active > div > div{
+.progress-step.active > span,.progress-step.active > div > div{
   background-color: #FF9704;
 }
 
-.step.active svg path{
+.progress-step.active svg path{
   stroke: white;
 }
 

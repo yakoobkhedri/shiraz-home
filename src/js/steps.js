@@ -2,21 +2,29 @@ const formData = [];
 let currentStep = 1;
 
 // مدیریت پیشرفت مراحل
-// function updateProgress() {
-//     document.querySelectorAll('.progress-step').forEach(step => {
-//         const stepNumber = parseInt(step.dataset.step);
-//         step.classList.remove('active', 'completed');
+function updateProgress() {
+    document.querySelectorAll('.progress-step').forEach(step => {
+        const stepNumber = parseInt(step.dataset.step);
+        step.classList.remove('active', 'completed');
         
-//         if (stepNumber < currentStep) {
-//             step.classList.add('completed');
-//         } else if (stepNumber === currentStep) {
-//             step.classList.add('active');
-//         }
-//     });
-// }
+        if (stepNumber < currentStep) {
+            step.classList.add('completed');
+        } else if (stepNumber === currentStep) {
+            step.classList.add('active');
+        }
+    });
+}
 
 // اعتبارسنجی مراحل
 function validateStep(stepElement) {
+    if (currentStep === 3) {
+        const cardsContainer = document.getElementById('cards-container');
+        if (cardsContainer.children.length === 0) {
+            alert('لطفا حداقل یک کارت اضافه کنید');
+            return false;
+        }
+    }
+
     const inputs = stepElement.querySelectorAll('input, select, textarea');
     let isValid = true;
 
@@ -77,7 +85,7 @@ document.addEventListener('click', function(e) {
     if (e.target.classList.contains('submit-btn')) {
         if (!validateStep(stepElement)) return;
         saveStepData(stepElement);
-        showResults();
+        // showResults();
         resetForm();
     }
 });
@@ -88,7 +96,7 @@ function navigateToStep(newStep) {
         step.classList.remove('active');
     });
     document.querySelector(`[data-step="${newStep}"]`).classList.add('active');
-    // updateProgress();
+    updateProgress();
 }
 
 // نمایش نتایج
