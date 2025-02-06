@@ -640,17 +640,23 @@ html[dir="rtl"] .data_imagesContLeftRight {
   transform: translate(0, 0);
 }
 /* step */
-.progress-step.active > span,.progress-step.active > div > div{
+.progress-step.active > span,.progress-step.active > div > div,.progress-step.completed > span{
   background-color: #FF9704;
 }
 .progress-step.active svg path{
   stroke: white;
 }
-.steps {
+.progress-step.completed svg path{
+  stroke: #FF9704;
+}
+.progress-step.completed > div > div{
+  border: 1px solid #FF9704;
+}
+.step {
   display: none;
 }
 
-.steps.active {
+.step.active {
   display: block;
 }
 /* range input */

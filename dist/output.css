@@ -4234,7 +4234,7 @@ html[dir="rtl"] .data_imagesContLeftRight {
 
 /* step */
 
-.progress-step.active > span,.progress-step.active > div > div{
+.progress-step.active > span,.progress-step.active > div > div,.progress-step.completed > span{
   background-color: #FF9704;
 }
 
@@ -4242,11 +4242,19 @@ html[dir="rtl"] .data_imagesContLeftRight {
   stroke: white;
 }
 
-.steps {
+.progress-step.completed svg path{
+  stroke: #FF9704;
+}
+
+.progress-step.completed > div > div{
+  border: 1px solid #FF9704;
+}
+
+.step {
   display: none;
 }
 
-.steps.active {
+.step.active {
   display: block;
 }
 
@@ -5288,6 +5296,10 @@ html[dir="rtl"] .data_imagesContLeftRight {
     grid-column: span 8 / span 8;
   }
 
+  .sm\:col-span-6 {
+    grid-column: span 6 / span 6;
+  }
+
   .sm\:my-0 {
     margin-top: 0px;
     margin-bottom: 0px;
@@ -5418,6 +5430,10 @@ html[dir="rtl"] .data_imagesContLeftRight {
     display: block;
   }
 
+  .sm\:inline-block {
+    display: inline-block;
+  }
+
   .sm\:flex {
     display: flex;
   }
@@ -5494,6 +5510,10 @@ html[dir="rtl"] .data_imagesContLeftRight {
     height: auto;
   }
 
+  .sm\:h-\[67px\] {
+    height: 67px;
+  }
+
   .sm\:w-5\/6 {
     width: 83.333333%;
   }
@@ -5536,6 +5556,14 @@ html[dir="rtl"] .data_imagesContLeftRight {
 
   .sm\:w-auto {
     width: auto;
+  }
+
+  .sm\:w-\[67px\] {
+    width: 67px;
+  }
+
+  .sm\:w-10 {
+    width: 2.5rem;
   }
 
   .sm\:grid-cols-2 {
@@ -5807,6 +5835,10 @@ html[dir="rtl"] .data_imagesContLeftRight {
   .sm\:text-xl {
     font-size: 1.25rem;
     line-height: 1.75rem;
+  }
+
+  .sm\:text-\[22px\] {
+    font-size: 22px;
   }
 
   .sm\:leading-6 {
@@ -6081,6 +6113,10 @@ html[dir="rtl"] .data_imagesContLeftRight {
     display: block;
   }
 
+  .md\:inline-block {
+    display: inline-block;
+  }
+
   .md\:hidden {
     display: none;
   }
@@ -6111,6 +6147,10 @@ html[dir="rtl"] .data_imagesContLeftRight {
 
   .md\:grid-cols-2 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .md\:grid-cols-3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
   .md\:flex-row {

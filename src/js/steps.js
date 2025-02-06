@@ -15,6 +15,15 @@ function updateProgress() {
     });
 }
 
+// تغییر مراحل
+function navigateToStep(newStep) {
+    document.querySelectorAll('.step').forEach(step => {
+        step.classList.remove('active');
+    });
+    document.querySelector(`[data-step="${newStep}"]`).classList.add('active');
+    updateProgress();
+}
+
 // اعتبارسنجی مراحل
 function validateStep(stepElement) {
     if (currentStep === 3) {
@@ -68,7 +77,7 @@ function saveStepData(stepElement) {
 
 // مدیریت کلیک دکمه‌ها
 document.addEventListener('click', function(e) {
-    const stepElement = e.target.closest('.steps');
+    const stepElement = e.target.closest('.step');
     
     if (e.target.classList.contains('next-btn')) {
         if (!validateStep(stepElement)) return;
@@ -90,14 +99,6 @@ document.addEventListener('click', function(e) {
     }
 });
 
-// تغییر مراحل
-function navigateToStep(newStep) {
-    document.querySelectorAll('.steps').forEach(step => {
-        step.classList.remove('active');
-    });
-    document.querySelector(`[data-step="${newStep}"]`).classList.add('active');
-    updateProgress();
-}
 
 // نمایش نتایج
 function showResults() {
