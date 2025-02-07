@@ -1156,6 +1156,10 @@ video {
   margin-top: 0.5rem;
 }
 
+.mt-2\.5 {
+  margin-top: 0.625rem;
+}
+
 .mt-20 {
   margin-top: 5rem;
 }
@@ -1615,6 +1619,10 @@ video {
 
 .h-\[94px\] {
   height: 94px;
+}
+
+.h-\[97px\] {
+  height: 97px;
 }
 
 .h-\[98px\] {
@@ -2359,6 +2367,11 @@ video {
   border-color: rgb(237 237 237 / var(--tw-border-opacity));
 }
 
+.border-\[\#F1F1F1\] {
+  --tw-border-opacity: 1;
+  border-color: rgb(241 241 241 / var(--tw-border-opacity));
+}
+
 .border-\[\#F4F4F4\] {
   --tw-border-opacity: 1;
   border-color: rgb(244 244 244 / var(--tw-border-opacity));
@@ -2758,12 +2771,26 @@ video {
   padding-bottom: 21px;
 }
 
+.px-\[26px\] {
+  padding-left: 26px;
+  padding-right: 26px;
+}
+
+.py-\[30px\] {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
 .pb-0 {
   padding-bottom: 0px;
 }
 
 .pb-11 {
   padding-bottom: 2.75rem;
+}
+
+.pb-12 {
+  padding-bottom: 3rem;
 }
 
 .pb-14 {
@@ -4156,6 +4183,21 @@ input[type="number"] {
   background-color: #FF9704;
 }
 
+/* dashboard */
+
+.dashboardUl li a svg path{
+  transition: all .4s;
+}
+
+.dashboardUl li a:hover,.dashboardUl li a.active{
+  background-color: #FFF6EB;
+  color: #FF9704;
+}
+
+.dashboardUl li a:hover svg path,.dashboardUl li a.active svg path{
+  stroke: #FF9704;
+}
+
 /* swiper */
 
 .banner .swiper-pagination-bullet{
@@ -4231,10 +4273,12 @@ html[dir="rtl"] .data_imagesContLeftRight {
 
 .progress-step.active svg path{
   stroke: white;
+  fill: transparent;
 }
 
 .progress-step.completed svg path{
   stroke: #FF9704;
+  fill: transparent !important;
 }
 
 .progress-step.completed > div > div{
@@ -5503,10 +5547,6 @@ html[dir="rtl"] .data_imagesContLeftRight {
 
   .sm\:h-auto {
     height: auto;
-  }
-
-  .sm\:w-10 {
-    width: 2.5rem;
   }
 
   .sm\:w-5\/6 {

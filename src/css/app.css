@@ -589,6 +589,17 @@ input[type="number"] {
   opacity: 1;
   background-color: #FF9704;
 }
+/* dashboard */
+.dashboardUl li a svg path{
+  transition: all .4s;
+}
+.dashboardUl li a:hover,.dashboardUl li a.active{
+  background-color: #FFF6EB;
+  color: #FF9704;
+}
+.dashboardUl li a:hover svg path,.dashboardUl li a.active svg path{
+  stroke: #FF9704;
+}
 /* swiper */
 .banner .swiper-pagination-bullet{
   width: 9px!important;
@@ -648,9 +659,11 @@ html[dir="rtl"] .data_imagesContLeftRight {
 }
 .progress-step.active svg path{
   stroke: white;
+  fill: transparent;
 }
 .progress-step.completed svg path{
   stroke: #FF9704;
+  fill: transparent !important;
 }
 .progress-step.completed > div > div{
   border: 1px solid #FF9704;
