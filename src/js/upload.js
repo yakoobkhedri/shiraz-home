@@ -6,6 +6,8 @@ document.getElementById('upload-button').addEventListener('change', function(eve
 
     for (let i = 0; i < files.length; i++) {
         const file = files[i];
+        if (!file.type.startsWith('image/')) continue; // فقط تصاویر مجاز
+
         const reader = new FileReader();
 
         reader.onload = function(e) {
@@ -14,8 +16,12 @@ document.getElementById('upload-button').addEventListener('change', function(eve
             container.classList.add('image-container');
 
             // ایجاد عنصر img برای نمایش عکس
-            const img = document.createElement('img');
+            const img = new Image();
+            img.onload = function() {
+                console.log('تصویر بارگذاری شد!');
+            };
             img.src = e.target.result;
+            img.style.maxWidth = '100%'; // تنظیم ابعاد برای موبایل
 
             // ایجاد عنصر span برای نمایش شماره عکس
             const span = document.createElement('span');
