@@ -6,7 +6,10 @@ document.getElementById('upload-button').addEventListener('change', function(eve
 
     for (let i = 0; i < files.length; i++) {
         const file = files[i];
-        if (!file.type.startsWith('image/')) continue; // فقط تصاویر مجاز
+        if (!file.type.startsWith('image/')) {
+            console.error('فایل انتخاب شده تصویر نیست!');
+            continue;
+        }
 
         const reader = new FileReader();
 
