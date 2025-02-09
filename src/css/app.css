@@ -590,6 +590,12 @@ input[type="number"] {
   opacity: 1;
   background-color: #FF9704;
 }
+.dateCheckbox.active{
+  background-color: #160C59;
+}
+.dateCheckbox.active p{
+  color: white;
+}
 /* dashboard */
 .dashboardUl li a svg path{
   transition: all .4s;

@@ -1633,6 +1633,10 @@ video {
   height: 70px;
 }
 
+.h-\[71px\] {
+  height: 71px;
+}
+
 .h-\[82\%\] {
   height: 82%;
 }
@@ -1655,14 +1659,6 @@ video {
 
 .h-full {
   height: 100%;
-}
-
-.h-\[69px\] {
-  height: 69px;
-}
-
-.h-\[71px\] {
-  height: 71px;
 }
 
 .max-h-\[200px\] {
@@ -3302,10 +3298,6 @@ video {
   outline-offset: 2px;
 }
 
-.outline {
-  outline-style: solid;
-}
-
 .blur {
   --tw-blur: blur(8px);
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
@@ -4282,6 +4274,14 @@ input[type="number"] {
 .checkbox.active {
   opacity: 1;
   background-color: #FF9704;
+}
+
+.dateCheckbox.active{
+  background-color: #160C59;
+}
+
+.dateCheckbox.active p{
+  color: white;
 }
 
 /* dashboard */

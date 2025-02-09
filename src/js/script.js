@@ -276,6 +276,7 @@ acordionBtn3.forEach((item) => {
 
 let checkbox = Array.from(document.getElementsByClassName('checkbox'));
 let checkboxRow = Array.from(document.getElementsByClassName('checkboxRow'));
+let dateCheckbox = Array.from(document.getElementsByClassName('dateCheckbox'));
 
 document.querySelectorAll('input[type="checkbox"]').forEach(checkbox => {
   checkbox.checked = false; // غیرفعال کردن حالت checked
@@ -286,7 +287,11 @@ checkboxRow.forEach((item) => {
         item.querySelector('.checkbox').classList.toggle('active');
     })
 })
-
+dateCheckbox.forEach((item) => {
+  item.addEventListener('click', function () {
+    item.classList.toggle('active');
+  })
+})
    // تنظیم مقدار ۰ برای تمام فیلدهای عددی
    document.addEventListener('DOMContentLoaded', function() {
     const numberInputs = document.querySelectorAll('input[type="number"]');
@@ -294,7 +299,7 @@ checkboxRow.forEach((item) => {
     numberInputs.forEach(input => {
         input.value = '0';
     });
-    otpInput.forEach(input => {
-      input.value = '';
+    otpInput.forEach(input2 => {
+      input2.value = '';
   });
 });
