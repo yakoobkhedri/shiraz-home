@@ -407,12 +407,13 @@ input[type="number"] {
   border: 1.4px solid #EEF1FA;
 }
 .otpInput:focus{
-  border: 1.4px solid #7E5EFF;
-  color: #7E5EFF;
+  border: 1.4px solid #160C59;
+  color: #160C59;
 }
 .otpInput[disabled=""]{
-  border: 1.4px solid #7E5EFF;
-  color: #7E5EFF;
+  border: 1.4px solid #160C59;
+  color: #160C59;
+  background-color: #fbfbfb;
 }
 /* tab */
 .tabBox a img{

@@ -290,7 +290,11 @@ checkboxRow.forEach((item) => {
    // تنظیم مقدار ۰ برای تمام فیلدهای عددی
    document.addEventListener('DOMContentLoaded', function() {
     const numberInputs = document.querySelectorAll('input[type="number"]');
+    const otpInput = Array.from(document.getElementsByClassName('otpInput'));
     numberInputs.forEach(input => {
         input.value = '0';
     });
+    otpInput.forEach(input => {
+      input.value = '';
+  });
 });

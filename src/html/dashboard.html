@@ -11,6 +11,310 @@
 
 <body class="max-w-[1536px] w-full mx-auto relative">
 
+  <!-- login modal && edit profile modal -->
+  <div class="modal">
+    <div style="visibility: hidden; opacity: 0;" data-button="editProfile-modal"
+      class="modal-container overflow-auto bg-black/60 backdrop-blur-sm fixed inset-0 z-50 transition-all flex justify-center items-center px-4 sm:px-7">
+      <form id="room-form"
+        class="modal-content bg-white max-w-[526px] overflow-hidden relative w-full rounded-[27px] shadow-8">
+        <img alt="shape" src="../img/Rectangle 165.png" class="absolute top-0 inset-x-0 h-[109px] w-full">
+        <div class="p-4 relative">
+          <div class="flex items-center justify-between mb-5 relative mt-4">
+            <div class="font-bold px-4 flex items-center gap-2 text-white">
+              <p>ویرایش پروفایل</p>
+            </div>
+            <!-- close modal -->
+            <svg class="cursor-pointer close-button" width="24" height="24" viewBox="0 0 24 24" fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M13.41 11.9999L17.71 7.70994C17.8983 7.52164 18.0041 7.26624 18.0041 6.99994C18.0041 6.73364 17.8983 6.47825 17.71 6.28994C17.5217 6.10164 17.2663 5.99585 17 5.99585C16.7337 5.99585 16.4783 6.10164 16.29 6.28994L12 10.5899L7.71 6.28994C7.5217 6.10164 7.2663 5.99585 7 5.99585C6.7337 5.99585 6.4783 6.10164 6.29 6.28994C6.1017 6.47825 5.99591 6.73364 5.99591 6.99994C5.99591 7.26624 6.1017 7.52164 6.29 7.70994L10.59 11.9999L6.29 16.2899C6.19627 16.3829 6.12188 16.4935 6.07111 16.6154C6.02034 16.7372 5.9942 16.8679 5.9942 16.9999C5.9942 17.132 6.02034 17.2627 6.07111 17.3845C6.12188 17.5064 6.19627 17.617 6.29 17.7099C6.38296 17.8037 6.49356 17.8781 6.61542 17.9288C6.73728 17.9796 6.86799 18.0057 7 18.0057C7.13201 18.0057 7.26272 17.9796 7.38458 17.9288C7.50644 17.8781 7.61704 17.8037 7.71 17.7099L12 13.4099L16.29 17.7099C16.383 17.8037 16.4936 17.8781 16.6154 17.9288C16.7373 17.9796 16.868 18.0057 17 18.0057C17.132 18.0057 17.2627 17.9796 17.3846 17.9288C17.5064 17.8781 17.617 17.8037 17.71 17.7099C17.8037 17.617 17.8781 17.5064 17.9289 17.3845C17.9797 17.2627 18.0058 17.132 18.0058 16.9999C18.0058 16.8679 17.9797 16.7372 17.9289 16.6154C17.8781 16.4935 17.8037 16.3829 17.71 16.2899L13.41 11.9999Z"
+                fill="white"></path>
+            </svg>
+          </div>
+          <!-- form -->
+          <div class="p-4 mt-[4.5rem] relative grid grid-cols-2 gap-x-5 gap-y-8">
+            <div class="relative">
+              <label class="text-dark font-medium text-sm absolute bg-white rtl:right-5 ltr:left-5 -top-4 py-1 px-5">تخت
+                یک نفره</label>
+              <div class="border border-[#EDEDED] rounded-[10px] px-3 py-4 flex items-center gap-4">
+                <div class="bg-[#FFF6EA] rounded-[10px] p-3 flex items-center justify-between gap-5">
+                  <button
+                    class="decrease-btn flex-center transition hover:bg-primary group rounded-md flex-shrink-0 border-[1.5px] border-primary w-6 h-6">
+                    <svg width="10" height="2" viewBox="0 0 10 2" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path class="transition group-hover:stroke-white" d="M1 1H9" stroke="#FF9704" stroke-width="1.5"
+                        stroke-linecap="round" stroke-linejoin="round"></path>
+                    </svg>
+                  </button>
+                  <input id="number4" min="0" type="number" value="0"
+                    class="text-dark w-full font-faNumRegular text-center flex-grow bg-transparent border-0 outline-none">
+                  <button
+                    class="increase-btn flex-center hover:text-white text-primary transition hover:bg-primary group rounded-md flex-shrink-0 border-[1.5px] border-primary w-6 h-6">
+                    +
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="relative">
+              <label class="text-dark font-medium text-sm absolute bg-white rtl:right-5 ltr:left-5 -top-4 py-1 px-5">تخت
+                دو نفره</label>
+              <div class="border border-[#EDEDED] rounded-[10px] px-3 py-4 flex items-center gap-4">
+                <div class="bg-[#FFF6EA] rounded-[10px] p-3 flex items-center justify-between gap-5">
+                  <button
+                    class="decrease-btn flex-center transition hover:bg-primary group rounded-md flex-shrink-0 border-[1.5px] border-primary w-6 h-6">
+                    <svg width="10" height="2" viewBox="0 0 10 2" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path class="transition group-hover:stroke-white" d="M1 1H9" stroke="#FF9704" stroke-width="1.5"
+                        stroke-linecap="round" stroke-linejoin="round"></path>
+                    </svg>
+                  </button>
+                  <input id="number5" min="0" type="number" value="0"
+                    class="text-dark w-full font-faNumRegular text-center flex-grow bg-transparent border-0 outline-none">
+                  <button
+                    class="increase-btn flex-center hover:text-white text-primary transition hover:bg-primary group rounded-md flex-shrink-0 border-[1.5px] border-primary w-6 h-6">
+                    +
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="relative">
+              <label class="text-dark font-medium text-sm absolute bg-white rtl:right-5 ltr:left-5 -top-4 py-1 px-5">تخت
+                دو طبقه</label>
+              <div class="border border-[#EDEDED] rounded-[10px] px-3 py-4 flex items-center gap-4">
+                <div class="bg-[#FFF6EA] rounded-[10px] p-3 flex items-center justify-between gap-5">
+                  <button
+                    class="decrease-btn flex-center transition hover:bg-primary group rounded-md flex-shrink-0 border-[1.5px] border-primary w-6 h-6">
+                    <svg width="10" height="2" viewBox="0 0 10 2" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path class="transition group-hover:stroke-white" d="M1 1H9" stroke="#FF9704" stroke-width="1.5"
+                        stroke-linecap="round" stroke-linejoin="round"></path>
+                    </svg>
+                  </button>
+                  <input id="number6" min="0" type="number" value="0"
+                    class="text-dark w-full font-faNumRegular text-center flex-grow bg-transparent border-0 outline-none">
+                  <button
+                    class="increase-btn flex-center hover:text-white text-primary transition hover:bg-primary group rounded-md flex-shrink-0 border-[1.5px] border-primary w-6 h-6">
+                    +
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="relative">
+              <label
+                class="text-dark font-medium text-sm absolute bg-white rtl:right-5 ltr:left-5 -top-4 py-1 px-5">سیستم
+                گرمایشی</label>
+              <div class="border border-[#EDEDED] rounded-[10px] px-3 py-4 flex items-center gap-4">
+                <select id="select3" class="text-sm font-medium text-dark flex-grow w-full bg-transparent h-9">
+                  <option>داشته باشد</option>
+                  <option>نداشته باشد</option>
+                </select>
+              </div>
+            </div>
+            <div class="relative">
+              <label
+                class="text-dark font-medium text-sm absolute bg-white rtl:right-5 ltr:left-5 -top-4 py-1 px-5">سیستم
+                سرمایشی</label>
+              <div class="border border-[#EDEDED] rounded-[10px] px-3 py-4 flex items-center gap-4">
+                <select id="select4" class="text-sm font-medium text-dark flex-grow w-full bg-transparent h-9">
+                  <option>داشته باشد</option>
+                  <option>نداشته باشد</option>
+                </select>
+              </div>
+            </div>
+            <div class="relative">
+              <label class="text-dark font-medium text-lg absolute bg-white rtl:right-5 ltr:left-5 -top-5 py-1 px-5">نام
+                میزبان</label>
+              <input class="border border-[#EDEDED] rounded-[10px] w-full h-[71px] bg-white px-3 outline-none">
+            </div>
+          </div>
+          <button type="submit"
+            class="bg-primary mt-4 rtl:mr-auto ltr:ml-auto text-white rounded-[20px] py-1 w-[73px] flex-center font-medium btnHover">ثبت</button>
+        </div>
+      </form>
+    </div>
+    <div style="visibility: hidden; opacity: 0;" data-button="editInformation-modal"
+      class="modal-container overflow-auto bg-black/60 backdrop-blur-sm fixed inset-0 z-50 transition-all flex justify-center items-center px-4 sm:px-7">
+      <form id="room-form"
+        class="modal-content bg-white max-w-[526px] overflow-hidden relative w-full rounded-[27px] shadow-8">
+        <img alt="shape" src="../img/Rectangle 165.png" class="absolute top-0 inset-x-0 h-[109px] w-full">
+        <div class="p-4 relative">
+          <div class="flex items-center justify-between mb-5 relative mt-4">
+            <div class="font-bold px-4 flex items-center gap-2 text-white">
+              <p>ویرایش اطلاعات</p>
+            </div>
+            <!-- close modal -->
+            <svg class="cursor-pointer close-button" width="24" height="24" viewBox="0 0 24 24" fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M13.41 11.9999L17.71 7.70994C17.8983 7.52164 18.0041 7.26624 18.0041 6.99994C18.0041 6.73364 17.8983 6.47825 17.71 6.28994C17.5217 6.10164 17.2663 5.99585 17 5.99585C16.7337 5.99585 16.4783 6.10164 16.29 6.28994L12 10.5899L7.71 6.28994C7.5217 6.10164 7.2663 5.99585 7 5.99585C6.7337 5.99585 6.4783 6.10164 6.29 6.28994C6.1017 6.47825 5.99591 6.73364 5.99591 6.99994C5.99591 7.26624 6.1017 7.52164 6.29 7.70994L10.59 11.9999L6.29 16.2899C6.19627 16.3829 6.12188 16.4935 6.07111 16.6154C6.02034 16.7372 5.9942 16.8679 5.9942 16.9999C5.9942 17.132 6.02034 17.2627 6.07111 17.3845C6.12188 17.5064 6.19627 17.617 6.29 17.7099C6.38296 17.8037 6.49356 17.8781 6.61542 17.9288C6.73728 17.9796 6.86799 18.0057 7 18.0057C7.13201 18.0057 7.26272 17.9796 7.38458 17.9288C7.50644 17.8781 7.61704 17.8037 7.71 17.7099L12 13.4099L16.29 17.7099C16.383 17.8037 16.4936 17.8781 16.6154 17.9288C16.7373 17.9796 16.868 18.0057 17 18.0057C17.132 18.0057 17.2627 17.9796 17.3846 17.9288C17.5064 17.8781 17.617 17.8037 17.71 17.7099C17.8037 17.617 17.8781 17.5064 17.9289 17.3845C17.9797 17.2627 18.0058 17.132 18.0058 16.9999C18.0058 16.8679 17.9797 16.7372 17.9289 16.6154C17.8781 16.4935 17.8037 16.3829 17.71 16.2899L13.41 11.9999Z"
+                fill="white"></path>
+            </svg>
+          </div>
+          <!-- form -->
+          <div class="p-4 mt-[4.5rem] relative grid grid-cols-2 gap-x-5 gap-y-8">
+            <div class="relative">
+              <label class="text-dark font-medium text-sm absolute bg-white rtl:right-5 ltr:left-5 -top-4 py-1 px-5">تخت
+                یک نفره</label>
+              <div class="border border-[#EDEDED] rounded-[10px] px-3 py-4 flex items-center gap-4">
+                <div class="bg-[#FFF6EA] rounded-[10px] p-3 flex items-center justify-between gap-5">
+                  <button
+                    class="decrease-btn flex-center transition hover:bg-primary group rounded-md flex-shrink-0 border-[1.5px] border-primary w-6 h-6">
+                    <svg width="10" height="2" viewBox="0 0 10 2" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path class="transition group-hover:stroke-white" d="M1 1H9" stroke="#FF9704" stroke-width="1.5"
+                        stroke-linecap="round" stroke-linejoin="round"></path>
+                    </svg>
+                  </button>
+                  <input id="number4" min="0" type="number" value="0"
+                    class="text-dark w-full font-faNumRegular text-center flex-grow bg-transparent border-0 outline-none">
+                  <button
+                    class="increase-btn flex-center hover:text-white text-primary transition hover:bg-primary group rounded-md flex-shrink-0 border-[1.5px] border-primary w-6 h-6">
+                    +
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="relative">
+              <label class="text-dark font-medium text-sm absolute bg-white rtl:right-5 ltr:left-5 -top-4 py-1 px-5">تخت
+                دو نفره</label>
+              <div class="border border-[#EDEDED] rounded-[10px] px-3 py-4 flex items-center gap-4">
+                <div class="bg-[#FFF6EA] rounded-[10px] p-3 flex items-center justify-between gap-5">
+                  <button
+                    class="decrease-btn flex-center transition hover:bg-primary group rounded-md flex-shrink-0 border-[1.5px] border-primary w-6 h-6">
+                    <svg width="10" height="2" viewBox="0 0 10 2" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path class="transition group-hover:stroke-white" d="M1 1H9" stroke="#FF9704" stroke-width="1.5"
+                        stroke-linecap="round" stroke-linejoin="round"></path>
+                    </svg>
+                  </button>
+                  <input id="number5" min="0" type="number" value="0"
+                    class="text-dark w-full font-faNumRegular text-center flex-grow bg-transparent border-0 outline-none">
+                  <button
+                    class="increase-btn flex-center hover:text-white text-primary transition hover:bg-primary group rounded-md flex-shrink-0 border-[1.5px] border-primary w-6 h-6">
+                    +
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="relative">
+              <label class="text-dark font-medium text-sm absolute bg-white rtl:right-5 ltr:left-5 -top-4 py-1 px-5">تخت
+                دو طبقه</label>
+              <div class="border border-[#EDEDED] rounded-[10px] px-3 py-4 flex items-center gap-4">
+                <div class="bg-[#FFF6EA] rounded-[10px] p-3 flex items-center justify-between gap-5">
+                  <button
+                    class="decrease-btn flex-center transition hover:bg-primary group rounded-md flex-shrink-0 border-[1.5px] border-primary w-6 h-6">
+                    <svg width="10" height="2" viewBox="0 0 10 2" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path class="transition group-hover:stroke-white" d="M1 1H9" stroke="#FF9704" stroke-width="1.5"
+                        stroke-linecap="round" stroke-linejoin="round"></path>
+                    </svg>
+                  </button>
+                  <input id="number6" min="0" type="number" value="0"
+                    class="text-dark w-full font-faNumRegular text-center flex-grow bg-transparent border-0 outline-none">
+                  <button
+                    class="increase-btn flex-center hover:text-white text-primary transition hover:bg-primary group rounded-md flex-shrink-0 border-[1.5px] border-primary w-6 h-6">
+                    +
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="relative">
+              <label
+                class="text-dark font-medium text-sm absolute bg-white rtl:right-5 ltr:left-5 -top-4 py-1 px-5">سیستم
+                گرمایشی</label>
+              <div class="border border-[#EDEDED] rounded-[10px] px-3 py-4 flex items-center gap-4">
+                <select id="select3" class="text-sm font-medium text-dark flex-grow w-full bg-transparent h-9">
+                  <option>داشته باشد</option>
+                  <option>نداشته باشد</option>
+                </select>
+              </div>
+            </div>
+            <div class="relative">
+              <label
+                class="text-dark font-medium text-sm absolute bg-white rtl:right-5 ltr:left-5 -top-4 py-1 px-5">سیستم
+                سرمایشی</label>
+              <div class="border border-[#EDEDED] rounded-[10px] px-3 py-4 flex items-center gap-4">
+                <select id="select4" class="text-sm font-medium text-dark flex-grow w-full bg-transparent h-9">
+                  <option>داشته باشد</option>
+                  <option>نداشته باشد</option>
+                </select>
+              </div>
+            </div>
+            <div class="relative">
+              <label class="text-dark font-medium text-lg absolute bg-white rtl:right-5 ltr:left-5 -top-5 py-1 px-5">نام
+                میزبان</label>
+              <input class="border border-[#EDEDED] rounded-[10px] w-full h-[71px] bg-white px-3 outline-none">
+            </div>
+          </div>
+          <button type="submit"
+            class="bg-primary mt-4 rtl:mr-auto ltr:ml-auto text-white rounded-[20px] py-1 w-[73px] flex-center font-medium btnHover">ثبت</button>
+        </div>
+      </form>
+    </div>
+    <div style="visibility: hidden; opacity: 0;" data-button="login-modal"
+      class="modal-container overflow-auto bg-black/60 backdrop-blur-sm fixed inset-0 z-50 transition-all flex justify-center items-center px-4 sm:px-7">
+      <form id="loginForm"
+        class="modal-content bg-white max-w-[526px] overflow-hidden relative w-full rounded-[27px] shadow-8">
+        <img alt="shape" src="../img/Rectangle 165.png" class="absolute top-0 inset-x-0 h-[109px] w-full">
+        <div class="p-4 relative">
+          <div class="flex items-center justify-between mb-5 relative mt-4">
+            <div class="font-bold px-4 flex items-center gap-2 text-white">
+              <p>ورود/ثبت نام</p>
+            </div>
+            <!-- close modal -->
+            <svg class="cursor-pointer close-button" width="24" height="24" viewBox="0 0 24 24" fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M13.41 11.9999L17.71 7.70994C17.8983 7.52164 18.0041 7.26624 18.0041 6.99994C18.0041 6.73364 17.8983 6.47825 17.71 6.28994C17.5217 6.10164 17.2663 5.99585 17 5.99585C16.7337 5.99585 16.4783 6.10164 16.29 6.28994L12 10.5899L7.71 6.28994C7.5217 6.10164 7.2663 5.99585 7 5.99585C6.7337 5.99585 6.4783 6.10164 6.29 6.28994C6.1017 6.47825 5.99591 6.73364 5.99591 6.99994C5.99591 7.26624 6.1017 7.52164 6.29 7.70994L10.59 11.9999L6.29 16.2899C6.19627 16.3829 6.12188 16.4935 6.07111 16.6154C6.02034 16.7372 5.9942 16.8679 5.9942 16.9999C5.9942 17.132 6.02034 17.2627 6.07111 17.3845C6.12188 17.5064 6.19627 17.617 6.29 17.7099C6.38296 17.8037 6.49356 17.8781 6.61542 17.9288C6.73728 17.9796 6.86799 18.0057 7 18.0057C7.13201 18.0057 7.26272 17.9796 7.38458 17.9288C7.50644 17.8781 7.61704 17.8037 7.71 17.7099L12 13.4099L16.29 17.7099C16.383 17.8037 16.4936 17.8781 16.6154 17.9288C16.7373 17.9796 16.868 18.0057 17 18.0057C17.132 18.0057 17.2627 17.9796 17.3846 17.9288C17.5064 17.8781 17.617 17.8037 17.71 17.7099C17.8037 17.617 17.8781 17.5064 17.9289 17.3845C17.9797 17.2627 18.0058 17.132 18.0058 16.9999C18.0058 16.8679 17.9797 16.7372 17.9289 16.6154C17.8781 16.4935 17.8037 16.3829 17.71 16.2899L13.41 11.9999Z"
+                fill="white"></path>
+            </svg>
+          </div>
+          <!-- form -->
+          <div class="mt-[4rem] relative">
+            <div class="rounded-[10px] border border-[#EEF1FA] h-16 px-3 flex items-center justify-between gap-2">
+              <div class="flex items-center gap-3 flex-grow">
+                <img alt="icon" src="../img/svg/mobile.svg" class="flex-shrink-0">
+                <input type="tel" class="bg-transparent border-0 w-full flex-grow outline-none">
+              </div>
+              <button class="flex-shrink-0 text-xs sm:text-sm text-[#160C59] font-bold">دریافت کد تایید</button>
+            </div>
+            <div class="otpContainer mt-9 flex-center font-faNumBold gap-3 sm:gap-6" dir="ltr">
+              <input type="number" value="" maxlength="1"
+                class="block w-[53px] h-[53px] rounded-[10px] border border-[#EEF1FA] text-center otpInput bg-white outline-none">
+              <input type="number" value="" maxlength="1" disabled=""
+                class="block w-[53px] h-[53px] rounded-[10px] border border-[#EEF1FA] text-center otpInput bg-white outline-none">
+              <input type="number" value="" maxlength="1" disabled=""
+                class="block w-[53px] h-[53px] rounded-[10px] border border-[#EEF1FA] text-center otpInput bg-white outline-none">
+              <input type="number" value="" maxlength="1" disabled=""
+                class="block w-[53px] h-[53px] rounded-[10px] border border-[#EEF1FA] text-center otpInput bg-white outline-none">
+            </div>
+            <input type="hidden" id="otpHiddenInput">
+            <div class="flex items-center flex-col sm:flex-row gap-3 flex-grow mt-9">
+              <div
+                class="bg-white border border-[#EEF1FA] px-3 text-[#393939] flex-shrink-0 rounded-[10px] flex-center h-[65px] font-faNumBold text-2xl">
+                856985
+              </div>
+              <div
+                class="rounded-[10px] w-full px-[14px] flex-between gap-3 bg-white border border-[#EEF1FA] text-sm font-faNumBold h-[65px]">
+                <input placeholder="کد امنیتی" class="flex-grow bg-transparent outline-none w-full">
+                <img alt="icon" src="../img/svg/shield-tick.svg" class="flex-shrink-0">
+              </div>
+            </div>
+            <label class="flex items-center gap-2 cursor-pointer mt-5">
+              <div class="inline-flex items-center gap-2">
+                <label class="relative flex items-center p-1 rounded-full cursor-pointer" htmlfor="black">
+                  <input name="type" type="checkbox"
+                    class="before:content[''] bg-white border border-[#EEF1FA] peer relative h-6 w-6 cursor-pointer appearance-none overflow-hidden rounded-[5px] text-[#ECECEC] transition-all before:absolute before:top-2/4 before:left-2/4 before:block before:h-12 before:w-12 before:-translate-y-2/4 before:-translate-x-2/4 before:rounded-full before:bg-[#ECECEC] before:opacity-0 before:transition-opacity checked:border-orange checked:before:bg-orange hover:before:opacity-10"
+                    id="black">
+                  <span
+                    class="absolute text-primary transition-opacity opacity-0 pointer-events-none rounded-[5px] top-2/4 left-2/4 -translate-y-2/4 -translate-x-2/4 peer-checked:opacity-100">
+                    <div class="w-6 h-6 rounded-[5px] bg-primary"></div>
+                  </span>
+                </label>
+                <p class="text-sm font-semibold text-primary">
+                  مرا به یاد داشته باش</p>
+              </div>
+            </label>
+            <button type="submit"
+              class="rounded-[10px] btnHover w-full text-xl sm:text-2xl h-[51px] sm:h-[65px] bg-primary font-extrabold mt-5 sm:mt-8 flex-center text-white">ورود</button>
+          </div>
+      </form>
+    </div>
+  </div>
 
   <!-- header -->
   <header class="relative">
@@ -197,7 +501,7 @@
             <li><a class="text-white transition hover:text-primary">پیشنهادهای ویژه</a></li>
             <li><a class="text-white transition hover:text-primary">میزبان شوید</a></li>
           </ul>
-          <a
+          <a id="login-modal"
             class="rounded-[10px] bg-primary hover:bg-[#160C59] text-xs sm:text-base flex-center text-white font-medium gap-2 py-[10px] px-[18px]">
             <img src="../img/svg/frame.svg">
             <p>ثبت نام/ورود</p>
@@ -234,10 +538,11 @@
               <img alt="img" src="../img/Rectangle 588.png" class="absolute top-0 inset-x-0 w-full h-[97px]">
               <div class="relative">
                 <div class="mt-9 w-20 h-20 rounded-full bg-primary flex-center mx-auto">
-                   <img alt="icon" src="../img/svg/profile.svg">
+                  <img alt="icon" src="../img/svg/profile.svg">
                 </div>
                 <p class="mt-2.5 text-lg text-dark text-center">نگار امینی</p>
-                <a class="flex items-center justify-center gap-1 text-xs font-semibold text-[#B4B4B4] mt-3 border-b border-[#F1F1F1] pb-4">
+                <a id="editProfile-modal"
+                  class="flex items-center justify-center gap-1 text-xs font-semibold text-[#B4B4B4] mt-3 border-b border-[#F1F1F1] pb-4">
                   <img alt="icon" src="../img/svg/edit-2.svg" class="flex-shrink-0">
                   <p>ویرایش پروفایل</p>
                 </a>
@@ -245,55 +550,90 @@
               <ul class="text-sm font-semibold mt-4 dashboardUl">
                 <li>
                   <a class="flex items-center gap-4 rounded-[10px] py-4 px-2 mb-2 active">
-                    <svg class="flex-shrink-0" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M22 8.52V3.98C22 2.57 21.36 2 19.77 2H15.73C14.14 2 13.5 2.57 13.5 3.98V8.51C13.5 9.93 14.14 10.49 15.73 10.49H19.77C21.36 10.5 22 9.93 22 8.52Z" stroke="#292D32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                      <path d="M22 19.77V15.73C22 14.14 21.36 13.5 19.77 13.5H15.73C14.14 13.5 13.5 14.14 13.5 15.73V19.77C13.5 21.36 14.14 22 15.73 22H19.77C21.36 22 22 21.36 22 19.77Z" stroke="#292D32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                      <path d="M10.5 8.52V3.98C10.5 2.57 9.86 2 8.27 2H4.23C2.64 2 2 2.57 2 3.98V8.51C2 9.93 2.64 10.49 4.23 10.49H8.27C9.86 10.5 10.5 9.93 10.5 8.52Z" stroke="#292D32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                      <path d="M10.5 19.77V15.73C10.5 14.14 9.86 13.5 8.27 13.5H4.23C2.64 13.5 2 14.14 2 15.73V19.77C2 21.36 2.64 22 4.23 22H8.27C9.86 22 10.5 21.36 10.5 19.77Z" stroke="#292D32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    <svg class="flex-shrink-0" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M22 8.52V3.98C22 2.57 21.36 2 19.77 2H15.73C14.14 2 13.5 2.57 13.5 3.98V8.51C13.5 9.93 14.14 10.49 15.73 10.49H19.77C21.36 10.5 22 9.93 22 8.52Z"
+                        stroke="#292D32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                      <path
+                        d="M22 19.77V15.73C22 14.14 21.36 13.5 19.77 13.5H15.73C14.14 13.5 13.5 14.14 13.5 15.73V19.77C13.5 21.36 14.14 22 15.73 22H19.77C21.36 22 22 21.36 22 19.77Z"
+                        stroke="#292D32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                      <path
+                        d="M10.5 8.52V3.98C10.5 2.57 9.86 2 8.27 2H4.23C2.64 2 2 2.57 2 3.98V8.51C2 9.93 2.64 10.49 4.23 10.49H8.27C9.86 10.5 10.5 9.93 10.5 8.52Z"
+                        stroke="#292D32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                      <path
+                        d="M10.5 19.77V15.73C10.5 14.14 9.86 13.5 8.27 13.5H4.23C2.64 13.5 2 14.14 2 15.73V19.77C2 21.36 2.64 22 4.23 22H8.27C9.86 22 10.5 21.36 10.5 19.77Z"
+                        stroke="#292D32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
                     </svg>
                     <p>داشبورد</p>
                   </a>
                 </li>
                 <li>
                   <a class="flex items-center gap-4 rounded-[10px] py-4 px-2 mb-2">
-                    <svg  class="flex-shrink-0" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M1 22H23" stroke="#292D32" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-                      <path d="M19.7803 22.0101V17.55" stroke="#292D32" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-                      <path d="M19.7996 10.8901C18.5796 10.8901 17.5996 11.8701 17.5996 13.0901V15.3601C17.5996 16.5801 18.5796 17.5601 19.7996 17.5601C21.0196 17.5601 21.9996 16.5801 21.9996 15.3601V13.0901C21.9996 11.8701 21.0196 10.8901 19.7996 10.8901Z" stroke="#292D32" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-                      <path d="M2.09961 22V6.03003C2.09961 4.02003 3.09966 3.01001 5.08966 3.01001H11.3196C13.3096 3.01001 14.2996 4.02003 14.2996 6.03003V22" stroke="#292D32" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-                      <path d="M5.7998 8.25H10.7498" stroke="#292D32" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-                      <path d="M5.7998 12H10.7498" stroke="#292D32" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-                      <path d="M8.25 22V18.25" stroke="#292D32" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-                      </svg>
+                    <svg class="flex-shrink-0" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <path d="M1 22H23" stroke="#292D32" stroke-width="1.5" stroke-miterlimit="10"
+                        stroke-linecap="round" stroke-linejoin="round" />
+                      <path d="M19.7803 22.0101V17.55" stroke="#292D32" stroke-width="1.5" stroke-miterlimit="10"
+                        stroke-linecap="round" stroke-linejoin="round" />
+                      <path
+                        d="M19.7996 10.8901C18.5796 10.8901 17.5996 11.8701 17.5996 13.0901V15.3601C17.5996 16.5801 18.5796 17.5601 19.7996 17.5601C21.0196 17.5601 21.9996 16.5801 21.9996 15.3601V13.0901C21.9996 11.8701 21.0196 10.8901 19.7996 10.8901Z"
+                        stroke="#292D32" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                      <path
+                        d="M2.09961 22V6.03003C2.09961 4.02003 3.09966 3.01001 5.08966 3.01001H11.3196C13.3096 3.01001 14.2996 4.02003 14.2996 6.03003V22"
+                        stroke="#292D32" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                      <path d="M5.7998 8.25H10.7498" stroke="#292D32" stroke-width="1.5" stroke-miterlimit="10"
+                        stroke-linecap="round" stroke-linejoin="round" />
+                      <path d="M5.7998 12H10.7498" stroke="#292D32" stroke-width="1.5" stroke-miterlimit="10"
+                        stroke-linecap="round" stroke-linejoin="round" />
+                      <path d="M8.25 22V18.25" stroke="#292D32" stroke-width="1.5" stroke-miterlimit="10"
+                        stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
                     <p>اقامتگاه های من</p>
                   </a>
                 </li>
                 <li>
                   <a class="flex items-center gap-4 rounded-[10px] py-4 px-2 mb-2">
-                    <svg class="flex-shrink-0" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M12 22C17.5 22 22 17.5 22 12C22 6.5 17.5 2 12 2C6.5 2 2 6.5 2 12C2 17.5 6.5 22 12 22Z" stroke="#292D32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                      <path d="M7.75 11.9999L10.58 14.8299L16.25 9.16992" stroke="#292D32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                      </svg>
+                    <svg class="flex-shrink-0" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <path d="M12 22C17.5 22 22 17.5 22 12C22 6.5 17.5 2 12 2C6.5 2 2 6.5 2 12C2 17.5 6.5 22 12 22Z"
+                        stroke="#292D32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                      <path d="M7.75 11.9999L10.58 14.8299L16.25 9.16992" stroke="#292D32" stroke-width="1.5"
+                        stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
                     <p>رزروهای من</p>
                   </a>
                 </li>
                 <li>
                   <a class="flex items-center gap-4 rounded-[10px] py-4 px-2 mb-2">
-                    <svg class="flex-shrink-0" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M8.5 19H8C4 19 2 18 2 13V8C2 4 4 2 8 2H16C20 2 22 4 22 8V13C22 17 20 19 16 19H15.5C15.19 19 14.89 19.15 14.7 19.4L13.2 21.4C12.54 22.28 11.46 22.28 10.8 21.4L9.3 19.4C9.14 19.18 8.77 19 8.5 19Z" stroke="#292D32" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-                      <path d="M7 8H17" stroke="#292D32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                      <path d="M7 13H13" stroke="#292D32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                      </svg>
+                    <svg class="flex-shrink-0" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M8.5 19H8C4 19 2 18 2 13V8C2 4 4 2 8 2H16C20 2 22 4 22 8V13C22 17 20 19 16 19H15.5C15.19 19 14.89 19.15 14.7 19.4L13.2 21.4C12.54 22.28 11.46 22.28 10.8 21.4L9.3 19.4C9.14 19.18 8.77 19 8.5 19Z"
+                        stroke="#292D32" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                      <path d="M7 8H17" stroke="#292D32" stroke-width="1.5" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                      <path d="M7 13H13" stroke="#292D32" stroke-width="1.5" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                    </svg>
                     <p>نظرات</p>
                   </a>
                 </li>
                 <li>
                   <a class="flex items-center gap-4 rounded-[10px] py-4 px-2">
-                    <svg class="flex-shrink-0" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M8.90039 7.55999C9.21039 3.95999 11.0604 2.48999 15.1104 2.48999H15.2404C19.7104 2.48999 21.5004 4.27999 21.5004 8.74999V15.27C21.5004 19.74 19.7104 21.53 15.2404 21.53H15.1104C11.0904 21.53 9.24039 20.08 8.91039 16.54" stroke="#292D32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                      <path d="M2 12H14.88" stroke="#292D32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                      <path d="M12.6504 8.6499L16.0004 11.9999L12.6504 15.3499" stroke="#292D32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                      </svg>
+                    <svg class="flex-shrink-0" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M8.90039 7.55999C9.21039 3.95999 11.0604 2.48999 15.1104 2.48999H15.2404C19.7104 2.48999 21.5004 4.27999 21.5004 8.74999V15.27C21.5004 19.74 19.7104 21.53 15.2404 21.53H15.1104C11.0904 21.53 9.24039 20.08 8.91039 16.54"
+                        stroke="#292D32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                      <path d="M2 12H14.88" stroke="#292D32" stroke-width="1.5" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                      <path d="M12.6504 8.6499L16.0004 11.9999L12.6504 15.3499" stroke="#292D32" stroke-width="1.5"
+                        stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
                     <p>خروج</p>
                   </a>
                 </li>
@@ -306,65 +646,78 @@
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-y-8 md:gap-14">
                   <div class="flex items-center">
                     <div class="rtl:rounded-r-[5px] ltr:rounded-l-[5px] bg-primary w-1.5 h-4/6"></div>
-                   <div class="bg-[#FFF6EB] flex-grow rounded-[10px] flex items-center justify-between gap-2 p-[14px] font-semibold text-dark">
-                     <p>همه</p>
-                     <p class="text-lg">12</p>
-                   </div>
+                    <div
+                      class="bg-[#FFF6EB] flex-grow rounded-[10px] flex items-center justify-between gap-2 p-[14px] font-semibold text-dark">
+                      <p>همه</p>
+                      <p class="text-lg">12</p>
+                    </div>
                   </div>
                   <div class="flex items-center">
                     <div class="rtl:rounded-r-[5px] ltr:rounded-l-[5px] bg-primary w-1.5 h-4/6"></div>
-                   <div class="bg-[#FFF6EB] flex-grow rounded-[10px] flex items-center justify-between gap-2 p-[14px] font-semibold text-dark">
-                     <p>در انتظار تایید</p>
-                     <p class="text-lg">12</p>
-                   </div>
+                    <div
+                      class="bg-[#FFF6EB] flex-grow rounded-[10px] flex items-center justify-between gap-2 p-[14px] font-semibold text-dark">
+                      <p>در انتظار تایید</p>
+                      <p class="text-lg">12</p>
+                    </div>
                   </div>
                   <div class="flex items-center">
                     <div class="rtl:rounded-r-[5px] ltr:rounded-l-[5px] bg-primary w-1.5 h-4/6"></div>
-                   <div class="bg-[#FFF6EB] flex-grow rounded-[10px] flex items-center justify-between gap-2 p-[14px] font-semibold text-dark">
-                     <p>در انتظار  پرداخت</p>
-                     <p class="text-lg">12</p>
-                   </div>
+                    <div
+                      class="bg-[#FFF6EB] flex-grow rounded-[10px] flex items-center justify-between gap-2 p-[14px] font-semibold text-dark">
+                      <p>در انتظار پرداخت</p>
+                      <p class="text-lg">12</p>
+                    </div>
                   </div>
                 </div>
                 <div class="mt-12">
                   <div class="border border-[#F1F1F1] rounded-[10px] p-3 grid grid-cols-12 gap-y-8 sm:gap-10 mb-5">
                     <div class="md:col-span-9 col-span-12">
                       <div class="grid grid-cols-12 sm:gap-3 gap-y-5">
-                       <div class="sm:col-span-3 col-span-12">
-                         <img alt="img" src="../img/image (23).png" class="rounded-[10px] sm:h-[83px] w-full">
-                         <p class="text-[10px] mx-4 -mt-3 relative z-1 text-center font-bold text-white bg-primary rounded-[5px] px-1 py-[5px]">در انتظار تایید میزبان</p>
-                       </div>
-                       <div class="sm:col-span-9 col-span-12">
-                        <a class="text-dark font-bold">اقامتگاه "عمارت هفت رنگ" اتاق سنگ سیاه</a>
-                        <p class="font-semibold text-xs text-[#0222C3] mt-[5px]">کد اقامتگاه: <span class="font-faNumBold">۲۳۴</span></p>
-                        <div class="mt-3 flex items-center gap-4 flex-wrap text-dark">
-                          <div class="flex items-center gap-1">
-                            <img alt="icon" src="../img/svg/location.svg" class="flex-shrink-0 w-[18px] h-[18px]">
-                            <p class="text-sm font-medium">فرهنگشهر</p>
-                          </div>
-                          <div class="flex items-center gap-1">
-                            <img alt="icon" src="../img/svg/calendar (2).svg" class="flex-shrink-0 w-[18px] h-[18px]">
-                            <p class="text-sm font-medium">از<span class="font-faNumRegular"> 23 </span>تا <span class="font-faNumRegular"> 28 </span> بهمن</p>
-                          </div>
-                          <div class="flex items-center gap-1">
-                            <img alt="icon" src="../img/svg/money.svg" class="flex-shrink-0">
-                            <p class="text-sm font-medium">مبلغ کل: <span class="font-faNumBold">3/500/000</span> تومان</p>
+                        <div class="sm:col-span-3 col-span-12">
+                          <img alt="img" src="../img/image (23).png" class="rounded-[10px] sm:h-[83px] w-full">
+                          <p
+                            class="text-[10px] mx-4 -mt-3 relative z-1 text-center font-bold text-white bg-primary rounded-[5px] px-1 py-[5px]">
+                            در انتظار تایید میزبان</p>
+                        </div>
+                        <div class="sm:col-span-9 col-span-12">
+                          <a class="text-dark font-bold">اقامتگاه "عمارت هفت رنگ" اتاق سنگ سیاه</a>
+                          <p class="font-semibold text-xs text-[#0222C3] mt-[5px]">کد اقامتگاه: <span
+                              class="font-faNumBold">۲۳۴</span></p>
+                          <div class="mt-3 flex items-center gap-4 flex-wrap text-dark">
+                            <div class="flex items-center gap-1">
+                              <img alt="icon" src="../img/svg/location.svg" class="flex-shrink-0 w-[18px] h-[18px]">
+                              <p class="text-sm font-medium">فرهنگشهر</p>
+                            </div>
+                            <div class="flex items-center gap-1">
+                              <img alt="icon" src="../img/svg/calendar (2).svg" class="flex-shrink-0 w-[18px] h-[18px]">
+                              <p class="text-sm font-medium">از<span class="font-faNumRegular"> 23 </span>تا <span
+                                  class="font-faNumRegular"> 28 </span> بهمن</p>
+                            </div>
+                            <div class="flex items-center gap-1">
+                              <img alt="icon" src="../img/svg/money.svg" class="flex-shrink-0">
+                              <p class="text-sm font-medium">مبلغ کل: <span class="font-faNumBold">3/500/000</span>
+                                تومان</p>
+                            </div>
                           </div>
                         </div>
-                       </div>
                       </div>
                     </div>
                     <div class="md:col-span-3 col-span-12">
                       <a class="text-xs text-dark font-bold flex items-center justify-center gap-2">
                         <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                          <path d="M4.09455 13.8676V11.6776C4.09455 10.9501 4.66455 10.2976 5.47455 10.2976C6.20205 10.2976 6.85455 10.8676 6.85455 11.6776V13.7851C6.85455 15.2476 5.63955 16.4626 4.17705 16.4626C2.71455 16.4626 1.49955 15.2401 1.49955 13.7851V9.1651C1.41705 4.9501 4.74705 1.5376 8.96205 1.5376C13.177 1.5376 16.4995 4.9501 16.4995 9.0826V13.7026C16.4995 15.1651 15.2845 16.3801 13.822 16.3801C12.3595 16.3801 11.1445 15.1651 11.1445 13.7026V11.5951C11.1445 10.8676 11.7145 10.2151 12.5245 10.2151C13.252 10.2151 13.9045 10.7851 13.9045 11.5951V13.8676" stroke="#2C2C2C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                          <path
+                            d="M4.09455 13.8676V11.6776C4.09455 10.9501 4.66455 10.2976 5.47455 10.2976C6.20205 10.2976 6.85455 10.8676 6.85455 11.6776V13.7851C6.85455 15.2476 5.63955 16.4626 4.17705 16.4626C2.71455 16.4626 1.49955 15.2401 1.49955 13.7851V9.1651C1.41705 4.9501 4.74705 1.5376 8.96205 1.5376C13.177 1.5376 16.4995 4.9501 16.4995 9.0826V13.7026C16.4995 15.1651 15.2845 16.3801 13.822 16.3801C12.3595 16.3801 11.1445 15.1651 11.1445 13.7026V11.5951C11.1445 10.8676 11.7145 10.2151 12.5245 10.2151C13.252 10.2151 13.9045 10.7851 13.9045 11.5951V13.8676"
+                            stroke="#2C2C2C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
                         </svg>
                         <p>تماس با پشتیبانی</p>
                       </a>
-                      <div class="mt-6 flex items-center justify-center transition cursor-pointer btnHover py-2 gap-2 text-white font-bold text-xs rounded-[10px] bg-[#F01212]">
+                      <div
+                        class="mt-6 flex items-center justify-center transition cursor-pointer btnHover py-2 gap-2 text-white font-bold text-xs rounded-[10px] bg-[#F01212]">
                         <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
-                          <path d="M9.5459 15.9099L15.9099 9.54595" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                          <path d="M15.9099 15.9101L9.5459 9.54614" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                          <path d="M9.5459 15.9099L15.9099 9.54595" stroke="white" stroke-width="1.5"
+                            stroke-linecap="round" stroke-linejoin="round" />
+                          <path d="M15.9099 15.9101L9.5459 9.54614" stroke="white" stroke-width="1.5"
+                            stroke-linecap="round" stroke-linejoin="round" />
                         </svg>
                         <p>لغو رزرو</p>
                       </div>
@@ -373,46 +726,65 @@
                   <div class="border border-[#F1F1F1] rounded-[10px] p-3 grid grid-cols-12 gap-y-8 sm:gap-10 mb-5">
                     <div class="md:col-span-9 col-span-12">
                       <div class="grid grid-cols-12 sm:gap-3 gap-y-5">
-                       <div class="sm:col-span-3 col-span-12">
-                         <img alt="img" src="../img/image (23).png" class="rounded-[10px] sm:h-[83px] w-full">
-                         <p class="text-[10px] mx-4 -mt-3 relative z-1 text-center font-bold text-white bg-[#160C59] rounded-[5px] px-1 py-[5px]">در انتظار پرداخت</p>
-                       </div>
-                       <div class="sm:col-span-9 col-span-12">
-                        <a class="text-dark font-bold">اقامتگاه "عمارت هفت رنگ" اتاق سنگ سیاه</a>
-                        <p class="font-semibold text-xs text-[#0222C3] mt-[5px]">کد اقامتگاه: <span class="font-faNumBold">۲۳۴</span></p>
-                        <div class="mt-3 flex items-center gap-4 flex-wrap text-dark">
-                          <div class="flex items-center gap-1">
-                            <img alt="icon" src="../img/svg/location.svg" class="flex-shrink-0 w-[18px] h-[18px]">
-                            <p class="text-sm font-medium">فرهنگشهر</p>
-                          </div>
-                          <div class="flex items-center gap-1">
-                            <img alt="icon" src="../img/svg/calendar (2).svg" class="flex-shrink-0 w-[18px] h-[18px]">
-                            <p class="text-sm font-medium">از<span class="font-faNumRegular"> 23 </span>تا <span class="font-faNumRegular"> 28 </span> بهمن</p>
-                          </div>
-                          <div class="flex items-center gap-1">
-                            <img alt="icon" src="../img/svg/money.svg" class="flex-shrink-0">
-                            <p class="text-sm font-medium">مبلغ کل: <span class="font-faNumBold">3/500/000</span> تومان</p>
+                        <div class="sm:col-span-3 col-span-12">
+                          <img alt="img" src="../img/image (23).png" class="rounded-[10px] sm:h-[83px] w-full">
+                          <p
+                            class="text-[10px] mx-4 -mt-3 relative z-1 text-center font-bold text-white bg-[#160C59] rounded-[5px] px-1 py-[5px]">
+                            در انتظار پرداخت</p>
+                        </div>
+                        <div class="sm:col-span-9 col-span-12">
+                          <a class="text-dark font-bold">اقامتگاه "عمارت هفت رنگ" اتاق سنگ سیاه</a>
+                          <p class="font-semibold text-xs text-[#0222C3] mt-[5px]">کد اقامتگاه: <span
+                              class="font-faNumBold">۲۳۴</span></p>
+                          <div class="mt-3 flex items-center gap-4 flex-wrap text-dark">
+                            <div class="flex items-center gap-1">
+                              <img alt="icon" src="../img/svg/location.svg" class="flex-shrink-0 w-[18px] h-[18px]">
+                              <p class="text-sm font-medium">فرهنگشهر</p>
+                            </div>
+                            <div class="flex items-center gap-1">
+                              <img alt="icon" src="../img/svg/calendar (2).svg" class="flex-shrink-0 w-[18px] h-[18px]">
+                              <p class="text-sm font-medium">از<span class="font-faNumRegular"> 23 </span>تا <span
+                                  class="font-faNumRegular"> 28 </span> بهمن</p>
+                            </div>
+                            <div class="flex items-center gap-1">
+                              <img alt="icon" src="../img/svg/money.svg" class="flex-shrink-0">
+                              <p class="text-sm font-medium">مبلغ کل: <span class="font-faNumBold">3/500/000</span>
+                                تومان</p>
+                            </div>
                           </div>
                         </div>
-                       </div>
                       </div>
                     </div>
                     <div class="md:col-span-3 col-span-12">
                       <a class="text-xs text-dark font-bold flex items-center justify-center gap-2">
                         <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                          <path d="M4.09455 13.8676V11.6776C4.09455 10.9501 4.66455 10.2976 5.47455 10.2976C6.20205 10.2976 6.85455 10.8676 6.85455 11.6776V13.7851C6.85455 15.2476 5.63955 16.4626 4.17705 16.4626C2.71455 16.4626 1.49955 15.2401 1.49955 13.7851V9.1651C1.41705 4.9501 4.74705 1.5376 8.96205 1.5376C13.177 1.5376 16.4995 4.9501 16.4995 9.0826V13.7026C16.4995 15.1651 15.2845 16.3801 13.822 16.3801C12.3595 16.3801 11.1445 15.1651 11.1445 13.7026V11.5951C11.1445 10.8676 11.7145 10.2151 12.5245 10.2151C13.252 10.2151 13.9045 10.7851 13.9045 11.5951V13.8676" stroke="#2C2C2C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                          <path
+                            d="M4.09455 13.8676V11.6776C4.09455 10.9501 4.66455 10.2976 5.47455 10.2976C6.20205 10.2976 6.85455 10.8676 6.85455 11.6776V13.7851C6.85455 15.2476 5.63955 16.4626 4.17705 16.4626C2.71455 16.4626 1.49955 15.2401 1.49955 13.7851V9.1651C1.41705 4.9501 4.74705 1.5376 8.96205 1.5376C13.177 1.5376 16.4995 4.9501 16.4995 9.0826V13.7026C16.4995 15.1651 15.2845 16.3801 13.822 16.3801C12.3595 16.3801 11.1445 15.1651 11.1445 13.7026V11.5951C11.1445 10.8676 11.7145 10.2151 12.5245 10.2151C13.252 10.2151 13.9045 10.7851 13.9045 11.5951V13.8676"
+                            stroke="#2C2C2C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
                         </svg>
                         <p>تماس با پشتیبانی</p>
                       </a>
-                      <div class="mt-6 flex items-center justify-center transition cursor-pointer btnHover py-2 gap-2 text-white font-bold text-xs rounded-[10px] bg-[#02C33F]">
+                      <div
+                        class="mt-6 flex items-center justify-center transition cursor-pointer btnHover py-2 gap-2 text-white font-bold text-xs rounded-[10px] bg-[#02C33F]">
                         <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                          <path d="M10.6963 11.9985H6.94629" stroke="white" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-                          <path d="M9.49473 1.8886L9.47223 1.9411L7.29723 6.9886H5.15973C4.64973 6.9886 4.16223 7.0936 3.71973 7.2811L5.03223 4.1461L5.06223 4.0711L5.11473 3.9511C5.12973 3.9061 5.14473 3.8611 5.16723 3.8236C6.14973 1.5511 7.25973 1.0336 9.49473 1.8886Z" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
-                          <path d="M13.5379 7.13867C13.2004 7.03367 12.8404 6.98867 12.4804 6.98867H7.29785L9.47285 1.94117L9.49535 1.88867C9.60785 1.92617 9.71285 1.97867 9.82535 2.02367L11.4829 2.72117C12.4054 3.10367 13.0504 3.50117 13.4404 3.98117C13.5154 4.07117 13.5754 4.15367 13.6279 4.25117C13.6954 4.35617 13.7479 4.46117 13.7779 4.57367C13.8079 4.64117 13.8304 4.70867 13.8454 4.76867C14.0479 5.39867 13.9279 6.17117 13.5379 7.13867Z" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
-                          <path d="M16.1413 10.6488V12.1113C16.1413 12.2613 16.1338 12.4113 16.1263 12.5613C15.9838 15.1788 14.5213 16.4988 11.7463 16.4988H5.89629C5.71629 16.4988 5.53629 16.4838 5.36379 16.4613C2.97879 16.3038 1.70379 15.0288 1.54629 12.6438C1.52379 12.4713 1.50879 12.2913 1.50879 12.1113V10.6488C1.50879 9.14127 2.42379 7.84377 3.72879 7.28127C4.17879 7.09377 4.65879 6.98877 5.16879 6.98877H12.4888C12.8563 6.98877 13.2163 7.04127 13.5463 7.13877C15.0388 7.59627 16.1413 8.99127 16.1413 10.6488Z" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
-                          <path d="M5.0325 4.146L3.72 7.281C2.415 7.8435 1.5 9.141 1.5 10.6485V8.451C1.5 6.321 3.015 4.5435 5.0325 4.146Z" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
-                          <path d="M16.1389 8.45074V10.6482C16.1389 8.99824 15.0439 7.59574 13.5439 7.14574C13.9339 6.17074 14.0464 5.40574 13.8589 4.76824C13.8439 4.70074 13.8214 4.63324 13.7914 4.57324C15.1864 5.29324 16.1389 6.77074 16.1389 8.45074Z" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
-                          </svg>
+                          <path d="M10.6963 11.9985H6.94629" stroke="white" stroke-miterlimit="10"
+                            stroke-linecap="round" stroke-linejoin="round" />
+                          <path
+                            d="M9.49473 1.8886L9.47223 1.9411L7.29723 6.9886H5.15973C4.64973 6.9886 4.16223 7.0936 3.71973 7.2811L5.03223 4.1461L5.06223 4.0711L5.11473 3.9511C5.12973 3.9061 5.14473 3.8611 5.16723 3.8236C6.14973 1.5511 7.25973 1.0336 9.49473 1.8886Z"
+                            stroke="white" stroke-linecap="round" stroke-linejoin="round" />
+                          <path
+                            d="M13.5379 7.13867C13.2004 7.03367 12.8404 6.98867 12.4804 6.98867H7.29785L9.47285 1.94117L9.49535 1.88867C9.60785 1.92617 9.71285 1.97867 9.82535 2.02367L11.4829 2.72117C12.4054 3.10367 13.0504 3.50117 13.4404 3.98117C13.5154 4.07117 13.5754 4.15367 13.6279 4.25117C13.6954 4.35617 13.7479 4.46117 13.7779 4.57367C13.8079 4.64117 13.8304 4.70867 13.8454 4.76867C14.0479 5.39867 13.9279 6.17117 13.5379 7.13867Z"
+                            stroke="white" stroke-linecap="round" stroke-linejoin="round" />
+                          <path
+                            d="M16.1413 10.6488V12.1113C16.1413 12.2613 16.1338 12.4113 16.1263 12.5613C15.9838 15.1788 14.5213 16.4988 11.7463 16.4988H5.89629C5.71629 16.4988 5.53629 16.4838 5.36379 16.4613C2.97879 16.3038 1.70379 15.0288 1.54629 12.6438C1.52379 12.4713 1.50879 12.2913 1.50879 12.1113V10.6488C1.50879 9.14127 2.42379 7.84377 3.72879 7.28127C4.17879 7.09377 4.65879 6.98877 5.16879 6.98877H12.4888C12.8563 6.98877 13.2163 7.04127 13.5463 7.13877C15.0388 7.59627 16.1413 8.99127 16.1413 10.6488Z"
+                            stroke="white" stroke-linecap="round" stroke-linejoin="round" />
+                          <path
+                            d="M5.0325 4.146L3.72 7.281C2.415 7.8435 1.5 9.141 1.5 10.6485V8.451C1.5 6.321 3.015 4.5435 5.0325 4.146Z"
+                            stroke="white" stroke-linecap="round" stroke-linejoin="round" />
+                          <path
+                            d="M16.1389 8.45074V10.6482C16.1389 8.99824 15.0439 7.59574 13.5439 7.14574C13.9339 6.17074 14.0464 5.40574 13.8589 4.76824C13.8439 4.70074 13.8214 4.63324 13.7914 4.57324C15.1864 5.29324 16.1389 6.77074 16.1389 8.45074Z"
+                            stroke="white" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
                         <p>پرداخت آنلاین</p>
                       </div>
                     </div>
@@ -420,49 +792,60 @@
                 </div>
               </div>
               <div class="mt-9">
-                 <div class="flex items-center gap-4">
-                    <img alt="icon" src="../img/svg/building-4.svg" class="flex-shrink-0">
-                    <p class="text-lg font-semibold">اقامتگاه های من</p>
-                 </div>
-                 <div class="mt-4">
+                <div class="flex items-center gap-4">
+                  <img alt="icon" src="../img/svg/building-4.svg" class="flex-shrink-0">
+                  <p class="text-lg font-semibold">اقامتگاه های من</p>
+                </div>
+                <div class="mt-4">
                   <div class="border border-[#F1F1F1] rounded-[10px] p-3 grid grid-cols-12 gap-y-8 sm:gap-10 mb-5">
                     <div class="md:col-span-9 col-span-12">
                       <div class="grid grid-cols-12 sm:gap-3 gap-y-5">
-                       <div class="sm:col-span-3 col-span-12">
-                         <img alt="img" src="../img/image (23).png" class="rounded-[10px] sm:h-[83px] w-full">
-                         <p class="text-[10px] mx-4 -mt-3 relative z-1 text-center font-bold text-white bg-primary rounded-[5px] px-1 py-[5px]">منتظر تایید</p>
-                       </div>
-                       <div class="sm:col-span-9 col-span-12">
-                        <a class="text-dark font-bold">اقامتگاه "عمارت هفت رنگ" اتاق سنگ سیاه</a>
-                        <p class="font-semibold text-xs text-[#0222C3] mt-[5px]">کد اقامتگاه: <span class="font-faNumBold">۲۳۴</span></p>
-                        <div class="mt-3 flex items-center gap-4 flex-wrap text-dark">
-                          <div class="flex items-center gap-1">
-                            <img alt="icon" src="../img/svg/location.svg" class="flex-shrink-0 w-[18px] h-[18px]">
-                            <p class="text-sm font-medium">فرهنگشهر</p>
-                          </div>
-                          <div class="flex items-center gap-1">
-                            <img alt="icon" src="../img/svg/refresh-2.svg" class="flex-shrink-0 w-[18px] h-[18px]">
-                            <p class="text-sm font-medium">
-                              آخرین بروزرسانی:<span class="font-faNumRegular">1403/11/16</span>
-                            </p>
+                        <div class="sm:col-span-3 col-span-12">
+                          <img alt="img" src="../img/image (23).png" class="rounded-[10px] sm:h-[83px] w-full">
+                          <p
+                            class="text-[10px] mx-4 -mt-3 relative z-1 text-center font-bold text-white bg-primary rounded-[5px] px-1 py-[5px]">
+                            منتظر تایید</p>
+                        </div>
+                        <div class="sm:col-span-9 col-span-12">
+                          <a class="text-dark font-bold">اقامتگاه "عمارت هفت رنگ" اتاق سنگ سیاه</a>
+                          <p class="font-semibold text-xs text-[#0222C3] mt-[5px]">کد اقامتگاه: <span
+                              class="font-faNumBold">۲۳۴</span></p>
+                          <div class="mt-3 flex items-center gap-4 flex-wrap text-dark">
+                            <div class="flex items-center gap-1">
+                              <img alt="icon" src="../img/svg/location.svg" class="flex-shrink-0 w-[18px] h-[18px]">
+                              <p class="text-sm font-medium">فرهنگشهر</p>
+                            </div>
+                            <div class="flex items-center gap-1">
+                              <img alt="icon" src="../img/svg/refresh-2.svg" class="flex-shrink-0 w-[18px] h-[18px]">
+                              <p class="text-sm font-medium">
+                                آخرین بروزرسانی:<span class="font-faNumRegular">1403/11/16</span>
+                              </p>
+                            </div>
                           </div>
                         </div>
-                       </div>
                       </div>
                     </div>
                     <div class="md:col-span-3 col-span-12">
-                      <a class="text-xs text-dark font-bold flex items-center justify-center gap-2">
+                      <a id="editInformation-modal" class="text-xs text-dark font-bold flex items-center justify-center gap-2">
                         <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                          <path d="M9.94452 2.69992L3.78702 9.21742C3.55452 9.46492 3.32952 9.95242 3.28452 10.2899L3.00702 12.7199C2.90952 13.5974 3.53952 14.1974 4.40952 14.0474L6.82452 13.6349C7.16202 13.5749 7.63452 13.3274 7.86702 13.0724L14.0245 6.55492C15.0895 5.42992 15.5695 4.14742 13.912 2.57992C12.262 1.02742 11.0095 1.57492 9.94452 2.69992Z" stroke="#2C2C2C" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-                          <path d="M8.91797 3.7876C9.24047 5.8576 10.9205 7.4401 13.0055 7.6501" stroke="#2C2C2C" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-                          <path d="M2.25 16.5H15.75" stroke="#2C2C2C" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-                          </svg>
+                          <path
+                            d="M9.94452 2.69992L3.78702 9.21742C3.55452 9.46492 3.32952 9.95242 3.28452 10.2899L3.00702 12.7199C2.90952 13.5974 3.53952 14.1974 4.40952 14.0474L6.82452 13.6349C7.16202 13.5749 7.63452 13.3274 7.86702 13.0724L14.0245 6.55492C15.0895 5.42992 15.5695 4.14742 13.912 2.57992C12.262 1.02742 11.0095 1.57492 9.94452 2.69992Z"
+                            stroke="#2C2C2C" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                          <path d="M8.91797 3.7876C9.24047 5.8576 10.9205 7.4401 13.0055 7.6501" stroke="#2C2C2C"
+                            stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                          <path d="M2.25 16.5H15.75" stroke="#2C2C2C" stroke-width="1.5" stroke-miterlimit="10"
+                            stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
                         <p>ویرایش اطلاعات</p>
                       </a>
-                      <div class="mt-6 flex items-center justify-center transition cursor-pointer btnHover py-2 gap-1 text-white font-bold text-xs rounded-[10px] bg-[#F01212]">
+                      <div
+                        class="mt-6 flex items-center justify-center transition cursor-pointer btnHover py-2 gap-1 text-white font-bold text-xs rounded-[10px] bg-[#F01212]">
                         <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
-                          <path d="M9.5459 15.9099L15.9099 9.54595" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                          <path d="M15.9099 15.9101L9.5459 9.54614" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                          <path d="M9.5459 15.9099L15.9099 9.54595" stroke="white" stroke-width="1.5"
+                            stroke-linecap="round" stroke-linejoin="round" />
+                          <path d="M15.9099 15.9101L9.5459 9.54614" stroke="white" stroke-width="1.5"
+                            stroke-linecap="round" stroke-linejoin="round" />
                         </svg>
                         <p>حذف اقامتگاه</p>
                       </div>
@@ -471,46 +854,56 @@
                   <div class="border border-[#F1F1F1] rounded-[10px] p-3 grid grid-cols-12 gap-y-8 sm:gap-10 mb-5">
                     <div class="md:col-span-9 col-span-12">
                       <div class="grid grid-cols-12 sm:gap-3 gap-y-5">
-                       <div class="sm:col-span-3 col-span-12">
-                         <img alt="img" src="../img/image (23).png" class="rounded-[10px] sm:h-[83px] w-full">
-                         <p class="text-[10px] mx-4 -mt-3 relative z-1 text-center font-bold text-white bg-[#02C33F] rounded-[5px] px-1 py-[5px]">فعال</p>
-                       </div>
-                       <div class="sm:col-span-9 col-span-12">
-                        <a class="text-dark font-bold">اقامتگاه "عمارت هفت رنگ" اتاق سنگ سیاه</a>
-                        <p class="font-semibold text-xs text-[#0222C3] mt-[5px]">کد اقامتگاه: <span class="font-faNumBold">۲۳۴</span></p>
-                        <div class="mt-3 flex items-center gap-4 flex-wrap text-dark">
-                          <div class="flex items-center gap-1">
-                            <img alt="icon" src="../img/svg/location.svg" class="flex-shrink-0 w-[18px] h-[18px]">
-                            <p class="text-sm font-medium">فرهنگشهر</p>
-                          </div>
-                          <div class="flex items-center gap-1">
-                            <img alt="icon" src="../img/svg/cup.svg" class="flex-shrink-0 w-[18px] h-[18px]">
-                            <p class="text-sm font-medium">
-                              <span class="font-faNumRegular">23</span> رزرو موفق
-                            </p>
-                          </div>
-                          <div class="flex items-center gap-1">
-                            <img alt="icon" src="../img/svg/refresh-2.svg" class="flex-shrink-0 w-[18px] h-[18px]">
-                            <p class="text-sm font-medium">
-                              آخرین بروزرسانی:<span class="font-faNumRegular">1403/11/16</span>
-                            </p>
+                        <div class="sm:col-span-3 col-span-12">
+                          <img alt="img" src="../img/image (23).png" class="rounded-[10px] sm:h-[83px] w-full">
+                          <p
+                            class="text-[10px] mx-4 -mt-3 relative z-1 text-center font-bold text-white bg-[#02C33F] rounded-[5px] px-1 py-[5px]">
+                            فعال</p>
+                        </div>
+                        <div class="sm:col-span-9 col-span-12">
+                          <a class="text-dark font-bold">اقامتگاه "عمارت هفت رنگ" اتاق سنگ سیاه</a>
+                          <p class="font-semibold text-xs text-[#0222C3] mt-[5px]">کد اقامتگاه: <span
+                              class="font-faNumBold">۲۳۴</span></p>
+                          <div class="mt-3 flex items-center gap-4 flex-wrap text-dark">
+                            <div class="flex items-center gap-1">
+                              <img alt="icon" src="../img/svg/location.svg" class="flex-shrink-0 w-[18px] h-[18px]">
+                              <p class="text-sm font-medium">فرهنگشهر</p>
+                            </div>
+                            <div class="flex items-center gap-1">
+                              <img alt="icon" src="../img/svg/cup.svg" class="flex-shrink-0 w-[18px] h-[18px]">
+                              <p class="text-sm font-medium">
+                                <span class="font-faNumRegular">23</span> رزرو موفق
+                              </p>
+                            </div>
+                            <div class="flex items-center gap-1">
+                              <img alt="icon" src="../img/svg/refresh-2.svg" class="flex-shrink-0 w-[18px] h-[18px]">
+                              <p class="text-sm font-medium">
+                                آخرین بروزرسانی:<span class="font-faNumRegular">1403/11/16</span>
+                              </p>
+                            </div>
                           </div>
                         </div>
-                       </div>
                       </div>
                     </div>
                     <div class="md:col-span-3 col-span-12">
                       <a class="text-xs text-dark font-bold flex items-center justify-center gap-2">
                         <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                          <path d="M11.6854 8.99994C11.6854 10.4849 10.4854 11.6849 9.00043 11.6849C7.51543 11.6849 6.31543 10.4849 6.31543 8.99994C6.31543 7.51494 7.51543 6.31494 9.00043 6.31494C10.4854 6.31494 11.6854 7.51494 11.6854 8.99994Z" stroke="#292D32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                          <path d="M8.99988 15.2025C11.6474 15.2025 14.1149 13.6425 15.8324 10.9425C16.5074 9.88504 16.5074 8.10754 15.8324 7.05004C14.1149 4.35004 11.6474 2.79004 8.99988 2.79004C6.35238 2.79004 3.88488 4.35004 2.16738 7.05004C1.49238 8.10754 1.49238 9.88504 2.16738 10.9425C3.88488 13.6425 6.35238 15.2025 8.99988 15.2025Z" stroke="#292D32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                          </svg>
+                          <path
+                            d="M11.6854 8.99994C11.6854 10.4849 10.4854 11.6849 9.00043 11.6849C7.51543 11.6849 6.31543 10.4849 6.31543 8.99994C6.31543 7.51494 7.51543 6.31494 9.00043 6.31494C10.4854 6.31494 11.6854 7.51494 11.6854 8.99994Z"
+                            stroke="#292D32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                          <path
+                            d="M8.99988 15.2025C11.6474 15.2025 14.1149 13.6425 15.8324 10.9425C16.5074 9.88504 16.5074 8.10754 15.8324 7.05004C14.1149 4.35004 11.6474 2.79004 8.99988 2.79004C6.35238 2.79004 3.88488 4.35004 2.16738 7.05004C1.49238 8.10754 1.49238 9.88504 2.16738 10.9425C3.88488 13.6425 6.35238 15.2025 8.99988 15.2025Z"
+                            stroke="#292D32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
                         <p>درخواست های رزرو</p>
                       </a>
-                      <div class="mt-6 flex items-center justify-center transition cursor-pointer btnHover py-2 gap-1 text-white font-bold text-xs rounded-[10px] bg-[#F01212]">
+                      <div
+                        class="mt-6 flex items-center justify-center transition cursor-pointer btnHover py-2 gap-1 text-white font-bold text-xs rounded-[10px] bg-[#F01212]">
                         <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
-                          <path d="M9.5459 15.9099L15.9099 9.54595" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                          <path d="M15.9099 15.9101L9.5459 9.54614" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                          <path d="M9.5459 15.9099L15.9099 9.54595" stroke="white" stroke-width="1.5"
+                            stroke-linecap="round" stroke-linejoin="round" />
+                          <path d="M15.9099 15.9101L9.5459 9.54614" stroke="white" stroke-width="1.5"
+                            stroke-linecap="round" stroke-linejoin="round" />
                         </svg>
                         <p>حذف اقامتگاه</p>
                       </div>
@@ -519,41 +912,54 @@
                   <div class="border border-[#F1F1F1] rounded-[10px] p-3 grid grid-cols-12 gap-y-8 sm:gap-10 mb-5">
                     <div class="md:col-span-9 col-span-12">
                       <div class="grid grid-cols-12 sm:gap-3 gap-y-5">
-                       <div class="sm:col-span-3 col-span-12">
-                         <img alt="img" src="../img/image (23).png" class="rounded-[10px] sm:h-[83px] w-full">
-                         <p class="text-[10px] mx-4 -mt-3 relative z-1 text-center font-bold text-white bg-[#F01212] rounded-[5px] px-1 py-[5px]">رد شده</p>
-                       </div>
-                       <div class="sm:col-span-9 col-span-12">
-                        <a class="text-dark font-bold">اقامتگاه "عمارت هفت رنگ" اتاق سنگ سیاه</a>
-                        <p class="font-semibold text-xs text-[#0222C3] mt-[5px]">کد اقامتگاه: <span class="font-faNumBold">۲۳۴</span></p>
-                        <div class="mt-3 flex items-center gap-4 flex-wrap text-dark">
-                          <div class="flex items-center gap-1">
-                            <img alt="icon" src="../img/svg/location.svg" class="flex-shrink-0 w-[18px] h-[18px]">
-                            <p class="text-sm font-medium">فرهنگشهر</p>
-                          </div>
-                          <div class="flex items-center gap-1">
-                            <img alt="icon" src="../img/svg/warning-2 (3).svg" class="flex-shrink-0 w-[18px] h-[18px]">
-                            <p class="text-sm font-bold text-[#F01212]">
-                              اطلاعات ناقص وارد شده است.
-                            </p>
+                        <div class="sm:col-span-3 col-span-12">
+                          <img alt="img" src="../img/image (23).png" class="rounded-[10px] sm:h-[83px] w-full">
+                          <p
+                            class="text-[10px] mx-4 -mt-3 relative z-1 text-center font-bold text-white bg-[#F01212] rounded-[5px] px-1 py-[5px]">
+                            رد شده</p>
+                        </div>
+                        <div class="sm:col-span-9 col-span-12">
+                          <a class="text-dark font-bold">اقامتگاه "عمارت هفت رنگ" اتاق سنگ سیاه</a>
+                          <p class="font-semibold text-xs text-[#0222C3] mt-[5px]">کد اقامتگاه: <span
+                              class="font-faNumBold">۲۳۴</span></p>
+                          <div class="mt-3 flex items-center gap-4 flex-wrap text-dark">
+                            <div class="flex items-center gap-1">
+                              <img alt="icon" src="../img/svg/location.svg" class="flex-shrink-0 w-[18px] h-[18px]">
+                              <p class="text-sm font-medium">فرهنگشهر</p>
+                            </div>
+                            <div class="flex items-center gap-1">
+                              <img alt="icon" src="../img/svg/warning-2 (3).svg"
+                                class="flex-shrink-0 w-[18px] h-[18px]">
+                              <p class="text-sm font-bold text-[#F01212]">
+                                اطلاعات ناقص وارد شده است.
+                              </p>
+                            </div>
                           </div>
                         </div>
-                       </div>
                       </div>
                     </div>
                     <div class="md:col-span-3 col-span-12">
                       <a class="text-xs text-dark font-bold flex items-center justify-center gap-2">
                         <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                          <path d="M9.94452 2.69992L3.78702 9.21742C3.55452 9.46492 3.32952 9.95242 3.28452 10.2899L3.00702 12.7199C2.90952 13.5974 3.53952 14.1974 4.40952 14.0474L6.82452 13.6349C7.16202 13.5749 7.63452 13.3274 7.86702 13.0724L14.0245 6.55492C15.0895 5.42992 15.5695 4.14742 13.912 2.57992C12.262 1.02742 11.0095 1.57492 9.94452 2.69992Z" stroke="#2C2C2C" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
-                          <path d="M8.91797 3.7876C9.24047 5.8576 10.9205 7.4401 13.0055 7.6501" stroke="#2C2C2C" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
-                          <path d="M2.25 16.5H15.75" stroke="#2C2C2C" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
-                          </svg>
+                          <path
+                            d="M9.94452 2.69992L3.78702 9.21742C3.55452 9.46492 3.32952 9.95242 3.28452 10.2899L3.00702 12.7199C2.90952 13.5974 3.53952 14.1974 4.40952 14.0474L6.82452 13.6349C7.16202 13.5749 7.63452 13.3274 7.86702 13.0724L14.0245 6.55492C15.0895 5.42992 15.5695 4.14742 13.912 2.57992C12.262 1.02742 11.0095 1.57492 9.94452 2.69992Z"
+                            stroke="#2C2C2C" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"
+                            stroke-linejoin="round"></path>
+                          <path d="M8.91797 3.7876C9.24047 5.8576 10.9205 7.4401 13.0055 7.6501" stroke="#2C2C2C"
+                            stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round">
+                          </path>
+                          <path d="M2.25 16.5H15.75" stroke="#2C2C2C" stroke-width="1.5" stroke-miterlimit="10"
+                            stroke-linecap="round" stroke-linejoin="round"></path>
+                        </svg>
                         <p>ویرایش اطلاعات</p>
                       </a>
-                      <div class="mt-6 flex items-center justify-center transition cursor-pointer btnHover py-2 gap-1 text-white font-bold text-xs rounded-[10px] bg-[#F01212]">
+                      <div
+                        class="mt-6 flex items-center justify-center transition cursor-pointer btnHover py-2 gap-1 text-white font-bold text-xs rounded-[10px] bg-[#F01212]">
                         <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
-                          <path d="M9.5459 15.9099L15.9099 9.54595" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                          <path d="M15.9099 15.9101L9.5459 9.54614" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                          <path d="M9.5459 15.9099L15.9099 9.54595" stroke="white" stroke-width="1.5"
+                            stroke-linecap="round" stroke-linejoin="round" />
+                          <path d="M15.9099 15.9101L9.5459 9.54614" stroke="white" stroke-width="1.5"
+                            stroke-linecap="round" stroke-linejoin="round" />
                         </svg>
                         <p>حذف اقامتگاه</p>
                       </div>
@@ -563,21 +969,26 @@
               </div>
               <div class="mt-7">
                 <div class="flex items-center gap-4">
-                   <img alt="icon" src="../img/svg/message-text (3).svg" class="flex-shrink-0">
-                   <p class="text-lg font-semibold">نظرات</p>
+                  <img alt="icon" src="../img/svg/message-text (3).svg" class="flex-shrink-0">
+                  <p class="text-lg font-semibold">نظرات</p>
                 </div>
                 <div class="mt-14">
                   <div class="rounded-[20px] bg-[#FFF6EA] p-4 pb-5 relative mb-16">
-                    <svg class="absolute top-0 ltr:left-10 rtl:right-10" width="91" height="25" viewBox="0 0 91 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M2.84075 0.241669L0 0H91L90.3981 0.0625546C84.5157 0.673857 78.9453 3.01014 74.3867 6.77782L57.4241 20.7977C51.6296 25.5869 43.2824 25.6963 37.3644 21.0606L18.7974 6.5167C14.2023 2.91722 8.65685 0.736457 2.84075 0.241669Z" fill="white"></path>
+                    <svg class="absolute top-0 ltr:left-10 rtl:right-10" width="91" height="25" viewBox="0 0 91 25"
+                      fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M2.84075 0.241669L0 0H91L90.3981 0.0625546C84.5157 0.673857 78.9453 3.01014 74.3867 6.77782L57.4241 20.7977C51.6296 25.5869 43.2824 25.6963 37.3644 21.0606L18.7974 6.5167C14.2023 2.91722 8.65685 0.736457 2.84075 0.241669Z"
+                        fill="white"></path>
                     </svg>
-                    <img alt="img" src="../img/1403-02-24 12.39 1.png" class="w-14 h-14 rounded-full absolute rtl:right-14 ltr:left-14 -top-10">
+                    <img alt="img" src="../img/1403-02-24 12.39 1.png"
+                      class="w-14 h-14 rounded-full absolute rtl:right-14 ltr:left-14 -top-10">
                     <div class="flex items-center justify-between gap-2 mt-3">
                       <div class="flex items-center gap-1">
                         <p class="font-bold text-dark">
                           نگار امینی
                         </p>
-                        <p class="font-faNumRegular text-sm text-[#2F2F2F] rtl:text-left ltr:text-right">(8 بهمن 1403)</p>
+                        <p class="font-faNumRegular text-sm text-[#2F2F2F] rtl:text-left ltr:text-right">(8 بهمن 1403)
+                        </p>
                       </div>
                       <div class="flex items-center gap-1 font-faNumBold text-sm text-[#2F2F2F]">
                         <p>5</p>
@@ -585,30 +996,41 @@
                       </div>
                     </div>
                     <div class="flex justify-between items-center flex-wrap gap-2">
-                     <div>
-                       <p class="text-[#2F2F2F] mt-4 text-sm text-justify font-medium">همه چیز عالی بود خیلی ممنون از میزبانی حرفه ای
-                         جناب اعتبار</p>
-                       <p class="mt-2 text-xs">🏡 اقامتگاه: ویلا ساحلی شمال</p>
-                     </div>
-                     <div>
-                      <div class="flex items-center gap-2">
-                        <a class="flex items-center gap-1 text-xs font-medium text-[#2F2F2F]">
-                          <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M5.34766 13.7324H11.3477C13.4177 13.7324 15.0977 12.0524 15.0977 9.98242C15.0977 7.91242 13.4177 6.23242 11.3477 6.23242H3.09766" stroke="#292D32" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-                            <path d="M4.82234 8.10758L2.90234 6.18758L4.82234 4.26758" stroke="#292D32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                          </svg>
-                          <p>پاسخ دادن</p>
-                        </a>
-                        <a class="flex items-center gap-1 text-xs font-medium text-[#F01212]">
-                          <svg class="flex-shrink-0" width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M9 5.8125V9.75" stroke="#F01212" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                            <path d="M15.8102 6.43503V11.565C15.8102 12.405 15.3601 13.185 14.6326 13.6125L10.1776 16.185C9.45014 16.605 8.55012 16.605 7.81512 16.185L3.36012 13.6125C2.63262 13.1925 2.18262 12.4125 2.18262 11.565V6.43503C2.18262 5.59503 2.63262 4.81499 3.36012 4.38749L7.81512 1.815C8.54262 1.395 9.44264 1.395 10.1776 1.815L14.6326 4.38749C15.3601 4.81499 15.8102 5.58753 15.8102 6.43503Z" stroke="#F01212" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                            <path d="M9 12.1499V12.2249" stroke="#F01212" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                          </svg>
-                          <p>گزارش تخلف</p>
-                        </a>
+                      <div>
+                        <p class="text-[#2F2F2F] mt-4 text-sm text-justify font-medium">همه چیز عالی بود خیلی ممنون از
+                          میزبانی حرفه ای
+                          جناب اعتبار</p>
+                        <p class="mt-2 text-xs">🏡 اقامتگاه: ویلا ساحلی شمال</p>
                       </div>
-                     </div>
+                      <div>
+                        <div class="flex items-center gap-2">
+                          <a class="flex items-center gap-1 text-xs font-medium text-[#2F2F2F]">
+                            <svg width="18" height="18" viewBox="0 0 18 18" fill="none"
+                              xmlns="http://www.w3.org/2000/svg">
+                              <path
+                                d="M5.34766 13.7324H11.3477C13.4177 13.7324 15.0977 12.0524 15.0977 9.98242C15.0977 7.91242 13.4177 6.23242 11.3477 6.23242H3.09766"
+                                stroke="#292D32" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                              <path d="M4.82234 8.10758L2.90234 6.18758L4.82234 4.26758" stroke="#292D32"
+                                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                            <p>پاسخ دادن</p>
+                          </a>
+                          <a class="flex items-center gap-1 text-xs font-medium text-[#F01212]">
+                            <svg class="flex-shrink-0" width="18" height="18" viewBox="0 0 18 18" fill="none"
+                              xmlns="http://www.w3.org/2000/svg">
+                              <path d="M9 5.8125V9.75" stroke="#F01212" stroke-width="1.5" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                              <path
+                                d="M15.8102 6.43503V11.565C15.8102 12.405 15.3601 13.185 14.6326 13.6125L10.1776 16.185C9.45014 16.605 8.55012 16.605 7.81512 16.185L3.36012 13.6125C2.63262 13.1925 2.18262 12.4125 2.18262 11.565V6.43503C2.18262 5.59503 2.63262 4.81499 3.36012 4.38749L7.81512 1.815C8.54262 1.395 9.44264 1.395 10.1776 1.815L14.6326 4.38749C15.3601 4.81499 15.8102 5.58753 15.8102 6.43503Z"
+                                stroke="#F01212" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                              <path d="M9 12.1499V12.2249" stroke="#F01212" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                            </svg>
+                            <p>گزارش تخلف</p>
+                          </a>
+                        </div>
+                      </div>
                     </div>
                     <div class="mt-6 border border-dashed border-[#FF9704] p-3 rounded-[10px] flex items-start gap-2">
                       <img alt="icon" src="../img/svg/tick-circle (4).svg" class="flex-shrink-0">
@@ -619,16 +1041,21 @@
                     </div>
                   </div>
                   <div class="rounded-[20px] bg-[#FFF6EA] p-4 pb-5 relative mb-16">
-                    <svg class="absolute top-0 ltr:left-10 rtl:right-10" width="91" height="25" viewBox="0 0 91 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M2.84075 0.241669L0 0H91L90.3981 0.0625546C84.5157 0.673857 78.9453 3.01014 74.3867 6.77782L57.4241 20.7977C51.6296 25.5869 43.2824 25.6963 37.3644 21.0606L18.7974 6.5167C14.2023 2.91722 8.65685 0.736457 2.84075 0.241669Z" fill="white"></path>
+                    <svg class="absolute top-0 ltr:left-10 rtl:right-10" width="91" height="25" viewBox="0 0 91 25"
+                      fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M2.84075 0.241669L0 0H91L90.3981 0.0625546C84.5157 0.673857 78.9453 3.01014 74.3867 6.77782L57.4241 20.7977C51.6296 25.5869 43.2824 25.6963 37.3644 21.0606L18.7974 6.5167C14.2023 2.91722 8.65685 0.736457 2.84075 0.241669Z"
+                        fill="white"></path>
                     </svg>
-                    <img alt="img" src="../img/1403-02-24 12.39 1.png" class="w-14 h-14 rounded-full absolute rtl:right-14 ltr:left-14 -top-10">
+                    <img alt="img" src="../img/1403-02-24 12.39 1.png"
+                      class="w-14 h-14 rounded-full absolute rtl:right-14 ltr:left-14 -top-10">
                     <div class="flex items-center justify-between gap-2 mt-3">
                       <div class="flex items-center gap-1">
                         <p class="font-bold text-dark">
                           نگار امینی
                         </p>
-                        <p class="font-faNumRegular text-sm text-[#2F2F2F] rtl:text-left ltr:text-right">(8 بهمن 1403)</p>
+                        <p class="font-faNumRegular text-sm text-[#2F2F2F] rtl:text-left ltr:text-right">(8 بهمن 1403)
+                        </p>
                       </div>
                       <div class="flex items-center gap-1 font-faNumBold text-sm text-[#2F2F2F]">
                         <p>5</p>
@@ -636,30 +1063,41 @@
                       </div>
                     </div>
                     <div class="flex justify-between items-center flex-wrap gap-2">
-                     <div>
-                       <p class="text-[#2F2F2F] mt-4 text-sm text-justify font-medium">همه چیز عالی بود خیلی ممنون از میزبانی حرفه ای
-                         جناب اعتبار</p>
-                       <p class="mt-2 text-xs">🏡 اقامتگاه: ویلا ساحلی شمال</p>
-                     </div>
-                     <div>
-                      <div class="flex items-center gap-2">
-                        <a class="flex items-center gap-1 text-xs font-medium text-[#2F2F2F]">
-                          <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M5.34766 13.7324H11.3477C13.4177 13.7324 15.0977 12.0524 15.0977 9.98242C15.0977 7.91242 13.4177 6.23242 11.3477 6.23242H3.09766" stroke="#292D32" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-                            <path d="M4.82234 8.10758L2.90234 6.18758L4.82234 4.26758" stroke="#292D32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                          </svg>
-                          <p>پاسخ دادن</p>
-                        </a>
-                        <a class="flex items-center gap-1 text-xs font-medium text-[#F01212]">
-                          <svg class="flex-shrink-0" width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M9 5.8125V9.75" stroke="#F01212" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                            <path d="M15.8102 6.43503V11.565C15.8102 12.405 15.3601 13.185 14.6326 13.6125L10.1776 16.185C9.45014 16.605 8.55012 16.605 7.81512 16.185L3.36012 13.6125C2.63262 13.1925 2.18262 12.4125 2.18262 11.565V6.43503C2.18262 5.59503 2.63262 4.81499 3.36012 4.38749L7.81512 1.815C8.54262 1.395 9.44264 1.395 10.1776 1.815L14.6326 4.38749C15.3601 4.81499 15.8102 5.58753 15.8102 6.43503Z" stroke="#F01212" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                            <path d="M9 12.1499V12.2249" stroke="#F01212" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                          </svg>
-                          <p>گزارش تخلف</p>
-                        </a>
+                      <div>
+                        <p class="text-[#2F2F2F] mt-4 text-sm text-justify font-medium">همه چیز عالی بود خیلی ممنون از
+                          میزبانی حرفه ای
+                          جناب اعتبار</p>
+                        <p class="mt-2 text-xs">🏡 اقامتگاه: ویلا ساحلی شمال</p>
                       </div>
-                     </div>
+                      <div>
+                        <div class="flex items-center gap-2">
+                          <a class="flex items-center gap-1 text-xs font-medium text-[#2F2F2F]">
+                            <svg width="18" height="18" viewBox="0 0 18 18" fill="none"
+                              xmlns="http://www.w3.org/2000/svg">
+                              <path
+                                d="M5.34766 13.7324H11.3477C13.4177 13.7324 15.0977 12.0524 15.0977 9.98242C15.0977 7.91242 13.4177 6.23242 11.3477 6.23242H3.09766"
+                                stroke="#292D32" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                              <path d="M4.82234 8.10758L2.90234 6.18758L4.82234 4.26758" stroke="#292D32"
+                                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                            <p>پاسخ دادن</p>
+                          </a>
+                          <a class="flex items-center gap-1 text-xs font-medium text-[#F01212]">
+                            <svg class="flex-shrink-0" width="18" height="18" viewBox="0 0 18 18" fill="none"
+                              xmlns="http://www.w3.org/2000/svg">
+                              <path d="M9 5.8125V9.75" stroke="#F01212" stroke-width="1.5" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                              <path
+                                d="M15.8102 6.43503V11.565C15.8102 12.405 15.3601 13.185 14.6326 13.6125L10.1776 16.185C9.45014 16.605 8.55012 16.605 7.81512 16.185L3.36012 13.6125C2.63262 13.1925 2.18262 12.4125 2.18262 11.565V6.43503C2.18262 5.59503 2.63262 4.81499 3.36012 4.38749L7.81512 1.815C8.54262 1.395 9.44264 1.395 10.1776 1.815L14.6326 4.38749C15.3601 4.81499 15.8102 5.58753 15.8102 6.43503Z"
+                                stroke="#F01212" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                              <path d="M9 12.1499V12.2249" stroke="#F01212" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                            </svg>
+                            <p>گزارش تخلف</p>
+                          </a>
+                        </div>
+                      </div>
                     </div>
                     <div class="mt-6 border border-dashed border-[#FF9704] p-3 rounded-[10px] flex items-start gap-2">
                       <img alt="icon" src="../img/svg/tick-circle (4).svg" class="flex-shrink-0">
@@ -699,7 +1137,8 @@
                     <tbody class="text-center">
                       <tr>
                         <td>
-                          <div class="rounded-[10px] transition hover:bg-[#160C59] p-2 group cursor-pointer relative min-h-[108px] flex-center">
+                          <div
+                            class="rounded-[10px] transition hover:bg-[#160C59] p-2 group cursor-pointer relative min-h-[108px] flex-center">
                             <div>
                               <input type="checkbox" class="absolute w-full h-full inset-0 cursor-pointer opacity-0">
                               <p class="transition group-hover:text-white"></p>
@@ -707,7 +1146,8 @@
                           </div>
                         </td>
                         <td>
-                          <div class="rounded-[10px] transition hover:bg-[#160C59] p-2 group cursor-pointer relative min-h-[108px] flex-center">
+                          <div
+                            class="rounded-[10px] transition hover:bg-[#160C59] p-2 group cursor-pointer relative min-h-[108px] flex-center">
                             <div>
                               <input type="checkbox" class="absolute w-full h-full inset-0 cursor-pointer opacity-0">
                               <p class="transition group-hover:text-white"></p>
@@ -715,34 +1155,41 @@
                           </div>
                         </td>
                         <td>
-                          <div class="rounded-[10px] transition hover:bg-[#160C59] p-2 group cursor-pointer relative min-h-[108px] flex-center">
+                          <div
+                            class="rounded-[10px] transition hover:bg-[#160C59] p-2 group cursor-pointer relative min-h-[108px] flex-center">
                             <div>
                               <input type="checkbox" class="absolute w-full h-full inset-0 cursor-pointer opacity-0">
                               <p class="transition group-hover:text-white">1</p>
-                              <p class="text-xs md:text-sm font-faNumRegular text-dark mt-2 transition group-hover:text-white">1,200,000</p>
+                              <p
+                                class="text-xs md:text-sm font-faNumRegular text-dark mt-2 transition group-hover:text-white">
+                                1,200,000</p>
                               <div class="mt-1 flex items-center justify-center gap-0.5 sm:gap-1.5">
-                               <img alt="icon" src="../img/svg/discount-shape.svg">
-                               <img alt="icon" src="../img/svg/timer.svg">
-                               <img alt="icon" src="../img/svg/flash.svg">
+                                <img alt="icon" src="../img/svg/discount-shape.svg">
+                                <img alt="icon" src="../img/svg/timer.svg">
+                                <img alt="icon" src="../img/svg/flash.svg">
                               </div>
                             </div>
                           </div>
                         </td>
                         <td>
-                          <div class="rounded-[10px] transition hover:bg-[#160C59] p-2 group cursor-pointer relative min-h-[108px] flex-center">
+                          <div
+                            class="rounded-[10px] transition hover:bg-[#160C59] p-2 group cursor-pointer relative min-h-[108px] flex-center">
                             <div>
                               <input type="checkbox" class="absolute w-full h-full inset-0 cursor-pointer opacity-0">
-                            <p class="transition group-hover:text-white">2</p>
-                            <p class="text-xs md:text-sm font-faNumRegular text-dark mt-2 transition group-hover:text-white">1,200,000</p>
-                            <div class="mt-1 flex items-center justify-center gap-0.5 sm:gap-1.5">
-                             <img alt="icon" src="../img/svg/discount-shape.svg">
-                             <img alt="icon" src="../img/svg/timer.svg">
-                            </div>
+                              <p class="transition group-hover:text-white">2</p>
+                              <p
+                                class="text-xs md:text-sm font-faNumRegular text-dark mt-2 transition group-hover:text-white">
+                                1,200,000</p>
+                              <div class="mt-1 flex items-center justify-center gap-0.5 sm:gap-1.5">
+                                <img alt="icon" src="../img/svg/discount-shape.svg">
+                                <img alt="icon" src="../img/svg/timer.svg">
+                              </div>
                             </div>
                           </div>
                         </td>
                         <td class="py-">
-                          <div class="rounded-[10px] transition hover:bg-[#160C59] p-2 group cursor-pointer relative min-h-[108px] flex-center">
+                          <div
+                            class="rounded-[10px] transition hover:bg-[#160C59] p-2 group cursor-pointer relative min-h-[108px] flex-center">
                             <div>
                               <input type="checkbox" class="absolute w-full h-full inset-0 cursor-pointer opacity-0">
                               <p class="transition group-hover:text-white">2</p>
@@ -750,7 +1197,8 @@
                           </div>
                         </td>
                         <td>
-                          <div class="rounded-[10px] transition hover:bg-[#160C59] p-2 group cursor-pointer relative min-h-[108px] flex-center">
+                          <div
+                            class="rounded-[10px] transition hover:bg-[#160C59] p-2 group cursor-pointer relative min-h-[108px] flex-center">
                             <div>
                               <input type="checkbox" class="absolute w-full h-full inset-0 cursor-pointer opacity-0">
                               <p class="transition group-hover:text-white">4</p>
@@ -758,7 +1206,8 @@
                           </div>
                         </td>
                         <td>
-                          <div class="rounded-[10px] transition hover:bg-[#160C59] p-2 group cursor-pointer relative min-h-[108px] flex-center">
+                          <div
+                            class="rounded-[10px] transition hover:bg-[#160C59] p-2 group cursor-pointer relative min-h-[108px] flex-center">
                             <div>
                               <input type="checkbox" class="absolute w-full h-full inset-0 cursor-pointer opacity-0">
                               <p class="transition group-hover:text-white">5</p>
@@ -768,7 +1217,8 @@
                       </tr>
                       <tr>
                         <td>
-                          <div class="rounded-[10px] transition hover:bg-[#160C59] p-2 group cursor-pointer relative min-h-[108px] flex-center">
+                          <div
+                            class="rounded-[10px] transition hover:bg-[#160C59] p-2 group cursor-pointer relative min-h-[108px] flex-center">
                             <div>
                               <input type="checkbox" class="absolute w-full h-full inset-0 cursor-pointer opacity-0">
                               <p class="transition group-hover:text-white">6</p>
@@ -776,7 +1226,8 @@
                           </div>
                         </td>
                         <td>
-                          <div class="rounded-[10px] transition hover:bg-[#160C59] p-2 group cursor-pointer relative min-h-[108px] flex-center">
+                          <div
+                            class="rounded-[10px] transition hover:bg-[#160C59] p-2 group cursor-pointer relative min-h-[108px] flex-center">
                             <div>
                               <input type="checkbox" class="absolute w-full h-full inset-0 cursor-pointer opacity-0">
                               <p class="transition group-hover:text-white">7</p>
@@ -784,20 +1235,24 @@
                           </div>
                         </td>
                         <td>
-                          <div class="rounded-[10px] transition hover:bg-[#160C59] p-2 group cursor-pointer relative min-h-[108px] flex-center">
+                          <div
+                            class="rounded-[10px] transition hover:bg-[#160C59] p-2 group cursor-pointer relative min-h-[108px] flex-center">
                             <div>
                               <input type="checkbox" class="absolute w-full h-full inset-0 cursor-pointer opacity-0">
                               <p class="transition group-hover:text-white">8</p>
-                              <p class="text-xs md:text-sm font-faNumRegular text-dark mt-2 transition group-hover:text-white">1,200,000</p>
+                              <p
+                                class="text-xs md:text-sm font-faNumRegular text-dark mt-2 transition group-hover:text-white">
+                                1,200,000</p>
                               <div class="mt-1 flex items-center justify-center gap-0.5 sm:gap-1.5">
-                               <img alt="icon" src="../img/svg/discount-shape.svg">
-                               <img alt="icon" src="../img/svg/timer.svg">
+                                <img alt="icon" src="../img/svg/discount-shape.svg">
+                                <img alt="icon" src="../img/svg/timer.svg">
                               </div>
                             </div>
                           </div>
                         </td>
                         <td class="py-">
-                          <div class="rounded-[10px] transition hover:bg-[#160C59] p-2 group cursor-pointer relative min-h-[108px] flex-center">
+                          <div
+                            class="rounded-[10px] transition hover:bg-[#160C59] p-2 group cursor-pointer relative min-h-[108px] flex-center">
                             <div>
                               <input type="checkbox" class="absolute w-full h-full inset-0 cursor-pointer opacity-0">
                               <p class="transition group-hover:text-white">10</p>
@@ -805,7 +1260,8 @@
                           </div>
                         </td>
                         <td>
-                          <div class="rounded-[10px] transition hover:bg-[#160C59] p-2 group cursor-pointer relative min-h-[108px] flex-center">
+                          <div
+                            class="rounded-[10px] transition hover:bg-[#160C59] p-2 group cursor-pointer relative min-h-[108px] flex-center">
                             <div>
                               <input type="checkbox" class="absolute w-full h-full inset-0 cursor-pointer opacity-0">
                               <p class="transition group-hover:text-white">11</p>
@@ -813,21 +1269,25 @@
                           </div>
                         </td>
                         <td>
-                          <div class="rounded-[10px] transition hover:bg-[#160C59] p-2 group cursor-pointer relative min-h-[108px] flex-center">
+                          <div
+                            class="rounded-[10px] transition hover:bg-[#160C59] p-2 group cursor-pointer relative min-h-[108px] flex-center">
                             <div>
                               <input type="checkbox" class="absolute w-full h-full inset-0 cursor-pointer opacity-0">
                               <p class="transition group-hover:text-white">9</p>
-                              <p class="text-xs md:text-sm font-faNumRegular text-dark mt-2 transition group-hover:text-white">1,200,000</p>
+                              <p
+                                class="text-xs md:text-sm font-faNumRegular text-dark mt-2 transition group-hover:text-white">
+                                1,200,000</p>
                               <div class="mt-1 flex items-center justify-center gap-0.5 sm:gap-1.5">
                                 <img alt="icon" src="../img/svg/discount-shape.svg">
                                 <img alt="icon" src="../img/svg/timer.svg">
                                 <img alt="icon" src="../img/svg/flash.svg">
-                            </div>
+                              </div>
                             </div>
                           </div>
                         </td>
                         <td>
-                          <div class="rounded-[10px] transition hover:bg-[#160C59] p-2 group cursor-pointer relative min-h-[108px] flex-center">
+                          <div
+                            class="rounded-[10px] transition hover:bg-[#160C59] p-2 group cursor-pointer relative min-h-[108px] flex-center">
                             <div>
                               <input type="checkbox" class="absolute w-full h-full inset-0 cursor-pointer opacity-0">
                               <p class="transition group-hover:text-white">12</p>
@@ -837,7 +1297,8 @@
                       </tr>
                       <tr>
                         <td>
-                          <div class="rounded-[10px] transition hover:bg-[#160C59] p-2 group cursor-pointer relative min-h-[108px] flex-center">
+                          <div
+                            class="rounded-[10px] transition hover:bg-[#160C59] p-2 group cursor-pointer relative min-h-[108px] flex-center">
                             <div>
                               <input type="checkbox" class="absolute w-full h-full inset-0 cursor-pointer opacity-0">
                               <p class="transition group-hover:text-white">13</p>
@@ -845,21 +1306,25 @@
                           </div>
                         </td>
                         <td>
-                          <div class="rounded-[10px] transition hover:bg-[#160C59] p-2 group cursor-pointer relative min-h-[108px] flex-center">
+                          <div
+                            class="rounded-[10px] transition hover:bg-[#160C59] p-2 group cursor-pointer relative min-h-[108px] flex-center">
                             <div>
                               <input type="checkbox" class="absolute w-full h-full inset-0 cursor-pointer opacity-0">
                               <p class="transition group-hover:text-white">15</p>
-                              <p class="text-xs md:text-sm font-faNumRegular text-dark mt-2 transition group-hover:text-white">1,200,000</p>
+                              <p
+                                class="text-xs md:text-sm font-faNumRegular text-dark mt-2 transition group-hover:text-white">
+                                1,200,000</p>
                               <div class="mt-1 flex items-center justify-center gap-0.5 sm:gap-1.5">
-                               <img alt="icon" src="../img/svg/discount-shape.svg">
-                               <img alt="icon" src="../img/svg/timer.svg">
-                               <img alt="icon" src="../img/svg/flash.svg">
+                                <img alt="icon" src="../img/svg/discount-shape.svg">
+                                <img alt="icon" src="../img/svg/timer.svg">
+                                <img alt="icon" src="../img/svg/flash.svg">
                               </div>
                             </div>
                           </div>
                         </td>
                         <td>
-                          <div class="rounded-[10px] transition hover:bg-[#160C59] p-2 group cursor-pointer relative min-h-[108px] flex-center">
+                          <div
+                            class="rounded-[10px] transition hover:bg-[#160C59] p-2 group cursor-pointer relative min-h-[108px] flex-center">
                             <div>
                               <input type="checkbox" class="absolute w-full h-full inset-0 cursor-pointer opacity-0">
                               <p class="transition group-hover:text-white">14</p>
@@ -867,20 +1332,24 @@
                           </div>
                         </td>
                         <td>
-                          <div class="rounded-[10px] transition hover:bg-[#160C59] p-2 group cursor-pointer relative min-h-[108px] flex-center">
+                          <div
+                            class="rounded-[10px] transition hover:bg-[#160C59] p-2 group cursor-pointer relative min-h-[108px] flex-center">
                             <div>
                               <input type="checkbox" class="absolute w-full h-full inset-0 cursor-pointer opacity-0">
-                            <p class="transition group-hover:text-white">16</p>
-                            <p class="text-xs md:text-sm font-faNumRegular text-dark mt-2 transition group-hover:text-white">1,200,000</p>
-                            <div class="mt-1 flex items-center justify-center gap-0.5 sm:gap-1.5">
-                             <img alt="icon" src="../img/svg/discount-shape.svg">
-                             <img alt="icon" src="../img/svg/timer.svg">
-                            </div>
+                              <p class="transition group-hover:text-white">16</p>
+                              <p
+                                class="text-xs md:text-sm font-faNumRegular text-dark mt-2 transition group-hover:text-white">
+                                1,200,000</p>
+                              <div class="mt-1 flex items-center justify-center gap-0.5 sm:gap-1.5">
+                                <img alt="icon" src="../img/svg/discount-shape.svg">
+                                <img alt="icon" src="../img/svg/timer.svg">
+                              </div>
                             </div>
                           </div>
                         </td>
                         <td class="py-">
-                          <div class="rounded-[10px] transition hover:bg-[#160C59] p-2 group cursor-pointer relative min-h-[108px] flex-center">
+                          <div
+                            class="rounded-[10px] transition hover:bg-[#160C59] p-2 group cursor-pointer relative min-h-[108px] flex-center">
                             <div>
                               <input type="checkbox" class="absolute w-full h-full inset-0 cursor-pointer opacity-0">
                               <p class="transition group-hover:text-white">17</p>
@@ -888,7 +1357,8 @@
                           </div>
                         </td>
                         <td>
-                          <div class="rounded-[10px] transition hover:bg-[#160C59] p-2 group cursor-pointer relative min-h-[108px] flex-center">
+                          <div
+                            class="rounded-[10px] transition hover:bg-[#160C59] p-2 group cursor-pointer relative min-h-[108px] flex-center">
                             <div>
                               <input type="checkbox" class="absolute w-full h-full inset-0 cursor-pointer opacity-0">
                               <p class="transition group-hover:text-white">18</p>
@@ -896,7 +1366,8 @@
                           </div>
                         </td>
                         <td>
-                          <div class="rounded-[10px] transition hover:bg-[#160C59] p-2 group cursor-pointer relative min-h-[108px] flex-center">
+                          <div
+                            class="rounded-[10px] transition hover:bg-[#160C59] p-2 group cursor-pointer relative min-h-[108px] flex-center">
                             <div>
                               <input type="checkbox" class="absolute w-full h-full inset-0 cursor-pointer opacity-0">
                               <p class="transition group-hover:text-white">19</p>
@@ -906,7 +1377,8 @@
                       </tr>
                       <tr>
                         <td>
-                          <div class="rounded-[10px] transition hover:bg-[#160C59] p-2 group cursor-pointer relative min-h-[108px] flex-center">
+                          <div
+                            class="rounded-[10px] transition hover:bg-[#160C59] p-2 group cursor-pointer relative min-h-[108px] flex-center">
                             <div>
                               <input type="checkbox" class="absolute w-full h-full inset-0 cursor-pointer opacity-0">
                               <p class="transition group-hover:text-white">20</p>
@@ -914,7 +1386,8 @@
                           </div>
                         </td>
                         <td>
-                          <div class="rounded-[10px] transition hover:bg-[#160C59] p-2 group cursor-pointer relative min-h-[108px] flex-center">
+                          <div
+                            class="rounded-[10px] transition hover:bg-[#160C59] p-2 group cursor-pointer relative min-h-[108px] flex-center">
                             <div>
                               <input type="checkbox" class="absolute w-full h-full inset-0 cursor-pointer opacity-0">
                               <p class="transition group-hover:text-white">21</p>
@@ -922,20 +1395,24 @@
                           </div>
                         </td>
                         <td>
-                          <div class="rounded-[10px] transition hover:bg-[#160C59] p-2 group cursor-pointer relative min-h-[108px] flex-center">
+                          <div
+                            class="rounded-[10px] transition hover:bg-[#160C59] p-2 group cursor-pointer relative min-h-[108px] flex-center">
                             <div>
                               <input type="checkbox" class="absolute w-full h-full inset-0 cursor-pointer opacity-0">
                               <p class="transition group-hover:text-white">22</p>
-                              <p class="text-xs md:text-sm font-faNumRegular text-dark mt-2 transition group-hover:text-white">1,200,000</p>
+                              <p
+                                class="text-xs md:text-sm font-faNumRegular text-dark mt-2 transition group-hover:text-white">
+                                1,200,000</p>
                               <div class="mt-1 flex items-center justify-center gap-0.5 sm:gap-1.5">
-                               <img alt="icon" src="../img/svg/discount-shape.svg">
-                               <img alt="icon" src="../img/svg/timer.svg">
+                                <img alt="icon" src="../img/svg/discount-shape.svg">
+                                <img alt="icon" src="../img/svg/timer.svg">
                               </div>
                             </div>
                           </div>
                         </td>
                         <td class="py-">
-                          <div class="rounded-[10px] transition hover:bg-[#160C59] p-2 group cursor-pointer relative min-h-[108px] flex-center">
+                          <div
+                            class="rounded-[10px] transition hover:bg-[#160C59] p-2 group cursor-pointer relative min-h-[108px] flex-center">
                             <div>
                               <input type="checkbox" class="absolute w-full h-full inset-0 cursor-pointer opacity-0">
                               <p class="transition group-hover:text-white">24</p>
@@ -943,21 +1420,25 @@
                           </div>
                         </td>
                         <td>
-                          <div class="rounded-[10px] transition hover:bg-[#160C59] p-2 group cursor-pointer relative min-h-[108px] flex-center">
+                          <div
+                            class="rounded-[10px] transition hover:bg-[#160C59] p-2 group cursor-pointer relative min-h-[108px] flex-center">
                             <div>
                               <input type="checkbox" class="absolute w-full h-full inset-0 cursor-pointer opacity-0">
                               <p class="transition group-hover:text-white">23</p>
-                              <p class="text-xs md:text-sm font-faNumRegular text-dark mt-2 transition group-hover:text-white">1,200,000</p>
+                              <p
+                                class="text-xs md:text-sm font-faNumRegular text-dark mt-2 transition group-hover:text-white">
+                                1,200,000</p>
                               <div class="mt-1 flex items-center justify-center gap-0.5 sm:gap-1.5">
                                 <img alt="icon" src="../img/svg/discount-shape.svg">
                                 <img alt="icon" src="../img/svg/timer.svg">
                                 <img alt="icon" src="../img/svg/flash.svg">
-                            </div>
+                              </div>
                             </div>
                           </div>
                         </td>
                         <td>
-                          <div class="rounded-[10px] transition hover:bg-[#160C59] p-2 group cursor-pointer relative min-h-[108px] flex-center">
+                          <div
+                            class="rounded-[10px] transition hover:bg-[#160C59] p-2 group cursor-pointer relative min-h-[108px] flex-center">
                             <div>
                               <input type="checkbox" class="absolute w-full h-full inset-0 cursor-pointer opacity-0">
                               <p class="transition group-hover:text-white">25</p>
@@ -965,7 +1446,8 @@
                           </div>
                         </td>
                         <td>
-                          <div class="rounded-[10px] transition hover:bg-[#160C59] p-2 group cursor-pointer relative min-h-[108px] flex-center">
+                          <div
+                            class="rounded-[10px] transition hover:bg-[#160C59] p-2 group cursor-pointer relative min-h-[108px] flex-center">
                             <div>
                               <input type="checkbox" class="absolute w-full h-full inset-0 cursor-pointer opacity-0">
                               <p class="transition group-hover:text-white">26</p>
@@ -975,7 +1457,8 @@
                       </tr>
                       <tr>
                         <td>
-                          <div class="rounded-[10px] transition hover:bg-[#160C59] p-2 group cursor-pointer relative min-h-[108px] flex-center">
+                          <div
+                            class="rounded-[10px] transition hover:bg-[#160C59] p-2 group cursor-pointer relative min-h-[108px] flex-center">
                             <div>
                               <input type="checkbox" class="absolute w-full h-full inset-0 cursor-pointer opacity-0">
                               <p class="transition group-hover:text-white">26</p>
@@ -983,7 +1466,8 @@
                           </div>
                         </td>
                         <td>
-                          <div class="rounded-[10px] transition hover:bg-[#160C59] p-2 group cursor-pointer relative min-h-[108px] flex-center">
+                          <div
+                            class="rounded-[10px] transition hover:bg-[#160C59] p-2 group cursor-pointer relative min-h-[108px] flex-center">
                             <div>
                               <input type="checkbox" class="absolute w-full h-full inset-0 cursor-pointer opacity-0">
                               <p class="transition group-hover:text-white">27</p>
@@ -991,20 +1475,24 @@
                           </div>
                         </td>
                         <td>
-                          <div class="rounded-[10px] transition hover:bg-[#160C59] p-2 group cursor-pointer relative min-h-[108px] flex-center">
+                          <div
+                            class="rounded-[10px] transition hover:bg-[#160C59] p-2 group cursor-pointer relative min-h-[108px] flex-center">
                             <div>
                               <input type="checkbox" class="absolute w-full h-full inset-0 cursor-pointer opacity-0">
                               <p class="transition group-hover:text-white">28</p>
-                              <p class="text-xs md:text-sm font-faNumRegular text-dark mt-2 transition group-hover:text-white">1,200,000</p>
+                              <p
+                                class="text-xs md:text-sm font-faNumRegular text-dark mt-2 transition group-hover:text-white">
+                                1,200,000</p>
                               <div class="mt-1 flex items-center justify-center gap-0.5 sm:gap-1.5">
-                               <img alt="icon" src="../img/svg/discount-shape.svg">
-                               <img alt="icon" src="../img/svg/timer.svg">
+                                <img alt="icon" src="../img/svg/discount-shape.svg">
+                                <img alt="icon" src="../img/svg/timer.svg">
                               </div>
                             </div>
                           </div>
                         </td>
                         <td class="py-">
-                          <div class="rounded-[10px] transition hover:bg-[#160C59] p-2 group cursor-pointer relative min-h-[108px] flex-center">
+                          <div
+                            class="rounded-[10px] transition hover:bg-[#160C59] p-2 group cursor-pointer relative min-h-[108px] flex-center">
                             <div>
                               <input type="checkbox" class="absolute w-full h-full inset-0 cursor-pointer opacity-0">
                               <p class="transition group-hover:text-white">29</p>
@@ -1012,7 +1500,8 @@
                           </div>
                         </td>
                         <td>
-                          <div class="rounded-[10px] transition hover:bg-[#160C59] p-2 group cursor-pointer relative min-h-[108px] flex-center">
+                          <div
+                            class="rounded-[10px] transition hover:bg-[#160C59] p-2 group cursor-pointer relative min-h-[108px] flex-center">
                             <div>
                               <input type="checkbox" class="absolute w-full h-full inset-0 cursor-pointer opacity-0">
                               <p class="transition group-hover:text-white">30</p>
@@ -1020,7 +1509,8 @@
                           </div>
                         </td>
                         <td>
-                          <div class="rounded-[10px] transition hover:bg-[#160C59] p-2 group cursor-pointer relative min-h-[108px] flex-center">
+                          <div
+                            class="rounded-[10px] transition hover:bg-[#160C59] p-2 group cursor-pointer relative min-h-[108px] flex-center">
                             <div>
                               <input type="checkbox" class="absolute w-full h-full inset-0 cursor-pointer opacity-0">
                               <p class="transition group-hover:text-white"></p>
@@ -1028,7 +1518,8 @@
                           </div>
                         </td>
                         <td>
-                          <div class="rounded-[10px] transition hover:bg-[#160C59] p-2 group cursor-pointer relative min-h-[108px] flex-center">
+                          <div
+                            class="rounded-[10px] transition hover:bg-[#160C59] p-2 group cursor-pointer relative min-h-[108px] flex-center">
                             <div>
                               <input type="checkbox" class="absolute w-full h-full inset-0 cursor-pointer opacity-0">
                               <p class="transition group-hover:text-white"></p>
@@ -1052,73 +1543,141 @@
                     <img alt="icon" src="../img/svg/flash.svg">
                     <p class="text-dark font-semibold">آنی</p>
                   </div>
-                 </div>
+                </div>
               </form>
             </div>
             <div class="lg:col-span-4 col-span-12">
               <div>
-                <a class="mb-4 border border-[#ECECEC] bg-white transition hover:bg-primary group rounded-[10px] p-5 flex items-center gap-6">
+                <a
+                  class="mb-4 border border-[#ECECEC] bg-white transition hover:bg-primary group rounded-[10px] p-5 flex items-center gap-6">
                   <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path class="group-hover:fill-white transition" d="M16.0003 2.66675C12.507 2.66675 9.66699 5.50675 9.66699 9.00008C9.66699 12.4267 12.347 15.2001 15.8403 15.3201C15.947 15.3067 16.0537 15.3067 16.1337 15.3201C16.1603 15.3201 16.1737 15.3201 16.2003 15.3201C16.2137 15.3201 16.2137 15.3201 16.227 15.3201C19.6403 15.2001 22.3203 12.4267 22.3337 9.00008C22.3337 5.50675 19.4937 2.66675 16.0003 2.66675Z" fill="#160C59"/>
-                    <path class="group-hover:fill-white transition" d="M22.7733 18.8666C19.0533 16.3866 12.9866 16.3866 9.23995 18.8666C7.54661 19.9999 6.61328 21.5333 6.61328 23.1733C6.61328 24.8133 7.54661 26.3333 9.22661 27.4533C11.0933 28.7066 13.5466 29.3333 15.9999 29.3333C18.4533 29.3333 20.9066 28.7066 22.7733 27.4533C24.4533 26.3199 25.3866 24.7999 25.3866 23.1466C25.3733 21.5066 24.4533 19.9866 22.7733 18.8666ZM18.5866 24.3466C18.9733 24.7333 18.9733 25.3733 18.5866 25.7599C18.3866 25.9599 18.1333 26.0533 17.8799 26.0533C17.6266 26.0533 17.3733 25.9599 17.1733 25.7599L15.9999 24.5866L14.8266 25.7599C14.6266 25.9599 14.3733 26.0533 14.1199 26.0533C13.8666 26.0533 13.6133 25.9599 13.4133 25.7599C13.0266 25.3733 13.0266 24.7333 13.4133 24.3466L14.5866 23.1733L13.4133 21.9999C13.0266 21.6133 13.0266 20.9733 13.4133 20.5866C13.7999 20.1999 14.4399 20.1999 14.8266 20.5866L15.9999 21.7599L17.1733 20.5866C17.5599 20.1999 18.1999 20.1999 18.5866 20.5866C18.9733 20.9733 18.9733 21.6133 18.5866 21.9999L17.4133 23.1733L18.5866 24.3466Z" fill="#160C59"/>
+                    <path class="group-hover:fill-white transition"
+                      d="M16.0003 2.66675C12.507 2.66675 9.66699 5.50675 9.66699 9.00008C9.66699 12.4267 12.347 15.2001 15.8403 15.3201C15.947 15.3067 16.0537 15.3067 16.1337 15.3201C16.1603 15.3201 16.1737 15.3201 16.2003 15.3201C16.2137 15.3201 16.2137 15.3201 16.227 15.3201C19.6403 15.2001 22.3203 12.4267 22.3337 9.00008C22.3337 5.50675 19.4937 2.66675 16.0003 2.66675Z"
+                      fill="#160C59" />
+                    <path class="group-hover:fill-white transition"
+                      d="M22.7733 18.8666C19.0533 16.3866 12.9866 16.3866 9.23995 18.8666C7.54661 19.9999 6.61328 21.5333 6.61328 23.1733C6.61328 24.8133 7.54661 26.3333 9.22661 27.4533C11.0933 28.7066 13.5466 29.3333 15.9999 29.3333C18.4533 29.3333 20.9066 28.7066 22.7733 27.4533C24.4533 26.3199 25.3866 24.7999 25.3866 23.1466C25.3733 21.5066 24.4533 19.9866 22.7733 18.8666ZM18.5866 24.3466C18.9733 24.7333 18.9733 25.3733 18.5866 25.7599C18.3866 25.9599 18.1333 26.0533 17.8799 26.0533C17.6266 26.0533 17.3733 25.9599 17.1733 25.7599L15.9999 24.5866L14.8266 25.7599C14.6266 25.9599 14.3733 26.0533 14.1199 26.0533C13.8666 26.0533 13.6133 25.9599 13.4133 25.7599C13.0266 25.3733 13.0266 24.7333 13.4133 24.3466L14.5866 23.1733L13.4133 21.9999C13.0266 21.6133 13.0266 20.9733 13.4133 20.5866C13.7999 20.1999 14.4399 20.1999 14.8266 20.5866L15.9999 21.7599L17.1733 20.5866C17.5599 20.1999 18.1999 20.1999 18.5866 20.5866C18.9733 20.9733 18.9733 21.6133 18.5866 21.9999L17.4133 23.1733L18.5866 24.3466Z"
+                      fill="#160C59" />
                   </svg>
-                  <p class="text-lg sm:text-2xl font-bold text-[#2F2F2F] transition group-hover:text-white">پر / خالی</p>
-                  <svg class="rtl:mr-auto ltr:ml-auto" width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path class="group-hover:fill-white transition" d="M0 5C0 2.23858 2.23858 0 5 0H29C31.7614 0 34 2.23858 34 5V14C34 25.0457 25.0457 34 14 34H5C2.23858 34 0 31.7614 0 29V5Z" fill="#FF9704"/>
-                    <path class="group-hover:stroke-[#FF9704] transition" d="M19.2499 22.9401L14.3599 18.0501C13.7824 17.4726 13.7824 16.5276 14.3599 15.9501L19.2499 11.0601" stroke="white" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                  <p class="text-lg sm:text-2xl font-bold text-[#2F2F2F] transition group-hover:text-white">پر / خالی
+                  </p>
+                  <svg class="rtl:mr-auto ltr:ml-auto" width="34" height="34" viewBox="0 0 34 34" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path class="group-hover:fill-white transition"
+                      d="M0 5C0 2.23858 2.23858 0 5 0H29C31.7614 0 34 2.23858 34 5V14C34 25.0457 25.0457 34 14 34H5C2.23858 34 0 31.7614 0 29V5Z"
+                      fill="#FF9704" />
+                    <path class="group-hover:stroke-[#FF9704] transition"
+                      d="M19.2499 22.9401L14.3599 18.0501C13.7824 17.4726 13.7824 16.5276 14.3599 15.9501L19.2499 11.0601"
+                      stroke="white" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"
+                      stroke-linejoin="round" />
                   </svg>
                 </a>
-                <a class="mb-4 border border-[#ECECEC] bg-white transition hover:bg-primary group rounded-[10px] p-5 flex items-center gap-6">
+                <a
+                  class="mb-4 border border-[#ECECEC] bg-white transition hover:bg-primary group rounded-[10px] p-5 flex items-center gap-6">
                   <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path class="group-hover:fill-white transition" d="M17 21.2268H17.8667C18.7333 21.2268 19.4533 20.4534 19.4533 19.5201C19.4533 18.3601 19.04 18.1334 18.36 17.8934L17.0133 17.4268V21.2268H17Z" fill="#160C59"/>
-                    <path class="group-hover:fill-white transition" d="M15.9604 2.53323C8.60041 2.55989 2.64041 8.54656 2.66708 15.9066C2.69375 23.2666 8.68041 29.2266 16.0404 29.1999C23.4004 29.1732 29.3604 23.1866 29.3337 15.8266C29.3071 8.46656 23.3204 2.51989 15.9604 2.53323ZM19.0137 15.9999C20.0537 16.3599 21.4537 17.1332 21.4537 19.5199C21.4537 21.5732 19.8404 23.2266 17.8671 23.2266H17.0004V23.9999C17.0004 24.5466 16.5471 24.9999 16.0004 24.9999C15.4537 24.9999 15.0004 24.5466 15.0004 23.9999V23.2266H14.5204C12.3337 23.2266 10.5604 21.3866 10.5604 19.1199C10.5604 18.5732 11.0137 18.1199 11.5604 18.1199C12.1071 18.1199 12.5604 18.5732 12.5604 19.1199C12.5604 20.2799 13.4404 21.2266 14.5204 21.2266H15.0004V16.7199L12.9871 15.9999C11.9471 15.6399 10.5471 14.8666 10.5471 12.4799C10.5471 10.4266 12.1604 8.77323 14.1337 8.77323H15.0004V7.99989C15.0004 7.45323 15.4537 6.99989 16.0004 6.99989C16.5471 6.99989 17.0004 7.45323 17.0004 7.99989V8.77323H17.4804C19.6671 8.77323 21.4404 10.6132 21.4404 12.8799C21.4404 13.4266 20.9871 13.8799 20.4404 13.8799C19.8937 13.8799 19.4404 13.4266 19.4404 12.8799C19.4404 11.7199 18.5604 10.7732 17.4804 10.7732H17.0004V15.2799L19.0137 15.9999Z" fill="#160C59"/>
-                    <path class="group-hover:fill-white transition" d="M12.5596 12.4934C12.5596 13.6534 12.9729 13.8801 13.6529 14.1201L14.9996 14.5868V10.7734H14.1329C13.2662 10.7734 12.5596 11.5468 12.5596 12.4934Z" fill="#160C59"/>
+                    <path class="group-hover:fill-white transition"
+                      d="M17 21.2268H17.8667C18.7333 21.2268 19.4533 20.4534 19.4533 19.5201C19.4533 18.3601 19.04 18.1334 18.36 17.8934L17.0133 17.4268V21.2268H17Z"
+                      fill="#160C59" />
+                    <path class="group-hover:fill-white transition"
+                      d="M15.9604 2.53323C8.60041 2.55989 2.64041 8.54656 2.66708 15.9066C2.69375 23.2666 8.68041 29.2266 16.0404 29.1999C23.4004 29.1732 29.3604 23.1866 29.3337 15.8266C29.3071 8.46656 23.3204 2.51989 15.9604 2.53323ZM19.0137 15.9999C20.0537 16.3599 21.4537 17.1332 21.4537 19.5199C21.4537 21.5732 19.8404 23.2266 17.8671 23.2266H17.0004V23.9999C17.0004 24.5466 16.5471 24.9999 16.0004 24.9999C15.4537 24.9999 15.0004 24.5466 15.0004 23.9999V23.2266H14.5204C12.3337 23.2266 10.5604 21.3866 10.5604 19.1199C10.5604 18.5732 11.0137 18.1199 11.5604 18.1199C12.1071 18.1199 12.5604 18.5732 12.5604 19.1199C12.5604 20.2799 13.4404 21.2266 14.5204 21.2266H15.0004V16.7199L12.9871 15.9999C11.9471 15.6399 10.5471 14.8666 10.5471 12.4799C10.5471 10.4266 12.1604 8.77323 14.1337 8.77323H15.0004V7.99989C15.0004 7.45323 15.4537 6.99989 16.0004 6.99989C16.5471 6.99989 17.0004 7.45323 17.0004 7.99989V8.77323H17.4804C19.6671 8.77323 21.4404 10.6132 21.4404 12.8799C21.4404 13.4266 20.9871 13.8799 20.4404 13.8799C19.8937 13.8799 19.4404 13.4266 19.4404 12.8799C19.4404 11.7199 18.5604 10.7732 17.4804 10.7732H17.0004V15.2799L19.0137 15.9999Z"
+                      fill="#160C59" />
+                    <path class="group-hover:fill-white transition"
+                      d="M12.5596 12.4934C12.5596 13.6534 12.9729 13.8801 13.6529 14.1201L14.9996 14.5868V10.7734H14.1329C13.2662 10.7734 12.5596 11.5468 12.5596 12.4934Z"
+                      fill="#160C59" />
                   </svg>
-                  <p class="text-lg sm:text-2xl font-bold text-[#2F2F2F] transition group-hover:text-white">تغییر قیمت</p>
-                  <svg class="rtl:mr-auto ltr:ml-auto" width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path class="group-hover:fill-white transition" d="M0 5C0 2.23858 2.23858 0 5 0H29C31.7614 0 34 2.23858 34 5V14C34 25.0457 25.0457 34 14 34H5C2.23858 34 0 31.7614 0 29V5Z" fill="#FF9704"/>
-                    <path class="group-hover:stroke-[#FF9704] transition" d="M19.2499 22.9401L14.3599 18.0501C13.7824 17.4726 13.7824 16.5276 14.3599 15.9501L19.2499 11.0601" stroke="white" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                  <p class="text-lg sm:text-2xl font-bold text-[#2F2F2F] transition group-hover:text-white">تغییر قیمت
+                  </p>
+                  <svg class="rtl:mr-auto ltr:ml-auto" width="34" height="34" viewBox="0 0 34 34" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path class="group-hover:fill-white transition"
+                      d="M0 5C0 2.23858 2.23858 0 5 0H29C31.7614 0 34 2.23858 34 5V14C34 25.0457 25.0457 34 14 34H5C2.23858 34 0 31.7614 0 29V5Z"
+                      fill="#FF9704" />
+                    <path class="group-hover:stroke-[#FF9704] transition"
+                      d="M19.2499 22.9401L14.3599 18.0501C13.7824 17.4726 13.7824 16.5276 14.3599 15.9501L19.2499 11.0601"
+                      stroke="white" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"
+                      stroke-linejoin="round" />
                   </svg>
                 </a>
-                <a class="mb-4 border border-[#ECECEC] bg-white transition hover:bg-primary group rounded-[10px] p-5 flex items-center gap-6">
+                <a
+                  class="mb-4 border border-[#ECECEC] bg-white transition hover:bg-primary group rounded-[10px] p-5 flex items-center gap-6">
                   <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path class="group-hover:fill-white transition" d="M23.88 14.2934H19.76V4.69336C19.76 2.45336 18.5467 2.00003 17.0667 3.68003L16 4.89336L6.97335 15.16C5.73335 16.56 6.25335 17.7067 8.12002 17.7067H12.24V27.3067C12.24 29.5467 13.4533 30 14.9333 28.32L16 27.1067L25.0267 16.84C26.2667 15.44 25.7467 14.2934 23.88 14.2934Z" fill="#160C59"/>
+                    <path class="group-hover:fill-white transition"
+                      d="M23.88 14.2934H19.76V4.69336C19.76 2.45336 18.5467 2.00003 17.0667 3.68003L16 4.89336L6.97335 15.16C5.73335 16.56 6.25335 17.7067 8.12002 17.7067H12.24V27.3067C12.24 29.5467 13.4533 30 14.9333 28.32L16 27.1067L25.0267 16.84C26.2667 15.44 25.7467 14.2934 23.88 14.2934Z"
+                      fill="#160C59" />
                   </svg>
-                  <p class="text-lg sm:text-2xl font-bold text-[#2F2F2F] transition group-hover:text-white">آنی / غیر آنی</p>
-                  <svg class="rtl:mr-auto ltr:ml-auto" width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path class="group-hover:fill-white transition" d="M0 5C0 2.23858 2.23858 0 5 0H29C31.7614 0 34 2.23858 34 5V14C34 25.0457 25.0457 34 14 34H5C2.23858 34 0 31.7614 0 29V5Z" fill="#FF9704"/>
-                    <path class="group-hover:stroke-[#FF9704] transition" d="M19.2499 22.9401L14.3599 18.0501C13.7824 17.4726 13.7824 16.5276 14.3599 15.9501L19.2499 11.0601" stroke="white" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                  <p class="text-lg sm:text-2xl font-bold text-[#2F2F2F] transition group-hover:text-white">آنی / غیر
+                    آنی</p>
+                  <svg class="rtl:mr-auto ltr:ml-auto" width="34" height="34" viewBox="0 0 34 34" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path class="group-hover:fill-white transition"
+                      d="M0 5C0 2.23858 2.23858 0 5 0H29C31.7614 0 34 2.23858 34 5V14C34 25.0457 25.0457 34 14 34H5C2.23858 34 0 31.7614 0 29V5Z"
+                      fill="#FF9704" />
+                    <path class="group-hover:stroke-[#FF9704] transition"
+                      d="M19.2499 22.9401L14.3599 18.0501C13.7824 17.4726 13.7824 16.5276 14.3599 15.9501L19.2499 11.0601"
+                      stroke="white" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"
+                      stroke-linejoin="round" />
                   </svg>
                 </a>
-                <a class="mb-4 border border-[#ECECEC] bg-white transition hover:bg-primary group rounded-[10px] p-5 flex items-center gap-6">
+                <a
+                  class="mb-4 border border-[#ECECEC] bg-white transition hover:bg-primary group rounded-[10px] p-5 flex items-center gap-6">
                   <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path class="group-hover:fill-white transition" d="M16.0003 2.66675C8.64033 2.66675 2.66699 8.64008 2.66699 16.0001C2.66699 23.3601 8.64033 29.3334 16.0003 29.3334C23.3603 29.3334 29.3337 23.3601 29.3337 16.0001C29.3337 8.64008 23.3603 2.66675 16.0003 2.66675ZM11.6403 10.2134C12.7203 10.2134 13.6137 11.0934 13.6137 12.1867C13.6137 13.2667 12.7337 14.1601 11.6403 14.1601C10.5603 14.1601 9.66699 13.2801 9.66699 12.1867C9.66699 11.0934 10.547 10.2134 11.6403 10.2134ZM11.8003 21.0667C11.6003 21.2667 11.347 21.3601 11.0937 21.3601C10.8403 21.3601 10.587 21.2667 10.387 21.0667C10.0003 20.6801 10.0003 20.0401 10.387 19.6534L19.1203 10.9201C19.507 10.5334 20.147 10.5334 20.5337 10.9201C20.9203 11.3067 20.9203 11.9467 20.5337 12.3334L11.8003 21.0667ZM20.3603 21.7867C19.2803 21.7867 18.387 20.9067 18.387 19.8134C18.387 18.7334 19.267 17.8401 20.3603 17.8401C21.4403 17.8401 22.3337 18.7201 22.3337 19.8134C22.3337 20.9067 21.4537 21.7867 20.3603 21.7867Z" fill="#160C59"/>
+                    <path class="group-hover:fill-white transition"
+                      d="M16.0003 2.66675C8.64033 2.66675 2.66699 8.64008 2.66699 16.0001C2.66699 23.3601 8.64033 29.3334 16.0003 29.3334C23.3603 29.3334 29.3337 23.3601 29.3337 16.0001C29.3337 8.64008 23.3603 2.66675 16.0003 2.66675ZM11.6403 10.2134C12.7203 10.2134 13.6137 11.0934 13.6137 12.1867C13.6137 13.2667 12.7337 14.1601 11.6403 14.1601C10.5603 14.1601 9.66699 13.2801 9.66699 12.1867C9.66699 11.0934 10.547 10.2134 11.6403 10.2134ZM11.8003 21.0667C11.6003 21.2667 11.347 21.3601 11.0937 21.3601C10.8403 21.3601 10.587 21.2667 10.387 21.0667C10.0003 20.6801 10.0003 20.0401 10.387 19.6534L19.1203 10.9201C19.507 10.5334 20.147 10.5334 20.5337 10.9201C20.9203 11.3067 20.9203 11.9467 20.5337 12.3334L11.8003 21.0667ZM20.3603 21.7867C19.2803 21.7867 18.387 20.9067 18.387 19.8134C18.387 18.7334 19.267 17.8401 20.3603 17.8401C21.4403 17.8401 22.3337 18.7201 22.3337 19.8134C22.3337 20.9067 21.4537 21.7867 20.3603 21.7867Z"
+                      fill="#160C59" />
                   </svg>
-                  <p class="text-lg sm:text-2xl font-bold text-[#2F2F2F] transition group-hover:text-white">اعمال تخفیف</p>
-                  <svg class="rtl:mr-auto ltr:ml-auto" width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path class="group-hover:fill-white transition" d="M0 5C0 2.23858 2.23858 0 5 0H29C31.7614 0 34 2.23858 34 5V14C34 25.0457 25.0457 34 14 34H5C2.23858 34 0 31.7614 0 29V5Z" fill="#FF9704"/>
-                    <path class="group-hover:stroke-[#FF9704] transition" d="M19.2499 22.9401L14.3599 18.0501C13.7824 17.4726 13.7824 16.5276 14.3599 15.9501L19.2499 11.0601" stroke="white" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                  <p class="text-lg sm:text-2xl font-bold text-[#2F2F2F] transition group-hover:text-white">اعمال تخفیف
+                  </p>
+                  <svg class="rtl:mr-auto ltr:ml-auto" width="34" height="34" viewBox="0 0 34 34" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path class="group-hover:fill-white transition"
+                      d="M0 5C0 2.23858 2.23858 0 5 0H29C31.7614 0 34 2.23858 34 5V14C34 25.0457 25.0457 34 14 34H5C2.23858 34 0 31.7614 0 29V5Z"
+                      fill="#FF9704" />
+                    <path class="group-hover:stroke-[#FF9704] transition"
+                      d="M19.2499 22.9401L14.3599 18.0501C13.7824 17.4726 13.7824 16.5276 14.3599 15.9501L19.2499 11.0601"
+                      stroke="white" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"
+                      stroke-linejoin="round" />
                   </svg>
                 </a>
-                <a class="mb-4 border border-[#ECECEC] bg-white transition hover:bg-primary group rounded-[10px] p-5 flex items-center gap-6">
+                <a
+                  class="mb-4 border border-[#ECECEC] bg-white transition hover:bg-primary group rounded-[10px] p-5 flex items-center gap-6">
                   <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path class="group-hover:fill-white transition" d="M16.0003 2.66675C8.65366 2.66675 2.66699 8.65341 2.66699 16.0001C2.66699 23.3467 8.65366 29.3334 16.0003 29.3334C23.347 29.3334 29.3337 23.3467 29.3337 16.0001C29.3337 8.65341 23.347 2.66675 16.0003 2.66675ZM15.0003 10.6667C15.0003 10.1201 15.4537 9.66675 16.0003 9.66675C16.547 9.66675 17.0003 10.1201 17.0003 10.6667V17.3334C17.0003 17.8801 16.547 18.3334 16.0003 18.3334C15.4537 18.3334 15.0003 17.8801 15.0003 17.3334V10.6667ZM17.227 21.8401C17.1603 22.0134 17.067 22.1467 16.947 22.2801C16.8137 22.4001 16.667 22.4934 16.507 22.5601C16.347 22.6267 16.1737 22.6667 16.0003 22.6667C15.827 22.6667 15.6537 22.6267 15.4937 22.5601C15.3337 22.4934 15.187 22.4001 15.0537 22.2801C14.9337 22.1467 14.8403 22.0134 14.7737 21.8401C14.707 21.6801 14.667 21.5067 14.667 21.3334C14.667 21.1601 14.707 20.9867 14.7737 20.8267C14.8403 20.6667 14.9337 20.5201 15.0537 20.3867C15.187 20.2667 15.3337 20.1734 15.4937 20.1067C15.8137 19.9734 16.187 19.9734 16.507 20.1067C16.667 20.1734 16.8137 20.2667 16.947 20.3867C17.067 20.5201 17.1603 20.6667 17.227 20.8267C17.2937 20.9867 17.3337 21.1601 17.3337 21.3334C17.3337 21.5067 17.2937 21.6801 17.227 21.8401Z" fill="#160C59"/>
+                    <path class="group-hover:fill-white transition"
+                      d="M16.0003 2.66675C8.65366 2.66675 2.66699 8.65341 2.66699 16.0001C2.66699 23.3467 8.65366 29.3334 16.0003 29.3334C23.347 29.3334 29.3337 23.3467 29.3337 16.0001C29.3337 8.65341 23.347 2.66675 16.0003 2.66675ZM15.0003 10.6667C15.0003 10.1201 15.4537 9.66675 16.0003 9.66675C16.547 9.66675 17.0003 10.1201 17.0003 10.6667V17.3334C17.0003 17.8801 16.547 18.3334 16.0003 18.3334C15.4537 18.3334 15.0003 17.8801 15.0003 17.3334V10.6667ZM17.227 21.8401C17.1603 22.0134 17.067 22.1467 16.947 22.2801C16.8137 22.4001 16.667 22.4934 16.507 22.5601C16.347 22.6267 16.1737 22.6667 16.0003 22.6667C15.827 22.6667 15.6537 22.6267 15.4937 22.5601C15.3337 22.4934 15.187 22.4001 15.0537 22.2801C14.9337 22.1467 14.8403 22.0134 14.7737 21.8401C14.707 21.6801 14.667 21.5067 14.667 21.3334C14.667 21.1601 14.707 20.9867 14.7737 20.8267C14.8403 20.6667 14.9337 20.5201 15.0537 20.3867C15.187 20.2667 15.3337 20.1734 15.4937 20.1067C15.8137 19.9734 16.187 19.9734 16.507 20.1067C16.667 20.1734 16.8137 20.2667 16.947 20.3867C17.067 20.5201 17.1603 20.6667 17.227 20.8267C17.2937 20.9867 17.3337 21.1601 17.3337 21.3334C17.3337 21.5067 17.2937 21.6801 17.227 21.8401Z"
+                      fill="#160C59" />
                   </svg>
-                  <p class="text-lg sm:text-2xl font-bold text-[#2F2F2F] transition group-hover:text-white">لحظه آخری</p>
-                  <svg class="rtl:mr-auto ltr:ml-auto" width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path class="group-hover:fill-white transition" d="M0 5C0 2.23858 2.23858 0 5 0H29C31.7614 0 34 2.23858 34 5V14C34 25.0457 25.0457 34 14 34H5C2.23858 34 0 31.7614 0 29V5Z" fill="#FF9704"/>
-                    <path class="group-hover:stroke-[#FF9704] transition" d="M19.2499 22.9401L14.3599 18.0501C13.7824 17.4726 13.7824 16.5276 14.3599 15.9501L19.2499 11.0601" stroke="white" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                  <p class="text-lg sm:text-2xl font-bold text-[#2F2F2F] transition group-hover:text-white">لحظه آخری
+                  </p>
+                  <svg class="rtl:mr-auto ltr:ml-auto" width="34" height="34" viewBox="0 0 34 34" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path class="group-hover:fill-white transition"
+                      d="M0 5C0 2.23858 2.23858 0 5 0H29C31.7614 0 34 2.23858 34 5V14C34 25.0457 25.0457 34 14 34H5C2.23858 34 0 31.7614 0 29V5Z"
+                      fill="#FF9704" />
+                    <path class="group-hover:stroke-[#FF9704] transition"
+                      d="M19.2499 22.9401L14.3599 18.0501C13.7824 17.4726 13.7824 16.5276 14.3599 15.9501L19.2499 11.0601"
+                      stroke="white" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"
+                      stroke-linejoin="round" />
                   </svg>
                 </a>
-                <a class="border border-[#ECECEC] bg-white transition hover:bg-primary group rounded-[10px] p-5 flex items-center gap-6">
+                <a
+                  class="border border-[#ECECEC] bg-white transition hover:bg-primary group rounded-[10px] p-5 flex items-center gap-6">
                   <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path class="group-hover:fill-white transition" d="M16.0004 6.19995C9.6271 6.19995 4.44043 11.3866 4.44043 17.76C4.44043 24.1333 9.6271 29.3333 16.0004 29.3333C22.3738 29.3333 27.5604 24.1466 27.5604 17.7733C27.5604 11.4 22.3738 6.19995 16.0004 6.19995ZM17.0004 17.3333C17.0004 17.88 16.5471 18.3333 16.0004 18.3333C15.4538 18.3333 15.0004 17.88 15.0004 17.3333V10.6666C15.0004 10.12 15.4538 9.66662 16.0004 9.66662C16.5471 9.66662 17.0004 10.12 17.0004 10.6666V17.3333Z" fill="#160C59"/>
-                    <path class="group-hover:fill-white transition" d="M19.8532 4.60008H12.1465C11.6132 4.60008 11.1865 4.17341 11.1865 3.64008C11.1865 3.10675 11.6132 2.66675 12.1465 2.66675H19.8532C20.3865 2.66675 20.8132 3.09341 20.8132 3.62675C20.8132 4.16008 20.3865 4.60008 19.8532 4.60008Z" fill="#160C59"/>
+                    <path class="group-hover:fill-white transition"
+                      d="M16.0004 6.19995C9.6271 6.19995 4.44043 11.3866 4.44043 17.76C4.44043 24.1333 9.6271 29.3333 16.0004 29.3333C22.3738 29.3333 27.5604 24.1466 27.5604 17.7733C27.5604 11.4 22.3738 6.19995 16.0004 6.19995ZM17.0004 17.3333C17.0004 17.88 16.5471 18.3333 16.0004 18.3333C15.4538 18.3333 15.0004 17.88 15.0004 17.3333V10.6666C15.0004 10.12 15.4538 9.66662 16.0004 9.66662C16.5471 9.66662 17.0004 10.12 17.0004 10.6666V17.3333Z"
+                      fill="#160C59" />
+                    <path class="group-hover:fill-white transition"
+                      d="M19.8532 4.60008H12.1465C11.6132 4.60008 11.1865 4.17341 11.1865 3.64008C11.1865 3.10675 11.6132 2.66675 12.1465 2.66675H19.8532C20.3865 2.66675 20.8132 3.09341 20.8132 3.62675C20.8132 4.16008 20.3865 4.60008 19.8532 4.60008Z"
+                      fill="#160C59" />
                   </svg>
-                  <p class="text-lg sm:text-2xl font-bold text-[#2F2F2F] transition group-hover:text-white">محدودیت رزرو</p>
-                  <svg class="rtl:mr-auto ltr:ml-auto" width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path class="group-hover:fill-white transition" d="M0 5C0 2.23858 2.23858 0 5 0H29C31.7614 0 34 2.23858 34 5V14C34 25.0457 25.0457 34 14 34H5C2.23858 34 0 31.7614 0 29V5Z" fill="#FF9704"/>
-                    <path class="group-hover:stroke-[#FF9704] transition" d="M19.2499 22.9401L14.3599 18.0501C13.7824 17.4726 13.7824 16.5276 14.3599 15.9501L19.2499 11.0601" stroke="white" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                  <p class="text-lg sm:text-2xl font-bold text-[#2F2F2F] transition group-hover:text-white">محدودیت رزرو
+                  </p>
+                  <svg class="rtl:mr-auto ltr:ml-auto" width="34" height="34" viewBox="0 0 34 34" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path class="group-hover:fill-white transition"
+                      d="M0 5C0 2.23858 2.23858 0 5 0H29C31.7614 0 34 2.23858 34 5V14C34 25.0457 25.0457 34 14 34H5C2.23858 34 0 31.7614 0 29V5Z"
+                      fill="#FF9704" />
+                    <path class="group-hover:stroke-[#FF9704] transition"
+                      d="M19.2499 22.9401L14.3599 18.0501C13.7824 17.4726 13.7824 16.5276 14.3599 15.9501L19.2499 11.0601"
+                      stroke="white" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"
+                      stroke-linejoin="round" />
                   </svg>
                 </a>
               </div>
@@ -1330,6 +1889,8 @@
   </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="../js/otp.js"></script>
+  <script src="../js/modal.js"></script>
   <script src="../js/script.js"></script>
 </body>
 
