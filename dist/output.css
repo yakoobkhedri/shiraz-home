@@ -987,8 +987,20 @@ video {
   grid-column: span 6 / span 6;
 }
 
+.m-3 {
+  margin: 0.75rem;
+}
+
 .m-auto {
   margin: auto;
+}
+
+.m-2 {
+  margin: 0.5rem;
+}
+
+.m-1 {
+  margin: 0.25rem;
 }
 
 .mx-4 {
@@ -1405,6 +1417,10 @@ video {
   height: 0.875rem;
 }
 
+.h-4 {
+  height: 1rem;
+}
+
 .h-4\/6 {
   height: 66.666667%;
 }
@@ -1719,6 +1735,14 @@ video {
 
 .w-16 {
   width: 4rem;
+}
+
+.w-2 {
+  width: 0.5rem;
+}
+
+.w-2\.5 {
+  width: 0.625rem;
 }
 
 .w-20 {
@@ -2404,11 +2428,6 @@ video {
   border-color: #BE1D1D2E;
 }
 
-.border-\[\#DEDEDE\] {
-  --tw-border-opacity: 1;
-  border-color: rgb(222 222 222 / var(--tw-border-opacity));
-}
-
 .border-\[\#E4E4E4\] {
   --tw-border-opacity: 1;
   border-color: rgb(228 228 228 / var(--tw-border-opacity));
@@ -2511,6 +2530,11 @@ video {
 .bg-\[\#F01212\] {
   --tw-bg-opacity: 1;
   background-color: rgb(240 18 18 / var(--tw-bg-opacity));
+}
+
+.bg-\[\#F3F3F3\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(243 243 243 / var(--tw-bg-opacity));
 }
 
 .bg-\[\#F4F4F4\] {
@@ -2645,6 +2669,11 @@ video {
 .bg-white {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+}
+
+.bg-\[\#F1F1F1\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(241 241 241 / var(--tw-bg-opacity));
 }
 
 .fill-\[\#ffebcf\] {
@@ -4276,12 +4305,46 @@ input[type="number"] {
   background-color: #FF9704;
 }
 
-.dateCheckbox.active{
+/* .dateCheckbox.active{
   background-color: #160C59;
 }
-
 .dateCheckbox.active p{
   color: white;
+} */
+
+.dateCheckbox.blocked{
+  background-color: #FFF6EA;
+}
+
+.dateCheckbox.reserved{
+  background-color: #FFDEDE;
+}
+
+.dateCheckbox.notReserved{
+  background-color: #E7FFEF;
+}
+
+.dateCheckbox div.dot,.dateCheckbox p:last-child{
+  display: none;
+}
+
+.dateCheckbox.blocked p:last-child,.dateCheckbox.reserved p:last-child,.dateCheckbox.notReserved p:last-child{
+  display: block;
+}
+
+.dateCheckbox.blocked div.dot{
+  background: #FF9704;
+  display: block;
+}
+
+.dateCheckbox.reserved div.dot{
+  background: #F01212;
+  display: block;
+}
+
+.dateCheckbox.notReserved div.dot{
+  background: #02C33F;
+  display: block;
 }
 
 /* dashboard */
@@ -6265,6 +6328,10 @@ html[dir="rtl"] .data_imagesContLeftRight {
 
   .md\:col-span-9 {
     grid-column: span 9 / span 9;
+  }
+
+  .md\:m-3 {
+    margin: 0.75rem;
   }
 
   .md\:mb-5 {

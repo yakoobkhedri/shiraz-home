@@ -1,0 +1,1830 @@
+<!DOCTYPE html>
+<html dir="rtl">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0 maximum-scale=1" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <link href="../../dist/output.css" rel="stylesheet">
+  <title>جزئیات اقامتگاه</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/flatpickr/dist/l10n/ru.js"></script>
+</head>
+
+<body class="max-w-[1536px] w-full mx-auto relative">
+
+  <!-- video modal && gallery modal && login modal -->
+  <div class="modal">
+    <div style="visibility: hidden; opacity: 0;" data-button="video-modal"
+      class="modal-container overflow-auto bg-black/60 backdrop-blur-sm fixed inset-0 z-[100] transition-all flex justify-center items-center px-4 sm:px-7">
+      <div
+        class="modal-content bg-white max-w-[797px] md:h-[354px] w-full rounded-[27px] p-7 pb-11 md:p-5 flex flex-col md:flex-row justify-center md:justify-start items-center gap-7 md:gap-14 relative">
+        <video class="w-full h-full" controls>
+          <source src="../img/64ad88885b273.mp4" type="video/mp4">
+        </video>
+        <button class="absolute top-4 left-4 ltr:right-4 ltr:left-auto close-button p-2 group">
+          <svg class="w-4" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path class="group-hover:stroke-red-600 transition" opacity="0.3" d="M16 2L2 16M2 2L16 16" stroke="black"
+              stroke-width="2.15385" stroke-linecap="round" stroke-linejoin="round"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+    <div style="visibility: hidden; opacity: 0;" data-button="gallery-modal"
+      class="modal-container overflow-auto bg-black/60 backdrop-blur-sm fixed inset-0 z-[100] transition-all flex justify-center items-center px-4 sm:px-7">
+      <div class="modal-content max-w-content mx-auto w-full">
+        <div class="relative">
+          <div class="swiper gallery">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <img alt="img" src="../img/image (9).png" class="w-full sm:w-5/6 rounded-xl mx-auto">
+              </div>
+              <div class="swiper-slide">
+                <img alt="img" src="../img/image (9).png" class="w-full sm:w-5/6 rounded-xl mx-auto">
+              </div>
+            </div>
+          </div>
+          <div class="swiper-button-next2 !absolute flex-center z-10 my-auto top-1/2 right-0">
+            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor"
+              class="text-white bi bi-chevron-right" viewBox="0 0 16 16">
+              <path fill-rule="evenodd"
+                d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708" />
+            </svg>
+          </div>
+          <div class="swiper-button-prev2 !absolute flex-center z-10 my-auto top-1/2 left-0">
+            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor"
+              class="text-white bi bi-chevron-left" viewBox="0 0 16 16">
+              <path fill-rule="evenodd"
+                d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0" />
+            </svg>
+          </div>
+          <button class="absolute z-10 -top-14 sm:top-8 left-4 ltr:right-4 ltr:left-auto close-button p-2 group">
+            <svg class="w-6 sm:w-8" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path class="group-hover:stroke-red-600 transition" d="M16 2L2 16M2 2L16 16" stroke="white"
+                stroke-width="2.15385" stroke-linecap="round" stroke-linejoin="round"></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div style="visibility: hidden; opacity: 0;" data-button="login-modal"
+          class="modal-container overflow-auto bg-black/60 backdrop-blur-sm fixed inset-0 z-50 transition-all flex justify-center items-center px-4 sm:px-7">
+          <form id="loginForm"
+            class="modal-content bg-white max-w-[526px] overflow-hidden relative w-full rounded-[27px] shadow-8">
+            <img alt="shape" src="../img/Rectangle 165.png" class="absolute top-0 inset-x-0 h-[109px] w-full">
+            <div class="p-4 relative">
+              <div class="flex items-center justify-between mb-5 relative mt-4">
+                <div class="font-bold px-4 flex items-center gap-2 text-white">
+                  <p>ورود/ثبت نام</p>
+                </div>
+                <!-- close modal -->
+                <svg class="cursor-pointer close-button" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M13.41 11.9999L17.71 7.70994C17.8983 7.52164 18.0041 7.26624 18.0041 6.99994C18.0041 6.73364 17.8983 6.47825 17.71 6.28994C17.5217 6.10164 17.2663 5.99585 17 5.99585C16.7337 5.99585 16.4783 6.10164 16.29 6.28994L12 10.5899L7.71 6.28994C7.5217 6.10164 7.2663 5.99585 7 5.99585C6.7337 5.99585 6.4783 6.10164 6.29 6.28994C6.1017 6.47825 5.99591 6.73364 5.99591 6.99994C5.99591 7.26624 6.1017 7.52164 6.29 7.70994L10.59 11.9999L6.29 16.2899C6.19627 16.3829 6.12188 16.4935 6.07111 16.6154C6.02034 16.7372 5.9942 16.8679 5.9942 16.9999C5.9942 17.132 6.02034 17.2627 6.07111 17.3845C6.12188 17.5064 6.19627 17.617 6.29 17.7099C6.38296 17.8037 6.49356 17.8781 6.61542 17.9288C6.73728 17.9796 6.86799 18.0057 7 18.0057C7.13201 18.0057 7.26272 17.9796 7.38458 17.9288C7.50644 17.8781 7.61704 17.8037 7.71 17.7099L12 13.4099L16.29 17.7099C16.383 17.8037 16.4936 17.8781 16.6154 17.9288C16.7373 17.9796 16.868 18.0057 17 18.0057C17.132 18.0057 17.2627 17.9796 17.3846 17.9288C17.5064 17.8781 17.617 17.8037 17.71 17.7099C17.8037 17.617 17.8781 17.5064 17.9289 17.3845C17.9797 17.2627 18.0058 17.132 18.0058 16.9999C18.0058 16.8679 17.9797 16.7372 17.9289 16.6154C17.8781 16.4935 17.8037 16.3829 17.71 16.2899L13.41 11.9999Z"
+                    fill="white"></path>
+                </svg>
+              </div>
+              <!-- form -->
+              <div class="mt-[4rem] relative">
+                <div class="rounded-[10px] border border-[#EEF1FA] h-16 px-3 flex items-center justify-between gap-2">
+                 <div class="flex items-center gap-3 flex-grow">
+                   <img alt="icon" src="../img/svg/mobile.svg" class="flex-shrink-0">
+                   <input type="tel" class="bg-transparent border-0 w-full flex-grow outline-none">
+                 </div>
+                 <button class="flex-shrink-0 text-xs sm:text-sm text-[#160C59] font-bold">دریافت کد تایید</button>
+                </div>
+                <div class="otpContainer mt-9 flex-center font-faNumBold gap-3 sm:gap-6" dir="ltr">
+                  <input type="number" value="" maxlength="1" class="block w-[53px] h-[53px] rounded-[10px] border border-[#EEF1FA] text-center otpInput bg-white outline-none">
+                  <input type="number" value="" maxlength="1" disabled="" class="block w-[53px] h-[53px] rounded-[10px] border border-[#EEF1FA] text-center otpInput bg-white outline-none">
+                  <input type="number" value="" maxlength="1" disabled="" class="block w-[53px] h-[53px] rounded-[10px] border border-[#EEF1FA] text-center otpInput bg-white outline-none">
+                  <input type="number" value="" maxlength="1" disabled="" class="block w-[53px] h-[53px] rounded-[10px] border border-[#EEF1FA] text-center otpInput bg-white outline-none">
+                </div>
+                <input type="hidden" id="otpHiddenInput">
+                <div class="flex items-center flex-col sm:flex-row gap-3 flex-grow mt-9">
+                  <div class="bg-white border border-[#EEF1FA] px-3 text-[#393939] flex-shrink-0 rounded-[10px] flex-center h-[65px] font-faNumBold text-2xl">
+                      856985
+                  </div>
+                  <div class="rounded-[10px] w-full px-[14px] flex-between gap-3 bg-white border border-[#EEF1FA] text-sm font-faNumBold h-[65px]">
+                      <input placeholder="کد امنیتی" class="flex-grow bg-transparent outline-none w-full">
+                      <img alt="icon" src="../img/svg/shield-tick.svg" class="flex-shrink-0">
+                  </div>
+                 </div>
+                 <label class="flex items-center gap-2 cursor-pointer mt-5">
+                  <div class="inline-flex items-center gap-2">
+                    <label class="relative flex items-center p-1 rounded-full cursor-pointer" htmlfor="black">
+                      <input name="type" type="checkbox" class="before:content[''] bg-white border border-[#EEF1FA] peer relative h-6 w-6 cursor-pointer appearance-none overflow-hidden rounded-[5px] text-[#ECECEC] transition-all before:absolute before:top-2/4 before:left-2/4 before:block before:h-12 before:w-12 before:-translate-y-2/4 before:-translate-x-2/4 before:rounded-full before:bg-[#ECECEC] before:opacity-0 before:transition-opacity checked:border-orange checked:before:bg-orange hover:before:opacity-10" id="black">
+                      <span class="absolute text-primary transition-opacity opacity-0 pointer-events-none rounded-[5px] top-2/4 left-2/4 -translate-y-2/4 -translate-x-2/4 peer-checked:opacity-100">
+                        <div class="w-6 h-6 rounded-[5px] bg-primary"></div>
+                      </span>
+                    </label>
+                    <p class="text-sm font-semibold text-primary">
+                      مرا به یاد داشته باش</p>
+                  </div>
+                </label>
+                <button type="submit" class="rounded-[10px] btnHover w-full text-xl sm:text-2xl h-[51px] sm:h-[65px] bg-primary font-extrabold mt-5 sm:mt-8 flex-center text-white">ورود</button>
+              </div>
+          </form>
+    </div>
+  </div>
+
+  <!-- header -->
+  <header class="relative">
+    <div class="max-w-content mx-auto px-4 ">
+      <div class="flex-between gap-3 py-3 text-xs sm:text-base">
+        <ul class="font-medium flex items-center sm:gap-8 gap-4">
+          <li><a class="hover:text-primary">سوالات متداول</a></li>
+          <li><a class="hover:text-primary">سوالات متداول</a></li>
+        </ul>
+        <div class="flex items-center gap-[14px] md:gap-7">
+          <div class="flex items-center gap-2">
+            <div class="text-dark">
+              <h5 class="font-semibold ltr:font-MontserratBold">پشتیبانی</h5>
+              <p class="mt-1"><span class="font-faNumRegular">021</span><span class="font-faNumBold">-1234567</span></p>
+            </div>
+            <a class="w-11 h-11 rounded-full bg-gray hover:bg-primary transition flex-center group">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path class="transition group-hover:fill-[#F7F7F7]"
+                  d="M21 8.55H16.2C15.79 8.55 15.45 8.21 15.45 7.8V3C15.45 2.59 15.79 2.25 16.2 2.25C16.61 2.25 16.95 2.59 16.95 3V7.05H21C21.41 7.05 21.75 7.39 21.75 7.8C21.75 8.21 21.41 8.55 21 8.55Z"
+                  fill="#FF9704" />
+                <path class="transition group-hover:fill-[#F7F7F7]"
+                  d="M11.05 14.95L9.2 16.8C8.81 17.19 8.19 17.19 7.79 16.81C7.68 16.7 7.57 16.6 7.46 16.49C6.43 15.45 5.5 14.36 4.67 13.22C3.85 12.08 3.19 10.94 2.71 9.81C2.24 8.67 2 7.58 2 6.54C2 5.86 2.12 5.21 2.36 4.61C2.6 4 2.98 3.44 3.51 2.94C4.15 2.31 4.85 2 5.59 2C5.87 2 6.15 2.06 6.4 2.18C6.66 2.3 6.89 2.48 7.07 2.74L9.39 6.01C9.57 6.26 9.7 6.49 9.79 6.71C9.88 6.92 9.93 7.13 9.93 7.32C9.93 7.56 9.86 7.8 9.72 8.03C9.59 8.26 9.4 8.5 9.16 8.74L8.4 9.53C8.29 9.64 8.24 9.77 8.24 9.93C8.24 10.01 8.25 10.08 8.27 10.16C8.3 10.24 8.33 10.3 8.35 10.36C8.53 10.69 8.84 11.12 9.28 11.64C9.73 12.16 10.21 12.69 10.73 13.22C10.83 13.32 10.94 13.42 11.04 13.52C11.44 13.91 11.45 14.55 11.05 14.95Z"
+                  fill="#FF9704" />
+                <path class="transition group-hover:fill-[#F7F7F7]"
+                  d="M21.97 18.33C21.97 18.61 21.92 18.9 21.82 19.18C21.79 19.26 21.76 19.34 21.72 19.42C21.55 19.78 21.33 20.12 21.04 20.44C20.55 20.98 20.01 21.37 19.4 21.62C19.39 21.62 19.38 21.63 19.37 21.63C18.78 21.87 18.14 22 17.45 22C16.43 22 15.34 21.76 14.19 21.27C13.04 20.78 11.89 20.12 10.75 19.29C10.36 19 9.96998 18.71 9.59998 18.4L12.87 15.13C13.15 15.34 13.4 15.5 13.61 15.61C13.66 15.63 13.72 15.66 13.79 15.69C13.87 15.72 13.95 15.73 14.04 15.73C14.21 15.73 14.34 15.67 14.45 15.56L15.21 14.81C15.46 14.56 15.7 14.37 15.93 14.25C16.16 14.11 16.39 14.04 16.64 14.04C16.83 14.04 17.03 14.08 17.25 14.17C17.47 14.26 17.7 14.39 17.95 14.56L21.26 16.91C21.52 17.09 21.7 17.3 21.81 17.55C21.91 17.8 21.97 18.05 21.97 18.33Z"
+                  fill="#FF9704" />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- mobile menu -->
+    <div
+      class="sm:rounded-3xl rounded-xl shadow-lg p-[22px] pt-8 mobileMenu absolute lg:hidden bg-white -mt-[30px] sm:-mt-2 z-40 text-[#ff9704] text-sm font-bold inset-x-4">
+      <!-- shape -->
+      <div class="w-9 h-9 rounded-[10px] bg-white absolute rotate-45 rtl:right-8 ltr:left-8 -top-2"></div>
+      <!--  -->
+      <div class="flex items-center justify-between pb-5 border-b border-[#F4F4F4] mb-2">
+        <!-- logo -->
+        <a href="index.html"><img alt="logo" src="../img/IMAGE 1403-10-08 22_36_07 1 1.png"
+            class="w-[83px] min-[400px]:w-[129px] block"></a>
+        <!-- close menu -->
+        <svg class="cursor-pointer" id="closemenu" width="24" height="24" viewBox="0 0 24 24" fill="none"
+          xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M13.41 11.9999L17.71 7.70994C17.8983 7.52164 18.0041 7.26624 18.0041 6.99994C18.0041 6.73364 17.8983 6.47825 17.71 6.28994C17.5217 6.10164 17.2663 5.99585 17 5.99585C16.7337 5.99585 16.4783 6.10164 16.29 6.28994L12 10.5899L7.71 6.28994C7.5217 6.10164 7.2663 5.99585 7 5.99585C6.7337 5.99585 6.4783 6.10164 6.29 6.28994C6.1017 6.47825 5.99591 6.73364 5.99591 6.99994C5.99591 7.26624 6.1017 7.52164 6.29 7.70994L10.59 11.9999L6.29 16.2899C6.19627 16.3829 6.12188 16.4935 6.07111 16.6154C6.02034 16.7372 5.9942 16.8679 5.9942 16.9999C5.9942 17.132 6.02034 17.2627 6.07111 17.3845C6.12188 17.5064 6.19627 17.617 6.29 17.7099C6.38296 17.8037 6.49356 17.8781 6.61542 17.9288C6.73728 17.9796 6.86799 18.0057 7 18.0057C7.13201 18.0057 7.26272 17.9796 7.38458 17.9288C7.50644 17.8781 7.61704 17.8037 7.71 17.7099L12 13.4099L16.29 17.7099C16.383 17.8037 16.4936 17.8781 16.6154 17.9288C16.7373 17.9796 16.868 18.0057 17 18.0057C17.132 18.0057 17.2627 17.9796 17.3846 17.9288C17.5064 17.8781 17.617 17.8037 17.71 17.7099C17.8037 17.617 17.8781 17.5064 17.9289 17.3845C17.9797 17.2627 18.0058 17.132 18.0058 16.9999C18.0058 16.8679 17.9797 16.7372 17.9289 16.6154C17.8781 16.4935 17.8037 16.3829 17.71 16.2899L13.41 11.9999Z"
+            fill="#1E2D48"></path>
+        </svg>
+      </div>
+      <!-- menu -->
+      <ul class="font-semibold">
+        <li>
+          <a class="py-3 flex items-center gap-2 text-[#4A4A4A] hover:text-primary transition">
+            <p>صفحه اصلی</p>
+          </a>
+        </li>
+        <li>
+          <div class="py-3 cursor-pointer group flex items-center justify-between" id="dropdownBtn">
+            <div class="flex items-center gap-2 text-[#4A4A4A] group-hover:text-primary transition">
+              <p>اقامتگاه ها</p>
+            </div>
+            <svg class="rotate-180 transition-all" xmlns="http://www.w3.org/2000/svg" width="12" height="7"
+              viewBox="0 0 12 7" fill="none">
+              <path d="M10.6001 5.68237L5.8001 0.882374L1.0001 5.68237" stroke="black" stroke-linecap="square"></path>
+            </svg>
+          </div>
+          <div class="font-semibold text-[#363636] dropdownContent">
+            <ul>
+              <li>
+                <a
+                  class="hover:text-primary transition last:mb-0 mb-[18px] py-2 flex items-center justify-between relative">
+                  <div class="flex items-center gap-3">
+                    <img alt="img" src="../img/svg/Ellipse 10.svg" class="flex-shrink-0">
+                    <p class="font-semibold">اقامتگاه <span class="font-faNumBold">1</span></p>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a
+                  class="hover:text-primary transition last:mb-0 mb-[18px] py-2 flex items-center justify-between relative">
+                  <div class="flex items-center gap-3">
+                    <img alt="img" src="../img/svg/Ellipse 10.svg" class="flex-shrink-0">
+                    <p class="font-semibold">اقامتگاه <span class="font-faNumBold">2</span></p>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a
+                  class="hover:text-primary transition last:mb-0 mb-[18px] py-2 flex items-center justify-between relative">
+                  <div class="flex items-center gap-3">
+                    <img alt="img" src="../img/svg/Ellipse 10.svg" class="flex-shrink-0">
+                    <p class="font-semibold">اقامتگاه <span class="font-faNumBold">3</span></p>
+                  </div>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </li>
+        <li>
+          <a class="py-3 flex items-center gap-2 text-[#4A4A4A] hover:text-primary transition">
+            <p>پیشنهاد های ویژه</p>
+          </a>
+        </li>
+        <li>
+          <a class="py-3 flex items-center gap-2 text-[#4A4A4A] hover:text-primary transition">
+            <p>میزبان شوید!</p>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- main -->
+  <main class="relative">
+
+    <!-- title && menu -->
+    <section class="sm:pt-11 pt-8 relative mt-2 sm:mt-0">
+      <!-- shape && logo -->
+      <img alt="shape" src="../img/svg/Vector 88.svg"
+        class="absolute inset-x-0 sm:h-10 w-44 sm:w-auto mx-auto top-0 xl:hidden z-2">
+      <img alt="shape" src="../img/Rectangle 19.png" class="absolute inset-x-0 w-full top-0 h-[109px] sm:h-[253px]">
+      <img alt="logo" src="../img/IMAGE 1403-10-08 22_36_07 1 1.png"
+        class="absolute inset-x-0 w-24 sm:w-auto mx-auto top-0 sm:-top-3 z-2">
+      <!--  -->
+      <div class="max-w-content mx-auto px-4 relative">
+        <div class="flex items-center justify-between gap-3">
+          <div class="lg:hidden cursor-pointer group" id="hamIcon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path class="transition group-hover:stroke-primary" d="M12 4.5H21" stroke="white" stroke-width="1.5"
+                stroke-linecap="round" stroke-linejoin="round"></path>
+              <path class="transition group-hover:stroke-primary" d="M12 9.5H21" stroke="white" stroke-width="1.5"
+                stroke-linecap="round" stroke-linejoin="round"></path>
+              <path class="transition group-hover:stroke-primary" d="M3 14.5H21" stroke="white" stroke-width="1.5"
+                stroke-linecap="round" stroke-linejoin="round"></path>
+              <path class="transition group-hover:stroke-primary" d="M3 19.5H21" stroke="white" stroke-width="1.5"
+                stroke-linecap="round" stroke-linejoin="round"></path>
+            </svg>
+          </div>
+          <ul class="text-sm hidden font-bold lg:flex items-center gap-12">
+            <li><a class="text-white transition hover:text-primary">صفحه اصلی</a></li>
+            <li>
+              <div class="relative group">
+                <div
+                  class="cursor-pointer group flex items-center gap-2.5 text-white transition group-hover:text-primary">
+                  <p>اقامتگاه ها</p>
+                  <svg width="9" height="6" viewBox="0 0 9 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path class="group-hover:stroke-primary transition" d="M1.5 1.5L4.5 4.5L7.5 1.5" stroke="white"
+                      stroke-linecap="square"></path>
+                  </svg>
+                </div>
+                <!-- dropdown -->
+                <div
+                  class="absolute z-20 group-hover:top-4 top-16 transition opacity-0 group-hover:opacity-100 invisible group-hover:visible">
+                  <div class="mt-8 bg-white min-w-[460px] rounded-[20px] py-5 shadow-lg relative">
+                    <!-- shape -->
+                    <div class="w-9 h-9 rounded-[10px] bg-white absolute rotate-45 rtl:right-8 ltr:left-8 -top-2"></div>
+                    <!--  -->
+                    <a
+                      class="hover:text-primary transition last:mb-0 mb-[18px] py-2 px-4 flex items-center justify-between gap-1 relative">
+                      <div class="flex items-center gap-4">
+                        <img alt="img" src="../img/svg/Ellipse 10.svg" class="flex-shrink-0">
+                        <p class="font-semibold text-lg">اقامتگاه <span class="font-faNumBold">1</span></p>
+                      </div>
+                    </a>
+                    <a
+                      class="hover:text-primary transition last:mb-0 mb-[18px] py-2 px-4 flex items-center justify-between gap-1 relative">
+                      <div class="flex items-center gap-4">
+                        <img alt="img" src="../img/svg/Ellipse 10.svg" class="flex-shrink-0">
+                        <p class="font-semibold text-lg">اقامتگاه <span class="font-faNumBold">2</span></p>
+                      </div>
+                    </a>
+                    <a
+                      class="hover:text-primary transition last:mb-0 mb-[18px] py-2 px-4 flex items-center justify-between gap-1 relative">
+                      <div class="flex items-center gap-4">
+                        <img alt="img" src="../img/svg/Ellipse 10.svg" class="flex-shrink-0">
+                        <p class="font-semibold text-lg">اقامتگاه <span class="font-faNumBold">3</span></p>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li><a class="text-white transition hover:text-primary">پیشنهادهای ویژه</a></li>
+            <li><a class="text-white transition hover:text-primary">میزبان شوید</a></li>
+          </ul>
+          <a id="login-modal"
+            class="rounded-[10px] bg-primary hover:bg-[#160C59] text-xs sm:text-base flex-center text-white font-medium gap-2 py-[10px] px-[18px]">
+            <img src="../img/svg/frame.svg">
+            <p>ثبت نام/ورود</p>
+          </a>
+        </div>
+        <div class="mt-2 ltr:sm:pl-[85px] px-4 rtl:sm:pr-[85px] py-4 relative">
+          <div class="bg-white absolute h-9 top-[49px] w-[182px] rtl:right-[35px] ltr:left-[35px] z-1"></div>
+          <svg
+            class="absolute rotate-180 rtl:right-[18px] rtl:sm:right-[54px] ltr:left-[18px] ltr:sm:left-[54px] z-1 w-[106px] h-[18px] sm:h-8 top-[45px]"
+            width="70" height="18" viewBox="0 0 70 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path class="transition group-hover:fill-[#fff2e0] fill-[#ffebcf] sm:fill-[#2c2c2c]"
+              d="M3.01307 16.7467L0 17.5H69.5001L60.4663 16.0546C58.1862 15.6898 56.0212 14.8035 54.1398 13.4648L40.5884 3.82246C34.8845 -0.236086 27.2044 -0.115346 21.631 4.1205L8.45127 14.137C6.83395 15.3662 4.98382 16.254 3.01307 16.7467Z"
+              fill="#2c2c2c"></path>
+          </svg>
+          <img alt="img" src="../img/Group 9035.png"
+            class="absolute inset-0 w-full h-[112px] sm:h-[180px] top-11 ltr:[transform:rotateY(180deg)]">
+          <div
+            class="sm:w-[70px] w-[46px] sm:h-[70px] h-[46px] rounded-full bg-primary z-3 absolute flex-center rtl:right-[46px] rtl:sm:right-[68px] ltr:left-[51px] ltr:sm:left-[77px] top-3 sm:-top-[3px] shadow-7">
+            <img alt="img" src="../img/svg/home-2.svg">
+          </div>
+          <div class="relative sm:mt-[70px] mt-14 z-1">
+            <h4 class="sm:text-[28px] text-dark font-bold mt-5">اقامتگاه ها</h4>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- room details -->
+    <section class="mb-10 mt-14 sm:mt-24">
+      <div class="max-w-content mx-auto px-4">
+        <!-- tabs -->
+        <div
+          class="tabBox sticky top-0.5 z-40 flex-wrap flex items-center gap-8 py-5 px-8 overflow-hidden rounded-[20px] bg-white shadow-12 border border-[#BE1D1D2E] font-medium text-[#2F2F2F]">
+          <a href="#features" class="relative group active">
+            <p>مشخصات</p>
+            <img src="../img/Rectangle 3.png" alt="shape"
+              class="group-hover:-bottom-5 absolute inset-x-0 -bottom-10 transition mx-auto h-2.5 w-[54px]">
+          </a>
+          <span class="bg-[#E9E9E9] h-6 w-[1px]"></span>
+          <a href="#location" class="relative group">
+            <p>موقعیت</p>
+            <img src="../img/Rectangle 3.png" alt="shape"
+              class="group-hover:-bottom-5 absolute inset-x-0 -bottom-10 transition mx-auto h-2.5 w-[54px]">
+          </a>
+          <span class="bg-[#E9E9E9] h-6 w-[1px]"></span>
+          <a href="#dateCalander" class="relative group">
+            <p>تقویم</p>
+            <img src="../img/Rectangle 3.png" alt="shape"
+              class="group-hover:-bottom-5 absolute inset-x-0 -bottom-10 transition mx-auto h-2.5 w-[54px]">
+          </a>
+          <span class="bg-[#E9E9E9] h-6 w-[1px]"></span>
+          <a href="#laws" class="relative group">
+            <p>قوانین</p>
+            <img src="../img/Rectangle 3.png" alt="shape"
+              class="group-hover:-bottom-5 absolute inset-x-0 -bottom-10 transition mx-auto h-2.5 w-[54px]">
+          </a>
+          <span class="bg-[#E9E9E9] h-6 w-[1px]"></span>
+          <a href="#comments" class="relative group">
+            <p>نظرات</p>
+            <img src="../img/Rectangle 3.png" alt="shape"
+              class="group-hover:-bottom-5 absolute inset-x-0 -bottom-10 transition mx-auto h-2.5 w-[54px]">
+          </a>
+        </div>
+        <div class="mt-[34px] grid grid-cols-12 gap-6">
+          <div class="lg:col-span-7 col-span-12">
+            <div class="relative group rounded-[20px] gradient-after5 overflow-hidden">
+              <img alt="img" src="../img/image (9).png"
+                class="w-full h-[280px] sm:h-[489px] transition group-hover:scale-105">
+              <div class="text-white rounded-b-[30px] bg-[#F01212] absolute top-0 rtl:right-6 ltr:left-6 py-3 px-1.5">
+                <p class="text-2xl font-faNumBold">30%</p>
+                <p class="font-semibold mt-0.5">تخفیف</p>
+              </div>
+              <p
+                class="absolute bg-primary rounded-[20px] text-white font-faNumRegular top-7 rtl:left-7 ltr:right-7 py-0.5 px-2">
+                کد:12345678</p>
+            </div>
+          </div>
+          <div class="lg:col-span-5 col-span-12">
+            <div class="grid grid-cols-12 gap-5">
+              <div
+                class="relative col-span-12 min-[460px]:col-span-6 group rounded-[20px] gradient-after5 overflow-hidden">
+                <img alt="img" src="../img/image (18).png" class="w-full h-[191px] transition group-hover:scale-105">
+                <div id="video-modal"
+                  class="flex items-center justify-center absolute z-2 inset-0 m-auto cursor-pointer">
+                  <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="18" cy="18" r="18" fill="white" />
+                    <path
+                      d="M17.9603 4.66675C10.6003 4.66675 4.62695 10.6401 4.62695 18.0001C4.62695 25.3601 10.6003 31.3334 17.9603 31.3334C25.3203 31.3334 31.2936 25.3601 31.2936 18.0001C31.2936 10.6401 25.3336 4.66675 17.9603 4.66675ZM21.9603 20.9734L18.0936 23.2001C17.6136 23.4801 17.0803 23.6134 16.5603 23.6134C16.027 23.6134 15.507 23.4801 15.027 23.2001C14.067 22.6401 13.4936 21.6534 13.4936 20.5334V16.0667C13.4936 14.9601 14.067 13.9601 15.027 13.4001C15.987 12.8401 17.1336 12.8401 18.107 13.4001L21.9736 15.6267C22.9336 16.1867 23.507 17.1734 23.507 18.2934C23.507 19.4134 22.9336 20.4134 21.9603 20.9734Z"
+                      fill="#FF9704" />
+                  </svg>
+                  <div
+                    class="rounded-[20px] btnHover h-9 flex-center rtl:-mr-2 ltr:-ml-2 z-2 relatie bg-[#160C59] px-3 text-white text-sm font-bold text-center">
+                    مشاهده ویدیو اقامتگاه
+                  </div>
+                </div>
+              </div>
+              <div
+                class="relative col-span-12 min-[460px]:col-span-6 group rounded-[20px] gradient-after5 overflow-hidden">
+                <img alt="img" src="../img/image (21).png" class="w-full h-[191px] transition group-hover:scale-105">
+              </div>
+              <div
+                class="relative col-span-12 min-[460px]:col-span-6 group rounded-[20px] gradient-after5 overflow-hidden">
+                <img alt="img" src="../img/image (20).png" class="w-full h-[191px] transition group-hover:scale-105">
+              </div>
+              <div
+                class="relative col-span-12 min-[460px]:col-span-6 group rounded-[20px] gradient-after5 overflow-hidden">
+                <img alt="img" src="../img/image (19).png" class="w-full h-[191px] transition group-hover:scale-105">
+              </div>
+              <div class="col-span-12">
+                <a id="gallery-modal"
+                  class="bg-[#160C59] h-[60px] rounded-[20px] flex-center gap-3 text-white btnHover text-lg font-semibold">
+                  <img alt="icon" src="../img/svg/eye.svg">
+                  <p>مشاهده تصاویر بیشتر</p>
+                </a>
+                <div class="h-3 rounded-b-[20px] bg-[#E7E4FF] mx-4"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="mt-6 grid grid-cols-12 gap-6">
+          <div class="lg:col-span-7 col-span-12">
+            <h4 class="text-2xl font-bold text-dark">اقامتگاه "عمارت هفت رنگ" اتاق سنگ سیاه</h4>
+            <div class="mt-6 bg-white rounded-[20px] shadow-1 p-4 relative">
+              <svg class="absolute top-0 rtl:left-0 ltr:right-0 ltr:[transform:rotateY(180deg)]" width="178" height="63" viewBox="0 0 178 63" fill="#f6f6f6" xmlns="http://www.w3.org/2000/svg">
+                <path d="M161.873 30.0493V16C161.873 7.16344 169.036 0 177.873 0H0.000319481L1.26301e-05 62.4303C0.0109623 53.6224 7.14013 46.4779 15.9506 46.4507L145.922 46.0493C154.739 46.022 161.873 38.8666 161.873 30.0493Z" fill="#f6f6f6"/>
+              </svg>
+              <div class="flex items-center justify-between flex-wrap gap-4 sm:gap-2 relative">
+                <div class="flex items-center gap-2 text-lg font-medium text-dark">
+                  <img alt="icon" src="../img/svg/home.svg">
+                  <p>دربست</p>
+                </div>
+                <div class="flex flex-wrap items-end gap-[22px] relative top-[-17px] rtl:left-[-18px] ltr:right-[-18px]">
+                  <p class="bg-[#FF970459] rounded-[20px] text-dark font-faNumRegular py-0.5 px-2">کد:12345678</p>
+                  <a
+                    class="group hover:bg-primary bg-white hover:text-white border border-[#FF9704] rounded-[10px] flex items-center gap-[10px] px-3 py-2 shadow-1 text-dark font-medium">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path class="group-hover:stroke-white transition"
+                        d="M16.96 6.16992C18.96 7.55992 20.34 9.76992 20.62 12.3199" stroke="#292D32" stroke-width="1.5"
+                        stroke-linecap="round" stroke-linejoin="round" />
+                      <path class="group-hover:stroke-white transition"
+                        d="M3.49023 12.37C3.75023 9.82997 5.11023 7.61997 7.09023 6.21997" stroke="#292D32"
+                        stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                      <path class="group-hover:stroke-white transition"
+                        d="M8.19043 20.9399C9.35043 21.5299 10.6704 21.8599 12.0604 21.8599C13.4004 21.8599 14.6604 21.5599 15.7904 21.0099"
+                        stroke="#292D32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                      <path class="group-hover:stroke-white transition"
+                        d="M12.0603 7.69989C13.5956 7.69989 14.8403 6.45524 14.8403 4.91989C14.8403 3.38454 13.5956 2.13989 12.0603 2.13989C10.5249 2.13989 9.28027 3.38454 9.28027 4.91989C9.28027 6.45524 10.5249 7.69989 12.0603 7.69989Z"
+                        stroke="#292D32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                      <path class="group-hover:stroke-white transition"
+                        d="M4.8298 19.9201C6.36516 19.9201 7.60981 18.6755 7.60981 17.1401C7.60981 15.6048 6.36516 14.3601 4.8298 14.3601C3.29445 14.3601 2.0498 15.6048 2.0498 17.1401C2.0498 18.6755 3.29445 19.9201 4.8298 19.9201Z"
+                        stroke="#292D32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                      <path class="group-hover:stroke-white transition"
+                        d="M19.1696 19.9201C20.705 19.9201 21.9496 18.6755 21.9496 17.1401C21.9496 15.6048 20.705 14.3601 19.1696 14.3601C17.6343 14.3601 16.3896 15.6048 16.3896 17.1401C16.3896 18.6755 17.6343 19.9201 19.1696 19.9201Z"
+                        stroke="#292D32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                    <p class="transition">اشتراک گذاری</p>
+                  </a>
+                </div>
+              </div>
+              <div class="flex items-center justify-between flex-wrap gap-4 sm:gap-2 mt-4">
+                <div class="flex-grow flex items-center gap-4">
+                  <img alt="img" src="../img/image (22).png" class="w-16 h-16 rounded-full">
+                  <div>
+                    <p class="text-dark text-lg font-medium">میزبان</p>
+                    <p class="font-bold text-lg mt-1">
+                      راحیل پورابولقاسمی
+                    </p>
+                  </div>
+                </div>
+                <div class="flex-grow">
+                  <div class="flex items-center justify-end gap-2">
+                    <p class="text-dark font-faNumBold">(71نظر) 4.9</p>
+                    <img alt="icon" src="../img/svg/star.svg">
+                  </div>
+                  <div class="flex items-center justify-end gap-2 mt-2">
+                    <p class="text-dark font-faNumBold">+200 رزرو موفق</p>
+                    <img alt="icon" src="../img/svg/tick-circle.svg">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="mt-11">
+              <div>
+                <div id="features">
+                  <div class="flex items-start gap-2 text-lg font-bold text-dark">
+                    <img alt="icon" src="../img/svg/color-swatch.svg">
+                    <p>مشخصات اقامتگاه</p>
+                  </div>
+                  <div
+                    class="mt-[18px] rounded-[20px] text-[#2F2F2F] bg-[#FFF6EA] py-5 px-3 grid grid-cols-12 gap-5 md:gap-1">
+                    <div class="md:col-span-7 col-span-12">
+                      <div class="flex items-center gap-1 flex-wrap">
+                        <img alt="icon" src="../img/svg/house.svg" class="flex-shrink-0 mb-1">
+                        <p class="font-bold text-xs">اطلاعات بنا:</p>
+                        <p class="font-faNumRegular text-sm">57 متر، 1 اتاق، فلت</p>
+                      </div>
+                      <div class="flex items-center gap-1 flex-wrap mt-5">
+                        <img alt="icon" src="../img/svg/material-symbols_bed-outline.svg" class="flex-shrink-0 mb-1">
+                        <p class="font-bold text-xs">سرویس خواب:</p>
+                        <p class="font-faNumRegular text-sm">1 تخت دو نفره، 2 سرویس خواب کامل، 2 پتو</p>
+                      </div>
+                      <div class="flex items-center gap-1 flex-wrap mt-5">
+                        <img alt="icon" src="../img/svg/material-symbols_stairs-2-rounded.svg"
+                          class="flex-shrink-0 mb-1">
+                        <p class="font-bold text-xs">دسترس پذیری:</p>
+                        <p class="font-faNumRegular text-sm">طبقه دوم، بیش از 20 پله، بدون آسانسور</p>
+                      </div>
+                    </div>
+                    <div class="md:col-span-5 col-span-12">
+                      <div class="flex items-center gap-1 flex-wrap">
+                        <img alt="icon" src="../img/svg/profile-2user (2).svg" class="flex-shrink-0 mb-1">
+                        <p class="font-bold text-xs">ظرفیت اقامتگاه:</p>
+                        <p class="font-faNumRegular text-sm">4 نفر پایه، 1 نفر اضافه</p>
+                      </div>
+                      <div class="flex items-center gap-1 flex-wrap mt-5">
+                        <img alt="icon" src="../img/svg/iconoir_bathroom.svg" class="flex-shrink-0 mb-1">
+                        <p class="font-bold text-xs">سرویس بهداشتی و حمام:</p>
+                        <p class="font-faNumRegular text-sm">4 نفر پایه، 1 نفر اضافه</p>
+                      </div>
+                      <div class="flex items-center gap-1 flex-wrap mt-5">
+                        <img alt="icon" src="../img/svg/solar_glasses-linear.svg" class="flex-shrink-0 mb-1">
+                        <p class="font-bold text-xs">بافت و چشم انداز:</p>
+                        <p class="font-faNumRegular text-sm">شهری</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="mt-4 rounded-[20px] text-[#2F2F2F] bg-[#FFF6EA] py-5 px-3">
+                    <h6 class="text-lg font-bold text-dark">فضای خواب</h6>
+                    <div class="flex items-center flex-wrap gap-4 font-bold mt-4">
+                      <p class="text-dark w-[132px]">هال و پذیرایی یک:</p>
+                      <div
+                        class="flex items-center gap-1 text-primary border border-primary rounded-[20px] py-1 px-2 font-faNumBold">
+                        <img alt="icon" src="../img/svg/sun.svg">
+                        <p class="text-xs">سیستم سرمایشی:</p>
+                        <p class="text-sm">کولر آبی</p>
+                      </div>
+                      <div
+                        class="flex items-center gap-1 text-primary border border-primary rounded-[20px] py-1 px-2 font-faNumBold">
+                        <img alt="icon" src="../img/svg/wind.svg">
+                        <p class="text-xs">سیستم گرمایشی:</p>
+                        <p class="text-sm">شوفاژ از کف</p>
+                      </div>
+                    </div>
+                    <div class="flex items-center flex-wrap gap-4 font-bold mt-4">
+                      <p class="text-dark w-[132px]">اتاق خواب یک:</p>
+                      <div
+                        class="flex items-center gap-1 text-primary border border-primary rounded-[20px] py-1 px-2 font-faNumBold">
+                        <img alt="icon" src="../img/svg/material-symbols_bed-outline (2).svg">
+                        <p class="text-xs">سرویس خواب:</p>
+                        <p class="text-sm">تخت 2 نفره</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="mt-[29px]">
+                  <div class="flex items-start gap-2 text-lg font-bold text-dark">
+                    <img alt="icon" src="../img/svg/crown.svg">
+                    <p>امکانات اقامتگاه</p>
+                  </div>
+                  <div
+                    class="mt-[13px] rounded-[20px] text-[#2F2F2F] bg-[#FFF6EA] py-5 px-3 grid grid-cols-1 min-[460px]:grid-cols-2 sm:grid-cols-3 gap-3">
+                    <div class="flex items-center gap-1">
+                      <img alt="icon" src="../img/svg/image 14.svg" class="flex-shrink-0 mb-1">
+                      <p class="font-bold text-sm">پارکینگ</p>
+                    </div>
+                    <div class="flex items-center gap-1">
+                      <img alt="icon" src="../img/svg/image 17.svg" class="flex-shrink-0 mb-1">
+                      <p class="font-bold text-sm">مبلمان</p>
+                    </div>
+                    <div class="flex items-center gap-1">
+                      <img alt="icon" src="../img/svg/image 17.svg" class="flex-shrink-0 mb-1">
+                      <p class="font-bold text-sm">مبلمان</p>
+                    </div>
+                    <div class="flex items-center gap-1">
+                      <img alt="icon" src="../img/svg/image 15.svg" class="flex-shrink-0 mb-1">
+                      <p class="font-bold text-sm">یخچال</p>
+                    </div>
+                    <div class="flex items-center gap-1">
+                      <img alt="icon" src="../img/svg/image 20.svg" class="flex-shrink-0 mb-1">
+                      <p class="font-bold text-sm">ماکروویو</p>
+                    </div>
+                    <div class="flex items-center gap-1">
+                      <img alt="icon" src="../img/svg/image 20.svg" class="flex-shrink-0 mb-1">
+                      <p class="font-bold text-sm">ماکروویو</p>
+                    </div>
+                    <div class="flex items-center gap-1">
+                      <img alt="icon" src="../img/svg/sun (2).svg" class="flex-shrink-0 mb-1">
+                      <p class="font-bold text-sm">سیستم سرمایش</p>
+                    </div>
+                    <div class="flex items-center gap-1">
+                      <img alt="icon" src="../img/svg/image 31.svg" class="flex-shrink-0 mb-1">
+                      <p class="font-bold text-sm">اینترنت</p>
+                    </div>
+                    <div class="flex items-center gap-1">
+                      <img alt="icon" src="../img/svg/image 31.svg" class="flex-shrink-0 mb-1">
+                      <p class="font-bold text-sm">اینترنت</p>
+                    </div>
+                    <a
+                      class="flex items-center gap-1 font-bold text-lg text-[#2F2F2F] mt-3 group transition hover:text-primary">
+                      <p>مشاهده همه امکانات</p>
+                      <svg class="ltr:[transform:rotateY(180deg)]" width="16" height="16" viewBox="0 0 16 16"
+                        fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path class="transition group-hover:stroke-primary"
+                          d="M10.0002 13.28L5.65355 8.9333C5.14022 8.41997 5.14022 7.57997 5.65355 7.06664L10.0002 2.71997"
+                          stroke="#292D32" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"
+                          stroke-linejoin="round" />
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+                <div class="mt-[29px]">
+                  <div class="flex items-start gap-2 text-lg font-bold text-dark">
+                    <img alt="icon" src="../img/svg/wifi.svg">
+                    <p>وضعیت آنتن دهی</p>
+                  </div>
+                  <div class="mt-5 flex grid-cols-3 gap-6 flex-wrap">
+                    <div class="rounded-[20px] bg-white flex-grow shadow-1 p-4 flex items-center gap-4">
+                      <img alt="img" src="../img/image 46.png">
+                      <div class="text-dark flex-grow">
+                        <p class="font-bold text-sm">همراه اول</p>
+                        <div class="mt-2 text-xs flex items-center justify-between gap-1">
+                          <div class="flex items-center gap-1">
+                            <img alt="icon" src="../img/svg/grammerly.svg">
+                            <p class="text-[#02C33F] font-semibold">عالی</p>
+                          </div>
+                          <p class="font-faNumRegular">۴.۵G/۵G</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="rounded-[20px] bg-white flex-grow shadow-1 p-4 flex items-center gap-4">
+                      <img alt="img" src="../img/image 47.png">
+                      <div class="text-dark flex-grow">
+                        <p class="font-bold text-sm">ایرانسل</p>
+                        <div class="mt-2 text-xs flex items-center justify-between gap-1">
+                          <div class="flex items-center gap-1">
+                            <img alt="icon" src="../img/svg/grammerly.svg">
+                            <p class="text-[#02C33F] font-semibold">عالی</p>
+                          </div>
+                          <p class="font-faNumRegular">۴.۵G/۵G</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="rounded-[20px] bg-white flex-grow shadow-1 p-4 flex items-center gap-4">
+                      <img alt="img" src="../img/image 48.png">
+                      <div class="text-dark flex-grow">
+                        <p class="font-bold text-sm">رایتل</p>
+                        <div class="mt-2 text-xs flex items-center justify-between gap-1">
+                          <div class="flex items-center gap-1">
+                            <img alt="icon" src="../img/svg/happyemoji.svg">
+                            <p class="text-[#F01212] font-semibold">ضعیف</p>
+                          </div>
+                          <p class="font-faNumRegular">۴.۵G/۵G</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div id="location" class="mt-11">
+                  <div class="flex items-start gap-2 text-lg font-bold text-dark">
+                    <img alt="icon" src="../img/svg/location (2).svg">
+                    <p>موقعیت اقامتگاه</p>
+                  </div>
+                  <p class="mt-2 font-medium">آدرس و موقعیت دقیق اقامتگاه، پس از رزرو برای شما ارسال خواهد شد.</p>
+                  <iframe class="rounded-[18px] overflow-hidden mt-4 w-full h-[208px]" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d207344.0754342176!2d51.51246591933516!3d35.707740217686975!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3f8e00491ff3dcd9%3A0xf0b3697c567024bc!2z2KrZh9ix2KfZhtiMINin2LPYqtin2YYg2KrZh9ix2KfZhtiMINin24zYsdin2YY!5e0!3m2!1sfa!2s!4v1708858730182!5m2!1sfa!2s" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+                <div class="mt-10">
+                  <div class="flex items-start gap-2 text-lg font-bold text-dark">
+                    <img alt="icon" src="../img/svg/clock.svg">
+                    <p>موقعیت زمانی اقامتگاه</p>
+                  </div>
+                  <div class="mt-4 rounded-[20px] text-dark bg-[#FFF6EA] py-6 px-3 grid grid-cols-12 gap-y-5 sm:gap-1">
+                    <div class="flex items-start gap-2 col-span-12 sm:col-span-4">
+                      <img alt="icon" src="../img/svg/frame (2).svg" class="flex-shrink-0">
+                      <div>
+                        <p class="font-medium">زمان ورود</p>
+                        <p class="mt-2 font-faNumBold">ساعت 14:00 تا 22:00</p>
+                      </div>
+                    </div>
+                    <div
+                      class="flex items-start gap-2 col-span-12 sm:col-span-4 border-t sm:border-t-0 rtl:sm:border-r ltr:sm:border-l border-primary pt-5 sm:pt-0 rtl:sm:pr-10 ltr:sm:pl-10">
+                      <img alt="icon" src="../img/svg/export.svg" class="flex-shrink-0">
+                      <div>
+                        <p class="font-medium">زمان خروج</p>
+                        <p class="mt-2 font-faNumBold">ساعت 22:00</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div id="dateCalander" class="mt-10">
+                  <div class="flex items-start gap-2 text-lg font-bold text-dark">
+                    <img alt="icon" src="../img/svg/calendar.svg">
+                    <p>تقویم و نرخ رزرو</p>
+                  </div>
+                  <div class="mt-6">
+                    <!-- ورودی که تاریخ شروع و پایان را می‌گیرد -->
+                    <input id="dateRangePicker" class="hidden" type="text" placeholder="انتخاب تاریخ‌ها">
+                  </div>
+                </div>
+                <div id="laws" class="mt-5">
+                  <div class="flex items-start gap-2 text-lg font-bold text-dark">
+                    <img alt="icon" src="../img/svg/information (2).svg">
+                    <p>قوانین اقامتگاه</p>
+                  </div>
+                  <div
+                    class="mt-[13px] rounded-[20px] text-dark font-medium bg-[#FFF6EA] py-5 px-3 grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div class="flex items-center gap-1">
+                      <div class="relative flex-shrink-0">
+                        <img alt="icon" src="../img/svg/image 49.svg">
+                        <img alt="icon" src="../img/svg/danger.svg" class="absolute -top-0.5 rtl:right-0 ltr:left-0">
+                      </div>
+                      <p>ورود حیوان خانگی مجاز نیست.</p>
+                    </div>
+                    <div class="flex items-center gap-1">
+                      <div class="relative flex-shrink-0">
+                        <img alt="icon" src="../img/svg/image 52.svg">
+                        <img alt="icon" src="../img/svg/danger.svg" class="absolute -top-0.5 rtl:right-0 ltr:left-0">
+                      </div>
+                      <p>ورود حیوان خانگی مجاز نیست.</p>
+                    </div>
+                    <div class="flex items-center gap-1">
+                      <div class="relative flex-shrink-0">
+                        <img alt="icon" src="../img/svg/image 51.svg">
+                        <img alt="icon" src="../img/svg/danger.svg" class="absolute -top-0.5 rtl:right-0 ltr:left-0">
+                      </div>
+                      <p>ورود حیوان خانگی مجاز نیست.</p>
+                    </div>
+                    <div class="flex items-center gap-1">
+                      <div class="relative flex-shrink-0">
+                        <img alt="icon" src="../img/svg/image 50.svg">
+                        <img alt="icon" src="../img/svg/danger.svg" class="absolute -top-0.5 rtl:right-0 ltr:left-0">
+                      </div>
+                      <p>ورود حیوان خانگی مجاز نیست.</p>
+                    </div>
+                    <div class="flex items-center gap-1">
+                      <div class="relative flex-shrink-0">
+                        <img alt="icon" src="../img/svg/image 54.svg">
+                        <img alt="icon" src="../img/svg/tick-circle (2).svg"
+                          class="absolute -top-0.5 rtl:right-0 ltr:left-0">
+                      </div>
+                      <p>ورود حیوان خانگی مجاز نیست.</p>
+                    </div>
+                    <div class="flex items-center gap-1">
+                      <div class="relative flex-shrink-0">
+                        <img alt="icon" src="../img/svg/image 53.svg">
+                        <img alt="icon" src="../img/svg/danger.svg" class="absolute -top-0.5 rtl:right-0 ltr:left-0">
+                      </div>
+                      <p>ورود حیوان خانگی مجاز نیست.</p>
+                    </div>
+                    <div class="flex items-center gap-1">
+                      <div class="relative flex-shrink-0">
+                        <img alt="icon" src="../img/svg/image 55.svg">
+                        <img alt="icon" src="../img/svg/danger.svg" class="absolute -top-0.5 rtl:right-0 ltr:left-0">
+                      </div>
+                      <p>ورود حیوان خانگی مجاز نیست.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="mt-8">
+                  <div class="flex items-start gap-2 text-lg font-bold text-dark">
+                    <img alt="icon" src="../img/svg/warning-2.svg">
+                    <p>قوانین میزبان</p>
+                  </div>
+                  <div class="mt-3 rounded-[20px] shadow-1 flex items-center gap-3 font-bold text-sm p-4">
+                    <img alt="icon" src="../img/svg/image 55 (2).svg">
+                    <p>همراه داشتن مدارک شناسایی معتبر مانند کارت ملی هوشمند یا شناسنامه جدید.</p>
+                  </div>
+                </div>
+                <div class="mt-9">
+                  <div class="flex items-start gap-2 text-lg font-bold text-dark">
+                    <img alt="icon" src="../img/svg/alarm.svg">
+                    <p>مقررات لغو رزرو</p>
+                  </div>
+                  <div class="mt-5 dotBefore relative">
+                    <div class="flex items-center gap-2 mb-[18px]">
+                      <span class="bg-[#02C33F] w-3 h-3 rounded-full z-10 flex-shrink-0"></span>
+                      <div class="bg-[#E7FFEF] rounded-[20px] grid grid-cols-12 gap-2 text-sm p-4 flex-grow">
+                        <div class="flex items-center gap-3 col-span-12 sm:col-span-8">
+                          <img alt="icon" src="../img/svg/Group 45758.svg" class="flex-shrink-0">
+                          <p class="font-bold text-[#02C33F]">لغو رزرو تا 72 ساعت مانده به زمان ورود روز کنسل شده </p>
+                        </div>
+                        <div class="col-span-12 sm:col-span-4">
+                          <p class="font-faNumRegular text-dark">25 درصد کل مبلغ رزرو</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="flex items-center gap-2 mb-[18px]">
+                      <span class="bg-[#FF9704] w-3 h-3 rounded-full z-10 flex-shrink-0"></span>
+                      <div class="bg-[#FFF6EA] rounded-[20px] grid grid-cols-12 gap-2 text-sm p-4 flex-grow">
+                        <div class="flex items-center gap-3 col-span-12 sm:col-span-8">
+                          <img alt="icon" src="../img/svg/Group 45759.svg" class="flex-shrink-0">
+                          <p class="font-bold text-[#FF9704]">لغو رزرو در کمتر از 72 ساعت مانده به زمان ورود روز کنسل
+                            شده</p>
+                        </div>
+                        <div class="col-span-12 sm:col-span-4">
+                          <p class="font-faNumRegular text-dark">100 درصد روز هایی که کمتر از 72 ساعت به آنها مانده است
+                            + 25 درصد باقی روز ه</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="flex items-center gap-2">
+                      <span class="bg-[#F01212] w-3 h-3 rounded-full z-10 flex-shrink-0"></span>
+                      <div class="bg-[#FFDEDE] rounded-[20px] grid grid-cols-12 gap-2 text-sm p-4 flex-grow">
+                        <div class="flex items-center gap-3 col-span-12 sm:col-span-8">
+                          <img alt="icon" src="../img/svg/export (2).svg" class="flex-shrink-0">
+                          <p class="font-bold text-[#F01212]">لغو رزرو تا 72 ساعت مانده به زمان ورود روز کنسل شده</p>
+                        </div>
+                        <div class="col-span-12 sm:col-span-4">
+                          <p class="font-faNumRegular text-dark">100 درصد مبلغ رزرو همان روز و سه روز بعد + 25 درصد مبلغ
+                            رزرو روز های باقی مانده</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div id="comments" class="mt-12">
+                  <div class="flex items-center justify-between gap-2">
+                    <div class="flex items-start gap-2 text-lg font-bold text-dark">
+                      <img alt="icon" src="../img/svg/messages-2.svg">
+                      <p>نظرات مهمان ها <span class="font-faNumBold">(12)</span></p>
+                    </div>
+                    <div class="flex items-center gap-1 font-faNumBold text-sm text-[#2F2F2F]">
+                      <p>5</p>
+                      <img alt="icon" src="../img/svg/star (2).svg">
+                    </div>
+                  </div>
+                  <div class="mt-10 grid grid-cols-1 sm:grid-cols-2 gap-x-4 gap-y-7 text-sm font-medium">
+                    <div class="flex items-center justify-between">
+                      <p>امنیت محله</p>
+                      <div class="flex items-center gap-1">
+                        <img alt="icon" src="../img/svg/star (3).svg">
+                        <img alt="icon" src="../img/svg/star (2).svg">
+                        <img alt="icon" src="../img/svg/star (2).svg">
+                        <img alt="icon" src="../img/svg/star (2).svg">
+                        <img alt="icon" src="../img/svg/star (2).svg">
+                      </div>
+                    </div>
+                    <div class="flex items-center justify-between">
+                      <p>پذیرش میزبان</p>
+                      <div class="flex items-center gap-1">
+                        <img alt="icon" src="../img/svg/star (3).svg">
+                        <img alt="icon" src="../img/svg/star (2).svg">
+                        <img alt="icon" src="../img/svg/star (2).svg">
+                        <img alt="icon" src="../img/svg/star (2).svg">
+                        <img alt="icon" src="../img/svg/star (2).svg">
+                      </div>
+                    </div>
+                    <div class="flex items-center justify-between">
+                      <p>نظافت و تمیزی</p>
+                      <div class="flex items-center gap-1">
+                        <img alt="icon" src="../img/svg/star (3).svg">
+                        <img alt="icon" src="../img/svg/star (2).svg">
+                        <img alt="icon" src="../img/svg/star (2).svg">
+                        <img alt="icon" src="../img/svg/star (2).svg">
+                        <img alt="icon" src="../img/svg/star (2).svg">
+                      </div>
+                    </div>
+                    <div class="flex items-center justify-between">
+                      <p>ارتباط با میزبان</p>
+                      <div class="flex items-center gap-1">
+                        <img alt="icon" src="../img/svg/star (3).svg">
+                        <img alt="icon" src="../img/svg/star (2).svg">
+                        <img alt="icon" src="../img/svg/star (2).svg">
+                        <img alt="icon" src="../img/svg/star (2).svg">
+                        <img alt="icon" src="../img/svg/star (2).svg">
+                      </div>
+                    </div>
+                    <div class="flex items-center justify-between">
+                      <p>ارزش کلی اقامتگاه</p>
+                      <div class="flex items-center gap-1">
+                        <img alt="icon" src="../img/svg/star (3).svg">
+                        <img alt="icon" src="../img/svg/star (2).svg">
+                        <img alt="icon" src="../img/svg/star (2).svg">
+                        <img alt="icon" src="../img/svg/star (2).svg">
+                        <img alt="icon" src="../img/svg/star (2).svg">
+                      </div>
+                    </div>
+                    <div class="flex items-center justify-between">
+                      <p>صحت اطلاعات</p>
+                      <div class="flex items-center gap-1">
+                        <img alt="icon" src="../img/svg/star (3).svg">
+                        <img alt="icon" src="../img/svg/star (2).svg">
+                        <img alt="icon" src="../img/svg/star (2).svg">
+                        <img alt="icon" src="../img/svg/star (2).svg">
+                        <img alt="icon" src="../img/svg/star (2).svg">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-4 gap-y-14 mt-20">
+                    <div class="rounded-[20px] bg-[#FFF6EA] p-4 pb-5 relative">
+                      <svg class="absolute top-0 ltr:left-10 rtl:right-10" width="91" height="25" viewBox="0 0 91 25"
+                        fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          d="M2.84075 0.241669L0 0H91L90.3981 0.0625546C84.5157 0.673857 78.9453 3.01014 74.3867 6.77782L57.4241 20.7977C51.6296 25.5869 43.2824 25.6963 37.3644 21.0606L18.7974 6.5167C14.2023 2.91722 8.65685 0.736457 2.84075 0.241669Z"
+                          fill="white"></path>
+                      </svg>
+                      <img alt="img" src="../img/1403-02-24 12.39 1.png"
+                        class="w-14 h-14 rounded-full absolute rtl:right-14 ltr:left-14 -top-10">
+                      <p class="font-faNumRegular text-sm text-[#2F2F2F] rtl:text-left ltr:text-right">8 بهمن 1403</p>
+                      <div class="flex items-center justify-between gap-2 mt-3">
+                        <p class="font-bold text-dark">
+                          نگار امینی
+                        </p>
+                        <div class="flex items-center gap-1 font-faNumBold text-sm text-[#2F2F2F]">
+                          <p>5</p>
+                          <img alt="icon" src="../img/svg/star (2).svg">
+                        </div>
+                      </div>
+                      <p class="text-[#2F2F2F] mt-4 text-sm text-justify">همه چیز عالی بود خیلی ممنون از میزبانی حرفه ای
+                        جناب اعتبار</p>
+                    </div>
+                    <div class="rounded-[20px] bg-[#FFF6EA] p-4 pb-5 relative">
+                      <svg class="absolute top-0 ltr:left-10 rtl:right-10" width="91" height="25" viewBox="0 0 91 25"
+                        fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          d="M2.84075 0.241669L0 0H91L90.3981 0.0625546C84.5157 0.673857 78.9453 3.01014 74.3867 6.77782L57.4241 20.7977C51.6296 25.5869 43.2824 25.6963 37.3644 21.0606L18.7974 6.5167C14.2023 2.91722 8.65685 0.736457 2.84075 0.241669Z"
+                          fill="white"></path>
+                      </svg>
+                      <img alt="img" src="../img/1403-02-24 12.39 1.png"
+                        class="w-14 h-14 rounded-full absolute rtl:right-14 ltr:left-14 -top-10">
+                      <p class="font-faNumRegular text-sm text-[#2F2F2F] rtl:text-left ltr:text-right">8 بهمن 1403</p>
+                      <div class="flex items-center justify-between gap-2 mt-3">
+                        <p class="font-bold text-dark">
+                          نگار امینی
+                        </p>
+                        <div class="flex items-center gap-1 font-faNumBold text-sm text-[#2F2F2F]">
+                          <p>5</p>
+                          <img alt="icon" src="../img/svg/star (2).svg">
+                        </div>
+                      </div>
+                      <p class="text-[#2F2F2F] mt-4 text-sm text-justify">همه چیز عالی بود خیلی ممنون از میزبانی حرفه ای
+                        جناب اعتبار</p>
+                    </div>
+                    <div class="rounded-[20px] bg-[#FFF6EA] p-4 pb-5 relative">
+                      <svg class="absolute top-0 ltr:left-10 rtl:right-10" width="91" height="25" viewBox="0 0 91 25"
+                        fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          d="M2.84075 0.241669L0 0H91L90.3981 0.0625546C84.5157 0.673857 78.9453 3.01014 74.3867 6.77782L57.4241 20.7977C51.6296 25.5869 43.2824 25.6963 37.3644 21.0606L18.7974 6.5167C14.2023 2.91722 8.65685 0.736457 2.84075 0.241669Z"
+                          fill="white"></path>
+                      </svg>
+                      <img alt="img" src="../img/1403-02-24 12.39 1.png"
+                        class="w-14 h-14 rounded-full absolute rtl:right-14 ltr:left-14 -top-10">
+                      <p class="font-faNumRegular text-sm text-[#2F2F2F] rtl:text-left ltr:text-right">8 بهمن 1403</p>
+                      <div class="flex items-center justify-between gap-2 mt-3">
+                        <p class="font-bold text-dark">
+                          نگار امینی
+                        </p>
+                        <div class="flex items-center gap-1 font-faNumBold text-sm text-[#2F2F2F]">
+                          <p>5</p>
+                          <img alt="icon" src="../img/svg/star (2).svg">
+                        </div>
+                      </div>
+                      <p class="text-[#2F2F2F] mt-4 text-sm text-justify">همه چیز عالی بود خیلی ممنون از میزبانی حرفه ای
+                        جناب اعتبار</p>
+                    </div>
+                    <div class="rounded-[20px] bg-[#FFF6EA] p-4 pb-5 relative">
+                      <svg class="absolute top-0 ltr:left-10 rtl:right-10" width="91" height="25" viewBox="0 0 91 25"
+                        fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          d="M2.84075 0.241669L0 0H91L90.3981 0.0625546C84.5157 0.673857 78.9453 3.01014 74.3867 6.77782L57.4241 20.7977C51.6296 25.5869 43.2824 25.6963 37.3644 21.0606L18.7974 6.5167C14.2023 2.91722 8.65685 0.736457 2.84075 0.241669Z"
+                          fill="white"></path>
+                      </svg>
+                      <img alt="img" src="../img/1403-02-24 12.39 1.png"
+                        class="w-14 h-14 rounded-full absolute rtl:right-14 ltr:left-14 -top-10">
+                      <p class="font-faNumRegular text-sm text-[#2F2F2F] rtl:text-left ltr:text-right">8 بهمن 1403</p>
+                      <div class="flex items-center justify-between gap-2 mt-3">
+                        <p class="font-bold text-dark">
+                          نگار امینی
+                        </p>
+                        <div class="flex items-center gap-1 font-faNumBold text-sm text-[#2F2F2F]">
+                          <p>5</p>
+                          <img alt="icon" src="../img/svg/star (2).svg">
+                        </div>
+                      </div>
+                      <p class="text-[#2F2F2F] mt-4 text-sm text-justify">همه چیز عالی بود خیلی ممنون از میزبانی حرفه ای
+                        جناب اعتبار</p>
+                    </div>
+                  </div>
+                  <a class="flex items-center gap-1 font-bold text-[#2F2F2F] mt-7 group transition hover:text-primary">
+                    <p>مشاهده همه نظرات</p>
+                    <svg class="ltr:[transform:rotateY(180deg)]" width="16" height="16" viewBox="0 0 16 16" fill="none"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <path class="transition group-hover:stroke-primary"
+                        d="M10.0002 13.28L5.65355 8.9333C5.14022 8.41997 5.14022 7.57997 5.65355 7.06664L10.0002 2.71997"
+                        stroke="#292D32" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"
+                        stroke-linejoin="round"></path>
+                    </svg>
+                  </a>
+                </div>
+                <div class="mt-8">
+                  <div class="rounded-[20px] border border-[#B4B4B4] p-5">
+                    <div class="grid grid-cols-12 gap-6">
+                      <div class="md:col-span-5 col-span-12">
+                        <div class="flex items-center gap-4">
+                          <img alt="img" src="../img/image (22).png" class="w-16 h-16 rounded-full">
+                          <div>
+                            <p class="text-dark text-lg font-medium">میزبان</p>
+                            <p class="font-bold text-lg mt-1">
+                              راحیل پورابولقاسمی
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="md:col-span-7 col-span-12">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 text-sm">
+                          <div class="bg-[#FFF6EA] px-[14px] py-2 rounded-[20px] flex items-start gap-2">
+                            <img alt="icon" src="../img/svg/Group 45774.svg" class="flex-shrink-0">
+                            <div class="text-dark">
+                              <p class="font-bold">زمان پاسخگویی</p>
+                              <p class="mt-1">کمتر از 7 دقیقه</p>
+                            </div>
+                          </div>
+                          <div class="bg-[#E7FFEF] px-[14px] py-2 rounded-[20px] flex items-start gap-2">
+                            <img alt="icon" src="../img/svg/crown (2).svg" class="flex-shrink-0">
+                            <div class="text-dark">
+                              <p class="font-bold">میزان تایید رزرو</p>
+                              <p class="mt-1">در حدود 30 درصد</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <a
+                      class="flex items-center gap-1 font-bold text-[#2F2F2F] mt-7 group transition hover:text-primary">
+                      <p>مشاهده پروفایل میزبان</p>
+                      <svg class="ltr:[transform:rotateY(180deg)]" width="16" height="16" viewBox="0 0 16 16"
+                        fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path class="transition group-hover:stroke-primary"
+                          d="M10.0002 13.28L5.65355 8.9333C5.14022 8.41997 5.14022 7.57997 5.65355 7.06664L10.0002 2.71997"
+                          stroke="#292D32" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"
+                          stroke-linejoin="round"></path>
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="lg:col-span-5 col-span-12">
+            <div class="sticky top-20">
+              <form class="rounded-[20px] px-4 py-5 bg-white shadow-1 mt-14 text-white">
+                <div
+                  class="bg-dark flex-wrap pt-5 rtl:pr-8 ltr:pl-8 pb-3 rtl:pl-[88px] ltr:pr-[88px] relative rounded-[20px] gap-2 flex items-start justify-between">
+                  <div
+                    class="text-white rounded-b-[30px] bg-[#F01212] absolute -top-5 rtl:left-3 ltr:right-3 py-3 px-1.5">
+                    <p class="text-2xl font-faNumBold">30%</p>
+                    <p class="font-semibold mt-0.5">تخفیف</p>
+                  </div>
+                  <p class="text-lg font-medium">هزینه هر شب از:</p>
+                  <div>
+                    <div class="flex items-center gap-2">
+                      <p class="text-lg font-faNumBold line-through">1,200,000</p>
+                      <p class="text-lg font-medium">تومان</p>
+                    </div>
+                    <div class="flex items-center gap-2 mt-3">
+                      <p class="text-2xl font-faNumBold">980,000</p>
+                      <p class="text-lg font-medium">تومان</p>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="rounded-[20px] overflow-hidden mt-[18px] border border-[#E4E4E4] grid grid-cols-12 font-faNumBold text-dark">
+                  <div class="col-span-6 px-4 rtl:border-l ltr:border-r border-[#E4E4E4]">
+                    <input readonly id="inputdate"
+                      class="bg-transparent font-faNumRegular w-full h-[70px] outline-none border-0 text-center placeholder:text-dark"
+                      placeholder="تاریخ ورود ">
+                  </div>
+                  <div class="col-span-6 px-4">
+                    <input readonly id="outputdate"
+                      class="bg-transparent font-faNumRegular w-full h-[70px] outline-none border-0 text-center placeholder:text-dark"
+                      placeholder="تاریخ خروج">
+                  </div>
+                  <div class="col-span-12 px-4 border-t border-[#E4E4E4]">
+                    <div class="h-[70px] flex items-center justify-between gap-2">
+                      <button
+                        class="w-5 h-5 flex-shrink-0 rounded-md border border-[#292D32] flex-center text-[#292D32] hover:text-white hover:bg-dark transition">
+                        <p>-</p>
+                      </button>
+                      <input value="0 نفر" class="text-center text-dark font-faNumBold h-[70px] w-full outline-none">
+                      <button
+                        class="w-5 h-5 flex-shrink-0 rounded-md border border-[#292D32] flex-center text-[#292D32] hover:text-white hover:bg-dark transition">
+                        <p>+</p>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <p class="text-dark mt-4">کودکان تا زیر 3 سال در صورتحساب لحاظ نمی‌گردند.</p>
+                <div class="flex items-center justify-between mt-4 checkboxRow">
+                  <div class="flex items-center gap-2">
+                    <div
+                      class="w-7 h-7 transition-all duration-200 flex items-center justify-center rounded-[10px] cursor-pointer border border-[#EBEBEB] relative checkbox">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                        class="bi bi-check text-white" viewBox="0 0 16 16">
+                        <path
+                          d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z">
+                        </path>
+                      </svg>
+                      <input type="checkbox" class="absolute inset-0 appearance-none w-full h-full cursor-pointer z-10">
+                    </div>
+                    <p class="text-lg font-semibold text-dark">رزرو برای دیگری</p>
+                  </div>
+                </div>
+                <button
+                  class="mt-[18px] rounded-[20px] h-16 bg-primary btnHover flex-center text-white text-lg font-extrabold w-full">درخواست
+                  رزرو (رایگان)</button>
+                <div class="mt-[18px] flex items-center justify-center gap-3 text-dark font-medium">
+                  <img alt="icon" src="../img/svg/message-text (2).svg" class="flex-shrink-0">
+                  <p>امکان چت آنلاین بعد از ثبت رزرو رایگان</p>
+                </div>
+              </form>
+              <div class="bg-[#FFDBAC] rounded-b-[30px] h-3 mx-5"></div>
+              <div class="bg-[#FFF0DB] rounded-b-[30px] h-3 mx-[50px]"></div>
+            </div>
+          </div>
+        </div>
+        <div class="relative mt-20">
+          <div class="flex items-center justify-between gap-2 rtl:pl-4 ltr:pr-4">
+            <h4 class="sm:text-2xl text-sm font-bold min-[400px]:mb-0 mb-20">سایر اقامتگاه‌های مشابه در منطقه</h4>
+            <div class="flex items-center gap-8">
+              <div
+                class="flex items-center mt-5 relative top-[447px] sm:top-0 ltr:-mr-[103px] ltr:sm:mr-6 rtl:-ml-[103px] rtl:sm:ml-6">
+                <div
+                  class="w-8 h-8 swiper-button-prev !absolute !-top-1 ltr:!-right-5 btnHover active:scale-95 flex-center bg-primary rounded-lg cursor-pointer"
+                  tabindex="0" role="button" aria-label="Previous slide" aria-controls="swiper-wrapper-33e725ef37b8ba37"
+                  aria-disabled="false">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                    class="text-white bi bi-chevron-right !w-[60%]" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd"
+                      d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708">
+                    </path>
+                  </svg>
+                </div>
+                <div
+                  class="w-8 h-8 swiper-button-next !absolute !-top-1 ltr:!-left-11 btnHover active:scale-95 flex-center bg-primary rounded-lg cursor-pointer"
+                  tabindex="0" role="button" aria-label="Next slide" aria-controls="swiper-wrapper-33e725ef37b8ba37"
+                  aria-disabled="false">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                    class="text-white bi bi-chevron-left !w-[60%]" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd"
+                      d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0">
+                    </path>
+                  </svg>
+                </div>
+              </div>
+              <a
+                class="group rounded-[30px] text-xs sm:text-base h-8 sm:h-10 bg-gradient11 flex items-center gap-1 rtl:pl-2 ltr:pr-2 rtl:sm:hover:pl-0 ltr:sm:hover:pr-0">
+                <p
+                  class="h-full font-medium px-3 rounded-[30px] group-hover:text-white bg-white group-hover:bg-primary flex-center transition">
+                  مشاهده همه</p>
+                <img alt="icon" src="../img/svg/arrow-left (6).svg"
+                  class="sm:group-hover:max-w-0 transition ltr:[transform:rotateY(180deg)] w-4 sm:w-auto">
+              </a>
+            </div>
+          </div>
+          <div>
+            <div class="swiper homes pb-20 pt-6 px-4">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <a class="bg-white rounded-[20px] shadow-1 p-3 group block">
+                    <div class="relative">
+                      <img alt="shape" src="../img/Rectangle 45.png"
+                        class="absolute z-3 h-12 w-14 top-0 rtl:left-0 ltr:right-0 ltr:[transform:rotateY(180deg)]">
+                      <p class="font-faNumBold text-white absolute top-1.5 rtl:left-3 ltr:right-3 z-3">25%</p>
+                      <div class="swiper rooms">
+                        <img alt="img" src="../img/Mediamodifier-Design-Template.png"
+                          class="absolute h-[283px] -bottom-[131px] inset-x-0 z-3 w-full">
+                        <div class="swiper-wrapper">
+                          <div class="swiper-slide">
+                            <img alt="img" src="../img/image.png" class="rounded-[20px] w-full h-[172px]">
+                          </div>
+                          <div class="swiper-slide">
+                            <img alt="img" src="../img/image (9).png" class="rounded-[20px] w-full h-[172px]">
+                          </div>
+                          <div class="swiper-slide">
+                            <img alt="img" src="../img/image.png" class="rounded-[20px] w-full h-[172px]">
+                          </div>
+                          <div class="swiper-slide">
+                            <img alt="img" src="../img/image (9).png" class="rounded-[20px] w-full h-[172px]">
+                          </div>
+                        </div>
+                        <div class="swiper-pagination !-bottom-[3px] flex-center !items-center"></div>
+                      </div>
+                    </div>
+                    <h5
+                      class="font-extrabold text-lg h-12 line-clamp-2 text-dark mt-4 transition group-hover:text-primary leading-6">
+                      اجاره اقامتگاه بوم‌گردی خانه باغ ایرانی</h5>
+                    <div class="mt-2 flex items-center justify-center gap-1 flex-wrap">
+                      <div class="flex items-center gap-1">
+                        <img alt="icon" src="../img/svg/Vector.svg" class="flex-shrink-0">
+                        <p class="sm:text-sm text-xs font-bold"><span class="font-faNumBold">2</span> اتاق خواب</p>
+                      </div>
+                      <img alt="icon" src="../img/svg/Group 24 (2).svg">
+                      <div class="flex items-center gap-1">
+                        <img alt="icon" src="../img/svg/profile-2user.svg" class="flex-shrink-0">
+                        <p class="sm:text-sm text-xs font-bold"><span class="font-faNumBold">4</span> نفره</p>
+                      </div>
+                      <img alt="icon" src="../img/svg/Group 24 (2).svg">
+                      <div class="flex items-center gap-1">
+                        <img alt="icon" src="../img/svg/location.svg" class="flex-shrink-0">
+                        <p class="sm:text-sm text-xs font-bold">فرهنگشهر</p>
+                      </div>
+                    </div>
+                    <div
+                      class="-mb-[47px] mt-4 bg-primary flex-center gap-1 shadow-4 rounded-[27px] rtl:rounded-tr-none ltr:rounded-tl-none py-2 rtl:pr-4 rtl:pl-[10px] ltr:pr-[10px] ltr:pl-4">
+                      <div>
+                        <div class="flex items-center gap-3 font-medium text-xs text-white">
+                          <p>هر شب از</p>
+                          <p class="line-through opacity-50 font-faNumRegular">1,500,000</p>
+                        </div>
+                        <div class="flex items-center gap-1 font-bold text-lg text-white">
+                          <p class="font-faNumBold">1,200,000</p>
+                          <p class="text-sm">تومان</p>
+                        </div>
+                      </div>
+                      <img alt="icon" src="../img/Line 12.png" class="flex-shrink-0">
+                      <div class="flex-grow">
+                        <p class="text-xs text-white font-medium">رضایت:</p>
+                        <div class="mt-1 flex items-center justify-end gap-1 text-white">
+                          <p class="font-faNumBold text-lg">4.5</p>
+                          <svg width="18" height="18" viewBox="0 0 18 18" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                              d="M4.93738 12C5.01388 11.6325 4.87478 11.1075 4.63138 10.845L2.94142 9.0225C2.41288 8.4525 2.20424 7.845 2.35724 7.32C2.51719 6.795 3.01097 6.435 3.74815 6.3L5.91797 5.91C6.23092 5.85 6.61342 5.55 6.75947 5.2425L7.95565 2.655C8.30338 1.9125 8.77628 1.5 9.29092 1.5C9.80556 1.5 10.2785 1.9125 10.6262 2.655L11.8224 5.2425C11.9128 5.4375 12.1006 5.625 12.3022 5.7525L4.81219 13.83C4.71483 13.935 4.54792 13.8375 4.57574 13.6875L4.93738 12Z"
+                              fill="white" />
+                            <path
+                              d="M13.9505 10.8449C13.7001 11.1149 13.561 11.6324 13.6445 11.9999L14.1243 14.2574C14.326 15.1949 14.2008 15.8999 13.7697 16.2374C13.5958 16.3724 13.3872 16.4399 13.1437 16.4399C12.7891 16.4399 12.3718 16.2974 11.9128 16.0049L9.87511 14.6999C9.5552 14.4974 9.02666 14.4974 8.70675 14.6999L6.66906 16.0049C5.89711 16.4924 5.23643 16.5749 4.8122 16.2374C4.65225 16.1099 4.53402 15.9374 4.45752 15.7124L12.9142 6.59242C13.2342 6.24742 13.6862 6.08992 14.1243 6.17242L14.8267 6.29992C15.5639 6.43492 16.0577 6.79492 16.2177 7.31992C16.3707 7.84492 16.162 8.45242 15.6335 9.02242L13.9505 10.8449Z"
+                              fill="white" />
+                          </svg>
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a class="bg-white rounded-[20px] shadow-1 p-3 group block">
+                    <div class="relative">
+                      <img alt="shape" src="../img/Rectangle 45.png"
+                        class="absolute z-3 h-12 w-14 top-0 rtl:left-0 ltr:right-0 ltr:[transform:rotateY(180deg)]">
+                      <p class="font-faNumBold text-white absolute top-1.5 rtl:left-3 ltr:right-3 z-3">25%</p>
+                      <div class="swiper rooms">
+                        <img alt="img" src="../img/Mediamodifier-Design-Template.png"
+                          class="absolute h-[283px] -bottom-[131px] inset-x-0 z-3 w-full">
+                        <div class="swiper-wrapper">
+                          <div class="swiper-slide">
+                            <img alt="img" src="../img/image.png" class="rounded-[20px] w-full h-[172px]">
+                          </div>
+                          <div class="swiper-slide">
+                            <img alt="img" src="../img/image (9).png" class="rounded-[20px] w-full h-[172px]">
+                          </div>
+                          <div class="swiper-slide">
+                            <img alt="img" src="../img/image.png" class="rounded-[20px] w-full h-[172px]">
+                          </div>
+                          <div class="swiper-slide">
+                            <img alt="img" src="../img/image (9).png" class="rounded-[20px] w-full h-[172px]">
+                          </div>
+                        </div>
+                        <div class="swiper-pagination !-bottom-[3px] flex-center !items-center"></div>
+                      </div>
+                    </div>
+                    <h5
+                      class="font-extrabold text-lg h-12 line-clamp-2 text-dark mt-4 transition group-hover:text-primary leading-6">
+                      اجاره اقامتگاه بوم‌گردی خانه باغ ایرانی</h5>
+                    <div class="mt-2 flex items-center justify-center gap-1 flex-wrap">
+                      <div class="flex items-center gap-1">
+                        <img alt="icon" src="../img/svg/Vector.svg" class="flex-shrink-0">
+                        <p class="sm:text-sm text-xs font-bold"><span class="font-faNumBold">2</span> اتاق خواب</p>
+                      </div>
+                      <img alt="icon" src="../img/svg/Group 24 (2).svg">
+                      <div class="flex items-center gap-1">
+                        <img alt="icon" src="../img/svg/profile-2user.svg" class="flex-shrink-0">
+                        <p class="sm:text-sm text-xs font-bold"><span class="font-faNumBold">4</span> نفره</p>
+                      </div>
+                      <img alt="icon" src="../img/svg/Group 24 (2).svg">
+                      <div class="flex items-center gap-1">
+                        <img alt="icon" src="../img/svg/location.svg" class="flex-shrink-0">
+                        <p class="sm:text-sm text-xs font-bold">فرهنگشهر</p>
+                      </div>
+                    </div>
+                    <div
+                      class="-mb-[47px] mt-4 bg-primary flex-center gap-1 shadow-4 rounded-[27px] rtl:rounded-tr-none ltr:rounded-tl-none py-2 rtl:pr-4 rtl:pl-[10px] ltr:pr-[10px] ltr:pl-4">
+                      <div>
+                        <div class="flex items-center gap-3 font-medium text-xs text-white">
+                          <p>هر شب از</p>
+                          <p class="line-through opacity-50 font-faNumRegular">1,500,000</p>
+                        </div>
+                        <div class="flex items-center gap-1 font-bold text-lg text-white">
+                          <p class="font-faNumBold">1,200,000</p>
+                          <p class="text-sm">تومان</p>
+                        </div>
+                      </div>
+                      <img alt="icon" src="../img/Line 12.png" class="flex-shrink-0">
+                      <div class="flex-grow">
+                        <p class="text-xs text-white font-medium">رضایت:</p>
+                        <div class="mt-1 flex items-center justify-end gap-1 text-white">
+                          <p class="font-faNumBold text-lg">4.5</p>
+                          <svg width="18" height="18" viewBox="0 0 18 18" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                              d="M4.93738 12C5.01388 11.6325 4.87478 11.1075 4.63138 10.845L2.94142 9.0225C2.41288 8.4525 2.20424 7.845 2.35724 7.32C2.51719 6.795 3.01097 6.435 3.74815 6.3L5.91797 5.91C6.23092 5.85 6.61342 5.55 6.75947 5.2425L7.95565 2.655C8.30338 1.9125 8.77628 1.5 9.29092 1.5C9.80556 1.5 10.2785 1.9125 10.6262 2.655L11.8224 5.2425C11.9128 5.4375 12.1006 5.625 12.3022 5.7525L4.81219 13.83C4.71483 13.935 4.54792 13.8375 4.57574 13.6875L4.93738 12Z"
+                              fill="white" />
+                            <path
+                              d="M13.9505 10.8449C13.7001 11.1149 13.561 11.6324 13.6445 11.9999L14.1243 14.2574C14.326 15.1949 14.2008 15.8999 13.7697 16.2374C13.5958 16.3724 13.3872 16.4399 13.1437 16.4399C12.7891 16.4399 12.3718 16.2974 11.9128 16.0049L9.87511 14.6999C9.5552 14.4974 9.02666 14.4974 8.70675 14.6999L6.66906 16.0049C5.89711 16.4924 5.23643 16.5749 4.8122 16.2374C4.65225 16.1099 4.53402 15.9374 4.45752 15.7124L12.9142 6.59242C13.2342 6.24742 13.6862 6.08992 14.1243 6.17242L14.8267 6.29992C15.5639 6.43492 16.0577 6.79492 16.2177 7.31992C16.3707 7.84492 16.162 8.45242 15.6335 9.02242L13.9505 10.8449Z"
+                              fill="white" />
+                          </svg>
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a class="bg-white rounded-[20px] shadow-1 p-3 group block">
+                    <div class="relative">
+                      <img alt="shape" src="../img/Rectangle 45.png"
+                        class="absolute z-3 h-12 w-14 top-0 rtl:left-0 ltr:right-0 ltr:[transform:rotateY(180deg)]">
+                      <p class="font-faNumBold text-white absolute top-1.5 rtl:left-3 ltr:right-3 z-3">25%</p>
+                      <div class="swiper rooms">
+                        <img alt="img" src="../img/Mediamodifier-Design-Template.png"
+                          class="absolute h-[283px] -bottom-[131px] inset-x-0 z-3 w-full">
+                        <div class="swiper-wrapper">
+                          <div class="swiper-slide">
+                            <img alt="img" src="../img/image.png" class="rounded-[20px] w-full h-[172px]">
+                          </div>
+                          <div class="swiper-slide">
+                            <img alt="img" src="../img/image (9).png" class="rounded-[20px] w-full h-[172px]">
+                          </div>
+                          <div class="swiper-slide">
+                            <img alt="img" src="../img/image.png" class="rounded-[20px] w-full h-[172px]">
+                          </div>
+                          <div class="swiper-slide">
+                            <img alt="img" src="../img/image (9).png" class="rounded-[20px] w-full h-[172px]">
+                          </div>
+                        </div>
+                        <div class="swiper-pagination !-bottom-[3px] flex-center !items-center"></div>
+                      </div>
+                    </div>
+                    <h5
+                      class="font-extrabold text-lg h-12 line-clamp-2 text-dark mt-4 transition group-hover:text-primary leading-6">
+                      اجاره اقامتگاه بوم‌گردی خانه باغ ایرانی</h5>
+                    <div class="mt-2 flex items-center justify-center gap-1 flex-wrap">
+                      <div class="flex items-center gap-1">
+                        <img alt="icon" src="../img/svg/Vector.svg" class="flex-shrink-0">
+                        <p class="sm:text-sm text-xs font-bold"><span class="font-faNumBold">2</span> اتاق خواب</p>
+                      </div>
+                      <img alt="icon" src="../img/svg/Group 24 (2).svg">
+                      <div class="flex items-center gap-1">
+                        <img alt="icon" src="../img/svg/profile-2user.svg" class="flex-shrink-0">
+                        <p class="sm:text-sm text-xs font-bold"><span class="font-faNumBold">4</span> نفره</p>
+                      </div>
+                      <img alt="icon" src="../img/svg/Group 24 (2).svg">
+                      <div class="flex items-center gap-1">
+                        <img alt="icon" src="../img/svg/location.svg" class="flex-shrink-0">
+                        <p class="sm:text-sm text-xs font-bold">فرهنگشهر</p>
+                      </div>
+                    </div>
+                    <div
+                      class="-mb-[47px] mt-4 bg-primary flex-center gap-1 shadow-4 rounded-[27px] rtl:rounded-tr-none ltr:rounded-tl-none py-2 rtl:pr-4 rtl:pl-[10px] ltr:pr-[10px] ltr:pl-4">
+                      <div>
+                        <div class="flex items-center gap-3 font-medium text-xs text-white">
+                          <p>هر شب از</p>
+                          <p class="line-through opacity-50 font-faNumRegular">1,500,000</p>
+                        </div>
+                        <div class="flex items-center gap-1 font-bold text-lg text-white">
+                          <p class="font-faNumBold">1,200,000</p>
+                          <p class="text-sm">تومان</p>
+                        </div>
+                      </div>
+                      <img alt="icon" src="../img/Line 12.png" class="flex-shrink-0">
+                      <div class="flex-grow">
+                        <p class="text-xs text-white font-medium">رضایت:</p>
+                        <div class="mt-1 flex items-center justify-end gap-1 text-white">
+                          <p class="font-faNumBold text-lg">4.5</p>
+                          <svg width="18" height="18" viewBox="0 0 18 18" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                              d="M4.93738 12C5.01388 11.6325 4.87478 11.1075 4.63138 10.845L2.94142 9.0225C2.41288 8.4525 2.20424 7.845 2.35724 7.32C2.51719 6.795 3.01097 6.435 3.74815 6.3L5.91797 5.91C6.23092 5.85 6.61342 5.55 6.75947 5.2425L7.95565 2.655C8.30338 1.9125 8.77628 1.5 9.29092 1.5C9.80556 1.5 10.2785 1.9125 10.6262 2.655L11.8224 5.2425C11.9128 5.4375 12.1006 5.625 12.3022 5.7525L4.81219 13.83C4.71483 13.935 4.54792 13.8375 4.57574 13.6875L4.93738 12Z"
+                              fill="white" />
+                            <path
+                              d="M13.9505 10.8449C13.7001 11.1149 13.561 11.6324 13.6445 11.9999L14.1243 14.2574C14.326 15.1949 14.2008 15.8999 13.7697 16.2374C13.5958 16.3724 13.3872 16.4399 13.1437 16.4399C12.7891 16.4399 12.3718 16.2974 11.9128 16.0049L9.87511 14.6999C9.5552 14.4974 9.02666 14.4974 8.70675 14.6999L6.66906 16.0049C5.89711 16.4924 5.23643 16.5749 4.8122 16.2374C4.65225 16.1099 4.53402 15.9374 4.45752 15.7124L12.9142 6.59242C13.2342 6.24742 13.6862 6.08992 14.1243 6.17242L14.8267 6.29992C15.5639 6.43492 16.0577 6.79492 16.2177 7.31992C16.3707 7.84492 16.162 8.45242 15.6335 9.02242L13.9505 10.8449Z"
+                              fill="white" />
+                          </svg>
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a class="bg-white rounded-[20px] shadow-1 p-3 group block">
+                    <div class="relative">
+                      <img alt="shape" src="../img/Rectangle 45.png"
+                        class="absolute z-3 h-12 w-14 top-0 rtl:left-0 ltr:right-0 ltr:[transform:rotateY(180deg)]">
+                      <p class="font-faNumBold text-white absolute top-1.5 rtl:left-3 ltr:right-3 z-3">25%</p>
+                      <div class="swiper rooms">
+                        <img alt="img" src="../img/Mediamodifier-Design-Template.png"
+                          class="absolute h-[283px] -bottom-[131px] inset-x-0 z-3 w-full">
+                        <div class="swiper-wrapper">
+                          <div class="swiper-slide">
+                            <img alt="img" src="../img/image.png" class="rounded-[20px] w-full h-[172px]">
+                          </div>
+                          <div class="swiper-slide">
+                            <img alt="img" src="../img/image (9).png" class="rounded-[20px] w-full h-[172px]">
+                          </div>
+                          <div class="swiper-slide">
+                            <img alt="img" src="../img/image.png" class="rounded-[20px] w-full h-[172px]">
+                          </div>
+                          <div class="swiper-slide">
+                            <img alt="img" src="../img/image (9).png" class="rounded-[20px] w-full h-[172px]">
+                          </div>
+                        </div>
+                        <div class="swiper-pagination !-bottom-[3px] flex-center !items-center"></div>
+                      </div>
+                    </div>
+                    <h5
+                      class="font-extrabold text-lg h-12 line-clamp-2 text-dark mt-4 transition group-hover:text-primary leading-6">
+                      اجاره اقامتگاه بوم‌گردی خانه باغ ایرانی</h5>
+                    <div class="mt-2 flex items-center justify-center gap-1 flex-wrap">
+                      <div class="flex items-center gap-1">
+                        <img alt="icon" src="../img/svg/Vector.svg" class="flex-shrink-0">
+                        <p class="sm:text-sm text-xs font-bold"><span class="font-faNumBold">2</span> اتاق خواب</p>
+                      </div>
+                      <img alt="icon" src="../img/svg/Group 24 (2).svg">
+                      <div class="flex items-center gap-1">
+                        <img alt="icon" src="../img/svg/profile-2user.svg" class="flex-shrink-0">
+                        <p class="sm:text-sm text-xs font-bold"><span class="font-faNumBold">4</span> نفره</p>
+                      </div>
+                      <img alt="icon" src="../img/svg/Group 24 (2).svg">
+                      <div class="flex items-center gap-1">
+                        <img alt="icon" src="../img/svg/location.svg" class="flex-shrink-0">
+                        <p class="sm:text-sm text-xs font-bold">فرهنگشهر</p>
+                      </div>
+                    </div>
+                    <div
+                      class="-mb-[47px] mt-4 bg-primary flex-center gap-1 shadow-4 rounded-[27px] rtl:rounded-tr-none ltr:rounded-tl-none py-2 rtl:pr-4 rtl:pl-[10px] ltr:pr-[10px] ltr:pl-4">
+                      <div>
+                        <div class="flex items-center gap-3 font-medium text-xs text-white">
+                          <p>هر شب از</p>
+                          <p class="line-through opacity-50 font-faNumRegular">1,500,000</p>
+                        </div>
+                        <div class="flex items-center gap-1 font-bold text-lg text-white">
+                          <p class="font-faNumBold">1,200,000</p>
+                          <p class="text-sm">تومان</p>
+                        </div>
+                      </div>
+                      <img alt="icon" src="../img/Line 12.png" class="flex-shrink-0">
+                      <div class="flex-grow">
+                        <p class="text-xs text-white font-medium">رضایت:</p>
+                        <div class="mt-1 flex items-center justify-end gap-1 text-white">
+                          <p class="font-faNumBold text-lg">4.5</p>
+                          <svg width="18" height="18" viewBox="0 0 18 18" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                              d="M4.93738 12C5.01388 11.6325 4.87478 11.1075 4.63138 10.845L2.94142 9.0225C2.41288 8.4525 2.20424 7.845 2.35724 7.32C2.51719 6.795 3.01097 6.435 3.74815 6.3L5.91797 5.91C6.23092 5.85 6.61342 5.55 6.75947 5.2425L7.95565 2.655C8.30338 1.9125 8.77628 1.5 9.29092 1.5C9.80556 1.5 10.2785 1.9125 10.6262 2.655L11.8224 5.2425C11.9128 5.4375 12.1006 5.625 12.3022 5.7525L4.81219 13.83C4.71483 13.935 4.54792 13.8375 4.57574 13.6875L4.93738 12Z"
+                              fill="white" />
+                            <path
+                              d="M13.9505 10.8449C13.7001 11.1149 13.561 11.6324 13.6445 11.9999L14.1243 14.2574C14.326 15.1949 14.2008 15.8999 13.7697 16.2374C13.5958 16.3724 13.3872 16.4399 13.1437 16.4399C12.7891 16.4399 12.3718 16.2974 11.9128 16.0049L9.87511 14.6999C9.5552 14.4974 9.02666 14.4974 8.70675 14.6999L6.66906 16.0049C5.89711 16.4924 5.23643 16.5749 4.8122 16.2374C4.65225 16.1099 4.53402 15.9374 4.45752 15.7124L12.9142 6.59242C13.2342 6.24742 13.6862 6.08992 14.1243 6.17242L14.8267 6.29992C15.5639 6.43492 16.0577 6.79492 16.2177 7.31992C16.3707 7.84492 16.162 8.45242 15.6335 9.02242L13.9505 10.8449Z"
+                              fill="white" />
+                          </svg>
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a class="bg-white rounded-[20px] shadow-1 p-3 group block">
+                    <div class="relative">
+                      <img alt="shape" src="../img/Rectangle 45.png"
+                        class="absolute z-3 h-12 w-14 top-0 rtl:left-0 ltr:right-0 ltr:[transform:rotateY(180deg)]">
+                      <p class="font-faNumBold text-white absolute top-1.5 rtl:left-3 ltr:right-3 z-3">25%</p>
+                      <div class="swiper rooms">
+                        <img alt="img" src="../img/Mediamodifier-Design-Template.png"
+                          class="absolute h-[283px] -bottom-[131px] inset-x-0 z-3 w-full">
+                        <div class="swiper-wrapper">
+                          <div class="swiper-slide">
+                            <img alt="img" src="../img/image.png" class="rounded-[20px] w-full h-[172px]">
+                          </div>
+                          <div class="swiper-slide">
+                            <img alt="img" src="../img/image (9).png" class="rounded-[20px] w-full h-[172px]">
+                          </div>
+                          <div class="swiper-slide">
+                            <img alt="img" src="../img/image.png" class="rounded-[20px] w-full h-[172px]">
+                          </div>
+                          <div class="swiper-slide">
+                            <img alt="img" src="../img/image (9).png" class="rounded-[20px] w-full h-[172px]">
+                          </div>
+                        </div>
+                        <div class="swiper-pagination !-bottom-[3px] flex-center !items-center"></div>
+                      </div>
+                    </div>
+                    <h5
+                      class="font-extrabold text-lg h-12 line-clamp-2 text-dark mt-4 transition group-hover:text-primary leading-6">
+                      اجاره اقامتگاه بوم‌گردی خانه باغ ایرانی</h5>
+                    <div class="mt-2 flex items-center justify-center gap-1 flex-wrap">
+                      <div class="flex items-center gap-1">
+                        <img alt="icon" src="../img/svg/Vector.svg" class="flex-shrink-0">
+                        <p class="sm:text-sm text-xs font-bold"><span class="font-faNumBold">2</span> اتاق خواب</p>
+                      </div>
+                      <img alt="icon" src="../img/svg/Group 24 (2).svg">
+                      <div class="flex items-center gap-1">
+                        <img alt="icon" src="../img/svg/profile-2user.svg" class="flex-shrink-0">
+                        <p class="sm:text-sm text-xs font-bold"><span class="font-faNumBold">4</span> نفره</p>
+                      </div>
+                      <img alt="icon" src="../img/svg/Group 24 (2).svg">
+                      <div class="flex items-center gap-1">
+                        <img alt="icon" src="../img/svg/location.svg" class="flex-shrink-0">
+                        <p class="sm:text-sm text-xs font-bold">فرهنگشهر</p>
+                      </div>
+                    </div>
+                    <div
+                      class="-mb-[47px] mt-4 bg-primary flex-center gap-1 shadow-4 rounded-[27px] rtl:rounded-tr-none ltr:rounded-tl-none py-2 rtl:pr-4 rtl:pl-[10px] ltr:pr-[10px] ltr:pl-4">
+                      <div>
+                        <div class="flex items-center gap-3 font-medium text-xs text-white">
+                          <p>هر شب از</p>
+                          <p class="line-through opacity-50 font-faNumRegular">1,500,000</p>
+                        </div>
+                        <div class="flex items-center gap-1 font-bold text-lg text-white">
+                          <p class="font-faNumBold">1,200,000</p>
+                          <p class="text-sm">تومان</p>
+                        </div>
+                      </div>
+                      <img alt="icon" src="../img/Line 12.png" class="flex-shrink-0">
+                      <div class="flex-grow">
+                        <p class="text-xs text-white font-medium">رضایت:</p>
+                        <div class="mt-1 flex items-center justify-end gap-1 text-white">
+                          <p class="font-faNumBold text-lg">4.5</p>
+                          <svg width="18" height="18" viewBox="0 0 18 18" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                              d="M4.93738 12C5.01388 11.6325 4.87478 11.1075 4.63138 10.845L2.94142 9.0225C2.41288 8.4525 2.20424 7.845 2.35724 7.32C2.51719 6.795 3.01097 6.435 3.74815 6.3L5.91797 5.91C6.23092 5.85 6.61342 5.55 6.75947 5.2425L7.95565 2.655C8.30338 1.9125 8.77628 1.5 9.29092 1.5C9.80556 1.5 10.2785 1.9125 10.6262 2.655L11.8224 5.2425C11.9128 5.4375 12.1006 5.625 12.3022 5.7525L4.81219 13.83C4.71483 13.935 4.54792 13.8375 4.57574 13.6875L4.93738 12Z"
+                              fill="white" />
+                            <path
+                              d="M13.9505 10.8449C13.7001 11.1149 13.561 11.6324 13.6445 11.9999L14.1243 14.2574C14.326 15.1949 14.2008 15.8999 13.7697 16.2374C13.5958 16.3724 13.3872 16.4399 13.1437 16.4399C12.7891 16.4399 12.3718 16.2974 11.9128 16.0049L9.87511 14.6999C9.5552 14.4974 9.02666 14.4974 8.70675 14.6999L6.66906 16.0049C5.89711 16.4924 5.23643 16.5749 4.8122 16.2374C4.65225 16.1099 4.53402 15.9374 4.45752 15.7124L12.9142 6.59242C13.2342 6.24742 13.6862 6.08992 14.1243 6.17242L14.8267 6.29992C15.5639 6.43492 16.0577 6.79492 16.2177 7.31992C16.3707 7.84492 16.162 8.45242 15.6335 9.02242L13.9505 10.8449Z"
+                              fill="white" />
+                          </svg>
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+    </section>
+
+
+  </main>
+
+  <!-- footer -->
+  <footer class="relative pb-[103px] min-[450px]:pb-0">
+    <div class="bg-dark pt-[118px] pb-4 sm:pb-[38px] relative">
+      <img alt="shape" src="../img/Vector 93.png" class="absolute h-[63px] w-full inset-x-0 top-0 hidden md:block">
+      <img alt="shape" src="../img/Vector 115.png" class="absolute h-[54px] w-full inset-x-0 top-0 md:hidden">
+      <img alt="logo" src="../img/IMAGE 1403-10-08 22_36_07 1 1.png"
+        class="absolute inset-x-0 w-[129px] sm:w-auto mx-auto top-5 sm:top-2">
+      <img alt="bg" src="../img/Group 98.png" class="absolute h-full w-full inset-0">
+      <div class="max-w-content mx-auto px-4 relative">
+        <div class="flex items-center justify-center gap-[22px] md:gap-[55px]">
+          <a class="group">
+            <svg width="29" height="29" viewBox="0 0 29 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path class="transition group-hover:fill-primary"
+                d="M24.1093 9.57021C24.124 9.78326 24.124 9.99631 24.124 10.2113C24.124 16.7628 19.1366 24.3186 10.0168 24.3186V24.3147C7.32273 24.3186 4.68467 23.5469 2.41675 22.0919C2.80848 22.139 3.20218 22.1626 3.59686 22.1636C5.82944 22.1655 7.9982 21.4164 9.75462 20.037C7.63298 19.9968 5.77249 18.6134 5.12255 16.5939C5.86576 16.7373 6.63156 16.7078 7.36102 16.5085C5.04794 16.0412 3.38381 14.0089 3.38381 11.6487C3.38381 11.6271 3.38381 11.6064 3.38381 11.5858C4.07302 11.9697 4.84471 12.1827 5.63406 12.2063C3.45548 10.7503 2.78394 7.85209 4.09953 5.58612C6.61683 8.68366 10.3309 10.5667 14.318 10.766C13.9184 9.04397 14.4642 7.23945 15.7523 6.02891C17.7493 4.15173 20.89 4.24795 22.7672 6.24392C23.8776 6.02498 24.9419 5.61754 25.9158 5.04025C25.5457 6.18796 24.771 7.16287 23.7362 7.78238C24.719 7.66653 25.6792 7.40341 26.5834 7.00186C25.9178 7.99935 25.0793 8.86823 24.1093 9.57021Z"
+                fill="white" />
+            </svg>
+          </a>
+          <a class="group">
+            <svg width="29" height="29" viewBox="0 0 29 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path class="transition group-hover:fill-primary" fill-rule="evenodd" clip-rule="evenodd"
+                d="M26.5834 14.5001C26.5834 21.1735 21.1735 26.5834 14.5001 26.5834C7.82664 26.5834 2.41675 21.1735 2.41675 14.5001C2.41675 7.82664 7.82664 2.41675 14.5001 2.41675C21.1735 2.41675 26.5834 7.82664 26.5834 14.5001ZM14.9331 11.3372C13.7578 11.8261 11.4089 12.8378 7.88634 14.3725C7.31433 14.6 7.01469 14.8225 6.98742 15.0401C6.94132 15.4079 7.40182 15.5527 8.0289 15.7498C8.1142 15.7767 8.20258 15.8045 8.29319 15.8339C8.91014 16.0345 9.74006 16.2691 10.1715 16.2784C10.5628 16.2869 10.9996 16.1255 11.4819 15.7944C14.7731 13.5727 16.472 12.4498 16.5787 12.4256C16.654 12.4085 16.7582 12.387 16.8289 12.4498C16.8995 12.5126 16.8926 12.6315 16.8851 12.6634C16.8395 12.8579 15.0319 14.5385 14.0964 15.4081C13.8048 15.6793 13.5979 15.8716 13.5556 15.9155C13.4609 16.0139 13.3644 16.107 13.2716 16.1964C12.6984 16.7489 12.2686 17.1633 13.2954 17.8399C13.7888 18.1651 14.1836 18.434 14.5775 18.7022C15.0077 18.9952 15.4368 19.2874 15.992 19.6513C16.1334 19.744 16.2685 19.8403 16.4 19.9341C16.9007 20.291 17.3505 20.6117 17.9061 20.5605C18.229 20.5308 18.5625 20.2272 18.7319 19.3217C19.1322 17.1817 19.9191 12.5451 20.1009 10.6344C20.1168 10.467 20.0968 10.2528 20.0807 10.1587C20.0646 10.0647 20.031 9.93069 19.9087 9.83149C19.764 9.71402 19.5405 9.68925 19.4405 9.69101C18.986 9.69902 18.2887 9.94147 14.9331 11.3372Z"
+                fill="white" />
+            </svg>
+          </a>
+          <a class="group">
+            <svg width="28" height="29" viewBox="0 0 28 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path class="transition group-hover:fill-primary"
+                d="M25.6667 14.5734C25.6667 7.85908 20.4439 2.41675 14 2.41675C7.55615 2.41675 2.33337 7.85908 2.33337 14.5734C2.33337 20.6424 6.59871 25.6715 12.1769 26.5834V18.088H9.21515V14.5726H12.1769V11.8949C12.1769 8.8483 13.9184 7.16469 16.5838 7.16469C17.8594 7.16469 19.1956 7.40233 19.1956 7.40233V10.3942H17.7233C16.2743 10.3942 15.8232 11.3318 15.8232 12.2937V14.5734H19.0587L18.5415 18.0872H15.8232V26.5834C21.4014 25.6715 25.6667 20.6424 25.6667 14.5734Z"
+                fill="white" />
+            </svg>
+          </a>
+          <a class="group">
+            <svg width="29" height="29" viewBox="0 0 29 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path class="transition group-hover:fill-primary"
+                d="M14.5 10.573C13.4584 10.573 12.4596 10.9867 11.7231 11.7232C10.9866 12.4597 10.5729 13.4586 10.5729 14.5001C10.5729 15.5416 10.9866 16.5405 11.7231 17.2769C12.4596 18.0134 13.4584 18.4272 14.5 18.4272C15.5415 18.4272 16.5404 18.0134 17.2768 17.2769C18.0133 16.5405 18.427 15.5416 18.427 14.5001C18.427 13.4586 18.0133 12.4597 17.2768 11.7232C16.5404 10.9867 15.5415 10.573 14.5 10.573Z"
+                fill="white" />
+              <path class="transition group-hover:fill-primary" fill-rule="evenodd" clip-rule="evenodd"
+                d="M8.18038 3.72397C12.3806 3.25868 16.6193 3.25868 20.8195 3.72397C23.1142 3.98014 24.9641 5.7866 25.2336 8.08968C25.7313 12.3487 25.7313 16.6511 25.2336 20.9101C24.9641 23.2132 23.1142 25.0196 20.8208 25.277C16.6201 25.7424 12.381 25.7424 8.18038 25.277C5.88575 25.0196 4.03579 23.2132 3.76634 20.9113C3.26848 16.6519 3.26848 12.3491 3.76634 8.08968C4.03579 5.7866 5.88575 3.98014 8.18038 3.72397ZM20.5416 7.24989C20.2212 7.24989 19.9138 7.37719 19.6872 7.6038C19.4606 7.83041 19.3333 8.13775 19.3333 8.45822C19.3333 8.77869 19.4606 9.08603 19.6872 9.31264C19.9138 9.53925 20.2212 9.66655 20.5416 9.66655C20.8621 9.66655 21.1694 9.53925 21.396 9.31264C21.6227 9.08603 21.75 8.77869 21.75 8.45822C21.75 8.13775 21.6227 7.83041 21.396 7.6038C21.1694 7.37719 20.8621 7.24989 20.5416 7.24989ZM8.76038 14.4999C8.76038 12.9777 9.36508 11.5178 10.4415 10.4414C11.5178 9.36501 12.9777 8.7603 14.5 8.7603C16.0222 8.7603 17.4821 9.36501 18.5585 10.4414C19.6348 11.5178 20.2395 12.9777 20.2395 14.4999C20.2395 16.0221 19.6348 17.482 18.5585 18.5584C17.4821 19.6348 16.0222 20.2395 14.5 20.2395C12.9777 20.2395 11.5178 19.6348 10.4415 18.5584C9.36508 17.482 8.76038 16.0221 8.76038 14.4999Z"
+                fill="white" />
+            </svg>
+          </a>
+        </div>
+        <div
+          class="md:mt-[57px] mt-10 flex flex-col md:flex-row items-center justify-center gap-3 md:gap-10 font-semibold text-white">
+          <a class="hover:text-primary">صفحه اصلی</a>
+          <span class="bg-white h-5 w-[1px] hidden md:block"></span>
+          <a class="hover:text-primary">اقامتگاه ها</a>
+          <span class="bg-white h-5 w-[1px] hidden md:block"></span>
+          <a class="hover:text-primary">پیشنهادهای ویژه</a>
+          <span class="bg-white h-5 w-[1px] hidden md:block"></span>
+          <a class="hover:text-primary">میزبان شوید</a>
+        </div>
+        <div
+          class="mt-11 max-w-[700px] mx-auto flex flex-col lg:flex-row items-start lg:items-end justify-between gap-10 lg:gap-3">
+          <div class="flex flex-row lg:flex-col justify-between w-full">
+            <a class="flex items-center gap-[10px] sm:gap-[18px] text-white sm:text-lg font-faNumBold">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M17.62 10.7501C17.19 10.7501 16.85 10.4001 16.85 9.9801C16.85 9.6101 16.48 8.8401 15.86 8.1701C15.25 7.5201 14.58 7.1401 14.02 7.1401C13.59 7.1401 13.25 6.7901 13.25 6.3701C13.25 5.9501 13.6 5.6001 14.02 5.6001C15.02 5.6001 16.07 6.1401 16.99 7.1101C17.85 8.0201 18.4 9.1501 18.4 9.9701C18.4 10.4001 18.05 10.7501 17.62 10.7501Z"
+                  fill="white" />
+                <path
+                  d="M21.23 10.75C20.8 10.75 20.46 10.4 20.46 9.98C20.46 6.43 17.57 3.55 14.03 3.55C13.6 3.55 13.26 3.2 13.26 2.78C13.26 2.36 13.6 2 14.02 2C18.42 2 22 5.58 22 9.98C22 10.4 21.65 10.75 21.23 10.75Z"
+                  fill="white" />
+                <path
+                  d="M11.05 14.95L9.2 16.8C8.81 17.19 8.19 17.19 7.79 16.81C7.68 16.7 7.57 16.6 7.46 16.49C6.43 15.45 5.5 14.36 4.67 13.22C3.85 12.08 3.19 10.94 2.71 9.81C2.24 8.67 2 7.58 2 6.54C2 5.86 2.12 5.21 2.36 4.61C2.6 4 2.98 3.44 3.51 2.94C4.15 2.31 4.85 2 5.59 2C5.87 2 6.15 2.06 6.4 2.18C6.66 2.3 6.89 2.48 7.07 2.74L9.39 6.01C9.57 6.26 9.7 6.49 9.79 6.71C9.88 6.92 9.93 7.13 9.93 7.32C9.93 7.56 9.86 7.8 9.72 8.03C9.59 8.26 9.4 8.5 9.16 8.74L8.4 9.53C8.29 9.64 8.24 9.77 8.24 9.93C8.24 10.01 8.25 10.08 8.27 10.16C8.3 10.24 8.33 10.3 8.35 10.36C8.53 10.69 8.84 11.12 9.28 11.64C9.73 12.16 10.21 12.69 10.73 13.22C10.83 13.32 10.94 13.42 11.04 13.52C11.44 13.91 11.45 14.55 11.05 14.95Z"
+                  fill="white" />
+                <path
+                  d="M21.9701 18.33C21.9701 18.61 21.9201 18.9 21.8201 19.18C21.7901 19.26 21.7601 19.34 21.7201 19.42C21.5501 19.78 21.3301 20.12 21.0401 20.44C20.5501 20.98 20.0101 21.37 19.4001 21.62C19.3901 21.62 19.3801 21.63 19.3701 21.63C18.7801 21.87 18.1401 22 17.4501 22C16.4301 22 15.3401 21.76 14.1901 21.27C13.0401 20.78 11.8901 20.12 10.7501 19.29C10.3601 19 9.9701 18.71 9.6001 18.4L12.8701 15.13C13.1501 15.34 13.4001 15.5 13.6101 15.61C13.6601 15.63 13.7201 15.66 13.7901 15.69C13.8701 15.72 13.9501 15.73 14.0401 15.73C14.2101 15.73 14.3401 15.67 14.4501 15.56L15.2101 14.81C15.4601 14.56 15.7001 14.37 15.9301 14.25C16.1601 14.11 16.3901 14.04 16.6401 14.04C16.8301 14.04 17.0301 14.08 17.2501 14.17C17.4701 14.26 17.7001 14.39 17.9501 14.56L21.2601 16.91C21.5201 17.09 21.7001 17.3 21.8101 17.55C21.9101 17.8 21.9701 18.05 21.9701 18.33Z"
+                  fill="white" />
+              </svg>
+              <p>071-234567</p>
+            </a>
+            <a class="flex items-center gap-[10px] sm:gap-[18px] text-white sm:text-lg font-semibold md:mt-5">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M17 3.5H7C4 3.5 2 5 2 8.5V15.5C2 19 4 20.5 7 20.5H17C20 20.5 22 19 22 15.5V8.5C22 5 20 3.5 17 3.5ZM17.47 9.59L14.34 12.09C13.68 12.62 12.84 12.88 12 12.88C11.16 12.88 10.31 12.62 9.66 12.09L6.53 9.59C6.21 9.33 6.16 8.85 6.41 8.53C6.67 8.21 7.14 8.15 7.46 8.41L10.59 10.91C11.35 11.52 12.64 11.52 13.4 10.91L16.53 8.41C16.85 8.15 17.33 8.2 17.58 8.53C17.84 8.85 17.79 9.33 17.47 9.59Z"
+                  fill="white" />
+              </svg>
+              <p>info@gmail.com</p>
+            </a>
+          </div>
+          <div class="flex gap-[26px] flex-shrink-0">
+            <a><img alt="img" src="../img/Frame 68.png" class="w-[83px] h-[105px] rounded-[10px]"></a>
+            <a><img alt="img" src="../img/Frame 67.png" class="w-[83px] h-[105px] rounded-[10px]"></a>
+          </div>
+        </div>
+      </div>
+      <a href="#"
+        class="absolute rtl:left-4 rtl:md:left-[108px] ltr:right-4 ltr:md:right-[108px] -bottom-[15.5px] md:bottom-0 group">
+        <svg class="w-20 md:w-auto" width="119" height="96" viewBox="0 0 119 96" fill="none"
+          xmlns="http://www.w3.org/2000/svg">
+          <path class="group-hover:fill-secondary transition"
+            d="M22.9296 33.6743L20.6732 71.0594C19.9404 83.2001 11.671 93.5765 0 97H119C106.06 93.6039 96.8193 82.206 96.172 68.8438L94.4888 34.0992C93.5638 15.0056 77.8137 0 58.6977 0C39.746 0 24.0714 14.7571 22.9296 33.6743Z"
+            fill="#FF9704" />
+          <path d="M66.92 40.0499L60.4 33.5299C59.63 32.7599 58.37 32.7599 57.6 33.5299L51.08 40.0499" stroke="white"
+            stroke-width="2.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+      </a>
+    </div>
+    <div class="bg-white py-2 text-center text-dark font-semibold">
+      <div class="max-w-content mx-auto px-4 text-xs sm:text-base">
+        <p>کلیه حقوق معنوی و انتشار محتوای این وب‌سایت متعلق به <a class="hover:text-primary">شیراز هوم</a> است </p>
+      </div>
+    </div>
+    <!-- mobile menu footer -->
+    <div class="fixed bottom-0 left-0 right-0 z-10 text-xs block min-[450px]:hidden">
+      <!-- wave -->
+      <svg class="absolute -top-[31px] mx-auto inset-x-0" xmlns="http://www.w3.org/2000/svg" width="151" height="22"
+        viewBox="0 0 151 33" fill="none">
+        <filter id="shadow" filterUnits="userSpaceOnUse">
+          <feDropShadow dx="0" dy="0" stdDeviation="5" flood-color="#D1AF8988"></feDropShadow>
+        </filter>
+        <path fill-rule="evenodd" clip-rule="evenodd"
+          d="M150.563 32.9999C144.332 32.9999 138.247 31.1227 133.099 27.613L108.622 10.924C88.3811 -2.87661 61.7177 -2.73337 41.6263 11.2839L18.4924 27.4239C13.2896 31.0537 7.09854 32.9999 0.75473 32.9999H150.563Z"
+          fill="white" opacity="0.9"></path>
+      </svg>
+      <!--  -->
+      <div class="w-full h-20 overflow-visible absolute inset-x-0 bottom-0 mx-auto block bg-blur rounded-t-[20px]">
+      </div>
+      <div class="top-6 flex justify-between items-center px-1">
+        <div class="flex justify-between items-center text-[10px] w-full relative text-[#1E2D48]">
+          <a href="#"
+            class="flex justify-center items-center gap-2.5 flex-col p-2 text-center cursor-pointer relative z-10">
+            <svg class="block mx-auto" width="29" height="29" viewBox="0 0 29 29" fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <path opacity="0.5"
+                d="M18.7969 17.5789L18.2471 18.1589C18.2471 18.1589 16.9385 19.5352 13.3679 15.7761C9.79724 12.0169 11.1059 10.6406 11.1059 10.6406L11.4527 10.2745C12.3057 9.37552 12.3867 7.93277 11.6412 6.8791L10.1187 4.72464C9.19549 3.41964 7.4132 3.24806 6.3559 4.36093L4.46003 6.35589C3.93682 6.9081 3.5864 7.62223 3.6287 8.4161C3.73745 10.4461 4.60503 14.8118 9.4432 19.9074C14.575 25.3086 19.3902 25.5237 21.3586 25.3291C21.9821 25.2687 22.5234 24.9316 22.9596 24.4724L24.6754 22.6648C25.8354 21.4444 25.5092 19.3539 24.0254 18.5009L21.7174 17.1717C20.7435 16.6122 19.5582 16.7766 18.7969 17.5777"
+                fill="#160C59" />
+              <path
+                d="M16.0225 2.27155C16.0614 2.03435 16.1928 1.82226 16.3878 1.6818C16.5828 1.54135 16.8257 1.48402 17.0629 1.52238C17.0931 1.52842 17.1922 1.54655 17.2442 1.55863C17.3469 1.58038 17.4907 1.61663 17.6695 1.66738C18.0284 1.77251 18.5298 1.9453 19.1316 2.2208C20.3351 2.77301 21.9361 3.73846 23.5988 5.39992C25.2615 7.06259 26.2269 8.66484 26.7791 9.86834C27.0546 10.4701 27.2262 10.9703 27.3313 11.3304C27.3843 11.5113 27.4299 11.6944 27.4679 11.879L27.4739 11.9165C27.5137 12.1558 27.4578 12.4011 27.3184 12.5996C27.1789 12.798 26.967 12.9337 26.7284 12.9774C26.4918 13.0158 26.2496 12.9589 26.0548 12.8192C25.8601 12.6795 25.7286 12.4683 25.6892 12.2318C25.6645 12.0983 25.6318 11.9664 25.5913 11.8367C25.4679 11.4217 25.3144 11.0163 25.1322 10.6235C24.6609 9.59646 23.8127 8.17788 22.3168 6.68196C20.822 5.18605 19.4035 4.33901 18.3752 3.86776C17.9828 3.68556 17.5778 3.5321 17.1632 3.40859C17.0361 3.37272 16.9079 3.34048 16.779 3.31192C16.5416 3.27241 16.3293 3.14119 16.1878 2.94657C16.0463 2.75195 15.9869 2.50952 16.0225 2.27155Z"
+                fill="#897DA1" />
+              <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M16.2956 6.44045C16.3282 6.32595 16.383 6.21899 16.457 6.12568C16.5309 6.03237 16.6225 5.95454 16.7265 5.89663C16.8305 5.83873 16.9449 5.80189 17.0632 5.78822C17.1815 5.77455 17.3013 5.78431 17.4157 5.81696L17.4194 5.81816L17.423 5.81937L17.4327 5.82179L17.4568 5.82904L17.5245 5.8532C17.8456 5.97692 18.1557 6.1277 18.4513 6.30391C19.0422 6.65433 19.8493 7.23433 20.7979 8.18408C21.7464 9.13262 22.3276 9.93979 22.678 10.5307C22.8532 10.8267 22.9692 11.0672 23.0442 11.2436C23.0843 11.3359 23.1206 11.4298 23.1529 11.5251L23.159 11.5493L23.1626 11.559V11.5626L23.1638 11.5638C23.1638 11.5638 23.1638 11.5662 22.2938 11.8151L23.1638 11.5662C23.2252 11.7948 23.1946 12.0384 23.0787 12.2448C22.9628 12.4513 22.7707 12.6041 22.5435 12.6707C22.3164 12.7374 22.0721 12.7125 21.8631 12.6013C21.6541 12.4902 21.4968 12.3017 21.425 12.0761L21.4214 12.064C21.3364 11.8536 21.2354 11.65 21.1193 11.455C20.8486 10.9995 20.3617 10.3107 19.5158 9.46491C18.67 8.61908 17.9825 8.13333 17.5269 7.86387C17.332 7.74771 17.1284 7.64672 16.9179 7.56179L16.9058 7.55696C16.6776 7.48833 16.4855 7.33254 16.3713 7.12334C16.2571 6.91414 16.2299 6.66957 16.2956 6.44045Z"
+                fill="#897DA1" />
+            </svg>
+            <span>تماس با ما</span>
+          </a>
+          <a href="#"
+            class="flex justify-center items-center gap-2.5 flex-col p-2 text-center cursor-pointer relative z-10">
+            <svg class="block mx-auto" width="29" height="29" viewBox="0 0 29 29" fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M14.5001 2.41675C11.3342 2.41675 8.7605 4.9905 8.7605 8.15633C8.7605 11.2617 11.1892 13.7751 14.3551 13.8838C14.4517 13.8717 14.5484 13.8717 14.6209 13.8838C14.6451 13.8838 14.6572 13.8838 14.6813 13.8838C14.6934 13.8838 14.6934 13.8838 14.7055 13.8838C17.7988 13.7751 20.2276 11.2617 20.2397 8.15633C20.2397 4.9905 17.6659 2.41675 14.5001 2.41675Z"
+                fill="#897DA1" />
+              <path
+                d="M20.6384 17.098C17.2672 14.8505 11.7692 14.8505 8.37382 17.098C6.83924 18.1251 5.99341 19.5146 5.99341 21.0009C5.99341 22.4871 6.83924 23.8646 8.36174 24.8796C10.0534 26.0155 12.2767 26.5834 14.5001 26.5834C16.7234 26.5834 18.9467 26.0155 20.6384 24.8796C22.1609 23.8526 23.0067 22.4751 23.0067 20.9767C22.9947 19.4905 22.1609 18.113 20.6384 17.098Z"
+                fill="#897DA1" />
+            </svg>
+            <span>حساب کاربری</span>
+          </a>
+        </div>
+        <div class="w-1/2 min-[450px]:w-full"></div>
+        <div class="flex justify-between items-center text-[10px] w-full relative text-[#1E2D48]">
+          <a href="#"
+            class="flex justify-center items-center gap-2.5 flex-col p-2 text-center cursor-pointer relative z-10">
+            <svg class="block mx-auto" width="29" height="29" viewBox="0 0 29 29" fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <path opacity="0.5"
+                d="M18.7969 17.5789L18.2471 18.1589C18.2471 18.1589 16.9385 19.5352 13.3679 15.7761C9.79724 12.0169 11.1059 10.6406 11.1059 10.6406L11.4527 10.2745C12.3057 9.37552 12.3867 7.93277 11.6412 6.8791L10.1187 4.72464C9.19549 3.41964 7.4132 3.24806 6.3559 4.36093L4.46003 6.35589C3.93682 6.9081 3.5864 7.62223 3.6287 8.4161C3.73745 10.4461 4.60503 14.8118 9.4432 19.9074C14.575 25.3086 19.3902 25.5237 21.3586 25.3291C21.9821 25.2687 22.5234 24.9316 22.9596 24.4724L24.6754 22.6648C25.8354 21.4444 25.5092 19.3539 24.0254 18.5009L21.7174 17.1717C20.7435 16.6122 19.5582 16.7766 18.7969 17.5777"
+                fill="#160C59" />
+              <path
+                d="M16.0225 2.27155C16.0614 2.03435 16.1928 1.82226 16.3878 1.6818C16.5828 1.54135 16.8257 1.48402 17.0629 1.52238C17.0931 1.52842 17.1922 1.54655 17.2442 1.55863C17.3469 1.58038 17.4907 1.61663 17.6695 1.66738C18.0284 1.77251 18.5298 1.9453 19.1316 2.2208C20.3351 2.77301 21.9361 3.73846 23.5988 5.39992C25.2615 7.06259 26.2269 8.66484 26.7791 9.86834C27.0546 10.4701 27.2262 10.9703 27.3313 11.3304C27.3843 11.5113 27.4299 11.6944 27.4679 11.879L27.4739 11.9165C27.5137 12.1558 27.4578 12.4011 27.3184 12.5996C27.1789 12.798 26.967 12.9337 26.7284 12.9774C26.4918 13.0158 26.2496 12.9589 26.0548 12.8192C25.8601 12.6795 25.7286 12.4683 25.6892 12.2318C25.6645 12.0983 25.6318 11.9664 25.5913 11.8367C25.4679 11.4217 25.3144 11.0163 25.1322 10.6235C24.6609 9.59646 23.8127 8.17788 22.3168 6.68196C20.822 5.18605 19.4035 4.33901 18.3752 3.86776C17.9828 3.68556 17.5778 3.5321 17.1632 3.40859C17.0361 3.37272 16.9079 3.34048 16.779 3.31192C16.5416 3.27241 16.3293 3.14119 16.1878 2.94657C16.0463 2.75195 15.9869 2.50952 16.0225 2.27155Z"
+                fill="#897DA1" />
+              <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M16.2956 6.44045C16.3282 6.32595 16.383 6.21899 16.457 6.12568C16.5309 6.03237 16.6225 5.95454 16.7265 5.89663C16.8305 5.83873 16.9449 5.80189 17.0632 5.78822C17.1815 5.77455 17.3013 5.78431 17.4157 5.81696L17.4194 5.81816L17.423 5.81937L17.4327 5.82179L17.4568 5.82904L17.5245 5.8532C17.8456 5.97692 18.1557 6.1277 18.4513 6.30391C19.0422 6.65433 19.8493 7.23433 20.7979 8.18408C21.7464 9.13262 22.3276 9.93979 22.678 10.5307C22.8532 10.8267 22.9692 11.0672 23.0442 11.2436C23.0843 11.3359 23.1206 11.4298 23.1529 11.5251L23.159 11.5493L23.1626 11.559V11.5626L23.1638 11.5638C23.1638 11.5638 23.1638 11.5662 22.2938 11.8151L23.1638 11.5662C23.2252 11.7948 23.1946 12.0384 23.0787 12.2448C22.9628 12.4513 22.7707 12.6041 22.5435 12.6707C22.3164 12.7374 22.0721 12.7125 21.8631 12.6013C21.6541 12.4902 21.4968 12.3017 21.425 12.0761L21.4214 12.064C21.3364 11.8536 21.2354 11.65 21.1193 11.455C20.8486 10.9995 20.3617 10.3107 19.5158 9.46491C18.67 8.61908 17.9825 8.13333 17.5269 7.86387C17.332 7.74771 17.1284 7.64672 16.9179 7.56179L16.9058 7.55696C16.6776 7.48833 16.4855 7.33254 16.3713 7.12334C16.2571 6.91414 16.2299 6.66957 16.2956 6.44045Z"
+                fill="#897DA1" />
+            </svg>
+            <span>تماس با ما</span>
+          </a>
+          <a href="#"
+            class="flex justify-center items-center gap-2.5 flex-col p-2 text-center cursor-pointer relative z-10">
+            <svg class="block mx-auto" width="29" height="29" viewBox="0 0 29 29" fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M14.5001 2.41675C11.3342 2.41675 8.7605 4.9905 8.7605 8.15633C8.7605 11.2617 11.1892 13.7751 14.3551 13.8838C14.4517 13.8717 14.5484 13.8717 14.6209 13.8838C14.6451 13.8838 14.6572 13.8838 14.6813 13.8838C14.6934 13.8838 14.6934 13.8838 14.7055 13.8838C17.7988 13.7751 20.2276 11.2617 20.2397 8.15633C20.2397 4.9905 17.6659 2.41675 14.5001 2.41675Z"
+                fill="#897DA1" />
+              <path
+                d="M20.6384 17.098C17.2672 14.8505 11.7692 14.8505 8.37382 17.098C6.83924 18.1251 5.99341 19.5146 5.99341 21.0009C5.99341 22.4871 6.83924 23.8646 8.36174 24.8796C10.0534 26.0155 12.2767 26.5834 14.5001 26.5834C16.7234 26.5834 18.9467 26.0155 20.6384 24.8796C22.1609 23.8526 23.0067 22.4751 23.0067 20.9767C22.9947 19.4905 22.1609 18.113 20.6384 17.098Z"
+                fill="#897DA1" />
+            </svg>
+            <span>حساب کاربری</span>
+          </a>
+        </div>
+      </div>
+      <div class="absolute -top-[3px]  min-[400px]:-top-1 min-[450px]:-top-1 inset-x-0">
+        <a class="flex justify-center items-center flex-col w-[90px] mx-auto gap-5" href="#">
+          <span
+            class="w-16 h-16 relative -top-[10px] rounded-full bg-[#F76B16] shadow-2 flex justify-center items-center">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M20.04 6.81994L14.28 2.78994C12.71 1.68994 10.3 1.74994 8.78999 2.91994L3.77999 6.82994C2.77999 7.60994 1.98999 9.20994 1.98999 10.4699V17.3699C1.98999 19.9199 4.05999 21.9999 6.60999 21.9999H17.39C19.94 21.9999 22.01 19.9299 22.01 17.3799V10.5999C22.01 9.24994 21.14 7.58994 20.04 6.81994ZM12.75 17.9999C12.75 18.4099 12.41 18.7499 12 18.7499C11.59 18.7499 11.25 18.4099 11.25 17.9999V14.9999C11.25 14.5899 11.59 14.2499 12 14.2499C12.41 14.2499 12.75 14.5899 12.75 14.9999V17.9999Z"
+                fill="white" />
+            </svg>
+          </span>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="../js/otp.js"></script>
+  <script src="../js/modal.js"></script>
+  <script src="../js/script.js"></script>
+  <!-- افزودن JS Flatpickr -->
+  <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+
+  <script>
+    // داده‌های قیمت اصلی و تخفیف برای هر روز
+    const priceData = {
+            "2025-02-01": { originalPrice: "1,200,000", discountPrice: "980,000" },
+            "2025-02-02": { originalPrice: "1,300,000", discountPrice: "980,000" },
+            "2025-02-03": { originalPrice: "1,500,000", discountPrice: "980,000" },
+            "2025-02-04": { originalPrice: "1,400,000", discountPrice: "980,000" },
+            "2025-02-05": { originalPrice: "1,200,000", discountPrice: "980,000" },
+            "2025-02-06": { originalPrice: "1,600,000", discountPrice: "980,000" },
+            // می‌توانید داده‌های بیشتر اضافه کنید
+        };
+    flatpickr("#dateRangePicker", {
+      locale: "ru",  // locale for this instance only
+      mode: "range", // انتخاب بازه تاریخ
+      dateFormat: "Y/m/d", // فرمت تاریخ شمسی
+      defaultDate: ["2025-02-01", "2025-02-10"], // تاریخ‌های پیش‌فرض
+      inline: true, // نمایش تقویم به صورت پیش‌فرض
+      static: true, // برای ثابت بودن تقویم
+      showMonths: 2,  // تنظیم برای نمایش دو ماه
+      monthSelectorType: "static", // این گزینه باعث می‌شود که ماه‌ها به صورت ثابت نمایش داده شوند
+      onChange: function (selectedDates, dateStr, instance) {
+        document.getElementById('inputdate').value = selectedDates[0].toLocaleDateString('en-US', {
+          year: 'numeric',
+          month: 'short',
+          day: 'numeric'
+        });
+        document.getElementById('outputdate').value = selectedDates[1].toLocaleDateString('en-US', {
+          year: 'numeric',
+          month: 'short',
+          day: 'numeric'
+        });
+      },
+      // اضافه کردن قیمت‌ها به هر روز
+      onDayCreate: function(dObj, dStr, fp, dayElem) {
+                const day = dayElem.dateObj;
+                const dateString = day.toISOString().split('T')[0];  // تبدیل تاریخ به فرمت 'YYYY-MM-DD'
+
+                // بررسی اینکه آیا برای این روز داده‌ای برای قیمت‌ها وجود دارد
+                if (priceData[dateString]) {
+                    const { originalPrice, discountPrice } = priceData[dateString];
+
+                    // ایجاد المان قیمت اصلی
+                    const originalPriceElem = document.createElement("span");
+                    originalPriceElem.className = "original-price";
+                    originalPriceElem.textContent = `${originalPrice}`;
+
+                    // ایجاد المان قیمت تخفیف‌خورده
+                    const discountPriceElem = document.createElement("span");
+                    discountPriceElem.className = "discount-price";
+                    discountPriceElem.textContent = `${discountPrice}`;
+
+                    // افزودن المان‌ها به روز
+                    dayElem.appendChild(originalPriceElem);
+                    dayElem.appendChild(discountPriceElem);
+                }
+            }
+    });
+  </script>
+</body>
+
+</html>
+
+<!-- npx tailwindcss -i ./src/css/app.css -o ./dist/output.css --watch -->

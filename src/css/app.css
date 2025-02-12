@@ -590,11 +590,38 @@ input[type="number"] {
   opacity: 1;
   background-color: #FF9704;
 }
-.dateCheckbox.active{
+/* .dateCheckbox.active{
   background-color: #160C59;
 }
 .dateCheckbox.active p{
   color: white;
+} */
+.dateCheckbox.blocked{
+  background-color: #FFF6EA;
+}
+.dateCheckbox.reserved{
+  background-color: #FFDEDE;
+}
+.dateCheckbox.notReserved{
+  background-color: #E7FFEF;
+}
+.dateCheckbox div.dot,.dateCheckbox p:last-child{
+  display: none;
+}
+.dateCheckbox.blocked p:last-child,.dateCheckbox.reserved p:last-child,.dateCheckbox.notReserved p:last-child{
+  display: block;
+}
+.dateCheckbox.blocked div.dot{
+  background: #FF9704;
+  display: block;
+}
+.dateCheckbox.reserved div.dot{
+  background: #F01212;
+  display: block;
+}
+.dateCheckbox.notReserved div.dot{
+  background: #02C33F;
+  display: block;
 }
 /* dashboard */
 .dashboardUl li a svg path{
