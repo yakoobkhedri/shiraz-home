@@ -1,97 +1,110 @@
 // انتخاب تمام دکمه‌های افزایش و کاهش
-const increaseButtons = document.querySelectorAll('.increase-btn');
-const decreaseButtons = document.querySelectorAll('.decrease-btn');
-
+const increaseButtons = document.querySelectorAll(".increase-btn");
+const decreaseButtons = document.querySelectorAll(".decrease-btn");
+let arrays = [];
 // افزودن ایونت لیسنر به دکمه‌های افزایش
-increaseButtons.forEach(button => {
-    button.addEventListener('click', (event) => {
-        event.preventDefault(); // جلوگیری از رفرش صفحه
-        const input = button.previousElementSibling;
-        let value = parseInt(input.value);
-        value++;
-        input.value = value;
-    });
+increaseButtons.forEach((button) => {
+  button.addEventListener("click", (event) => {
+    event.preventDefault(); // جلوگیری از رفرش صفحه
+    const input = button.previousElementSibling;
+    let value = parseInt(input.value);
+    value++;
+    input.value = value;
+  });
 });
 
 // افزودن ایونت لیسنر به دکمه‌های کاهش
-decreaseButtons.forEach(button => {
-    button.addEventListener('click', (event) => {
-        event.preventDefault(); // جلوگیری از رفرش صفحه
-        const input = button.nextElementSibling;
-        let value = parseInt(input.value);
-        if (value > 0) {
-            value--;
-        }
-        input.value = value;
-    });
+decreaseButtons.forEach((button) => {
+  button.addEventListener("click", (event) => {
+    event.preventDefault(); // جلوگیری از رفرش صفحه
+    const input = button.nextElementSibling;
+    let value = parseInt(input.value);
+    if (value > 0) {
+      value--;
+    }
+    input.value = value;
+  });
 });
 
 // آرایه برای ذخیره‌سازی داده‌ها
 let dataArray = [];
 
 // گرفتن فرم و افزودن ایونت لیسنر برای submit
-const form = document.getElementById('hall-form');
-form.addEventListener('submit', function(event) {
-    event.preventDefault(); // جلوگیری از رفرش صفحه
-    saveData(); // ذخیره‌سازی داده‌ها
+const form = document.getElementById("hall-form");
+form.addEventListener("submit", function (event) {
+  event.preventDefault(); // جلوگیری از رفرش صفحه
+  saveData(); // ذخیره‌سازی داده‌ها
 });
 
 // تابع ذخیره‌سازی داده‌ها
 function saveData(el) {
-    // دریافت مقادیر از فیلدها
-    const number1 = document.getElementById('number1').value;
-    const number2 = document.getElementById('number2').value;
-    const number3 = document.getElementById('number3').value;
-    const select1 = document.getElementById('select1').value;
-    const select2 = document.getElementById('select2').value;
+  // دریافت مقادیر از فیلدها
+  const number1 = document.getElementById("number1").value;
+  const number2 = document.getElementById("number2").value;
+  const number3 = document.getElementById("number3").value;
+  const select1 = document.getElementById("select1").value;
+  const select2 = document.getElementById("select2").value;
 
-    // بررسی پر بودن تمام فیلدها
-    if (number1 && number2 && number3 && select1 && select2) {
-        // ایجاد یک شیء برای ذخیره‌سازی داده‌ها
-        const data = {
-            number1,
-            number2,
-            number3,
-            select1,
-            select2
-        };
-        el.parentElement.parentElement.parentElement.style.visibility = 'hidden';
-        el.parentElement.parentElement.parentElement.style.opacity = '0';
-        document.documentElement.style.overflow = "";
-        // افزودن شیء به آرایه
-        dataArray.push(data);
+  // بررسی پر بودن تمام فیلدها
+  if (number1 && number2 && number3 && select1 && select2) {
+    // ایجاد یک شیء برای ذخیره‌سازی داده‌ها
+    const data = {
+      number1,
+      number2,
+      number3,
+      select1,
+      select2,
+    };
+    el.parentElement.parentElement.parentElement.style.visibility = "hidden";
+    el.parentElement.parentElement.parentElement.style.opacity = "0";
+    document.documentElement.style.overflow = "";
+    // افزودن شیء به آرایه
+    dataArray.push(data);
+    document.querySelector("#arrayValue1").value =
+      JSON.stringify(dataArray);
+    // نمایش داده‌ها در کارت
+    displayData();
 
-        // نمایش داده‌ها در کارت
-        displayData();
-
-        // پاک کردن فیلدها
-        // clearFields();
-    } else {
-        alert("لطفاً تمام فیلدها را پر کنید.");
-    }
+    // پاک کردن فیلدها
+    // clearFields();
+  } else {
+    alert("لطفاً تمام فیلدها را پر کنید.");
+  }
 }
 
 // تابع نمایش داده‌ها در کارت
 function displayData() {
-    const cardsContainer = document.getElementById('cards-container');
-    cardsContainer.innerHTML = ''; // پاک کردن محتوای قبلی
+  const cardsContainer = document.getElementById("cards-container");
+  cardsContainer.innerHTML = ""; // پاک کردن محتوای قبلی
 
-    dataArray.forEach((data, index) => {
-        // ایجاد کارت
-        const card = document.createElement('div');
-        card.className = 'card';
+  dataArray.forEach((data, index) => {
+    // ایجاد کارت
+    const card = document.createElement("div");
+    card.className = "card";
 
-        // محتوای کارت
-        card.innerHTML = `
+    // محتوای کارت
+    card.innerHTML = `
             <div class="mt-5 rounded-[10px] border-dashed-2-primary p-3 bg-[#FFF6EA] flex items-start gap-4">
                    <div class="text-dark font-bold flex-grow">
-                    <p>هال و پذیرایی <span class="font-faNumBold">${index+1}</span></p>
+                    <p>هال و پذیرایی <span class="font-faNumBold">${
+                      index + 1
+                    }</span></p>
                     <div class="flex items-center gap-3 flex-wrap text-sm font-medium mt-3">
-                      <p><span class="font-faNumBold text-green-600">${data.number1} عدد</span> تخت یک نفره</p>
-                      <p><span class="font-faNumBold text-green-600">${data.number2} عدد</span> تخت دو نفره</p>
-                       <p><span class="font-faNumBold text-green-600">${data.number3} عدد</span> تخت دو طبقه</p>
-                       <p>سیستم گرمایشی <span class="text-green-600">${data.select1}</span></p>
-                        <p>سیستم سرمایشی <span class="text-green-600">${data.select2}</span></p>
+                      <p><span class="font-faNumBold text-green-600">${
+                        data.number1
+                      } عدد</span> تخت یک نفره</p>
+                      <p><span class="font-faNumBold text-green-600">${
+                        data.number2
+                      } عدد</span> تخت دو نفره</p>
+                       <p><span class="font-faNumBold text-green-600">${
+                         data.number3
+                       } عدد</span> تخت دو طبقه</p>
+                       <p>سیستم گرمایشی <span class="text-green-600">${
+                         data.select1
+                       }</span></p>
+                        <p>سیستم سرمایشی <span class="text-green-600">${
+                          data.select2
+                        }</span></p>
                     </div>
                    </div>
                    <div class="flex items-center gap-4 flex-shrink-0">
@@ -104,95 +117,109 @@ function displayData() {
             </div>
         `;
 
-        // افزودن کارت به صفحه
-        cardsContainer.appendChild(card);
-    });
+    // افزودن کارت به صفحه
+    cardsContainer.appendChild(card);
+  });
 }
 
 // تابع حذف کارت
 function deleteCard(index) {
-    dataArray.splice(index, 1); // حذف داده از آرایه
-    displayData(); // به‌روزرسانی نمایش کارت‌ها
+  dataArray.splice(index, 1); // حذف داده از آرایه
+  document.querySelector("#arrayValue1").value =
+    JSON.stringify(dataArray);
+  displayData(); // به‌روزرسانی نمایش کارت‌ها
 }
 
 // تابع پاک کردن فیلدها
 function clearFields() {
-    document.getElementById('number1').value = '';
-    document.getElementById('number2').value = '';
-    document.getElementById('number3').value = '';
-    document.getElementById('select1').value = '';
-    document.getElementById('select2').value = '';
+  document.getElementById("number1").value = "";
+  document.getElementById("number2").value = "";
+  document.getElementById("number3").value = "";
+  document.getElementById("select1").value = "";
+  document.getElementById("select2").value = "";
 }
 
 // *********
-
 
 // آرایه برای ذخیره‌سازی داده‌ها
 let dataArray2 = [];
 
 // گرفتن فرم و افزودن ایونت لیسنر برای submit
-const form2 = document.getElementById('pool-form');
-form2.addEventListener('submit', function(event) {
-    event.preventDefault(); // جلوگیری از رفرش صفحه
-    saveData2(); // ذخیره‌سازی داده‌ها
+const form2 = document.getElementById("pool-form");
+form2.addEventListener("submit", function (event) {
+  event.preventDefault(); // جلوگیری از رفرش صفحه
+  saveData2(); // ذخیره‌سازی داده‌ها
 });
 
 // تابع ذخیره‌سازی داده‌ها
 function saveData2(el) {
-    // دریافت مقادیر از فیلدها
-    const maxpooldeep = document.getElementById('maxpooldeep').value;
-    const minpooldeep = document.getElementById('minpooldeep').value;
-    const poolheight = document.getElementById('poolheight').value;
-    const poolwidth = document.getElementById('poolwidth').value;
-    const pooltype = document.getElementById('pooltype').value;
+  // دریافت مقادیر از فیلدها
+  const maxpooldeep = document.getElementById("maxpooldeep").value;
+  const minpooldeep = document.getElementById("minpooldeep").value;
+  const poolheight = document.getElementById("poolheight").value;
+  const poolwidth = document.getElementById("poolwidth").value;
+  const pooltype = document.getElementById("pooltype").value;
 
-    // بررسی پر بودن تمام فیلدها
-    if (maxpooldeep && minpooldeep && poolheight && poolwidth && pooltype) {
-        // ایجاد یک شیء برای ذخیره‌سازی داده‌ها
-        const data2 = {
-            maxpooldeep,
-            minpooldeep,
-            poolheight,
-            poolwidth,
-            pooltype
-        };
-        el.parentElement.parentElement.parentElement.style.visibility = 'hidden';
-        el.parentElement.parentElement.parentElement.style.opacity = '0';
-        document.documentElement.style.overflow = "";
-        // افزودن شیء به آرایه
-        dataArray2.push(data2);
+  // بررسی پر بودن تمام فیلدها
+  if (maxpooldeep && minpooldeep && poolheight && poolwidth && pooltype) {
+    // ایجاد یک شیء برای ذخیره‌سازی داده‌ها
+    const data2 = {
+      maxpooldeep,
+      minpooldeep,
+      poolheight,
+      poolwidth,
+      pooltype,
+    };
+    el.parentElement.parentElement.parentElement.style.visibility = "hidden";
+    el.parentElement.parentElement.parentElement.style.opacity = "0";
+    document.documentElement.style.overflow = "";
+    // افزودن شیء به آرایه
+    dataArray2.push(data2);
+    document.querySelector("#arrayValue3").value =
+      JSON.stringify(dataArray2);
+    // نمایش داده‌ها در کارت
+    displayData2();
 
-        // نمایش داده‌ها در کارت
-        displayData2();
-
-        // پاک کردن فیلدها
-        // clearFields();
-    } else {
-        alert("لطفاً تمام فیلدها را پر کنید.");
-    }
+    // پاک کردن فیلدها
+    // clearFields();
+  } else {
+    alert("لطفاً تمام فیلدها را پر کنید.");
+  }
 }
 
 // تابع نمایش داده‌ها در کارت
 function displayData2() {
-    const cardsContainer2 = document.getElementById('cards-container2');
-    cardsContainer2.innerHTML = ''; // پاک کردن محتوای قبلی
+  const cardsContainer2 = document.getElementById("cards-container2");
+  cardsContainer2.innerHTML = ""; // پاک کردن محتوای قبلی
 
-    dataArray2.forEach((data2, index) => {
-        // ایجاد کارت
-        const card2 = document.createElement('div');
-        card2.className = 'card';
+  dataArray2.forEach((data2, index) => {
+    // ایجاد کارت
+    const card2 = document.createElement("div");
+    card2.className = "card";
 
-        // محتوای کارت
-        card2.innerHTML = `
+    // محتوای کارت
+    card2.innerHTML = `
             <div class="mt-5 rounded-[10px] border-dashed-2-primary p-3 bg-[#FFF6EA] flex items-start gap-4">
                    <div class="text-dark font-bold flex-grow">
-                    <p>استخر <span class="font-faNumBold">${index+1}</span></p>
+                    <p>استخر <span class="font-faNumBold">${
+                      index + 1
+                    }</span></p>
                     <div class="flex items-center gap-3 flex-wrap text-sm font-medium mt-3">
-                      <p> نوع استخر:<span class="font-faNumBold text-green-600">${data2.pooltype}</span></p>
-                      <p> طول استخر:<span class="font-faNumBold text-green-600">${data2.poolheight} متر</span></p>
-                       <p> عرض استخر:<span class="font-faNumBold text-green-600">${data2.poolwidth} متر</span></p>
-                       <p>کمترین عمق استخر:<span class="font-faNumBold text-green-600">${data2.minpooldeep} متر</span></p>
-                       <p>بیشترین عمق استخر:<span class="font-faNumBold text-green-600">${data2.maxpooldeep} متر</span></p>
+                      <p> نوع استخر:<span class="font-faNumBold text-green-600">${
+                        data2.pooltype
+                      }</span></p>
+                      <p> طول استخر:<span class="font-faNumBold text-green-600">${
+                        data2.poolheight
+                      } متر</span></p>
+                       <p> عرض استخر:<span class="font-faNumBold text-green-600">${
+                         data2.poolwidth
+                       } متر</span></p>
+                       <p>کمترین عمق استخر:<span class="font-faNumBold text-green-600">${
+                         data2.minpooldeep
+                       } متر</span></p>
+                       <p>بیشترین عمق استخر:<span class="font-faNumBold text-green-600">${
+                         data2.maxpooldeep
+                       } متر</span></p>
                     </div>
                    </div>
                    <div class="flex items-center gap-4 flex-shrink-0">
@@ -205,24 +232,26 @@ function displayData2() {
             </div>
         `;
 
-        // افزودن کارت به صفحه
-        cardsContainer2.appendChild(card2);
-    });
+    // افزودن کارت به صفحه
+    cardsContainer2.appendChild(card2);
+  });
 }
 
 // تابع حذف کارت
 function deleteCard2(index) {
-    dataArray2.splice(index, 1); // حذف داده از آرایه
-    displayData2(); // به‌روزرسانی نمایش کارت‌ها
+  dataArray2.splice(index, 1); // حذف داده از آرایه
+  document.querySelector("#arrayValue3").value =
+    JSON.stringify(dataArray2);
+  displayData2(); // به‌روزرسانی نمایش کارت‌ها
 }
 
 // تابع پاک کردن فیلدها
 function clearFields2() {
-    document.getElementById('maxpooldeep').value= '';
-    document.getElementById('minpooldeep').value= '';
-    document.getElementById('poolheight').value= '';
-    document.getElementById('poolwidth').value= '';
-    document.getElementById('pooltype').value= '';
+  document.getElementById("maxpooldeep").value = "";
+  document.getElementById("minpooldeep").value = "";
+  document.getElementById("poolheight").value = "";
+  document.getElementById("poolwidth").value = "";
+  document.getElementById("pooltype").value = "";
 }
 
 // ******
@@ -231,68 +260,80 @@ function clearFields2() {
 let dataArray3 = [];
 
 // گرفتن فرم و افزودن ایونت لیسنر برای submit
-const form3 = document.getElementById('room-form');
-form3.addEventListener('submit', function(event) {
-    event.preventDefault(); // جلوگیری از رفرش صفحه
-    saveData3(); // ذخیره‌سازی داده‌ها
+const form3 = document.getElementById("room-form");
+form3.addEventListener("submit", function (event) {
+  event.preventDefault(); // جلوگیری از رفرش صفحه
+  saveData3(); // ذخیره‌سازی داده‌ها
 });
 
 // تابع ذخیره‌سازی داده‌ها
 function saveData3(el) {
-    // دریافت مقادیر از فیلدها
-    const number4 = document.getElementById('number4').value;
-    const number5 = document.getElementById('number5').value;
-    const number6 = document.getElementById('number6').value;
-    const select3 = document.getElementById('select3').value;
-    const select4 = document.getElementById('select4').value;
+  // دریافت مقادیر از فیلدها
+  const number4 = document.getElementById("number4").value;
+  const number5 = document.getElementById("number5").value;
+  const number6 = document.getElementById("number6").value;
+  const select3 = document.getElementById("select3").value;
+  const select4 = document.getElementById("select4").value;
 
-    // بررسی پر بودن تمام فیلدها
-    if (number4 && number5 && number5 && select3 && select4) {
-        // ایجاد یک شیء برای ذخیره‌سازی داده‌ها
-        const data3 = {
-            number4,
-            number5,
-            number6,
-            select3,
-            select4
-        };
-        el.parentElement.parentElement.parentElement.style.visibility = 'hidden';
-        el.parentElement.parentElement.parentElement.style.opacity = '0';
-        document.documentElement.style.overflow = "";
-        // افزودن شیء به آرایه
-        dataArray3.push(data3);
+  // بررسی پر بودن تمام فیلدها
+  if (number4 && number5 && number5 && select3 && select4) {
+    // ایجاد یک شیء برای ذخیره‌سازی داده‌ها
+    const data3 = {
+      number4,
+      number5,
+      number6,
+      select3,
+      select4,
+    };
+    console.log(data3);
+    el.parentElement.parentElement.parentElement.style.visibility = "hidden";
+    el.parentElement.parentElement.parentElement.style.opacity = "0";
+    document.documentElement.style.overflow = "";
+    // افزودن شیء به آرایه
+    dataArray3.push(data3);
+    document.querySelector("#arrayValue2").value =
+      JSON.stringify(dataArray3);
+    // نمایش داده‌ها در کارت
+    displayData3();
 
-        // نمایش داده‌ها در کارت
-        displayData3();
-
-        // پاک کردن فیلدها
-        // clearFields();
-    } else {
-        alert("لطفاً تمام فیلدها را پر کنید.");
-    }
+    // پاک کردن فیلدها
+    // clearFields();
+  } else {
+    alert("لطفاً تمام فیلدها را پر کنید.");
+  }
 }
 
 // تابع نمایش داده‌ها در کارت
 function displayData3() {
-    const cardsContainer3 = document.getElementById('cards-container3');
-    cardsContainer3.innerHTML = ''; // پاک کردن محتوای قبلی
+  const cardsContainer3 = document.getElementById("cards-container3");
+  cardsContainer3.innerHTML = ""; // پاک کردن محتوای قبلی
 
-    dataArray3.forEach((data3, index) => {
-        // ایجاد کارت
-        const card3 = document.createElement('div');
-        card3.className = 'card';
+  dataArray3.forEach((data3, index) => {
+    // ایجاد کارت
+    const card3 = document.createElement("div");
+    card3.className = "card";
 
-        // محتوای کارت
-        card3.innerHTML = `
+    // محتوای کارت
+    card3.innerHTML = `
             <div class="mt-5 rounded-[10px] border-dashed-2-primary p-3 bg-[#FFF6EA] flex items-start gap-4">
                    <div class="text-dark font-bold flex-grow">
-                    <p>اتاق <span class="font-faNumBold">${index+1}</span></p>
+                    <p>اتاق <span class="font-faNumBold">${index + 1}</span></p>
                     <div class="flex items-center gap-3 flex-wrap text-sm font-medium mt-3">
-                      <p><span class="font-faNumBold text-green-600">${data3.number4} عدد</span> تخت یک نفره</p>
-                      <p><span class="font-faNumBold text-green-600">${data3.number5} عدد</span> تخت دو نفره</p>
-                       <p><span class="font-faNumBold text-green-600">${data3.number6} عدد</span> تخت دو طبقه</p>
-                       <p>سیستم گرمایشی <span class="text-green-600">${data3.select3}</span></p>
-                        <p>سیستم سرمایشی <span class="text-green-600">${data3.select4}</span></p>
+                      <p><span class="font-faNumBold text-green-600">${
+                        data3.number4
+                      } عدد</span> تخت یک نفره</p>
+                      <p><span class="font-faNumBold text-green-600">${
+                        data3.number5
+                      } عدد</span> تخت دو نفره</p>
+                       <p><span class="font-faNumBold text-green-600">${
+                         data3.number6
+                       } عدد</span> تخت دو طبقه</p>
+                       <p>سیستم گرمایشی <span class="text-green-600">${
+                         data3.select3
+                       }</span></p>
+                        <p>سیستم سرمایشی <span class="text-green-600">${
+                          data3.select4
+                        }</span></p>
                     </div>
                    </div>
                    <div class="flex items-center gap-4 flex-shrink-0">
@@ -305,26 +346,27 @@ function displayData3() {
             </div>
         `;
 
-        // افزودن کارت به صفحه
-        cardsContainer3.appendChild(card3);
-    });
+    // افزودن کارت به صفحه
+    cardsContainer3.appendChild(card3);
+  });
 }
 
 // تابع حذف کارت
 function deleteCard3(index) {
-    dataArray3.splice(index, 1); // حذف داده از آرایه
-    displayData3(); // به‌روزرسانی نمایش کارت‌ها
+  dataArray3.splice(index, 1); // حذف داده از آرایه
+  document.querySelector("#arrayValue2").value =
+    JSON.stringify(dataArray3);
+  displayData3(); // به‌روزرسانی نمایش کارت‌ها
 }
 
 // تابع پاک کردن فیلدها
 function clearFields3() {
-    document.getElementById('number4').value = '';
-    document.getElementById('number5').value = '';
-    document.getElementById('number6').value = '';
-    document.getElementById('select3').value = '';
-    document.getElementById('select4').value = '';
+  document.getElementById("number4").value = "";
+  document.getElementById("number5").value = "";
+  document.getElementById("number6").value = "";
+  document.getElementById("select3").value = "";
+  document.getElementById("select4").value = "";
 }
-
 
 // ******
 
@@ -332,59 +374,66 @@ function clearFields3() {
 let dataArray4 = [];
 
 // گرفتن فرم و افزودن ایونت لیسنر برای submit
-const form4 = document.getElementById('parking-form');
-form4.addEventListener('submit', function(event) {
-    event.preventDefault(); // جلوگیری از رفرش صفحه
-    saveData4(); // ذخیره‌سازی داده‌ها
+const form4 = document.getElementById("parking-form");
+form4.addEventListener("submit", function (event) {
+  event.preventDefault(); // جلوگیری از رفرش صفحه
+  saveData4(); // ذخیره‌سازی داده‌ها
 });
 
 // تابع ذخیره‌سازی داده‌ها
 function saveData4(el) {
-    // دریافت مقادیر از فیلدها
-    const select5 = document.getElementById('select5').value;
-    const select6 = document.getElementById('select6').value;
+  // دریافت مقادیر از فیلدها
+  const select5 = document.getElementById("select5").value;
+  const select6 = document.getElementById("select6").value;
 
-    // بررسی پر بودن تمام فیلدها
-    if (select5 && select6) {
-        // ایجاد یک شیء برای ذخیره‌سازی داده‌ها
-        const data3 = {
-            select5,
-            select6
-        };
-        el.parentElement.parentElement.parentElement.style.visibility = 'hidden';
-        el.parentElement.parentElement.parentElement.style.opacity = '0';
-        document.documentElement.style.overflow = "";
-        // افزودن شیء به آرایه
-        dataArray4.push(data3);
+  // بررسی پر بودن تمام فیلدها
+  if (select5 && select6) {
+    // ایجاد یک شیء برای ذخیره‌سازی داده‌ها
+    const data3 = {
+      select5,
+      select6,
+    };
+    el.parentElement.parentElement.parentElement.style.visibility = "hidden";
+    el.parentElement.parentElement.parentElement.style.opacity = "0";
+    document.documentElement.style.overflow = "";
+    // افزودن شیء به آرایه
+    dataArray4.push(data3);
+    document.querySelector("#arrayValue4").value =
+      JSON.stringify(dataArray4);
+    // نمایش داده‌ها در کارت
+    displayData4();
 
-        // نمایش داده‌ها در کارت
-        displayData4();
-
-        // پاک کردن فیلدها
-        // clearFields();
-    } else {
-        alert("لطفاً تمام فیلدها را پر کنید.");
-    }
+    // پاک کردن فیلدها
+    // clearFields();
+  } else {
+    alert("لطفاً تمام فیلدها را پر کنید.");
+  }
 }
 
 // تابع نمایش داده‌ها در کارت
 function displayData4() {
-    const cardsContainer4 = document.getElementById('cards-container4');
-    cardsContainer4.innerHTML = ''; // پاک کردن محتوای قبلی
+  const cardsContainer4 = document.getElementById("cards-container4");
+  cardsContainer4.innerHTML = ""; // پاک کردن محتوای قبلی
 
-    dataArray4.forEach((data4, index) => {
-        // ایجاد کارت
-        const card4 = document.createElement('div');
-        card4.className = 'card';
+  dataArray4.forEach((data4, index) => {
+    // ایجاد کارت
+    const card4 = document.createElement("div");
+    card4.className = "card";
 
-        // محتوای کارت
-        card4.innerHTML = `
+    // محتوای کارت
+    card4.innerHTML = `
             <div class="mt-5 rounded-[10px] border-dashed-2-primary p-3 bg-[#FFF6EA] flex items-start gap-4">
                    <div class="text-dark font-bold flex-grow">
-                    <p>پارکینگ <span class="font-faNumBold">${index+1}</span></p>
+                    <p>پارکینگ <span class="font-faNumBold">${
+                      index + 1
+                    }</span></p>
                     <div class="flex items-center gap-3 flex-wrap text-sm font-medium mt-3">
-                       <p>سیستم گرمایشی <span class="text-green-600">${data4.select5}</span></p>
-                        <p>سیستم سرمایشی <span class="text-green-600">${data4.select6}</span></p>
+                       <p>سیستم گرمایشی <span class="text-green-600">${
+                         data4.select5
+                       }</span></p>
+                        <p>سیستم سرمایشی <span class="text-green-600">${
+                          data4.select6
+                        }</span></p>
                     </div>
                    </div>
                    <div class="flex items-center gap-4 flex-shrink-0">
@@ -397,19 +446,21 @@ function displayData4() {
             </div>
         `;
 
-        // افزودن کارت به صفحه
-        cardsContainer4.appendChild(card4);
-    });
+    // افزودن کارت به صفحه
+    cardsContainer4.appendChild(card4);
+  });
 }
 
 // تابع حذف کارت
 function deleteCard4(index) {
-    dataArray4.splice(index, 1); // حذف داده از آرایه
-    displayData4(); // به‌روزرسانی نمایش کارت‌ها
+  dataArray4.splice(index, 1); // حذف داده از آرایه
+  document.querySelector("#arrayValue4").value =
+    JSON.stringify(dataArray4);
+  displayData4(); // به‌روزرسانی نمایش کارت‌ها
 }
 
 // تابع پاک کردن فیلدها
 function clearFields4() {
-    document.getElementById('select5').value = '';
-    document.getElementById('select6').value = '';
+  document.getElementById("select5").value = "";
+  document.getElementById("select6").value = "";
 }
