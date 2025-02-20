@@ -995,6 +995,11 @@ video {
   margin: auto;
 }
 
+.mx-3 {
+  margin-left: 0.75rem;
+  margin-right: 0.75rem;
+}
+
 .mx-4 {
   margin-left: 1rem;
   margin-right: 1rem;
@@ -2631,6 +2636,11 @@ video {
   background-color: rgb(253 187 93 / var(--tw-bg-opacity));
 }
 
+.bg-\[\#ffebcf\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 235 207 / var(--tw-bg-opacity));
+}
+
 .bg-\[\#ffedd5\] {
   --tw-bg-opacity: 1;
   background-color: rgb(255 237 213 / var(--tw-bg-opacity));
@@ -3969,6 +3979,10 @@ input[type="number"] {
 
 /* editor */
 
+.editor-section {
+  font-family: payda-Regular !important;
+}
+
 .editor-section img{
   border-radius: 18px;
   display: block;
@@ -4211,7 +4225,7 @@ input[type="number"] {
   stroke: white;
 }
 
-.acordionContent,.acordionContent2,.acordionContent3 {
+.acordionContent,.acordionContent2,.acordionContent3,.otherComments {
   max-height: 0;
   overflow: hidden;
   transition: all .4s;
@@ -4219,6 +4233,12 @@ input[type="number"] {
 
 .acordionContent.active,.acordionContent2.active,.acordionContent3.active {
   max-height: 2000px;
+  overflow: visible;
+}
+
+.otherComments.active{
+  max-height: -moz-max-content;
+  max-height: max-content;
   overflow: visible;
 }
 

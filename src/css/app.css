@@ -423,6 +423,9 @@ input[type="number"] {
  @apply -bottom-5 opacity-100;
 }
 /* editor */
+.editor-section {
+  font-family: payda-Regular !important;
+}
 .editor-section img{
   border-radius: 18px;
   display: block;
@@ -526,13 +529,17 @@ input[type="number"] {
 .acordionBtn3.active svg path{
   stroke: white;
 }
-.acordionContent,.acordionContent2,.acordionContent3 {
+.acordionContent,.acordionContent2,.acordionContent3,.otherComments {
   max-height: 0;
   overflow: hidden;
   transition: all .4s;
 }
 .acordionContent.active,.acordionContent2.active,.acordionContent3.active {
   max-height: 2000px;
+  overflow: visible;
+}
+.otherComments.active{
+  max-height: max-content;
   overflow: visible;
 }
 /* jalalidatapicker */

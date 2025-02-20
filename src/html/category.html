@@ -89,12 +89,12 @@
           <!-- form -->
           <form class="rounded-2xl bg-[#F9F9F9] p-4 mt-4 relative flex items-center justify-between gap-2">
             <div class="flex items-center gap-4">
-              <button
-                class="w-5 h-5 pt-0.5 flex-center rounded-md bg-[F9F9F9] hover:text-white text-dark hover:bg-dark transition border-2 border-dark font-black">-</button>
+              <div
+                class="w-5 h-5 decrement cursor-pointer pt-0.5 flex-center rounded-md bg-[F9F9F9] hover:text-white text-dark hover:bg-dark transition border-2 border-dark font-black">-</div>
               <input min="1" type="number"
                 class="w-7 h-5 bg-transparent font-faNumBold text-center outline-none text-dark" value="1">
-              <button
-                class="w-5 h-5 pt-0.5 flex-center rounded-md bg-[F9F9F9] hover:text-white text-dark hover:bg-dark transition border-2 border-dark font-black">+</button>
+              <div
+                class="w-5 h-5 increment cursor-pointer pt-0.5 flex-center rounded-md bg-[F9F9F9] hover:text-white text-dark hover:bg-dark transition border-2 border-dark font-black">+</div>
             </div>
             <div class="flex items-center gap-3">
               <button class="bg-primary text-white rounded-[20px] py-1 px-6 font-medium btnHover">ثبت</button>
@@ -148,12 +148,12 @@
           <!-- form -->
           <form class="rounded-2xl bg-[#F9F9F9] p-4 mt-4 relative flex items-center justify-between gap-2">
             <div class="flex items-center gap-4">
-              <button
-                class="w-5 h-5 pt-0.5 flex-center rounded-md bg-[F9F9F9] hover:text-white text-dark hover:bg-dark transition border-2 border-dark font-black">-</button>
+              <div
+                class="w-5 h-5 decrement cursor-pointer pt-0.5 flex-center rounded-md bg-[F9F9F9] hover:text-white text-dark hover:bg-dark transition border-2 border-dark font-black">-</div>
               <input min="1" type="number"
                 class="w-7 h-5 bg-transparent font-faNumBold text-center outline-none text-dark" value="1">
-              <button
-                class="w-5 h-5 pt-0.5 flex-center rounded-md bg-[F9F9F9] hover:text-white text-dark hover:bg-dark transition border-2 border-dark font-black">+</button>
+              <div
+                class="w-5 h-5 increment cursor-pointer pt-0.5 flex-center rounded-md bg-[F9F9F9] hover:text-white text-dark hover:bg-dark transition border-2 border-dark font-black">+</div>
             </div>
             <div class="flex items-center gap-3">
               <button class="bg-primary text-white rounded-[20px] py-1 px-6 font-medium btnHover">ثبت</button>
@@ -712,6 +712,7 @@
         <div class="swiper filters">
           <div class="swiper-wrapper">
             <div class="swiper-slide">
+              <div class="rounded-3xl py-3 px-4 text-xs font-bold text-center bg-[#ffebcf] mb-4 mx-auto mx-3">فیلتر انتخاب شده</div>
               <form id="date-modal"
                 class="border group hover:text-primary transition hover:border-primary border-[#B4B4B4] font-medium px-4 cursor-pointer rounded-full flex-center gap-2 h-11">
                 <svg class="flex-shrink-0" width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -734,6 +735,7 @@
               </form>
             </div>
             <div class="swiper-slide">
+              <div class="rounded-3xl py-3 px-4 text-xs font-bold text-center bg-[#ffebcf] mb-4 mx-auto mx-3">فیلتر انتخاب شده</div>
               <form id="persons-modal"
                 class="border group hover:text-primary transition hover:border-primary border-[#B4B4B4] font-medium px-4 cursor-pointer rounded-full flex-center gap-2 h-11">
                 <svg class="flex-shrink-0" width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -762,6 +764,7 @@
               </form>
             </div>
             <div class="swiper-slide">
+              <div class="rounded-3xl py-3 px-4 text-xs font-bold text-center bg-[#ffebcf] mb-4 mx-auto mx-3">فیلتر انتخاب شده</div>
               <form id="rooms-modal"
                 class="border group hover:text-primary transition hover:border-primary border-[#B4B4B4] font-medium px-4 cursor-pointer rounded-full flex-center gap-2 h-11">
                 <svg class="flex-shrink-0" width="14" height="18" viewBox="0 0 14 18" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -781,6 +784,7 @@
               </form>
             </div>
             <div class="swiper-slide">
+              <div class="rounded-3xl py-3 px-4 text-xs font-bold text-center bg-[#ffebcf] mb-4 mx-auto mx-3">فیلتر انتخاب شده</div>
               <form id="city-modal"
                 class="border group hover:text-primary transition hover:border-primary border-[#B4B4B4] font-medium px-4 cursor-pointer rounded-full flex-center gap-2 h-11">
                 <svg class="flex-shrink-0" width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -800,6 +804,7 @@
               </form>
             </div>
             <div class="swiper-slide">
+              <div class="rounded-3xl py-3 px-4 text-xs font-bold text-center bg-[#ffebcf] mb-4 mx-auto mx-3">فیلتر انتخاب شده</div>
               <form id="price-modal"
                 class="border group hover:text-primary transition hover:border-primary border-[#B4B4B4] font-medium px-4 cursor-pointer rounded-full flex-center gap-2 h-11">
                 <svg class="flex-shrink-0" width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -819,6 +824,7 @@
               </form>
             </div>
             <div class="swiper-slide">
+              <div class="rounded-3xl py-3 px-4 text-xs font-bold text-center bg-[#ffebcf] mb-4 mx-auto mx-3">فیلتر انتخاب شده</div>
               <form id="home-modal"
                 class="border group hover:text-primary transition hover:border-primary border-[#B4B4B4] font-medium px-4 cursor-pointer rounded-full flex-center gap-2 h-11">
                 <svg class="flex-shrink-0" width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -844,6 +850,7 @@
               </form>
             </div>
             <div class="swiper-slide">
+              <div class="rounded-3xl py-3 px-4 text-xs font-bold text-center bg-[#ffebcf] mb-4 mx-auto mx-3">فیلتر انتخاب شده</div>
               <form id="parking-modal"
                 class="border group hover:text-primary transition hover:border-primary border-[#B4B4B4] font-medium px-4 cursor-pointer rounded-full flex-center gap-2 h-11">
                 <svg class="flex-shrink-0" width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -863,6 +870,7 @@
               </form>
             </div>
             <div class="swiper-slide">
+              <div class="rounded-3xl py-3 px-4 text-xs font-bold text-center bg-[#ffebcf] mb-4 mx-auto mx-3">فیلتر انتخاب شده</div>
               <form id="off-modal"
                 class="border group hover:text-primary transition hover:border-primary border-[#B4B4B4] font-medium px-4 cursor-pointer rounded-full flex-center gap-2 h-11">
                 <svg class="flex-shrink-0" width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
