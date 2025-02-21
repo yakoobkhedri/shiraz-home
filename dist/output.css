@@ -767,6 +767,10 @@ video {
   top: -6.9px;
 }
 
+.-top-\[76px\] {
+  top: -76px;
+}
+
 .bottom-0 {
   bottom: 0px;
 }
@@ -929,14 +933,6 @@ video {
 
 .top-auto {
   top: auto;
-}
-
-.-top-\[73px\] {
-  top: -73px;
-}
-
-.-top-\[76px\] {
-  top: -76px;
 }
 
 .-z-1 {
@@ -3061,10 +3057,6 @@ video {
   padding-top: 71px;
 }
 
-.pt-16 {
-  padding-top: 4rem;
-}
-
 .text-center {
   text-align: center;
 }
@@ -4333,12 +4325,9 @@ input[type="number"] {
   background-color: #FF9704;
 }
 
-/* .dateCheckbox.active{
-  background-color: #160C59;
-}
 .dateCheckbox.active p{
   color: white;
-} */
+}
 
 .dateCheckbox.blocked{
   background-color: #FFF6EA;
@@ -4350,6 +4339,10 @@ input[type="number"] {
 
 .dateCheckbox.notReserved{
   background-color: #E7FFEF;
+}
+
+.dateCheckbox.active{
+  background-color: #160C59 !important;
 }
 
 .dateCheckbox div.dot,.dateCheckbox p:last-child{

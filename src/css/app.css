@@ -597,12 +597,9 @@ input[type="number"] {
   opacity: 1;
   background-color: #FF9704;
 }
-/* .dateCheckbox.active{
-  background-color: #160C59;
-}
 .dateCheckbox.active p{
   color: white;
-} */
+}
 .dateCheckbox.blocked{
   background-color: #FFF6EA;
 }
@@ -611,6 +608,9 @@ input[type="number"] {
 }
 .dateCheckbox.notReserved{
   background-color: #E7FFEF;
+}
+.dateCheckbox.active{
+  background-color: #160C59 !important;
 }
 .dateCheckbox div.dot,.dateCheckbox p:last-child{
   display: none;
