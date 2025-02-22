@@ -259,11 +259,17 @@
                 fill="#1E2D48"></path>
             </svg>
           </div>
-          <div class="rounded-2xl bg-[#F9F9F9] p-4 mt-4 relative">
-            <input type="text" id="slider" class="slider">
-            <p class="flex-center gap-2 text-sm font-medium text-dark w-full mt-3">
+          <div class="rounded-2xl bg-[#F9F9F9] p-4 mt-4 relative font-faNumRegular">
+            <div class="flex items-center gap-3">
+              <span id="minValue"></span>
+              <input class="flex-grow" type="range" id="priceRange" name="priceRange" min="0" max="1000" value="500">
+             <span id="maxValue"></span>
+            </div>
+            <div class="slider-value text-center mt-4" id="sliderValue">0</div> <!-- مقدار فعلی -->
+            <!-- <input type="range" id="slider" class="slider"> -->
+            <!-- <p class="flex-center gap-2 text-sm font-medium text-dark w-full mt-3">
               از <span class="font-faNumBold">100,000</span> تا <span class="font-faNumBold">90,000,000</span>
-            </p>
+            </p> -->
           </div>
           <button
             class="bg-primary mt-4 rtl:mr-auto ltr:ml-auto text-white rounded-[20px] py-1 w-[73px] flex-center font-medium btnHover">ثبت</button>
@@ -2119,6 +2125,30 @@
   <script src="../js/rSlider.min.js"></script>
   <script src="../js/rangeInput.js"></script>
   <script src="../js/selectbox.js"></script>
+  <script>
+    // دریافت عناصر HTML
+    const priceRange = document.getElementById('priceRange');
+    const sliderValue = document.getElementById('sliderValue');
+    const minValue = document.getElementById('minValue');
+    const maxValue = document.getElementById('maxValue');
+
+    // تابع برای فرمت‌بندی اعداد با جداکننده سه‌رقمی
+    function formatNumber(number) {
+        return number.toLocaleString();
+    }
+
+    // تنظیم مقادیر Min و Max با فرمت‌بندی
+    minValue.textContent = formatNumber(parseInt(priceRange.min));
+    maxValue.textContent = formatNumber(parseInt(priceRange.max));
+
+    // نمایش مقدار اولیه با فرمت‌بندی
+    sliderValue.textContent = formatNumber(parseInt(priceRange.value));
+
+    // افزودن رویداد تغییر مقدار
+    priceRange.addEventListener('input', function () {
+        sliderValue.textContent = formatNumber(parseInt(this.value));
+    });
+</script>
 </body>
 
 </html>

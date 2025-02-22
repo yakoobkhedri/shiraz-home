@@ -641,6 +641,12 @@ input[type="number"] {
 .dashboardUl li a:hover svg path,.dashboardUl li a.active svg path{
   stroke: #FF9704;
 }
+#portfolio-filter >div.active > div:first-child {
+  @apply bg-[#fce2c1];
+}
+#portfolio-filter >div.active > div:last-child {
+  @apply bg-primary text-white;
+}
 /* swiper */
 .banner .swiper-pagination-bullet{
   width: 9px!important;
@@ -717,33 +723,42 @@ html[dir="rtl"] .data_imagesContLeftRight {
   display: block;
 }
 /* range input */
-.rs-container{
-  height: 20px !important;
+input[type="range"] {
+  -webkit-appearance: none; /* غیرفعال کردن استایل پیش‌فرض */
+  background: transparent; /* پس‌زمینه شفاف */
 }
-.rs-container .rs-scale,.rs-tooltip{
-  display: none !important;
+/* استایل برای مرورگرهای مبتنی بر WebKit (مانند Chrome و Safari) */
+input[type="range"]::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 8px;
+  background: black; /* رنگ مسیر */
+  border-radius: 5px;
 }
-.rs-container .rs-bg{
-  height: 4px !important;
-  top: 8px !important;
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 15px;
+  height: 15px;
+  background: orange; /* رنگ دکمه (نارنجی) */
+  border-radius: 50%;
+  cursor: pointer;
+  margin-top: -6px; /* تنظیم موقعیت دکمه */
+  border: 1px solid black;;
 }
-.rs-container .rs-selected {
-  background-color: #2C2C2C!important;
-  border: 1px solid #2C2C2C!important;
-  height: 4px !important;
-  top: 8px !important;
+/* استایل برای مرورگرهای مبتنی بر Mozilla (مانند Firefox) */
+input[type="range"]::-moz-range-track {
+  width: 100%;
+  height: 4px;
+  background: black; /* رنگ مسیر */
+  border-radius: 5px;
 }
-.rs-container .rs-pointer{
-  width: 16px!important;
-  height: 16px!important;
-  border-radius: 50%!important;
-  background-color: #FF9704!important;
-  border: 1px solid #2C2C2C !important;
-  box-shadow: none !important;
-  top: 2px !important;
-}
-.rs-container .rs-pointer::after, .rs-container .rs-pointer::before {
-  display: none !important;
+input[type="range"]::-moz-range-thumb {
+  width: 15px;
+  height: 15px;
+  background: orange; /* رنگ دکمه (نارنجی) */
+  border-radius: 50%;
+  cursor: pointer;
+  border: 1px solid black;
 }
 /* select */
 .options.active{
