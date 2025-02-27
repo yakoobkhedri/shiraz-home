@@ -128,3 +128,5 @@ function resetForm() {
     formData.length = 0;
     navigateToStep(1);
 }
+
+document.querySelector('.defaultCheck').checked = true;

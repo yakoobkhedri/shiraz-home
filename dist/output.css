@@ -4648,10 +4648,21 @@ input[type="range"]::-moz-range-thumb {
   border-radius: 9999px;
 }
 
+.before\:rounded-lg::before {
+  content: var(--tw-content);
+  border-radius: 0.5rem;
+}
+
 .before\:bg-\[\#ECECEC\]::before {
   content: var(--tw-content);
   --tw-bg-opacity: 1;
   background-color: rgb(236 236 236 / var(--tw-bg-opacity));
+}
+
+.before\:bg-primary::before {
+  content: var(--tw-content);
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 151 4 / var(--tw-bg-opacity));
 }
 
 .before\:opacity-0::before {
