@@ -586,6 +586,9 @@ input[type="number"] {
 .shadow-12{
   box-shadow: 0px 7px 23px 0px #8080801F;
 }
+.shadow-13{
+  box-shadow: 0px 12px 56px 0px #0000000F;
+}
 .shadow-next {
   box-shadow: -2px 0px 24px 0px #0000001A;
 }
