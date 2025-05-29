@@ -1057,6 +1057,10 @@ video {
   margin-bottom: -2.5rem;
 }
 
+.-mb-5 {
+  margin-bottom: -1.25rem;
+}
+
 .-mb-\[47px\] {
   margin-bottom: -47px;
 }
@@ -1299,10 +1303,6 @@ video {
 
 .mt-\[73px\] {
   margin-top: 73px;
-}
-
-.-mb-5 {
-  margin-bottom: -1.25rem;
 }
 
 .line-clamp-2 {
@@ -2152,10 +2152,6 @@ video {
 
 .gap-12 {
   gap: 3rem;
-}
-
-.gap-14 {
-  gap: 3.5rem;
 }
 
 .gap-2 {
@@ -6811,12 +6807,12 @@ input[type="range"]::-moz-range-thumb {
     grid-template-columns: repeat(4, minmax(0, 1fr));
   }
 
-  .xl\:gap-\[99px\] {
-    gap: 99px;
-  }
-
   .xl\:gap-14 {
     gap: 3.5rem;
+  }
+
+  .xl\:gap-\[99px\] {
+    gap: 99px;
   }
 
   .xl\:gap-x-12 {
