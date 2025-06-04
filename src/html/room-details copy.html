@@ -14,8 +14,8 @@
         .calendar-container {
             display: flex;
             justify-content: center;
-            gap: 20px;
             margin-bottom: 20px;
+            gap: 3px;
         }
         .month-container {
           
@@ -46,7 +46,7 @@
         .days {
             display: grid;
             grid-template-columns: repeat(7, 1fr);
-            gap: 5px;
+            gap: 3px;
         }
         .day {
             border-radius: 4px;
@@ -58,22 +58,29 @@
             text-align: center;
             font-weight: bold;
         }
+        .day.selected,.day.selected .day-price,.day.selected .day-discount{
+          color:white;
+        }
         .day:hover {
             background-color: #f0f0f0;
         }
         .day-number {
             font-weight: bold;
             margin-bottom: 3px;
+            font-size: 14px;
+            font-family: fanumber-Bold;
         }
         .day-price {
             font-size: 8px;
-            color: #888;
+            color: #B4B4B4;
             margin-bottom: 6px;
+            font-family: fanumber-Regular;
         }
         .day-discount {
             font-size: 8px;
             color: #e91e63;
             text-decoration: line-through;
+            font-family: fanumber-Regular;
         }
         .other-month {
           text-align: center;
@@ -81,10 +88,10 @@
             background-color: #f9f9f9;
         }
         .selected {
-            background-color: #ffcdd2 !important;
+            background-color: #f01212 !important;
         }
         .in-range {
-            background-color: #f8bbd0 !important;
+            background-color: #ffe5e9 !important;
         }
         .controls {
             text-align: center;
@@ -797,7 +804,7 @@
                   <div class="mt-6">
     <div class="calendar-container">
         <div id="month1" class="month-container flex-grow">
-            <div class="month-header relative">
+            <div class="month-header relative font-faNumBold">
                 <button class="nav-button prev-month-btn relative z-1">&lt;</button>
                 <div class="month-title absolute inset-x-0 mx-auto text-center"></div>
             </div>
@@ -814,7 +821,7 @@
         </div>
         
         <div id="month2" class="month-container flex-grow">
-            <div class="month-header relative">
+            <div class="month-header relative font-faNumBold">
                 <div class="month-title absolute inset-x-0 mx-auto text-center"></div>
                 <button class="nav-button next-month-btn mr-auto relative z-1">&gt;</button>
             </div>
@@ -2254,8 +2261,6 @@
                 // Navigation buttons
                 document.getElementById('prev-month').addEventListener('click', () => this.navigateMonths(-1));
                 document.getElementById('next-month').addEventListener('click', () => this.navigateMonths(1));
-                document.getElementById('prev-year').addEventListener('click', () => this.navigateYears(-1));
-                document.getElementById('next-year').addEventListener('click', () => this.navigateYears(1));
                 
                 // Month container navigation
                 document.querySelectorAll('.prev-month-btn').forEach(btn => {
