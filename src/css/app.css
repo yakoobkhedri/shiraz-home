@@ -785,6 +785,111 @@ input[type="range"]::-moz-range-thumb {
 .filters .swiper-slide > form.filtered > div {
   display: flex;
 }
+/* calander */
+       .calendar-container {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+            gap: 3px;
+        }
+        .month-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .month-title {
+            font-size: 18px;
+            font-weight: bold;
+            color: #333;
+        }
+        .nav-button {
+            color: black;
+            cursor: pointer;
+        }
+        .weekdays {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            text-align: center;
+            margin-bottom: 13px;
+            margin-top: 13px;
+            font-weight: bold;
+            color: #555;
+            font-size: 9px;
+        }
+        .days {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            gap: 3px;
+        }
+        .day {
+            border-radius: 4px;
+            padding: 8px;
+            height: 56px;
+            cursor: pointer;
+            transition: all 0.2s;
+            position: relative;
+            text-align: center;
+            font-weight: bold;
+        }
+        .day.selected,.day.selected .day-price,.day.selected .day-discount{
+          color:white;
+        }
+        .day:hover {
+            background-color: #f0f0f0;
+        }
+        .day-number {
+            font-weight: bold;
+            font-size: 14px;
+            font-family: fanumber-Bold;
+        }
+        .day-price {
+            font-size: 8px;
+            color: #B4B4B4;
+            font-family: fanumber-Regular;
+        }
+        .day-discount {
+            font-size: 8px;
+            color: #e91e63;
+            text-decoration: line-through;
+            font-family: fanumber-Regular;
+        }
+        .day.selected {
+    background-color: #f01212 !important;
+    color: white !important;
+}
+
+
+.day.in-range, .day.hover-range {
+    background-color: #ffe5e9 !important;
+}
+
+.day.in-range:hover, .day.hover-range:hover {
+    background-color: #ffd0d7 !important;
+}
+.day.selected.start-date {
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+}
+
+.day.selected.end-date {
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+}
+
+        .other-month {
+            color: #aaa;
+            background-color: #f9f9f9;
+        }
+        .selected {
+            background-color: #f01212 !important;
+        }
+        .in-range {
+            background-color: #ffe5e9 !important;
+        }
+        .controls {
+            text-align: center;
+            margin-bottom: 20px;
+        }
 @media only screen and (max-width: 768px) {
   .banner .swiper-pagination-bullet{
     width: 4px!important;
@@ -793,4 +898,11 @@ input[type="range"]::-moz-range-thumb {
   .banner .swiper-pagination-bullet-active{
     width: 14px!important;
   }
+}
+
+@media only screen and (max-width: 722px) {
+  .calendar-container {
+         flex-direction: column;
+         gap: 20px;
+         }
 }
