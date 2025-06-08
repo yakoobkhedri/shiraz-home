@@ -68,63 +68,73 @@
       </div>
     </div>
     <div style="visibility: hidden; opacity: 0;" data-button="login-modal"
-          class="modal-container overflow-auto bg-black/60 backdrop-blur-sm fixed inset-0 z-50 transition-all flex justify-center items-center px-4 sm:px-7">
-          <form id="loginForm"
-            class="modal-content bg-white max-w-[526px] overflow-hidden relative w-full rounded-[27px] shadow-8">
-            <img alt="shape" src="../img/Rectangle 165.png" class="absolute top-0 inset-x-0 h-[109px] w-full">
-            <div class="p-4 relative">
-              <div class="flex items-center justify-between mb-5 relative mt-4">
-                <div class="font-bold px-4 flex items-center gap-2 text-white">
-                  <p>ورود/ثبت نام</p>
-                </div>
-                <!-- close modal -->
-                <svg class="cursor-pointer close-button" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                  xmlns="http://www.w3.org/2000/svg">
-                  <path
-                    d="M13.41 11.9999L17.71 7.70994C17.8983 7.52164 18.0041 7.26624 18.0041 6.99994C18.0041 6.73364 17.8983 6.47825 17.71 6.28994C17.5217 6.10164 17.2663 5.99585 17 5.99585C16.7337 5.99585 16.4783 6.10164 16.29 6.28994L12 10.5899L7.71 6.28994C7.5217 6.10164 7.2663 5.99585 7 5.99585C6.7337 5.99585 6.4783 6.10164 6.29 6.28994C6.1017 6.47825 5.99591 6.73364 5.99591 6.99994C5.99591 7.26624 6.1017 7.52164 6.29 7.70994L10.59 11.9999L6.29 16.2899C6.19627 16.3829 6.12188 16.4935 6.07111 16.6154C6.02034 16.7372 5.9942 16.8679 5.9942 16.9999C5.9942 17.132 6.02034 17.2627 6.07111 17.3845C6.12188 17.5064 6.19627 17.617 6.29 17.7099C6.38296 17.8037 6.49356 17.8781 6.61542 17.9288C6.73728 17.9796 6.86799 18.0057 7 18.0057C7.13201 18.0057 7.26272 17.9796 7.38458 17.9288C7.50644 17.8781 7.61704 17.8037 7.71 17.7099L12 13.4099L16.29 17.7099C16.383 17.8037 16.4936 17.8781 16.6154 17.9288C16.7373 17.9796 16.868 18.0057 17 18.0057C17.132 18.0057 17.2627 17.9796 17.3846 17.9288C17.5064 17.8781 17.617 17.8037 17.71 17.7099C17.8037 17.617 17.8781 17.5064 17.9289 17.3845C17.9797 17.2627 18.0058 17.132 18.0058 16.9999C18.0058 16.8679 17.9797 16.7372 17.9289 16.6154C17.8781 16.4935 17.8037 16.3829 17.71 16.2899L13.41 11.9999Z"
-                    fill="white"></path>
-                </svg>
+      class="modal-container overflow-auto bg-black/60 backdrop-blur-sm fixed inset-0 z-50 transition-all flex justify-center items-center px-4 sm:px-7">
+      <form id="loginForm"
+        class="modal-content bg-white max-w-[526px] overflow-hidden relative w-full rounded-[27px] shadow-8">
+        <img alt="shape" src="../img/Rectangle 165.png" class="absolute top-0 inset-x-0 h-[109px] w-full">
+        <div class="p-4 relative">
+          <div class="flex items-center justify-between mb-5 relative mt-4">
+            <div class="font-bold px-4 flex items-center gap-2 text-white">
+              <p>ورود/ثبت نام</p>
+            </div>
+            <!-- close modal -->
+            <svg class="cursor-pointer close-button" width="24" height="24" viewBox="0 0 24 24" fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M13.41 11.9999L17.71 7.70994C17.8983 7.52164 18.0041 7.26624 18.0041 6.99994C18.0041 6.73364 17.8983 6.47825 17.71 6.28994C17.5217 6.10164 17.2663 5.99585 17 5.99585C16.7337 5.99585 16.4783 6.10164 16.29 6.28994L12 10.5899L7.71 6.28994C7.5217 6.10164 7.2663 5.99585 7 5.99585C6.7337 5.99585 6.4783 6.10164 6.29 6.28994C6.1017 6.47825 5.99591 6.73364 5.99591 6.99994C5.99591 7.26624 6.1017 7.52164 6.29 7.70994L10.59 11.9999L6.29 16.2899C6.19627 16.3829 6.12188 16.4935 6.07111 16.6154C6.02034 16.7372 5.9942 16.8679 5.9942 16.9999C5.9942 17.132 6.02034 17.2627 6.07111 17.3845C6.12188 17.5064 6.19627 17.617 6.29 17.7099C6.38296 17.8037 6.49356 17.8781 6.61542 17.9288C6.73728 17.9796 6.86799 18.0057 7 18.0057C7.13201 18.0057 7.26272 17.9796 7.38458 17.9288C7.50644 17.8781 7.61704 17.8037 7.71 17.7099L12 13.4099L16.29 17.7099C16.383 17.8037 16.4936 17.8781 16.6154 17.9288C16.7373 17.9796 16.868 18.0057 17 18.0057C17.132 18.0057 17.2627 17.9796 17.3846 17.9288C17.5064 17.8781 17.617 17.8037 17.71 17.7099C17.8037 17.617 17.8781 17.5064 17.9289 17.3845C17.9797 17.2627 18.0058 17.132 18.0058 16.9999C18.0058 16.8679 17.9797 16.7372 17.9289 16.6154C17.8781 16.4935 17.8037 16.3829 17.71 16.2899L13.41 11.9999Z"
+                fill="white"></path>
+            </svg>
+          </div>
+          <!-- form -->
+          <div class="mt-[4rem] relative">
+            <div class="rounded-[10px] border border-[#EEF1FA] h-16 px-3 flex items-center justify-between gap-2">
+              <div class="flex items-center gap-3 flex-grow">
+                <img alt="icon" src="../img/svg/mobile.svg" class="flex-shrink-0">
+                <input type="tel" class="bg-transparent border-0 w-full flex-grow outline-none">
               </div>
-              <!-- form -->
-              <div class="mt-[4rem] relative">
-                <div class="rounded-[10px] border border-[#EEF1FA] h-16 px-3 flex items-center justify-between gap-2">
-                 <div class="flex items-center gap-3 flex-grow">
-                   <img alt="icon" src="../img/svg/mobile.svg" class="flex-shrink-0">
-                   <input type="tel" class="bg-transparent border-0 w-full flex-grow outline-none">
-                 </div>
-                 <button class="flex-shrink-0 text-xs sm:text-sm text-[#160C59] font-bold">دریافت کد تایید</button>
-                </div>
-                <div class="otpContainer mt-9 flex-center font-faNumBold gap-3 sm:gap-6" dir="ltr">
-                  <input type="number" value="" maxlength="1" class="block w-[53px] h-[53px] rounded-[10px] border border-[#EEF1FA] text-center otpInput bg-white outline-none">
-                  <input type="number" value="" maxlength="1" disabled="" class="block w-[53px] h-[53px] rounded-[10px] border border-[#EEF1FA] text-center otpInput bg-white outline-none">
-                  <input type="number" value="" maxlength="1" disabled="" class="block w-[53px] h-[53px] rounded-[10px] border border-[#EEF1FA] text-center otpInput bg-white outline-none">
-                  <input type="number" value="" maxlength="1" disabled="" class="block w-[53px] h-[53px] rounded-[10px] border border-[#EEF1FA] text-center otpInput bg-white outline-none">
-                </div>
-                <input type="hidden" id="otpHiddenInput">
-                <div class="flex items-center flex-col sm:flex-row gap-3 flex-grow mt-9">
-                  <div class="bg-white border border-[#EEF1FA] px-3 text-[#393939] flex-shrink-0 rounded-[10px] flex-center h-[65px] font-faNumBold text-2xl">
-                      856985
-                  </div>
-                  <div class="rounded-[10px] w-full px-[14px] flex-between gap-3 bg-white border border-[#EEF1FA] text-sm font-faNumBold h-[65px]">
-                      <input placeholder="کد امنیتی" class="flex-grow bg-transparent outline-none w-full">
-                      <img alt="icon" src="../img/svg/shield-tick.svg" class="flex-shrink-0">
-                  </div>
-                 </div>
-                 <label class="flex items-center gap-2 cursor-pointer mt-5">
-                  <div class="inline-flex items-center gap-2">
-                    <label class="relative flex items-center p-1 rounded-full cursor-pointer" htmlfor="black">
-                      <input name="type" type="checkbox" class="before:content[''] bg-white border border-[#EEF1FA] peer relative h-6 w-6 cursor-pointer appearance-none overflow-hidden rounded-[5px] text-[#ECECEC] transition-all before:absolute before:top-2/4 before:left-2/4 before:block before:h-12 before:w-12 before:-translate-y-2/4 before:-translate-x-2/4 before:rounded-full before:bg-[#ECECEC] before:opacity-0 before:transition-opacity checked:border-orange checked:before:bg-orange hover:before:opacity-10" id="black">
-                      <span class="absolute text-primary transition-opacity opacity-0 pointer-events-none rounded-[5px] top-2/4 left-2/4 -translate-y-2/4 -translate-x-2/4 peer-checked:opacity-100">
-                        <div class="w-6 h-6 rounded-[5px] bg-primary"></div>
-                      </span>
-                    </label>
-                    <p class="text-sm font-semibold text-primary">
-                      مرا به یاد داشته باش</p>
-                  </div>
+              <button class="flex-shrink-0 text-xs sm:text-sm text-[#160C59] font-bold">دریافت کد تایید</button>
+            </div>
+            <div class="otpContainer mt-9 flex-center font-faNumBold gap-3 sm:gap-6" dir="ltr">
+              <input type="number" value="" maxlength="1"
+                class="block w-[53px] h-[53px] rounded-[10px] border border-[#EEF1FA] text-center otpInput bg-white outline-none">
+              <input type="number" value="" maxlength="1" disabled=""
+                class="block w-[53px] h-[53px] rounded-[10px] border border-[#EEF1FA] text-center otpInput bg-white outline-none">
+              <input type="number" value="" maxlength="1" disabled=""
+                class="block w-[53px] h-[53px] rounded-[10px] border border-[#EEF1FA] text-center otpInput bg-white outline-none">
+              <input type="number" value="" maxlength="1" disabled=""
+                class="block w-[53px] h-[53px] rounded-[10px] border border-[#EEF1FA] text-center otpInput bg-white outline-none">
+            </div>
+            <input type="hidden" id="otpHiddenInput">
+            <div class="flex items-center flex-col sm:flex-row gap-3 flex-grow mt-9">
+              <div
+                class="bg-white border border-[#EEF1FA] px-3 text-[#393939] flex-shrink-0 rounded-[10px] flex-center h-[65px] font-faNumBold text-2xl">
+                856985
+              </div>
+              <div
+                class="rounded-[10px] w-full px-[14px] flex-between gap-3 bg-white border border-[#EEF1FA] text-sm font-faNumBold h-[65px]">
+                <input placeholder="کد امنیتی" class="flex-grow bg-transparent outline-none w-full">
+                <img alt="icon" src="../img/svg/shield-tick.svg" class="flex-shrink-0">
+              </div>
+            </div>
+            <label class="flex items-center gap-2 cursor-pointer mt-5">
+              <div class="inline-flex items-center gap-2">
+                <label class="relative flex items-center p-1 rounded-full cursor-pointer" htmlfor="black">
+                  <input name="type" type="checkbox"
+                    class="before:content[''] bg-white border border-[#EEF1FA] peer relative h-6 w-6 cursor-pointer appearance-none overflow-hidden rounded-[5px] text-[#ECECEC] transition-all before:absolute before:top-2/4 before:left-2/4 before:block before:h-12 before:w-12 before:-translate-y-2/4 before:-translate-x-2/4 before:rounded-full before:bg-[#ECECEC] before:opacity-0 before:transition-opacity checked:border-orange checked:before:bg-orange hover:before:opacity-10"
+                    id="black">
+                  <span
+                    class="absolute text-primary transition-opacity opacity-0 pointer-events-none rounded-[5px] top-2/4 left-2/4 -translate-y-2/4 -translate-x-2/4 peer-checked:opacity-100">
+                    <div class="w-6 h-6 rounded-[5px] bg-primary"></div>
+                  </span>
                 </label>
-                <button type="submit" class="rounded-[10px] btnHover w-full text-xl sm:text-2xl h-[51px] sm:h-[65px] bg-primary font-extrabold mt-5 sm:mt-8 flex-center text-white">ورود</button>
+                <p class="text-sm font-semibold text-primary">
+                  مرا به یاد داشته باش</p>
               </div>
-          </form>
+            </label>
+            <button type="submit"
+              class="rounded-[10px] btnHover w-full text-xl sm:text-2xl h-[51px] sm:h-[65px] bg-primary font-extrabold mt-5 sm:mt-8 flex-center text-white">ورود</button>
+          </div>
+      </form>
     </div>
   </div>
 
@@ -437,15 +447,19 @@
           <div class="lg:col-span-7 col-span-12">
             <h4 class="text-2xl font-bold text-dark">اقامتگاه "عمارت هفت رنگ" اتاق سنگ سیاه</h4>
             <div class="mt-6 bg-white rounded-[20px] shadow-1 p-4 relative">
-              <svg class="absolute top-0 rtl:left-0 ltr:right-0 ltr:[transform:rotateY(180deg)]" width="178" height="63" viewBox="0 0 178 63" fill="#f6f6f6" xmlns="http://www.w3.org/2000/svg">
-                <path d="M161.873 30.0493V16C161.873 7.16344 169.036 0 177.873 0H0.000319481L1.26301e-05 62.4303C0.0109623 53.6224 7.14013 46.4779 15.9506 46.4507L145.922 46.0493C154.739 46.022 161.873 38.8666 161.873 30.0493Z" fill="#f6f6f6"/>
+              <svg class="absolute top-0 rtl:left-0 ltr:right-0 ltr:[transform:rotateY(180deg)]" width="178" height="63"
+                viewBox="0 0 178 63" fill="#f6f6f6" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M161.873 30.0493V16C161.873 7.16344 169.036 0 177.873 0H0.000319481L1.26301e-05 62.4303C0.0109623 53.6224 7.14013 46.4779 15.9506 46.4507L145.922 46.0493C154.739 46.022 161.873 38.8666 161.873 30.0493Z"
+                  fill="#f6f6f6" />
               </svg>
               <div class="flex items-center justify-between flex-wrap gap-4 sm:gap-2 relative">
                 <div class="flex items-center gap-2 text-lg font-medium text-dark">
                   <img alt="icon" src="../img/svg/home.svg">
                   <p>دربست</p>
                 </div>
-                <div class="flex flex-wrap items-end gap-[22px] relative top-[-17px] rtl:left-[-18px] ltr:right-[-18px]">
+                <div
+                  class="flex flex-wrap items-end gap-[22px] relative top-[-17px] rtl:left-[-18px] ltr:right-[-18px]">
                   <p class="bg-[#FF970459] rounded-[20px] text-dark font-faNumRegular py-0.5 px-2">کد:12345678</p>
                   <a
                     class="group hover:bg-primary bg-white hover:text-white border border-[#FF9704] rounded-[10px] flex items-center gap-[10px] px-3 py-2 shadow-1 text-dark font-medium">
@@ -677,7 +691,10 @@
                     <p>موقعیت اقامتگاه</p>
                   </div>
                   <p class="mt-2 font-medium">آدرس و موقعیت دقیق اقامتگاه، پس از رزرو برای شما ارسال خواهد شد.</p>
-                  <iframe class="rounded-[18px] overflow-hidden mt-4 w-full h-[208px]" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d207344.0754342176!2d51.51246591933516!3d35.707740217686975!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3f8e00491ff3dcd9%3A0xf0b3697c567024bc!2z2KrZh9ix2KfZhtiMINin2LPYqtin2YYg2KrZh9ix2KfZhtiMINin24zYsdin2YY!5e0!3m2!1sfa!2s!4v1708858730182!5m2!1sfa!2s" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                  <iframe class="rounded-[18px] overflow-hidden mt-4 w-full h-[208px]"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d207344.0754342176!2d51.51246591933516!3d35.707740217686975!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3f8e00491ff3dcd9%3A0xf0b3697c567024bc!2z2KrZh9ix2KfZhtiMINin2LPYqtin2YYg2KrZh9ix2KfZhtiMINin24zYsdin2YY!5e0!3m2!1sfa!2s!4v1708858730182!5m2!1sfa!2s"
+                    style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
                 <div class="mt-10">
                   <div class="flex items-start gap-2 text-lg font-bold text-dark">
@@ -708,43 +725,41 @@
                     <p>تقویم و نرخ رزرو</p>
                   </div>
                   <div class="mt-6">
-    <div class="calendar-container">
-        <div id="month1" class="month-container flex-grow">
-            <div class="month-header relative font-faNumBold">
-                <button class="nav-button prev-month-btn relative z-1">&lt;</button>
-                <div class="month-title absolute inset-x-0 mx-auto text-center"></div>
-            </div>
-            <div class="weekdays">
-                <div>شنبه</div>
-                <div>یکشنبه</div>
-                <div>دوشنبه</div>
-                <div>سه شنبه</div>
-                <div>چهارشنبه</div>
-                <div>پنجشنبه</div>
-                <div>جمعه</div>
-            </div>
-            <div class="days"></div>
-        </div>
-        
-        <div id="month2" class="month-container flex-grow">
-            <div class="month-header relative font-faNumBold">
-                <div class="month-title absolute inset-x-0 mx-auto text-center"></div>
-                <button class="nav-button next-month-btn mr-auto relative z-1">&gt;</button>
-            </div>
-            <div class="weekdays">
-                 <div>شنبه</div>
-                <div>یکشنبه</div>
-                <div>دوشنبه</div>
-                <div>سه شنبه</div>
-                <div>چهارشنبه</div>
-                <div>پنجشنبه</div>
-                <div>جمعه</div>
-            </div>
-            <div class="days"></div>
-        </div>
-    </div>
-  
+                    <div class="calendar-container">
+                      <div id="month1" class="month-container flex-grow">
+                        <div class="month-header relative font-faNumBold">
+                          <button class="nav-button prev-month-btn relative z-1">&lt;</button>
+                          <div class="month-title absolute inset-x-0 mx-auto text-center"></div>
+                        </div>
+                        <div class="weekdays">
+                          <div>شنبه</div>
+                          <div>یکشنبه</div>
+                          <div>دوشنبه</div>
+                          <div>سه شنبه</div>
+                          <div>چهارشنبه</div>
+                          <div>پنجشنبه</div>
+                          <div>جمعه</div>
+                        </div>
+                        <div class="days"></div>
+                      </div>
 
+                      <div id="month2" class="month-container flex-grow">
+                        <div class="month-header relative font-faNumBold">
+                          <div class="month-title absolute inset-x-0 mx-auto text-center"></div>
+                          <button class="nav-button next-month-btn mr-auto relative z-1">&gt;</button>
+                        </div>
+                        <div class="weekdays">
+                          <div>شنبه</div>
+                          <div>یکشنبه</div>
+                          <div>دوشنبه</div>
+                          <div>سه شنبه</div>
+                          <div>چهارشنبه</div>
+                          <div>پنجشنبه</div>
+                          <div>جمعه</div>
+                        </div>
+                        <div class="days"></div>
+                      </div>
+                    </div>
                   </div>
                 </div>
                 <div id="laws" class="mt-5">
@@ -1047,7 +1062,8 @@
                             <img alt="icon" src="../img/svg/star (2).svg">
                           </div>
                         </div>
-                        <p class="text-[#2F2F2F] mt-4 text-sm text-justify">همه چیز عالی بود خیلی ممنون از میزبانی حرفه ای
+                        <p class="text-[#2F2F2F] mt-4 text-sm text-justify">همه چیز عالی بود خیلی ممنون از میزبانی حرفه
+                          ای
                           جناب اعتبار</p>
                       </div>
                       <div class="rounded-[20px] bg-[#FFF6EA] p-4 pb-5 relative">
@@ -1069,7 +1085,8 @@
                             <img alt="icon" src="../img/svg/star (2).svg">
                           </div>
                         </div>
-                        <p class="text-[#2F2F2F] mt-4 text-sm text-justify">همه چیز عالی بود خیلی ممنون از میزبانی حرفه ای
+                        <p class="text-[#2F2F2F] mt-4 text-sm text-justify">همه چیز عالی بود خیلی ممنون از میزبانی حرفه
+                          ای
                           جناب اعتبار</p>
                       </div>
                       <div class="rounded-[20px] bg-[#FFF6EA] p-4 pb-5 relative">
@@ -1091,7 +1108,8 @@
                             <img alt="icon" src="../img/svg/star (2).svg">
                           </div>
                         </div>
-                        <p class="text-[#2F2F2F] mt-4 text-sm text-justify">همه چیز عالی بود خیلی ممنون از میزبانی حرفه ای
+                        <p class="text-[#2F2F2F] mt-4 text-sm text-justify">همه چیز عالی بود خیلی ممنون از میزبانی حرفه
+                          ای
                           جناب اعتبار</p>
                       </div>
                       <div class="rounded-[20px] bg-[#FFF6EA] p-4 pb-5 relative">
@@ -1113,12 +1131,14 @@
                             <img alt="icon" src="../img/svg/star (2).svg">
                           </div>
                         </div>
-                        <p class="text-[#2F2F2F] mt-4 text-sm text-justify">همه چیز عالی بود خیلی ممنون از میزبانی حرفه ای
+                        <p class="text-[#2F2F2F] mt-4 text-sm text-justify">همه چیز عالی بود خیلی ممنون از میزبانی حرفه
+                          ای
                           جناب اعتبار</p>
                       </div>
                     </div>
                   </div>
-                  <a class="seeAll flex items-center gap-1 font-bold text-[#2F2F2F] mt-7 group transition hover:text-primary">
+                  <a
+                    class="seeAll flex items-center gap-1 font-bold text-[#2F2F2F] mt-7 group transition hover:text-primary">
                     <p>مشاهده همه نظرات</p>
                     <svg class="ltr:[transform:rotateY(180deg)]" width="16" height="16" viewBox="0 0 16 16" fill="none"
                       xmlns="http://www.w3.org/2000/svg">
@@ -1218,7 +1238,8 @@
                         class="w-5 h-5 cursor-pointer decrement flex-shrink-0 rounded-md border border-[#292D32] flex-center text-[#292D32] hover:text-white hover:bg-dark transition">
                         <p>-</p>
                       </div>
-                      <input placeholder="0 نفر" class="text-center text-dark font-faNumBold h-[70px] w-full outline-none">
+                      <input placeholder="0 نفر"
+                        class="text-center text-dark font-faNumBold h-[70px] w-full outline-none">
                       <div
                         class="w-5 h-5 cursor-pointer increment flex-shrink-0 rounded-md border border-[#292D32] flex-center text-[#292D32] hover:text-white hover:bg-dark transition">
                         <p>+</p>

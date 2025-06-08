@@ -1,4 +1,4 @@
-    // Persian (Jalali) calendar functions
+// Persian (Jalali) calendar functions
 
 // داده‌های قیمت ثابت برای روزهای خاص
 const priceData = {
@@ -10,37 +10,40 @@ const priceData = {
     // سایر روزها با قیمت مشخص
 };
 
+// داده‌های روزهای رزرو شده
+const reservedDays = {
+    '1404-3-16': true,
+    '1404-3-17': true,
+    '1404-4-5': true,
+    '1404-4-10': true,
+    // سایر روزهای رزرو شده
+};
+
 function gregorianToJalali(gy, gm, gd) {
-    const g_days_in_month = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
-    let jy = gy - 621;
-    let jm, jd;
+    gy = parseInt(gy);
+    gm = parseInt(gm);
+    gd = parseInt(gd);
     
-    const leap = gy % 4 === 0 && (gy % 100 !== 0 || gy % 400 === 0);
-    
-    let day_of_year = gd;
-    for (let i = 0; i < gm - 1; i++) {
-        day_of_year += g_days_in_month[i];
-        if (i === 1 && leap) day_of_year++;
-    }
-    
-    if (day_of_year <= 79) {
-        jy--;
-        day_of_year += leap ? 287 : 286;
-    } else {
-        day_of_year -= 79;
-    }
-    
-    jm = (day_of_year <= 186) 
-        ? Math.ceil(day_of_year / 31) 
-        : Math.ceil((day_of_year - 186) / 30) + 6;
-    
-    jd = (day_of_year <= 186) 
-        ? (day_of_year % 31 || 31) 
-        : ((day_of_year - 186) % 30 || 30);
-    
+    // سال و ماه و روز را به عدد تبدیل می‌کنیم
+    let g_d_m = [0, 31, 59, 90, 120, 151, 181, 212, 243, 273, 304, 334];
+    let jy = (gy <= 1600) ? 0 : 979;
+    gy -= (gy <= 1600) ? 621 : 1600;
+    let gy2 = (gm > 2) ? (gy + 1) : gy;
+    let days = (365 * gy) + parseInt((gy2 + 3) / 4) - parseInt((gy2 + 99) / 100) + parseInt((gy2 + 399) / 400) - 80 + gd + g_d_m[gm - 1];
+    jy += 33 * parseInt(days / 12053); 
+    days %= 12053;
+    jy += 4 * parseInt(days / 1461);
+    days %= 1461;
+    jy += parseInt((days - 1) / 365);
+    if (days > 365) days = (days - 1) % 365;
+    let jm = (days < 186) ? 1 + parseInt(days / 31) : 7 + parseInt((days - 186) / 30);
+    let jd = 1 + ((days < 186) ? (days % 31) : ((days - 186) % 30));
     return [jy, jm, jd];
 }
-
+// تنظیم منطقه زمانی به تهران
+const options = { timeZone: 'Asia/Tehran' };
+const now = new Date();
+const tehranDate = new Date(now.toLocaleString('en-US', options));
 function jalaliToGregorian(jy, jm, jd) {
     jy += 1595;
     let days = -355668 + (365 * jy) + (parseInt(jy / 33) * 8) + parseInt(((jy % 33) + 3) / 4) + jd + ((jm < 7) ? (jm - 1) * 31 : ((jm - 7) * 30) + 186);
@@ -188,6 +191,7 @@ class PersianCalendar {
         
         const dateKey = `${jy}-${jm}-${jd}`;
         const dayData = priceData[dateKey];
+        const isReserved = reservedDays[dateKey];
         
         let priceHtml = '';
         if (dayData) {
@@ -204,16 +208,25 @@ class PersianCalendar {
             ${priceHtml}
         `;
         
-        dayElement.addEventListener('click', () => this.handleDayClick(jy, jm, jd));
+        if (isReserved) {
+            dayElement.classList.add('reserved');
+            dayElement.innerHTML += '<div class="reserved-badge">رزرو شده</div>';
+        } else {
+            dayElement.addEventListener('click', () => this.handleDayClick(jy, jm, jd));
+        }
         
-        // اضافه کردن ایونت‌های هاور
-        dayElement.addEventListener('mouseenter', () => this.handleDayHover(jy, jm, jd));
+        dayElement.addEventListener('mouseenter', () => {
+            if (!isReserved) this.handleDayHover(jy, jm, jd);
+        });
         dayElement.addEventListener('mouseleave', () => this.clearHoverEffect());
         
         return dayElement;
     }
 
     handleDayClick(jy, jm, jd) {
+        const dateKey = `${jy}-${jm}-${jd}`;
+        if (reservedDays[dateKey]) return;
+        
         if (!this.selectedStart || (this.selectedStart && this.selectedEnd)) {
             this.selectedStart = [jy, jm, jd];
             this.selectedEnd = null;
@@ -237,6 +250,9 @@ class PersianCalendar {
     }
 
     handleDayHover(jy, jm, jd) {
+    const dateKey = `${jy}-${jm}-${jd}`;
+    if (reservedDays[dateKey]) return;
+    
     if (!this.selectedStart || this.selectedEnd) return;
     
     this.hoveredDate = [jy, jm, jd];
@@ -262,9 +278,9 @@ class PersianCalendar {
     
     while (currentDate < hoverDate) {
         const [cy, cm, cd] = gregorianToJalali(currentDate.getFullYear(), currentDate.getMonth() + 1, currentDate.getDate());
-        const dayElement = document.querySelector(`.day[data-year="${cy}"][data-month="${cm}"][data-day="${cd}"]:not(.other-month)`);
+        const dayElement = document.querySelector(`.day[data-year="${cy}"][data-month="${cm}"][data-day="${cd}"]`);
         
-        if (dayElement) {
+        if (dayElement && !dayElement.classList.contains('reserved')) {
             dayElement.classList.add('hover-range');
         }
         
@@ -293,6 +309,12 @@ class PersianCalendar {
     });
     
     if (this.selectedStart) {
+        const startDateKey = `${this.selectedStart[0]}-${this.selectedStart[1]}-${this.selectedStart[2]}`;
+        if (reservedDays[startDateKey]) {
+            this.selectedStart = null;
+            return;
+        }
+        
         // اعمال استایل برای تاریخ شروع
         const startDay = document.querySelector(`.day[data-year="${this.selectedStart[0]}"][data-month="${this.selectedStart[1]}"][data-day="${this.selectedStart[2]}"]`);
         if (startDay) {
@@ -307,6 +329,12 @@ class PersianCalendar {
         
         // اگر تاریخ پایان هم انتخاب شده، استایل‌های محدوده را اعمال کن
         if (this.selectedEnd) {
+            const endDateKey = `${this.selectedEnd[0]}-${this.selectedEnd[1]}-${this.selectedEnd[2]}`;
+            if (reservedDays[endDateKey]) {
+                this.selectedEnd = null;
+                return;
+            }
+            
             const [gy1, gm1, gd1] = jalaliToGregorian(this.selectedStart[0], this.selectedStart[1], this.selectedStart[2]);
             const startDate = new Date(gy1, gm1 - 1, gd1);
             
@@ -319,15 +347,15 @@ class PersianCalendar {
                 endDay.classList.add('selected', 'end-date');
             }
             
-            // اعمال استایل برای روزهای بین تاریخ شروع و پایان
+            // اعمال استایل برای روزهای بین تاریخ شروع و پایان (حتی other-month)
             let currentDate = new Date(startDate);
             currentDate.setDate(currentDate.getDate() + 1);
             
             while (currentDate < endDate) {
                 const [jy, jm, jd] = gregorianToJalali(currentDate.getFullYear(), currentDate.getMonth() + 1, currentDate.getDate());
-                const dayElement = document.querySelector(`.day[data-year="${jy}"][data-month="${jm}"][data-day="${jd}"]:not(.other-month)`);
+                const dayElement = document.querySelector(`.day[data-year="${jy}"][data-month="${jm}"][data-day="${jd}"]`);
                 
-                if (dayElement) {
+                if (dayElement && !dayElement.classList.contains('reserved')) {
                     dayElement.classList.add('in-range');
                 }
                 
@@ -341,7 +369,6 @@ class PersianCalendar {
         this.handleDayHover(...this.hoveredDate);
     }
 }
-
     updateSelectedRange() {
         const inputDateElement = document.getElementById('inputdate');
         const outputDateElement = document.getElementById('outputdate');
