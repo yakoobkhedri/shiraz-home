@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html dir="rtl">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0 maximum-scale=1" />
+  <link href="../../dist/output.css" rel="stylesheet">
+  <title>ورود</title>
+</head>
+
+<body class="max-w-[1536px] w-full mx-auto relative">
+
+
+
+  <!-- main -->
+  <main class="relative">
+
+    <section>
+       <div class="p-4">
+         <form id="loginForm"
+           class="bg-white m-auto mt-14 max-w-[526px] overflow-hidden relative w-full rounded-[27px] shadow-1">
+           <img alt="shape" src="../img/Rectangle 165.png" class="absolute top-0 inset-x-0 h-[109px] w-full">
+           <div class="p-4 relative">
+             <div class="flex items-center justify-between mb-5 relative mt-4">
+               <div class="font-bold px-4 flex items-center gap-2 text-white">
+                 <p>ورود/ثبت نام</p>
+               </div>
+             </div>
+             <!-- form -->
+             <div class="mt-[4rem] relative">
+               <div class="rounded-[10px] border border-[#EEF1FA] h-16 px-3 flex items-center justify-between gap-2">
+                <div class="flex items-center gap-3 flex-grow">
+                  <img alt="icon" src="../img/svg/mobile.svg" class="flex-shrink-0">
+                  <input type="tel" class="bg-transparent border-0 w-full flex-grow outline-none">
+                </div>
+                <button class="flex-shrink-0 text-xs sm:text-sm text-[#160C59] font-bold">دریافت کد تایید</button>
+               </div>
+               <div class="otpContainer mt-9 flex-center font-faNumBold gap-3 sm:gap-6" dir="ltr">
+                 <input type="number" value="" maxlength="1" class="block w-[53px] h-[53px] rounded-[10px] border border-[#EEF1FA] text-center otpInput bg-white outline-none">
+                 <input type="number" value="" maxlength="1" disabled="" class="block w-[53px] h-[53px] rounded-[10px] border border-[#EEF1FA] text-center otpInput bg-white outline-none">
+                 <input type="number" value="" maxlength="1" disabled="" class="block w-[53px] h-[53px] rounded-[10px] border border-[#EEF1FA] text-center otpInput bg-white outline-none">
+                 <input type="number" value="" maxlength="1" disabled="" class="block w-[53px] h-[53px] rounded-[10px] border border-[#EEF1FA] text-center otpInput bg-white outline-none">
+               </div>
+               <input type="hidden" id="otpHiddenInput">
+               <div class="flex items-center flex-col sm:flex-row gap-3 flex-grow mt-9">
+                 <div class="bg-white border border-[#EEF1FA] px-3 text-[#393939] flex-shrink-0 rounded-[10px] flex-center h-[65px] font-faNumBold text-2xl">
+                     856985
+                 </div>
+                 <div class="rounded-[10px] w-full px-[14px] flex-between gap-3 bg-white border border-[#EEF1FA] text-sm font-faNumBold h-[65px]">
+                     <input placeholder="کد امنیتی" class="flex-grow bg-transparent outline-none w-full">
+                     <img alt="icon" src="../img/svg/shield-tick.svg" class="flex-shrink-0">
+                 </div>
+                </div>
+                <label class="flex items-center gap-2 cursor-pointer mt-5">
+                 <div class="inline-flex items-center gap-2">
+                   <label class="relative flex items-center p-1 rounded-full cursor-pointer" htmlfor="black">
+                     <input name="type" type="checkbox" class="before:content[''] bg-white border border-[#EEF1FA] peer relative h-6 w-6 cursor-pointer appearance-none overflow-hidden rounded-[5px] text-[#ECECEC] transition-all before:absolute before:top-2/4 before:left-2/4 before:block before:h-12 before:w-12 before:-translate-y-2/4 before:-translate-x-2/4 before:rounded-full before:bg-[#ECECEC] before:opacity-0 before:transition-opacity checked:border-orange checked:before:bg-orange hover:before:opacity-10" id="black">
+                     <span class="absolute text-primary transition-opacity opacity-0 pointer-events-none rounded-[5px] top-2/4 left-2/4 -translate-y-2/4 -translate-x-2/4 peer-checked:opacity-100">
+                       <div class="w-6 h-6 rounded-[5px] bg-primary"></div>
+                     </span>
+                   </label>
+                   <p class="text-sm font-semibold text-primary">
+                     مرا به یاد داشته باش</p>
+                 </div>
+               </label>
+               <button type="submit" class="rounded-[10px] btnHover w-full text-xl sm:text-2xl h-[51px] sm:h-[65px] bg-primary font-extrabold mt-5 sm:mt-8 flex-center text-white">ورود</button>
+             </div>
+         </form>
+       </div>
+    </section>
+
+  </main>
+
+  <script src="../js/otp.js"></script>
+  <script src="../js/script.js"></script>
+</body>
+
+</html>
+
+<!-- npx tailwindcss -i ./src/css/app.css -o ./dist/output.css --watch -->
