@@ -15,59 +15,7 @@
 
   <!-- video modal && gallery modal && reserveRequest modal -->
   <div class="modal">
-    <div style="visibility: hidden; opacity: 0;" data-button="video-modal"
-      class="modal-container overflow-auto bg-black/60 backdrop-blur-sm fixed inset-0 z-[100] transition-all flex justify-center items-center px-4 sm:px-7">
-      <div
-        class="modal-content bg-white max-w-[797px] md:h-[354px] w-full rounded-[27px] p-7 pb-11 md:p-5 flex flex-col md:flex-row justify-center md:justify-start items-center gap-7 md:gap-14 relative">
-        <video class="w-full h-full" controls>
-          <source src="../img/64ad88885b273.mp4" type="video/mp4">
-        </video>
-        <button class="absolute top-4 left-4 ltr:right-4 ltr:left-auto close-button p-2 group">
-          <svg class="w-4" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path class="group-hover:stroke-red-600 transition" opacity="0.3" d="M16 2L2 16M2 2L16 16" stroke="black"
-              stroke-width="2.15385" stroke-linecap="round" stroke-linejoin="round"></path>
-          </svg>
-        </button>
-      </div>
-    </div>
-    <div style="visibility: hidden; opacity: 0;" data-button="gallery-modal"
-      class="modal-container overflow-auto bg-black/60 backdrop-blur-sm fixed inset-0 z-[100] transition-all flex justify-center items-center px-4 sm:px-7">
-      <div class="modal-content max-w-content mx-auto w-full">
-        <div class="relative">
-          <div class="swiper gallery">
-            <div class="swiper-wrapper">
-              <div class="swiper-slide">
-                <img alt="img" src="../img/image (9).png" class="w-full sm:w-5/6 rounded-xl mx-auto">
-              </div>
-              <div class="swiper-slide">
-                <img alt="img" src="../img/image (9).png" class="w-full sm:w-5/6 rounded-xl mx-auto">
-              </div>
-            </div>
-          </div>
-          <div class="swiper-button-next2 !absolute flex-center z-10 my-auto top-1/2 right-0">
-            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor"
-              class="text-white bi bi-chevron-right" viewBox="0 0 16 16">
-              <path fill-rule="evenodd"
-                d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708" />
-            </svg>
-          </div>
-          <div class="swiper-button-prev2 !absolute flex-center z-10 my-auto top-1/2 left-0">
-            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor"
-              class="text-white bi bi-chevron-left" viewBox="0 0 16 16">
-              <path fill-rule="evenodd"
-                d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0" />
-            </svg>
-          </div>
-          <button class="absolute z-10 -top-14 sm:top-8 left-4 ltr:right-4 ltr:left-auto close-button p-2 group">
-            <svg class="w-6 sm:w-8" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path class="group-hover:stroke-red-600 transition" d="M16 2L2 16M2 2L16 16" stroke="white"
-                stroke-width="2.15385" stroke-linecap="round" stroke-linejoin="round"></path>
-            </svg>
-          </button>
-        </div>
-      </div>
-    </div>
-    <div style="visibility: hidden; opacity: 0;" data-button="reserveRequest-modal"
+    <div style="visibility: hidden; opacity: 0;" data-modal-class="login-modal"
       class="modal-container overflow-auto bg-black/60 backdrop-blur-sm fixed inset-0 z-50 transition-all flex justify-center items-center px-4 sm:px-7">
       <form id="loginForm"
         class="modal-content bg-white max-w-[526px] overflow-hidden relative w-full rounded-[27px] shadow-8">
@@ -134,66 +82,60 @@
             <button type="submit"
               class="rounded-[10px] btnHover w-full text-xl sm:text-2xl h-[51px] sm:h-[65px] bg-primary font-extrabold mt-5 sm:mt-8 flex-center text-white">ورود</button>
           </div>
+        </div>
       </form>
     </div>
-     <div style="visibility: hidden; opacity: 0;" data-button="login-modal"
-          class="modal-container overflow-auto bg-black/60 backdrop-blur-sm fixed inset-0 z-50 transition-all flex justify-center items-center px-4 sm:px-7">
-          <form id="loginForm"
-            class="modal-content bg-white max-w-[526px] overflow-hidden relative w-full rounded-[27px] shadow-8">
-            <img alt="shape" src="../img/Rectangle 165.png" class="absolute top-0 inset-x-0 h-[109px] w-full">
-            <div class="p-4 relative">
-              <div class="flex items-center justify-between mb-5 relative mt-4">
-                <div class="font-bold px-4 flex items-center gap-2 text-white">
-                  <p>ورود/ثبت نام</p>
-                </div>
-                <!-- close modal -->
-                <svg class="cursor-pointer close-button" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                  xmlns="http://www.w3.org/2000/svg">
-                  <path
-                    d="M13.41 11.9999L17.71 7.70994C17.8983 7.52164 18.0041 7.26624 18.0041 6.99994C18.0041 6.73364 17.8983 6.47825 17.71 6.28994C17.5217 6.10164 17.2663 5.99585 17 5.99585C16.7337 5.99585 16.4783 6.10164 16.29 6.28994L12 10.5899L7.71 6.28994C7.5217 6.10164 7.2663 5.99585 7 5.99585C6.7337 5.99585 6.4783 6.10164 6.29 6.28994C6.1017 6.47825 5.99591 6.73364 5.99591 6.99994C5.99591 7.26624 6.1017 7.52164 6.29 7.70994L10.59 11.9999L6.29 16.2899C6.19627 16.3829 6.12188 16.4935 6.07111 16.6154C6.02034 16.7372 5.9942 16.8679 5.9942 16.9999C5.9942 17.132 6.02034 17.2627 6.07111 17.3845C6.12188 17.5064 6.19627 17.617 6.29 17.7099C6.38296 17.8037 6.49356 17.8781 6.61542 17.9288C6.73728 17.9796 6.86799 18.0057 7 18.0057C7.13201 18.0057 7.26272 17.9796 7.38458 17.9288C7.50644 17.8781 7.61704 17.8037 7.71 17.7099L12 13.4099L16.29 17.7099C16.383 17.8037 16.4936 17.8781 16.6154 17.9288C16.7373 17.9796 16.868 18.0057 17 18.0057C17.132 18.0057 17.2627 17.9796 17.3846 17.9288C17.5064 17.8781 17.617 17.8037 17.71 17.7099C17.8037 17.617 17.8781 17.5064 17.9289 17.3845C17.9797 17.2627 18.0058 17.132 18.0058 16.9999C18.0058 16.8679 17.9797 16.7372 17.9289 16.6154C17.8781 16.4935 17.8037 16.3829 17.71 16.2899L13.41 11.9999Z"
-                    fill="white"></path>
-                </svg>
+    <div style="visibility: hidden; opacity: 0;" data-modal-class="video-modal"
+      class="modal-container overflow-auto bg-black/60 backdrop-blur-sm fixed inset-0 z-[100] transition-all flex justify-center items-center px-4 sm:px-7">
+      <div
+        class="modal-content bg-white max-w-[797px] md:h-[354px] w-full rounded-[27px] p-7 pb-11 md:p-5 flex flex-col md:flex-row justify-center md:justify-start items-center gap-7 md:gap-14 relative">
+        <video class="w-full h-full" controls>
+          <source src="../img/64ad88885b273.mp4" type="video/mp4">
+        </video>
+        <button class="absolute top-4 left-4 ltr:right-4 ltr:left-auto close-button p-2 group">
+          <svg class="w-4" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path class="group-hover:stroke-red-600 transition" opacity="0.3" d="M16 2L2 16M2 2L16 16" stroke="black"
+              stroke-width="2.15385" stroke-linecap="round" stroke-linejoin="round"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+    <div style="visibility: hidden; opacity: 0;" data-modal-class="gallery-modal"
+      class="modal-container overflow-auto bg-black/60 backdrop-blur-sm fixed inset-0 z-[100] transition-all flex justify-center items-center px-4 sm:px-7">
+      <div class="modal-content max-w-content mx-auto w-full">
+        <div class="relative">
+          <div class="swiper gallery">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <img alt="img" src="../img/image (9).png" class="w-full sm:w-5/6 rounded-xl mx-auto">
               </div>
-              <!-- form -->
-              <div class="mt-[4rem] relative">
-                <div class="rounded-[10px] border border-[#EEF1FA] h-16 px-3 flex items-center justify-between gap-2">
-                 <div class="flex items-center gap-3 flex-grow">
-                   <img alt="icon" src="../img/svg/mobile.svg" class="flex-shrink-0">
-                   <input type="tel" class="bg-transparent border-0 w-full flex-grow outline-none">
-                 </div>
-                 <button class="flex-shrink-0 text-xs sm:text-sm text-[#160C59] font-bold">دریافت کد تایید</button>
-                </div>
-                <div class="otpContainer mt-9 flex-center font-faNumBold gap-3 sm:gap-6" dir="ltr">
-                  <input type="number" value="" maxlength="1" class="block w-[53px] h-[53px] rounded-[10px] border border-[#EEF1FA] text-center otpInput bg-white outline-none">
-                  <input type="number" value="" maxlength="1" disabled="" class="block w-[53px] h-[53px] rounded-[10px] border border-[#EEF1FA] text-center otpInput bg-white outline-none">
-                  <input type="number" value="" maxlength="1" disabled="" class="block w-[53px] h-[53px] rounded-[10px] border border-[#EEF1FA] text-center otpInput bg-white outline-none">
-                  <input type="number" value="" maxlength="1" disabled="" class="block w-[53px] h-[53px] rounded-[10px] border border-[#EEF1FA] text-center otpInput bg-white outline-none">
-                </div>
-                <input type="hidden" id="otpHiddenInput">
-                <div class="flex items-center flex-col sm:flex-row gap-3 flex-grow mt-9">
-                  <div class="bg-white border border-[#EEF1FA] px-3 text-[#393939] flex-shrink-0 rounded-[10px] flex-center h-[65px] font-faNumBold text-2xl">
-                      856985
-                  </div>
-                  <div class="rounded-[10px] w-full px-[14px] flex-between gap-3 bg-white border border-[#EEF1FA] text-sm font-faNumBold h-[65px]">
-                      <input placeholder="کد امنیتی" class="flex-grow bg-transparent outline-none w-full">
-                      <img alt="icon" src="../img/svg/shield-tick.svg" class="flex-shrink-0">
-                  </div>
-                 </div>
-                 <label class="flex items-center gap-2 cursor-pointer mt-5">
-                  <div class="inline-flex items-center gap-2">
-                    <label class="relative flex items-center p-1 rounded-full cursor-pointer" htmlfor="black">
-                      <input name="type" type="checkbox" class="before:content[''] bg-white border border-[#EEF1FA] peer relative h-6 w-6 cursor-pointer appearance-none overflow-hidden rounded-[5px] text-[#ECECEC] transition-all before:absolute before:top-2/4 before:left-2/4 before:block before:h-12 before:w-12 before:-translate-y-2/4 before:-translate-x-2/4 before:rounded-full before:bg-[#ECECEC] before:opacity-0 before:transition-opacity checked:border-orange checked:before:bg-orange hover:before:opacity-10" id="black">
-                      <span class="absolute text-primary transition-opacity opacity-0 pointer-events-none rounded-[5px] top-2/4 left-2/4 -translate-y-2/4 -translate-x-2/4 peer-checked:opacity-100">
-                        <div class="w-6 h-6 rounded-[5px] bg-primary"></div>
-                      </span>
-                    </label>
-                    <p class="text-sm font-semibold text-primary">
-                      مرا به یاد داشته باش</p>
-                  </div>
-                </label>
-                <button type="submit" class="rounded-[10px] btnHover w-full text-xl sm:text-2xl h-[51px] sm:h-[65px] bg-primary font-extrabold mt-5 sm:mt-8 flex-center text-white">ورود</button>
+              <div class="swiper-slide">
+                <img alt="img" src="../img/image (9).png" class="w-full sm:w-5/6 rounded-xl mx-auto">
               </div>
-          </form>
+            </div>
+          </div>
+          <div class="swiper-button-next2 !absolute flex-center z-10 my-auto top-1/2 right-0">
+            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor"
+              class="text-white bi bi-chevron-right" viewBox="0 0 16 16">
+              <path fill-rule="evenodd"
+                d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708" />
+            </svg>
+          </div>
+          <div class="swiper-button-prev2 !absolute flex-center z-10 my-auto top-1/2 left-0">
+            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor"
+              class="text-white bi bi-chevron-left" viewBox="0 0 16 16">
+              <path fill-rule="evenodd"
+                d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0" />
+            </svg>
+          </div>
+          <button class="absolute z-10 -top-14 sm:top-8 left-4 ltr:right-4 ltr:left-auto close-button p-2 group">
+            <svg class="w-6 sm:w-8" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path class="group-hover:stroke-red-600 transition" d="M16 2L2 16M2 2L16 16" stroke="white"
+                stroke-width="2.15385" stroke-linecap="round" stroke-linejoin="round"></path>
+            </svg>
+          </button>
+        </div>
+      </div>
     </div>
   </div>
 
@@ -382,8 +324,8 @@
             <li><a class="text-white transition hover:text-primary">پیشنهادهای ویژه</a></li>
             <li><a class="text-white transition hover:text-primary">میزبان شوید</a></li>
           </ul>
-           <a id="login-modal"
-            class="rounded-[10px] bg-primary hover:bg-[#160C59] text-xs sm:text-base flex-center text-white font-medium gap-2 py-[10px] px-[18px]">
+          <a
+            class="login-modal rounded-[10px] bg-primary hover:bg-[#160C59] text-xs sm:text-base flex-center text-white font-medium gap-2 py-[10px] px-[18px]">
             <img src="../img/svg/frame.svg">
             <p>ثبت نام/ورود</p>
           </a>
@@ -465,8 +407,8 @@
               <div
                 class="relative col-span-12 min-[460px]:col-span-6 group rounded-[20px] gradient-after5 overflow-hidden">
                 <img alt="img" src="../img/image (18).png" class="w-full h-[191px] transition group-hover:scale-105">
-                <div id="video-modal"
-                  class="flex items-center justify-center absolute z-2 inset-0 m-auto cursor-pointer">
+                <div
+                  class="video-modal flex items-center justify-center absolute z-2 inset-0 m-auto cursor-pointer">
                   <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <circle cx="18" cy="18" r="18" fill="white" />
                     <path
@@ -492,8 +434,8 @@
                 <img alt="img" src="../img/image (19).png" class="w-full h-[191px] transition group-hover:scale-105">
               </div>
               <div class="col-span-12">
-                <a id="gallery-modal"
-                  class="bg-[#160C59] h-[60px] rounded-[20px] flex-center gap-3 text-white btnHover text-lg font-semibold">
+                <a
+                  class="gallery-modal bg-[#160C59] h-[60px] rounded-[20px] flex-center gap-3 text-white btnHover text-lg font-semibold">
                   <img alt="icon" src="../img/svg/eye.svg">
                   <p>مشاهده تصاویر بیشتر</p>
                 </a>
@@ -1322,8 +1264,8 @@
                     <p class="text-lg font-semibold text-dark">رزرو برای دیگری</p>
                   </div>
                 </div>
-                <div id="reserveRequest-modal"
-                  class="mt-[18px] cursor-pointer rounded-[20px] h-16 bg-primary btnHover flex-center text-white text-lg font-extrabold w-full">درخواست
+                <div
+                  class="login-modal mt-[18px] cursor-pointer rounded-[20px] h-16 bg-primary btnHover flex-center text-white text-lg font-extrabold w-full">درخواست
                   رزرو (رایگان)</div>
                 <div class="mt-[18px] flex items-center justify-center gap-3 text-dark font-medium">
                   <img alt="icon" src="../img/svg/message-text (2).svg" class="flex-shrink-0">
