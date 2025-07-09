@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0 maximum-scale=1" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
   <link href="../../dist/output.css" rel="stylesheet">
+  <link href="../css/select2.min.css" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="../persian-daterangepicker-main/dateragepicker.css" />
   <link rel="stylesheet" type="text/css" href="../css/rSlider.min.css" />
   <title>دسته بندی ها</title>
@@ -15,7 +16,7 @@
 
   <!-- filter modals && login modal -->
   <div class="modal">
-    <div style="visibility: hidden; opacity: 0;" data-button="date-modal"
+    <div style="visibility: hidden; opacity: 0;" data-modal-class="date-modal"
       class="modal-container overflow-auto bg-black/60 backdrop-blur-sm fixed inset-0 z-50 transition-all flex justify-center items-center px-4 sm:px-7">
       <form class="modal-content bg-white max-w-[326px] w-full rounded-[27px] shadow-8">
         <div class="p-[20px] relative">
@@ -53,7 +54,7 @@
         </div>
       </form>
     </div>
-    <div style="visibility: hidden; opacity: 0;" data-button="persons-modal"
+    <div style="visibility: hidden; opacity: 0;" data-modal-class="persons-modal"
       class="modal-container overflow-auto bg-black/60 backdrop-blur-sm fixed inset-0 z-50 transition-all flex justify-center items-center px-4 sm:px-7">
       <div class="modal-content bg-white max-w-[326px] w-full rounded-[27px] shadow-8">
         <div class="p-[20px] relative">
@@ -90,11 +91,13 @@
           <form class="rounded-2xl bg-[#F9F9F9] p-4 mt-4 relative flex items-center justify-between gap-2">
             <div class="flex items-center gap-4">
               <div
-                class="w-5 h-5 decrement cursor-pointer pt-0.5 flex-center rounded-md bg-[F9F9F9] hover:text-white text-dark hover:bg-dark transition border-2 border-dark font-black">-</div>
+                class="w-5 h-5 decrement cursor-pointer pt-0.5 flex-center rounded-md bg-[F9F9F9] hover:text-white text-dark hover:bg-dark transition border-2 border-dark font-black">
+                -</div>
               <input min="1" type="number"
                 class="w-7 h-5 bg-transparent font-faNumBold text-center outline-none text-dark" value="1">
               <div
-                class="w-5 h-5 increment cursor-pointer pt-0.5 flex-center rounded-md bg-[F9F9F9] hover:text-white text-dark hover:bg-dark transition border-2 border-dark font-black">+</div>
+                class="w-5 h-5 increment cursor-pointer pt-0.5 flex-center rounded-md bg-[F9F9F9] hover:text-white text-dark hover:bg-dark transition border-2 border-dark font-black">
+                +</div>
             </div>
             <div class="flex items-center gap-3">
               <button class="bg-primary text-white rounded-[20px] py-1 px-6 font-medium btnHover">ثبت</button>
@@ -121,7 +124,7 @@
         </div>
       </div>
     </div>
-    <div style="visibility: hidden; opacity: 0;" data-button="rooms-modal"
+    <div style="visibility: hidden; opacity: 0;" data-modal-class="rooms-modal"
       class="modal-container overflow-auto bg-black/60 backdrop-blur-sm fixed inset-0 z-50 transition-all flex justify-center items-center px-4 sm:px-7">
       <div class="modal-content bg-white max-w-[326px] w-full rounded-[27px] shadow-8">
         <div class="p-[20px] relative">
@@ -149,11 +152,13 @@
           <form class="rounded-2xl bg-[#F9F9F9] p-4 mt-4 relative flex items-center justify-between gap-2">
             <div class="flex items-center gap-4">
               <div
-                class="w-5 h-5 decrement cursor-pointer pt-0.5 flex-center rounded-md bg-[F9F9F9] hover:text-white text-dark hover:bg-dark transition border-2 border-dark font-black">-</div>
+                class="w-5 h-5 decrement cursor-pointer pt-0.5 flex-center rounded-md bg-[F9F9F9] hover:text-white text-dark hover:bg-dark transition border-2 border-dark font-black">
+                -</div>
               <input min="1" type="number"
                 class="w-7 h-5 bg-transparent font-faNumBold text-center outline-none text-dark" value="1">
               <div
-                class="w-5 h-5 increment cursor-pointer pt-0.5 flex-center rounded-md bg-[F9F9F9] hover:text-white text-dark hover:bg-dark transition border-2 border-dark font-black">+</div>
+                class="w-5 h-5 increment cursor-pointer pt-0.5 flex-center rounded-md bg-[F9F9F9] hover:text-white text-dark hover:bg-dark transition border-2 border-dark font-black">
+                +</div>
             </div>
             <div class="flex items-center gap-3">
               <button class="bg-primary text-white rounded-[20px] py-1 px-6 font-medium btnHover">ثبت</button>
@@ -180,7 +185,7 @@
         </div>
       </div>
     </div>
-    <div style="visibility: hidden; opacity: 0;" data-button="city-modal"
+    <div style="visibility: hidden; opacity: 0;" data-modal-class="city-modal"
       class="modal-container overflow-auto bg-black/60 backdrop-blur-sm fixed inset-0 z-50 transition-all flex justify-center items-center px-4 sm:px-7">
       <form class="modal-content bg-white max-w-[326px] w-full rounded-[27px] shadow-8">
         <div class="p-[20px] relative">
@@ -204,38 +209,21 @@
                 fill="#1E2D48"></path>
             </svg>
           </div>
-          <div class="rounded-2xl bg-[#F9F9F9] p-4 mt-4 relative">
-            <div class="selectArea flex items-center gap-[10px] cursor-pointer openSelect">
-              <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path
-                  d="M8.625 15.75C12.56 15.75 15.75 12.56 15.75 8.625C15.75 4.68997 12.56 1.5 8.625 1.5C4.68997 1.5 1.5 4.68997 1.5 8.625C1.5 12.56 4.68997 15.75 8.625 15.75Z"
-                  stroke="#B4B4B4" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                <path d="M16.5 16.5L15 15" stroke="#B4B4B4" stroke-width="1.5" stroke-linecap="round"
-                  stroke-linejoin="round" />
-              </svg>
-              <p class="text-dark text-sm font-medium optionSelected">انتخاب شهر</p>
-              <svg class="rtl:mr-auto ltr:ml-auto" width="14" height="8" viewBox="0 0 14 8" fill="none"
-                xmlns="http://www.w3.org/2000/svg">
-                <path d="M12.9401 1.7124L8.05006 6.6024C7.47256 7.1799 6.52756 7.1799 5.95006 6.6024L1.06006 1.7124"
-                  stroke="#292D32" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"
-                  stroke-linejoin="round" />
-              </svg>
-            </div>
-            <ul
-              class="bg-white selectArea rounded-[16px] max-h-[200px] overflow-auto absolute inset-x-0 w-full top-12 invisible opacity-0 transition shadow-3 z-1 options">
-              <li class="py-2 px-3 transition hover:bg-[#F9F9F9] cursor-pointer">ارومیه</li>
-              <li class="py-2 px-3 transition hover:bg-[#F9F9F9] cursor-pointer">سنندج</li>
-              <li class="py-2 px-3 transition hover:bg-[#F9F9F9] cursor-pointer">تهران</li>
-              <li class="py-2 px-3 transition hover:bg-[#F9F9F9] cursor-pointer">اهواز</li>
-              <li class="py-2 px-3 transition hover:bg-[#F9F9F9] cursor-pointer">تبریز</li>
-            </ul>
+          <div class="rounded-2xl bg-[#F9F9F9] mt-4 relative overflow-hidden">
+            <select class="js-example-basic-single border-0 form-select w-full rounded-2xl bg-[#F9F9F9]" name="state">
+              <option>تهران</option>
+              <option>قم</option>
+              <option>فارس</option>
+              <option>مرکزی</option>
+              <option>کردستان</option>
+            </select>
           </div>
           <button
             class="bg-primary mt-4 rtl:mr-auto ltr:ml-auto text-white rounded-[20px] py-1 w-[73px] flex-center font-medium btnHover">ثبت</button>
         </div>
       </form>
     </div>
-    <div style="visibility: hidden; opacity: 0;" data-button="price-modal"
+    <div style="visibility: hidden; opacity: 0;" data-modal-class="price-modal"
       class="modal-container overflow-auto bg-black/60 backdrop-blur-sm fixed inset-0 z-50 transition-all flex justify-center items-center px-4 sm:px-7">
       <form class="modal-content bg-white max-w-[326px] w-full rounded-[27px] shadow-8">
         <div class="p-[20px] relative">
@@ -263,7 +251,7 @@
             <div class="flex items-center gap-3">
               <span id="minValue"></span>
               <input class="flex-grow" type="range" id="priceRange" name="priceRange" min="0" max="1000" value="500">
-             <span id="maxValue"></span>
+              <span id="maxValue"></span>
             </div>
             <div class="slider-value text-center mt-4" id="sliderValue">0</div> <!-- مقدار فعلی -->
             <!-- <input type="range" id="slider" class="slider"> -->
@@ -276,7 +264,7 @@
         </div>
       </form>
     </div>
-    <div style="visibility: hidden; opacity: 0;" data-button="home-modal"
+    <div style="visibility: hidden; opacity: 0;" data-modal-class="home-modal"
       class="modal-container overflow-auto bg-black/60 backdrop-blur-sm fixed inset-0 z-50 transition-all flex justify-center items-center px-4 sm:px-7">
       <form class="modal-content bg-white max-w-[326px] w-full rounded-[27px] shadow-8">
         <div class="p-[20px] relative">
@@ -306,35 +294,18 @@
                 fill="#1E2D48"></path>
             </svg>
           </div>
-          <div class="rounded-2xl bg-[#F9F9F9] p-4 mt-4 relative">
-            <div class="selectArea flex items-center gap-[10px] cursor-pointer openSelect">
-              <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path
-                  d="M8.625 15.75C12.56 15.75 15.75 12.56 15.75 8.625C15.75 4.68997 12.56 1.5 8.625 1.5C4.68997 1.5 1.5 4.68997 1.5 8.625C1.5 12.56 4.68997 15.75 8.625 15.75Z"
-                  stroke="#B4B4B4" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                <path d="M16.5 16.5L15 15" stroke="#B4B4B4" stroke-width="1.5" stroke-linecap="round"
-                  stroke-linejoin="round" />
-              </svg>
-              <p class="text-dark text-sm font-medium optionSelected">انتخاب اقامتگاه</p>
-              <svg class="rtl:mr-auto ltr:ml-auto" width="14" height="8" viewBox="0 0 14 8" fill="none"
-                xmlns="http://www.w3.org/2000/svg">
-                <path d="M12.9401 1.7124L8.05006 6.6024C7.47256 7.1799 6.52756 7.1799 5.95006 6.6024L1.06006 1.7124"
-                  stroke="#292D32" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"
-                  stroke-linejoin="round" />
-              </svg>
-            </div>
-            <ul
-              class="bg-white selectArea rounded-[16px] max-h-[200px] overflow-auto absolute inset-x-0 w-full top-12 invisible opacity-0 transition shadow-3 z-1 options">
-              <li class="py-2 px-3 transition hover:bg-[#F9F9F9] cursor-pointer">ویلایی</li>
-              <li class="py-2 px-3 transition hover:bg-[#F9F9F9] cursor-pointer">آپارتمان</li>
-            </ul>
+          <div class="rounded-2xl bg-[#F9F9F9] mt-4 relative">
+             <select class="js-example-basic-single border-0 form-select w-full rounded-2xl bg-[#F9F9F9]" name="state">
+                          <option>ویلایی</option>
+                          <option>آپارتمانی</option>
+                        </select>
           </div>
           <button
             class="bg-primary mt-4 rtl:mr-auto ltr:ml-auto text-white rounded-[20px] py-1 w-[73px] flex-center font-medium btnHover">ثبت</button>
         </div>
       </form>
     </div>
-    <div style="visibility: hidden; opacity: 0;" data-button="parking-modal"
+    <div style="visibility: hidden; opacity: 0;" data-modal-class="parking-modal"
       class="modal-container overflow-auto bg-black/60 backdrop-blur-sm fixed inset-0 z-50 transition-all flex justify-center items-center px-4 sm:px-7">
       <form class="modal-content bg-white max-w-[326px] w-full rounded-[27px] shadow-8">
         <div class="p-[20px] relative">
@@ -358,35 +329,18 @@
                 fill="#1E2D48"></path>
             </svg>
           </div>
-          <div class="rounded-2xl bg-[#F9F9F9] p-4 mt-4 relative">
-            <div class="selectArea flex items-center gap-[10px] cursor-pointer openSelect">
-              <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path
-                  d="M8.625 15.75C12.56 15.75 15.75 12.56 15.75 8.625C15.75 4.68997 12.56 1.5 8.625 1.5C4.68997 1.5 1.5 4.68997 1.5 8.625C1.5 12.56 4.68997 15.75 8.625 15.75Z"
-                  stroke="#B4B4B4" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                <path d="M16.5 16.5L15 15" stroke="#B4B4B4" stroke-width="1.5" stroke-linecap="round"
-                  stroke-linejoin="round" />
-              </svg>
-              <p class="text-dark text-sm font-medium optionSelected">انتخاب پارکینگ</p>
-              <svg class="rtl:mr-auto ltr:ml-auto" width="14" height="8" viewBox="0 0 14 8" fill="none"
-                xmlns="http://www.w3.org/2000/svg">
-                <path d="M12.9401 1.7124L8.05006 6.6024C7.47256 7.1799 6.52756 7.1799 5.95006 6.6024L1.06006 1.7124"
-                  stroke="#292D32" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"
-                  stroke-linejoin="round" />
-              </svg>
-            </div>
-            <ul
-              class="bg-white selectArea rounded-[16px] max-h-[200px] overflow-auto absolute inset-x-0 w-full top-12 invisible opacity-0 transition shadow-3 z-1 options">
-              <li class="py-2 px-3 transition hover:bg-[#F9F9F9] cursor-pointer">دارد</li>
-              <li class="py-2 px-3 transition hover:bg-[#F9F9F9] cursor-pointer">ندارد</li>
-            </ul>
+           <div class="rounded-2xl bg-[#F9F9F9] mt-4 relative">
+             <select class="js-example-basic-single border-0 form-select w-full rounded-2xl bg-[#F9F9F9]" name="state">
+                          <option>دارد</option>
+                          <option>ندارد</option>
+                        </select>
           </div>
           <button
             class="bg-primary mt-4 rtl:mr-auto ltr:ml-auto text-white rounded-[20px] py-1 w-[73px] flex-center font-medium btnHover">ثبت</button>
         </div>
       </form>
     </div>
-    <div style="visibility: hidden; opacity: 0;" data-button="off-modal"
+    <div style="visibility: hidden; opacity: 0;" data-modal-class="off-modal"
       class="modal-container overflow-auto bg-black/60 backdrop-blur-sm fixed inset-0 z-50 transition-all flex justify-center items-center px-4 sm:px-7">
       <form class="modal-content bg-white max-w-[326px] w-full rounded-[27px] shadow-8">
         <div class="p-[20px] relative">
@@ -410,35 +364,18 @@
                 fill="#1E2D48"></path>
             </svg>
           </div>
-          <div class="rounded-2xl bg-[#F9F9F9] p-4 mt-4 relative">
-            <div class="selectArea flex items-center gap-[10px] cursor-pointer openSelect">
-              <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path
-                  d="M8.625 15.75C12.56 15.75 15.75 12.56 15.75 8.625C15.75 4.68997 12.56 1.5 8.625 1.5C4.68997 1.5 1.5 4.68997 1.5 8.625C1.5 12.56 4.68997 15.75 8.625 15.75Z"
-                  stroke="#B4B4B4" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                <path d="M16.5 16.5L15 15" stroke="#B4B4B4" stroke-width="1.5" stroke-linecap="round"
-                  stroke-linejoin="round" />
-              </svg>
-              <p class="text-dark text-sm font-medium optionSelected">تخفیف</p>
-              <svg class="rtl:mr-auto ltr:ml-auto" width="14" height="8" viewBox="0 0 14 8" fill="none"
-                xmlns="http://www.w3.org/2000/svg">
-                <path d="M12.9401 1.7124L8.05006 6.6024C7.47256 7.1799 6.52756 7.1799 5.95006 6.6024L1.06006 1.7124"
-                  stroke="#292D32" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"
-                  stroke-linejoin="round" />
-              </svg>
-            </div>
-            <ul
-              class="bg-white selectArea rounded-[16px] max-h-[200px] overflow-auto absolute inset-x-0 w-full top-12 invisible opacity-0 transition shadow-3 z-1 options">
-              <li class="py-2 px-3 transition hover:bg-[#F9F9F9] cursor-pointer">دارد</li>
-              <li class="py-2 px-3 transition hover:bg-[#F9F9F9] cursor-pointer">ندارد</li>
-            </ul>
+           <div class="rounded-2xl bg-[#F9F9F9] mt-4 relative">
+             <select class="js-example-basic-single border-0 form-select w-full rounded-2xl bg-[#F9F9F9]" name="state">
+                          <option>دارد</option>
+                          <option>ندارد</option>
+                        </select>
           </div>
           <button
             class="bg-primary mt-4 rtl:mr-auto ltr:ml-auto text-white rounded-[20px] py-1 w-[73px] flex-center font-medium btnHover">ثبت</button>
         </div>
       </form>
     </div>
-    <div style="visibility: hidden; opacity: 0;" data-button="login-modal"
+    <div style="visibility: hidden; opacity: 0;" data-modal-class="login-modal"
       class="modal-container overflow-auto bg-black/60 backdrop-blur-sm fixed inset-0 z-50 transition-all flex justify-center items-center px-4 sm:px-7">
       <form id="loginForm"
         class="modal-content bg-white max-w-[526px] overflow-hidden relative w-full rounded-[27px] shadow-8">
@@ -459,33 +396,42 @@
           <!-- form -->
           <div class="mt-[4rem] relative">
             <div class="rounded-[10px] border border-[#EEF1FA] h-16 px-3 flex items-center justify-between gap-2">
-             <div class="flex items-center gap-3 flex-grow">
-               <img alt="icon" src="../img/svg/mobile.svg" class="flex-shrink-0">
-               <input type="tel" class="bg-transparent border-0 w-full flex-grow outline-none">
-             </div>
-             <button class="flex-shrink-0 text-xs sm:text-sm text-[#160C59] font-bold">دریافت کد تایید</button>
+              <div class="flex items-center gap-3 flex-grow">
+                <img alt="icon" src="../img/svg/mobile.svg" class="flex-shrink-0">
+                <input type="tel" class="bg-transparent border-0 w-full flex-grow outline-none">
+              </div>
+              <button class="flex-shrink-0 text-xs sm:text-sm text-[#160C59] font-bold">دریافت کد تایید</button>
             </div>
             <div class="otpContainer mt-9 flex-center font-faNumBold gap-3 sm:gap-6" dir="ltr">
-              <input type="number" value="" maxlength="1" class="block w-[53px] h-[53px] rounded-[10px] border border-[#EEF1FA] text-center otpInput bg-white outline-none">
-              <input type="number" value="" maxlength="1" disabled="" class="block w-[53px] h-[53px] rounded-[10px] border border-[#EEF1FA] text-center otpInput bg-white outline-none">
-              <input type="number" value="" maxlength="1" disabled="" class="block w-[53px] h-[53px] rounded-[10px] border border-[#EEF1FA] text-center otpInput bg-white outline-none">
-              <input type="number" value="" maxlength="1" disabled="" class="block w-[53px] h-[53px] rounded-[10px] border border-[#EEF1FA] text-center otpInput bg-white outline-none">
+              <input type="number" value="" maxlength="1"
+                class="block w-[53px] h-[53px] rounded-[10px] border border-[#EEF1FA] text-center otpInput bg-white outline-none">
+              <input type="number" value="" maxlength="1" disabled=""
+                class="block w-[53px] h-[53px] rounded-[10px] border border-[#EEF1FA] text-center otpInput bg-white outline-none">
+              <input type="number" value="" maxlength="1" disabled=""
+                class="block w-[53px] h-[53px] rounded-[10px] border border-[#EEF1FA] text-center otpInput bg-white outline-none">
+              <input type="number" value="" maxlength="1" disabled=""
+                class="block w-[53px] h-[53px] rounded-[10px] border border-[#EEF1FA] text-center otpInput bg-white outline-none">
             </div>
             <input type="hidden" id="otpHiddenInput">
             <div class="flex items-center flex-col sm:flex-row gap-3 flex-grow mt-9">
-              <div class="bg-white border border-[#EEF1FA] px-3 text-[#393939] flex-shrink-0 rounded-[10px] flex-center h-[65px] font-faNumBold text-2xl">
-                  856985
+              <div
+                class="bg-white border border-[#EEF1FA] px-3 text-[#393939] flex-shrink-0 rounded-[10px] flex-center h-[65px] font-faNumBold text-2xl">
+                856985
               </div>
-              <div class="rounded-[10px] w-full px-[14px] flex-between gap-3 bg-white border border-[#EEF1FA] text-sm font-faNumBold h-[65px]">
-                  <input placeholder="کد امنیتی" class="flex-grow bg-transparent outline-none w-full">
-                  <img alt="icon" src="../img/svg/shield-tick.svg" class="flex-shrink-0">
+              <div
+                class="rounded-[10px] w-full px-[14px] flex-between gap-3 bg-white border border-[#EEF1FA] text-sm font-faNumBold h-[65px]">
+                <input placeholder="کد امنیتی" class="flex-grow bg-transparent outline-none w-full">
+                <img alt="icon" src="../img/svg/shield-tick.svg" class="flex-shrink-0">
               </div>
-             </div>
-             <label class="flex items-center gap-2 cursor-pointer mt-5">
+            </div>
+            <label class="flex items-center gap-2 cursor-pointer mt-5">
               <div class="inline-flex items-center gap-2">
                 <label class="relative flex items-center p-1 rounded-full cursor-pointer" htmlfor="black">
-                  <input name="type" type="checkbox" class="before:content[''] bg-white border border-[#EEF1FA] peer relative h-6 w-6 cursor-pointer appearance-none overflow-hidden rounded-[5px] text-[#ECECEC] transition-all before:absolute before:top-2/4 before:left-2/4 before:block before:h-12 before:w-12 before:-translate-y-2/4 before:-translate-x-2/4 before:rounded-full before:bg-[#ECECEC] before:opacity-0 before:transition-opacity checked:border-orange checked:before:bg-orange hover:before:opacity-10" id="black">
-                  <span class="absolute text-primary transition-opacity opacity-0 pointer-events-none rounded-[5px] top-2/4 left-2/4 -translate-y-2/4 -translate-x-2/4 peer-checked:opacity-100">
+                  <input name="type" type="checkbox"
+                    class="before:content[''] bg-white border border-[#EEF1FA] peer relative h-6 w-6 cursor-pointer appearance-none overflow-hidden rounded-[5px] text-[#ECECEC] transition-all before:absolute before:top-2/4 before:left-2/4 before:block before:h-12 before:w-12 before:-translate-y-2/4 before:-translate-x-2/4 before:rounded-full before:bg-[#ECECEC] before:opacity-0 before:transition-opacity checked:border-orange checked:before:bg-orange hover:before:opacity-10"
+                    id="black">
+                  <span
+                    class="absolute text-primary transition-opacity opacity-0 pointer-events-none rounded-[5px] top-2/4 left-2/4 -translate-y-2/4 -translate-x-2/4 peer-checked:opacity-100">
                     <div class="w-6 h-6 rounded-[5px] bg-primary"></div>
                   </span>
                 </label>
@@ -493,7 +439,8 @@
                   مرا به یاد داشته باش</p>
               </div>
             </label>
-            <button type="submit" class="rounded-[10px] btnHover w-full text-xl sm:text-2xl h-[51px] sm:h-[65px] bg-primary font-extrabold mt-5 sm:mt-8 flex-center text-white">ورود</button>
+            <button type="submit"
+              class="rounded-[10px] btnHover w-full text-xl sm:text-2xl h-[51px] sm:h-[65px] bg-primary font-extrabold mt-5 sm:mt-8 flex-center text-white">ورود</button>
           </div>
       </form>
     </div>
@@ -684,8 +631,8 @@
             <li><a class="text-white transition hover:text-primary">پیشنهادهای ویژه</a></li>
             <li><a class="text-white transition hover:text-primary">میزبان شوید</a></li>
           </ul>
-          <a id="login-modal"
-            class="rounded-[10px] bg-primary hover:bg-[#160C59] text-xs sm:text-base flex-center text-white font-medium gap-2 py-[10px] px-[18px]">
+          <a
+            class="login-modal rounded-[10px] bg-primary hover:bg-[#160C59] text-xs sm:text-base flex-center text-white font-medium gap-2 py-[10px] px-[18px]">
             <img src="../img/svg/frame.svg">
             <p>ثبت نام/ورود</p>
           </a>
@@ -699,8 +646,10 @@
               d="M3.01307 16.7467L0 17.5H69.5001L60.4663 16.0546C58.1862 15.6898 56.0212 14.8035 54.1398 13.4648L40.5884 3.82246C34.8845 -0.236086 27.2044 -0.115346 21.631 4.1205L8.45127 14.137C6.83395 15.3662 4.98382 16.254 3.01307 16.7467Z"
               fill="#2c2c2c"></path>
           </svg>
-          <img alt="img" src="../img/Group 9035.png" class="absolute inset-0 w-full h-[112px] sm:h-[180px] top-11 ltr:[transform:rotateY(180deg)]">
-          <div class="sm:w-[70px] w-[46px] sm:h-[70px] h-[46px] rounded-full bg-primary z-3 absolute flex-center rtl:right-[46px] rtl:sm:right-[68px] ltr:left-[51px] ltr:sm:left-[77px] top-3 sm:-top-[3px] shadow-7">
+          <img alt="img" src="../img/Group 9035.png"
+            class="absolute inset-0 w-full h-[112px] sm:h-[180px] top-11 ltr:[transform:rotateY(180deg)]">
+          <div
+            class="sm:w-[70px] w-[46px] sm:h-[70px] h-[46px] rounded-full bg-primary z-3 absolute flex-center rtl:right-[46px] rtl:sm:right-[68px] ltr:left-[51px] ltr:sm:left-[77px] top-3 sm:-top-[3px] shadow-7">
             <img alt="img" src="../img/category-2.png">
           </div>
           <div class="relative sm:mt-[70px] mt-14 z-1">
@@ -718,18 +667,23 @@
         <div class="swiper filters pt-20">
           <div class="swiper-wrapper">
             <div class="swiper-slide relative">
-              <div class="rounded-3xl absolute -top-[76px] w-full flex items-center justify-between gap-1 py-3 px-2 text-xs font-bold text-center bg-[#ffebcf] mb-4 mx-auto mx-3">
+              <div
+                class="rounded-3xl absolute -top-[76px] w-full flex items-center justify-between gap-1 py-3 px-2 text-xs font-bold text-center bg-[#ffebcf] mb-4 mx-auto mx-3">
                 <div class="w-9 h-9 rounded-[6px] bg-[#ffebcf] absolute rotate-45 inset-x-0 mx-auto -bottom-1"></div>
                 <p class="relative font-faNumRegular">1403-12-03 - 1403-12-03</p>
                 <button class="relative">
-                  <svg class="cursor-pointer close-button" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M13.41 11.9999L17.71 7.70994C17.8983 7.52164 18.0041 7.26624 18.0041 6.99994C18.0041 6.73364 17.8983 6.47825 17.71 6.28994C17.5217 6.10164 17.2663 5.99585 17 5.99585C16.7337 5.99585 16.4783 6.10164 16.29 6.28994L12 10.5899L7.71 6.28994C7.5217 6.10164 7.2663 5.99585 7 5.99585C6.7337 5.99585 6.4783 6.10164 6.29 6.28994C6.1017 6.47825 5.99591 6.73364 5.99591 6.99994C5.99591 7.26624 6.1017 7.52164 6.29 7.70994L10.59 11.9999L6.29 16.2899C6.19627 16.3829 6.12188 16.4935 6.07111 16.6154C6.02034 16.7372 5.9942 16.8679 5.9942 16.9999C5.9942 17.132 6.02034 17.2627 6.07111 17.3845C6.12188 17.5064 6.19627 17.617 6.29 17.7099C6.38296 17.8037 6.49356 17.8781 6.61542 17.9288C6.73728 17.9796 6.86799 18.0057 7 18.0057C7.13201 18.0057 7.26272 17.9796 7.38458 17.9288C7.50644 17.8781 7.61704 17.8037 7.71 17.7099L12 13.4099L16.29 17.7099C16.383 17.8037 16.4936 17.8781 16.6154 17.9288C16.7373 17.9796 16.868 18.0057 17 18.0057C17.132 18.0057 17.2627 17.9796 17.3846 17.9288C17.5064 17.8781 17.617 17.8037 17.71 17.7099C17.8037 17.617 17.8781 17.5064 17.9289 17.3845C17.9797 17.2627 18.0058 17.132 18.0058 16.9999C18.0058 16.8679 17.9797 16.7372 17.9289 16.6154C17.8781 16.4935 17.8037 16.3829 17.71 16.2899L13.41 11.9999Z" fill="red"></path>
+                  <svg class="cursor-pointer close-button" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M13.41 11.9999L17.71 7.70994C17.8983 7.52164 18.0041 7.26624 18.0041 6.99994C18.0041 6.73364 17.8983 6.47825 17.71 6.28994C17.5217 6.10164 17.2663 5.99585 17 5.99585C16.7337 5.99585 16.4783 6.10164 16.29 6.28994L12 10.5899L7.71 6.28994C7.5217 6.10164 7.2663 5.99585 7 5.99585C6.7337 5.99585 6.4783 6.10164 6.29 6.28994C6.1017 6.47825 5.99591 6.73364 5.99591 6.99994C5.99591 7.26624 6.1017 7.52164 6.29 7.70994L10.59 11.9999L6.29 16.2899C6.19627 16.3829 6.12188 16.4935 6.07111 16.6154C6.02034 16.7372 5.9942 16.8679 5.9942 16.9999C5.9942 17.132 6.02034 17.2627 6.07111 17.3845C6.12188 17.5064 6.19627 17.617 6.29 17.7099C6.38296 17.8037 6.49356 17.8781 6.61542 17.9288C6.73728 17.9796 6.86799 18.0057 7 18.0057C7.13201 18.0057 7.26272 17.9796 7.38458 17.9288C7.50644 17.8781 7.61704 17.8037 7.71 17.7099L12 13.4099L16.29 17.7099C16.383 17.8037 16.4936 17.8781 16.6154 17.9288C16.7373 17.9796 16.868 18.0057 17 18.0057C17.132 18.0057 17.2627 17.9796 17.3846 17.9288C17.5064 17.8781 17.617 17.8037 17.71 17.7099C17.8037 17.617 17.8781 17.5064 17.9289 17.3845C17.9797 17.2627 18.0058 17.132 18.0058 16.9999C18.0058 16.8679 17.9797 16.7372 17.9289 16.6154C17.8781 16.4935 17.8037 16.3829 17.71 16.2899L13.41 11.9999Z"
+                      fill="red"></path>
                   </svg>
                 </button>
               </div>
-              <form id="date-modal"
-                class="border group hover:text-primary transition hover:border-primary border-[#B4B4B4] font-medium px-4 cursor-pointer rounded-full flex-center gap-2 h-11">
-                <svg class="flex-shrink-0" width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <form
+                class="date-modal border group hover:text-primary transition hover:border-primary border-[#B4B4B4] font-medium px-4 cursor-pointer rounded-full flex-center gap-2 h-11">
+                <svg class="flex-shrink-0" width="18" height="18" viewBox="0 0 18 18" fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
                   <path class="transition group-hover:fill-primary"
                     d="M12.5625 2.67V1.5C12.5625 1.1925 12.3075 0.9375 12 0.9375C11.6925 0.9375 11.4375 1.1925 11.4375 1.5V2.625H6.56249V1.5C6.56249 1.1925 6.30749 0.9375 5.99999 0.9375C5.69249 0.9375 5.43749 1.1925 5.43749 1.5V2.67C3.41249 2.8575 2.42999 4.065 2.27999 5.8575C2.26499 6.075 2.44499 6.255 2.65499 6.255H15.345C15.5625 6.255 15.7425 6.0675 15.72 5.8575C15.57 4.065 14.5875 2.8575 12.5625 2.67Z"
                     fill="#2C2C2C" />
@@ -739,28 +693,36 @@
                 </svg>
                 <p>انتخاب تاریخ</p>
                 <div class="flex-grow-1 w-full hidden items-center justify-between gap-1 font-medium">
-                 <p class="font-faNumRegular"> 2 تا 5 بهمن</p>
-                 <button>
-                   <svg class="cursor-pointer" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M13.41 11.9999L17.71 7.70994C17.8983 7.52164 18.0041 7.26624 18.0041 6.99994C18.0041 6.73364 17.8983 6.47825 17.71 6.28994C17.5217 6.10164 17.2663 5.99585 17 5.99585C16.7337 5.99585 16.4783 6.10164 16.29 6.28994L12 10.5899L7.71 6.28994C7.5217 6.10164 7.2663 5.99585 7 5.99585C6.7337 5.99585 6.4783 6.10164 6.29 6.28994C6.1017 6.47825 5.99591 6.73364 5.99591 6.99994C5.99591 7.26624 6.1017 7.52164 6.29 7.70994L10.59 11.9999L6.29 16.2899C6.19627 16.3829 6.12188 16.4935 6.07111 16.6154C6.02034 16.7372 5.9942 16.8679 5.9942 16.9999C5.9942 17.132 6.02034 17.2627 6.07111 17.3845C6.12188 17.5064 6.19627 17.617 6.29 17.7099C6.38296 17.8037 6.49356 17.8781 6.61542 17.9288C6.73728 17.9796 6.86799 18.0057 7 18.0057C7.13201 18.0057 7.26272 17.9796 7.38458 17.9288C7.50644 17.8781 7.61704 17.8037 7.71 17.7099L12 13.4099L16.29 17.7099C16.383 17.8037 16.4936 17.8781 16.6154 17.9288C16.7373 17.9796 16.868 18.0057 17 18.0057C17.132 18.0057 17.2627 17.9796 17.3846 17.9288C17.5064 17.8781 17.617 17.8037 17.71 17.7099C17.8037 17.617 17.8781 17.5064 17.9289 17.3845C17.9797 17.2627 18.0058 17.132 18.0058 16.9999C18.0058 16.8679 17.9797 16.7372 17.9289 16.6154C17.8781 16.4935 17.8037 16.3829 17.71 16.2899L13.41 11.9999Z" fill="#1E2D48"></path>
-                  </svg>
-                 </button>
+                  <p class="font-faNumRegular"> 2 تا 5 بهمن</p>
+                  <button>
+                    <svg class="cursor-pointer" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M13.41 11.9999L17.71 7.70994C17.8983 7.52164 18.0041 7.26624 18.0041 6.99994C18.0041 6.73364 17.8983 6.47825 17.71 6.28994C17.5217 6.10164 17.2663 5.99585 17 5.99585C16.7337 5.99585 16.4783 6.10164 16.29 6.28994L12 10.5899L7.71 6.28994C7.5217 6.10164 7.2663 5.99585 7 5.99585C6.7337 5.99585 6.4783 6.10164 6.29 6.28994C6.1017 6.47825 5.99591 6.73364 5.99591 6.99994C5.99591 7.26624 6.1017 7.52164 6.29 7.70994L10.59 11.9999L6.29 16.2899C6.19627 16.3829 6.12188 16.4935 6.07111 16.6154C6.02034 16.7372 5.9942 16.8679 5.9942 16.9999C5.9942 17.132 6.02034 17.2627 6.07111 17.3845C6.12188 17.5064 6.19627 17.617 6.29 17.7099C6.38296 17.8037 6.49356 17.8781 6.61542 17.9288C6.73728 17.9796 6.86799 18.0057 7 18.0057C7.13201 18.0057 7.26272 17.9796 7.38458 17.9288C7.50644 17.8781 7.61704 17.8037 7.71 17.7099L12 13.4099L16.29 17.7099C16.383 17.8037 16.4936 17.8781 16.6154 17.9288C16.7373 17.9796 16.868 18.0057 17 18.0057C17.132 18.0057 17.2627 17.9796 17.3846 17.9288C17.5064 17.8781 17.617 17.8037 17.71 17.7099C17.8037 17.617 17.8781 17.5064 17.9289 17.3845C17.9797 17.2627 18.0058 17.132 18.0058 16.9999C18.0058 16.8679 17.9797 16.7372 17.9289 16.6154C17.8781 16.4935 17.8037 16.3829 17.71 16.2899L13.41 11.9999Z"
+                        fill="#1E2D48"></path>
+                    </svg>
+                  </button>
                 </div>
               </form>
             </div>
             <div class="swiper-slide relative">
-                <div class="rounded-3xl absolute -top-[76px] w-full flex items-center justify-between gap-1 py-3 px-2 text-xs font-bold text-center bg-[#ffebcf] mb-4 mx-auto mx-3">
+              <div
+                class="rounded-3xl absolute -top-[76px] w-full flex items-center justify-between gap-1 py-3 px-2 text-xs font-bold text-center bg-[#ffebcf] mb-4 mx-auto mx-3">
                 <div class="w-9 h-9 rounded-[6px] bg-[#ffebcf] absolute rotate-45 inset-x-0 mx-auto -bottom-1"></div>
                 <p class="relative font-faNumRegular">12 نفر</p>
                 <button class="relative">
-                  <svg class="cursor-pointer close-button" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M13.41 11.9999L17.71 7.70994C17.8983 7.52164 18.0041 7.26624 18.0041 6.99994C18.0041 6.73364 17.8983 6.47825 17.71 6.28994C17.5217 6.10164 17.2663 5.99585 17 5.99585C16.7337 5.99585 16.4783 6.10164 16.29 6.28994L12 10.5899L7.71 6.28994C7.5217 6.10164 7.2663 5.99585 7 5.99585C6.7337 5.99585 6.4783 6.10164 6.29 6.28994C6.1017 6.47825 5.99591 6.73364 5.99591 6.99994C5.99591 7.26624 6.1017 7.52164 6.29 7.70994L10.59 11.9999L6.29 16.2899C6.19627 16.3829 6.12188 16.4935 6.07111 16.6154C6.02034 16.7372 5.9942 16.8679 5.9942 16.9999C5.9942 17.132 6.02034 17.2627 6.07111 17.3845C6.12188 17.5064 6.19627 17.617 6.29 17.7099C6.38296 17.8037 6.49356 17.8781 6.61542 17.9288C6.73728 17.9796 6.86799 18.0057 7 18.0057C7.13201 18.0057 7.26272 17.9796 7.38458 17.9288C7.50644 17.8781 7.61704 17.8037 7.71 17.7099L12 13.4099L16.29 17.7099C16.383 17.8037 16.4936 17.8781 16.6154 17.9288C16.7373 17.9796 16.868 18.0057 17 18.0057C17.132 18.0057 17.2627 17.9796 17.3846 17.9288C17.5064 17.8781 17.617 17.8037 17.71 17.7099C17.8037 17.617 17.8781 17.5064 17.9289 17.3845C17.9797 17.2627 18.0058 17.132 18.0058 16.9999C18.0058 16.8679 17.9797 16.7372 17.9289 16.6154C17.8781 16.4935 17.8037 16.3829 17.71 16.2899L13.41 11.9999Z" fill="red"></path>
+                  <svg class="cursor-pointer close-button" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M13.41 11.9999L17.71 7.70994C17.8983 7.52164 18.0041 7.26624 18.0041 6.99994C18.0041 6.73364 17.8983 6.47825 17.71 6.28994C17.5217 6.10164 17.2663 5.99585 17 5.99585C16.7337 5.99585 16.4783 6.10164 16.29 6.28994L12 10.5899L7.71 6.28994C7.5217 6.10164 7.2663 5.99585 7 5.99585C6.7337 5.99585 6.4783 6.10164 6.29 6.28994C6.1017 6.47825 5.99591 6.73364 5.99591 6.99994C5.99591 7.26624 6.1017 7.52164 6.29 7.70994L10.59 11.9999L6.29 16.2899C6.19627 16.3829 6.12188 16.4935 6.07111 16.6154C6.02034 16.7372 5.9942 16.8679 5.9942 16.9999C5.9942 17.132 6.02034 17.2627 6.07111 17.3845C6.12188 17.5064 6.19627 17.617 6.29 17.7099C6.38296 17.8037 6.49356 17.8781 6.61542 17.9288C6.73728 17.9796 6.86799 18.0057 7 18.0057C7.13201 18.0057 7.26272 17.9796 7.38458 17.9288C7.50644 17.8781 7.61704 17.8037 7.71 17.7099L12 13.4099L16.29 17.7099C16.383 17.8037 16.4936 17.8781 16.6154 17.9288C16.7373 17.9796 16.868 18.0057 17 18.0057C17.132 18.0057 17.2627 17.9796 17.3846 17.9288C17.5064 17.8781 17.617 17.8037 17.71 17.7099C17.8037 17.617 17.8781 17.5064 17.9289 17.3845C17.9797 17.2627 18.0058 17.132 18.0058 16.9999C18.0058 16.8679 17.9797 16.7372 17.9289 16.6154C17.8781 16.4935 17.8037 16.3829 17.71 16.2899L13.41 11.9999Z"
+                      fill="red"></path>
                   </svg>
                 </button>
               </div>
-              <form id="persons-modal"
-                class="border group hover:text-primary transition hover:border-primary border-[#B4B4B4] font-medium px-4 cursor-pointer rounded-full flex-center gap-2 h-11">
-                <svg class="flex-shrink-0" width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <form
+                class="border persons-modal group hover:text-primary transition hover:border-primary border-[#B4B4B4] font-medium px-4 cursor-pointer rounded-full flex-center gap-2 h-11">
+                <svg class="flex-shrink-0" width="18" height="18" viewBox="0 0 18 18" fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
                   <path class="transition group-hover:fill-primary"
                     d="M6.75 1.5C4.785 1.5 3.1875 3.0975 3.1875 5.0625C3.1875 6.99 4.695 8.55 6.66 8.6175C6.72 8.61 6.78 8.61 6.825 8.6175C6.84 8.6175 6.8475 8.6175 6.8625 8.6175C6.87 8.6175 6.87 8.6175 6.8775 8.6175C8.7975 8.55 10.305 6.99 10.3125 5.0625C10.3125 3.0975 8.715 1.5 6.75 1.5Z"
                     fill="#2C2C2C" />
@@ -778,26 +740,34 @@
                 <div class="flex-grow-1 w-full hidden items-center justify-between gap-1 font-medium">
                   <p class="font-faNumRegular">3 نفر</p>
                   <button>
-                    <svg class="cursor-pointer" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                     <path d="M13.41 11.9999L17.71 7.70994C17.8983 7.52164 18.0041 7.26624 18.0041 6.99994C18.0041 6.73364 17.8983 6.47825 17.71 6.28994C17.5217 6.10164 17.2663 5.99585 17 5.99585C16.7337 5.99585 16.4783 6.10164 16.29 6.28994L12 10.5899L7.71 6.28994C7.5217 6.10164 7.2663 5.99585 7 5.99585C6.7337 5.99585 6.4783 6.10164 6.29 6.28994C6.1017 6.47825 5.99591 6.73364 5.99591 6.99994C5.99591 7.26624 6.1017 7.52164 6.29 7.70994L10.59 11.9999L6.29 16.2899C6.19627 16.3829 6.12188 16.4935 6.07111 16.6154C6.02034 16.7372 5.9942 16.8679 5.9942 16.9999C5.9942 17.132 6.02034 17.2627 6.07111 17.3845C6.12188 17.5064 6.19627 17.617 6.29 17.7099C6.38296 17.8037 6.49356 17.8781 6.61542 17.9288C6.73728 17.9796 6.86799 18.0057 7 18.0057C7.13201 18.0057 7.26272 17.9796 7.38458 17.9288C7.50644 17.8781 7.61704 17.8037 7.71 17.7099L12 13.4099L16.29 17.7099C16.383 17.8037 16.4936 17.8781 16.6154 17.9288C16.7373 17.9796 16.868 18.0057 17 18.0057C17.132 18.0057 17.2627 17.9796 17.3846 17.9288C17.5064 17.8781 17.617 17.8037 17.71 17.7099C17.8037 17.617 17.8781 17.5064 17.9289 17.3845C17.9797 17.2627 18.0058 17.132 18.0058 16.9999C18.0058 16.8679 17.9797 16.7372 17.9289 16.6154C17.8781 16.4935 17.8037 16.3829 17.71 16.2899L13.41 11.9999Z" fill="#1E2D48"></path>
-                   </svg>
+                    <svg class="cursor-pointer" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M13.41 11.9999L17.71 7.70994C17.8983 7.52164 18.0041 7.26624 18.0041 6.99994C18.0041 6.73364 17.8983 6.47825 17.71 6.28994C17.5217 6.10164 17.2663 5.99585 17 5.99585C16.7337 5.99585 16.4783 6.10164 16.29 6.28994L12 10.5899L7.71 6.28994C7.5217 6.10164 7.2663 5.99585 7 5.99585C6.7337 5.99585 6.4783 6.10164 6.29 6.28994C6.1017 6.47825 5.99591 6.73364 5.99591 6.99994C5.99591 7.26624 6.1017 7.52164 6.29 7.70994L10.59 11.9999L6.29 16.2899C6.19627 16.3829 6.12188 16.4935 6.07111 16.6154C6.02034 16.7372 5.9942 16.8679 5.9942 16.9999C5.9942 17.132 6.02034 17.2627 6.07111 17.3845C6.12188 17.5064 6.19627 17.617 6.29 17.7099C6.38296 17.8037 6.49356 17.8781 6.61542 17.9288C6.73728 17.9796 6.86799 18.0057 7 18.0057C7.13201 18.0057 7.26272 17.9796 7.38458 17.9288C7.50644 17.8781 7.61704 17.8037 7.71 17.7099L12 13.4099L16.29 17.7099C16.383 17.8037 16.4936 17.8781 16.6154 17.9288C16.7373 17.9796 16.868 18.0057 17 18.0057C17.132 18.0057 17.2627 17.9796 17.3846 17.9288C17.5064 17.8781 17.617 17.8037 17.71 17.7099C17.8037 17.617 17.8781 17.5064 17.9289 17.3845C17.9797 17.2627 18.0058 17.132 18.0058 16.9999C18.0058 16.8679 17.9797 16.7372 17.9289 16.6154C17.8781 16.4935 17.8037 16.3829 17.71 16.2899L13.41 11.9999Z"
+                        fill="#1E2D48"></path>
+                    </svg>
                   </button>
-                 </div>
+                </div>
               </form>
             </div>
             <div class="swiper-slide relative">
-                <div class="rounded-3xl absolute -top-[76px] w-full flex items-center justify-between gap-1 py-3 px-2 text-xs font-bold text-center bg-[#ffebcf] mb-4 mx-auto mx-3">
+              <div
+                class="rounded-3xl absolute -top-[76px] w-full flex items-center justify-between gap-1 py-3 px-2 text-xs font-bold text-center bg-[#ffebcf] mb-4 mx-auto mx-3">
                 <div class="w-9 h-9 rounded-[6px] bg-[#ffebcf] absolute rotate-45 inset-x-0 mx-auto -bottom-1"></div>
                 <p class="relative font-faNumRegular">13 اتاق</p>
                 <button class="relative">
-                  <svg class="cursor-pointer close-button" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M13.41 11.9999L17.71 7.70994C17.8983 7.52164 18.0041 7.26624 18.0041 6.99994C18.0041 6.73364 17.8983 6.47825 17.71 6.28994C17.5217 6.10164 17.2663 5.99585 17 5.99585C16.7337 5.99585 16.4783 6.10164 16.29 6.28994L12 10.5899L7.71 6.28994C7.5217 6.10164 7.2663 5.99585 7 5.99585C6.7337 5.99585 6.4783 6.10164 6.29 6.28994C6.1017 6.47825 5.99591 6.73364 5.99591 6.99994C5.99591 7.26624 6.1017 7.52164 6.29 7.70994L10.59 11.9999L6.29 16.2899C6.19627 16.3829 6.12188 16.4935 6.07111 16.6154C6.02034 16.7372 5.9942 16.8679 5.9942 16.9999C5.9942 17.132 6.02034 17.2627 6.07111 17.3845C6.12188 17.5064 6.19627 17.617 6.29 17.7099C6.38296 17.8037 6.49356 17.8781 6.61542 17.9288C6.73728 17.9796 6.86799 18.0057 7 18.0057C7.13201 18.0057 7.26272 17.9796 7.38458 17.9288C7.50644 17.8781 7.61704 17.8037 7.71 17.7099L12 13.4099L16.29 17.7099C16.383 17.8037 16.4936 17.8781 16.6154 17.9288C16.7373 17.9796 16.868 18.0057 17 18.0057C17.132 18.0057 17.2627 17.9796 17.3846 17.9288C17.5064 17.8781 17.617 17.8037 17.71 17.7099C17.8037 17.617 17.8781 17.5064 17.9289 17.3845C17.9797 17.2627 18.0058 17.132 18.0058 16.9999C18.0058 16.8679 17.9797 16.7372 17.9289 16.6154C17.8781 16.4935 17.8037 16.3829 17.71 16.2899L13.41 11.9999Z" fill="red"></path>
+                  <svg class="cursor-pointer close-button" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M13.41 11.9999L17.71 7.70994C17.8983 7.52164 18.0041 7.26624 18.0041 6.99994C18.0041 6.73364 17.8983 6.47825 17.71 6.28994C17.5217 6.10164 17.2663 5.99585 17 5.99585C16.7337 5.99585 16.4783 6.10164 16.29 6.28994L12 10.5899L7.71 6.28994C7.5217 6.10164 7.2663 5.99585 7 5.99585C6.7337 5.99585 6.4783 6.10164 6.29 6.28994C6.1017 6.47825 5.99591 6.73364 5.99591 6.99994C5.99591 7.26624 6.1017 7.52164 6.29 7.70994L10.59 11.9999L6.29 16.2899C6.19627 16.3829 6.12188 16.4935 6.07111 16.6154C6.02034 16.7372 5.9942 16.8679 5.9942 16.9999C5.9942 17.132 6.02034 17.2627 6.07111 17.3845C6.12188 17.5064 6.19627 17.617 6.29 17.7099C6.38296 17.8037 6.49356 17.8781 6.61542 17.9288C6.73728 17.9796 6.86799 18.0057 7 18.0057C7.13201 18.0057 7.26272 17.9796 7.38458 17.9288C7.50644 17.8781 7.61704 17.8037 7.71 17.7099L12 13.4099L16.29 17.7099C16.383 17.8037 16.4936 17.8781 16.6154 17.9288C16.7373 17.9796 16.868 18.0057 17 18.0057C17.132 18.0057 17.2627 17.9796 17.3846 17.9288C17.5064 17.8781 17.617 17.8037 17.71 17.7099C17.8037 17.617 17.8781 17.5064 17.9289 17.3845C17.9797 17.2627 18.0058 17.132 18.0058 16.9999C18.0058 16.8679 17.9797 16.7372 17.9289 16.6154C17.8781 16.4935 17.8037 16.3829 17.71 16.2899L13.41 11.9999Z"
+                      fill="red"></path>
                   </svg>
                 </button>
               </div>
-              <form id="rooms-modal"
-                class="border group hover:text-primary transition hover:border-primary border-[#B4B4B4] font-medium px-4 cursor-pointer rounded-full flex-center gap-2 h-11">
-                <svg class="flex-shrink-0" width="14" height="18" viewBox="0 0 14 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <form
+                class="border rooms-modal group hover:text-primary transition hover:border-primary border-[#B4B4B4] font-medium px-4 cursor-pointer rounded-full flex-center gap-2 h-11">
+                <svg class="flex-shrink-0" width="14" height="18" viewBox="0 0 14 18" fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
                   <path class="transition group-hover:fill-primary"
                     d="M6.2515 0.888192L13.5015 2.38819C13.7915 2.44819 14 2.70419 14 3.00019V15.0002C14 15.144 13.9504 15.2834 13.8596 15.3948C13.7688 15.5063 13.6423 15.5831 13.5015 15.6122L6.2515 17.1122C6.1607 17.131 6.06686 17.1293 5.97679 17.1073C5.88672 17.0853 5.80266 17.0436 5.73072 16.9851C5.65878 16.9266 5.60075 16.8528 5.56085 16.7691C5.52094 16.6854 5.50016 16.5939 5.5 16.5012V1.50019C5.49994 1.40735 5.52056 1.31565 5.56037 1.23178C5.60017 1.1479 5.65817 1.07394 5.73014 1.01529C5.80211 0.95663 5.88624 0.914743 5.97643 0.892672C6.06661 0.870601 6.16058 0.8694 6.2515 0.888192ZM4 2.00019L4.064 15.9972L4 16.0007H0.625C0.470279 16.0006 0.321083 15.9432 0.206277 15.8395C0.0914721 15.7357 0.0192196 15.5931 0.00349998 15.4392L0 15.3757V2.62569C0 2.30169 0.246 2.03569 0.561 2.00369L0.625 2.00019H4ZM8.25 8.25019C8.05109 8.25019 7.86032 8.32921 7.71967 8.46986C7.57902 8.61051 7.5 8.80128 7.5 9.00019C7.5 9.1991 7.57902 9.38987 7.71967 9.53052C7.86032 9.67117 8.05109 9.75019 8.25 9.75019C8.44891 9.75019 8.63968 9.67117 8.78033 9.53052C8.92098 9.38987 9 9.1991 9 9.00019C9 8.80128 8.92098 8.61051 8.78033 8.46986C8.63968 8.32921 8.44891 8.25019 8.25 8.25019Z"
                     fill="#2C2C2C" />
@@ -806,26 +776,34 @@
                 <div class="flex-grow-1 w-full hidden items-center justify-between gap-1 font-medium">
                   <p class="font-faNumRegular">2 اتاق</p>
                   <button>
-                    <svg class="cursor-pointer" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                     <path d="M13.41 11.9999L17.71 7.70994C17.8983 7.52164 18.0041 7.26624 18.0041 6.99994C18.0041 6.73364 17.8983 6.47825 17.71 6.28994C17.5217 6.10164 17.2663 5.99585 17 5.99585C16.7337 5.99585 16.4783 6.10164 16.29 6.28994L12 10.5899L7.71 6.28994C7.5217 6.10164 7.2663 5.99585 7 5.99585C6.7337 5.99585 6.4783 6.10164 6.29 6.28994C6.1017 6.47825 5.99591 6.73364 5.99591 6.99994C5.99591 7.26624 6.1017 7.52164 6.29 7.70994L10.59 11.9999L6.29 16.2899C6.19627 16.3829 6.12188 16.4935 6.07111 16.6154C6.02034 16.7372 5.9942 16.8679 5.9942 16.9999C5.9942 17.132 6.02034 17.2627 6.07111 17.3845C6.12188 17.5064 6.19627 17.617 6.29 17.7099C6.38296 17.8037 6.49356 17.8781 6.61542 17.9288C6.73728 17.9796 6.86799 18.0057 7 18.0057C7.13201 18.0057 7.26272 17.9796 7.38458 17.9288C7.50644 17.8781 7.61704 17.8037 7.71 17.7099L12 13.4099L16.29 17.7099C16.383 17.8037 16.4936 17.8781 16.6154 17.9288C16.7373 17.9796 16.868 18.0057 17 18.0057C17.132 18.0057 17.2627 17.9796 17.3846 17.9288C17.5064 17.8781 17.617 17.8037 17.71 17.7099C17.8037 17.617 17.8781 17.5064 17.9289 17.3845C17.9797 17.2627 18.0058 17.132 18.0058 16.9999C18.0058 16.8679 17.9797 16.7372 17.9289 16.6154C17.8781 16.4935 17.8037 16.3829 17.71 16.2899L13.41 11.9999Z" fill="#1E2D48"></path>
-                   </svg>
+                    <svg class="cursor-pointer" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M13.41 11.9999L17.71 7.70994C17.8983 7.52164 18.0041 7.26624 18.0041 6.99994C18.0041 6.73364 17.8983 6.47825 17.71 6.28994C17.5217 6.10164 17.2663 5.99585 17 5.99585C16.7337 5.99585 16.4783 6.10164 16.29 6.28994L12 10.5899L7.71 6.28994C7.5217 6.10164 7.2663 5.99585 7 5.99585C6.7337 5.99585 6.4783 6.10164 6.29 6.28994C6.1017 6.47825 5.99591 6.73364 5.99591 6.99994C5.99591 7.26624 6.1017 7.52164 6.29 7.70994L10.59 11.9999L6.29 16.2899C6.19627 16.3829 6.12188 16.4935 6.07111 16.6154C6.02034 16.7372 5.9942 16.8679 5.9942 16.9999C5.9942 17.132 6.02034 17.2627 6.07111 17.3845C6.12188 17.5064 6.19627 17.617 6.29 17.7099C6.38296 17.8037 6.49356 17.8781 6.61542 17.9288C6.73728 17.9796 6.86799 18.0057 7 18.0057C7.13201 18.0057 7.26272 17.9796 7.38458 17.9288C7.50644 17.8781 7.61704 17.8037 7.71 17.7099L12 13.4099L16.29 17.7099C16.383 17.8037 16.4936 17.8781 16.6154 17.9288C16.7373 17.9796 16.868 18.0057 17 18.0057C17.132 18.0057 17.2627 17.9796 17.3846 17.9288C17.5064 17.8781 17.617 17.8037 17.71 17.7099C17.8037 17.617 17.8781 17.5064 17.9289 17.3845C17.9797 17.2627 18.0058 17.132 18.0058 16.9999C18.0058 16.8679 17.9797 16.7372 17.9289 16.6154C17.8781 16.4935 17.8037 16.3829 17.71 16.2899L13.41 11.9999Z"
+                        fill="#1E2D48"></path>
+                    </svg>
                   </button>
-                 </div>
+                </div>
               </form>
             </div>
             <div class="swiper-slide relative">
-                <div class="rounded-3xl absolute -top-[76px] w-full flex items-center justify-between gap-1 py-3 px-2 text-xs font-bold text-center bg-[#ffebcf] mb-4 mx-auto mx-3">
+              <div
+                class="rounded-3xl absolute -top-[76px] w-full flex items-center justify-between gap-1 py-3 px-2 text-xs font-bold text-center bg-[#ffebcf] mb-4 mx-auto mx-3">
                 <div class="w-9 h-9 rounded-[6px] bg-[#ffebcf] absolute rotate-45 inset-x-0 mx-auto -bottom-1"></div>
                 <p class="relative font-faNumRegular">تهران</p>
                 <button class="relative">
-                  <svg class="cursor-pointer close-button" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M13.41 11.9999L17.71 7.70994C17.8983 7.52164 18.0041 7.26624 18.0041 6.99994C18.0041 6.73364 17.8983 6.47825 17.71 6.28994C17.5217 6.10164 17.2663 5.99585 17 5.99585C16.7337 5.99585 16.4783 6.10164 16.29 6.28994L12 10.5899L7.71 6.28994C7.5217 6.10164 7.2663 5.99585 7 5.99585C6.7337 5.99585 6.4783 6.10164 6.29 6.28994C6.1017 6.47825 5.99591 6.73364 5.99591 6.99994C5.99591 7.26624 6.1017 7.52164 6.29 7.70994L10.59 11.9999L6.29 16.2899C6.19627 16.3829 6.12188 16.4935 6.07111 16.6154C6.02034 16.7372 5.9942 16.8679 5.9942 16.9999C5.9942 17.132 6.02034 17.2627 6.07111 17.3845C6.12188 17.5064 6.19627 17.617 6.29 17.7099C6.38296 17.8037 6.49356 17.8781 6.61542 17.9288C6.73728 17.9796 6.86799 18.0057 7 18.0057C7.13201 18.0057 7.26272 17.9796 7.38458 17.9288C7.50644 17.8781 7.61704 17.8037 7.71 17.7099L12 13.4099L16.29 17.7099C16.383 17.8037 16.4936 17.8781 16.6154 17.9288C16.7373 17.9796 16.868 18.0057 17 18.0057C17.132 18.0057 17.2627 17.9796 17.3846 17.9288C17.5064 17.8781 17.617 17.8037 17.71 17.7099C17.8037 17.617 17.8781 17.5064 17.9289 17.3845C17.9797 17.2627 18.0058 17.132 18.0058 16.9999C18.0058 16.8679 17.9797 16.7372 17.9289 16.6154C17.8781 16.4935 17.8037 16.3829 17.71 16.2899L13.41 11.9999Z" fill="red"></path>
+                  <svg class="cursor-pointer close-button" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M13.41 11.9999L17.71 7.70994C17.8983 7.52164 18.0041 7.26624 18.0041 6.99994C18.0041 6.73364 17.8983 6.47825 17.71 6.28994C17.5217 6.10164 17.2663 5.99585 17 5.99585C16.7337 5.99585 16.4783 6.10164 16.29 6.28994L12 10.5899L7.71 6.28994C7.5217 6.10164 7.2663 5.99585 7 5.99585C6.7337 5.99585 6.4783 6.10164 6.29 6.28994C6.1017 6.47825 5.99591 6.73364 5.99591 6.99994C5.99591 7.26624 6.1017 7.52164 6.29 7.70994L10.59 11.9999L6.29 16.2899C6.19627 16.3829 6.12188 16.4935 6.07111 16.6154C6.02034 16.7372 5.9942 16.8679 5.9942 16.9999C5.9942 17.132 6.02034 17.2627 6.07111 17.3845C6.12188 17.5064 6.19627 17.617 6.29 17.7099C6.38296 17.8037 6.49356 17.8781 6.61542 17.9288C6.73728 17.9796 6.86799 18.0057 7 18.0057C7.13201 18.0057 7.26272 17.9796 7.38458 17.9288C7.50644 17.8781 7.61704 17.8037 7.71 17.7099L12 13.4099L16.29 17.7099C16.383 17.8037 16.4936 17.8781 16.6154 17.9288C16.7373 17.9796 16.868 18.0057 17 18.0057C17.132 18.0057 17.2627 17.9796 17.3846 17.9288C17.5064 17.8781 17.617 17.8037 17.71 17.7099C17.8037 17.617 17.8781 17.5064 17.9289 17.3845C17.9797 17.2627 18.0058 17.132 18.0058 16.9999C18.0058 16.8679 17.9797 16.7372 17.9289 16.6154C17.8781 16.4935 17.8037 16.3829 17.71 16.2899L13.41 11.9999Z"
+                      fill="red"></path>
                   </svg>
                 </button>
               </div>
-              <form id="city-modal"
-                class="border group hover:text-primary transition hover:border-primary border-[#B4B4B4] font-medium px-4 cursor-pointer rounded-full flex-center gap-2 h-11">
-                <svg class="flex-shrink-0" width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <form
+                class="border city-modal group hover:text-primary transition hover:border-primary border-[#B4B4B4] font-medium px-4 cursor-pointer rounded-full flex-center gap-2 h-11">
+                <svg class="flex-shrink-0" width="18" height="18" viewBox="0 0 18 18" fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
                   <path class="transition group-hover:fill-primary"
                     d="M15.465 6.3375C14.6775 2.8725 11.655 1.3125 9 1.3125C9 1.3125 9 1.3125 8.9925 1.3125C6.345 1.3125 3.315 2.865 2.5275 6.33C1.65 10.2 4.02 13.4775 6.165 15.54C6.96 16.305 7.98 16.6875 9 16.6875C10.02 16.6875 11.04 16.305 11.8275 15.54C13.9725 13.4775 16.3425 10.2075 15.465 6.3375ZM9 10.095C7.695 10.095 6.6375 9.0375 6.6375 7.7325C6.6375 6.4275 7.695 5.37 9 5.37C10.305 5.37 11.3625 6.4275 11.3625 7.7325C11.3625 9.0375 10.305 10.095 9 10.095Z"
                     fill="#292D32" />
@@ -834,26 +812,34 @@
                 <div class="flex-grow-1 w-full hidden items-center justify-between gap-1 font-medium">
                   <p class="font-faNumRegular">رامسر</p>
                   <button>
-                    <svg class="cursor-pointer" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                     <path d="M13.41 11.9999L17.71 7.70994C17.8983 7.52164 18.0041 7.26624 18.0041 6.99994C18.0041 6.73364 17.8983 6.47825 17.71 6.28994C17.5217 6.10164 17.2663 5.99585 17 5.99585C16.7337 5.99585 16.4783 6.10164 16.29 6.28994L12 10.5899L7.71 6.28994C7.5217 6.10164 7.2663 5.99585 7 5.99585C6.7337 5.99585 6.4783 6.10164 6.29 6.28994C6.1017 6.47825 5.99591 6.73364 5.99591 6.99994C5.99591 7.26624 6.1017 7.52164 6.29 7.70994L10.59 11.9999L6.29 16.2899C6.19627 16.3829 6.12188 16.4935 6.07111 16.6154C6.02034 16.7372 5.9942 16.8679 5.9942 16.9999C5.9942 17.132 6.02034 17.2627 6.07111 17.3845C6.12188 17.5064 6.19627 17.617 6.29 17.7099C6.38296 17.8037 6.49356 17.8781 6.61542 17.9288C6.73728 17.9796 6.86799 18.0057 7 18.0057C7.13201 18.0057 7.26272 17.9796 7.38458 17.9288C7.50644 17.8781 7.61704 17.8037 7.71 17.7099L12 13.4099L16.29 17.7099C16.383 17.8037 16.4936 17.8781 16.6154 17.9288C16.7373 17.9796 16.868 18.0057 17 18.0057C17.132 18.0057 17.2627 17.9796 17.3846 17.9288C17.5064 17.8781 17.617 17.8037 17.71 17.7099C17.8037 17.617 17.8781 17.5064 17.9289 17.3845C17.9797 17.2627 18.0058 17.132 18.0058 16.9999C18.0058 16.8679 17.9797 16.7372 17.9289 16.6154C17.8781 16.4935 17.8037 16.3829 17.71 16.2899L13.41 11.9999Z" fill="#1E2D48"></path>
-                   </svg>
+                    <svg class="cursor-pointer" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M13.41 11.9999L17.71 7.70994C17.8983 7.52164 18.0041 7.26624 18.0041 6.99994C18.0041 6.73364 17.8983 6.47825 17.71 6.28994C17.5217 6.10164 17.2663 5.99585 17 5.99585C16.7337 5.99585 16.4783 6.10164 16.29 6.28994L12 10.5899L7.71 6.28994C7.5217 6.10164 7.2663 5.99585 7 5.99585C6.7337 5.99585 6.4783 6.10164 6.29 6.28994C6.1017 6.47825 5.99591 6.73364 5.99591 6.99994C5.99591 7.26624 6.1017 7.52164 6.29 7.70994L10.59 11.9999L6.29 16.2899C6.19627 16.3829 6.12188 16.4935 6.07111 16.6154C6.02034 16.7372 5.9942 16.8679 5.9942 16.9999C5.9942 17.132 6.02034 17.2627 6.07111 17.3845C6.12188 17.5064 6.19627 17.617 6.29 17.7099C6.38296 17.8037 6.49356 17.8781 6.61542 17.9288C6.73728 17.9796 6.86799 18.0057 7 18.0057C7.13201 18.0057 7.26272 17.9796 7.38458 17.9288C7.50644 17.8781 7.61704 17.8037 7.71 17.7099L12 13.4099L16.29 17.7099C16.383 17.8037 16.4936 17.8781 16.6154 17.9288C16.7373 17.9796 16.868 18.0057 17 18.0057C17.132 18.0057 17.2627 17.9796 17.3846 17.9288C17.5064 17.8781 17.617 17.8037 17.71 17.7099C17.8037 17.617 17.8781 17.5064 17.9289 17.3845C17.9797 17.2627 18.0058 17.132 18.0058 16.9999C18.0058 16.8679 17.9797 16.7372 17.9289 16.6154C17.8781 16.4935 17.8037 16.3829 17.71 16.2899L13.41 11.9999Z"
+                        fill="#1E2D48"></path>
+                    </svg>
                   </button>
-                 </div>
+                </div>
               </form>
             </div>
             <div class="swiper-slide relative">
-                <div class="rounded-3xl absolute -top-[76px] w-full flex items-center justify-between gap-1 py-3 px-2 text-xs font-bold text-center bg-[#ffebcf] mb-4 mx-auto mx-3">
+              <div
+                class="rounded-3xl absolute -top-[76px] w-full flex items-center justify-between gap-1 py-3 px-2 text-xs font-bold text-center bg-[#ffebcf] mb-4 mx-auto mx-3">
                 <div class="w-9 h-9 rounded-[6px] bg-[#ffebcf] absolute rotate-45 inset-x-0 mx-auto -bottom-1"></div>
                 <p class="relative font-faNumRegular">90,000,000 میلیون</p>
                 <button class="relative">
-                  <svg class="cursor-pointer close-button" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M13.41 11.9999L17.71 7.70994C17.8983 7.52164 18.0041 7.26624 18.0041 6.99994C18.0041 6.73364 17.8983 6.47825 17.71 6.28994C17.5217 6.10164 17.2663 5.99585 17 5.99585C16.7337 5.99585 16.4783 6.10164 16.29 6.28994L12 10.5899L7.71 6.28994C7.5217 6.10164 7.2663 5.99585 7 5.99585C6.7337 5.99585 6.4783 6.10164 6.29 6.28994C6.1017 6.47825 5.99591 6.73364 5.99591 6.99994C5.99591 7.26624 6.1017 7.52164 6.29 7.70994L10.59 11.9999L6.29 16.2899C6.19627 16.3829 6.12188 16.4935 6.07111 16.6154C6.02034 16.7372 5.9942 16.8679 5.9942 16.9999C5.9942 17.132 6.02034 17.2627 6.07111 17.3845C6.12188 17.5064 6.19627 17.617 6.29 17.7099C6.38296 17.8037 6.49356 17.8781 6.61542 17.9288C6.73728 17.9796 6.86799 18.0057 7 18.0057C7.13201 18.0057 7.26272 17.9796 7.38458 17.9288C7.50644 17.8781 7.61704 17.8037 7.71 17.7099L12 13.4099L16.29 17.7099C16.383 17.8037 16.4936 17.8781 16.6154 17.9288C16.7373 17.9796 16.868 18.0057 17 18.0057C17.132 18.0057 17.2627 17.9796 17.3846 17.9288C17.5064 17.8781 17.617 17.8037 17.71 17.7099C17.8037 17.617 17.8781 17.5064 17.9289 17.3845C17.9797 17.2627 18.0058 17.132 18.0058 16.9999C18.0058 16.8679 17.9797 16.7372 17.9289 16.6154C17.8781 16.4935 17.8037 16.3829 17.71 16.2899L13.41 11.9999Z" fill="red"></path>
+                  <svg class="cursor-pointer close-button" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M13.41 11.9999L17.71 7.70994C17.8983 7.52164 18.0041 7.26624 18.0041 6.99994C18.0041 6.73364 17.8983 6.47825 17.71 6.28994C17.5217 6.10164 17.2663 5.99585 17 5.99585C16.7337 5.99585 16.4783 6.10164 16.29 6.28994L12 10.5899L7.71 6.28994C7.5217 6.10164 7.2663 5.99585 7 5.99585C6.7337 5.99585 6.4783 6.10164 6.29 6.28994C6.1017 6.47825 5.99591 6.73364 5.99591 6.99994C5.99591 7.26624 6.1017 7.52164 6.29 7.70994L10.59 11.9999L6.29 16.2899C6.19627 16.3829 6.12188 16.4935 6.07111 16.6154C6.02034 16.7372 5.9942 16.8679 5.9942 16.9999C5.9942 17.132 6.02034 17.2627 6.07111 17.3845C6.12188 17.5064 6.19627 17.617 6.29 17.7099C6.38296 17.8037 6.49356 17.8781 6.61542 17.9288C6.73728 17.9796 6.86799 18.0057 7 18.0057C7.13201 18.0057 7.26272 17.9796 7.38458 17.9288C7.50644 17.8781 7.61704 17.8037 7.71 17.7099L12 13.4099L16.29 17.7099C16.383 17.8037 16.4936 17.8781 16.6154 17.9288C16.7373 17.9796 16.868 18.0057 17 18.0057C17.132 18.0057 17.2627 17.9796 17.3846 17.9288C17.5064 17.8781 17.617 17.8037 17.71 17.7099C17.8037 17.617 17.8781 17.5064 17.9289 17.3845C17.9797 17.2627 18.0058 17.132 18.0058 16.9999C18.0058 16.8679 17.9797 16.7372 17.9289 16.6154C17.8781 16.4935 17.8037 16.3829 17.71 16.2899L13.41 11.9999Z"
+                      fill="red"></path>
                   </svg>
                 </button>
               </div>
-              <form id="price-modal"
-                class="border group hover:text-primary transition hover:border-primary border-[#B4B4B4] font-medium px-4 cursor-pointer rounded-full flex-center gap-2 h-11">
-                <svg class="flex-shrink-0" width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <form
+                class="border price-modal group hover:text-primary transition hover:border-primary border-[#B4B4B4] font-medium px-4 cursor-pointer rounded-full flex-center gap-2 h-11">
+                <svg class="flex-shrink-0" width="18" height="18" viewBox="0 0 18 18" fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
                   <path class="transition group-hover:fill-primary"
                     d="M12.75 2.625H5.25C3 2.625 1.5 3.75 1.5 6.375V11.625C1.5 14.25 3 15.375 5.25 15.375H12.75C15 15.375 16.5 14.25 16.5 11.625V6.375C16.5 3.75 15 2.625 12.75 2.625ZM6 13.3125H3.75C3.4425 13.3125 3.1875 13.0575 3.1875 12.75C3.1875 12.4425 3.4425 12.1875 3.75 12.1875H6C6.3075 12.1875 6.5625 12.4425 6.5625 12.75C6.5625 13.0575 6.3075 13.3125 6 13.3125ZM9 11.25C7.755 11.25 6.75 10.245 6.75 9C6.75 7.755 7.755 6.75 9 6.75C10.245 6.75 11.25 7.755 11.25 9C11.25 10.245 10.245 11.25 9 11.25ZM14.25 5.8125H12C11.6925 5.8125 11.4375 5.5575 11.4375 5.25C11.4375 4.9425 11.6925 4.6875 12 4.6875H14.25C14.5575 4.6875 14.8125 4.9425 14.8125 5.25C14.8125 5.5575 14.5575 5.8125 14.25 5.8125Z"
                     fill="#292D32"></path>
@@ -862,26 +848,34 @@
                 <div class="flex-grow-1 w-full hidden items-center justify-between gap-1 font-medium">
                   <p class="font-faNumRegular">از 2 میلیون</p>
                   <button>
-                    <svg class="cursor-pointer" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                     <path d="M13.41 11.9999L17.71 7.70994C17.8983 7.52164 18.0041 7.26624 18.0041 6.99994C18.0041 6.73364 17.8983 6.47825 17.71 6.28994C17.5217 6.10164 17.2663 5.99585 17 5.99585C16.7337 5.99585 16.4783 6.10164 16.29 6.28994L12 10.5899L7.71 6.28994C7.5217 6.10164 7.2663 5.99585 7 5.99585C6.7337 5.99585 6.4783 6.10164 6.29 6.28994C6.1017 6.47825 5.99591 6.73364 5.99591 6.99994C5.99591 7.26624 6.1017 7.52164 6.29 7.70994L10.59 11.9999L6.29 16.2899C6.19627 16.3829 6.12188 16.4935 6.07111 16.6154C6.02034 16.7372 5.9942 16.8679 5.9942 16.9999C5.9942 17.132 6.02034 17.2627 6.07111 17.3845C6.12188 17.5064 6.19627 17.617 6.29 17.7099C6.38296 17.8037 6.49356 17.8781 6.61542 17.9288C6.73728 17.9796 6.86799 18.0057 7 18.0057C7.13201 18.0057 7.26272 17.9796 7.38458 17.9288C7.50644 17.8781 7.61704 17.8037 7.71 17.7099L12 13.4099L16.29 17.7099C16.383 17.8037 16.4936 17.8781 16.6154 17.9288C16.7373 17.9796 16.868 18.0057 17 18.0057C17.132 18.0057 17.2627 17.9796 17.3846 17.9288C17.5064 17.8781 17.617 17.8037 17.71 17.7099C17.8037 17.617 17.8781 17.5064 17.9289 17.3845C17.9797 17.2627 18.0058 17.132 18.0058 16.9999C18.0058 16.8679 17.9797 16.7372 17.9289 16.6154C17.8781 16.4935 17.8037 16.3829 17.71 16.2899L13.41 11.9999Z" fill="#1E2D48"></path>
-                   </svg>
+                    <svg class="cursor-pointer" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M13.41 11.9999L17.71 7.70994C17.8983 7.52164 18.0041 7.26624 18.0041 6.99994C18.0041 6.73364 17.8983 6.47825 17.71 6.28994C17.5217 6.10164 17.2663 5.99585 17 5.99585C16.7337 5.99585 16.4783 6.10164 16.29 6.28994L12 10.5899L7.71 6.28994C7.5217 6.10164 7.2663 5.99585 7 5.99585C6.7337 5.99585 6.4783 6.10164 6.29 6.28994C6.1017 6.47825 5.99591 6.73364 5.99591 6.99994C5.99591 7.26624 6.1017 7.52164 6.29 7.70994L10.59 11.9999L6.29 16.2899C6.19627 16.3829 6.12188 16.4935 6.07111 16.6154C6.02034 16.7372 5.9942 16.8679 5.9942 16.9999C5.9942 17.132 6.02034 17.2627 6.07111 17.3845C6.12188 17.5064 6.19627 17.617 6.29 17.7099C6.38296 17.8037 6.49356 17.8781 6.61542 17.9288C6.73728 17.9796 6.86799 18.0057 7 18.0057C7.13201 18.0057 7.26272 17.9796 7.38458 17.9288C7.50644 17.8781 7.61704 17.8037 7.71 17.7099L12 13.4099L16.29 17.7099C16.383 17.8037 16.4936 17.8781 16.6154 17.9288C16.7373 17.9796 16.868 18.0057 17 18.0057C17.132 18.0057 17.2627 17.9796 17.3846 17.9288C17.5064 17.8781 17.617 17.8037 17.71 17.7099C17.8037 17.617 17.8781 17.5064 17.9289 17.3845C17.9797 17.2627 18.0058 17.132 18.0058 16.9999C18.0058 16.8679 17.9797 16.7372 17.9289 16.6154C17.8781 16.4935 17.8037 16.3829 17.71 16.2899L13.41 11.9999Z"
+                        fill="#1E2D48"></path>
+                    </svg>
                   </button>
-                 </div>
+                </div>
               </form>
             </div>
             <div class="swiper-slide relative">
-                <div class="rounded-3xl absolute -top-[76px] w-full flex items-center justify-between gap-1 py-3 px-2 text-xs font-bold text-center bg-[#ffebcf] mb-4 mx-auto mx-3">
+              <div
+                class="rounded-3xl absolute -top-[76px] w-full flex items-center justify-between gap-1 py-3 px-2 text-xs font-bold text-center bg-[#ffebcf] mb-4 mx-auto mx-3">
                 <div class="w-9 h-9 rounded-[6px] bg-[#ffebcf] absolute rotate-45 inset-x-0 mx-auto -bottom-1"></div>
                 <p class="relative font-faNumRegular">ویلایی</p>
                 <button class="relative">
-                  <svg class="cursor-pointer close-button" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M13.41 11.9999L17.71 7.70994C17.8983 7.52164 18.0041 7.26624 18.0041 6.99994C18.0041 6.73364 17.8983 6.47825 17.71 6.28994C17.5217 6.10164 17.2663 5.99585 17 5.99585C16.7337 5.99585 16.4783 6.10164 16.29 6.28994L12 10.5899L7.71 6.28994C7.5217 6.10164 7.2663 5.99585 7 5.99585C6.7337 5.99585 6.4783 6.10164 6.29 6.28994C6.1017 6.47825 5.99591 6.73364 5.99591 6.99994C5.99591 7.26624 6.1017 7.52164 6.29 7.70994L10.59 11.9999L6.29 16.2899C6.19627 16.3829 6.12188 16.4935 6.07111 16.6154C6.02034 16.7372 5.9942 16.8679 5.9942 16.9999C5.9942 17.132 6.02034 17.2627 6.07111 17.3845C6.12188 17.5064 6.19627 17.617 6.29 17.7099C6.38296 17.8037 6.49356 17.8781 6.61542 17.9288C6.73728 17.9796 6.86799 18.0057 7 18.0057C7.13201 18.0057 7.26272 17.9796 7.38458 17.9288C7.50644 17.8781 7.61704 17.8037 7.71 17.7099L12 13.4099L16.29 17.7099C16.383 17.8037 16.4936 17.8781 16.6154 17.9288C16.7373 17.9796 16.868 18.0057 17 18.0057C17.132 18.0057 17.2627 17.9796 17.3846 17.9288C17.5064 17.8781 17.617 17.8037 17.71 17.7099C17.8037 17.617 17.8781 17.5064 17.9289 17.3845C17.9797 17.2627 18.0058 17.132 18.0058 16.9999C18.0058 16.8679 17.9797 16.7372 17.9289 16.6154C17.8781 16.4935 17.8037 16.3829 17.71 16.2899L13.41 11.9999Z" fill="red"></path>
+                  <svg class="cursor-pointer close-button" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M13.41 11.9999L17.71 7.70994C17.8983 7.52164 18.0041 7.26624 18.0041 6.99994C18.0041 6.73364 17.8983 6.47825 17.71 6.28994C17.5217 6.10164 17.2663 5.99585 17 5.99585C16.7337 5.99585 16.4783 6.10164 16.29 6.28994L12 10.5899L7.71 6.28994C7.5217 6.10164 7.2663 5.99585 7 5.99585C6.7337 5.99585 6.4783 6.10164 6.29 6.28994C6.1017 6.47825 5.99591 6.73364 5.99591 6.99994C5.99591 7.26624 6.1017 7.52164 6.29 7.70994L10.59 11.9999L6.29 16.2899C6.19627 16.3829 6.12188 16.4935 6.07111 16.6154C6.02034 16.7372 5.9942 16.8679 5.9942 16.9999C5.9942 17.132 6.02034 17.2627 6.07111 17.3845C6.12188 17.5064 6.19627 17.617 6.29 17.7099C6.38296 17.8037 6.49356 17.8781 6.61542 17.9288C6.73728 17.9796 6.86799 18.0057 7 18.0057C7.13201 18.0057 7.26272 17.9796 7.38458 17.9288C7.50644 17.8781 7.61704 17.8037 7.71 17.7099L12 13.4099L16.29 17.7099C16.383 17.8037 16.4936 17.8781 16.6154 17.9288C16.7373 17.9796 16.868 18.0057 17 18.0057C17.132 18.0057 17.2627 17.9796 17.3846 17.9288C17.5064 17.8781 17.617 17.8037 17.71 17.7099C17.8037 17.617 17.8781 17.5064 17.9289 17.3845C17.9797 17.2627 18.0058 17.132 18.0058 16.9999C18.0058 16.8679 17.9797 16.7372 17.9289 16.6154C17.8781 16.4935 17.8037 16.3829 17.71 16.2899L13.41 11.9999Z"
+                      fill="red"></path>
                   </svg>
                 </button>
               </div>
-              <form id="home-modal"
-                class="border group hover:text-primary transition hover:border-primary border-[#B4B4B4] font-medium px-4 cursor-pointer rounded-full flex-center gap-2 h-11">
-                <svg class="flex-shrink-0" width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <form
+                class="border home-modal group hover:text-primary transition hover:border-primary border-[#B4B4B4] font-medium px-4 cursor-pointer rounded-full flex-center gap-2 h-11">
+                <svg class="flex-shrink-0" width="18" height="18" viewBox="0 0 18 18" fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
                   <path class="transition group-hover:fill-primary"
                     d="M14.5275 3.66759L10.1325 1.71009C9.48749 1.42509 8.51249 1.42509 7.86749 1.71009L3.47249 3.66759C2.36249 4.16259 2.19749 4.83759 2.19749 5.19759C2.19749 5.55759 2.36249 6.23259 3.47249 6.72759L7.86749 8.68509C8.18999 8.82759 8.59499 8.90259 8.99999 8.90259C9.40499 8.90259 9.80999 8.82759 10.1325 8.68509L14.5275 6.72759C15.6375 6.23259 15.8025 5.55759 15.8025 5.19759C15.8025 4.83759 15.645 4.16259 14.5275 3.66759Z"
                     fill="#292D32" />
@@ -896,26 +890,34 @@
                 <div class="flex-grow-1 w-full hidden items-center justify-between gap-1 font-medium">
                   <p class="font-faNumRegular">ویلایی</p>
                   <button>
-                    <svg class="cursor-pointer" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                     <path d="M13.41 11.9999L17.71 7.70994C17.8983 7.52164 18.0041 7.26624 18.0041 6.99994C18.0041 6.73364 17.8983 6.47825 17.71 6.28994C17.5217 6.10164 17.2663 5.99585 17 5.99585C16.7337 5.99585 16.4783 6.10164 16.29 6.28994L12 10.5899L7.71 6.28994C7.5217 6.10164 7.2663 5.99585 7 5.99585C6.7337 5.99585 6.4783 6.10164 6.29 6.28994C6.1017 6.47825 5.99591 6.73364 5.99591 6.99994C5.99591 7.26624 6.1017 7.52164 6.29 7.70994L10.59 11.9999L6.29 16.2899C6.19627 16.3829 6.12188 16.4935 6.07111 16.6154C6.02034 16.7372 5.9942 16.8679 5.9942 16.9999C5.9942 17.132 6.02034 17.2627 6.07111 17.3845C6.12188 17.5064 6.19627 17.617 6.29 17.7099C6.38296 17.8037 6.49356 17.8781 6.61542 17.9288C6.73728 17.9796 6.86799 18.0057 7 18.0057C7.13201 18.0057 7.26272 17.9796 7.38458 17.9288C7.50644 17.8781 7.61704 17.8037 7.71 17.7099L12 13.4099L16.29 17.7099C16.383 17.8037 16.4936 17.8781 16.6154 17.9288C16.7373 17.9796 16.868 18.0057 17 18.0057C17.132 18.0057 17.2627 17.9796 17.3846 17.9288C17.5064 17.8781 17.617 17.8037 17.71 17.7099C17.8037 17.617 17.8781 17.5064 17.9289 17.3845C17.9797 17.2627 18.0058 17.132 18.0058 16.9999C18.0058 16.8679 17.9797 16.7372 17.9289 16.6154C17.8781 16.4935 17.8037 16.3829 17.71 16.2899L13.41 11.9999Z" fill="#1E2D48"></path>
-                   </svg>
+                    <svg class="cursor-pointer" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M13.41 11.9999L17.71 7.70994C17.8983 7.52164 18.0041 7.26624 18.0041 6.99994C18.0041 6.73364 17.8983 6.47825 17.71 6.28994C17.5217 6.10164 17.2663 5.99585 17 5.99585C16.7337 5.99585 16.4783 6.10164 16.29 6.28994L12 10.5899L7.71 6.28994C7.5217 6.10164 7.2663 5.99585 7 5.99585C6.7337 5.99585 6.4783 6.10164 6.29 6.28994C6.1017 6.47825 5.99591 6.73364 5.99591 6.99994C5.99591 7.26624 6.1017 7.52164 6.29 7.70994L10.59 11.9999L6.29 16.2899C6.19627 16.3829 6.12188 16.4935 6.07111 16.6154C6.02034 16.7372 5.9942 16.8679 5.9942 16.9999C5.9942 17.132 6.02034 17.2627 6.07111 17.3845C6.12188 17.5064 6.19627 17.617 6.29 17.7099C6.38296 17.8037 6.49356 17.8781 6.61542 17.9288C6.73728 17.9796 6.86799 18.0057 7 18.0057C7.13201 18.0057 7.26272 17.9796 7.38458 17.9288C7.50644 17.8781 7.61704 17.8037 7.71 17.7099L12 13.4099L16.29 17.7099C16.383 17.8037 16.4936 17.8781 16.6154 17.9288C16.7373 17.9796 16.868 18.0057 17 18.0057C17.132 18.0057 17.2627 17.9796 17.3846 17.9288C17.5064 17.8781 17.617 17.8037 17.71 17.7099C17.8037 17.617 17.8781 17.5064 17.9289 17.3845C17.9797 17.2627 18.0058 17.132 18.0058 16.9999C18.0058 16.8679 17.9797 16.7372 17.9289 16.6154C17.8781 16.4935 17.8037 16.3829 17.71 16.2899L13.41 11.9999Z"
+                        fill="#1E2D48"></path>
+                    </svg>
                   </button>
-                 </div>
+                </div>
               </form>
             </div>
             <div class="swiper-slide relative">
-                <div class="rounded-3xl absolute -top-[76px] w-full flex items-center justify-between gap-1 py-3 px-2 text-xs font-bold text-center bg-[#ffebcf] mb-4 mx-auto mx-3">
+              <div
+                class="rounded-3xl absolute -top-[76px] w-full flex items-center justify-between gap-1 py-3 px-2 text-xs font-bold text-center bg-[#ffebcf] mb-4 mx-auto mx-3">
                 <div class="w-9 h-9 rounded-[6px] bg-[#ffebcf] absolute rotate-45 inset-x-0 mx-auto -bottom-1"></div>
                 <p class="relative font-faNumRegular">دارد</p>
                 <button class="relative">
-                  <svg class="cursor-pointer close-button" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M13.41 11.9999L17.71 7.70994C17.8983 7.52164 18.0041 7.26624 18.0041 6.99994C18.0041 6.73364 17.8983 6.47825 17.71 6.28994C17.5217 6.10164 17.2663 5.99585 17 5.99585C16.7337 5.99585 16.4783 6.10164 16.29 6.28994L12 10.5899L7.71 6.28994C7.5217 6.10164 7.2663 5.99585 7 5.99585C6.7337 5.99585 6.4783 6.10164 6.29 6.28994C6.1017 6.47825 5.99591 6.73364 5.99591 6.99994C5.99591 7.26624 6.1017 7.52164 6.29 7.70994L10.59 11.9999L6.29 16.2899C6.19627 16.3829 6.12188 16.4935 6.07111 16.6154C6.02034 16.7372 5.9942 16.8679 5.9942 16.9999C5.9942 17.132 6.02034 17.2627 6.07111 17.3845C6.12188 17.5064 6.19627 17.617 6.29 17.7099C6.38296 17.8037 6.49356 17.8781 6.61542 17.9288C6.73728 17.9796 6.86799 18.0057 7 18.0057C7.13201 18.0057 7.26272 17.9796 7.38458 17.9288C7.50644 17.8781 7.61704 17.8037 7.71 17.7099L12 13.4099L16.29 17.7099C16.383 17.8037 16.4936 17.8781 16.6154 17.9288C16.7373 17.9796 16.868 18.0057 17 18.0057C17.132 18.0057 17.2627 17.9796 17.3846 17.9288C17.5064 17.8781 17.617 17.8037 17.71 17.7099C17.8037 17.617 17.8781 17.5064 17.9289 17.3845C17.9797 17.2627 18.0058 17.132 18.0058 16.9999C18.0058 16.8679 17.9797 16.7372 17.9289 16.6154C17.8781 16.4935 17.8037 16.3829 17.71 16.2899L13.41 11.9999Z" fill="red"></path>
+                  <svg class="cursor-pointer close-button" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M13.41 11.9999L17.71 7.70994C17.8983 7.52164 18.0041 7.26624 18.0041 6.99994C18.0041 6.73364 17.8983 6.47825 17.71 6.28994C17.5217 6.10164 17.2663 5.99585 17 5.99585C16.7337 5.99585 16.4783 6.10164 16.29 6.28994L12 10.5899L7.71 6.28994C7.5217 6.10164 7.2663 5.99585 7 5.99585C6.7337 5.99585 6.4783 6.10164 6.29 6.28994C6.1017 6.47825 5.99591 6.73364 5.99591 6.99994C5.99591 7.26624 6.1017 7.52164 6.29 7.70994L10.59 11.9999L6.29 16.2899C6.19627 16.3829 6.12188 16.4935 6.07111 16.6154C6.02034 16.7372 5.9942 16.8679 5.9942 16.9999C5.9942 17.132 6.02034 17.2627 6.07111 17.3845C6.12188 17.5064 6.19627 17.617 6.29 17.7099C6.38296 17.8037 6.49356 17.8781 6.61542 17.9288C6.73728 17.9796 6.86799 18.0057 7 18.0057C7.13201 18.0057 7.26272 17.9796 7.38458 17.9288C7.50644 17.8781 7.61704 17.8037 7.71 17.7099L12 13.4099L16.29 17.7099C16.383 17.8037 16.4936 17.8781 16.6154 17.9288C16.7373 17.9796 16.868 18.0057 17 18.0057C17.132 18.0057 17.2627 17.9796 17.3846 17.9288C17.5064 17.8781 17.617 17.8037 17.71 17.7099C17.8037 17.617 17.8781 17.5064 17.9289 17.3845C17.9797 17.2627 18.0058 17.132 18.0058 16.9999C18.0058 16.8679 17.9797 16.7372 17.9289 16.6154C17.8781 16.4935 17.8037 16.3829 17.71 16.2899L13.41 11.9999Z"
+                      fill="red"></path>
                   </svg>
                 </button>
               </div>
-              <form id="parking-modal"
-                class="border group hover:text-primary transition hover:border-primary border-[#B4B4B4] font-medium px-4 cursor-pointer rounded-full flex-center gap-2 h-11">
-                <svg class="flex-shrink-0" width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <form
+                class="border parking-modal group hover:text-primary transition hover:border-primary border-[#B4B4B4] font-medium px-4 cursor-pointer rounded-full flex-center gap-2 h-11">
+                <svg class="flex-shrink-0" width="18" height="18" viewBox="0 0 18 18" fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
                   <path class="transition group-hover:fill-primary"
                     d="M4.5 11.25V14.25C4.5 14.6625 4.35325 15.0157 4.05975 15.3097C3.76625 15.6038 3.413 15.7505 3 15.75C2.587 15.7495 2.234 15.6027 1.941 15.3097C1.648 15.0168 1.501 14.6635 1.5 14.25V3.75C1.5 3.3375 1.647 2.9845 1.941 2.691C2.235 2.3975 2.588 2.2505 3 2.25H6.75C8 2.25 9.0625 2.6875 9.9375 3.5625C10.8125 4.4375 11.25 5.5 11.25 6.75C11.25 8 10.8125 9.0625 9.9375 9.9375C9.0625 10.8125 8 11.25 6.75 11.25H4.5ZM4.5 8.25H6.9C7.3125 8.25 7.66575 8.10325 7.95975 7.80975C8.25375 7.51625 8.4005 7.163 8.4 6.75C8.3995 6.337 8.25275 5.984 7.95975 5.691C7.66675 5.398 7.3135 5.251 6.9 5.25H4.5V8.25Z"
                     fill="black" />
@@ -924,26 +926,34 @@
                 <div class="flex-grow-1 w-full hidden items-center justify-between gap-1 font-medium">
                   <p class="font-faNumRegular">دارد</p>
                   <button>
-                    <svg class="cursor-pointer" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                     <path d="M13.41 11.9999L17.71 7.70994C17.8983 7.52164 18.0041 7.26624 18.0041 6.99994C18.0041 6.73364 17.8983 6.47825 17.71 6.28994C17.5217 6.10164 17.2663 5.99585 17 5.99585C16.7337 5.99585 16.4783 6.10164 16.29 6.28994L12 10.5899L7.71 6.28994C7.5217 6.10164 7.2663 5.99585 7 5.99585C6.7337 5.99585 6.4783 6.10164 6.29 6.28994C6.1017 6.47825 5.99591 6.73364 5.99591 6.99994C5.99591 7.26624 6.1017 7.52164 6.29 7.70994L10.59 11.9999L6.29 16.2899C6.19627 16.3829 6.12188 16.4935 6.07111 16.6154C6.02034 16.7372 5.9942 16.8679 5.9942 16.9999C5.9942 17.132 6.02034 17.2627 6.07111 17.3845C6.12188 17.5064 6.19627 17.617 6.29 17.7099C6.38296 17.8037 6.49356 17.8781 6.61542 17.9288C6.73728 17.9796 6.86799 18.0057 7 18.0057C7.13201 18.0057 7.26272 17.9796 7.38458 17.9288C7.50644 17.8781 7.61704 17.8037 7.71 17.7099L12 13.4099L16.29 17.7099C16.383 17.8037 16.4936 17.8781 16.6154 17.9288C16.7373 17.9796 16.868 18.0057 17 18.0057C17.132 18.0057 17.2627 17.9796 17.3846 17.9288C17.5064 17.8781 17.617 17.8037 17.71 17.7099C17.8037 17.617 17.8781 17.5064 17.9289 17.3845C17.9797 17.2627 18.0058 17.132 18.0058 16.9999C18.0058 16.8679 17.9797 16.7372 17.9289 16.6154C17.8781 16.4935 17.8037 16.3829 17.71 16.2899L13.41 11.9999Z" fill="#1E2D48"></path>
-                   </svg>
+                    <svg class="cursor-pointer" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M13.41 11.9999L17.71 7.70994C17.8983 7.52164 18.0041 7.26624 18.0041 6.99994C18.0041 6.73364 17.8983 6.47825 17.71 6.28994C17.5217 6.10164 17.2663 5.99585 17 5.99585C16.7337 5.99585 16.4783 6.10164 16.29 6.28994L12 10.5899L7.71 6.28994C7.5217 6.10164 7.2663 5.99585 7 5.99585C6.7337 5.99585 6.4783 6.10164 6.29 6.28994C6.1017 6.47825 5.99591 6.73364 5.99591 6.99994C5.99591 7.26624 6.1017 7.52164 6.29 7.70994L10.59 11.9999L6.29 16.2899C6.19627 16.3829 6.12188 16.4935 6.07111 16.6154C6.02034 16.7372 5.9942 16.8679 5.9942 16.9999C5.9942 17.132 6.02034 17.2627 6.07111 17.3845C6.12188 17.5064 6.19627 17.617 6.29 17.7099C6.38296 17.8037 6.49356 17.8781 6.61542 17.9288C6.73728 17.9796 6.86799 18.0057 7 18.0057C7.13201 18.0057 7.26272 17.9796 7.38458 17.9288C7.50644 17.8781 7.61704 17.8037 7.71 17.7099L12 13.4099L16.29 17.7099C16.383 17.8037 16.4936 17.8781 16.6154 17.9288C16.7373 17.9796 16.868 18.0057 17 18.0057C17.132 18.0057 17.2627 17.9796 17.3846 17.9288C17.5064 17.8781 17.617 17.8037 17.71 17.7099C17.8037 17.617 17.8781 17.5064 17.9289 17.3845C17.9797 17.2627 18.0058 17.132 18.0058 16.9999C18.0058 16.8679 17.9797 16.7372 17.9289 16.6154C17.8781 16.4935 17.8037 16.3829 17.71 16.2899L13.41 11.9999Z"
+                        fill="#1E2D48"></path>
+                    </svg>
                   </button>
-                 </div>
+                </div>
               </form>
             </div>
             <div class="swiper-slide relative">
-                <div class="rounded-3xl absolute -top-[76px] w-full flex items-center justify-between gap-1 py-3 px-2 text-xs font-bold text-center bg-[#ffebcf] mb-4 mx-auto mx-3">
+              <div
+                class="rounded-3xl absolute -top-[76px] w-full flex items-center justify-between gap-1 py-3 px-2 text-xs font-bold text-center bg-[#ffebcf] mb-4 mx-auto mx-3">
                 <div class="w-9 h-9 rounded-[6px] bg-[#ffebcf] absolute rotate-45 inset-x-0 mx-auto -bottom-1"></div>
                 <p class="relative font-faNumRegular">ندارد</p>
                 <button class="relative">
-                  <svg class="cursor-pointer close-button" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M13.41 11.9999L17.71 7.70994C17.8983 7.52164 18.0041 7.26624 18.0041 6.99994C18.0041 6.73364 17.8983 6.47825 17.71 6.28994C17.5217 6.10164 17.2663 5.99585 17 5.99585C16.7337 5.99585 16.4783 6.10164 16.29 6.28994L12 10.5899L7.71 6.28994C7.5217 6.10164 7.2663 5.99585 7 5.99585C6.7337 5.99585 6.4783 6.10164 6.29 6.28994C6.1017 6.47825 5.99591 6.73364 5.99591 6.99994C5.99591 7.26624 6.1017 7.52164 6.29 7.70994L10.59 11.9999L6.29 16.2899C6.19627 16.3829 6.12188 16.4935 6.07111 16.6154C6.02034 16.7372 5.9942 16.8679 5.9942 16.9999C5.9942 17.132 6.02034 17.2627 6.07111 17.3845C6.12188 17.5064 6.19627 17.617 6.29 17.7099C6.38296 17.8037 6.49356 17.8781 6.61542 17.9288C6.73728 17.9796 6.86799 18.0057 7 18.0057C7.13201 18.0057 7.26272 17.9796 7.38458 17.9288C7.50644 17.8781 7.61704 17.8037 7.71 17.7099L12 13.4099L16.29 17.7099C16.383 17.8037 16.4936 17.8781 16.6154 17.9288C16.7373 17.9796 16.868 18.0057 17 18.0057C17.132 18.0057 17.2627 17.9796 17.3846 17.9288C17.5064 17.8781 17.617 17.8037 17.71 17.7099C17.8037 17.617 17.8781 17.5064 17.9289 17.3845C17.9797 17.2627 18.0058 17.132 18.0058 16.9999C18.0058 16.8679 17.9797 16.7372 17.9289 16.6154C17.8781 16.4935 17.8037 16.3829 17.71 16.2899L13.41 11.9999Z" fill="red"></path>
+                  <svg class="cursor-pointer close-button" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M13.41 11.9999L17.71 7.70994C17.8983 7.52164 18.0041 7.26624 18.0041 6.99994C18.0041 6.73364 17.8983 6.47825 17.71 6.28994C17.5217 6.10164 17.2663 5.99585 17 5.99585C16.7337 5.99585 16.4783 6.10164 16.29 6.28994L12 10.5899L7.71 6.28994C7.5217 6.10164 7.2663 5.99585 7 5.99585C6.7337 5.99585 6.4783 6.10164 6.29 6.28994C6.1017 6.47825 5.99591 6.73364 5.99591 6.99994C5.99591 7.26624 6.1017 7.52164 6.29 7.70994L10.59 11.9999L6.29 16.2899C6.19627 16.3829 6.12188 16.4935 6.07111 16.6154C6.02034 16.7372 5.9942 16.8679 5.9942 16.9999C5.9942 17.132 6.02034 17.2627 6.07111 17.3845C6.12188 17.5064 6.19627 17.617 6.29 17.7099C6.38296 17.8037 6.49356 17.8781 6.61542 17.9288C6.73728 17.9796 6.86799 18.0057 7 18.0057C7.13201 18.0057 7.26272 17.9796 7.38458 17.9288C7.50644 17.8781 7.61704 17.8037 7.71 17.7099L12 13.4099L16.29 17.7099C16.383 17.8037 16.4936 17.8781 16.6154 17.9288C16.7373 17.9796 16.868 18.0057 17 18.0057C17.132 18.0057 17.2627 17.9796 17.3846 17.9288C17.5064 17.8781 17.617 17.8037 17.71 17.7099C17.8037 17.617 17.8781 17.5064 17.9289 17.3845C17.9797 17.2627 18.0058 17.132 18.0058 16.9999C18.0058 16.8679 17.9797 16.7372 17.9289 16.6154C17.8781 16.4935 17.8037 16.3829 17.71 16.2899L13.41 11.9999Z"
+                      fill="red"></path>
                   </svg>
                 </button>
               </div>
-              <form id="off-modal"
-                class="border group hover:text-primary transition hover:border-primary border-[#B4B4B4] font-medium px-4 cursor-pointer rounded-full flex-center gap-2 h-11">
-                <svg class="flex-shrink-0" width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <form
+                class="border off-modal group hover:text-primary transition hover:border-primary border-[#B4B4B4] font-medium px-4 cursor-pointer rounded-full flex-center gap-2 h-11">
+                <svg class="flex-shrink-0" width="18" height="18" viewBox="0 0 18 18" fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
                   <path class="transition group-hover:fill-primary"
                     d="M17.469 8.622L9.369 0.522C9.045 0.198 8.595 0 8.1 0H1.8C0.81 0 0 0.81 0 1.8V8.1C0 8.595 0.198 9.045 0.531 9.378L8.631 17.478C8.955 17.802 9.405 18 9.9 18C10.395 18 10.845 17.802 11.169 17.469L17.469 11.169C17.802 10.845 18 10.395 18 9.9C18 9.405 17.793 8.946 17.469 8.622ZM3.15 4.5C2.403 4.5 1.8 3.897 1.8 3.15C1.8 2.403 2.403 1.8 3.15 1.8C3.897 1.8 4.5 2.403 4.5 3.15C4.5 3.897 3.897 4.5 3.15 4.5Z"
                     fill="#2C2C2C" />
@@ -952,11 +962,14 @@
                 <div class="flex-grow-1 w-full hidden items-center justify-between gap-1 font-medium">
                   <p class="font-faNumRegular">ندارد</p>
                   <button>
-                    <svg class="cursor-pointer" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                     <path d="M13.41 11.9999L17.71 7.70994C17.8983 7.52164 18.0041 7.26624 18.0041 6.99994C18.0041 6.73364 17.8983 6.47825 17.71 6.28994C17.5217 6.10164 17.2663 5.99585 17 5.99585C16.7337 5.99585 16.4783 6.10164 16.29 6.28994L12 10.5899L7.71 6.28994C7.5217 6.10164 7.2663 5.99585 7 5.99585C6.7337 5.99585 6.4783 6.10164 6.29 6.28994C6.1017 6.47825 5.99591 6.73364 5.99591 6.99994C5.99591 7.26624 6.1017 7.52164 6.29 7.70994L10.59 11.9999L6.29 16.2899C6.19627 16.3829 6.12188 16.4935 6.07111 16.6154C6.02034 16.7372 5.9942 16.8679 5.9942 16.9999C5.9942 17.132 6.02034 17.2627 6.07111 17.3845C6.12188 17.5064 6.19627 17.617 6.29 17.7099C6.38296 17.8037 6.49356 17.8781 6.61542 17.9288C6.73728 17.9796 6.86799 18.0057 7 18.0057C7.13201 18.0057 7.26272 17.9796 7.38458 17.9288C7.50644 17.8781 7.61704 17.8037 7.71 17.7099L12 13.4099L16.29 17.7099C16.383 17.8037 16.4936 17.8781 16.6154 17.9288C16.7373 17.9796 16.868 18.0057 17 18.0057C17.132 18.0057 17.2627 17.9796 17.3846 17.9288C17.5064 17.8781 17.617 17.8037 17.71 17.7099C17.8037 17.617 17.8781 17.5064 17.9289 17.3845C17.9797 17.2627 18.0058 17.132 18.0058 16.9999C18.0058 16.8679 17.9797 16.7372 17.9289 16.6154C17.8781 16.4935 17.8037 16.3829 17.71 16.2899L13.41 11.9999Z" fill="#1E2D48"></path>
-                   </svg>
+                    <svg class="cursor-pointer" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M13.41 11.9999L17.71 7.70994C17.8983 7.52164 18.0041 7.26624 18.0041 6.99994C18.0041 6.73364 17.8983 6.47825 17.71 6.28994C17.5217 6.10164 17.2663 5.99585 17 5.99585C16.7337 5.99585 16.4783 6.10164 16.29 6.28994L12 10.5899L7.71 6.28994C7.5217 6.10164 7.2663 5.99585 7 5.99585C6.7337 5.99585 6.4783 6.10164 6.29 6.28994C6.1017 6.47825 5.99591 6.73364 5.99591 6.99994C5.99591 7.26624 6.1017 7.52164 6.29 7.70994L10.59 11.9999L6.29 16.2899C6.19627 16.3829 6.12188 16.4935 6.07111 16.6154C6.02034 16.7372 5.9942 16.8679 5.9942 16.9999C5.9942 17.132 6.02034 17.2627 6.07111 17.3845C6.12188 17.5064 6.19627 17.617 6.29 17.7099C6.38296 17.8037 6.49356 17.8781 6.61542 17.9288C6.73728 17.9796 6.86799 18.0057 7 18.0057C7.13201 18.0057 7.26272 17.9796 7.38458 17.9288C7.50644 17.8781 7.61704 17.8037 7.71 17.7099L12 13.4099L16.29 17.7099C16.383 17.8037 16.4936 17.8781 16.6154 17.9288C16.7373 17.9796 16.868 18.0057 17 18.0057C17.132 18.0057 17.2627 17.9796 17.3846 17.9288C17.5064 17.8781 17.617 17.8037 17.71 17.7099C17.8037 17.617 17.8781 17.5064 17.9289 17.3845C17.9797 17.2627 18.0058 17.132 18.0058 16.9999C18.0058 16.8679 17.9797 16.7372 17.9289 16.6154C17.8781 16.4935 17.8037 16.3829 17.71 16.2899L13.41 11.9999Z"
+                        fill="#1E2D48"></path>
+                    </svg>
                   </button>
-                 </div>
+                </div>
               </form>
             </div>
           </div>
@@ -2121,6 +2134,8 @@
   <script src="../js/calender.js"></script>
   <script src="../js/script.js"></script>
   <script src="../js/otp.js"></script>
+  <script src="../js/select2.min.js"></script>
+  <script src="../js/select2.js"></script>
   <script src="../js/modal.js"></script>
   <script src="../js/rSlider.min.js"></script>
   <script src="../js/rangeInput.js"></script>
@@ -2134,7 +2149,7 @@
 
     // تابع برای فرمت‌بندی اعداد با جداکننده سه‌رقمی
     function formatNumber(number) {
-        return number.toLocaleString();
+      return number.toLocaleString();
     }
 
     // تنظیم مقادیر Min و Max با فرمت‌بندی
@@ -2146,9 +2161,9 @@
 
     // افزودن رویداد تغییر مقدار
     priceRange.addEventListener('input', function () {
-        sliderValue.textContent = formatNumber(parseInt(this.value));
+      sliderValue.textContent = formatNumber(parseInt(this.value));
     });
-</script>
+  </script>
 </body>
 
 </html>

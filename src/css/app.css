@@ -802,7 +802,20 @@ input[type="number"] {
   background: #02C33F;
   display: block;
 }
-
+/* select 2 */
+.select2-container--default .select2-selection--single {
+  background-color: #f9f9f9 !important;
+  border: none !important;
+}
+.select2-container .select2-selection--single {
+  height: 38px !important;
+  display: flex !important;
+  align-items: center !important;
+}
+.select2-container--default .select2-selection--single .select2-selection__arrow {
+  left: 8px !important;
+  top: 6px !important;
+}
 /* dashboard */
 .dashboardUl li a svg path {
   transition: all .4s;
